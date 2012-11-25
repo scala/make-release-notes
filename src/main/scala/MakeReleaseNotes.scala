@@ -45,7 +45,9 @@ object MakeReleaseNotes {
         <h3> New features for ${currentTag drop 1} </h3>
         ${parseHandWrittenNotes()}
         ${communityProjects}
-        <h3> TODO - Pull list of known issues </h3>
+        <h3> Known issues </h3>
+        ${JiraIssues.makeOpenIssuesString}
+        <br/><br/>
         ${renderFixedIssues}
         ${renderCommitterList}
         ${renderCommitList}
