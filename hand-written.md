@@ -1,5 +1,7 @@
 
-This is the second RC of Scala 2.10.0 release. This release comes with a few new shiny features, notably:
+### New features for Scala 2.10.0-RC3
+
+This is the third RC of Scala 2.10.0 release. This release comes with a few new shiny features, notably:
 
 * Value Classes
     * [http://docs.scala-lang.org/overviews/core/value-classes.html](http://docs.scala-lang.org/overviews/core/value-classes.html)
@@ -34,10 +36,10 @@ This is the second RC of Scala 2.10.0 release. This release comes with a few new
     * See the [actors migration project](http://docs.scala-lang.org/actors-migration/) for more information.
 * Deprecations and cleanup
     * Floating point and octal literal syntax deprecation
-    * Removal of `scala.dbc`
+    * Removal of scala.dbc
 * Performance Improvements
     * Faster inliner
-    * `Range#sum` is now O(1)
+    * `Range#sum is now O(1)
     * Update of ForkJoin library
     * Fixes in immutable `TreeSet`/`TreeMap`
     * Improvements to PartialFunctions

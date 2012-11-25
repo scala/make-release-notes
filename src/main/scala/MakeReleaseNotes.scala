@@ -42,7 +42,6 @@ object MakeReleaseNotes {
       </head>
       <body>
         <h3>A new release of Scala is available!  Please point your build tools at ${currentTag drop 1}</h3>
-        <h3> New features for ${currentTag drop 1} </h3>
         ${parseHandWrittenNotes()}
         ${communityProjects}
         <h3> Known issues </h3>
