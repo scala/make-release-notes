@@ -60,7 +60,7 @@ class GitInfo(gitDir: java.io.File, val previousTag: String, val currentTag: Str
   def renderCommitterList: String = {
     val sb = new StringBuffer
     sb append blankLine()
-    sb append header4("A big thank you to all the contribtuors!")
+    sb append header4("A big thank you to all the contributors!")
     sb append """|<table border="0" cellspacing="0" cellpadding="1">
                  |  <thead><tr><th>#</th><th align="left">Author</th></tr></thead>
                  |<tbody>""".stripMargin
