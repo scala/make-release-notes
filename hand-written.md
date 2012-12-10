@@ -1,6 +1,6 @@
-### New features for Scala 2.10.0-RC3
+### New features for Scala 2.10.0-RC5
 
-This is the third RC of Scala 2.10.0 release. This release comes with a few new shiny features, notably:
+This is the fifth RC of Scala 2.10.0 release, which implements the following shiny new features:
 
 * Value Classes
     * [http://docs.scala-lang.org/overviews/core/value-classes.html](http://docs.scala-lang.org/overviews/core/value-classes.html)
@@ -47,7 +47,7 @@ This is the third RC of Scala 2.10.0 release. This release comes with a few new 
 
 ### Scala IDE for Eclipse
 
-If you are an Eclipse user, you can install the Scala IDE with Scala 2.10.0-RC5 through one of the following update-sites:
+You may install the Scala IDE with Scala 2.10.0-RC5 through one of the following update-sites:
 
 * Eclipse 3.7 (Indigo) - [http://download.scala-ide.org/sdk/e37/scala210/dev/site/](http://download.scala-ide.org/sdk/e37/scala210/dev/site/)
 * Eclipse 3.8/4.2 (Juno) - [http://download.scala-ide.org/sdk/e38/scala210/dev/site/](http://download.scala-ide.org/sdk/e38/scala210/dev/site/)

@@ -1,69 +1,189 @@
-Name: specs2
-Description:   specs2 is a library for writing executable specifications in Scala
-URL:  http://specs2.org
-Location:    "org.specs2" % "specs2_2.10.0-RC3" % "1.13-SNAPSHOT"
-Location:    "org.specs2" % "specs2_2.10.0-RC3" % "1.12.3"
-
 Name: Slick
 Description: Scala Language-Integrated Connection Kit
 URL: http://slick.typesafe.com
-Location:    "com.typesafe" % "slick_2.10.0-RC3" % "0.11.2"
+Location:    "com.typesafe" % "slick_2.10.0-RC5" % "0.11.2"
 
-Name: ScalaLogging
-Description: Convenient and performant logging in Scala
-URL: https://github.com/typesafehub/scalalogging
-Location:
-  "com.typesafe" % "scalalogging-slf4j_2.10.0-RC3" % "0.4.0" or
-  "com.typesafe" %% "scalalogging-slf4j" % "0.4.0" cross CrossVersion.full
+Name: ScalaSTM
+Description: Software transactional memory for Scala, plus STM-friendly concurrent sets and maps
+URL: http://nbronson.github.com/scala-stm/
+Location: "org.scala-stm" %% "scala-stm" % "0.6"
 
 Name: ScalaTest
 Description: Simple, clear tests and executable specifications
 URL: http://scalatest.org/
-Location: "org.scalatest" % "scalatest_2.10.0-RC3" % "1.8-B1" // For ScalaTest 1.8
-Location: "org.scalatest" % "scalatest_2.10.0-RC3" % "2.0.M5-B1" // For ScalaTest 2.0.M5
+Location:
+  For ScalaTest 1.8: "org.scalatest" % "scalatest_2.10.0-RC5" % "1.8-B1"
+  For ScalaTest 2.0.M5: "org.scalatest" % "scalatest_2.10.0-RC5" % "2.0.M5-B1"
 
-Name: ScalaMock 3
-Description: Native Scala Mocking with added macro-goodness
-URL: http://scalamock.org/
-Location: "org.scalamock" % "scalamock-scalatest-support_2.10.0-RC3" % "3.0-M6"  // For ScalaTest integration: 
-Location: "org.scalamock" % "scalamock-specs2-support_2.10.0-RC3" % "3.0-M6"     // For Specs2 integration:    
-
-Name: Spire
-Description: Spire is a numeric library for Scala which is intended to be generic, fast, and precise.
-URL: https://github.com/non/spire
-Location: "org.spire-math" % "spire_2.10.0-RC3" % "0.3.0-M5"
-
-Name: ScalaSTM 
-Description: Software transactional memory for Scala, plus STM-friendly concurrent sets and maps 
-URL: http://nbronson.github.com/scala-stm/ 
-Location: "org.scala-stm" %% "scala-stm" % "0.6"
-
-Name: Scales Xml
-Description:   Scales Xml provides superb performance with low memory usage, a unified pull and push model, Iteratee and Iterator based pull parsing, equality framework, both an embedded XPath DSL and string based XPath 1.0 support.
-URL:  https://github.com/chris-twiner/scalesXml
-Location: "org.scalesxml" % "scales-xml_2.10.0-RC3" % "0.4.4"
-
-Name: Graph for Scala
-Description:   In-memory graph library seamlessly fitting into the Scala Collection Library
-URL:  https://www.assembla.com/spaces/scala-graph/wiki
-Location: "com.assembla.scala-incubator" % "graph-core_2.10.0-RC3" % "1.5.2"
-
-Name: Scala Migrations
-Description: Database migrations written in a Scala DSL
-URL: http://opensource.imageworks.com/?p=scalamigrations
-Location: "com.imageworks.scala-migrations" %% "scala-migrations" % "1.0.3"
+Name: sfreechart
+Description: Scala-friendly wrapper for JFreeChart
+URL: https://github.com/wookietreiber/scala-chart
+Location: "com.github.wookietreiber.sfreechart" % "sfreechart_2.10.0-RC5" % "0.1.0"
 
 Name: shapeless
 Description: An exploration of generic/polytypic programming in Scala
 URL: https://github.com/milessabin/shapeless
-Location: "com.chuusai" % "shapeless_2.10.0-RC3" % "1.2.3"
+Location: "com.chuusai" % "shapeless_2.10.0-RC5" % "1.2.3"
 
-Name: Kiama
-Description: Kiama is a Scala library for language processing
-URL: http://kiama.googlecode.com
-Location: "com.googlecode.kiama" % "kiama_2.10.0-RC3" % "1.4.0-B4"
+Name: shapeless
+Description: An exploration of generic/polytypic programming in Scala
+URL: https://github.com/milessabin/shapeless
+Location: "com.chuusai" % "shapeless_2.10.0-RC5" % "1.2.4-SNAPSHOT"
+
+Name: specs2
+Description:   specs2 is a library for writing executable specifications in Scala
+URL:  http://specs2.org
+Location:    "org.specs2" % "specs2_2.10.0-RC5" % "1.13-SNAPSHOT"
+             "org.specs2" % "specs2_2.10.0-RC5" % "1.12.3"
+
+Name: ScalaMock 3
+Description: Native Scala Mocking with added macro-goodness
+URL: http://scalamock.org/
+Location:
+  For ScalaTest integration: "org.scalamock" % "scalamock-scalatest-support_2.10.0-RC5" % "3.0-M6"
+  For Specs2 integration: "org.scalamock" % "scalamock-specs2-support_2.10.0-RC5" % "3.0-M6"
+
+Name: Spire
+Description: Powerful new number types and numeric abstractions for Scala.
+URL: https://github.com/non/spire#readme
+Location: "org.spire-math" % "spire_2.10.0-RC5" % "0.3.0-M6"
 
 Name: scalaz
 Description: Type Classes and Pure Functional Data Structures for Scala
 URL: http://code.google.com/p/scalaz/
-Location: "org.scalaz" % "scalaz-core_2.10.0-RC3" % "7.0.0-M5"
+Location:    "org.scalaz" % "scalaz-core_2.10.0-RC5" % "7.0.0-M6"
+             "org.scalaz" % "scalaz-core_2.10.0-RC5" % "6.0.4"
+
+Name: Graph for Scala
+Description:   In-memory graph library seamlessly fitting into the Scala Collection Library
+URL:  https://www.assembla.com/spaces/scala-graph/wiki
+Location: "com.assembla.scala-incubator" % "graph-core_2.10.0-RC5" % "1.5.2"
+
+Name: Scales Xml
+Description: Scales Xml provides superb performance with low memory usage, a unified pull and push model, Iteratee and Iterator based pull parsing, equality framework, both an embedded XPath DSL and string based XPath 1.0 support.
+URL: https://github.com/chris-twiner/scalesXml
+Location: "org.scalesxml" % "scales-xml_2.10.0-RC5" % "0.4.4"
+
+Name: scopt
+Description: scopt is a little command line options parsing library.
+URL: https://github.com/scopt/scopt
+Location: "com.github.scopt" % "scopt_2.10.0-RC5" % "2.1.0"
+
+Name: ScalaAudioFile
+Description:   A library to read and write uncompressed audio files (AIFF, WAVE, etc.)
+URL:  https://github.com/Sciss/ScalaAudioFile
+Location:    "de.sciss" %% "scalaaudiofile" % "1.1.+"
+
+Name: ScalaOSC
+Description:   A library for OpenSoundControl (OSC), a message protocol used in multi-media applications.
+URL:  https://github.com/Sciss/ScalaOSC
+Location:    "de.sciss" %% "scalaosc" % "1.1.+"
+
+Name: ScalaCollider
+Description:   A sound synthesis library for the SuperCollider server
+URL:  https://github.com/Sciss/ScalaCollider
+Location:    "de.sciss" %% "scalacollider" % "1.2.+"
+
+Name: scalaxb
+Description: XML data-binding tool for Scala that supports W3C XML Schema (xsd) as the input file.
+URL: http://scalaxb.org/
+Location: "org.scalaxb" % "scalaxb_2.10.0-RC5" % "1.0.0-RC3"
+
+Name: ScalaInterpreterPane
+Description:   A Swing based front-end for the Scala REPL (interpreter)
+URL:  https://github.com/Sciss/ScalaInterpreterPane
+Location:    "de.sciss" %% "scalainterpreterpane" % "1.2.+"
+// Resolvers needed for dependencies:    "Clojars Repository" at "http://clojars.org/repo"
+
+Name: AudioWidgets
+Description:   Specialized Swing widgets for audio applications in Scala
+URL:  https://github.com/Sciss/AudioWidgets
+Location:    "de.sciss" %% "audiowidgets" % "1.0.+"
+
+Name: ScalaAudioWidgets
+Description:   Scala-Swing wrappers for the AudioWidgets library
+URL:  https://github.com/Sciss/ScalaAudioWidgets
+Location:    "de.sciss" %% "scalaaudiowidgets" % "1.0.+"
+
+Name: ScalaColliderSwing
+Description:   A Swing and REPL front-end for ScalaCollider
+URL:  https://github.com/Sciss/ScalaColliderSwing
+Location:    "de.sciss" %% "scalacolliderswing" % "1.2.+"
+// Resolvers needed for dependencies:    "Clojars Repository" at "http://clojars.org/repo"
+
+Name: Strugatzki
+Description:   Algorithms for extracting audio features and matching audio file similarities
+URL:  https://github.com/Sciss/Strugatzki
+Location:    "de.sciss" %% "strugatzki" % "1.2.+"
+
+Name: ScissDSP
+Description:   Collection of DSP algorithms and components for Scala
+URL:  https://github.com/Sciss/ScissDSP
+Location:    "de.sciss" %% "scissdsp" % "1.1.+"
+
+Name: SonogramOverview
+Description:   Sonogram view component for Scala/Swing, calculating offline from audio files
+URL:  https://github.com/Sciss/SonogramOverview
+Location:    "de.sciss" %% "sonogramoverview" % "1.2.+"
+
+Name: FScapeJobs
+Description:   A library to launch digital signal processing jobs for FScape via OSC
+URL:  https://github.com/Sciss/FScapeJobs
+Location:    "de.sciss" %% "fscapejobs" % "1.1.+"
+
+Name: Akka
+Description: Akka is a toolkit and runtime for building highly concurrent, distributed, and fault tolerant event-driven applications on the JVM.
+URL: http://akka.io
+Location: "com.typesafe.akka" % "akka-actor_2.10.0-RC5" % "2.1.0-RC5"
+    "com.typesafe.akka" % "akka-actor-tests_2.10.0-RC5" % "2.1.0-RC5"
+    "com.typesafe.akka" % "akka-agent_2.10.0-RC5" % "2.1.0-RC5"
+    "com.typesafe.akka" % "akka-camel_2.10.0-RC5" % "2.1.0-RC5"
+    "com.typesafe.akka" % "akka-cluster-experimental_2.10.0-RC5" % "2.1.0-RC5"
+    "com.typesafe.akka" % "akka-contrib_2.10.0-RC5" % "2.1.0-RC5"
+    "com.typesafe.akka" % "akka-dataflow_2.10.0-RC5" % "2.1.0-RC5"
+    "com.typesafe.akka" % "akka-docs_2.10.0-RC5" % "2.1.0-RC5"
+    "com.typesafe.akka" % "akka-file-mailbox_2.10.0-RC5" % "2.1.0-RC5"
+    "com.typesafe.akka" % "akka-kernel_2.10.0-RC5" % "2.1.0-RC5"
+    "com.typesafe.akka" % "akka-mailboxes-common_2.10.0-RC5" % "2.1.0-RC5"
+    "com.typesafe.akka" % "akka-osgi_2.10.0-RC5" % "2.1.0-RC5"
+    "com.typesafe.akka" % "akka-osgi-aries_2.10.0-RC5" % "2.1.0-RC5"
+    "com.typesafe.akka" % "akka-remote_2.10.0-RC5" % "2.1.0-RC5"
+    "com.typesafe.akka" % "akka-remote-tests-experimental_2.10.0-RC5" % "2.1.0-RC5"
+    "com.typesafe.akka" % "akka-sample-camel_2.10.0-RC5" % "2.1.0-RC5"
+    "com.typesafe.akka" % "akka-sample-cluster-experimental_2.10.0-RC5" % "2.1.0-RC5"
+    "com.typesafe.akka" % "akka-sample-fsm_2.10.0-RC5" % "2.1.0-RC5"
+    "com.typesafe.akka" % "akka-sample-hello_2.10.0-RC5" % "2.1.0-RC5"
+    "com.typesafe.akka" % "akka-sample-hello-kernel_2.10.0-RC5" % "2.1.0-RC5"
+    "com.typesafe.akka" % "akka-sample-multi-node-experimental_2.10.0-RC5" % "2.1.0-RC5"
+    "com.typesafe.akka" % "akka-sample-remote_2.10.0-RC5" % "2.1.0-RC5"
+    "com.typesafe.akka" % "akka-slf4j_2.10.0-RC5" % "2.1.0-RC5"
+    "com.typesafe.akka" % "akka-testkit_2.10.0-RC5" % "2.1.0-RC5"
+    "com.typesafe.akka" % "akka-transactor_2.10.0-RC5" % "2.1.0-RC5"
+    "com.typesafe.akka" % "akka-zeromq_2.10.0-RC5" % "2.1.0-RC5"
+or:
+    "com.typesafe.akka" %% "akka-actor" % "2.1.0-RC5" cross CrossVersion.full
+    "com.typesafe.akka" %% "akka-actor-tests" % "2.1.0-RC5" cross CrossVersion.full
+    "com.typesafe.akka" %% "akka-agent" % "2.1.0-RC5" cross CrossVersion.full
+    "com.typesafe.akka" %% "akka-camel" % "2.1.0-RC5" cross CrossVersion.full
+    "com.typesafe.akka" %% "akka-cluster-experimental" % "2.1.0-RC5" cross CrossVersion.full
+    "com.typesafe.akka" %% "akka-contrib" % "2.1.0-RC5" cross CrossVersion.full
+    "com.typesafe.akka" %% "akka-dataflow" % "2.1.0-RC5" cross CrossVersion.full
+    "com.typesafe.akka" %% "akka-docs" % "2.1.0-RC5" cross CrossVersion.full
+    "com.typesafe.akka" %% "akka-file-mailbox" % "2.1.0-RC5" cross CrossVersion.full
+    "com.typesafe.akka" %% "akka-kernel" % "2.1.0-RC5" cross CrossVersion.full
+    "com.typesafe.akka" %% "akka-mailboxes-common" % "2.1.0-RC5" cross CrossVersion.full
+    "com.typesafe.akka" %% "akka-osgi" % "2.1.0-RC5" cross CrossVersion.full
+    "com.typesafe.akka" %% "akka-osgi-aries" % "2.1.0-RC5" cross CrossVersion.full
+    "com.typesafe.akka" %% "akka-remote" % "2.1.0-RC5" cross CrossVersion.full
+    "com.typesafe.akka" %% "akka-remote-tests-experimental" % "2.1.0-RC5" cross CrossVersion.full
+    "com.typesafe.akka" %% "akka-sample-camel" % "2.1.0-RC5" cross CrossVersion.full
+    "com.typesafe.akka" %% "akka-sample-cluster-experimental" % "2.1.0-RC5" cross CrossVersion.full
+    "com.typesafe.akka" %% "akka-sample-fsm" % "2.1.0-RC5" cross CrossVersion.full
+    "com.typesafe.akka" %% "akka-sample-hello" % "2.1.0-RC5" cross CrossVersion.full
+    "com.typesafe.akka" %% "akka-sample-hello-kernel" % "2.1.0-RC5" cross CrossVersion.full
+    "com.typesafe.akka" %% "akka-sample-multi-node-experimental" % "2.1.0-RC5" cross CrossVersion.full
+    "com.typesafe.akka" %% "akka-sample-remote" % "2.1.0-RC5" cross CrossVersion.full
+    "com.typesafe.akka" %% "akka-slf4j" % "2.1.0-RC5" cross CrossVersion.full
+    "com.typesafe.akka" %% "akka-testkit" % "2.1.0-RC5" cross CrossVersion.full
+    "com.typesafe.akka" %% "akka-transactor" % "2.1.0-RC5" cross CrossVersion.full
+    "com.typesafe.akka" %% "akka-zeromq" % "2.1.0-RC5" cross CrossVersion.full
