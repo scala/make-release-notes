@@ -34,8 +34,11 @@ object MakeReleaseNotes {
   
   def makeReleaseNotes(scalaDir: java.io.File, previousTag: String, currentTag: String): String = {
     val info = new GitInfo(scalaDir, previousTag, currentTag)
-    val communityProjects = CommunityProjects.loadHtmlFromFile()
+    // val communityProjects = CommunityProjects.loadHtmlFromFile()
     import info.{currentTag => _, _}
+    // <h3> Known issues </h3>
+    // ${JiraIssues.makeOpenIssuesString}
+
     s"""<html>
       <head>
         <title>${currentTag} - Release notes</title>
@@ -43,9 +46,6 @@ object MakeReleaseNotes {
       <body>
         <h3>A new release of Scala is available!  Please point your build tools at ${currentTag drop 1}</h3>
         ${parseHandWrittenNotes()}
-        ${communityProjects}
-        <h3> Known issues </h3>
-        ${JiraIssues.makeOpenIssuesString}
         <br/><br/>
         ${renderFixedIssues}
         ${renderCommitterList}
