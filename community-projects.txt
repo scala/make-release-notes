@@ -187,3 +187,52 @@ or:
     "com.typesafe.akka" %% "akka-testkit" % "2.1.0-RC5" cross CrossVersion.full
     "com.typesafe.akka" %% "akka-transactor" % "2.1.0-RC5" cross CrossVersion.full
     "com.typesafe.akka" %% "akka-zeromq" % "2.1.0-RC5" cross CrossVersion.full
+
+Name: FingerTree
+Description:   A Scala implementation of the versatile purely functional data structure of the same name.
+URL:  https://github.com/Sciss/FingerTree
+Location:    "de.sciss" %% "fingertree" % "1.2.+"
+
+Name: LucreSTM
+Description:   Extension of Scala-STM, adding optional durability layer, and providing API for confluent and reactive event layers
+URL:  https://github.com/Sciss/LucreSTM
+Location:    "de.sciss" %% "lucrestm" % "1.4.+"
+Resolvers needed for dependencies:    "Oracle Repository" at "http://download.oracle.com/maven"
+
+Name: LucreData
+Description:   Transactional data structures (skip list, skip octree, total order) for Scala
+URL:  https://github.com/Sciss/LucreData
+Location:    "de.sciss" %% "lucredata" % "1.4.+"
+  just core: "de.sciss" %% "lucredata-core" % "1.4.+"
+  just gui:  "de.sciss" %% "lucredata-views" % "1.4.+"
+Resolvers needed for dependencies:    "Oracle Repository" at "http://download.oracle.com/maven"
+
+Name: LucreEvent
+Description:   Reactive event-system for LucreSTM
+URL:  https://github.com/Sciss/LucreEvent
+Location:    "de.sciss" %% "lucreevent" % "1.4.+"
+Resolvers needed for dependencies:    "Oracle Repository" at "http://download.oracle.com/maven"
+
+Name: LucreExpr
+Description:   Reactive Expression Trees based on LucreSTM
+URL:  https://github.com/Sciss/LucreExpr
+Location:    "de.sciss" %% "lucreexpr" % "1.4.+"
+Resolvers needed for dependencies:    "Oracle Repository" at "http://download.oracle.com/maven"
+
+Name: LucreConfluent
+Description:   Confluently persistent references for Scala
+URL:  https://github.com/Sciss/LucreConfluent
+Location:    "de.sciss" %% "lucreconfluent" % "1.5.+"
+Resolvers needed for dependencies:    "Oracle Repository" at "http://download.oracle.com/maven"
+
+Name: ConfluentReactive
+Description:   Confluent persistence and quasi-retroactive / fluent references for Scala
+URL:  https://github.com/Sciss/ConfluentReactive
+Location:    "de.sciss" %% "confluentreactive" % "1.5.+"
+Resolvers needed for dependencies:    "Oracle Repository" at "http://download.oracle.com/maven"
+
+Name: SoundProcesses
+Description:   A framework for creating and managing ScalaCollider based sound processes
+URL:  https://github.com/Sciss/SoundProcesses
+Location:    "de.sciss" %% "soundprocesses" % "1.2.+"
+Resolvers needed for dependencies:    "Oracle Repository" at "http://download.oracle.com/maven"
