@@ -76,7 +76,7 @@ class GitInfo(gitDir: java.io.File, val previousTag: String, val currentTag: Str
     sb append header4("Complete commit list!")
     sb append """<table border="0" cellspacing="0" cellpadding="1">
       <thead><tr><th>sha</th><th align="left">Title</th></tr></thead>
-    <tbody>\n"""
+    <tbody>"""
     for(commit <- commits)
        sb append s"""<tr><td align="right">${commitShaLink(commit.sha)}&nbsp;</td><td>${commit.header}</td></tr>\n"""
     sb append """</tbody>
@@ -94,7 +94,7 @@ class GitInfo(gitDir: java.io.File, val previousTag: String, val currentTag: Str
     for(commit <- fixCommits)
       sb append s"""<tr><td>${fixLinks(commit)}&nbsp;</td><td>${commitShaLink(commit.sha)}&nbsp;</td><td>${commit.header}</td></tr>"""
     sb append """</tbody>
-      </table>\n"""
+      </table>"""
     sb append blankLine()
     sb.toString
   }
