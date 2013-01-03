@@ -1,78 +1,49 @@
-Name: Slick
-Description: Scala Language-Integrated Connection Kit
-URL: http://slick.typesafe.com
-Location:    "com.typesafe" % "slick_2.10.0-RC5" % "0.11.2"
-
-Name: ScalaSTM
-Description: Software transactional memory for Scala, plus STM-friendly concurrent sets and maps
-URL: http://nbronson.github.com/scala-stm/
-Location: "org.scala-stm" %% "scala-stm" % "0.6"
-
-Name: ScalaTest
-Description: Simple, clear tests and executable specifications
-URL: http://scalatest.org/
-Location:
-  For ScalaTest 1.8: "org.scalatest" % "scalatest_2.10.0-RC5" % "1.8-B1"
-  For ScalaTest 2.0.M5: "org.scalatest" % "scalatest_2.10.0-RC5" % "2.0.M5-B1"
-
-Name: sfreechart
-Description: Scala-friendly wrapper for JFreeChart
-URL: https://github.com/wookietreiber/scala-chart
-Location: "com.github.wookietreiber.sfreechart" % "sfreechart_2.10.0-RC5" % "0.1.0"
-
-Name: shapeless
-Description: An exploration of generic/polytypic programming in Scala
-URL: https://github.com/milessabin/shapeless
-Location: "com.chuusai" % "shapeless_2.10.0-RC5" % "1.2.3"
-
-Name: shapeless
-Description: An exploration of generic/polytypic programming in Scala
-URL: https://github.com/milessabin/shapeless
-Location: "com.chuusai" % "shapeless_2.10.0-RC5" % "1.2.4-SNAPSHOT"
+Name: ScalaLogging
+Description: Convenient and performant logging in Scala
+URL: https://github.com/typesafehub/scalalogging
+Location: "com.typesafe" %% "scalalogging-slf4j" % "1.0.0"
 
 Name: specs2
-Description:   specs2 is a library for writing executable specifications in Scala
-URL:  http://specs2.org
-Location:    "org.specs2" % "specs2_2.10.0-RC5" % "1.13-SNAPSHOT"
-             "org.specs2" % "specs2_2.10.0-RC5" % "1.12.3"
+Description: specs2 is a library for writing software specifications in Scala
+URL: https://github.com/etorreborre/specs2
+Location: "org.specs2" %% "specs2" % "1.13"
+
+Name: ScalikeJDBC
+Description: A tidy SQL-based DB access library for Scala.
+URL: https://github.com/seratch/scalikejdbc
+Location: "com.github.seratch" %% "scalikejdbc" % "1.4.1"
+
+Name: scopt
+Description: scopt is a little command line options parsing library.
+URL: https://github.com/scopt/scopt
+Location: "com.github.scopt" %% "scopt" % "2.1.0"
 
 Name: ScalaMock 3
 Description: Native Scala Mocking with added macro-goodness
 URL: http://scalamock.org/
 Location:
-  For ScalaTest integration: "org.scalamock" % "scalamock-scalatest-support_2.10.0-RC5" % "3.0-M6"
-  For Specs2 integration: "org.scalamock" % "scalamock-specs2-support_2.10.0-RC5" % "3.0-M6"
+  For ScalaTest integration: "org.scalamock" %% "scalamock-scalatest-support" % "3.0"
+  For Specs2 integration: "org.scalamock" %% "scalamock-specs2-support" % "3.0"
 
-Name: Spire
-Description: Powerful new number types and numeric abstractions for Scala.
-URL: https://github.com/non/spire#readme
-Location: "org.spire-math" % "spire_2.10.0-RC5" % "0.3.0-M6"
+Name: nscala-time
+Description: A new Scala wrapper for Joda Time based on scala-time.
+URL: https://github.com/nscala-time/nscala-time
+Location: "com.github.nscala-time" %% "nscala-time" % "0.2.0"
 
-Name: scalaz
-Description: Type Classes and Pure Functional Data Structures for Scala
-URL: http://code.google.com/p/scalaz/
-Location:    "org.scalaz" % "scalaz-core_2.10.0-RC5" % "7.0.0-M6"
-             "org.scalaz" % "scalaz-core_2.10.0-RC5" % "6.0.4"
+Name: Slick
+Description: Scala Language-Integrated Connection Kit
+URL: http://slick.typesafe.com
+Location:    "com.typesafe" %% "slick" % "1.0.0-RC1"
 
-Name: Graph for Scala
-Description:   In-memory graph library seamlessly fitting into the Scala Collection Library
-URL:  https://www.assembla.com/spaces/scala-graph/wiki
-Location: "com.assembla.scala-incubator" % "graph-core_2.10.0-RC5" % "1.5.2"
-
-Name: Scales Xml
-Description: Scales Xml provides superb performance with low memory usage, a unified pull and push model, Iteratee and Iterator based pull parsing, equality framework, both an embedded XPath DSL and string based XPath 1.0 support.
-URL: https://github.com/chris-twiner/scalesXml
-Location: "org.scalesxml" % "scales-xml_2.10.0-RC5" % "0.4.4"
-
-Name: scopt
-Description: scopt is a little command line options parsing library.
-URL: https://github.com/scopt/scopt
-Location: "com.github.scopt" % "scopt_2.10.0-RC5" % "2.1.0"
+Name: sfreechart
+Description: SFreeChart is a Scala-friendly wrapper for JFreeChart
+URL: https://github.com/wookietreiber/scala-chart
+Location: "com.github.wookietreiber.sfreechart" %% "sfreechart" % "0.1.0"
 
 Name: ScalaAudioFile
 Description:   A library to read and write uncompressed audio files (AIFF, WAVE, etc.)
 URL:  https://github.com/Sciss/ScalaAudioFile
-Location:    "de.sciss" %% "scalaaudiofile" % "1.1.+"
+Location:    "de.sciss" %% "scalaaudiofile" % "1.2.+"
 
 Name: ScalaOSC
 Description:   A library for OpenSoundControl (OSC), a message protocol used in multi-media applications.
@@ -82,157 +53,187 @@ Location:    "de.sciss" %% "scalaosc" % "1.1.+"
 Name: ScalaCollider
 Description:   A sound synthesis library for the SuperCollider server
 URL:  https://github.com/Sciss/ScalaCollider
-Location:    "de.sciss" %% "scalacollider" % "1.2.+"
-
-Name: scalaxb
-Description: XML data-binding tool for Scala that supports W3C XML Schema (xsd) as the input file.
-URL: http://scalaxb.org/
-Location: "org.scalaxb" % "scalaxb_2.10.0-RC5" % "1.0.0-RC3"
+Location:    "de.sciss" %% "scalacollider" % "1.3.+"
 
 Name: ScalaInterpreterPane
 Description:   A Swing based front-end for the Scala REPL (interpreter)
 URL:  https://github.com/Sciss/ScalaInterpreterPane
-Location:    "de.sciss" %% "scalainterpreterpane" % "1.2.+"
-// Resolvers needed for dependencies:    "Clojars Repository" at "http://clojars.org/repo"
+Location:    "de.sciss" %% "scalainterpreterpane" % "1.3.+"
+
+Name: redisclient
+Description: Scala driver for Redis
+URL: https://github.com/debasishg/scala-redis
+Location: "net.debasishg" %% "redisclient" % "2.9"
+
+Name: ScalaSTM
+Description: Software transactional memory for Scala, plus STM-friendly concurrent sets and maps
+URL: http://nbronson.github.com/scala-stm/
+Location: "org.scala-stm" %% "scala-stm" % "0.7"
+
+Name: ScalaJPA
+Description: Scala wrappers for JPA 1.0 Persistence Framework
+URL: https://github.com/dchenbecker/scalajpa
+Location: "org.scala-libs" %% "scalajpa" % "1.4"
+
+Name: ScalaTest
+Description: Simple, clear tests and executable specifications
+URL: http://scalatest.org/
+Location: "org.scalatest" % "scalatest_2.10" % "1.9.1" // For ScalaTest 1.9.1, or
+  "org.scalatest" % "scalatest_2.10" % "2.0.M5b" // For ScalaTest 2.0.M5
 
 Name: AudioWidgets
 Description:   Specialized Swing widgets for audio applications in Scala
 URL:  https://github.com/Sciss/AudioWidgets
-Location:    "de.sciss" %% "audiowidgets" % "1.0.+"
-
-Name: ScalaAudioWidgets
-Description:   Scala-Swing wrappers for the AudioWidgets library
-URL:  https://github.com/Sciss/ScalaAudioWidgets
-Location:    "de.sciss" %% "scalaaudiowidgets" % "1.0.+"
+Location:    "de.sciss" %% "audiowidgets" % "1.1.+"
+  core:                  "de.sciss" %% "audiowidgets-core" % "1.1.+"
+  scala-swing bindings:  "de.sciss" %% "audiowidgets-swing" % "1.1.+"
 
 Name: ScalaColliderSwing
 Description:   A Swing and REPL front-end for ScalaCollider
 URL:  https://github.com/Sciss/ScalaColliderSwing
-Location:    "de.sciss" %% "scalacolliderswing" % "1.2.+"
-// Resolvers needed for dependencies:    "Clojars Repository" at "http://clojars.org/repo"
+Location:    "de.sciss" %% "scalacolliderswing" % "1.3.+"
 
 Name: Strugatzki
 Description:   Algorithms for extracting audio features and matching audio file similarities
 URL:  https://github.com/Sciss/Strugatzki
-Location:    "de.sciss" %% "strugatzki" % "1.2.+"
+Location:    "de.sciss" %% "strugatzki" % "1.3.+"
 
 Name: ScissDSP
 Description:   Collection of DSP algorithms and components for Scala
 URL:  https://github.com/Sciss/ScissDSP
 Location:    "de.sciss" %% "scissdsp" % "1.1.+"
 
-Name: SonogramOverview
-Description:   Sonogram view component for Scala/Swing, calculating offline from audio files
-URL:  https://github.com/Sciss/SonogramOverview
-Location:    "de.sciss" %% "sonogramoverview" % "1.2.+"
-
 Name: FScapeJobs
 Description:   A library to launch digital signal processing jobs for FScape via OSC
 URL:  https://github.com/Sciss/FScapeJobs
-Location:    "de.sciss" %% "fscapejobs" % "1.1.+"
-
-Name: Akka
-Description: Akka is a toolkit and runtime for building highly concurrent, distributed, and fault tolerant event-driven applications on the JVM.
-URL: http://akka.io
-Location: "com.typesafe.akka" % "akka-actor_2.10.0-RC5" % "2.1.0-RC5"
-    "com.typesafe.akka" % "akka-actor-tests_2.10.0-RC5" % "2.1.0-RC5"
-    "com.typesafe.akka" % "akka-agent_2.10.0-RC5" % "2.1.0-RC5"
-    "com.typesafe.akka" % "akka-camel_2.10.0-RC5" % "2.1.0-RC5"
-    "com.typesafe.akka" % "akka-cluster-experimental_2.10.0-RC5" % "2.1.0-RC5"
-    "com.typesafe.akka" % "akka-contrib_2.10.0-RC5" % "2.1.0-RC5"
-    "com.typesafe.akka" % "akka-dataflow_2.10.0-RC5" % "2.1.0-RC5"
-    "com.typesafe.akka" % "akka-docs_2.10.0-RC5" % "2.1.0-RC5"
-    "com.typesafe.akka" % "akka-file-mailbox_2.10.0-RC5" % "2.1.0-RC5"
-    "com.typesafe.akka" % "akka-kernel_2.10.0-RC5" % "2.1.0-RC5"
-    "com.typesafe.akka" % "akka-mailboxes-common_2.10.0-RC5" % "2.1.0-RC5"
-    "com.typesafe.akka" % "akka-osgi_2.10.0-RC5" % "2.1.0-RC5"
-    "com.typesafe.akka" % "akka-osgi-aries_2.10.0-RC5" % "2.1.0-RC5"
-    "com.typesafe.akka" % "akka-remote_2.10.0-RC5" % "2.1.0-RC5"
-    "com.typesafe.akka" % "akka-remote-tests-experimental_2.10.0-RC5" % "2.1.0-RC5"
-    "com.typesafe.akka" % "akka-sample-camel_2.10.0-RC5" % "2.1.0-RC5"
-    "com.typesafe.akka" % "akka-sample-cluster-experimental_2.10.0-RC5" % "2.1.0-RC5"
-    "com.typesafe.akka" % "akka-sample-fsm_2.10.0-RC5" % "2.1.0-RC5"
-    "com.typesafe.akka" % "akka-sample-hello_2.10.0-RC5" % "2.1.0-RC5"
-    "com.typesafe.akka" % "akka-sample-hello-kernel_2.10.0-RC5" % "2.1.0-RC5"
-    "com.typesafe.akka" % "akka-sample-multi-node-experimental_2.10.0-RC5" % "2.1.0-RC5"
-    "com.typesafe.akka" % "akka-sample-remote_2.10.0-RC5" % "2.1.0-RC5"
-    "com.typesafe.akka" % "akka-slf4j_2.10.0-RC5" % "2.1.0-RC5"
-    "com.typesafe.akka" % "akka-testkit_2.10.0-RC5" % "2.1.0-RC5"
-    "com.typesafe.akka" % "akka-transactor_2.10.0-RC5" % "2.1.0-RC5"
-    "com.typesafe.akka" % "akka-zeromq_2.10.0-RC5" % "2.1.0-RC5"
-or:
-    "com.typesafe.akka" %% "akka-actor" % "2.1.0-RC5" cross CrossVersion.full
-    "com.typesafe.akka" %% "akka-actor-tests" % "2.1.0-RC5" cross CrossVersion.full
-    "com.typesafe.akka" %% "akka-agent" % "2.1.0-RC5" cross CrossVersion.full
-    "com.typesafe.akka" %% "akka-camel" % "2.1.0-RC5" cross CrossVersion.full
-    "com.typesafe.akka" %% "akka-cluster-experimental" % "2.1.0-RC5" cross CrossVersion.full
-    "com.typesafe.akka" %% "akka-contrib" % "2.1.0-RC5" cross CrossVersion.full
-    "com.typesafe.akka" %% "akka-dataflow" % "2.1.0-RC5" cross CrossVersion.full
-    "com.typesafe.akka" %% "akka-docs" % "2.1.0-RC5" cross CrossVersion.full
-    "com.typesafe.akka" %% "akka-file-mailbox" % "2.1.0-RC5" cross CrossVersion.full
-    "com.typesafe.akka" %% "akka-kernel" % "2.1.0-RC5" cross CrossVersion.full
-    "com.typesafe.akka" %% "akka-mailboxes-common" % "2.1.0-RC5" cross CrossVersion.full
-    "com.typesafe.akka" %% "akka-osgi" % "2.1.0-RC5" cross CrossVersion.full
-    "com.typesafe.akka" %% "akka-osgi-aries" % "2.1.0-RC5" cross CrossVersion.full
-    "com.typesafe.akka" %% "akka-remote" % "2.1.0-RC5" cross CrossVersion.full
-    "com.typesafe.akka" %% "akka-remote-tests-experimental" % "2.1.0-RC5" cross CrossVersion.full
-    "com.typesafe.akka" %% "akka-sample-camel" % "2.1.0-RC5" cross CrossVersion.full
-    "com.typesafe.akka" %% "akka-sample-cluster-experimental" % "2.1.0-RC5" cross CrossVersion.full
-    "com.typesafe.akka" %% "akka-sample-fsm" % "2.1.0-RC5" cross CrossVersion.full
-    "com.typesafe.akka" %% "akka-sample-hello" % "2.1.0-RC5" cross CrossVersion.full
-    "com.typesafe.akka" %% "akka-sample-hello-kernel" % "2.1.0-RC5" cross CrossVersion.full
-    "com.typesafe.akka" %% "akka-sample-multi-node-experimental" % "2.1.0-RC5" cross CrossVersion.full
-    "com.typesafe.akka" %% "akka-sample-remote" % "2.1.0-RC5" cross CrossVersion.full
-    "com.typesafe.akka" %% "akka-slf4j" % "2.1.0-RC5" cross CrossVersion.full
-    "com.typesafe.akka" %% "akka-testkit" % "2.1.0-RC5" cross CrossVersion.full
-    "com.typesafe.akka" %% "akka-transactor" % "2.1.0-RC5" cross CrossVersion.full
-    "com.typesafe.akka" %% "akka-zeromq" % "2.1.0-RC5" cross CrossVersion.full
+Location:    "de.sciss" %% "fscapejobs" % "1.2.+"
 
 Name: FingerTree
 Description:   A Scala implementation of the versatile purely functional data structure of the same name.
 URL:  https://github.com/Sciss/FingerTree
 Location:    "de.sciss" %% "fingertree" % "1.2.+"
 
+Name: scalaz
+Description: Type Classes and Pure Functional Data Structures for Scala
+URL: http://code.google.com/p/scalaz/
+Location:    "org.scalaz" %% "scalaz-core" % "7.0.0-M7"
+
+Name: scallop
+Description: a simple (yet powerful) command-line arguments parsing library for Scala.
+URL: https://github.com/Rogach/scallop
+Location: "org.rogach" %% "scallop" % "0.6.3"
+
+Name: Basis
+Description: An experimental foundation library focussed on efficiency and clean design.
+URL: http://basis.reify.it
+Location: "it.reify" %% "basis" % "0.0"
+  "it.reify" %% "basis-collections" % "0.0"
+  "it.reify" %% "basis-containers" % "0.0"
+  "it.reify" %% "basis-control" % "0.0"
+  "it.reify" %% "basis-generators" % "0.0"
+  "it.reify" %% "basis-math" % "0.0"
+  "it.reify" %% "basis-memory" % "0.0"
+  "it.reify" %% "basis-runtime" % "0.0"
+  "it.reify" %% "basis-sequential" % "0.0"
+  "it.reify" %% "basis-text" % "0.0"
+  "it.reify" %% "basis-util" % "0.0"
+
+Name: scala-poi
+Description: A convenient API for creating Excel spreadsheets using Apache POI.
+URL: https://github.com/folone/poi.scala
+Location: "info.folone" %% "poi-scala" % "0.7"
+
+Name: shapeless
+Description: An exploration of generic/polytypic programming in Scala
+URL: https://github.com/milessabin/shapeless
+Location: "com.chuusai" %% "shapeless" % "1.2.3"
+
+Name: sqltyped
+Description: a macro which infers Scala types from database
+URL: https://github.com/jonifreeman/sqltyped
+Location: "fi.reaktor" %% "sqltyped" % "0.1.0"
+
+Name: Jackson Scala Module
+Description: Scala data type support for the Jackson JSON processing library
+URL: https://github.com/FasterXML/jackson-module-scala
+Location: "com.fasterxml.jackson.module" %% "jackson-module-scala" % "2.1.3"
+
+Name: Metrics-scala
+Description: Capturing JVM- and application-level metrics. So you know what's going on.
+URL:  https://github.com/erikvanoosten/metrics-scala
+Location:  "nl.grons" % "metrics-scala_2.10" % "2.2.0"
+
 Name: LucreSTM
 Description:   Extension of Scala-STM, adding optional durability layer, and providing API for confluent and reactive event layers
 URL:  https://github.com/Sciss/LucreSTM
-Location:    "de.sciss" %% "lucrestm" % "1.4.+"
-Resolvers needed for dependencies:    "Oracle Repository" at "http://download.oracle.com/maven"
+Location:    "de.sciss" %% "lucrestm" % "1.6.+"
+  core:                    "de.sciss" %% "lucrestm-core" % "1.6.+"
+  BerkeleyDB JE bindings:  "de.sciss" %% "lucrestm-bdb" % "1.6.+"
+Resolvers needed for lucrestm-bdb:    "Oracle Repository" at "http://download.oracle.com/maven"
 
 Name: LucreData
 Description:   Transactional data structures (skip list, skip octree, total order) for Scala
 URL:  https://github.com/Sciss/LucreData
-Location:    "de.sciss" %% "lucredata" % "1.4.+"
-  just core: "de.sciss" %% "lucredata-core" % "1.4.+"
-  just gui:  "de.sciss" %% "lucredata-views" % "1.4.+"
-Resolvers needed for dependencies:    "Oracle Repository" at "http://download.oracle.com/maven"
+Location:    "de.sciss" %% "lucredata" % "1.6.+"
+  core:       "de.sciss" %% "lucredata-core" % "1.6.+"
+  gui-views:  "de.sciss" %% "lucredata-views" % "1.6.+"
 
 Name: LucreEvent
 Description:   Reactive event-system for LucreSTM
 URL:  https://github.com/Sciss/LucreEvent
-Location:    "de.sciss" %% "lucreevent" % "1.4.+"
-Resolvers needed for dependencies:    "Oracle Repository" at "http://download.oracle.com/maven"
-
-Name: LucreExpr
-Description:   Reactive Expression Trees based on LucreSTM
-URL:  https://github.com/Sciss/LucreExpr
-Location:    "de.sciss" %% "lucreexpr" % "1.4.+"
-Resolvers needed for dependencies:    "Oracle Repository" at "http://download.oracle.com/maven"
+Location:    "de.sciss" %% "lucreevent" % "1.6.+"
+  core:              "de.sciss" %% "lucreevent-core" % "1.6.+"
+  expression trees:  "de.sciss" %% "lucreevent-expr" % "1.6.+"
 
 Name: LucreConfluent
 Description:   Confluently persistent references for Scala
 URL:  https://github.com/Sciss/LucreConfluent
-Location:    "de.sciss" %% "lucreconfluent" % "1.5.+"
-Resolvers needed for dependencies:    "Oracle Repository" at "http://download.oracle.com/maven"
-
-Name: ConfluentReactive
-Description:   Confluent persistence and quasi-retroactive / fluent references for Scala
-URL:  https://github.com/Sciss/ConfluentReactive
-Location:    "de.sciss" %% "confluentreactive" % "1.5.+"
-Resolvers needed for dependencies:    "Oracle Repository" at "http://download.oracle.com/maven"
+Location:    "de.sciss" %% "lucreconfluent" % "1.6.+"
+  core:      "de.sciss" %% "lucreconfluent-core" % "1.6.+"
+  events:    "de.sciss" %% "lucreconfluent-event" % "1.6.+"
 
 Name: SoundProcesses
 Description:   A framework for creating and managing ScalaCollider based sound processes
 URL:  https://github.com/Sciss/SoundProcesses
-Location:    "de.sciss" %% "soundprocesses" % "1.2.+"
+Location:    "de.sciss" %% "soundprocesses" % "1.3.+"
 Resolvers needed for dependencies:    "Oracle Repository" at "http://download.oracle.com/maven"
+
+Name: Graph for Scala
+Description:   In-memory graph library seamlessly fitting into the Scala Collection Library
+URL:  https://www.assembla.com/spaces/scala-graph/wiki
+Location: "com.assembla.scala-incubator" % "graph-core_2.10" % "1.6.0"
+
+Name: Kiama
+Description: Kiama is a Scala library for language processing
+URL: http://kiama.googlecode.com
+Location: "com.googlecode.kiama" % "kiama_2.10" % "1.4.0"
+
+Name: Scala Migrations
+Description: Database migrations for Derby, MySQL, PostgreSQL and Oracle written in a Scala DSL
+URL: http://opensource.imageworks.com/?p=scalamigrations
+Location: "com.imageworks.scala-migrations" %% "scala-migrations" % "1.1.1"
+
+Name: Spire
+Description: Powerful new number types and numeric abstractions for Scala.
+URL: https://github.com/non/spire
+Location: "org.spire-math" % "spire_2.10.0" % "0.3.0-M7"
+
+Name: squeryl
+Description: A Scala ORM and DSL for talking with Databases with minimum verbosity and maximum type safety
+URL: https://github.com/max-l/Squeryl
+Location: "org.squeryl" %% "squeryl" % "0.9.5-6"
+
+Name: Scales Xml
+Description:   Scales Xml provides superb performance with low memory usage, a unified pull and push model, Iteratee and Iterator based pull parsing, equality framework, both an embedded XPath DSL and string based XPath 1.0 support.
+URL:  https://github.com/chris-twiner/scalesXml
+Location: "org.scalesxml" %% "scales-xml" % "0.4.4"
+
+Name: geotrellis
+Description: Geographic data processing engine for high performance applications.
+URL: https://github.com/azavea/geotrellis
+Location: "com.azavea.geotrellis" %% "geotrellis" % "0.8.0-RC1"
+
+Name: SORM
+Description: A pure case-classes oriented ORM framework for Scala
+URL: http://sorm-framework.org/
+Location: "com.github.nikita-volkov" % "sorm" % "0.3.5"
