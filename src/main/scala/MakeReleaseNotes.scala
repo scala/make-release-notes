@@ -44,8 +44,6 @@ object MakeReleaseNotes {
         <h3>A new release of Scala is available!  Please point your build tools at ${currentTag drop 1}</h3>
         ${parseHandWrittenNotes()}
         ${communityProjects}
-        <h3> Known issues </h3>
-        ${JiraIssues.makeOpenIssuesString}
         <br/><br/>
         ${renderFixedIssues}
         ${renderCommitterList}
