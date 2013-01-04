@@ -41,7 +41,7 @@ In the mean time, here's an overview of the most prominent new features and impr
 * Parallel Collections are now configurable with custom thread pools
     * [http://docs.scala-lang.org/overviews/parallel-collections/overview.html](http://docs.scala-lang.org/overviews/parallel-collections/overview.html)
 * Akka Actors now part of the distribution
-    * The original Scala actors and the akka implementation have been consolidated.
+    * scala.actors have been deprecated and the akka implementation is now included in the distribution.
     * See the [actors migration project](http://docs.scala-lang.org/actors-migration/) for more information.
 * Performance Improvements
     * Faster inliner
@@ -59,9 +59,9 @@ In the mean time, here's an overview of the most prominent new features and impr
 The following exciting -- experimental -- features are part of 2.10.0:
 
 * Scala Reflection
-    * [https://docs.google.com/document/d/1Z1VhhNPplbUpaZPIYdc0_EUv5RiGQ2X4oqp0i-vz1qw/edit#heading=h.pqwdkl](https://docs.google.com/document/d/1Z1VhhNPplbUpaZPIYdc0_EUv5RiGQ2X4oqp0i-vz1qw/edit#heading=h.pqwdkl)
+    * [Overview](http://docs.scala-lang.org/overviews/reflection/overview.html)
 * Macros
-    * [http://docs.scala-lang.org/sips/pending/self-cleaning-macros.html](http://docs.scala-lang.org/sips/pending/self-cleaning-macros.html)
+    * [Self-cleaning macros SIP](http://docs.scala-lang.org/sips/pending/self-cleaning-macros.html)
 
 The API is subject to (possibly major) changes in the 2.11.x series, but don't let that stop you from experimenting with them!
 A lot of developers have already come up with very cool applications for them.
