@@ -41,12 +41,12 @@ object MakeReleaseNotes {
         <title>${currentTag} - Release notes</title>
       </head>
       <body>
-        <h3>A new release of Scala is available!  Please point your build tools at ${currentTag drop 1}</h3>
+        <h3>Scala ${currentTag drop 1} is now available!</h3>
         ${parseHandWrittenNotes()}
         ${communityProjects}
         <br/><br/>
-        ${renderFixedIssues}
         ${renderCommitterList}
+        ${renderFixedIssues}
         ${renderCommitList}
       </body>
     </html>"""
