@@ -59,12 +59,13 @@ In the mean time, here's an overview of the most prominent new features and impr
 The following exciting -- experimental -- features are part of 2.10.0:
 
 * Scala Reflection
-    * [Overview](http://docs.scala-lang.org/overviews/reflection/overview.html)
+    * [http://docs.scala-lang.org/overviews/reflection/overview.html](http://docs.scala-lang.org/overviews/reflection/overview.html)
 * Macros
-    * [Self-cleaning macros SIP](http://docs.scala-lang.org/sips/pending/self-cleaning-macros.html)
+    * [http://docs.scala-lang.org/overviews/macros/overview.html](http://docs.scala-lang.org/overviews/macros/overview.html)
 
 The API is subject to (possibly major) changes in the 2.11.x series, but don't let that stop you from experimenting with them!
 A lot of developers have already come up with very cool applications for them.
+Some examples can be seen at [http://scalamacros.org/news/2012/11/05/status-update.html](http://scalamacros.org/news/2012/11/05/status-update.html).
 
 ### Scala IDE for Eclipse
 
