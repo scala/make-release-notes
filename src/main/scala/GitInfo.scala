@@ -8,9 +8,9 @@ case class Commit(sha: String, author: String, header: String, body: String) {
 object GitHelper {
   val gitFormat = "--format=format:*-*%h``%aN``%s``%b"
   def processGitCommits(input: String): IndexedSeq[Commit] =
-    ((input split "[\\r\\n]*\\*\\-\\*").view map (_ split "``") collect {
+    input.lines.map(_.split("``", 4)).collect {
       case Array(sha, author, hdr, msg) => Commit(sha, author, hdr, msg)
-    }).toVector
+    }.toVector
 
   def hasFixins(msg: String): Boolean = (
     (msg contains "SI-") /*&& ((msg.toLowerCase contains "fix") || (msg.toLowerCase contains "close"))*/
@@ -34,10 +34,8 @@ class GitInfo(gitDir: java.io.File, val previousTag: String, val currentTag: Str
   import sys.process._
   import GitHelper._
   
-  def runGit = 
-    Process(Seq("git", "log", s"${previousTag}..${currentTag}","--format=format:*-*%h``%aN``%s``%b","--no-merges"), gitDir)
-  val commits =
-    processGitCommits(runGit.!!)
+  def runGit =  Process(Seq("git", "log", s"${previousTag}..${currentTag}","--format=format:%h``%aN``%s``%b","--no-merges"), gitDir)
+  val commits = processGitCommits(runGit.!!)
 
   val authors: Seq[(String, Int)] = {
     val grouped: Vector[(String,Int)] = (commits groupBy (_.author)).map { case (a,c) => a -> c.length }{collection.breakOut}
