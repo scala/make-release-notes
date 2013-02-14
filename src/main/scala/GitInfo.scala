@@ -52,7 +52,7 @@ class GitInfo(gitDir: java.io.File, val previousTag: String, val currentTag: Str
   private def commitShaLink(sha: String) = 
     s"""<a href="https://github.com/scala/scala/commit/${sha}">${sha}</a>"""
 
-  private def blankLine(): String = "<p>&nbsp</p>"
+  private def blankLine(): String = "<p>&nbsp;</p>"
   private def header4(msg: String): String = s"<h4>$msg</h4>"
 
   def renderCommitterList: String = {
