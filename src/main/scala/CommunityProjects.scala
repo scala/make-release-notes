@@ -17,7 +17,11 @@ case class ProjectInfo(name: String, desc: String, url: String, loc: String) {
 object CommunityProjects {
 
   def loadHtmlFromFile(file: java.io.File = new java.io.File("community-projects.txt")): String =
-    renderProjectHtml(loadCommunityProjects(loadLines(file)))
+    loadCommunityProjects(loadLines(file)) match {
+      case projects if projects.nonEmpty => renderProjectHtml(projects)
+      case _ => ""
+    }
+
   
   def loadLines(file: java.io.File): Seq[String] = {
     val in = new java.io.BufferedReader(new java.io.FileReader(file))

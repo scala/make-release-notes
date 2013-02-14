@@ -1,11 +1,24 @@
-We are very excited to announce the final release of Scala 2.10.0!
-Many thanks for your bug reports and pull requests (both code and documentation) that helped us pull this release together!
+We are pleased to announce the first release candidate of Scala 2.10.1!
 
-Over the coming days and weeks, we will be publishing guides to help you migrate your projects to 2.10,
-and to highlight the features waiting for you after upgrading.
+The Scala team and contributors [fixed 177 issues since 2.10.0](https://issues.scala-lang.org/secure/IssueNavigator.jspa?reset=true&jqlQuery=project+%3D+SI+AND+fixVersion+%3D+%22Scala+2.10.1-RC1%22+AND+status+%3D+closed+ORDER+BY+priority+DESC)!
+In total, [242 pull requests](https://github.com/scala/scala/issues?milestone=5&page=1&state=closed) were opened on [GitHub](https://github.com/scala/scala), of which [225 were merged](https://gist.github.com/adriaanm/4760366) after having been [tested](https://github.com/typesafehub/ghpullrequest-validator) and reviewed.
 
-### New features
-In the mean time, here's an overview of the most prominent new features and improvements:
+Please give 2.10.1-RC1 a spin! It's designed to be a drop-in replacement for 2.10.0.
+We'd love to hear about any regressions since 2.10.0 and will try to fix them before releasing the final version.
+
+### Known Issues
+Before reporting a bug, please have a look at these known issues scheduled [for 2.10.1-RC2](https://issues.scala-lang.org/secure/IssueNavigator.jspa?reset=true&jqlQuery=project+%3D+SI+AND+fixVersion+%3D+%22Scala+2.10.1-RC2%22+AND+resolution+%3D+Unresolved++ORDER+BY+priority+DESC%2C+key+DESC).
+
+### Scala IDE for Eclipse
+The Scala IDE with Scala 2.10.1-RC1 built right in is available through one of the following update-sites:
+
+* [for Eclipse 3.7 (Indigo)](http://download.scala-ide.org/sdk/e37/scala210/dev/site/)
+* [for Eclipse 3.8/4.2 (Juno)](http://download.scala-ide.org/sdk/e38/scala210/dev/site/) (Support for this version is experimental.)
+
+Have a look at the [getting started guide](http://scala-ide.org/docs/user/gettingstarted.html) for more info.
+
+### New features in the 2.10 series
+As for 2.10.0, here's an overview of the most prominent new features and improvements:
 
 * Value Classes
     * A class may now extend `AnyVal` to make it behave like a struct type (restrictions apply).
@@ -56,7 +69,6 @@ In the mean time, here's an overview of the most prominent new features and impr
     * Removed scala.dbc
 
 ### Experimental features
-The following exciting -- experimental -- features are part of 2.10.0:
 
 * Scala Reflection
     * [http://docs.scala-lang.org/overviews/reflection/overview.html](http://docs.scala-lang.org/overviews/reflection/overview.html)
@@ -67,17 +79,3 @@ The API is subject to (possibly major) changes in the 2.11.x series, but don't l
 A lot of developers have already come up with very cool applications for them.
 Some examples can be seen at [http://scalamacros.org/news/2012/11/05/status-update.html](http://scalamacros.org/news/2012/11/05/status-update.html).
 
-### Scala IDE for Eclipse
-
-The Scala IDE with Scala 2.10.0 built right in is available through one of the following update-sites:
-
-* [for Eclipse 3.7 (Indigo)](http://download.scala-ide.org/sdk/e37/scala210/dev/site/)
-* [for Eclipse 3.8/4.2 (Juno)](http://download.scala-ide.org/sdk/e38/scala210/dev/site/) (Support for this version is experimental.)
-
-Have a look at the [getting started guide](http://scala-ide.org/docs/user/gettingstarted.html) for more info.
-
-### Known Issues
-Please have a look at these critical/blocker issues scheduled [for 2.10.1](https://issues.scala-lang.org/secure/IssueNavigator.jspa?reset=true&jqlQuery=project+%3D+SI+AND+fixVersion+%3D+%22Scala+2.10.1-RC1%22+AND+resolution+%3D+Unresolved+AND+priority+%3E%3D+Critical+ORDER+BY+priority+DESC%2C+key+DESC) (RC1 out by mid-February).
-
-### All Fixed Issues
-Here's a comprehensive list of [the issues fixed since 2.9.2](https://issues.scala-lang.org/secure/IssueNavigator.jspa?reset=true&jqlQuery=project+%3D+SI+AND+fixVersion+%3C%3D+%22Scala+2.10.0%22+AND+fixVersion+%3E%3D+%22Scala+2.10.0-M1%22+AND+resolution+%3D+Fixed+ORDER+BY+fixVersion+ASC%2C+priority+DESC%2C+key+DESC).
