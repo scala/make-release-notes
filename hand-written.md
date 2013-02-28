@@ -8,8 +8,10 @@ We'd love to hear about any regressions since 2.10.0 and will try to fix them be
 
 There will be an RC3 one week after this release, which will become the final unless new blocker issues are discovered within a week after its release.
 
+<!--break-->
+
 ### Known Issues
-Before reporting a bug, please have a look at these known issues scheduled [for 2.10.1-RC2](https://issues.scala-lang.org/secure/IssueNavigator.jspa?reset=true&jqlQuery=project+%3D+SI+AND+fixVersion+%3D+%22Scala+2.10.1-RC2%22+AND+resolution+%3D+Unresolved++ORDER+BY+priority+DESC%2C+key+DESC).
+Before reporting a bug, please have a look at these known issues scheduled [for 2.10.1-RC3](https://issues.scala-lang.org/secure/IssueNavigator.jspa?reset=true&jqlQuery=project+%3D+SI+AND+fixVersion+%3D+%22Scala+2.10.1-RC3%22+AND+resolution+%3D+Unresolved++ORDER+BY+priority+DESC%2C+key+DESC).
 
 ### Scala IDE for Eclipse
 The Scala IDE with Scala 2.10.1-RC2 built right in is available through one of the following update-sites:
