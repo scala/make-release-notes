@@ -34,6 +34,7 @@ object GitHelper {
     issues map (si => """<a href="https://issues.scala-lang.org/browse/%s">%s</a>""" format (si, si)) mkString ", "
   }
 
+  def htmlEncode(s: String) = org.apache.commons.lang3.StringEscapeUtils.escapeHtml4(s)
 }
 
 class GitInfo(gitDir: java.io.File, val previousTag: String, val currentTag: String) {
@@ -55,7 +56,7 @@ class GitInfo(gitDir: java.io.File, val previousTag: String, val currentTag: Str
   private def commitShaLink(sha: String) = 
     s"""<a href="https://github.com/scala/scala/commit/${sha}">${sha}</a>"""
 
-  private def blankLine(): String = "<p>&nbsp</p>"
+  private def blankLine(): String = "<p>&nbsp;</p>"
   private def header4(msg: String): String = s"<h4>$msg</h4>"
 
   def renderCommitterList: String = {
@@ -66,7 +67,7 @@ class GitInfo(gitDir: java.io.File, val previousTag: String, val currentTag: Str
                  |  <thead><tr><th>#</th><th align="left">Author</th></tr></thead>
                  |<tbody>""".stripMargin
     for((author, count) <- authors)
-      sb append s"""<tr><td align="right">${count} &nbsp;</td><td>${author}</td></tr>"""
+      sb append s"""<tr><td align="right">${count} &nbsp;</td><td>${htmlEncode(author)}</td></tr>"""
     sb append """</tbody></table>"""
     sb.toString
   }
@@ -79,7 +80,7 @@ class GitInfo(gitDir: java.io.File, val previousTag: String, val currentTag: Str
       <thead><tr><th>sha</th><th align="left">Title</th></tr></thead>
     <tbody>"""
     for(commit <- commits)
-       sb append s"""<tr><td align="right">${commitShaLink(commit.sha)}&nbsp;</td><td>${commit.header}</td></tr>\n"""
+       sb append s"""<tr><td align="right">${commitShaLink(commit.sha)}&nbsp;</td><td>${htmlEncode(commit.header)}</td></tr>"""
     sb append """</tbody>
       </table>"""
     sb.toString
@@ -88,12 +89,12 @@ class GitInfo(gitDir: java.io.File, val previousTag: String, val currentTag: Str
   def renderFixedIssues: String = {
     val sb = new StringBuffer
     sb append blankLine()
-    sb append header4(s"Here's a list of isssues that have been fixed since ${previousTag}")
+    sb append header4(s"Commits and the issues they fixed since ${previousTag}")
     sb append ("""<table border="0" cellspacing="0" cellpading="1">
       <thead><tr><th>Issue(s)</th><th>Commit</th><th>Message</th></tr></thead>
     <tbody>""")
     for(commit <- fixCommits)
-      sb append s"""<tr><td>${fixLinks(commit)}&nbsp;</td><td>${commitShaLink(commit.sha)}&nbsp;</td><td>${commit.header}</td></tr>"""
+      sb append s"""<tr><td>${fixLinks(commit)}&nbsp;</td><td>${commitShaLink(commit.sha)}&nbsp;</td><td>${htmlEncode(commit.header)}</td></tr>"""
     sb append """</tbody>
       </table>"""
     sb append blankLine()
