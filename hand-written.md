@@ -6,6 +6,7 @@ This release includes the following improvements:
   * numerous fixes that are leveraged by the Scala IDE to improve stability and responsiveness,
   * compiler fixes to allow faster incremental compilation.
 
+<!--break-->
 
 ### Scala IDE for Eclipse
 
