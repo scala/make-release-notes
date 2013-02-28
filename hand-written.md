@@ -1,16 +1,18 @@
-We are pleased to announce the first release candidate of Scala 2.10.1!
+We are pleased to announce the second release candidate of Scala 2.10.1!
 
-The Scala team and contributors [fixed 177 issues since 2.10.0](https://issues.scala-lang.org/secure/IssueNavigator.jspa?reset=true&jqlQuery=project+%3D+SI+AND+fixVersion+%3D+%22Scala+2.10.1-RC1%22+AND+status+%3D+closed+ORDER+BY+priority+DESC)!
-In total, [242 pull requests](https://github.com/scala/scala/issues?milestone=5&page=1&state=closed) were opened on [GitHub](https://github.com/scala/scala), of which [225 were merged](https://gist.github.com/adriaanm/4760366) after having been [tested](https://github.com/typesafehub/ghpullrequest-validator) and reviewed.
+The Scala team and contributors [fixed 184 issues since 2.10.0](https://issues.scala-lang.org/secure/IssueNavigator.jspa?reset=true&jqlQuery=project+%3D+SI+AND+%28fixVersion+%3D+%22Scala+2.10.1-RC1%22+OR+fixVersion+%3D+%22Scala+2.10.1-RC2%22%29+AND+status+%3D+closed+ORDER+BY+priority+DESC)!
+In total, [242 pull requests](https://github.com/scala/scala/issues?milestone=5&page=1&state=closed) (+ [7 for RC2](https://github.com/scala/scala/issues?milestone=13&page=1&state=closed)) were opened on [GitHub](https://github.com/scala/scala), of which [225 were merged](https://gist.github.com/adriaanm/4760366) (+ 6 for RC2) after having been [tested](https://github.com/typesafehub/ghpullrequest-validator) and reviewed.
 
-Please give 2.10.1-RC1 a spin! It's designed to be a drop-in replacement for 2.10.0.
+Please give 2.10.1-RC2 a spin! It's designed to be a drop-in replacement for 2.10.0.
 We'd love to hear about any regressions since 2.10.0 and will try to fix them before releasing the final version.
+
+There will be an RC3 one week after this release, which will become the final unless new blocker issues are discovered within a week after its release.
 
 ### Known Issues
 Before reporting a bug, please have a look at these known issues scheduled [for 2.10.1-RC2](https://issues.scala-lang.org/secure/IssueNavigator.jspa?reset=true&jqlQuery=project+%3D+SI+AND+fixVersion+%3D+%22Scala+2.10.1-RC2%22+AND+resolution+%3D+Unresolved++ORDER+BY+priority+DESC%2C+key+DESC).
 
 ### Scala IDE for Eclipse
-The Scala IDE with Scala 2.10.1-RC1 built right in is available through one of the following update-sites:
+The Scala IDE with Scala 2.10.1-RC2 built right in is available through one of the following update-sites:
 
 * [for Eclipse 3.7 (Indigo)](http://download.scala-ide.org/sdk/next/e37/scala210/dev/site/)
 * [for Eclipse 3.8/4.2 (Juno)](http://download.scala-ide.org/sdk/next/e38/scala210/dev/site/) (Support for this version is experimental.)
