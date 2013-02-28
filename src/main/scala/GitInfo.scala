@@ -34,6 +34,7 @@ object GitHelper {
     issues map (si => """<a href="https://issues.scala-lang.org/browse/%s">%s</a>""" format (si, si)) mkString ", "
   }
 
+  def htmlEncode(s: String) = org.apache.commons.lang3.StringEscapeUtils.escapeHtml4(s)
 }
 
 class GitInfo(gitDir: java.io.File, val previousTag: String, val currentTag: String) {
@@ -66,7 +67,7 @@ class GitInfo(gitDir: java.io.File, val previousTag: String, val currentTag: Str
                  |  <thead><tr><th>#</th><th align="left">Author</th></tr></thead>
                  |<tbody>""".stripMargin
     for((author, count) <- authors)
-      sb append s"""<tr><td align="right">${count} &nbsp;</td><td>${author}</td></tr>"""
+      sb append s"""<tr><td align="right">${count} &nbsp;</td><td>${htmlEncode(author)}</td></tr>"""
     sb append """</tbody></table>"""
     sb.toString
   }
@@ -79,7 +80,7 @@ class GitInfo(gitDir: java.io.File, val previousTag: String, val currentTag: Str
       <thead><tr><th>sha</th><th align="left">Title</th></tr></thead>
     <tbody>"""
     for(commit <- commits)
-       sb append s"""<tr><td align="right">${commitShaLink(commit.sha)}&nbsp;</td><td>${commit.header}</td></tr>"""
+       sb append s"""<tr><td align="right">${commitShaLink(commit.sha)}&nbsp;</td><td>${htmlEncode(commit.header)}</td></tr>"""
     sb append """</tbody>
       </table>"""
     sb.toString
@@ -93,7 +94,7 @@ class GitInfo(gitDir: java.io.File, val previousTag: String, val currentTag: Str
       <thead><tr><th>Issue(s)</th><th>Commit</th><th>Message</th></tr></thead>
     <tbody>""")
     for(commit <- fixCommits)
-      sb append s"""<tr><td>${fixLinks(commit)}&nbsp;</td><td>${commitShaLink(commit.sha)}&nbsp;</td><td>${commit.header}</td></tr>"""
+      sb append s"""<tr><td>${fixLinks(commit)}&nbsp;</td><td>${commitShaLink(commit.sha)}&nbsp;</td><td>${htmlEncode(commit.header)}</td></tr>"""
     sb append """</tbody>
       </table>"""
     sb append blankLine()
