@@ -6,11 +6,17 @@ case class Commit(sha: String, author: String, header: String, body: String) {
 
 /** Gobal functions for dealing with git. */
 object GitHelper {
-  val gitFormat = "--format=format:*-*%h``%aN``%s``%b"
-  def processGitCommits(input: String): IndexedSeq[Commit] =
-    input.lines.map(_.split("``", 4)).collect {
-      case Array(sha, author, hdr, msg) => Commit(sha, author, hdr, msg)
+  def processGitCommits(gitDir: java.io.File, previousTag: String, currentTag: String): IndexedSeq[Commit] = {
+    import sys.process._
+    val gitFormat = "%h %s" // sha and subject
+    val log = Process(Seq("git", "--no-pager", "log", s"${previousTag}..${currentTag}","--format=format:"+gitFormat,"--no-merges", "--topo-order"), gitDir).lines
+
+    log.par.map(_.split(" ", 2)).collect {
+      case Array(sha, title) =>
+        val (author :: body) = Process(Seq("git", "--no-pager", "show", sha ,"--format=format:%aN%n%b","--quiet"), gitDir).lines.toList
+        Commit(sha, author, title, body.mkString("\n"))
     }.toVector
+  }
 
   def hasFixins(msg: String): Boolean = (
     (msg contains "SI-") /*&& ((msg.toLowerCase contains "fix") || (msg.toLowerCase contains "close"))*/
@@ -31,11 +37,8 @@ object GitHelper {
 }
 
 class GitInfo(gitDir: java.io.File, val previousTag: String, val currentTag: String) {
-  import sys.process._
   import GitHelper._
-  
-  def runGit =  Process(Seq("git", "log", s"${previousTag}..${currentTag}","--format=format:%h``%aN``%s``%b","--no-merges"), gitDir)
-  val commits = processGitCommits(runGit.!!)
+  val commits = processGitCommits(gitDir, previousTag, currentTag)
 
   val authors: Seq[(String, Int)] = {
     val grouped: Vector[(String,Int)] = (commits groupBy (_.author)).map { case (a,c) => a -> c.length }{collection.breakOut}
