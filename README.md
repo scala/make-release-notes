@@ -1,6 +1,6 @@
 # Scala Release Notes Creator
 
-This project generates the HTML release notes for Scala.   It's goal is to be minimal and sufficient.   Not an ideal example of scala code,
+This project generates the HTML release notes for Scala.   Its goal is to be minimal and sufficient.   Not an ideal example of Scala code,
 but perhaps shows off a few standard library APIs.
 
 
@@ -12,7 +12,7 @@ For now, it's still mostly manual.   What you need to do:
 2. Update the highlights notes in `hand-written.md`.
 3. run `sbt console`, and then the following:
 
-    scala> MakeReleaseNotes(new java.io.File("/path/to/scala/checkout"), "v2.9.2", "v2.10.0-RC3")
+    scala> MakeReleaseNotes(new java.io.File("~/git/scala"), "v2.9.2", "v2.9.3")
 
 where the two strings are the tags to compare.
 
