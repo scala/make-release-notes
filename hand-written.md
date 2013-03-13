@@ -1,17 +1,13 @@
-We are pleased to announce the third release candidate of Scala 2.10.1!
+We are very happy to announce the final release of Scala 2.10.1!
 
-The Scala team and contributors [fixed 189 issues since 2.10.0](https://issues.scala-lang.org/secure/IssueNavigator.jspa?reset=true&jqlQuery=project+%3D+SI+AND+%28fixVersion+%3D+%22Scala+2.10.1-RC1%22+OR+fixVersion+%3D+%22Scala+2.10.1-RC2%22+OR+fixVersion+%3D+%22Scala+2.10.1-RC3%22%29+AND+status+%3D+closed+ORDER+BY+priority+DESC)!
-In total, [242 pull requests](https://github.com/scala/scala/issues?milestone=5&page=1&state=closed) (+ [4 for RC3](https://github.com/scala/scala/issues?milestone=14&page=1&state=closed)) were opened on [GitHub](https://github.com/scala/scala), of which [225 were merged](https://gist.github.com/adriaanm/4760366) (+ 4 for RC3) after having been [tested](https://github.com/typesafehub/ghpullrequest-validator) and reviewed.
+The Scala team and contributors [fixed 166 issues since 2.10.0](https://issues.scala-lang.org/secure/IssueNavigator.jspa?mode=hide&requestId=12114)!
 
-Please give 2.10.1-RC3 a spin! It's designed to be a drop-in replacement for 2.10.0.
-We'd love to hear about any regressions since 2.10.0 and will try to fix them before releasing the final version.
-
-This RC will become the final unless new blocker issues are discovered within a week after its release.
+In total, [242 RC1 pull requests](https://github.com/scala/scala/issues?milestone=5&page=1&state=closed), [7 RC2 pull requests](https://github.com/scala/scala/issues?milestone=13&page=1&state=closed), and [4 RC3 pull requests](https://github.com/scala/scala/issues?milestone=14&page=1&state=closed) were opened on [GitHub](https://github.com/scala/scala), of which 94.5% were merged after having been [tested](https://github.com/typesafehub/ghpullrequest-validator) and reviewed.
 
 <!--break-->
 
 ### Known Issues
-Before reporting a bug, please have a look at these known issues scheduled [for 2.10.1-RC4](https://issues.scala-lang.org/secure/IssueNavigator.jspa?reset=true&jqlQuery=project+%3D+SI+AND+fixVersion+%3D+%22Scala+2.10.1-RC4%22+AND+resolution+%3D+Unresolved++ORDER+BY+priority+DESC%2C+key+DESC).
+Before reporting a bug, please have a look at these [known issues](https://issues.scala-lang.org/secure/IssueNavigator.jspa?mode=hide&requestId=12113).
 
 ### Scala IDE for Eclipse
 The Scala IDE with Scala 2.10.1-RC3 built right in is available through one of the following update-sites:
@@ -22,7 +18,7 @@ The Scala IDE with Scala 2.10.1-RC3 built right in is available through one of t
 Have a look at the [getting started guide](http://scala-ide.org/docs/user/gettingstarted.html) for more info.
 
 ### New features in the 2.10 series
-As for 2.10.0, here's an overview of the most prominent new features and improvements:
+Since 2.10.1 is strictly a bug-fix release, here's an overview of the most prominent new features and improvements as introduced in 2.10.0:
 
 * Value Classes
     * A class may now extend `AnyVal` to make it behave like a struct type (restrictions apply).
