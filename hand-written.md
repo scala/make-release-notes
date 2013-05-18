@@ -1,85 +1,50 @@
-We are pleased to announce the second release candidate of Scala 2.10.1!
+We are pleased to announce the next milestone release of Scala 2.11.0!
 
-The Scala team and contributors [fixed 184 issues since 2.10.0](https://issues.scala-lang.org/secure/IssueNavigator.jspa?reset=true&jqlQuery=project+%3D+SI+AND+%28fixVersion+%3D+%22Scala+2.10.1-RC1%22+OR+fixVersion+%3D+%22Scala+2.10.1-RC2%22%29+AND+status+%3D+closed+ORDER+BY+priority+DESC)!
-In total, [242 pull requests](https://github.com/scala/scala/issues?milestone=5&page=1&state=closed) (+ [7 for RC2](https://github.com/scala/scala/issues?milestone=13&page=1&state=closed)) were opened on [GitHub](https://github.com/scala/scala), of which [225 were merged](https://gist.github.com/adriaanm/4760366) (+ 6 for RC2) after having been [tested](https://github.com/typesafehub/ghpullrequest-validator) and reviewed.
+This is a pre-release software. You can see our plans for upcoming Scala releases
+on our [Roadmap](https://issues.scala-lang.org/browse/SI#selectedTab=com.atlassian.jira.plugin.system.project%3Aroadmap-panel). For production use, we recommend the latest stable release, 2.10.1.
 
-Please give 2.10.1-RC2 a spin! It's designed to be a drop-in replacement for 2.10.0.
-We'd love to hear about any regressions since 2.10.0 and will try to fix them before releasing the final version.
+The Scala team and contributors [fixed 108 issues](https://issues.scala-lang.org/secure/IssueNavigator.jspa?reset=true&jqlQuery=project+%3D+SI+AND+%28fixVersion+%3D+%22Scala+2.11.0-M1%22+OR+fixVersion+%3D+%22Scala+2.11.0-M2%22+OR+fixVersion+%3D+%22Scala+2.11.0-M3%22%29+AND+status+%3D+closed+ORDER+BY+priority+DESC), in addition to [those fixed in the upcoming 2.10.2](https://issues.scala-lang.org/secure/IssueNavigator.jspa?reset=true&jqlQuery=project+%3D+SI+AND+%28fixVersion+%3D+%22Scala+2.10.2-RC1%22%29+AND+status+%3D+closed+ORDER+BY+priority+DESC), which are also included in this release.
 
-There will be an RC3 one week after this release, which will become the final unless new blocker issues are discovered within a week after its release.
+Please give 2.11.0-M3 a spin! This release is *not* binary compatible with the 2.10.x series, so you will need to obtain builds of your dependencies. Once we start the release candidates, we will coordinate with the open source community to release these simultaneously, but for these milestones we are not asking library authors to go to that trouble.
+
+We'd love to hear about any regressions since 2.10.1. You can file bugs in [JIRA](https://issues.scala-lang.org/secure/CreateIssue.jspa?pid=10005&issuetype=1). Before doing so, please search for existing bugs and/or consult with the [scala-user](https://groups.google.com/forum/?fromgroups#!forum/scala-user) mailing list to be sure it is a geniune problem. Please set the 'Affects Version' field to 2.11.0-M3 and add the tag `regression`.
 
 <!--break-->
 
-### Known Issues
-Before reporting a bug, please have a look at these known issues scheduled [for 2.10.1-RC3](https://issues.scala-lang.org/secure/IssueNavigator.jspa?reset=true&jqlQuery=project+%3D+SI+AND+fixVersion+%3D+%22Scala+2.10.1-RC3%22+AND+resolution+%3D+Unresolved++ORDER+BY+priority+DESC%2C+key+DESC).
-
 ### Scala IDE for Eclipse
-The Scala IDE with Scala 2.10.1-RC2 built right in is available through one of the following update-sites:
+The Scala IDE with Scala 2.11.0-M3 built right in is available through one of the following update-sites:
 
-* [for Eclipse 3.7 (Indigo)](http://download.scala-ide.org/sdk/e37/scala210/dev/site/)
-* [for Eclipse 3.8/4.2 (Juno)](http://download.scala-ide.org/sdk/e38/scala210/dev/site/) (Support for this version is experimental.)
+* [for Eclipse 3.8/4.2 (Juno)](http://download.scala-ide.org/sdk/e38/scala211/dev/site/)
 
 Have a look at the [getting started guide](http://scala-ide.org/docs/user/gettingstarted.html) for more info.
 
-### New features in the 2.10 series
-As for 2.10.0, here's an overview of the most prominent new features and improvements:
+### New features in the 2.11 series
+This release contains all of the bug fixes and improvements made in the 2.10 series, as well as:
 
-* Value Classes
-    * A class may now extend `AnyVal` to make it behave like a struct type (restrictions apply).
-    * [http://docs.scala-lang.org/overviews/core/value-classes.html](http://docs.scala-lang.org/overviews/core/value-classes.html)
-* Implicit Classes
-    * The implicit modifier now also applies to class definitions to reduce the boilerplate of implicit wrappers.
-    * [http://docs.scala-lang.org/sips/pending/implicit-classes.html](http://docs.scala-lang.org/sips/pending/implicit-classes.html)
-* String Interpolation
-    * `val what = "awesome"; println(s"string interpolation is ${what.toUpperCase}!")`
-    * [http://docs.scala-lang.org/overviews/core/string-interpolation.html](http://docs.scala-lang.org/overviews/core/string-interpolation.html)
-* Futures and Promises
-    * Asynchronously get some JSON: `for (req <- WS.url(restApiUrl).get()) yield (req.json \ "users").as[List[User]]` (uses play!)
-    * [http://docs.scala-lang.org/overviews/core/futures.html](http://docs.scala-lang.org/overviews/core/futures.html)
-* Dynamic and applyDynamic
-    * `x.foo` becomes `x.applyDynamic("foo")` if `x`'s type does not define a `foo`, but is a subtype of `Dynamic`
-    * [http://docs.scala-lang.org/sips/pending/type-dynamic.html](http://docs.scala-lang.org/sips/pending/type-dynamic.html)
-* Dependent method types:
-    * `def identity(x: AnyRef): x.type = x` // the return type says we return exactly what we got
-* New ByteCode emitter based on ASM
-    * Can target JDK 1.5, 1.6 and 1.7
-    * Emits 1.6 bytecode by default
-    * Old 1.5 backend is deprecated
-* A new Pattern Matcher
-    * rewritten from scratch to generate more robust code (no more [exponential blow-up](https://issues.scala-lang.org/browse/SI-1133)!)
-    * code generation and analyses are now independent (the latter can be turned off with `-Xno-patmat-analysis`)
-* Scaladoc Improvements
-    * Implicits (-implicits flag)
-    * Diagrams (-diagrams flag, requires graphviz)
-    * Groups (-groups)
-* Modularized Language features
-    * Get on top of the advanced Scala features used in your codebase by explicitly importing them.
-    * [http://docs.scala-lang.org/sips/pending/modularizing-language-features.html](http://docs.scala-lang.org/sips/pending/modularizing-language-features.html)
-* Parallel Collections are now configurable with custom thread pools
-    * [http://docs.scala-lang.org/overviews/parallel-collections/overview.html](http://docs.scala-lang.org/overviews/parallel-collections/overview.html)
-* Akka Actors now part of the distribution
-    * scala.actors have been deprecated and the akka implementation is now included in the distribution.
-    * See the [actors migration project](http://docs.scala-lang.org/actors-migration/) for more information.
-* Performance Improvements
-    * Faster inliner
-    * `Range#sum is now O(1)
-    * Update of ForkJoin library
-    * Fixes in immutable `TreeSet`/`TreeMap`
-    * Improvements to PartialFunctions
-* Addition of `???` and `NotImplementedError`
-* Addition of `IsTraversableOnce` + `IsTraversableLike` type classes for extension methods
-* Deprecations and cleanup
-    * Floating point and octal literal syntax deprecation
-    * Removed scala.dbc
-
-### Experimental features
-
-* Scala Reflection
-    * [http://docs.scala-lang.org/overviews/reflection/overview.html](http://docs.scala-lang.org/overviews/reflection/overview.html)
-* Macros
-    * [http://docs.scala-lang.org/overviews/macros/overview.html](http://docs.scala-lang.org/overviews/macros/overview.html)
-
-The API is subject to (possibly major) changes in the 2.11.x series, but don't let that stop you from experimenting with them!
-A lot of developers have already come up with very cool applications for them.
-Some examples can be seen at [http://scalamacros.org/news/2012/11/05/status-update.html](http://scalamacros.org/news/2012/11/05/status-update.html).
+* Modularization
+    * The compiler has been internally modularized, to separate the presentation compiler, scaladoc
+      and the REPL. In this release, all of these modules are still packaged in scala-compiler.jar.
+      We plan to ship them in separate JARs as of the next milestone. Similar work is planned in the standard
+      library.
+* Slimming down
+    * The experimental .NET backend has been removed from the compiler.
+    * In Scala 2.10.0, new implementations of the Pattern Matcher and the Bytecode Emitter
+      were shipped. We have now removed the old implementations.
+    * scala-actors is now deprecated; we advise users to follow the steps in the [Actors Migration Guide](http://docs.scala-lang.org/overviews/core/actors-migration-guide.html) to port to Akka Actors, which have been included in
+      the distribution since 2.10.0.
+    * Search and destroy mission for ~5000 chunks of dead code. (#1648)[https://github.com/scala/scala/pull/1648/files]
+* Language
+    * Case classes with > 22 parameters are now supported [SI-7296](https://issues.scala-lang.org/browse/SI-7296)
+    * Infer bounds of existential types [SI-1786](https://issues.scala-lang.org/browse/SI-1786)
+* REPL
+    * The bytecode decompiler command, :javap, now works with Java 7 [SI-4936](https://issues.scala-lang.org/browse/SI-4936) and has sprouted new options [SI-6894](https://issues.scala-lang.org/browse/SI-6894) (Thanks, Andrew Marki!)
+    * Added command :kind to help to tell ground types from type constructors. [#2340](https://github.com/scala/scala/pull/2340) (Thanks, George Leontiev and Eugene Yokata!)
+    * The interpreter can now be embedded as a JSR-166 Scripting Engine [SI-874](https://issues.scala-lang.org/browse/SI-874). (Thanks, Raphael Jolly!)
+* Performance
+    * Branch elimination through constant analysis [#2214](https://github.com/scala/scala/pull/2214)
+    * Improve performance of reflection [SI-6638](https://issues.scala-lang.org/browse/SI-6638)
+* Warnings
+    * Warn about unused private / local terms and types, and unused imports, under `-Xlint`. This will even tell you
+      when a local `var` could be a `val`. (We might move these warnings to a separate command line option before
+      the final release, your feedback is welcome here.)
 
