@@ -8,7 +8,7 @@
         <p>We are pleased to announce the next milestone release of Scala 2.11.0!</p><p>This is a pre-release software. You can see our plans for upcoming Scala releases on our <a href="https://issues.scala-lang.org/browse/SI#selectedTab=com.atlassian.jira.plugin.system.project%3Aroadmap-panel">Roadmap</a>. For production use, we recommend the latest stable release, 2.10.1.</p><p>The Scala team and contributors <a href="https://issues.scala-lang.org/secure/IssueNavigator.jspa?reset=true&jqlQuery=project+%3D+SI+AND+%28fixVersion+%3D+%22Scala+2.11.0-M1%22+OR+fixVersion+%3D+%22Scala+2.11.0-M2%22+OR+fixVersion+%3D+%22Scala+2.11.0-M3%22%29+AND+status+%3D+closed+ORDER+BY+priority+DESC">fixed 108 issues</a>, in addition to <a href="https://issues.scala-lang.org/secure/IssueNavigator.jspa?reset=true&jqlQuery=project+%3D+SI+AND+%28fixVersion+%3D+%22Scala+2.10.2-RC1%22%29+AND+status+%3D+closed+ORDER+BY+priority+DESC">those fixed in the upcoming 2.10.2</a>, which are also included in this release.</p><p>Please give 2.11.0-M3 a spin! This release is <em>not</em> binary compatible with the 2.10.x series, so you will need to obtain builds of your dependencies. Once we start the release candidates, we will coordinate with the open source community to release these simultaneously, but for these milestones we are not asking library authors to go to that trouble.</p><p>We'd love to hear about any regressions since 2.10.1. You can file bugs in <a href="https://issues.scala-lang.org/secure/CreateIssue.jspa?pid=10005&issuetype=1">JIRA</a>. Before doing so, please search for existing bugs and/or consult with the <a href="https://groups.google.com/forum/?fromgroups#!forum/scala-user">scala-user</a> mailing list to be sure it is a geniune problem. Please set the 'Affects Version' field to 2.11.0-M3 and add the tag <code>regression</code>.</p>
 <!--break--><h3>Scala IDE for Eclipse</h3><p>The Scala IDE with Scala 2.11.0-M3 built right in is available through one of the following update-sites:</p>
 <ul>
-  <li><a href="http://download.scala-ide.org/sdk/e38/scala211/dev/site/">for Eclipse 3.8/4.2 (Juno)</a></li>
+  <li><a href="http://download.scala-ide.org/ecosystem/e37/scala211/dev/site/">for Eclipse 3.7 (Indigo)</a></li>
 </ul><p>Have a look at the <a href="http://scala-ide.org/docs/user/gettingstarted.html">getting started guide</a> for more info.</p><h3>New features in the 2.11 series</h3><p>This release contains all of the bug fixes and improvements made in the 2.10 series, as well as:</p>
 <ul>
   <li>Modularization
@@ -20,7 +20,7 @@
     <li>The experimental .NET backend has been removed from the compiler.</li>
     <li>In Scala 2.10.0, new implementations of the Pattern Matcher and the Bytecode Emitter  were shipped. We have now removed the old implementations.</li>
     <li>scala-actors is now deprecated; we advise users to follow the steps in the <a href="http://docs.scala-lang.org/overviews/core/actors-migration-guide.html">Actors Migration Guide</a> to port to Akka Actors, which have been included in  the distribution since 2.10.0.</li>
-    <li>Search and destroy mission for ~5000 chunks of dead code. (#1648)[https://github.com/scala/scala/pull/1648/files]</li>
+    <li>Search and destroy mission for ~5000 chunks of dead code. <a href="https://github.com/scala/scala/pull/1648/files">#1648</a></li>
   </ul></li>
   <li>Language
   <ul>
@@ -29,9 +29,9 @@
   </ul></li>
   <li>REPL
   <ul>
-    <li>The bytecode decompiler command, :javap, now works with Java 7 <a href="https://issues.scala-lang.org/browse/SI-4936">SI-4936</a> and has sprouted new options <a href="https://issues.scala-lang.org/browse/SI-6894">SI-6894</a> (Thanks, Andrew Marki!)</li>
-    <li>Added command :kind to help to tell ground types from type constructors. <a href="https://github.com/scala/scala/pull/2340">#2340</a> (Thanks, George Leontiev and Eugene Yokata!)</li>
-    <li>The interpreter can now be embedded as a JSR-166 Scripting Engine <a href="https://issues.scala-lang.org/browse/SI-874">SI-874</a>. (Thanks, Raphael Jolly!)</li>
+    <li>The bytecode decompiler command, :javap, now works with Java 7 <a href="https://issues.scala-lang.org/browse/SI-4936">SI-4936</a> and has sprouted new options <a href="https://issues.scala-lang.org/browse/SI-6894">SI-6894</a> (Thanks, <a href="https://github.com/som-snytt">Andrew Marki</a>!)</li>
+    <li>Added command :kind to help to tell ground types from type constructors. <a href="https://github.com/scala/scala/pull/2340">#2340</a> (Thanks, <a href="https://github.com/folone">George Leontiev</a> and <a href="https://github.com/eed3si9n">Eugene Yokota</a>!)</li>
+    <li>The interpreter can now be embedded as a JSR-166 Scripting Engine <a href="https://issues.scala-lang.org/browse/SI-874">SI-874</a>. (Thanks, <a href="https://github.com/rjolly">Raphael Jolly</a>!)</li>
   </ul></li>
   <li>Performance
   <ul>

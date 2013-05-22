@@ -14,7 +14,7 @@ We'd love to hear about any regressions since 2.10.1. You can file bugs in [JIRA
 ### Scala IDE for Eclipse
 The Scala IDE with Scala 2.11.0-M3 built right in is available through one of the following update-sites:
 
-* [for Eclipse 3.8/4.2 (Juno)](http://download.scala-ide.org/sdk/e38/scala211/dev/site/)
+* [for Eclipse 3.7 (Indigo)](http://download.scala-ide.org/ecosystem/e37/scala211/dev/site/)
 
 Have a look at the [getting started guide](http://scala-ide.org/docs/user/gettingstarted.html) for more info.
 
@@ -32,14 +32,14 @@ This release contains all of the bug fixes and improvements made in the 2.10 ser
       were shipped. We have now removed the old implementations.
     * scala-actors is now deprecated; we advise users to follow the steps in the [Actors Migration Guide](http://docs.scala-lang.org/overviews/core/actors-migration-guide.html) to port to Akka Actors, which have been included in
       the distribution since 2.10.0.
-    * Search and destroy mission for ~5000 chunks of dead code. (#1648)[https://github.com/scala/scala/pull/1648/files]
+    * Search and destroy mission for ~5000 chunks of dead code. [#1648](https://github.com/scala/scala/pull/1648/files)
 * Language
     * Case classes with > 22 parameters are now supported [SI-7296](https://issues.scala-lang.org/browse/SI-7296)
     * Infer bounds of existential types [SI-1786](https://issues.scala-lang.org/browse/SI-1786)
 * REPL
-    * The bytecode decompiler command, :javap, now works with Java 7 [SI-4936](https://issues.scala-lang.org/browse/SI-4936) and has sprouted new options [SI-6894](https://issues.scala-lang.org/browse/SI-6894) (Thanks, Andrew Marki!)
-    * Added command :kind to help to tell ground types from type constructors. [#2340](https://github.com/scala/scala/pull/2340) (Thanks, George Leontiev and Eugene Yokata!)
-    * The interpreter can now be embedded as a JSR-166 Scripting Engine [SI-874](https://issues.scala-lang.org/browse/SI-874). (Thanks, Raphael Jolly!)
+    * The bytecode decompiler command, :javap, now works with Java 7 [SI-4936](https://issues.scala-lang.org/browse/SI-4936) and has sprouted new options [SI-6894](https://issues.scala-lang.org/browse/SI-6894) (Thanks, [Andrew Marki](https://github.com/som-snytt)!)
+    * Added command :kind to help to tell ground types from type constructors. [#2340](https://github.com/scala/scala/pull/2340) (Thanks, [George Leontiev](https://github.com/folone) and [Eugene Yokota](https://github.com/eed3si9n)!)
+    * The interpreter can now be embedded as a JSR-166 Scripting Engine [SI-874](https://issues.scala-lang.org/browse/SI-874). (Thanks, [Raphael Jolly](https://github.com/rjolly)!)
 * Performance
     * Branch elimination through constant analysis [#2214](https://github.com/scala/scala/pull/2214)
     * Improve performance of reflection [SI-6638](https://issues.scala-lang.org/browse/SI-6638)
