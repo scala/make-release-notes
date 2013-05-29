@@ -41,6 +41,7 @@ object MakeReleaseNotes {
 
     s"""<html>
       <head>
+        <meta charset="UTF-8">
         <title>${currentTag} - Release notes</title>
       </head>
       <body>
