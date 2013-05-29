@@ -9,6 +9,13 @@ Please give 2.11.0-M3 a spin! This release is *not* binary compatible with the 2
 
 We'd love to hear about any regressions since 2.10.1. You can file bugs in [JIRA](https://issues.scala-lang.org/secure/CreateIssue.jspa?pid=10005&issuetype=1). Before doing so, please search for existing bugs and/or consult with the [scala-user](https://groups.google.com/forum/?fromgroups#!forum/scala-user) mailing list to be sure it is a geniune problem. Please set the 'Affects Version' field to 2.11.0-M3 and add the tag `regression`.
 
+In particular, be aware that the complete fix for [SI-7486](https://issues.scala-lang.org/browse/SI-7486)
+is not included in this milestone. If you encounter this, the workaround is to annotate the return type
+of implicit members (which is a good practice, in any case.)
+
+We are also aware of an issue with macros and named arguments [SI-7516](https://issues.scala-lang.org/browse/SI-7516).
+This will be fixed in the next milestone.
+
 <!--break-->
 
 ### Scala IDE for Eclipse
