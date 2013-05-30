@@ -1,8 +1,8 @@
-We are very happy to announce the RC1 release of Scala 2.10.2! If no serious blocking issues are found this will become the final 2.10.2 version.
+We are very happy to announce the RC2 release of Scala 2.10.2! If no serious blocking issues are found this will become the final 2.10.2 version.
 
-The Scala team and contributors [fixed 89 issues since 2.10.1](https://issues.scala-lang.org/secure/IssueNavigator.jspa?mode=hide&requestId=12206)!
+The Scala team and contributors [fixed 95 issues since 2.10.1](https://issues.scala-lang.org/secure/IssueNavigator.jspa?mode=hide&requestId=12206)!
 
-In total, [164 RC1 pull requests](https://github.com/scala/scala/issues?milestone=12&state=closed) were opened on [GitHub](https://github.com/scala/scala), of which 134 were merged after having been [tested](https://github.com/typesafehub/ghpullrequest-validator) and reviewed.
+In total, [164 RC1 pull requests](https://github.com/scala/scala/issues?milestone=12&state=closed) and [7 RC2 pull requests](https://github.com/scala/scala/issues?milestone=13&state=closed) were opened on [GitHub](https://github.com/scala/scala), of which 140 were merged after having been [tested](https://github.com/typesafehub/ghpullrequest-validator) and reviewed.
 
 <!--break-->
 
@@ -10,7 +10,7 @@ In total, [164 RC1 pull requests](https://github.com/scala/scala/issues?mileston
 Before reporting a bug, please have a look at these [known issues](https://issues.scala-lang.org/secure/IssueNavigator.jspa?mode=hide&requestId=12207).
 
 ### Scala IDE for Eclipse
-The Scala IDE with Scala 2.10.2-RC1 built right in is available through one of the following update-sites:
+The Scala IDE with Scala 2.10.2-RC2 built right in is available through one of the following update-sites:
 
 * [for Eclipse 3.7 (Indigo)](http://download.scala-ide.org/sdk/e37/scala210/dev/site/)
 * [for Eclipse 3.8/4.2 (Juno)](http://download.scala-ide.org/sdk/e38/scala210/dev/site/) (Support for this version is experimental.)
