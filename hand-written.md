@@ -10,10 +10,9 @@ In total, [63 RC1 pull requests](https://github.com/scala/scala/issues?milestone
 Before reporting a bug, please have a look at these [known issues](https://issues.scala-lang.org/secure/IssueNavigator.jspa?mode=hide&requestId=12216).
 
 ### Scala IDE for Eclipse
-The Scala IDE with Scala 2.10.3-RC2 built right in is available through one of the following update-sites:
+The Scala IDE with Scala 2.10.3-RC2 built right in is available through the following update-site:
 
-* [for Eclipse 3.7 (Indigo)](http://download.scala-ide.org/sdk/e37/scala210/dev/site/)
-* [for Eclipse 3.8/4.2 (Juno)](http://download.scala-ide.org/sdk/e38/scala210/dev/site/) (Support for this version is experimental.)
+* [for Eclipse 4.2/4.3 (Juno/Kepler)](http://download.scala-ide.org/sdk/e38/scala210/dev/site/)
 
 Have a look at the [getting started guide](http://scala-ide.org/docs/user/gettingstarted.html) for more info.
 
