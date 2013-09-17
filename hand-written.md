@@ -1,24 +1,23 @@
-We are very happy to announce the RC2 release of Scala 2.10.2! If no serious blocking issues are found this will become the final 2.10.2 version.
+We are very happy to announce the RC2 release of Scala 2.10.3! If no serious blocking issues are found this will become the final 2.10.3 version.
 
-The Scala team and contributors [fixed 95 issues since 2.10.1](https://issues.scala-lang.org/secure/IssueNavigator.jspa?mode=hide&requestId=12206)!
+The Scala team and contributors [fixed 48 issues since 2.10.2](https://issues.scala-lang.org/secure/IssueNavigator.jspa?mode=hide&requestId=12215)!
 
-In total, [164 RC1 pull requests](https://github.com/scala/scala/issues?milestone=12&state=closed) and [7 RC2 pull requests](https://github.com/scala/scala/issues?milestone=13&state=closed) were opened on [GitHub](https://github.com/scala/scala), of which 140 were merged after having been [tested](https://github.com/typesafehub/ghpullrequest-validator) and reviewed.
+In total, [63 RC1 pull requests](https://github.com/scala/scala/issues?milestone=17&state=closed) and [19 RC2 pull requests](https://github.com/scala/scala/issues?milestone=23&state=closed) were opened on [GitHub](https://github.com/scala/scala) of which 70 were merged after having been [tested](https://github.com/typesafehub/ghpullrequest-validator) and reviewed.
 
 <!--break-->
 
 ### Known Issues
-Before reporting a bug, please have a look at these [known issues](https://issues.scala-lang.org/secure/IssueNavigator.jspa?mode=hide&requestId=12207).
+Before reporting a bug, please have a look at these [known issues](https://issues.scala-lang.org/secure/IssueNavigator.jspa?mode=hide&requestId=12216).
 
 ### Scala IDE for Eclipse
-The Scala IDE with Scala 2.10.2-RC2 built right in is available through one of the following update-sites:
+The Scala IDE with Scala 2.10.3-RC2 built right in is available through the following update-site:
 
-* [for Eclipse 3.7 (Indigo)](http://download.scala-ide.org/sdk/e37/scala210/dev/site/)
-* [for Eclipse 3.8/4.2 (Juno)](http://download.scala-ide.org/sdk/e38/scala210/dev/site/) (Support for this version is experimental.)
+* [for Eclipse 4.2/4.3 (Juno/Kepler)](http://download.scala-ide.org/sdk/e38/scala210/dev/site/)
 
 Have a look at the [getting started guide](http://scala-ide.org/docs/user/gettingstarted.html) for more info.
 
 ### New features in the 2.10 series
-Since 2.10.2 is strictly a bug-fix release, here's an overview of the most prominent new features and improvements as introduced in 2.10.0:
+Since 2.10.3 is strictly a bug-fix release, here's an overview of the most prominent new features and improvements as introduced in 2.10.0:
 
 * Value Classes
     * A class may now extend `AnyVal` to make it behave like a struct type (restrictions apply).
