@@ -57,7 +57,7 @@ Since 2.10.3 is strictly a bug-fix release, here's an overview of the most promi
     * See the [actors migration project](http://docs.scala-lang.org/actors-migration/) for more information.
 * Performance Improvements
     * Faster inliner
-    * `Range#sum is now O(1)
+    * `Range#sum` is now O(1)
     * Update of ForkJoin library
     * Fixes in immutable `TreeSet`/`TreeMap`
     * Improvements to PartialFunctions
