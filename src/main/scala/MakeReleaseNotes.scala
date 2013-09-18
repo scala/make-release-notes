@@ -40,7 +40,7 @@ object MakeReleaseNotes {
       } else Nil
       // if you don't have the next line, sub-bullets would be screwed!
       // please take this case into account and comment out 2 next lines and uncomment the line after!
-      val newLines = lines.map(x => if (x.startsWith("    *")) "\n" + x else x)
+      val newLines = lines.map(x => if (x.startsWith("    *")) "\n" + x.stripPrefix("  ") else x)
       newLines.mkString("\n")
       //      lines.mkString("\n")
     }

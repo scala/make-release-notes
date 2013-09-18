@@ -10,7 +10,7 @@ sealed trait TargetLanguage {
 }
 case object MarkDown extends TargetLanguage {
   def createHyperLink(link: String, content: String): String =
-    s"[$link]($content)"
+    s"[$content]($link)"
   def blankLine(): String = "\n"
   def header4(msg: String): String = s"#### $msg\n"
   def tableHeader(firstColumn: String, secondColumn: String): String =
