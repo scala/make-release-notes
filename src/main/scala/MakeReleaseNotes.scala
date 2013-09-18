@@ -9,9 +9,8 @@ object MakeReleaseNotes {
       case Html => new java.io.File("release-notes.html")
       case MarkDown => new java.io.File(s"release-notes-${currentTag}.md")
     }
-    val buf = new java.io.BufferedWriter(new java.io.FileWriter(out))
-    try buf.write(makeReleaseNotes(scalaDir, previousTag, currentTag))
-    finally buf.close()
+
+    IO.write(out, makeReleaseNotes(scalaDir, previousTag, currentTag))
   }
 
   def parseHandWrittenNotes(file: java.io.File = new java.io.File("hand-written.md")): String = {
@@ -34,9 +33,11 @@ object MakeReleaseNotes {
   }
 
   def makeReleaseNotes(scalaDir: java.io.File, previousTag: String, currentTag: String)(implicit targetLanguage: TargetLanguage): String = {
-    def rawHandWrittenNotes(file: java.io.File = new java.io.File(s"history/hand-written-${currentTag drop 1}.md")): String = {
-      val src = Source.fromFile(file)
-      val lines = src.getLines
+    def rawHandWrittenNotes(file: java.io.File = new java.io.File(s"hand-written.md")): String = {
+      val lines: List[String] = if (file.exists) {
+        val src = Source.fromFile(file)
+        src.getLines.toList
+      } else Nil
       // if you don't have the next line, sub-bullets would be screwed!
       // please take this case into account and comment out 2 next lines and uncomment the line after!
       val newLines = lines.map(x => if (x.startsWith("    *")) "\n" + x else x)
