@@ -12,14 +12,18 @@ For now, it's still mostly manual.   What you need to do:
 2. Update the highlights notes in `hand-written.md`.
 3. run `sbt -Dfile.encoding=UTF-8 console`, and then the following if you want .html output:
 
-    scala> MakeReleaseNotes(new java.io.File("~/git/scala"), "v2.9.2", "v2.9.3")
-
-  and the following if you want .md as output:
-
-    scala> MakeReleaseNotes(new java.io.File("~/git/scala"), "v2.9.2", "v2.9.3")(MarkDown)
+```
+scala> MakeReleaseNotes(new java.io.File("~/git/scala"), "v2.9.2", "v2.9.3")
+scala> MakeReleaseNotes(new java.io.File("~/git/scala"), "v2.9.2", "v2.9.3")(MarkDown) // markdown for scala-lang.org
+```
 
 where the two strings are the tags to compare.
 
+To make the download page:
+
+```
+scala> new MakeDownloadPage("2.10.3-RC2").write()
+```
 
 ## Contributing
 

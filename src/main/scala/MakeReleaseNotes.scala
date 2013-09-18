@@ -9,9 +9,7 @@ object MakeReleaseNotes {
       case Html => new java.io.File("release-notes.html")
       case MarkDown => new java.io.File(s"release-notes-${currentTag}.md")
     }
-    val buf = new java.io.BufferedWriter(new java.io.FileWriter(out))
-    try buf.write(makeReleaseNotes(scalaDir, previousTag, currentTag))
-    finally buf.close()
+    IO.write(out, makeReleaseNotes(scalaDir, previousTag, currentTag))
   }
 
   def parseHandWrittenNotes(file: java.io.File = new java.io.File("hand-written.md")): String = {
