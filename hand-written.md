@@ -1,8 +1,12 @@
 We are very happy to announce the RC2 release of Scala 2.10.3! If no serious blocking issues are found this will become the final 2.10.3 version.
 
-The Scala team and contributors [fixed 48 issues since 2.10.2](https://issues.scala-lang.org/secure/IssueNavigator.jspa?mode=hide&requestId=12215)!
+The Scala team and contributors [fixed 50 issues since 2.10.2](https://issues.scala-lang.org/secure/IssueNavigator.jspa?mode=hide&requestId=12215)!
 
-In total, [63 RC1 pull requests](https://github.com/scala/scala/issues?milestone=17&state=closed) and [19 RC2 pull requests](https://github.com/scala/scala/issues?milestone=23&state=closed) were opened on [GitHub](https://github.com/scala/scala) of which 70 were merged after having been [tested](https://github.com/typesafehub/ghpullrequest-validator) and reviewed.
+In total, 
+[63 RC1 pull requests](https://github.com/scala/scala/issues?milestone=17&state=closed), 
+[19 RC2 pull requests](https://github.com/scala/scala/issues?milestone=23&state=closed) and
+[2 RC3 pull requests](https://github.com/scala/scala/issues?milestone=24&state=closed)
+were opened on [GitHub](https://github.com/scala/scala) of which 72 were merged after having been [tested](https://github.com/typesafehub/ghpullrequest-validator) and reviewed.
 
 <!--break-->
 
