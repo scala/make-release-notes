@@ -1,5 +1,6 @@
 
 case class Commit(sha: String, author: String, header: String, body: String) {
+  def trimmedHeader = header.take(80)
   override def toString = " * " + sha + " (" + author + ") " + header + " - " + body.take(5) + " ..."
 }
 
@@ -75,7 +76,7 @@ class GitInfo(gitDir: java.io.File, val previousTag: String, val currentTag: Str
     sb append header4("Complete commit list!")
     sb append targetLanguage.tableHeader("sha", "Title")
     for (commit <- commits)
-      sb append targetLanguage.tableRow(commitShaLink(commit.sha), commit.header)
+      sb append targetLanguage.tableRow(commitShaLink(commit.sha), commit.trimmedHeader)
     sb append targetLanguage.tableEnd
     sb.toString
   }
@@ -86,7 +87,7 @@ class GitInfo(gitDir: java.io.File, val previousTag: String, val currentTag: Str
     sb append header4(s"Commits and the issues they fixed since ${previousTag}")
     sb append targetLanguage.tableHeader("Issue(s)", "Commit", "Message")
     for (commit <- fixCommits)
-      sb append targetLanguage.tableRow(fixLinks(commit), commitShaLink(commit.sha), commit.header)
+      sb append targetLanguage.tableRow(fixLinks(commit), commitShaLink(commit.sha), commit.trimmedHeader)
     sb append targetLanguage.tableEnd
     sb append blankLine()
     sb.toString
