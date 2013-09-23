@@ -1,5 +1,8 @@
 We are very happy to announce the RC2 release of Scala 2.10.3! If no serious blocking issues are found this will become the final 2.10.3 version.
 
+<!-- Substitute both version numbers here! -->
+The release is available for download from [scala-lang.org](http://scala-lang.org/download/2.10.3-RC3.html) or from [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20v%3A%222.10.3-RC3%22).
+
 The Scala team and contributors [fixed 50 issues since 2.10.2](https://issues.scala-lang.org/secure/IssueNavigator.jspa?mode=hide&requestId=12215)!
 
 In total, 
