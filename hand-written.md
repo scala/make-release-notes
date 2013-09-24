@@ -1,7 +1,7 @@
 We are very happy to announce the RC3 release of Scala 2.10.3! If no serious blocking issues are found this will become the final 2.10.3 version.
 
 <!-- Substitute both version numbers here! -->
-The release is available for download from [scala-lang.org](http://scala-lang.org/download/2.10.3-RC3.html) or from [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20v%3A%222.10.3-RC3%22).
+The release is available for download from [scala-lang.org](http://scala-lang.org/download/2.10.3-RC3.html) or from [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.10.3-RC3%22).
 
 The Scala team and contributors [fixed 50 issues since 2.10.2](https://issues.scala-lang.org/secure/IssueNavigator.jspa?mode=hide&requestId=12215)!
 
@@ -17,7 +17,7 @@ were opened on [GitHub](https://github.com/scala/scala) of which 72 were merged 
 Before reporting a bug, please have a look at these [known issues](https://issues.scala-lang.org/secure/IssueNavigator.jspa?mode=hide&requestId=12216).
 
 ### Scala IDE for Eclipse
-The Scala IDE with Scala 2.10.3-RC2 built right in is available through the following update-site:
+The Scala IDE with Scala this release built right in is available through the following update-site:
 
 * [for Eclipse 4.2/4.3 (Juno/Kepler)](http://download.scala-ide.org/sdk/e38/scala210/dev/site/)
 
