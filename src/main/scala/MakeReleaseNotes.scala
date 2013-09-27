@@ -3,14 +3,16 @@
 import java.io.BufferedReader
 import scala.io.Source
 object MakeReleaseNotes {
-
-  def apply(scalaDir: java.io.File, previousTag: String, currentTag: String)(implicit targetLanguage: TargetLanguage = Html): Unit = {
+  def apply(scalaDir: String, previousTag: String, currentTag: String) {
+    Seq(Html, MarkDown).foreach(fmt => apply(new java.io.File(scalaDir), previousTag, currentTag, fmt))
+  }
+  def apply(scalaDir: java.io.File, previousTag: String, currentTag: String, targetLanguage: TargetLanguage = Html): Unit = {
     val out = targetLanguage match {
       case Html => new java.io.File("release-notes.html")
       case MarkDown => new java.io.File(s"release-notes-${currentTag}.md")
     }
-
-    IO.write(out, makeReleaseNotes(scalaDir, previousTag, currentTag))
+    IO.write(out, makeReleaseNotes(scalaDir, previousTag, currentTag)(targetLanguage))
+    println("Generated: " + out)
   }
 
   def parseHandWrittenNotes(file: java.io.File = new java.io.File("hand-written.md")): String = {
@@ -55,14 +57,17 @@ object MakeReleaseNotes {
       <head>
         <meta charset="UTF-8">
         <title>${currentTag} - Release notes</title>
+        <link rel="stylesheet" type="text/css" href="http://www.scala-lang.org/resources/css/bootstrap.css"/>
       </head>
       <body>
-        <h3>Scala ${currentTag drop 1} is now available!</h3>
-        ${parseHandWrittenNotes()}
-        <br/><br/>
-        ${renderCommitterList}
-        ${renderFixedIssues}
-        ${renderCommitList}
+        <div class="container"/>
+          <h3>Scala ${currentTag drop 1} is now available!</h3>
+          ${parseHandWrittenNotes()}
+          <br/><br/>
+          ${renderCommitterList}
+          ${renderFixedIssues}
+          ${renderCommitList}
+        </div>
       </body>
     </html>"""
       case MarkDown => s"""---
