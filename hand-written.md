@@ -1,7 +1,10 @@
 We are pleased to announce the next milestone release of Scala 2.11.0!
 
 This is a pre-release software. You can see our plans for upcoming Scala releases
-on our [Roadmap](https://issues.scala-lang.org/browse/SI#selectedTab=com.atlassian.jira.plugin.system.project%3Aroadmap-panel). For production use, we recommend the latest stable release, 2.10.1.
+on our [Roadmap](https://issues.scala-lang.org/browse/SI#selectedTab=com.atlassian.jira.plugin.system.project%3Aroadmap-panel). For production use, we recommend the latest stable release, 2.10.3.
+
+<!-- Substitute both version numbers here! -->
+The release is available for download from [scala-lang.org](http://scala-lang.org/download/2.10.3.html) or from [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.10.3%22).
 
 The Scala team and contributors [fixed 108 issues](https://issues.scala-lang.org/secure/IssueNavigator.jspa?reset=true&jqlQuery=project+%3D+SI+AND+%28fixVersion+%3D+%22Scala+2.11.0-M1%22+OR+fixVersion+%3D+%22Scala+2.11.0-M2%22+OR+fixVersion+%3D+%22Scala+2.11.0-M3%22%29+AND+status+%3D+closed+ORDER+BY+priority+DESC), in addition to [those fixed in the upcoming 2.10.2](https://issues.scala-lang.org/secure/IssueNavigator.jspa?reset=true&jqlQuery=project+%3D+SI+AND+%28fixVersion+%3D+%22Scala+2.10.2-RC1%22%29+AND+status+%3D+closed+ORDER+BY+priority+DESC), which are also included in this release.
 
@@ -19,9 +22,9 @@ This will be fixed in the next milestone.
 <!--break-->
 
 ### Scala IDE for Eclipse
-The Scala IDE with Scala 2.11.0-M3 built right in is available through one of the following update-sites:
+The Scala IDE with this release built right in is available through one of the following update-sites:
 
-* [for Eclipse 3.7 (Indigo)](http://download.scala-ide.org/ecosystem/e37/scala211/dev/site/)
+* [for Eclipse 4.2/4.3 (Juno/Kepler)](http://download.scala-ide.org/sdk/e38/scala211/dev/site/)
 
 Have a look at the [getting started guide](http://scala-ide.org/docs/user/gettingstarted.html) for more info.
 
