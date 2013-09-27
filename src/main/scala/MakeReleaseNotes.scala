@@ -56,14 +56,17 @@ object MakeReleaseNotes {
       case Html => s"""<html>
       <head>
         <title>${currentTag} - Release notes</title>
+        <link rel="stylesheet" type="text/css" href="http://www.scala-lang.org/resources/css/bootstrap.css"/>
       </head>
       <body>
-        <h3>Scala ${currentTag drop 1} is now available!</h3>
-        ${parseHandWrittenNotes()}
-        <br/><br/>
-        ${renderCommitterList}
-        ${renderFixedIssues}
-        ${renderCommitList}
+        <div class="container"/>
+          <h3>Scala ${currentTag drop 1} is now available!</h3>
+          ${parseHandWrittenNotes()}
+          <br/><br/>
+          ${renderCommitterList}
+          ${renderFixedIssues}
+          ${renderCommitList}
+        </div>
       </body>
     </html>"""
       case MarkDown => s"""---
