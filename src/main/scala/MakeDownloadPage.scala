@@ -52,7 +52,7 @@ show_resources: "true"
 permalink: /download/$version.html
 requirements: "This Scala software distribution can be installed on any Unix-like or Windows system. It requires the Java runtime version 1.6 or later, which can be downloaded <a href='http://www.java.com/'>here</a>."
 resources: [
-  ${resourceArchive("-main-unixsys", "scala",               "tgz",  "Max OS X, Unix, Cygwin"   )}
+  ${resourceArchive("-main-unixsys", "scala",               "tgz",  "Max OS X, Unix, Cygwin"   )},
   ${resourceArchive("-main-windows", "scala",               "msi",  "Windows (msi installer)"  )},
   ${resourceArchive(defaultClass,    "scala",               "zip",  "Windows"                  )},
   ${resourceArchive(defaultClass,    "scala",               "deb",  "Debian"                   )},
