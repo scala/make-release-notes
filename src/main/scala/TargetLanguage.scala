@@ -7,8 +7,10 @@ sealed trait TargetLanguage {
   def tableHeader(firstColumn: String, secondColumn: String, thirdColumn: String): String
   def tableRow(firstColumn: String, secondColumn: String, thirdColumn: String): String
   def tableEnd: String
+  def ext: String
 }
 case object MarkDown extends TargetLanguage {
+  val ext = "md"
   def createHyperLink(link: String, content: String): String =
     s"[$content]($link)"
   def blankLine(): String = "\n"
@@ -38,6 +40,7 @@ $firstColumn | $secondColumn | $thirdColumn
   }
 }
 case object Html extends TargetLanguage {
+  val ext = "html"
   def createHyperLink(link: String, content: String): String =
     s"""<a href="$link">$content</a>"""
   def blankLine(): String = "<p>&nbsp;</p>"
