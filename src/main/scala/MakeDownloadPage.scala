@@ -55,6 +55,8 @@ resources: [
   ${resourceArchive("-main-unixsys", "scala",               "tgz",  "Max OS X, Unix, Cygwin"   )}
   ${resourceArchive("-main-windows", "scala",               "msi",  "Windows (msi installer)"  )},
   ${resourceArchive(defaultClass,    "scala",               "zip",  "Windows"                  )},
+  ${resourceArchive(defaultClass,    "scala",               "deb",  "Debian"                   )},
+  ${resourceArchive(defaultClass,    "scala",               "rpm",  "RPM package"              )},
   ${resourceArchive(defaultClass,    "scala-docs",          "txz",  "API docs"                 )},
   ${resourceArchive(defaultClass,    "scala-docs",          "zip",  "API docs"                 )},
   ${resource       (defaultClass,    s"scala-sources-$version.zip", "sources", ghSourceUrl, ghSourceUrl)},
