@@ -1,43 +1,71 @@
 import java.util.Date
 import java.text._
+import scala.concurrent._
+import scala.concurrent.duration._
+import ExecutionContext.Implicits.global
 
 class MakeDownloadPage(version: String, releaseDate: Date = new Date()) {
   def write() = {
     require(!version.startsWith("v"), "version should *not* start with 'v'")
     val fileName = s"${format("yyyy-MM-dd")}-$version.md"
     IO.write(new java.io.File(fileName), page)
-    println("generated " + fileName)
+    println("cp " + fileName + " ../scala-lang/download/_posts/")
+    println("# to prepare your scala-lang PR")
   }
 
-  def humanSize(url: String) = {
+  // get size of `url` without actually downloading it
+  def humanSize(url: String): Future[String] = future {
     import scala.sys.process._
     println(url)
-    val tmpFile = java.io.File.createTempFile("download", ".tmp")
-    val res = s"curl --fail --silent --output ${tmpFile.getAbsolutePath} $url".!
-    val dfOutput = s"du -h ${tmpFile.getAbsolutePath}".!!
-    val output = dfOutput.trim.split("\t").head
-    if (output == "0B") {
-      println(s"warning: could not fetch $url")
-      ""
-    } else output
+    scala.util.Try {
+      val responseHeader = Process(s"curl --silent -D - -X HEAD $url").lines
+      val contentLength = responseHeader.find(_.startsWith("Content-Length"))
+      val bytes = contentLength.map(_.split(":",2)(1).trim.toInt)
+      bytes map (b => (responseHeader.head, b))
+    }.toOption.flatten.map { case (status, bytes) => (status, bytes match {
+        case meh if meh < 1024                        => ""
+        case kilo if kilo < 1024*1024                 => f"${bytes.toDouble/1024}%.0fK"
+        case big                                      => f"${bytes.toDouble/(1024*1024)}%.2fM"
+      })} match {
+      case Some((status, humanSize)) if status.contains("200 OK") || status.contains("302 Found") =>
+        humanSize
+      case _ =>
+        println(s"warning: could not fetch $url")
+        ""
+    }
   }
 
-  def resourceArchive(cls: String, name: String, ext: String, desc: String) = {
+  def resourceArchive(cls: String, name: String, ext: String, desc: String): Future[String] = {
     val fileName = s"$name-$version.$ext"
     val relUrl = s"/files/archive/$fileName"
     val fullUrl = s"http://www.scala-lang.org$relUrl"
     resource(cls, fileName, desc, relUrl, fullUrl)
   }
 
-  def resource(cls: String, fileName: String, desc: String, relUrl: String, fullUrl: String) = {
-    s"""[$cls, "$fileName", "$relUrl", "$desc", "${humanSize(fullUrl)}"]"""
+  def resource(cls: String, fileName: String, desc: String, relUrl: String, fullUrl: String): Future[String] = {
+    humanSize(fullUrl) map (size => s"""[$cls, "$fileName", "$relUrl", "$desc", "$size"]""")
   }
 
-  def defaultClass = "-non-main-sys"
+  def defaultClass = """"-non-main-sys""""
+  def unixClass    = """"-main-unixsys""""
+  def windowsClass = """"-main-windows""""
 
   def format(fmt: String) = new SimpleDateFormat(fmt).format(releaseDate)
 
   def ghSourceUrl = s"https://github.com/scala/scala/archive/v$version.tar.gz"
+
+  def resources: String = Await.result(
+  Future.sequence(Seq(
+    resourceArchive(unixClass, "scala",               "tgz",  "Max OS X, Unix, Cygwin"   ),
+    resourceArchive(windowsClass, "scala",               "msi",  "Windows (msi installer)"  ),
+    resourceArchive(defaultClass,    "scala",               "zip",  "Windows"                  ),
+    resourceArchive(defaultClass,    "scala",               "deb",  "Debian"                   ),
+    resourceArchive(defaultClass,    "scala",               "rpm",  "RPM package"              ),
+    resourceArchive(defaultClass,    "scala-docs",          "txz",  "API docs"                 ),
+    resourceArchive(defaultClass,    "scala-docs",          "zip",  "API docs"                 ),
+    resource       (defaultClass,    s"scala-sources-$version.zip", "sources", ghSourceUrl, ghSourceUrl),
+    resourceArchive(defaultClass,    "scala-tool-support",  "tgz",  "Scala Tool Support (tgz)"),
+    resourceArchive(defaultClass,    "scala-tool-support",  "zip",  "Scala Tool Support (zip)"))).map(_.mkString(",\n  ")), 20 seconds)
 
   def page: String = {
 
@@ -52,14 +80,7 @@ show_resources: "true"
 permalink: /download/$version.html
 requirements: "This Scala software distribution can be installed on any Unix-like or Windows system. It requires the Java runtime version 1.6 or later, which can be downloaded <a href='http://www.java.com/'>here</a>."
 resources: [
-  ${resourceArchive("-main-unixsys", "scala",               "tgz",  "Max OS X, Unix, Cygwin"   )}
-  ${resourceArchive("-main-windows", "scala",               "msi",  "Windows (msi installer)"  )},
-  ${resourceArchive(defaultClass,    "scala",               "zip",  "Windows"                  )},
-  ${resourceArchive(defaultClass,    "scala-docs",          "txz",  "API docs"                 )},
-  ${resourceArchive(defaultClass,    "scala-docs",          "zip",  "API docs"                 )},
-  ${resource       (defaultClass,    s"scala-sources-$version.zip", "sources", ghSourceUrl, ghSourceUrl)},
-  ${resourceArchive(defaultClass,    "scala-tool-support",  "tgz",  "Scala Tool Support (tgz)")},
-  ${resourceArchive(defaultClass,    "scala-tool-support",  "zip",  "Scala Tool Support (zip)")}
+  $resources
 ]
 ---
 

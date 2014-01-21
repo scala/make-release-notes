@@ -1,21 +1,44 @@
-
+import java.util.Date
+import java.text._
 
 import java.io.BufferedReader
 import scala.io.Source
+
 object MakeReleaseNotes {
-  def apply(scalaDir: String, previousTag: String, currentTag: String) {
-    Seq(Html, MarkDown).foreach(fmt => apply(new java.io.File(scalaDir), previousTag, currentTag, fmt))
+  def genPR(prevVersion: String, version: String, release: String, gitDir: String = s"${sys.env("HOME")}/git/scala") = {
+    val date = new java.util.Date(release)
+    new MakeDownloadPage(version, date).write()
+    MakeReleaseNotes(new java.io.File(gitDir), s"v$prevVersion", s"v$version", MarkDown, date)
   }
-  def apply(scalaDir: java.io.File, previousTag: String, currentTag: String, targetLanguage: TargetLanguage = Html): Unit = {
+
+  def write(page: String, version: String, releaseDate: Date, ext: String) = {
+    def format(fmt: String) = new SimpleDateFormat(fmt).format(releaseDate)
+
+    require(!version.startsWith("v"), "version should *not* start with 'v'")
+    val fileName = s"${format("yyyy-MM-dd")}-release-notes-$version.$ext"
+    IO.write(new java.io.File(fileName), page)
+
+    println("# generated " + fileName)
+
+    if (ext == "md") {
+      println("cp " + fileName + " ../scala-lang/news/_posts/")
+      println("# to prepare your scala-lang PR")
+    }
+  }
+
+  def apply(scalaDir: String, previousTag: String, currentTag: String, releaseDate: Date) {
+    Seq(Html, MarkDown).foreach(fmt => apply(new java.io.File(scalaDir), previousTag, currentTag, fmt, releaseDate))
+  }
+  def apply(scalaDir: java.io.File, previousTag: String, currentTag: String, targetLanguage: TargetLanguage = MarkDown, releaseDate: Date = new Date()): Unit = {
     val out = targetLanguage match {
       case Html => new java.io.File("release-notes.html")
       case MarkDown => new java.io.File(s"release-notes-${currentTag}.md")
     }
-    IO.write(out, makeReleaseNotes(scalaDir, previousTag, currentTag)(targetLanguage))
-    println("Generated: " + out)
+    val notes = makeReleaseNotes(scalaDir, previousTag, currentTag)(targetLanguage)
+    write(notes, currentTag.dropWhile(_ == 'v'), releaseDate, targetLanguage.ext)
   }
 
-  def parseHandWrittenNotes(file: java.io.File = new java.io.File("hand-written.md")): String = {
+  private def parseHandWrittenNotes(file: java.io.File = new java.io.File("hand-written.md")): String = {
     import org.pegdown._
     val parser = new PegDownProcessor
 
@@ -34,7 +57,7 @@ object MakeReleaseNotes {
     parser markdownToHtml content
   }
 
-  def makeReleaseNotes(scalaDir: java.io.File, previousTag: String, currentTag: String)(implicit targetLanguage: TargetLanguage): String = {
+  private def makeReleaseNotes(scalaDir: java.io.File, previousTag: String, currentTag: String)(implicit targetLanguage: TargetLanguage): String = {
     def rawHandWrittenNotes(file: java.io.File = new java.io.File(s"hand-written.md")): String = {
       val lines: List[String] = if (file.exists) {
         val src = Source.fromFile(file)
