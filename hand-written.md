@@ -1,25 +1,19 @@
-<!--
-Things to update:
- - create new jira filters for fixed bugs, known issues,
- - link to closed milestone (after clearing milestone of un-merged PRs with https://github.com/adriaanm/binfu/blob/master/hubfu.sh#L29)
- - versions to search-replace: 2.10.4-RC1 (current release), 2.10.3 (previous release)
--->
-We are very happy to announce the first release candidate of Scala 2.10.4!
+We are very happy to announce the second release candidate of Scala 2.10.4!
 If no serious blocking issues are found this will become the final 2.10.4 version.
 
 <!-- Substitute both version numbers here! -->
-The release is available for download from [scala-lang.org](http://scala-lang.org/download/2.10.4-RC1.html) or from [Maven Central](http://search.maven.org/#search|ga|1|g:"org.scala-lang" AND v:"2.10.4-RC1").
+The release is available for download from [scala-lang.org](http://scala-lang.org/download/2.10.4-RC2.html) or from [Maven Central](http://search.maven.org/#search|ga|1|g:"org.scala-lang" AND v:"2.10.4-RC2").
 
-The Scala team and contributors [fixed 23 issues since 2.10.3](https://issues.scala-lang.org/issues/?filter=12308)!
+The Scala team and contributors [fixed 23 issues since 2.10.3](https://issues.scala-lang.org/issues/?filter=12401)!
 
 In total, 
-[39 RC1 pull requests](https://github.com/scala/scala/issues?milestone=22&state=closed)
+[39 RC1 pull requests](https://github.com/scala/scala/issues?milestone=22&state=closed) and [12 RC2 pull requests](https://github.com/scala/scala/issues?milestone=28&state=closed)
 were merged on [GitHub](https://github.com/scala/scala).
 
 <!--break-->
 
 ### Known Issues
-Before reporting a bug, please have a look at these [known issues](https://issues.scala-lang.org/issues/?filter=12309).
+Before reporting a bug, please have a look at these [known issues](https://issues.scala-lang.org/issues/?filter=12402).
 
 ### Scala IDE for Eclipse
 The Scala IDE with this release built right in is available through the following update-site:
