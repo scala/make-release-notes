@@ -65,6 +65,7 @@ class MakeDownloadPage(version: String, releaseDate: Date = new Date()) {
         resource       (defaultClass,    s"scala-sources-$version.zip", "sources", ghSourceUrl     )
       )).map(_.mkString(",\n  ")), 30 seconds)
 
+  // note: first and last lines must be exactly "---"
   def page: String = {
 s"""---
 title: Scala $version
@@ -78,8 +79,6 @@ requirements: "This Scala software distribution can be installed on any Unix-lik
 resources: [
   $resources
 ]
-
----
-""" // note: no empty line before the first ---, but it seems an empty line before the last --- is needed
+---"""
   }
 }
