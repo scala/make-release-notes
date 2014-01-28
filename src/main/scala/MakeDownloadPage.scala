@@ -69,8 +69,7 @@ class MakeDownloadPage(version: String, releaseDate: Date = new Date()) {
 
   def page: String = {
 
-s"""
----
+s"""---
 title: Scala $version
 start: ${format("dd MMMM yyyy")}
 layout: downloadpage
@@ -82,9 +81,6 @@ requirements: "This Scala software distribution can be installed on any Unix-lik
 resources: [
   $resources
 ]
----
-
-
-"""
+---"""
   }
 }
