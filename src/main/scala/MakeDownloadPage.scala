@@ -66,8 +66,7 @@ class MakeDownloadPage(version: String, releaseDate: Date = new Date()) {
       )).map(_.mkString(",\n  ")), 30 seconds)
 
   def page: String = {
-s"""
----
+s"""---
 title: Scala $version
 start: ${format("dd MMMM yyyy")}
 layout: downloadpage
@@ -81,6 +80,6 @@ resources: [
 ]
 
 ---
-""" // note empty line before ---
+""" // note: no empty line before the first ---, but it seems an empty line before the last --- is needed
   }
 }
