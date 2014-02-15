@@ -60,4 +60,14 @@ This release contains all of the bug fixes and improvements made in the 2.10 ser
     * Warn about unused private / local terms and types, and unused imports, under `-Xlint`. This will even tell you
       when a local `var` could be a `val`. (We might move these warnings to a separate command line option before
       the final release, your feedback is welcome here.)
-
+* Collections
+    * Immutable HashMaps and HashSets perform faster filters, unions, and the like, with improved structural
+      sharing (lower memory usage or churn).
+    * Mutable LongMap and AnyRefMap have been added to provide improved performance when keys are Long or
+      AnyRef (performance enhancement of up to 4x or 2x respectively).
+    * BigDecimal is more explicit about rounding and numeric representations, and better handles very large
+      values without exhausting memory (by avoiding unnecessary conversions to BigInt).
+    * Classes or methods that are difficult to impossible to extend safely have been slated for
+      being marked final.
+    * Proxies and wrappers that were not adequately implemented or kept up-to-date have been deprecated.
+    * List has improved performance on map, flatMap, and collect.
