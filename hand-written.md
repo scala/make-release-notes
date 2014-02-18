@@ -49,6 +49,7 @@ This release contains all of the bug fixes and improvements made in the 2.10 ser
 * Language
     * Case classes with > 22 parameters are now supported [SI-7296](https://issues.scala-lang.org/browse/SI-7296)
     * Infer bounds of Java-defined existential types [SI-6169](https://issues.scala-lang.org/browse/SI-6169)
+    * Right-hand sides of type aliases are now considered invariant for variance checking [SI-6566](https://issues.scala-lang.org/browse/SI-6566)
 * REPL
     * The bytecode decompiler command, :javap, now works with Java 7 [SI-4936](https://issues.scala-lang.org/browse/SI-4936) and has sprouted new options [SI-6894](https://issues.scala-lang.org/browse/SI-6894) (Thanks, [Andrew Marki](https://github.com/som-snytt)!)
     * Added command :kind to help to tell ground types from type constructors. [#2340](https://github.com/scala/scala/pull/2340) (Thanks, [George Leontiev](https://github.com/folone) and [Eugene Yokota](https://github.com/eed3si9n)!)
