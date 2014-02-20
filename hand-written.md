@@ -32,6 +32,21 @@ Have a look at the [getting started guide](http://scala-ide.org/docs/user/gettin
 
 <!--break-->
 
+### Important changes
+Scala 2.11.x is different from 2.10.x in the following ways.
+For most cases, code that compiled under 2.10.x without deprecation warnings should not be affected.
+We've decided to fix certain more obscure deviations from specified behavior without deprecating them first.
+
+  * SI-4577 `x match { case _ : Foo.type => }` is now compiled to `Foo eq x`, as specified. It used to be `Foo == x` (without warning), which (still) corresponds to `case Foo =>`.
+  * SI-5479 DelayedInit is deprecated. We will keep supporting the important `extends App` idiom. JIRA has more [details and a proposed alternative](https://issues.scala-lang.org/browse/SI-4330?jql=labels%20%3D%20delayedinit%20AND%20resolution%20%3D%20unresolved).
+  * SI-6455 no longer rewrite .withFilter to .filter: to be compatible with for-comprehensions, you must implement `withFilter`
+
+### Deprecations
+The following behavior has been deprecated:
+
+  * SI-6675 Deprecated auto-tupling in patterns
+  * SI-1503 Don't assume unsound type for stable identifier and literal patterns
+
 ### New features in the 2.11 series
 This release contains all of the bug fixes and improvements made in the 2.10 series, as well as:
 
