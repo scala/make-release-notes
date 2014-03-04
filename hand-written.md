@@ -27,6 +27,9 @@ Please [file any bugs you encounter](https://issues.scala-lang.org/secure/Create
 
 Before reporting a bug, please have a look at these [known issues](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20fixVersion%20%21%3D%20%22Scala%202.11.0-RC1%22%20AND%20affectedVersion%20%3D%20%22Scala%202.11.0-RC1%22%20%20and%20resolution%20%3D%20unresolved%20ORDER%20BY%20priority%20DESC).
 
+Scala 2.11.0-RC1 ships with akka-actor 2.3.0-RC4, which we now know to be the last RC (it wasn't release when RC1 was cut).
+The next Scala 2.11 RC will ship with (the identical) akka-actor 2.3.0 final.
+
 ### Scala IDE for Eclipse
 The Scala IDE with this release built in is available at the following update-site:
 
@@ -44,8 +47,8 @@ For most cases, code that compiled under 2.10.x without deprecation warnings sho
 We've decided to fix certain more obscure deviations from specified behavior without deprecating them first.
 
   * SI-4577 `x match { case _ : Foo.type => }` is now compiled to `Foo eq x`, as specified. It used to be `Foo == x` (without warning), which (still) corresponds to `case Foo =>`.
-  * SI-5479 DelayedInit is deprecated. We will keep supporting the important `extends App` idiom. JIRA has more [details and a proposed alternative](https://issues.scala-lang.org/browse/SI-4330?jql=labels%20%3D%20delayedinit%20AND%20resolution%20%3D%20unresolved).
-  * SI-6455 no longer rewrite .withFilter to .filter: to be compatible with for-comprehensions, you must implement `withFilter`
+
+TODO: source flag / -Xfuture
 
 ### Deprecations
 Deprecation is essential to two of the 2.11.x series' three themes ([faster/smaller/stabler](http://java.dzone.com/articles/state-scala-2013)).
@@ -57,6 +60,8 @@ The following language "warts" have been deprecated:
 
   * SI-6675 auto-tupling in patterns
   * SI-1503 unsound type assumption for stable identifier and literal patterns
+  * SI-5479 DelayedInit is deprecated. We will keep supporting the important `extends App` idiom. JIRA has more [details and a proposed alternative](https://issues.scala-lang.org/browse/SI-4330?jql=labels%20%3D%20delayedinit%20AND%20resolution%20%3D%20unresolved).
+  * SI-6455 no longer rewrite .withFilter to .filter: to be compatible with for-comprehensions, you must implement `withFilter`
 
 We'd like to emphasize the following library deprecations:
 
@@ -91,10 +96,14 @@ These are strict constraints, but they have worked well for us in the Scala 2.10
 #### Concretely
 Just like the 2.10.x series, we guarantee forwards and backwards compatibility of the `"org.scala-lang" % "scala-library" % "2.11.x"` and `"org.scala-lang" % "scala-reflect" % "2.11.x"` artifacts, except for anything under the `scala.reflect.internal` package, as scala-reflect is still experimental. We also strongly discourage relying on the stability of `scala.concurrent.impl` and `scala.reflect.runtime`, though we will only break compatibility for severe bugs here.
 
-Note that we will only enforce backwards binary compatibility for the new modules (artifacts under the groupId `org.scala-lang.modules`).
+Note that we will only enforce *backwards* binary compatibility for the new modules (artifacts under the groupId `org.scala-lang.modules`).
 As they are opt-in, it's less of a burden to require having the latest version on the classpath (which is the requirement implied by the lack of forward compatibility).
-Since `scala-library-all` depends on these modules, it does not provide forward binary compatibility either.
- 
+
+Finally, Scala 2.11.0 introduces `scala-library-all` to aggregate the modules that consistute a Scala release.
+Note that this means it does not provide forward binary compatibility, whereas the core `scala-library` artifact does.
+We consider the versions of the modules that `"scala-library-all" % "2.11.x"` depends on to be the canonical ones, that are part of the
+
+
 ### New features in the 2.11 series
 This release contains all of the bug fixes and improvements made in the 2.10 series, as well as:
 
@@ -103,6 +112,7 @@ This release contains all of the bug fixes and improvements made in the 2.10 ser
     * The compiler has been internally modularized, to separate the presentation compiler, scaladoc
       and the REPL. In this release, all of these modules are still packaged in scala-compiler.jar.
       We plan to ship them in separate JARs in 2.12.x.
+    * TODO: https://github.com/scala/scala/wiki/Scala-2.11#xml
 * Slimming down
     * The experimental .NET backend has been removed from the compiler.
     * Scala 2.10 shipped with new implementations of the Pattern Matcher and the Bytecode Emitter. We have removed the old implementations.
