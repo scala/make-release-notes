@@ -13,7 +13,7 @@ Our goal is to have no more than three RCs for this release -- please help us ac
 
 For production use, we recommend the latest stable release, 2.10.3 (soon 2.10.4).
 
-If your code compiled on 2.10.x without deprecation warnings, it should compile on 2.11.x. If not, [please file a regression](https://issues.scala-lang.org/secure/CreateIssueDetails!init.jspa?pid=10005&issuetype=1&versions=11311&labels=regression).
+If your code that uses non-experimental APIs compiled on 2.10.x without deprecation warnings, it should compile on 2.11.x. If not, [please file a regression](https://issues.scala-lang.org/secure/CreateIssueDetails!init.jspa?pid=10005&issuetype=1&versions=11311&labels=regression).
 We are working with the community to ensure availability of the core artifacts of the Scala 2.11.x eco-system, please see below for a list.
 This release is *not* binary compatible with the 2.10.x series, so that we can keep improving the Scala standard library.
 
@@ -45,7 +45,9 @@ TODO: scalacheck 1.11.3, scalatest 2.1.0, specs2, scalaz,...
 
 ### Important changes
 For most cases, code that compiled under 2.10.x without deprecation warnings should not be affected.
-We've verified this by [compiling](https://jenkins-dbuild.typesafe.com:8499/job/Community-2.11.x) a [sizeable number of open source projects](https://github.com/typesafehub/community-builds/blob/master/community-2.11.x.dbuild#L26).
+We've verified this by [compiling](https://jenkins-dbuild.typesafe.com:8499/job/Community-2.11.x) a [sizeable number of open source projects](https://github.com/typesafehub/community-builds/blob/master/community-2.11.x.dbuild#L26). 
+
+Changes to the reflection API may cause breakages, but these breakages can be easily fixed in a manner that is source-compatible with Scala 2.10.x. Follow our reflection/macro changelog for [detailed instructions](http://docs.scala-lang.org/overviews/macros/changelog211.html#how_to_make_your_210x_macros_work_in_2110).
 
 We've decided to fix the following more obscure deviations from specified behavior without deprecating them first.
 
@@ -61,6 +63,10 @@ Finally, some notable improvements and bug fixes:
   * [SI-7296](https://issues.scala-lang.org/browse/SI-7296) Case classes with > 22 parameters are now allowed
   * [SI-6169](https://issues.scala-lang.org/browse/SI-6169) Infer bounds of Java-defined existential types
   * [SI-6566](https://issues.scala-lang.org/browse/SI-6566) Right-hand sides of type aliases are now considered invariant for variance checking
+  * [SI-3346](https://issues.scala-lang.org/browse/SI-3346) Implicit arguments of implicit conversions now guide type inference
+  * [SI-6240](https://issues.scala-lang.org/browse/SI-6240) Thread safety of reflection API
+  * [SI-5917](https://issues.scala-lang.org/browse/SI-5917) Improve public AST creation facilities
+  * [SI-8063](https://issues.scala-lang.org/browse/SI-8063) Expose much needed methods in public reflection/macro API
 
 TODO: source flag / -Xfuture
 
@@ -138,6 +144,9 @@ This release contains all of the bug fixes and improvements made in the 2.10 ser
     * Scala 2.10 shipped with new implementations of the Pattern Matcher and the Bytecode Emitter. We have removed the old implementations.
     * Search and destroy mission for ~5000 chunks of dead code. [#1648](https://github.com/scala/scala/pull/1648/files)
 * Language
+    * Name-based pattern-matching. [#2848](https://github.com/scala/scala/pull/2848)
+* Reflection/macros
+    * A summary of what's happened to reflection and macros during the Scala 2.11 development cycle can be found at [scalamacros.org](http://scalamacros.org/news/index.html). There's also [a detailed changelog](http://docs.scala-lang.org/overviews/macros/changelog211.html) that lists all significant changes and provides advice on forward and backward compatibility.
 * REPL
     * The bytecode decompiler command, :javap, now works with Java 7 [SI-4936](https://issues.scala-lang.org/browse/SI-4936) and has sprouted new options [SI-6894](https://issues.scala-lang.org/browse/SI-6894) (Thanks, [Andrew Marki](https://github.com/som-snytt)!)
     * Added command :kind to help to tell ground types from type constructors. [#2340](https://github.com/scala/scala/pull/2340) (Thanks, [George Leontiev](https://github.com/folone) and [Eugene Yokota](https://github.com/eed3si9n)!)
