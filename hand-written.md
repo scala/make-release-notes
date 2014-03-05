@@ -20,7 +20,7 @@ This release is *not* binary compatible with the 2.10.x series, so that we can k
 Scala 2.11.0-RC1 is available for download from [scala-lang.org](http://scala-lang.org/download/2.11.0-RC1.html)
 or from [Maven Central](http://search.maven.org/%23search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.11.0-RC1%22).
 
-The Scala team and contributors [fixed 133 issues](https://issues.scala-lang.org/issues/?jql=project+%3D+SI+AND+fixVersion+%3D+%22Scala+2.11.0-RC1%22+AND+status+%3D+CLOSED+ORDER+BY+priority+DESC) via [154 merged pull requests](https://github.com/scala/scala/issues?milestone=27&state=closed)!
+The Scala team and contributors [fixed 133 issues](https://issues.scala-lang.org/issues/?jql=project+%3D+SI+AND+fixVersion+%3D+%22Scala+2.11.0-RC1%22+AND+status+%3D+CLOSED+ORDER+BY+priority+DESC) via [154 merged pull requests](https://github.com/scala/scala/issues?milestone=27&state=closed) since the last milestone!
 
 ### Reporting Bugs / Known Issues
 Please [file any bugs you encounter](https://issues.scala-lang.org/secure/CreateIssueDetails!init.jspa?pid=10005&issuetype=1&versions=11311). If you're unsure whether something is a bug, please contact the [scala-user](https://groups.google.com/forum/?fromgroups#!forum/scala-user) mailing list.
@@ -41,12 +41,26 @@ Have a look at the [getting started guide](http://scala-ide.org/docs/user/gettin
 
 ### Available libraries
 
+TODO: scalacheck 1.11.3, scalatest 2.1.0, specs2, scalaz,...
+
 ### Important changes
-Scala 2.11.x is different from 2.10.x in the following ways.
 For most cases, code that compiled under 2.10.x without deprecation warnings should not be affected.
-We've decided to fix certain more obscure deviations from specified behavior without deprecating them first.
+We've verified this by [compiling](https://jenkins-dbuild.typesafe.com:8499/job/Community-2.11.x) a [sizeable number of open source projects](https://github.com/typesafehub/community-builds/blob/master/community-2.11.x.dbuild#L26).
+
+We've decided to fix the following more obscure deviations from specified behavior without deprecating them first.
 
   * SI-4577 `x match { case _ : Foo.type => }` is now compiled to `Foo eq x`, as specified. It used to be `Foo == x` (without warning), which (still) corresponds to `case Foo =>`.
+
+The following changes were made after a deprecation cycle:
+
+  * SI-6809 Case classes without a parameter list are no longer allowed
+  * SI-7618 Octal number literals no longer supported
+
+Finally, some notable improvements and bug fixes:
+
+  * [SI-7296](https://issues.scala-lang.org/browse/SI-7296) Case classes with > 22 parameters are now allowed
+  * [SI-6169](https://issues.scala-lang.org/browse/SI-6169) Infer bounds of Java-defined existential types
+  * [SI-6566](https://issues.scala-lang.org/browse/SI-6566) Right-hand sides of type aliases are now considered invariant for variance checking
 
 TODO: source flag / -Xfuture
 
@@ -58,15 +72,21 @@ as exemplified by 2.11.x's focus on deprecation, modularization and infrastructu
 
 The following language "warts" have been deprecated:
 
-  * SI-6675 auto-tupling in patterns
-  * SI-1503 unsound type assumption for stable identifier and literal patterns
-  * SI-5479 DelayedInit is deprecated. We will keep supporting the important `extends App` idiom. JIRA has more [details and a proposed alternative](https://issues.scala-lang.org/browse/SI-4330?jql=labels%20%3D%20delayedinit%20AND%20resolution%20%3D%20unresolved).
-  * SI-6455 no longer rewrite .withFilter to .filter: to be compatible with for-comprehensions, you must implement `withFilter`
+  * SI-7605 Procedure syntax.
+  * SI-5479 DelayedInit. We will continue support for the important `extends App` idiom. ([More details and a proposed alternative.](https://issues.scala-lang.org/browse/SI-4330?jql=labels%20%3D%20delayedinit%20AND%20resolution%20%3D%20unresolved))
+  * SI-6455 Rewrite of .withFilter to .filter: you must implement `withFilter` to be compatible with for-comprehensions.
+  * SI-8035 Automatic insertion of `()` on missing argument lists.
+  * SI-6675 Auto-tupling in patterns.
+  * SI-7247 NotNull, which was never fully implemented -- slated for removal in 2.12.
+  * SI-1503 Unsound type assumption for stable identifier and literal patterns.
 
 We'd like to emphasize the following library deprecations:
 
-  * scala-actors is now deprecated and will be removed in 2.12.x; we advise users to follow the steps in the [Actors Migration Guide](http://docs.scala-lang.org/overviews/core/actors-migration-guide.html) to port to Akka Actors, which have been included in the distribution since 2.10.0.
-  * [#3103](https://github.com/scala/scala/pull/3103) Collection classes and methods that are (very) difficult to extend safely have been slated for being marked `final`. Proxies and wrappers that were not adequately implemented or kept up-to-date have been deprecated.
+  * [#3103](https://github.com/scala/scala/pull/3103), [#3191](https://github.com/scala/scala/pull/3191), [#3582](https://github.com/scala/scala/pull/3582) Collection classes and methods that are (very) difficult to extend safely have been slated for being marked `final`. Proxies and wrappers that were not adequately implemented or kept up-to-date have been deprecated, along with other minor inconsistencies.
+  * scala-actors is now deprecated and will be removed in 2.12; please follow the steps in the [Actors Migration Guide](http://docs.scala-lang.org/overviews/core/actors-migration-guide.html) to port to Akka Actors
+  * SI-7958 Deprecate `scala.concurrent.future` and `scala.concurrent.promise`
+  * SI-3235 Deprecate `round` on `Int` and `Long` ([#3581](https://github.com/scala/scala/pull/3581)).
+  
 
 Deprecation is closely linked to source and binary compatibility.
 We say two versions are source compatible when they compile the same programs with the same results.
@@ -118,16 +138,14 @@ This release contains all of the bug fixes and improvements made in the 2.10 ser
     * Scala 2.10 shipped with new implementations of the Pattern Matcher and the Bytecode Emitter. We have removed the old implementations.
     * Search and destroy mission for ~5000 chunks of dead code. [#1648](https://github.com/scala/scala/pull/1648/files)
 * Language
-    * Case classes with > 22 parameters are now supported [SI-7296](https://issues.scala-lang.org/browse/SI-7296)
-    * Infer bounds of Java-defined existential types [SI-6169](https://issues.scala-lang.org/browse/SI-6169)
-    * Right-hand sides of type aliases are now considered invariant for variance checking [SI-6566](https://issues.scala-lang.org/browse/SI-6566)
 * REPL
     * The bytecode decompiler command, :javap, now works with Java 7 [SI-4936](https://issues.scala-lang.org/browse/SI-4936) and has sprouted new options [SI-6894](https://issues.scala-lang.org/browse/SI-6894) (Thanks, [Andrew Marki](https://github.com/som-snytt)!)
     * Added command :kind to help to tell ground types from type constructors. [#2340](https://github.com/scala/scala/pull/2340) (Thanks, [George Leontiev](https://github.com/folone) and [Eugene Yokota](https://github.com/eed3si9n)!)
     * The interpreter can now be embedded as a JSR-166 Scripting Engine [SI-874](https://issues.scala-lang.org/browse/SI-874). (Thanks, [Raphael Jolly](https://github.com/rjolly)!)
 * Compiler Performance
-    * Branch elimination through constant analysis [#2214](https://github.com/scala/scala/pull/2214)
     * Improve performance of reflection [SI-6638](https://issues.scala-lang.org/browse/SI-6638)
+* Better Optimizer
+    * Branch elimination through constant analysis [#2214](https://github.com/scala/scala/pull/2214)
 * Warnings
     * Warn about unused private / local terms and types, and unused imports, under `-Xlint`. This will even tell you
       when a local `var` could be a `val`.
@@ -139,3 +157,7 @@ This release contains all of the bug fixes and improvements made in the 2.10 ser
     * `BigDecimal` is more explicit about rounding and numeric representations, and better handles very large
       values without exhausting memory (by avoiding unnecessary conversions to `BigInt`).
     * `List` has improved performance on `map`, `flatMap`, and `collect`.
+
+
+### License clarification
+Important note: Scala is now distributed under the standard 3-clause BSD license. Originally, the same 3-clause BSD license was adopted, but slightly reworded over the years. We're now back to the standard formulation.
