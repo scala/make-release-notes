@@ -62,6 +62,7 @@ We'd love to include your project once it's available -- please submit a PR to u
     "org.specs2"        %% "specs2"      % "2.3.9"
     "com.typesafe.akka" %% "akka-actor"  % "2.3.0-RC4"
     "org.scalaz"        %% "scalaz-core" % "7.0.6"
+    "com.nocandysw"     %% "platform-executing" % "0.5.0"
 
 NOTE: RC1 ships with akka-actor 2.3.0-RC4 (the final is out now, but wasn't yet available when RC1 was cut).
 The next Scala 2.11 RC will ship with (the identical) akka-actor 2.3.0 final.
