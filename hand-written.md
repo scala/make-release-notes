@@ -48,7 +48,9 @@ The following Scala projects have already been released against 2.11.0-RC1! We'd
     "org.specs2"        %% "specs2"             % "2.3.9"
     "com.typesafe.akka" %% "akka-actor"         % "2.3.0-RC4"
     "org.scalaz"        %% "scalaz-core"        % "7.0.6"
+    "io.argonaut"       %% "argonaut"           % "6.0.3"
     "com.nocandysw"     %% "platform-executing" % "0.5.0"
+    "com.clarifi"       %% "f0"                 % "1.1.1"
 
 NOTE: RC1 ships with akka-actor 2.3.0-RC4 (the final is out now, but wasn't yet available when RC1 was cut). The next Scala 2.11 RC will ship with (the identical) akka-actor 2.3.0 final.
 
