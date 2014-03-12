@@ -42,16 +42,17 @@ The Scala IDE with this release built in is [available from this update site](ht
 ### Available projects
 The following Scala projects have already been released against 2.11.0-RC1! We'd love to include yours in this list as soon as it's available -- please submit a PR to update [these release notes](https://github.com/scala/make-release-notes/blob/master/hand-written.md).
 
-    "org.scalacheck"    %% "scalacheck"         % "1.11.3"
-    "org.scalafx"       %% "scalafx"            % "1.0.0-R8"
-    "org.scalatest"     %% "scalatest"          % "2.1.0"
-    "org.specs2"        %% "specs2"             % "2.3.9"
-    "com.typesafe.akka" %% "akka-actor"         % "2.3.0-RC4"
-    "org.scalaz"        %% "scalaz-core"        % "7.0.6"
-    "io.argonaut"       %% "argonaut"           % "6.0.3"
-    "com.nocandysw"     %% "platform-executing" % "0.5.0"
-    "com.clarifi"       %% "f0"                 % "1.1.1"
-    "org.parboiled"     %% "parboiled-scala"    % "1.1.6"
+    "org.scalacheck"         %% "scalacheck"         % "1.11.3"
+    "org.scalafx"            %% "scalafx"            % "1.0.0-R8"
+    "org.scalatest"          %% "scalatest"          % "2.1.0"
+    "org.specs2"             %% "specs2"             % "2.3.9"
+    "com.typesafe.akka"      %% "akka-actor"         % "2.3.0-RC4"
+    "org.scalaz"             %% "scalaz-core"        % "7.0.6"
+    "io.argonaut"            %% "argonaut"           % "6.0.3"
+    "com.nocandysw"          %% "platform-executing" % "0.5.0"
+    "com.clarifi"            %% "f0"                 % "1.1.1"
+    "org.parboiled"          %% "parboiled-scala"    % "1.1.6"
+    "com.sksamuel.scrimage"  %% "scrimage"           % "1.3.16"
 
 NOTE: RC1 ships with akka-actor 2.3.0-RC4 (the final is out now, but wasn't yet available when RC1 was cut). The next Scala 2.11 RC will ship with akka-actor 2.3.0 final.
 
