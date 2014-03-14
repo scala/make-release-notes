@@ -59,7 +59,7 @@ NOTE: RC1 ships with akka-actor 2.3.0-RC4 (the final is out now, but wasn't yet 
 ### Cross-building with sbt 0.13
 When cross-building between Scala versions, you often need to vary the versions of your dependencies. In particular, the new scala modules (such as scala-xml) are no longer included in scala-library, so you'll have to add an explicit dependency on it to use Scala's xml support.
 
-Here's how we recommend handling this in sbt 0.13. For the full build, see [[@gkossakowski's](https://github.com/gkossakowski's) example](https://github.com/gkossakowski/scala-sbt-cross-compile/).
+Here's how we recommend handling this in sbt 0.13. For the full build and Maven build, see [example](https://github.com/scala/scala-module-dependency-sample).
 
     scalaVersion        := "2.11.0-RC1"
 
