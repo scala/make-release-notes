@@ -84,6 +84,7 @@ Changes to the reflection API may cause breakages, but these breakages can be ea
 We've decided to fix the following more obscure deviations from specified behavior without deprecating them first.
 
 * [SI-4577](https://issues.scala-lang.org/browse/SI-4577) Compile `x match { case _ : Foo.type => }` to `Foo eq x`, as specified. It used to be `Foo == x` (without warning). If that's what you meant, write `case Foo =>`.
+* [SI-7475](https://issues.scala-lang.org/browse/SI-7475) Improvements to access checks, aligned with the spec (see also the linked issues). Most importantly, private members are no longer inherited. Thus, this does not type check: `class Foo[T] { private val bar: T = ???; new Foo[String] { bar: String } }`, as the `bar` in `bar: String` refers to the `bar` with type `T`. The `Foo[String]`'s `bar` is not inherited, and thus not in scope, in the refinement. (Example from [SI-8371](https://issues.scala-lang.org/browse/SI-8371), see also [SI-8426](https://issues.scala-lang.org/browse/SI-8371.)
 
 The following changes were made after a deprecation cycle (Thank you, [@soc](https://github.com/soc), for leading the deprecation effort!)
 
@@ -97,7 +98,6 @@ Finally, some notable improvements and bug fixes:
 * [SI-6240](https://issues.scala-lang.org/browse/SI-6240) Thread safety of reflection API.
 * [#3037](https://github.com/scala/scala/pull/3037) Experimental support for SAM synthesis.
 * [#2848](https://github.com/scala/scala/pull/2848) Name-based pattern-matching.
-* [SI-7475](https://issues.scala-lang.org/browse/SI-7475) Improvements to access checks, aligned with the spec (see also the linked issues).
 * [SI-6169](https://issues.scala-lang.org/browse/SI-6169) Infer bounds of Java-defined existential types.
 * [SI-6566](https://issues.scala-lang.org/browse/SI-6566) Right-hand sides of type aliases are now considered invariant for variance checking.
 * [SI-5917](https://issues.scala-lang.org/browse/SI-5917) Improve public AST creation facilities.
