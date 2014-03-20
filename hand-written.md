@@ -48,11 +48,11 @@ The following Scala projects have already been released against 2.11.0-RC3! We'd
     "com.typesafe.akka"      %% "akka-actor"         % "2.3.0"
     "com.github.scopt"       %% "scopt"              % "3.2.0"
     "org.scalatest"          %% "scalatest"          % "2.1.2"
+    "org.specs2"             %% "specs2"             % "2.3.10"
+    "org.scalaz"             %% "scalaz-core"        % "7.0.6"
 
 The following projects were released against 2.11.0-RC1, with an RC3 build hopefully following soon:
 
-    "org.specs2"             %% "specs2"             % "2.3.9"
-    "org.scalaz"             %% "scalaz-core"        % "7.0.6"
     "io.argonaut"            %% "argonaut"           % "6.0.3"
     "com.nocandysw"          %% "platform-executing" % "0.5.0"
     "com.clarifi"            %% "f0"                 % "1.1.1"
