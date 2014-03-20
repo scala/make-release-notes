@@ -43,12 +43,13 @@ The Scala IDE with this release built in is [available from this update site](ht
 The following Scala projects have already been released against 2.11.0-RC3! We'd love to include yours in this list as soon as it's available -- please submit a PR to update [these release notes](https://github.com/scala/make-release-notes/blob/master/hand-written.md).
 
     "org.scalacheck"         %% "scalacheck"         % "1.11.3"
+    "org.scalafx"            %% "scalafx"            % "1.0.0-R8"
+    "org.scalafx"            %% "scalafx"            % "8.0.0-R4"
     "com.typesafe.akka"      %% "akka-actor"         % "2.3.0"
     "com.github.scopt"       %% "scopt"              % "3.2.0"
 
 The following projects were released against 2.11.0-RC1, with an RC3 build hopefully following soon:
 
-    "org.scalafx"            %% "scalafx"            % "1.0.0-R8"
     "org.scalatest"          %% "scalatest"          % "2.1.0"
     "org.specs2"             %% "specs2"             % "2.3.9"
     "org.scalaz"             %% "scalaz-core"        % "7.0.6"
