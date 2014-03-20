@@ -44,6 +44,7 @@ The following Scala projects have already been released against 2.11.0-RC3! We'd
 
     "org.scalacheck"         %% "scalacheck"         % "1.11.3"
     "com.typesafe.akka"      %% "akka-actor"         % "2.3.0"
+    "com.github.scopt"       %% "scopt"              % "3.2.0"
 
 The following projects were released against 2.11.0-RC1, with an RC3 build hopefully following soon:
 
