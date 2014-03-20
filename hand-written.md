@@ -73,7 +73,7 @@ Here's how we recommend handling this in sbt 0.13. For the full build and Maven 
     libraryDependencies := {
       CrossVersion.partialVersion(scalaVersion.value) match {
         case Some((2, scalaMajor)) if scalaMajor >= 11 =>
-          libraryDependencies.value :+ "org.scala-lang.modules" %% "scala-xml" % "1.0.0"
+          libraryDependencies.value :+ "org.scala-lang.modules" %% "scala-xml" % "1.0.1"
         case _ =>
           libraryDependencies.value
       }
