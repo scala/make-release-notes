@@ -9,7 +9,7 @@ We are very pleased to announce Scala 2.11.0-RC3, the second (sic) release candi
 
 There won't be an RC2 release because we missed a [blocker issue](https://issues.scala-lang.org/browse/SI-8341) (thanks for the reminder, Chee Seng!). Unfortunately, the mistake wasn't caught until after the tag was pushed. Jason quickly [fixed](https://github.com/scala/scala/pull/3639) the bug, which is the only [difference between RC3 and RC2](https://github.com/scala/scala/compare/v2.11.0-RC2...v2.11.0-RC3).
 
-Please do try out this release candidate to help us find any serious regressions before the final release. The next release candidate will be cut on Monday March 24, if there are no unresolved blocker bugs at noon (PST). Our goal is to have the next release be the final -- please help us make sure there are no important regressions!
+Please do try out this release candidate to help us find any serious regressions before the final release. The next release candidate (or the final) will be cut on Friday March 28, if there are no unresolved blocker bugs at noon (PST). Our goal is to have the next release be the final -- please help us make sure there are no important regressions!
 
 Code that compiled on 2.10.x without deprecation warnings should compile on 2.11.x (we do no guarantee this for experimental APIs, such as reflection). If not, [please file a regression](https://issues.scala-lang.org/secure/CreateIssueDetails!init.jspa?pid=10005&issuetype=1&versions=11311&labels=regression). We are working with the community to ensure availability of the core projects of the Scala 2.11.x eco-system, please see below for a list. This release is *not* binary compatible with the 2.10.x series, to allow us to keep improving the Scala standard library.
 
