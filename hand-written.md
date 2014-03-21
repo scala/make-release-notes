@@ -51,11 +51,11 @@ The following Scala projects have already been released against 2.11.0-RC3! We'd
     "org.specs2"             %% "specs2"             % "2.3.10"
     "org.scalaz"             %% "scalaz-core"        % "7.0.6"
     "org.scala-lang.modules" %% "scala-async"        % "0.9.0"
+    "com.nocandysw"          %% "platform-executing" % "0.5.0"
 
 The following projects were released against 2.11.0-RC1, with an RC3 build hopefully following soon:
 
     "io.argonaut"            %% "argonaut"           % "6.0.3"
-    "com.nocandysw"          %% "platform-executing" % "0.5.0"
     "com.clarifi"            %% "f0"                 % "1.1.1"
     "org.parboiled"          %% "parboiled-scala"    % "1.1.6"
     "com.sksamuel.scrimage"  %% "scrimage"           % "1.3.16"
