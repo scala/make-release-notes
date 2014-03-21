@@ -50,6 +50,7 @@ The following Scala projects have already been released against 2.11.0-RC3! We'd
     "org.scalatest"          %% "scalatest"          % "2.1.2"
     "org.specs2"             %% "specs2"             % "2.3.10"
     "org.scalaz"             %% "scalaz-core"        % "7.0.6"
+    "org.scala-lang.modules" %% "scala-async"        % "0.9.0"
 
 The following projects were released against 2.11.0-RC1, with an RC3 build hopefully following soon:
 
