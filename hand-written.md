@@ -42,6 +42,9 @@ The Scala IDE with this release built in is [available from this update site](ht
 ### Available projects
 The following Scala projects have already been released against 2.11.0-RC4! We'd love to include yours in this list as soon as it's available -- please submit a PR to update [these release notes](https://github.com/scala/make-release-notes/blob/master/hand-written.md).
 
+    "org.scala-lang.modules" %% "scala-async"        % "0.9.1"
+    "org.scalatest"          %% "scalatest"          % "2.1.3"
+
 The following projects were released against 2.11.0-RC3, with an RC4 build hopefully following soon:
 
     "org.scalacheck"         %% "scalacheck"         % "1.11.3"
@@ -49,10 +52,10 @@ The following projects were released against 2.11.0-RC3, with an RC4 build hopef
     "org.scalafx"            %% "scalafx"            % "8.0.0-R4"
     "com.typesafe.akka"      %% "akka-actor"         % "2.3.0"
     "com.github.scopt"       %% "scopt"              % "3.2.0"
-    "org.scalatest"          %% "scalatest"          % "2.1.2"
+
     "org.specs2"             %% "specs2"             % "2.3.10"
     "org.scalaz"             %% "scalaz-core"        % "7.0.6"
-    "org.scala-lang.modules" %% "scala-async"        % "0.9.0"
+
     "com.nocandysw"          %% "platform-executing" % "0.5.0"
     "io.argonaut"            %% "argonaut"           % "6.0.3"
     "com.clarifi"            %% "f0"                 % "1.1.1"
