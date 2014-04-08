@@ -22,7 +22,7 @@ object MakeReleaseNotes {
 
     if (ext == "md") {
       println(s"cp $fileName ../scala-lang/news/_posts/")
-      println(s"don't forget to update ../scala-lang/download/index.md")
+      println(s"don't forget to update ../scala-lang/download/index.md, ../scala-lang/documentation/api.md")
       println(s"maruku --html $fileName")
       println("# to prepare and sanity check your scala-lang PR")
     }
