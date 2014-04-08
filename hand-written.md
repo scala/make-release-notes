@@ -45,6 +45,8 @@ The following Scala projects have already been released against 2.11.0-RC4! We'd
     "com.typesafe.akka"      %% "akka-actor"         % "2.3.0"
     "org.scalatest"          %% "scalatest"          % "2.1.3"
     "org.scala-lang.modules" %% "scala-async"        % "0.9.1"
+    "com.chuusai"            %% "shapeless"          % "1.2.4"
+    "com.chuusai"            %% "shapeless"          % "2.0.0"
 
 The following projects were released against 2.11.0-RC3, with an RC4 build hopefully following soon:
 
