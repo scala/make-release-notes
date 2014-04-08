@@ -45,6 +45,8 @@ The following Scala projects have already been released against 2.11.0-RC4! We'd
     "com.typesafe.akka"      %% "akka-actor"         % "2.3.0"
     "org.scalatest"          %% "scalatest"          % "2.1.3"
     "org.scala-lang.modules" %% "scala-async"        % "0.9.1"
+    "org.scalaz"             %% "scalaz-core"        % "7.0.6"
+    "org.specs2"             %% "specs2"             % "2.3.10"
 
 The following projects were released against 2.11.0-RC3, with an RC4 build hopefully following soon:
 
@@ -52,8 +54,6 @@ The following projects were released against 2.11.0-RC3, with an RC4 build hopef
     "org.scalafx"            %% "scalafx"            % "1.0.0-R8"
     "org.scalafx"            %% "scalafx"            % "8.0.0-R4"
     "com.github.scopt"       %% "scopt"              % "3.2.0"
-    "org.specs2"             %% "specs2"             % "2.3.10"
-    "org.scalaz"             %% "scalaz-core"        % "7.0.6"
     "com.nocandysw"          %% "platform-executing" % "0.5.0"
     "io.argonaut"            %% "argonaut"           % "6.0.3"
     "com.clarifi"            %% "f0"                 % "1.1.1"
