@@ -47,6 +47,7 @@ The following Scala projects have already been released against 2.11.0! We'd lov
     "com.softwaremill.macwire" %% "macros"           % "0.6"
     "com.chuusai"            %% "shapeless"          % "1.2.4"
     "com.chuusai"            %% "shapeless"          % "2.0.0"
+    "org.nalloc"             %% "optional"           % "0.1.0"
 
 The following projects were released against 2.11.0-RC4, with an 2.11 build hopefully following soon:
 
