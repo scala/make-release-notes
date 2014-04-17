@@ -59,6 +59,9 @@ object MakeReleaseNotes {
     parser markdownToHtml content
   }
 
+  private def stripTripleDashedHtmlComments(s: String): String =
+    s.replaceAll("""(?ims)<!---.*?-->""", "")
+
   private def makeReleaseNotes(scalaDir: java.io.File, previousTag: String, currentTag: String)(implicit targetLanguage: TargetLanguage): String = {
     def rawHandWrittenNotes(file: java.io.File = new java.io.File(s"hand-written.md")): String = {
       val lines: List[String] = if (file.exists) {
@@ -68,8 +71,9 @@ object MakeReleaseNotes {
       // if you don't have the next line, sub-bullets would be screwed!
       // please take this case into account and comment out 2 next lines and uncomment the line after!
       val newLines = lines.map(x => if (x.startsWith("    *")) "\n" + x.stripPrefix("  ") else x)
-      newLines.mkString("\n")
-      //      lines.mkString("\n")
+      val bulletFixed = newLines.mkString("\n")
+      val commentsStripped = stripTripleDashedHtmlComments(bulletFixed)
+      commentsStripped
     }
     val info = new GitInfo(scalaDir, previousTag, currentTag)
     // val communityProjects = CommunityProjects.loadHtmlFromFile()

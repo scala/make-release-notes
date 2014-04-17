@@ -1,4 +1,6 @@
-<!-- comment at the top because it breaks the markdown parser when it's where we'd actually like it...
+<!---
+NOTE: Our generator now strips triple-dash comments form the generated markdown.
+      These have been problematic for jekyll.
 Things to update:
 - replace 2.11.0-RCX-1 by previous version,
 - replace 2.11.0-RCX by actual version,
