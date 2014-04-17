@@ -41,12 +41,12 @@ The following Scala projects have already been released against 2.11.0! We'd lov
 
     "org.scalacheck"         %% "scalacheck"         % "1.11.3"
     "com.typesafe.akka"      %% "akka-actor"         % "2.3.0"
+    "org.scala-lang.modules" %% "scala-async"        % "0.9.1"
     "org.scalikejdbc"        %% "scalikejdbc-interpolation" % "2.0.0-beta1"
 
 The following projects were released against 2.11.0-RC4, with an 2.11 build hopefully following soon:
 
     "org.scalatest"          %% "scalatest"          % "2.1.3"
-    "org.scala-lang.modules" %% "scala-async"        % "0.9.1"
     "org.scalafx"            %% "scalafx"            % "8.0.0-R4"
     "com.chuusai"            %% "shapeless"          % "1.2.4"
     "com.chuusai"            %% "shapeless"          % "2.0.0"
