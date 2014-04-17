@@ -45,6 +45,7 @@ The following Scala projects have already been released against 2.11.0! We'd lov
     "com.typesafe.akka"      %% "akka-actor"         % "2.3.0"
     "org.scala-lang.modules" %% "scala-async"        % "0.9.1"
     "org.scalikejdbc"        %% "scalikejdbc-interpolation" % "2.0.0-beta1"
+    "com.softwaremill.scalamacrodebug" %% "macros"   % "0.4"
 
 The following projects were released against 2.11.0-RC4, with an 2.11 build hopefully following soon:
 
