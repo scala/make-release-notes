@@ -52,6 +52,7 @@ The following Scala projects have already been released against 2.11.0! We'd lov
     "org.scalaz"                       %% "scalaz-core"               % "7.0.6"
     "com.nocandysw"                    %% "platform-executing"        % "0.5.0"
     "com.qifun"                        %% "stateless-future"          % "0.1.1"
+    "com.github.scopt"                 %% "scopt"                     % "3.2.0"
 
 The following projects were released against 2.11.0-RC4, with an 2.11 build hopefully following soon:
 
@@ -63,7 +64,6 @@ The following projects were released against 2.11.0-RC4, with an 2.11 build hope
     "com.propensive"         %% "rapture-json"       % "0.9.1"
     "com.propensive"         %% "rapture-io"         % "0.9.1"
     "org.scalafx"            %% "scalafx"            % "1.0.0-R8"
-    "com.github.scopt"       %% "scopt"              % "3.2.0"
     "io.argonaut"            %% "argonaut"           % "6.0.3"
     "com.clarifi"            %% "f0"                 % "1.1.1"
     "org.parboiled"          %% "parboiled-scala"    % "1.1.6"
