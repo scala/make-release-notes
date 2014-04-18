@@ -51,6 +51,7 @@ The following Scala projects have already been released against 2.11.0! We'd lov
     "org.nalloc"                       %% "optional"                  % "0.1.0"
     "org.scalaz"                       %% "scalaz-core"               % "7.0.6"
     "com.nocandysw"                    %% "platform-executing"        % "0.5.0"
+    "com.qifun"                        %% "stateless-future"          % "0.1.1"
 
 The following projects were released against 2.11.0-RC4, with an 2.11 build hopefully following soon:
 
