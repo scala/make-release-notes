@@ -53,6 +53,7 @@ The following Scala projects have already been released against 2.11.0! We'd lov
     "com.nocandysw"                    %% "platform-executing"        % "0.5.0"
     "com.qifun"                        %% "stateless-future"          % "0.1.1"
     "com.github.scopt"                 %% "scopt"                     % "3.2.0"
+    "com.dongxiguo"                    %% "fastring"                  % "0.2.4"
 
 The following projects were released against 2.11.0-RC4, with an 2.11 build hopefully following soon:
 
