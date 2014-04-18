@@ -40,6 +40,8 @@ The Scala IDE with this release built in is [available from this update site](ht
 The following Scala projects have already been released against 2.11.0! We'd love to include yours in this list as soon as it's available -- please submit a PR to update [these release notes](https://github.com/scala/make-release-notes/blob/master/hand-written.md).
 
     "org.scalacheck"                   %% "scalacheck"                % "1.11.3"
+    "org.scalatest"                    %% "scalatest"                 % "2.1.3"
+    "org.scalautils"                   %% "scalautils"                % "2.1.3"
     "com.typesafe.akka"                %% "akka-actor"                % "2.3.2"
     "com.typesafe.scala-logging"       %% "scala-logging-slf4j"       % "2.0.3"
     "org.scala-lang.modules"           %% "scala-async"               % "0.9.1"
@@ -49,20 +51,22 @@ The following Scala projects have already been released against 2.11.0! We'd lov
     "com.chuusai"                      %% "shapeless"                 % "1.2.4"
     "com.chuusai"                      %% "shapeless"                 % "2.0.0"
     "org.nalloc"                       %% "optional"                  % "0.1.0"
+    "org.scalaz"                       %% "scalaz-core"               % "7.0.6"
+    "com.nocandysw"                    %% "platform-executing"        % "0.5.0"
+    "com.qifun"                        %% "stateless-future"          % "0.1.1"
+    "com.github.scopt"                 %% "scopt"                     % "3.2.0"
+    "com.dongxiguo"                    %% "fastring"                  % "0.2.4"
+    "com.github.seratch"               %% "ltsv4s"                    % "1.0.0"
 
 The following projects were released against 2.11.0-RC4, with an 2.11 build hopefully following soon:
 
-    "org.scalatest"          %% "scalatest"          % "2.1.3"
     "org.scalafx"            %% "scalafx"            % "8.0.0-R4"
     "org.scalamacros"        %% "paradise"           % "2.0.0-M7"
-    "org.scalaz"             %% "scalaz-core"        % "7.0.6"
     "org.specs2"             %% "specs2"             % "2.3.10"
     "com.propensive"         %% "rapture-core"       % "0.9.0"
     "com.propensive"         %% "rapture-json"       % "0.9.1"
     "com.propensive"         %% "rapture-io"         % "0.9.1"
     "org.scalafx"            %% "scalafx"            % "1.0.0-R8"
-    "com.github.scopt"       %% "scopt"              % "3.2.0"
-    "com.nocandysw"          %% "platform-executing" % "0.5.0"
     "io.argonaut"            %% "argonaut"           % "6.0.3"
     "com.clarifi"            %% "f0"                 % "1.1.1"
     "org.parboiled"          %% "parboiled-scala"    % "1.1.6"
