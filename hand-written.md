@@ -61,6 +61,9 @@ The following Scala projects have already been released against 2.11.0! We'd lov
     "com.github.scopt"                 %% "scopt"                     % "3.2.0"
     "com.dongxiguo"                    %% "fastring"                  % "0.2.4"
     "com.github.seratch"               %% "ltsv4s"                    % "1.0.0"
+    "com.github.nscala-time"           %% "nscala-time"               % "1.0.0"
+    "com.github.xuwei-k"               %% "applybuilder70"            % "0.1.2"
+    "com.github.xuwei-k"               %% "nobox"                     % "0.1.9"
 
 The following projects were released against 2.11.0-RC4, with an 2.11 build hopefully following soon:
 
