@@ -216,6 +216,7 @@ This release contains all of the bug fixes and improvements made in the 2.10 ser
   * The experimental .NET backend has been removed from the compiler.
   * Scala 2.10 shipped with new implementations of the Pattern Matcher and the Bytecode Emitter. We have removed the old implementations.
   * Search and destroy mission for ~5000 chunks of dead code. [#1648](https://github.com/scala/scala/pull/1648/files)
+* [Improved support](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20and%20fixVersion%20%3E%3D%20%22Scala%202.11.0-M1%22%20and%20fixVersion%20%3C%3D%20%22Scala%202.11.0%22%20and%20resolution%20%3D%20fixed%20and%20text%20~%20%22avian%22) for [Avian](http://oss.readytalk.com/avian/), a lightweight embeddable runtime which supports proper tail calls, continuations and the creation of self-contained native binaries (useful for devices running on iOS).
 
 
 ### License clarification
