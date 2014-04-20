@@ -61,7 +61,8 @@ The following Scala projects have already been released against 2.11.0! We'd lov
     "com.github.scopt"                 %% "scopt"                     % "3.2.0"
     "com.dongxiguo"                    %% "fastring"                  % "0.2.4"
     "com.github.seratch"               %% "ltsv4s"                    % "1.0.0"
-
+    "com.sksamuel.scrimage"            %% "scrimage"                  % "1.3.20"
+    
 The following projects were released against 2.11.0-RC4, with an 2.11 build hopefully following soon:
 
     "org.scalafx"            %% "scalafx"            % "8.0.0-R4"
@@ -74,7 +75,6 @@ The following projects were released against 2.11.0-RC4, with an 2.11 build hope
     "io.argonaut"            %% "argonaut"           % "6.0.3"
     "com.clarifi"            %% "f0"                 % "1.1.1"
     "org.parboiled"          %% "parboiled-scala"    % "1.1.6"
-    "com.sksamuel.scrimage"  %% "scrimage"           % "1.3.16"
     "org.scala-stm"          %% "scala-stm"          % "0.7"
     "org.monifu"             %% "monifu"             % "0.4"
 
