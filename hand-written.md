@@ -198,12 +198,13 @@ This release contains all of the bug fixes and improvements made in the 2.10 ser
   * [#3321](https://github.com/scala/scala/pull/3321) introduced [Sprinter](http://vladimirnik.github.io/sprinter/), a new AST pretty-printing library! Very useful for tools that deal with source code.
 * Back-end
   * The [GenBCode back-end](https://github.com/scala/scala/pull/2620) (experimental in 2.11). See [@magarciaepfl's extensive documentation](http://magarciaepfl.github.io/scala/).
+  * [Scala.js](http://www.scala-js.org/), the experimental JavaScript back-end, has published a version for Scala 2.11. Note that this backend isn't included in the Scala distribution and has its own version numbering and release cycle, allowing it to evolve at its own speed.
   * A new experimental way of compiling closures, implemented by [@JamesIry](https://github.com/JamesIry). With `-Ydelambdafy:method` anonymous functions are compiled faster, with a smaller bytecode footprint. This works by keeping the function body as a private (static, if no `this` reference is needed) method of the enclosing class, and at the last moment during compilation emitting a small anonymous class that `extends FunctionN` and delegates to it. This sets the scene for a smooth migration to Java 8-style lambdas (not yet implemented).
   * Branch elimination through constant analysis [#2214](https://github.com/scala/scala/pull/2214)
 * Compiler Performance
   * Incremental compilation has been improved significantly. To try it out, upgrade to sbt 0.13.2 and add `incOptions := incOptions.value.withNameHashing(true)` to your build! Other build tools are also supported. More info at [this sbt issue](https://github.com/sbt/sbt/issues/1010) -- that's where most of the work happened. More features are planned, e.g. [class-based tracking](https://github.com/sbt/sbt/issues/1104).
   * We've been optimizing the batch compiler's performance as well, and will continue to work on this during the 2.11.x cycle.
-  * Improve performance of reflection [SI-6638](https://issues.scala-lang.org/browse/SI-6638)    
+  * Improve performance of reflection [SI-6638](https://issues.scala-lang.org/browse/SI-6638)
 * IDE
   * [Numerous bug fixes and improvements!](https://issues.scala-lang.org/browse/SI-8085?jql=component%20%3D%20%22Presentation%20Compiler%22%20AND%20project%20%3D%20SI%20AND%20resolution%20%3D%20fixed%20and%20fixVersion%20%3E%3D%20%22Scala%202.11.0-M1%22%20and%20fixVersion%20%3C%3D%20%20%22Scala%202.11.0%22%20ORDER%20BY%20updated%20DESC)
 * REPL
