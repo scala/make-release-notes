@@ -84,7 +84,7 @@ The following Scala projects have already been released against 2.11.0! We'd lov
     "org.scalatest"                    %% "scalatest"                 % "2.1.3"
     "org.scalautils"                   %% "scalautils"                % "2.1.3"
     "com.typesafe.akka"                %% "akka-actor"                % "2.3.2"
-    "com.typesafe.scala-logging"       %% "scala-logging-slf4j"       % "2.0.3"
+    "com.typesafe.scala-logging"       %% "scala-logging-slf4j"       % "2.0.4"
     "org.scala-lang.modules"           %% "scala-async"               % "0.9.1"
     "org.scalikejdbc"                  %% "scalikejdbc-interpolation" % "2.0.0-beta1"
     "com.softwaremill.scalamacrodebug" %% "macros"                    % "0.4"
