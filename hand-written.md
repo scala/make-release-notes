@@ -10,9 +10,9 @@ Things to update:
 
 We are very pleased to announce the final release of Scala 2.11.0!
 
-  - Get started with the [Hello Scala 2.11 template](https://typesafe.com/activator/template/hello-scala-2_11) in [Typesafe Activator](https://typesafe.com/platform/getstarted)
-  - Download a distribution from [scala-lang.org](http://scala-lang.org/download/2.11.0.html)
-  - Obtain it via [Maven Central](http://search.maven.org/?search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.11.0%22#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.11.0%22)
+* Get started with the [Hello Scala 2.11 template](https://typesafe.com/activator/template/hello-scala-2_11) in [Typesafe Activator](https://typesafe.com/platform/getstarted)
+* Download a distribution from [scala-lang.org](http://scala-lang.org/download/2.11.0.html)
+* Obtain it via [Maven Central](http://search.maven.org/?search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.11.0%22#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.11.0%22)
 
 There have been no code changes since RC4, just improvements to documentation and version bump to the most recent stable version of Akka actors. Here's the [difference between the release and RC4](https://github.com/scala/scala/compare/v2.11.0-RC4...v2.11.0).
 
@@ -42,18 +42,20 @@ This release contains all of the bug fixes and improvements made in the 2.10 ser
   * The [GenBCode back-end](https://github.com/scala/scala/pull/2620) (experimental in 2.11). See [@magarciaepfl's extensive documentation](http://magarciaepfl.github.io/scala/).
   * A new experimental way of compiling closures, implemented by [@JamesIry](https://github.com/JamesIry). With `-Ydelambdafy:method` anonymous functions are compiled faster, with a smaller bytecode footprint. This works by keeping the function body as a private (static, if no `this` reference is needed) method of the enclosing class, and at the last moment during compilation emitting a small anonymous class that `extends FunctionN` and delegates to it. This sets the scene for a smooth migration to Java 8-style lambdas (not yet implemented).
   * Branch elimination through constant analysis [#2214](https://github.com/scala/scala/pull/2214)
+  * [Scala.js](http://www.scala-js.org/), a separate project, provides an experimental JavaScript back-end for Scala 2.11. Note that it is not part of the standard Scala distribution.
+  * Be more [Avian](http://oss.readytalk.com/avian/)- [friendly](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20and%20fixVersion%20%3E%3D%20%22Scala%202.11.0-M1%22%20and%20fixVersion%20%3C%3D%20%22Scala%202.11.0%22%20and%20resolution%20%3D%20fixed%20and%20text%20~%20%22avian%22).
 * Compiler Performance
   * Incremental compilation has been improved significantly. To try it out, upgrade to sbt 0.13.2 and add `incOptions := incOptions.value.withNameHashing(true)` to your build! Other build tools are also supported. More info at [this sbt issue](https://github.com/sbt/sbt/issues/1010) -- that's where most of the work happened. More features are planned, e.g. [class-based tracking](https://github.com/sbt/sbt/issues/1104).
   * We've been optimizing the batch compiler's performance as well, and will continue to work on this during the 2.11.x cycle.
   * Improve performance of reflection [SI-6638](https://issues.scala-lang.org/browse/SI-6638)
-* IDE
-  * [Numerous bug fixes and improvements!](https://issues.scala-lang.org/browse/SI-8085?jql=component%20%3D%20%22Presentation%20Compiler%22%20AND%20project%20%3D%20SI%20AND%20resolution%20%3D%20fixed%20and%20fixVersion%20%3E%3D%20%22Scala%202.11.0-M1%22%20and%20fixVersion%20%3C%3D%20%20%22Scala%202.11.0%22%20ORDER%20BY%20updated%20DESC)
+* The IDE received [numerous bug fixes and improvements!](https://issues.scala-lang.org/browse/SI-8085?jql=component%20%3D%20%22Presentation%20Compiler%22%20AND%20project%20%3D%20SI%20AND%20resolution%20%3D%20fixed%20and%20fixVersion%20%3E%3D%20%22Scala%202.11.0-M1%22%20and%20fixVersion%20%3C%3D%20%20%22Scala%202.11.0%22%20ORDER%20BY%20updated%20DESC)
 * REPL
   * The bytecode decompiler command, :javap, now works with Java 7 [SI-4936](https://issues.scala-lang.org/browse/SI-4936) and has sprouted new options [SI-6894](https://issues.scala-lang.org/browse/SI-6894) (Thanks, [@som-snytt](https://github.com/som-snytt)!)
   * Added command :kind to help to tell ground types from type constructors. [#2340](https://github.com/scala/scala/pull/2340) (Thanks, [George Leontiev](https://github.com/folone) and [Eugene Yokota](https://github.com/eed3si9n)!)
   * The interpreter can now be embedded as a JSR-223 Scripting Engine [SI-874](https://issues.scala-lang.org/browse/SI-874). (Thanks, [Raphael Jolly](https://github.com/rjolly)!)
-* Warnings
-  * Warn about unused private / local terms and types, and unused imports, under `-Xlint`. This will even tell you when a local `var` could be a `val`.
+* Improved `-Xlint` warnings
+  * Warn about unused private / local terms and types, and unused imports.
+  * This will even tell you when a local `var` could be a `val`.
 * Slimming down the compiler
   * The experimental .NET backend has been removed from the compiler.
   * Scala 2.10 shipped with new implementations of the Pattern Matcher and the Bytecode Emitter. We have removed the old implementations.
@@ -63,7 +65,7 @@ The Scala team and contributors [fixed 613 bugs](https://issues.scala-lang.org/i
 
 A big thank you to everyone who's helped improve Scala by reporting bugs, improving our documentation, participating in mailing lists and other public fora, and -- of course -- submitting and reviewing pull requests! You are all awesome.
 
-Concretely, according to `git log --no-merges --oneline master --not 2.10.x --format='%aN'  | sort | uniq -c | sort -rn`, 111 people contributed code, tests, and/or documentation to Scala 2.11.x: Paul Phillips,  Jason Zaugg,  Eugene Burmako,  Adriaan Moors,  A. P. Marki,  Simon Ochsenreither,  Den Shabalin,  Miguel Garcia,  James Iry,  Iain McGinniss,  Rex Kerr,  Grzegorz Kossakowski,  Vladimir Nikolaev,  Eugene Vigdorchik,  François Garillot,  Mirco Dotta,  Rüdiger Klaehn,  Raphael Jolly,  Simon Schaefer,  Kenji Yoshida,  Paolo Giarrusso,  Luc Bourlier,  Antoine Gourlay,  Hubert Plociniczak,  Aleksandar Prokopec,  Lex Spoon,  Andrew Phillips,  Vlad Ureche,  Sébastien Doeraene,  Josh Suereth,  Jean-Remi Desjardins,  Vojin Jovanovic,  Viktor Klang,  Valerian,  Prashant Sharma,  Pavel Pavlov,  Michael Thorpe,  Jan Niehusmann,  Heejong Lee,  George Leontiev,  Daniel C. Sobral,  Christoffer Sawicki,  yllan,  rjfwhite,  Volkan Yazıcı,  Ruslan Shevchenko,  Robin Green,  Roberto Tyley,  Olivier Blanvillain,  Mark Harrah,  Lukas Rytz,  James Ward,  Iulian Dragos,  Ilya Maykov,  Eugene Yokota,  Erik Osheim,  Dan Hopkins,  Chris Hodapp,  Antonio Cunei,  Andriy Polishchuk,  Alexander Clare,  杨博,  srinivasreddy,  secwall,  nermin,  martijnhoekstra,  kurnevsky,  jinfu-leng,  folone,  Yaroslav Klymko,  Xusen Yin,  Trent Ogren,  Tobias Schlatter,  Thomas Geier,  Stuart Golodetz,  Stefan Zeiger,  Scott Carey,  Samy Dindane,  Sagie Davidovich,  Runar Bjarnason,  Roland Kuhn,  Robert Nix,  Robert Ladstätter,  Rike-Benjamin Schuppner,  Rajiv,  Philipp Haller,  Nada Amin,  Mike Morearty,  Michael Bayne,  Luke Cycon,  Lee Mighdoll,  Konstantin Fedorov,  Julio Santos,  Julien Richard-Foy,  Juha Heljoranta,  Johannes Rudolph,  Jiawei Li,  Jentsch,  Jason Swartz,  James Roper,  Heather Miller,  Havoc Pennington,  Evgeny Kotelnikov,  Dmitry Petrashko,  Dmitry Bushev,  David Hall,  Daniel Darabos,  Dan Rosen,  Cody Allen,  Carlo Dapor,  Brian McKenna,  Andrey Kutejko,  Alden Torres.
+Concretely, according to `git log --no-merges --oneline master --not 2.10.x --format='%aN'  | sort | uniq -c | sort -rn`, 112 people contributed code, tests, and/or documentation to Scala 2.11.x: Paul Phillips, Jason Zaugg, Eugene Burmako, Adriaan Moors, Den Shabalin, Simon Ochsenreither, A. P. Marki, Miguel Garcia, James Iry, Iain McGinniss, Rex Kerr, Grzegorz Kossakowski, Vladimir Nikolaev, Eugene Vigdorchik, François Garillot, Mirco Dotta, Rüdiger Klaehn, Raphael Jolly, Kenji Yoshida, Paolo Giarrusso, Antoine Gourlay, Hubert Plociniczak, Aleksandar Prokopec, Simon Schaefer, Lex Spoon, Andrew Phillips, Sébastien Doeraene, Luc Bourlier, Josh Suereth, Jean-Remi Desjardins, Vojin Jovanovic, Vlad Ureche, Viktor Klang, Valerian, Prashant Sharma, Pavel Pavlov, Michael Thorpe, Jan Niehusmann, Heejong Lee, George Leontiev, Daniel C. Sobral, Christoffer Sawicki, yllan, rjfwhite, Volkan Yazıcı, Ruslan Shevchenko, Robin Green, Olivier Blanvillain, Lukas Rytz, James Ward, Iulian Dragos, Ilya Maykov, Eugene Yokota, Erik Osheim, Dan Hopkins, Chris Hodapp, Antonio Cunei, Andriy Polishchuk, Alexander Clare, 杨博, srinivasreddy, secwall, nermin, martijnhoekstra, kurnevsky, jinfu-leng, folone, Yaroslav Klymko, Xusen Yin, Trent Ogren, Tobias Schlatter, Thomas Geier, Stuart Golodetz, Stefan Zeiger, Scott Carey, Samy Dindane, Sagie Davidovich, Runar Bjarnason, Roland Kuhn, Roberto Tyley, Robert Nix, Robert Ladstätter, Rike-Benjamin Schuppner, Rajiv, Philipp Haller, Nada Amin, Mike Morearty, Michael Bayne, Mark Harrah, Luke Cycon, Lee Mighdoll, Konstantin Fedorov, Julio Santos, Julien Richard-Foy, Juha Heljoranta, Johannes Rudolph, Jiawei Li, Jentsch, Jason Swartz, James Roper, Havoc Pennington, Evgeny Kotelnikov, Dmitry Petrashko, Dmitry Bushev, David Hall, Daniel Darabos, Dan Rosen, Cody Allen, Carlo Dapor, Brian McKenna, Andrey Kutejko, Alden Torres.
 
 Thank you all very much.
 
@@ -110,19 +112,19 @@ The following Scala projects have already been released against 2.11.0! We'd lov
     "net.databinder"                   %% "dispatch-http"             % "0.8.10"
     "net.databinder"                   %% "unfiltered"                % "0.7.1"
     "io.argonaut"                      %% "argonaut"                  % "6.0.4"
+    "org.specs2"                       %% "specs2"                    % "2.3.11"
+    "com.propensive"                   %% "rapture-core"              % "0.9.0"
+    "com.propensive"                   %% "rapture-json"              % "0.9.1"
+    "com.propensive"                   %% "rapture-io"                % "0.9.1"
+    "org.scala-stm"                    %% "scala-stm"                 % "0.7"
 
 The following projects were released against 2.11.0-RC4, with an 2.11 build hopefully following soon:
 
     "org.scalafx"            %% "scalafx"            % "8.0.0-R4"
-    "org.scalamacros"        %% "paradise"           % "2.0.0-M7"
-    "org.specs2"             %% "specs2"             % "2.3.10"
-    "com.propensive"         %% "rapture-core"       % "0.9.0"
-    "com.propensive"         %% "rapture-json"       % "0.9.1"
-    "com.propensive"         %% "rapture-io"         % "0.9.1"
     "org.scalafx"            %% "scalafx"            % "1.0.0-R8"
+    "org.scalamacros"        %% "paradise"           % "2.0.0-M7"
     "com.clarifi"            %% "f0"                 % "1.1.1"
     "org.parboiled"          %% "parboiled-scala"    % "1.1.6"
-    "org.scala-stm"          %% "scala-stm"          % "0.7"
     "org.monifu"             %% "monifu"             % "0.4"
 
 ### Cross-building with sbt 0.13
