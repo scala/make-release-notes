@@ -69,6 +69,7 @@ The following Scala projects have already been released against 2.11.0! We'd lov
     "com.github.xuwei-k"               %% "nobox"                     % "0.1.9"
     "org.typelevel"                    %% "scodec-bits"               % "1.0.0"
     "org.typelevel"                    %% "scodec-core"               % "1.0.0"
+    "com.sksamuel.scrimage"            %% "scrimage"                  % "1.3.20"
 
 The following projects were released against 2.11.0-RC4, with an 2.11 build hopefully following soon:
 
@@ -82,7 +83,6 @@ The following projects were released against 2.11.0-RC4, with an 2.11 build hope
     "io.argonaut"            %% "argonaut"           % "6.0.3"
     "com.clarifi"            %% "f0"                 % "1.1.1"
     "org.parboiled"          %% "parboiled-scala"    % "1.1.6"
-    "com.sksamuel.scrimage"  %% "scrimage"           % "1.3.16"
     "org.scala-stm"          %% "scala-stm"          % "0.7"
     "org.monifu"             %% "monifu"             % "0.4"
 
