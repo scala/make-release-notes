@@ -62,6 +62,8 @@ The following Scala projects have already been released against 2.11.0! We'd lov
     "com.dongxiguo"                    %% "fastring"                  % "0.2.4"
     "com.github.seratch"               %% "ltsv4s"                    % "1.0.0"
     "com.googlecode.kiama"             %% "kiama"                     % "1.5.3"
+    "org.scalamock"                    %% "scalamock-scalatest-support" % "3.0.1"
+    "org.scalamock"                    %% "scalamock-specs2-support"  % "3.0.1"
 
 The following projects were released against 2.11.0-RC4, with an 2.11 build hopefully following soon:
 
