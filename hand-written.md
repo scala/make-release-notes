@@ -70,6 +70,8 @@ The following Scala projects have already been released against 2.11.0! We'd lov
     "org.typelevel"                    %% "scodec-bits"               % "1.0.0"
     "org.typelevel"                    %% "scodec-core"               % "1.0.0"
     "com.sksamuel.scrimage"            %% "scrimage"                  % "1.3.20"
+    "net.databinder"                   %% "dispatch-http"             % "0.8.10"
+    "net.databinder"                   %% "unfiltered"                % "0.7.1"
 
 The following projects were released against 2.11.0-RC4, with an 2.11 build hopefully following soon:
 
