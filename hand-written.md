@@ -72,6 +72,7 @@ The following Scala projects have already been released against 2.11.0! We'd lov
     "com.sksamuel.scrimage"            %% "scrimage"                  % "1.3.20"
     "net.databinder"                   %% "dispatch-http"             % "0.8.10"
     "net.databinder"                   %% "unfiltered"                % "0.7.1"
+    "io.argonaut"                      %% "argonaut"                  % "6.0.4"
 
 The following projects were released against 2.11.0-RC4, with an 2.11 build hopefully following soon:
 
@@ -82,7 +83,6 @@ The following projects were released against 2.11.0-RC4, with an 2.11 build hope
     "com.propensive"         %% "rapture-json"       % "0.9.1"
     "com.propensive"         %% "rapture-io"         % "0.9.1"
     "org.scalafx"            %% "scalafx"            % "1.0.0-R8"
-    "io.argonaut"            %% "argonaut"           % "6.0.3"
     "com.clarifi"            %% "f0"                 % "1.1.1"
     "org.parboiled"          %% "parboiled-scala"    % "1.1.6"
     "org.scala-stm"          %% "scala-stm"          % "0.7"
