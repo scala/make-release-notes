@@ -117,14 +117,15 @@ The following Scala projects have already been released against 2.11.0! We'd lov
     "com.propensive"                   %% "rapture-json"              % "0.9.1"
     "com.propensive"                   %% "rapture-io"                % "0.9.1"
     "org.scala-stm"                    %% "scala-stm"                 % "0.7"
+    "org.parboiled"                    %% "parboiled-scala"           % "1.1.6"
+    "io.spray"                         %% "spray-json"                % "1.2.6"
+    "org.scalamacros"                   % "paradise"                  % "2.0.0" cross CrossVersion.full
 
 The following projects were released against 2.11.0-RC4, with an 2.11 build hopefully following soon:
 
     "org.scalafx"            %% "scalafx"            % "8.0.0-R4"
     "org.scalafx"            %% "scalafx"            % "1.0.0-R8"
-    "org.scalamacros"        %% "paradise"           % "2.0.0-M7"
     "com.clarifi"            %% "f0"                 % "1.1.1"
-    "org.parboiled"          %% "parboiled-scala"    % "1.1.6"
     "org.monifu"             %% "monifu"             % "0.4"
 
 ### Cross-building with sbt 0.13
