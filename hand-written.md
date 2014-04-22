@@ -117,6 +117,7 @@ The following Scala projects have already been released against 2.11.0! We'd lov
     "com.propensive"                   %% "rapture-json"              % "0.9.1"
     "com.propensive"                   %% "rapture-io"                % "0.9.1"
     "org.scala-stm"                    %% "scala-stm"                 % "0.7"
+    "com.casualmiracles"               %% "treelog"                   % "1.2.3"
 
 The following projects were released against 2.11.0-RC4, with an 2.11 build hopefully following soon:
 
