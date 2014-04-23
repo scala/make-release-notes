@@ -99,6 +99,7 @@ The following Scala projects have already been released against 2.11.0! We'd lov
     "com.qifun"                        %% "stateless-future"          % "0.1.1"
     "com.github.scopt"                 %% "scopt"                     % "3.2.0"
     "com.dongxiguo"                    %% "fastring"                  % "0.2.4"
+    "com.dongxiguo"                    %% "zero-log"                  % "0.3.5"
     "com.github.seratch"               %% "ltsv4s"                    % "1.0.0"
     "com.googlecode.kiama"             %% "kiama"                     % "1.5.3"
     "org.scalamock"                    %% "scalamock-scalatest-support" % "3.0.1"
