@@ -178,6 +178,7 @@ Finally, some notable improvements and bug fixes:
 * [SI-5917](https://issues.scala-lang.org/browse/SI-5917) Improve public AST creation facilities.
 * [SI-8063](https://issues.scala-lang.org/browse/SI-8063) Expose much needed methods in public reflection/macro API.
 * [SI-8126](https://issues.scala-lang.org/browse/SI-8126) Add -Xsource option (make 2.11 type checker behave like 2.10 where possible).
+* [SI-8157](https://issues.scala-lang.org/browse/SI-8157) Polymorphic methods also subject to restriction: only one overload may define default arguments
 
 To catch future changes like this early, you can run the compiler under -Xfuture, which makes it behave like the next major version, where possible, to alert you to upcoming breaking changes.
 
