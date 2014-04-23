@@ -121,6 +121,7 @@ The following Scala projects have already been released against 2.11.0! We'd lov
     "org.parboiled"                    %% "parboiled-scala"           % "1.1.6"
     "io.spray"                         %% "spray-json"                % "1.2.6"
     "org.scalamacros"                   % "paradise"                  % "2.0.0" cross CrossVersion.full
+    "org.scala-libs"                   %% "scalajpa"                  % "1.5"
 
 The following projects were released against 2.11.0-RC4, with an 2.11 build hopefully following soon:
 
