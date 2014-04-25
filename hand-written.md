@@ -95,6 +95,7 @@ The following Scala projects have already been released against 2.11.0! We'd lov
     "com.chuusai"                      %% "shapeless"                 % "2.0.0"
     "org.nalloc"                       %% "optional"                  % "0.1.0"
     "org.scalaz"                       %% "scalaz-core"               % "7.0.6"
+    "com.assembla.scala-incubator"     %% "graph-core"                % "1.8.1"
     "com.nocandysw"                    %% "platform-executing"        % "0.5.0"
     "com.qifun"                        %% "stateless-future"          % "0.1.1"
     "com.github.scopt"                 %% "scopt"                     % "3.2.0"
