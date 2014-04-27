@@ -125,6 +125,7 @@ The following Scala projects have already been released against 2.11.0! We'd lov
     "org.scala-libs"                   %% "scalajpa"                  % "1.5"
     "com.casualmiracles"               %% "treelog"                   % "1.2.3"
     "org.monifu"                       %% "monifu"                    % "0.6.1"
+    "org.scalaj"                       %% "scalaj-http"               % "0.3.15"
 
 The following projects were released against 2.11.0-RC4, with an 2.11 build hopefully following soon:
 
