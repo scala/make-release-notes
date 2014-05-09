@@ -128,12 +128,13 @@ The following Scala projects have already been released against 2.11.0! We'd lov
     "com.casualmiracles"               %% "treelog"                   % "1.2.3"
     "org.monifu"                       %% "monifu"                    % "0.6.1"
     "org.mongodb"                      %% "casbah"                    % "2.7.1"
+    "com.clarifi"                      %% "f0"                        % "1.1.2"
+    "org.scalaj"                       %% "scalaj-http"               % "0.3.15"
 
 The following projects were released against 2.11.0-RC4, with an 2.11 build hopefully following soon:
 
     "org.scalafx"            %% "scalafx"            % "8.0.0-R4"
     "org.scalafx"            %% "scalafx"            % "1.0.0-R8"
-    "com.clarifi"            %% "f0"                 % "1.1.1"
 
 ### Cross-building with sbt 0.13
 When cross-building between Scala versions, you often need to vary the versions of your dependencies. In particular, the new scala modules (such as scala-xml) are no longer included in scala-library, so you'll have to add an explicit dependency on it to use Scala's xml support.
