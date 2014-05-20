@@ -79,21 +79,19 @@ Please [file any bugs you encounter](https://issues.scala-lang.org/secure/Create
 Before reporting a bug, please have a look at these [known issues](https://issues.scala-lang.org/browse/SI-6267?jql=project%20%3D%20SI%20AND%20(fixVersion%20is%20empty%20or%20fixVersion%20%3E%20%22Scala%202.11.1%22)%20AND%20affectedVersion%20in%20(%22Scala%202.11.0%22%2C%20%22Scala%202.11.1%22)%20%20and%20resolution%20%3D%20unresolved%20ORDER%20BY%20priority%20DESC).
 
 ### Scala IDE for Eclipse
-The Scala IDE with this release built in will soon be available.
-<!-- 
+The Scala IDE with this release built in is [available from this update site](http://download.scala-ide.org/ecosystem/helium/e38/scala211/stable/site/) for [Eclipse 4.2/4.3 (Juno/Kepler)](http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/keplersr2). Please have a look at the [getting started guide](http://scala-ide.org/docs/user/gettingstarted.html) for more info.
 
-is [available from this update site](http://download.scala-ide.org/sdk/helium/e38/scala211/stable/site/) for [Eclipse 4.2/4.3 (Juno/Kepler)](http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/keplersr2). Please have a look at the [getting started guide](http://scala-ide.org/docs/user/gettingstarted.html) for more info.
-
--->
 
 ### Available projects
-The following Scala projects have already been released against 2.11! We'd love to include yours in this list as soon as it's available -- please submit a PR to update [these release notes](https://github.com/scala/make-release-notes/blob/master/hand-written.md).
+The following Scala projects have already been released against 2.11! See also [@jrudolph's analysis](https://gist.github.com/jrudolph/7a323f5e2820d8479b18) of the availability of 2.11 builds of popular libraries (as well as which ones are missing); updated regularly.
 
-    "org.scalacheck"                   %% "scalacheck"                % "1.11.3"
-    "org.scalatest"                    %% "scalatest"                 % "2.1.3"
+We'd love to include your release in this list as soon as it's available -- please submit a PR to update [these release notes](https://github.com/scala/make-release-notes/blob/master/hand-written.md).
+
+    "org.scalacheck"                   %% "scalacheck"                % "1.11.4"
+    "org.scalatest"                    %% "scalatest"                 % "2.1.7"
     "org.scalautils"                   %% "scalautils"                % "2.1.3"
     "com.typesafe.akka"                %% "akka-actor"                % "2.3.2"
-    "com.typesafe.scala-logging"       %% "scala-logging-slf4j"       % "2.0.4"
+    "com.typesafe.scala-logging"       %% "scala-logging-slf4j"       % "2.1.2"
     "org.scala-lang.modules"           %% "scala-async"               % "0.9.1"
     "org.scalikejdbc"                  %% "scalikejdbc-interpolation" % "2.0.0-beta1"
     "com.softwaremill.scalamacrodebug" %% "macros"                    % "0.4"
@@ -121,9 +119,10 @@ The following Scala projects have already been released against 2.11! We'd love 
     "org.typelevel"                    %% "scodec-core"               % "1.0.0"
     "com.sksamuel.scrimage"            %% "scrimage"                  % "1.3.20"
     "net.databinder"                   %% "dispatch-http"             % "0.8.10"
+    "net.databinder"                   %% "unfiltered"                % "0.8.0"
     "net.databinder"                   %% "unfiltered"                % "0.7.1"
     "io.argonaut"                      %% "argonaut"                  % "6.0.4"
-    "org.specs2"                       %% "specs2"                    % "2.3.11"
+    "org.specs2"                       %% "specs2"                    % "2.3.12"
     "com.propensive"                   %% "rapture-core"              % "0.9.0"
     "com.propensive"                   %% "rapture-json"              % "0.9.1"
     "com.propensive"                   %% "rapture-io"                % "0.9.1"
@@ -136,6 +135,10 @@ The following Scala projects have already been released against 2.11! We'd love 
     "org.mongodb"                      %% "casbah"                    % "2.7.1"
     "com.clarifi"                      %% "f0"                        % "1.1.2"
     "org.scalaj"                       %% "scalaj-http"               % "0.3.15"
+
+The following libraries are specific to the 2.11.x minor release you're using. If you depend on them, you should also cross-version fully!
+
+    "org.scalamacros"                   % "paradise"                  % "2.0.0" cross CrossVersion.full
 
 ### Cross-building with sbt 0.13
 When cross-building between Scala versions, you often need to vary the versions of your dependencies. In particular, the new scala modules (such as scala-xml) are no longer included in scala-library, so you'll have to add an explicit dependency on it to use Scala's xml support.
