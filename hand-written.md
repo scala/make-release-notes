@@ -1,26 +1,30 @@
-<!---
-NOTE: Our generator now strips triple-dash comments form the generated markdown.
-      These have been problematic for jekyll.
-Things to update:
-- replace 2.11.0-RCX-1 by previous version,
-- replace 2.11.0-RCX by actual version,
-- milestone=32 by actual milestone number
-- bug/PR counts
--->
-
-We are very pleased to announce the final release of Scala 2.11.0!
+We are very pleased to announce the release of Scala 2.11.1!
 
 * Get started with the [Hello Scala 2.11 template](https://typesafe.com/activator/template/hello-scala-2_11) in [Typesafe Activator](https://typesafe.com/platform/getstarted)
-* Download a distribution from [scala-lang.org](http://scala-lang.org/download/2.11.0.html)
-* Obtain it via [Maven Central](http://search.maven.org/?search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.11.0%22#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.11.0%22)
+* Download a distribution from [scala-lang.org](http://scala-lang.org/download/2.11.1.html)
+* Obtain it via [Maven Central](http://search.maven.org/?search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.11.1%22#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.11.1%22)
 
-There have been no code changes since RC4, just improvements to documentation and version bump to the most recent stable version of Akka actors. Here's the [difference between the release and RC4](https://github.com/scala/scala/compare/v2.11.0-RC4...v2.11.0).
+This release contains [an important fix](https://github.com/scala/scala/pull/3711) for serialization, which was broken in Scala 2.11.0 ([SI-8549](https://issues.scala-lang.org/browse/SI-8549)).
+The fix necessarily breaks serialization compatibility between 2.11.0 and 2.11.1 (this is separate from binary compatibility, which is maintained).
 
-Code that compiled on 2.10.x without deprecation warnings should compile on 2.11.x (we do not guarantee this for experimental APIs, such as reflection). If not, [please file a regression](https://issues.scala-lang.org/secure/CreateIssueDetails!init.jspa?pid=10005&issuetype=1&versions=11311&labels=regression). We are working with the community to ensure availability of the core projects of the Scala 2.11.x eco-system, please see below for a list. This release is *not* binary compatible with the 2.10.x series, to allow us to keep improving the Scala standard library.
+Users of distributed systems that rely on serialization to exchange objects (such as akka) should upgrade to Scala 2.11.1 (and akka 2.3.3) immediately.
+We also strongly recommend that libraries that themselves declare classes with [@SerialVersionUID](http://www.scala-lang.org/api/2.11.1/index.html#scala.SerialVersionUID) annotations release a new version and ask their Scala 2.11 users to upgrade.
+
+We apologize for the breakage. We have included a new suite of tests that will ensure stability of serialization for the remainder of the 2.11.x series.
 
 <!--break-->
 
-The Scala 2.11.x series targets Java 6, with (evolving) experimental support for Java 8. In 2.11.0, Java 8 support is mostly limited to reading Java 8 bytecode and parsing Java 8 source. Stay tuned for more complete (experimental) Java 8 support.
+Compared to 2.11.0, this release fixes [26 issues](https://issues.scala-lang.org/browse/SI-8549?jql=project%20%3D%20SI%20AND%20fixVersion%20%3D%20%22Scala%202.11.1%22%20AND%20resolution%20%3D%20fixed%20ORDER%20BY%20priority%20DESC). We reviewed and merged [51 pull requests](https://github.com/scala/scala/issues?milestone=34&state=closed).
+
+The next minor Scala 2.11 release will be available in at most 2 months, or sooner if prompted by a serious issue.
+
+The remainder of these release notes summarizes the 2.11.x series, and as such is not specific to this minor release.
+
+### Upgrading
+Code that compiled on 2.10.x without deprecation warnings should compile on 2.11.x (we do not guarantee this for experimental APIs, such as reflection). If not, [please file a regression](https://issues.scala-lang.org/secure/CreateIssueDetails!init.jspa?pid=10005&issuetype=1&versions=11808&labels=regression). We are working with the community to ensure availability of the core projects of the Scala 2.11.x eco-system, please see below for a list. This release is *not* binary compatible with the 2.10.x series, to allow us to keep improving the Scala standard library.
+
+### Required Java Version
+The Scala 2.11.x series targets Java 6, with (evolving) experimental support for Java 8. In 2.11.1, Java 8 support is mostly limited to reading Java 8 bytecode and parsing Java 8 source. Stay tuned for more complete (experimental) Java 8 support. The next major release, 2.12, will most likely target Java 8 by default.
 
 ### New features in the 2.11 series
 This release contains all of the bug fixes and improvements made in the 2.10 series, as well as:
@@ -32,7 +36,7 @@ This release contains all of the bug fixes and improvements made in the 2.10 ser
   * `List` has improved performance on `map`, `flatMap`, and `collect`.
   * See also Deprecation above: we have slated many classes and methods to become final, to clarify which classes are not meant to be subclassed and to facilitate future maintenance and performance improvements.
 * Modularization
-  * The core Scala standard library jar has shed 20% of its bytecode. The modules for xml, parsing, swing as well as the (unsupported) continuations plugin and library are available individually or via [scala-library-all](http://search.maven.org/#artifactdetails%7Corg.scala-lang%7Cscala-library-all%7C2.11.0%7Cpom). Note that this artifact has weaker binary compatibility guarantees than `scala-library` -- as explained above.
+  * The core Scala standard library jar has shed 20% of its bytecode. The modules for xml, parsing, swing as well as the (unsupported) continuations plugin and library are available individually or via [scala-library-all](http://search.maven.org/#artifactdetails%7Corg.scala-lang%7Cscala-library-all%7C2.11.1%7Cpom). Note that this artifact has weaker binary compatibility guarantees than `scala-library` -- as explained above.
   * The compiler has been modularized internally, to separate the presentation compiler, scaladoc and the REPL. We hope this will make it easier to contribute. In this release, all of these modules are still packaged in scala-compiler.jar. We plan to ship them in separate JARs in 2.12.x.
 * Reflection, macros and quasiquotes
   * Please see [this detailed changelog](http://docs.scala-lang.org/overviews/macros/changelog211.html) that lists all significant changes and provides advice on forward and backward compatibility.
@@ -43,12 +47,12 @@ This release contains all of the bug fixes and improvements made in the 2.10 ser
   * A new experimental way of compiling closures, implemented by [@JamesIry](https://github.com/JamesIry). With `-Ydelambdafy:method` anonymous functions are compiled faster, with a smaller bytecode footprint. This works by keeping the function body as a private (static, if no `this` reference is needed) method of the enclosing class, and at the last moment during compilation emitting a small anonymous class that `extends FunctionN` and delegates to it. This sets the scene for a smooth migration to Java 8-style lambdas (not yet implemented).
   * Branch elimination through constant analysis [#2214](https://github.com/scala/scala/pull/2214)
   * [Scala.js](http://www.scala-js.org/), a separate project, provides an experimental JavaScript back-end for Scala 2.11. Note that it is not part of the standard Scala distribution.
-  * Be more [Avian](http://oss.readytalk.com/avian/)- [friendly](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20and%20fixVersion%20%3E%3D%20%22Scala%202.11.0-M1%22%20and%20fixVersion%20%3C%3D%20%22Scala%202.11.0%22%20and%20resolution%20%3D%20fixed%20and%20text%20~%20%22avian%22).
+  * Be more [Avian](http://oss.readytalk.com/avian/)- [friendly](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20and%20fixVersion%20%3E%3D%20%22Scala%202.11.0-M1%22%20and%20fixVersion%20%3C%3D%20%22Scala%202.11.1%22%20and%20resolution%20%3D%20fixed%20and%20text%20~%20%22avian%22).
 * Compiler Performance
   * Incremental compilation has been improved significantly. To try it out, upgrade to sbt 0.13.2 and add `incOptions := incOptions.value.withNameHashing(true)` to your build! Other build tools are also supported. More info at [this sbt issue](https://github.com/sbt/sbt/issues/1010) -- that's where most of the work happened. More features are planned, e.g. [class-based tracking](https://github.com/sbt/sbt/issues/1104).
   * We've been optimizing the batch compiler's performance as well, and will continue to work on this during the 2.11.x cycle.
   * Improve performance of reflection [SI-6638](https://issues.scala-lang.org/browse/SI-6638)
-* The IDE received [numerous bug fixes and improvements!](https://issues.scala-lang.org/browse/SI-8085?jql=component%20%3D%20%22Presentation%20Compiler%22%20AND%20project%20%3D%20SI%20AND%20resolution%20%3D%20fixed%20and%20fixVersion%20%3E%3D%20%22Scala%202.11.0-M1%22%20and%20fixVersion%20%3C%3D%20%20%22Scala%202.11.0%22%20ORDER%20BY%20updated%20DESC)
+* The IDE received [numerous bug fixes and improvements!](https://issues.scala-lang.org/browse/SI-8085?jql=component%20%3D%20%22Presentation%20Compiler%22%20AND%20project%20%3D%20SI%20AND%20resolution%20%3D%20fixed%20and%20fixVersion%20%3E%3D%20%22Scala%202.11.0-M1%22%20and%20fixVersion%20%3C%3D%20%20%22Scala%202.11.1%22%20ORDER%20BY%20updated%20DESC)
 * REPL
   * The bytecode decompiler command, :javap, now works with Java 7 [SI-4936](https://issues.scala-lang.org/browse/SI-4936) and has sprouted new options [SI-6894](https://issues.scala-lang.org/browse/SI-6894) (Thanks, [@som-snytt](https://github.com/som-snytt)!)
   * Added command :kind to help to tell ground types from type constructors. [#2340](https://github.com/scala/scala/pull/2340) (Thanks, [George Leontiev](https://github.com/folone) and [Eugene Yokota](https://github.com/eed3si9n)!)
@@ -61,11 +65,11 @@ This release contains all of the bug fixes and improvements made in the 2.10 ser
   * Scala 2.10 shipped with new implementations of the Pattern Matcher and the Bytecode Emitter. We have removed the old implementations.
   * Search and destroy mission for ~5000 chunks of dead code. [#1648](https://github.com/scala/scala/pull/1648/files)
 
-The Scala team and contributors [fixed 613 bugs](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20and%20fixVersion%20>%3D%20"Scala%202.11.0-M1"%20and%20fixVersion%20<%3D%20"Scala%202.11.0"%20and%20resolution%20%3D%20fixed) that are exclusive to Scala 2.11.0! We also backported as many as possible. With the release of 2.11, 2.10 backports will be dialed back.
+The Scala team and contributors [fixed 655 bugs](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20and%20fixVersion%20>%3D%20"Scala%202.11.0-M1"%20and%20fixVersion%20<%3D%20"Scala%202.11.1"%20and%20resolution%20%3D%20fixed) that are exclusive to Scala 2.11! We also backported as many as possible. With the release of 2.11, 2.10 backports will be dialed back.
 
 A big thank you to everyone who's helped improve Scala by reporting bugs, improving our documentation, participating in mailing lists and other public fora, and -- of course -- submitting and reviewing pull requests! You are all awesome.
 
-Concretely, according to `git log --no-merges --oneline master --not 2.10.x --format='%aN'  | sort | uniq -c | sort -rn`, 112 people contributed code, tests, and/or documentation to Scala 2.11.x: Paul Phillips, Jason Zaugg, Eugene Burmako, Adriaan Moors, Den Shabalin, Simon Ochsenreither, A. P. Marki, Miguel Garcia, James Iry, Iain McGinniss, Rex Kerr, Grzegorz Kossakowski, Vladimir Nikolaev, Eugene Vigdorchik, François Garillot, Mirco Dotta, Rüdiger Klaehn, Raphael Jolly, Kenji Yoshida, Paolo Giarrusso, Antoine Gourlay, Hubert Plociniczak, Aleksandar Prokopec, Simon Schaefer, Lex Spoon, Andrew Phillips, Sébastien Doeraene, Luc Bourlier, Josh Suereth, Jean-Remi Desjardins, Vojin Jovanovic, Vlad Ureche, Viktor Klang, Valerian, Prashant Sharma, Pavel Pavlov, Michael Thorpe, Jan Niehusmann, Heejong Lee, George Leontiev, Daniel C. Sobral, Christoffer Sawicki, yllan, rjfwhite, Volkan Yazıcı, Ruslan Shevchenko, Robin Green, Olivier Blanvillain, Lukas Rytz, James Ward, Iulian Dragos, Ilya Maykov, Eugene Yokota, Erik Osheim, Dan Hopkins, Chris Hodapp, Antonio Cunei, Andriy Polishchuk, Alexander Clare, 杨博, srinivasreddy, secwall, nermin, martijnhoekstra, kurnevsky, jinfu-leng, folone, Yaroslav Klymko, Xusen Yin, Trent Ogren, Tobias Schlatter, Thomas Geier, Stuart Golodetz, Stefan Zeiger, Scott Carey, Samy Dindane, Sagie Davidovich, Runar Bjarnason, Roland Kuhn, Roberto Tyley, Robert Nix, Robert Ladstätter, Rike-Benjamin Schuppner, Rajiv, Philipp Haller, Nada Amin, Mike Morearty, Michael Bayne, Mark Harrah, Luke Cycon, Lee Mighdoll, Konstantin Fedorov, Julio Santos, Julien Richard-Foy, Juha Heljoranta, Johannes Rudolph, Jiawei Li, Jentsch, Jason Swartz, James Roper, Havoc Pennington, Evgeny Kotelnikov, Dmitry Petrashko, Dmitry Bushev, David Hall, Daniel Darabos, Dan Rosen, Cody Allen, Carlo Dapor, Brian McKenna, Andrey Kutejko, Alden Torres.
+Concretely, according to `git log --no-merges --oneline 2.11.x --not 2.10.x --format='%aN'  | sort | uniq -c | sort -rn`, 115 people contributed code, tests, and/or documentation to Scala 2.11.x: Paul Phillips, Jason Zaugg, Eugene Burmako, Adriaan Moors, A. P. Marki, Simon Ochsenreither, Den Shabalin, Miguel Garcia, James Iry, Iain McGinniss, Grzegorz Kossakowski, Rex Kerr, François Garillot, Vladimir Nikolaev, Eugene Vigdorchik, Lukas Rytz, Mirco Dotta, Rüdiger Klaehn, Antoine Gourlay, Raphael Jolly, Simon Schaefer, Kenji Yoshida, Paolo Giarrusso, Luc Bourlier, Hubert Plociniczak, Aleksandar Prokopec, Vlad Ureche, Lex Spoon, Andrew Phillips, Sébastien Doeraene, Josh Suereth, Jean-Remi Desjardins, Vojin Jovanovic, Viktor Klang, Valerian, Prashant Sharma, Pavel Pavlov, Michael Thorpe, Jan Niehusmann, Iulian Dragos, Heejong Lee, George Leontiev, Daniel C. Sobral, Christoffer Sawicki, yllan, rjfwhite, Volkan Yazıcı, Ruslan Shevchenko, Robin Green, Roberto Tyley, Olivier Blanvillain, Mark Harrah, James Ward, Ilya Maykov, Eugene Yokota, Erik Osheim, Dan Hopkins, Chris Hodapp, Antonio Cunei, Andriy Polishchuk, Alexander Clare, 杨博, srinivasreddy, secwall, nermin, martijnhoekstra, kurnevsky, jinfu-leng, folone, Yaroslav Klymko, Xusen Yin, Trent Ogren, Tobias Schlatter, Thomas Geier, Stuart Golodetz, Stefan Zeiger, Scott Carey, Samy Dindane, Sagie Davidovich, Runar Bjarnason, Roland Kuhn, Robert Nix, Robert Ladstätter, Rike-Benjamin Schuppner, Rajiv, Philipp Haller, Nada Amin, Mike Morearty, Michael Bayne, Marcin Kubala, Luke Cycon, Lee Mighdoll, Konstantin Fedorov, Julio Santos, Julien Richard-Foy, Juha Heljoranta, Johannes Rudolph, Jiawei Li, Jentsch, Jason Swartz, James Roper, Heather Miller, Havoc Pennington, Guillaume Martres, Evgeny Kotelnikov, Dmitry Petrashko, Dmitry Bushev, David Hall, Daniel Darabos, Dan Rosen, Cody Allen, Carlo Dapor, Brian McKenna, Andrey Kutejko, Alden Torres.
 
 Thank you all very much.
 
@@ -74,19 +78,22 @@ If you find any errors or omissions in these relates notes, [please submit a PR]
 ### Reporting Bugs / Known Issues
 Please [file any bugs you encounter](https://issues.scala-lang.org/secure/CreateIssueDetails!init.jspa?pid=10005&issuetype=1&versions=11311). If you're unsure whether something is a bug, please contact the [scala-user](https://groups.google.com/forum/?fromgroups#!forum/scala-user) mailing list.
 
-Before reporting a bug, please have a look at these [known issues](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20fixVersion%20%21%3D%20%22Scala%202.11.0-RC3%22%20AND%20affectedVersion%20%3D%20%22Scala%202.11.0%22%20%20and%20resolution%20%3D%20unresolved%20ORDER%20BY%20priority%20DESC).
+Before reporting a bug, please have a look at these [known issues](https://issues.scala-lang.org/browse/SI-6267?jql=project%20%3D%20SI%20AND%20(fixVersion%20is%20empty%20or%20fixVersion%20%3E%20%22Scala%202.11.1%22)%20AND%20affectedVersion%20in%20(%22Scala%202.11.0%22%2C%20%22Scala%202.11.1%22)%20%20and%20resolution%20%3D%20unresolved%20ORDER%20BY%20priority%20DESC).
 
 ### Scala IDE for Eclipse
-The Scala IDE with this release built in is [available from this update site](http://download.scala-ide.org/sdk/helium/e38/scala211/stable/site/) for [Eclipse 4.2/4.3 (Juno/Kepler)](http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/keplersr2). Please have a look at the [getting started guide](http://scala-ide.org/docs/user/gettingstarted.html) for more info.
+The Scala IDE with this release built in is [available from this update site](http://download.scala-ide.org/ecosystem/helium/e38/scala211/stable/site/) for [Eclipse 4.2/4.3 (Juno/Kepler)](http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/keplersr2). Please have a look at the [getting started guide](http://scala-ide.org/docs/user/gettingstarted.html) for more info.
+
 
 ### Available projects
-The following Scala projects have already been released against 2.11.0! We'd love to include yours in this list as soon as it's available -- please submit a PR to update [these release notes](https://github.com/scala/make-release-notes/blob/master/hand-written.md).
+The following Scala projects have already been released against 2.11! See also [@jrudolph's analysis](https://gist.github.com/jrudolph/7a323f5e2820d8479b18) of the availability of 2.11 builds of popular libraries (as well as which ones are missing); updated regularly.
 
-    "org.scalacheck"                   %% "scalacheck"                % "1.11.3"
-    "org.scalatest"                    %% "scalatest"                 % "2.1.3"
+We'd love to include your release in this list as soon as it's available -- please submit a PR to update [these release notes](https://github.com/scala/make-release-notes/blob/master/hand-written.md).
+
+    "org.scalacheck"                   %% "scalacheck"                % "1.11.4"
+    "org.scalatest"                    %% "scalatest"                 % "2.1.7"
     "org.scalautils"                   %% "scalautils"                % "2.1.3"
     "com.typesafe.akka"                %% "akka-actor"                % "2.3.2"
-    "com.typesafe.scala-logging"       %% "scala-logging-slf4j"       % "2.0.4"
+    "com.typesafe.scala-logging"       %% "scala-logging-slf4j"       % "2.1.2"
     "org.scala-lang.modules"           %% "scala-async"               % "0.9.1"
     "org.scalikejdbc"                  %% "scalikejdbc-interpolation" % "2.0.0-beta1"
     "com.softwaremill.scalamacrodebug" %% "macros"                    % "0.4"
@@ -114,16 +121,16 @@ The following Scala projects have already been released against 2.11.0! We'd lov
     "org.typelevel"                    %% "scodec-core"               % "1.0.0"
     "com.sksamuel.scrimage"            %% "scrimage"                  % "1.3.20"
     "net.databinder"                   %% "dispatch-http"             % "0.8.10"
+    "net.databinder"                   %% "unfiltered"                % "0.8.0"
     "net.databinder"                   %% "unfiltered"                % "0.7.1"
     "io.argonaut"                      %% "argonaut"                  % "6.0.4"
-    "org.specs2"                       %% "specs2"                    % "2.3.11"
+    "org.specs2"                       %% "specs2"                    % "2.3.12"
     "com.propensive"                   %% "rapture-core"              % "0.9.0"
     "com.propensive"                   %% "rapture-json"              % "0.9.1"
     "com.propensive"                   %% "rapture-io"                % "0.9.1"
     "org.scala-stm"                    %% "scala-stm"                 % "0.7"
     "org.parboiled"                    %% "parboiled-scala"           % "1.1.6"
     "io.spray"                         %% "spray-json"                % "1.2.6"
-    "org.scalamacros"                   % "paradise"                  % "2.0.0" cross CrossVersion.full
     "org.scala-libs"                   %% "scalajpa"                  % "1.5"
     "com.casualmiracles"               %% "treelog"                   % "1.2.3"
     "org.monifu"                       %% "monifu"                    % "0.6.1"
@@ -131,19 +138,18 @@ The following Scala projects have already been released against 2.11.0! We'd lov
     "com.clarifi"                      %% "f0"                        % "1.1.2"
     "org.scalaj"                       %% "scalaj-http"               % "0.3.15"
 
-The following projects were released against 2.11.0-RC4, with an 2.11 build hopefully following soon:
+The following libraries are specific to the 2.11.x minor release you're using. If you depend on them, you should also cross-version fully!
 
-    "org.scalafx"            %% "scalafx"            % "8.0.0-R4"
-    "org.scalafx"            %% "scalafx"            % "1.0.0-R8"
+    "org.scalamacros"                   % "paradise"                  % "2.0.0" cross CrossVersion.full
 
 ### Cross-building with sbt 0.13
 When cross-building between Scala versions, you often need to vary the versions of your dependencies. In particular, the new scala modules (such as scala-xml) are no longer included in scala-library, so you'll have to add an explicit dependency on it to use Scala's xml support.
 
 Here's how we recommend handling this in sbt 0.13. For the full build and Maven build, see [example](https://github.com/scala/scala-module-dependency-sample).
 
-    scalaVersion        := "2.11.0"
+    scalaVersion        := "2.11.1"
 
-    crossScalaVersions  := Seq("2.11.0", "2.10.3")
+    crossScalaVersions  := Seq("2.11.1", "2.10.3")
 
     // add scala-xml dependency when needed (for Scala 2.11 and newer)
     // this mechanism supports cross-version publishing
@@ -173,6 +179,7 @@ The following changes were made after a deprecation cycle (Thank you, [@soc](htt
 
 Finally, some notable improvements and bug fixes:
 
+* [SI-8549](https://issues.scala-lang.org/browse/SI-8549) Fix bad regression: no `serialVersionUID` field for classes annotated with [@SerialVersionUID](http://www.scala-lang.org/api/2.11.1/index.html#scala.SerialVersionUID). The Scala standard library itself was a victim of this bug. As such, collections serialized in 2.11.0 will not be able to be deserialized in 2.11.1. This regression occurred in a failed [attempt](https://github.com/scala/scala/pull/1673) to fix a related bug in 2.10.x, [SI-6988](https://issues.scala-lang.org/browse/SI-6988), whereby classes annotated with non literal UIDS, e.g. `0L - 123L`, had no field generated. 
 * [SI-7296](https://issues.scala-lang.org/browse/SI-7296) Case classes with > 22 parameters are now allowed.
 * [SI-3346](https://issues.scala-lang.org/browse/SI-3346) Implicit arguments of implicit conversions now guide type inference.
 * [SI-6240](https://issues.scala-lang.org/browse/SI-6240) Thread safety of reflection API.
@@ -236,7 +243,7 @@ Just like the 2.10.x series, we guarantee forwards and backwards compatibility o
 
 Note that we will only enforce *backwards* binary compatibility for the new modules (artifacts under the groupId `org.scala-lang.modules`). As they are opt-in, it's less of a burden to require having the latest version on the classpath. (Without forward compatibility, the latest version of the artifact must be on the run-time classpath to avoid linkage errors.)
 
-Finally, Scala 2.11.0 introduces `scala-library-all` to aggregate the modules that constitute a Scala release. Note that this means it does not provide forward binary compatibility, whereas the core `scala-library` artifact does. We consider the versions of the modules that `"scala-library-all" % "2.11.x"` depends on to be the canonical ones, that are part of the official Scala distribution. (The distribution itself is defined by the new `scala-dist` maven artifact.)
+Finally, Scala 2.11 introduces `scala-library-all` to aggregate the modules that constitute a Scala release. Note that this means it does not provide forward binary compatibility, whereas the core `scala-library` artifact does. We consider the versions of the modules that `"scala-library-all" % "2.11.x"` depends on to be the canonical ones, that are part of the official Scala distribution. (The distribution itself is defined by the new `scala-dist` maven artifact.)
 
 ### License clarification
 Scala is now distributed under the standard 3-clause BSD license. Originally, the same 3-clause BSD license was adopted, but slightly reworded over the years, and the "Scala License" was born. We're now back to the standard formulation to avoid confusion.
