@@ -14,9 +14,11 @@ We apologize for the breakage. We have included a new suite of tests that will e
 
 <!--break-->
 
-This release fixes [26 issues](https://issues.scala-lang.org/browse/SI-8549?jql=project%20%3D%20SI%20AND%20fixVersion%20%3D%20%22Scala%202.11.1%22%20AND%20resolution%20%3D%20fixed%20ORDER%20BY%20priority%20DESC). We reviewed and merged [51 pull requests](https://github.com/scala/scala/issues?milestone=34&state=closed).
+Compared to 2.11.0, this release fixes [26 issues](https://issues.scala-lang.org/browse/SI-8549?jql=project%20%3D%20SI%20AND%20fixVersion%20%3D%20%22Scala%202.11.1%22%20AND%20resolution%20%3D%20fixed%20ORDER%20BY%20priority%20DESC). We reviewed and merged [51 pull requests](https://github.com/scala/scala/issues?milestone=34&state=closed).
 
 The next minor Scala 2.11 release will be available in at most 2 months, or sooner if prompted by a serious issue.
+
+The remainder of these release notes summarizes the 2.11.x series, and as such is not specific to this minor release.
 
 ### Upgrading
 Code that compiled on 2.10.x without deprecation warnings should compile on 2.11.x (we do not guarantee this for experimental APIs, such as reflection). If not, [please file a regression](https://issues.scala-lang.org/secure/CreateIssueDetails!init.jspa?pid=10005&issuetype=1&versions=11808&labels=regression). We are working with the community to ensure availability of the core projects of the Scala 2.11.x eco-system, please see below for a list. This release is *not* binary compatible with the 2.10.x series, to allow us to keep improving the Scala standard library.
