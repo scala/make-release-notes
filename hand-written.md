@@ -8,7 +8,7 @@ This release contains [an important fix](https://github.com/scala/scala/pull/371
 The fix necessarily breaks serialization compatibility between 2.11.0 and 2.11.1 (this is separate from binary compatibility, which is maintained).
 
 Users of distributed systems that rely on serialization to exchange objects (such as akka) should upgrade to Scala 2.11.1 (and akka 2.3.3) immediately.
-We also strongly recommend that libraries that themselves declare classes with [@SerialVersionUID](http://www.scala-lang.org/api/2.11.0/index.html#scala.SerialVersionUID) annotations release a new version and ask their Scala 2.11 users to upgrade.
+We also strongly recommend that libraries that themselves declare classes with [@SerialVersionUID](http://www.scala-lang.org/api/2.11.1/index.html#scala.SerialVersionUID) annotations release a new version and ask their Scala 2.11 users to upgrade.
 
 We apologize for the breakage. We have included a new suite of tests that will ensure stability of serialization for the remainder of the 2.11.x series.
 
@@ -177,7 +177,7 @@ The following changes were made after a deprecation cycle (Thank you, [@soc](htt
 
 Finally, some notable improvements and bug fixes:
 
-* [SI-8549](https://issues.scala-lang.org/browse/SI-8549) Fix bad regression: no `serialVersionUID` field for classes annotated with [@SerialVersionUID](http://www.scala-lang.org/api/2.11.0/index.html#scala.SerialVersionUID). The Scala standard library itself was a victim of this bug. As such, collections serialized in 2.11.0 will not be able to be deserialized in 2.11.1. This regression occurred in a failed [attempt](https://github.com/scala/scala/pull/1673) to fix a related bug in 2.10.x, [SI-6988](https://issues.scala-lang.org/browse/SI-6988), whereby classes annotated with non literal UIDS, e.g. `0L - 123L`, had no field generated. 
+* [SI-8549](https://issues.scala-lang.org/browse/SI-8549) Fix bad regression: no `serialVersionUID` field for classes annotated with [@SerialVersionUID](http://www.scala-lang.org/api/2.11.1/index.html#scala.SerialVersionUID). The Scala standard library itself was a victim of this bug. As such, collections serialized in 2.11.0 will not be able to be deserialized in 2.11.1. This regression occurred in a failed [attempt](https://github.com/scala/scala/pull/1673) to fix a related bug in 2.10.x, [SI-6988](https://issues.scala-lang.org/browse/SI-6988), whereby classes annotated with non literal UIDS, e.g. `0L - 123L`, had no field generated. 
 * [SI-7296](https://issues.scala-lang.org/browse/SI-7296) Case classes with > 22 parameters are now allowed.
 * [SI-3346](https://issues.scala-lang.org/browse/SI-3346) Implicit arguments of implicit conversions now guide type inference.
 * [SI-6240](https://issues.scala-lang.org/browse/SI-6240) Thread safety of reflection API.
