@@ -16,11 +16,9 @@ Compared to 2.11.1, this release resolves [49 issues](https://issues.scala-lang.
 
 The next minor Scala 2.11 release will be available in 2 months, or sooner if prompted by a serious issue.
 
-### Available Libraries
+### Available Libraries and Frameworks
 
-A large number of Scala projects have been released against Scala 2.11.
-[@jrudolph](https://github.com/jrudolph) is maintaining a list of [library versions for Scala 2.11](https://gist.github.com/jrudolph/7a323f5e2820d8479b18).
-You may also want to check out the [Awesome Scala](https://github.com/lauris/awesome-scala) list of libraries and frameworks maintained by [@lauris](https://github.com/lauris).
+A large number of Scala projects have been released against Scala 2.11. Please refer to the list of [libraries and frameworks available for Scala 2.11](https://github.com/scala/make-release-notes/blob/2.11.x/projects-2.11.md).
 
 A release of the Scala IDE that includes Scala 2.11.2 is available [on their download site](http://scala-ide.org/download/sdk.html).
 
