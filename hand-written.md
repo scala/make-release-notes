@@ -34,5 +34,5 @@ The release notes for the Scala 2.11 series, which also apply to the current min
 A big thank you to everyone who's helped improve Scala by reporting bugs, improving our documentation, participating in mailing lists and other public fora, and submitting and reviewing pull requests!
 You are all awesome.
 
-According to `git log --no-merges --oneline v2.11.2 --not v2.11.1 --format='%aN' | sort | uniq -c | sort -rn`, 21 people contributed code to this minor release:
-Jason Zaugg, A. P. Marki, Lukas Rytz, Adriaan Moors, Rex Kerr, Eugene Burmako, Antoine Gourlay, Tobias Roeser, Philipp Haller, Denys Shabalin, Todd Vierling, Chris Hodapp, Vladimir Nikolaev, Stephen Compall, Rui Gonçalves, Paolo Giarrusso, Martin Odersky, Marcin Kubala, Johannes Rudolph, Jean-Remi Desjardins, François Garillot.
+According to `git shortlog -sn --no-merges v2.11.1..v2.11.2`, 21 people contributed code to this minor release:
+Jason Zaugg, A. P. Marki, Lukas Rytz, Adriaan Moors, Rex Kerr, Eugene Burmako, Antoine Gourlay, Tobias Roeser, Denys Shabalin, Philipp Haller, Chris Hodapp, Todd Vierling, Vladimir Nikolaev, François Garillot, Jean-Remi Desjardins, Johannes Rudolph, Marcin Kubala, Martin Odersky, Paolo Giarrusso, Rui Gonçalves, Stephen Compall.
