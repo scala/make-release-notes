@@ -55,14 +55,14 @@ class MakeDownloadPage(version: String, releaseDate: Date = new Date()) {
 
   def resources: String = Await.result(
     Future.sequence(Seq(
-        resourceArchive(unixClass,       "scala",                "tgz", "Max OS X, Unix, Cygwin"   ),
-        resourceArchive(windowsClass,    "scala",                "msi", "Windows (msi installer)"  ),
-        resourceArchive(defaultClass,    "scala",                "zip", "Windows"                  ),
-        resourceArchive(defaultClass,    "scala",                "deb", "Debian"                   ),
-        resourceArchive(defaultClass,    "scala",                "rpm", "RPM package"              ),
-        resourceArchive(defaultClass,    "scala-docs",           "txz", "API docs"                 ),
-        resourceArchive(defaultClass,    "scala-docs",           "zip", "API docs"                 ),
-        resource       (defaultClass,    s"scala-sources-$version.zip", "sources", ghSourceUrl     )
+        resourceArchive(unixClass,       "scala",                "tgz",    "Max OS X, Unix, Cygwin"   ),
+        resourceArchive(windowsClass,    "scala",                "msi",    "Windows (msi installer)"  ),
+        resourceArchive(defaultClass,    "scala",                "zip",    "Windows"                  ),
+        resourceArchive(defaultClass,    "scala",                "deb",    "Debian"                   ),
+        resourceArchive(defaultClass,    "scala",                "rpm",    "RPM package"              ),
+        resourceArchive(defaultClass,    "scala-docs",           "txz",    "API docs"                 ),
+        resourceArchive(defaultClass,    "scala-docs",           "zip",    "API docs"                 ),
+        resource       (defaultClass,    s"scala-sources-$version.tar.gz", "Sources", ghSourceUrl     )
       )).map(_.mkString(",\n  ")), 30 seconds)
 
   // note: first and last lines must be exactly "---"
