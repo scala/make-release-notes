@@ -9,7 +9,7 @@ We'd love to include your release in this list as soon as it's available -- plea
     "org.scalacheck"                   %% "scalacheck"                % "1.11.4"
     "org.scalatest"                    %% "scalatest"                 % "2.1.7"
     "org.scalautils"                   %% "scalautils"                % "2.1.3"
-    "com.typesafe.akka"                %% "akka-actor"                % "2.3.2"
+    "com.typesafe.akka"                %% "akka-actor"                % "2.3.4"
     "com.typesafe.scala-logging"       %% "scala-logging-slf4j"       % "2.1.2"
     "org.scala-lang.modules"           %% "scala-async"               % "0.9.1"
     "org.scalikejdbc"                  %% "scalikejdbc-interpolation" % "2.0.0-beta1"
