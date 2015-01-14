@@ -8,7 +8,7 @@ object MakeReleaseNotes {
   def genPR(prevVersion: String, version: String, release: String, gitDir: String = s"${sys.env("HOME")}/git/scala") = {
     val date = new java.util.Date(release)
     new MakeDownloadPage(version, date).write()
-    MakeReleaseNotes(new java.io.File(gitDir), s"v$prevVersion", s"v$version", MarkDown, date)
+    MakeReleaseNotes(new java.io.File(gitDir), version, s"v$prevVersion", s"v$version", MarkDown, date)
   }
 
   def write(page: String, version: String, releaseDate: Date, ext: String) = {
@@ -28,15 +28,15 @@ object MakeReleaseNotes {
     }
   }
 
-  def apply(scalaDir: String, previousTag: String, currentTag: String, releaseDate: Date) {
-    Seq(Html, MarkDown).foreach(fmt => apply(new java.io.File(scalaDir), previousTag, currentTag, fmt, releaseDate))
+  def apply(scalaDir: String, version: String, previousTag: String, currentTag: String, releaseDate: Date) {
+    Seq(Html, MarkDown).foreach(fmt => apply(new java.io.File(scalaDir), version, previousTag, currentTag, fmt, releaseDate))
   }
-  def apply(scalaDir: java.io.File, previousTag: String, currentTag: String, targetLanguage: TargetLanguage = MarkDown, releaseDate: Date = new Date()): Unit = {
+  def apply(scalaDir: java.io.File, version: String, previousTag: String, currentTag: String, targetLanguage: TargetLanguage = MarkDown, releaseDate: Date = new Date()): Unit = {
     val out = targetLanguage match {
       case Html => new java.io.File("release-notes.html")
       case MarkDown => new java.io.File(s"release-notes-${currentTag}.md")
     }
-    val notes = makeReleaseNotes(scalaDir, previousTag, currentTag)(targetLanguage)
+    val notes = makeReleaseNotes(scalaDir, version, previousTag, currentTag)(targetLanguage)
     write(notes, currentTag.dropWhile(_ == 'v'), releaseDate, targetLanguage.ext)
   }
 
@@ -62,7 +62,7 @@ object MakeReleaseNotes {
   private def stripTripleDashedHtmlComments(s: String): String =
     s.replaceAll("""(?ims)<!---.*?-->""", "")
 
-  private def makeReleaseNotes(scalaDir: java.io.File, previousTag: String, currentTag: String)(implicit targetLanguage: TargetLanguage): String = {
+  private def makeReleaseNotes(scalaDir: java.io.File, version: String, previousTag: String, currentTag: String)(implicit targetLanguage: TargetLanguage): String = {
     def rawHandWrittenNotes(file: java.io.File = new java.io.File(s"hand-written.md")): String = {
       val lines: List[String] = if (file.exists) {
         val src = Source.fromFile(file)
@@ -102,6 +102,7 @@ object MakeReleaseNotes {
       case MarkDown => s"""---
 layout: news
 post-type: announcement
+permalink: /news/$version
 title: "Scala ${currentTag drop 1} is now available!"
 ---
 ${rawHandWrittenNotes()}"""
