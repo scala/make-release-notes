@@ -22,9 +22,9 @@ object MakeReleaseNotes {
 
     if (ext == "md") {
       println(s"cp $fileName ../scala-lang/news/_posts/")
-      println(s"don't forget to update ../scala-lang/download/index.md, ../scala-lang/documentation/api.md, ../scala-lang/documentation/_config.yml")
+      println(s"# don't forget to\n${scala.util.Properties.envOrElse("EDITOR", "mate")} ../scala-lang/download/index.md ../scala-lang/documentation/api.md ../scala-lang/_config.yml")
+      println("# and, to prepare and sanity check your scala-lang PR:")
       println(s"maruku --html $fileName")
-      println("# to prepare and sanity check your scala-lang PR")
     }
   }
 
@@ -104,12 +104,7 @@ layout: news
 post-type: announcement
 title: "Scala ${currentTag drop 1} is now available!"
 ---
-${rawHandWrittenNotes()}
-
-${renderCommitterList}
-${renderFixedIssues}
-${renderCommitList}
-      """
+${rawHandWrittenNotes()}"""
     }
 
   }

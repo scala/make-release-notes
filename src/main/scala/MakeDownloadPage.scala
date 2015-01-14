@@ -16,7 +16,7 @@ class MakeDownloadPage(version: String, releaseDate: Date = new Date()) {
   // get size of `url` without actually downloading it
   def humanSize(url: String): Future[String] = future {
     import scala.sys.process._
-    println(url)
+    println("## fetching size of "+ url)
     scala.util.Try {
       val responseHeader = Process(s"curl -m 5 --silent -D - -X HEAD $url").lines
       val contentLength = responseHeader.find(_.startsWith("Content-Length"))
@@ -30,7 +30,7 @@ class MakeDownloadPage(version: String, releaseDate: Date = new Date()) {
       case Some((status, humanSize)) if status.contains("200 OK") || status.contains("302 Found") =>
         humanSize
       case _ =>
-        println(s"warning: could not fetch $url")
+        println(s"## warning: could not fetch $url")
         ""
     }
   }
