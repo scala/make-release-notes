@@ -8,7 +8,7 @@ object MakeReleaseNotes {
   def genPR(prevVersion: String, version: String, release: String, gitDir: String = s"${sys.env("HOME")}/git/scala") = {
     val date = new java.util.Date(release)
     new MakeDownloadPage(version, date).write()
-    MakeReleaseNotes(new java.io.File(gitDir), s"v$prevVersion", s"v$version", MarkDown, date)
+    MakeReleaseNotes(new java.io.File(gitDir), version, s"v$prevVersion", s"v$version", MarkDown, date)
   }
 
   def write(page: String, version: String, releaseDate: Date, ext: String) = {
@@ -21,20 +21,22 @@ object MakeReleaseNotes {
     println("# generated " + fileName)
 
     if (ext == "md") {
-      println("cp " + fileName + " ../scala-lang/news/_posts/")
-      println("# to prepare your scala-lang PR")
+      println(s"cp $fileName ../scala-lang/news/_posts/")
+      println(s"# don't forget to\n${scala.util.Properties.envOrElse("EDITOR", "mate")} ../scala-lang/download/index.md ../scala-lang/documentation/api.md ../scala-lang/_config.yml")
+      println("# and, to prepare and sanity check your scala-lang PR:")
+      println(s"maruku --html $fileName")
     }
   }
 
-  def apply(scalaDir: String, previousTag: String, currentTag: String, releaseDate: Date) {
-    Seq(Html, MarkDown).foreach(fmt => apply(new java.io.File(scalaDir), previousTag, currentTag, fmt, releaseDate))
+  def apply(scalaDir: String, version: String, previousTag: String, currentTag: String, releaseDate: Date) {
+    Seq(Html, MarkDown).foreach(fmt => apply(new java.io.File(scalaDir), version, previousTag, currentTag, fmt, releaseDate))
   }
-  def apply(scalaDir: java.io.File, previousTag: String, currentTag: String, targetLanguage: TargetLanguage = MarkDown, releaseDate: Date = new Date()): Unit = {
+  def apply(scalaDir: java.io.File, version: String, previousTag: String, currentTag: String, targetLanguage: TargetLanguage = MarkDown, releaseDate: Date = new Date()): Unit = {
     val out = targetLanguage match {
       case Html => new java.io.File("release-notes.html")
       case MarkDown => new java.io.File(s"release-notes-${currentTag}.md")
     }
-    val notes = makeReleaseNotes(scalaDir, previousTag, currentTag)(targetLanguage)
+    val notes = makeReleaseNotes(scalaDir, version, previousTag, currentTag)(targetLanguage)
     write(notes, currentTag.dropWhile(_ == 'v'), releaseDate, targetLanguage.ext)
   }
 
@@ -57,7 +59,10 @@ object MakeReleaseNotes {
     parser markdownToHtml content
   }
 
-  private def makeReleaseNotes(scalaDir: java.io.File, previousTag: String, currentTag: String)(implicit targetLanguage: TargetLanguage): String = {
+  private def stripTripleDashedHtmlComments(s: String): String =
+    s.replaceAll("""(?ims)<!---.*?-->""", "")
+
+  private def makeReleaseNotes(scalaDir: java.io.File, version: String, previousTag: String, currentTag: String)(implicit targetLanguage: TargetLanguage): String = {
     def rawHandWrittenNotes(file: java.io.File = new java.io.File(s"hand-written.md")): String = {
       val lines: List[String] = if (file.exists) {
         val src = Source.fromFile(file)
@@ -66,8 +71,9 @@ object MakeReleaseNotes {
       // if you don't have the next line, sub-bullets would be screwed!
       // please take this case into account and comment out 2 next lines and uncomment the line after!
       val newLines = lines.map(x => if (x.startsWith("    *")) "\n" + x.stripPrefix("  ") else x)
-      newLines.mkString("\n")
-      //      lines.mkString("\n")
+      val bulletFixed = newLines.mkString("\n")
+      val commentsStripped = stripTripleDashedHtmlComments(bulletFixed)
+      commentsStripped
     }
     val info = new GitInfo(scalaDir, previousTag, currentTag)
     // val communityProjects = CommunityProjects.loadHtmlFromFile()
@@ -78,6 +84,7 @@ object MakeReleaseNotes {
     targetLanguage match {
       case Html => s"""<html>
       <head>
+        <meta charset="UTF-8">
         <title>${currentTag} - Release notes</title>
         <link rel="stylesheet" type="text/css" href="http://www.scala-lang.org/resources/css/bootstrap.css"/>
       </head>
@@ -95,14 +102,10 @@ object MakeReleaseNotes {
       case MarkDown => s"""---
 layout: news
 post-type: announcement
+permalink: /news/$version
 title: "Scala ${currentTag drop 1} is now available!"
 ---
-${rawHandWrittenNotes()}
-
-${renderCommitterList}
-${renderFixedIssues}
-${renderCommitList}
-      """
+${rawHandWrittenNotes()}"""
     }
 
   }

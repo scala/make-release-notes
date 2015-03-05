@@ -1,85 +1,57 @@
-We are very happy to announce the final release of Scala 2.10.4!
+With pride and a pang of nostalgia, we announce the availability of Scala 2.10.5 -- the last release in the 2.10.x series.
 
-<!-- Substitute both version numbers here! -->
-The release is available for download from [scala-lang.org](http://scala-lang.org/download/2.10.4.html) or from [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.scala-lang%20AND%20v%3A2.10.4).
+We'd like to encourage you to upgrade to 2.11.6 as soon as possible. (Please note that this announcement does not affect Typesafe's commercial support offering.)
 
-The Scala team and contributors [fixed 33 issues since 2.10.3](https://issues.scala-lang.org/issues/?filter=12502)!
+Scala 2.10.5 is the final maintenance release in this series, and is binary compatible with previous releases in the Scala 2.10 series. We would like to highlight the following change:
 
-In total, 
-[36 RC1 pull requests](https://github.com/scala/scala/issues?milestone=22&state=closed), [12 RC2 pull requests](https://github.com/scala/scala/issues?milestone=28&state=closed) and [3 RC3 pull requests](https://github.com/scala/scala/issues?milestone=30&state=closed)
-were merged on [GitHub](https://github.com/scala/scala).
+ - We [fixed a cross-site scripting vulnerability](https://github.com/scala/scala/pull/4351) in Scaladoc's JavaScript. Many thanks to @todesking for discovering this, suggesting a fix, and for delaying disclosure until this release! This bug could be used to access sensitive information on sites hosted on the same domain as Scaladoc-generated documentation. All previous versions of Scaladoc are affected (Scala 2.11.6 includes the fix as well). We do recommend, as a general precaution, to host Scaladoc documentation on its own domain.
 
-<!--break-->
+Compared to 2.10.4, this release resolves [10 issues](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20in%20%28%22Scala%202.10.5%22%29%20ORDER%20BY%20component%20ASC%2C%20priority%20DESC). Out of 23, we [merged 18 pull requests](https://github.com/scala/scala/pulls?q=is%3Apr+is%3Amerged+milestone%3A2.10.5). Before upgrading, please also check the [known issues](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20status%3Dopen%20AND%20affectedVersion%20%3D%20%22Scala%202.10.5%22%20and%20fixVersion%20%3E%3D%20%22Scala%202.10.5%22%20ORDER%20BY%20component%20ASC%2C%20priority%20DESC) for this release.
 
-### Known Issues
-Before reporting a bug, please have a look at these [known issues](https://issues.scala-lang.org/issues/?filter=12503).
+### Scala IDE
+The current release of Scala IDE supports any 2.10.x release, and is available on the [download site](http://scala-ide.org/download/sdk.html).
 
-### Scala IDE for Eclipse
-The Scala IDE with this release built right in is available through the following update-site:
+### Changes since 2.10.4
 
-* [for Eclipse 4.2/4.3 (Juno/Kepler)](http://download.scala-ide.org/sdk/helium/e38/scala210/stable/site)
+#### Library
+ - [SI-7710](https://issues.scala-lang.org/browse/SI-7710) fix memory performance of RegexParsers in jdk7u6+  ([fceae7084c](https://github.com/scala/scala/commit/fceae7084c))
+ - [SI-8589](https://issues.scala-lang.org/browse/SI-8589) Performance improvement for ArrayCharSequence.toString  ([099a426dd6](https://github.com/scala/scala/commit/099a426dd6))
+ - [SI-8689](https://issues.scala-lang.org/browse/SI-8689) Avoid internal error in Promise after sequence of completions  ([bf20737faa](https://github.com/scala/scala/commit/bf20737faa))
+ - [SI-8787](https://issues.scala-lang.org/browse/SI-8787) Backport Regex doc  ([887622759d](https://github.com/scala/scala/commit/887622759d))
 
-Have a look at the [getting started guide](http://scala-ide.org/docs/user/gettingstarted.html) for more info.
+#### XML Support
+ - [SI-4339](https://issues.scala-lang.org/browse/SI-4339) Event errors and attribute fix ([fe7867f8a7](https://github.com/scala/scala/commit/fe7867f8a7))
+ - [SI-9027](https://issues.scala-lang.org/browse/SI-9027) xml parser fix ([736293ab09](https://github.com/scala/scala/commit/736293ab09))
+ - [SI-9060](https://issues.scala-lang.org/browse/SI-9060) Backpatch fifth-edition names ([b4e3becbf3](https://github.com/scala/scala/commit/b4e3becbf3))
 
-### New features in the 2.10 series
-Since 2.10.4 is strictly a bug-fix release, here's an overview of the most prominent new features and improvements as introduced in 2.10.0:
+#### Compiler
+ - [SI-7753](https://issues.scala-lang.org/browse/SI-7753) substitution broken for dependent types ([2f5ff595fd](https://github.com/scala/scala/commit/2f5ff595fd))
+ - [SI-7756](https://issues.scala-lang.org/browse/SI-7756) Uncripple refchecks in case bodies ([0022dccfde](https://github.com/scala/scala/commit/0022dccfde))
+ - [SI-8442](https://issues.scala-lang.org/browse/SI-8442) Ignore stub annotation symbols in `AnnotationInfo#matches` ([8262ed2fc6](https://github.com/scala/scala/commit/8262ed2fc6))
+ - [SI-8596](https://issues.scala-lang.org/browse/SI-8596) Fix rangepos crasher with defaults, poly methods ([d288790429](https://github.com/scala/scala/commit/d288790429))
 
-* Value Classes
-    * A class may now extend `AnyVal` to make it behave like a struct type (restrictions apply).
-    * [http://docs.scala-lang.org/overviews/core/value-classes.html](http://docs.scala-lang.org/overviews/core/value-classes.html)
-* Implicit Classes
-    * The implicit modifier now also applies to class definitions to reduce the boilerplate of implicit wrappers.
-    * [http://docs.scala-lang.org/sips/pending/implicit-classes.html](http://docs.scala-lang.org/sips/pending/implicit-classes.html)
-* String Interpolation
-    * `val what = "awesome"; println(s"string interpolation is ${what.toUpperCase}!")`
-    * [http://docs.scala-lang.org/overviews/core/string-interpolation.html](http://docs.scala-lang.org/overviews/core/string-interpolation.html)
-* Futures and Promises
-    * Asynchronously get some JSON: `for (req <- WS.url(restApiUrl).get()) yield (req.json \ "users").as[List[User]]` (uses play!)
-    * [http://docs.scala-lang.org/overviews/core/futures.html](http://docs.scala-lang.org/overviews/core/futures.html)
-* Dynamic and applyDynamic
-    * `x.foo` becomes `x.applyDynamic("foo")` if `x`'s type does not define a `foo`, but is a subtype of `Dynamic`
-    * [http://docs.scala-lang.org/sips/pending/type-dynamic.html](http://docs.scala-lang.org/sips/pending/type-dynamic.html)
-* Dependent method types:
-    * `def identity(x: AnyRef): x.type = x` // the return type says we return exactly what we got
-* New ByteCode emitter based on ASM
-    * Can target JDK 1.5, 1.6 and 1.7
-    * Emits 1.6 bytecode by default
-    * Old 1.5 backend is deprecated
-* A new Pattern Matcher
-    * rewritten from scratch to generate more robust code (no more [exponential blow-up](https://issues.scala-lang.org/browse/SI-1133)!)
-    * code generation and analyses are now independent (the latter can be turned off with `-Xno-patmat-analysis`)
-* Scaladoc Improvements
-    * Implicits (-implicits flag)
-    * Diagrams (-diagrams flag, requires graphviz)
-    * Groups (-groups)
-* Modularized Language features
-    * Get on top of the advanced Scala features used in your codebase by explicitly importing them.
-    * [http://docs.scala-lang.org/sips/pending/modularizing-language-features.html](http://docs.scala-lang.org/sips/pending/modularizing-language-features.html)
-* Parallel Collections are now configurable with custom thread pools
-    * [http://docs.scala-lang.org/overviews/parallel-collections/overview.html](http://docs.scala-lang.org/overviews/parallel-collections/overview.html)
-* Akka Actors now part of the distribution
-    * scala.actors have been deprecated and the akka implementation is now included in the distribution.
-    * See the [actors migration project](http://docs.scala-lang.org/actors-migration/) for more information.
-* Performance Improvements
-    * Faster inliner
-    * `Range#sum` is now O(1)
-    * Update of ForkJoin library
-    * Fixes in immutable `TreeSet`/`TreeMap`
-    * Improvements to PartialFunctions
-* Addition of `???` and `NotImplementedError`
-* Addition of `IsTraversableOnce` + `IsTraversableLike` type classes for extension methods
-* Deprecations and cleanup
-    * Floating point and octal literal syntax deprecation
-    * Removed scala.dbc
+#### Scaladoc
+ - [SI-8479](https://issues.scala-lang.org/browse/SI-8479) Fix constructor default args under scaladoc ([c4561c1d49](https://github.com/scala/scala/commit/c4561c1d49))
+ - Scaladoc js location synch more robust ([f95b5b9b80](https://github.com/scala/scala/commit/f95b5b9b80))
 
-### Experimental features
+#### Macros/Reflection
+ - [SI-7470](https://issues.scala-lang.org/browse/SI-7470) implements fundep materialization ([0c5dd9e02f](https://github.com/scala/scala/commit/0c5dd9e02f))
+ - [SI-8196](https://issues.scala-lang.org/browse/SI-8196) Runtime reflection robustness for STATIC impl details ([7b72f95a9e](https://github.com/scala/scala/commit/7b72f95a9e))
+ - -Xfundep-materialization => -Yfundep-materialization ([5966a11ae1](https://github.com/scala/scala/commit/5966a11ae1))
+ - transformers no longer ignore UnApply.fun ([36379cf8af](https://github.com/scala/scala/commit/36379cf8af))
+ - no longer warns on calls to vampire macros ([db300d4d9e](https://github.com/scala/scala/commit/db300d4d9e))
+ - typecheck(q"class C") no longer crashes ([3314d76ceb](https://github.com/scala/scala/commit/3314d76ceb))
 
-* Scala Reflection
-    * [http://docs.scala-lang.org/overviews/reflection/overview.html](http://docs.scala-lang.org/overviews/reflection/overview.html)
-* Macros
-    * [http://docs.scala-lang.org/overviews/macros/overview.html](http://docs.scala-lang.org/overviews/macros/overview.html)
+### Release Notes for the Scala 2.10 Series
 
-The API is subject to (possibly major) changes in the 2.11.x series, but don't let that stop you from experimenting with them!
-A lot of developers have already come up with very cool applications for them.
-Some examples can be seen at [http://scalamacros.org/news/2012/11/05/status-update.html](http://scalamacros.org/news/2012/11/05/status-update.html).
+The release notes for the Scala 2.10 series, which also apply to the current minor release, are available in the [release notes for Scala 2.10.4](http://scala-lang.org/news/2.10.4). They contain important information such as:
 
+* The specification of binary compatibility between minor releases.
+* Details on new features, important changes and deprecations in Scala 2.10.
+
+### Contributors
+
+A big thank you to everyone who's helped improve Scala by reporting bugs, improving our documentation, spreading kindness in mailing lists and other public fora, and submitting and reviewing pull requests! You are all magnificent.
+
+According to `git shortlog -sn --no-merges v2.10.4..v2.10.5`, the following people contributed to this minor release:
+Jason Zaugg, Eugene Burmako, A. P. Marki, Adriaan Moors, Grzegorz Kossakowski, Antoine Gourlay, Jeroen ter Voorde, Kato Kazuyoshi, Miles Sabin, and Viktor Klang. Thank you!
