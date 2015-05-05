@@ -1,0 +1,9 @@
+### Available Projects for Scala 2.12
+
+This list gives an overview of projects that have been released against Scala 2.12.
+
+Please [submit a pull request](https://github.com/scala/make-release-notes/edit/2.12.x/projects-2.12.md) to update this list!
+
+#### Scala 2.12.0-M1
+
+    "org.scalacheck"                   %% "scalacheck"                % "1.11.6"
