@@ -124,6 +124,12 @@ Please refer to the list of [libraries and frameworks available for Scala 2.12](
 
 ### Binary Compatibility
 
+Since Sala 2.11, minor releases of Scala are binary compatible.
+Scala 2.12 continues this tradition: every 2.12.x release will be binary compatible with 2.12.0.
+Note that milestone releases and release candidates are **not** binary compatible with any other release.
+
+#### Definition
+
 When two versions of Scala are binary compatible, it is safe to compile your project on one Scala version and link against another Scala version at run time.
 Safe run-time linkage (only!) means that the JVM does not throw a (subclass of) [`LinkageError`](http://docs.oracle.com/javase/7/docs/api/java/lang/LinkageError.html) when executing your program in the mixed scenario, assuming that none arise when compiling and running on the same version of Scala.
 Concretely, this means you may have external dependencies on your run-time classpath that use a different version of Scala than the one you're compiling with, as long as they're binary compatibile.
