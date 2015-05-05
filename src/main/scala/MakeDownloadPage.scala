@@ -16,7 +16,7 @@ class MakeDownloadPage(version: String, releaseDate: Date = new Date()) {
   // get size of `url` without actually downloading it
   def humanSize(url: String): Future[String] = future {
     import scala.sys.process._
-    println(url)
+    println("## fetching size of "+ url)
     scala.util.Try {
       val responseHeader = Process(s"curl -m 5 --silent -D - -X HEAD $url").lines
       val contentLength = responseHeader.find(_.startsWith("Content-Length"))
@@ -30,7 +30,7 @@ class MakeDownloadPage(version: String, releaseDate: Date = new Date()) {
       case Some((status, humanSize)) if status.contains("200 OK") || status.contains("302 Found") =>
         humanSize
       case _ =>
-        println(s"warning: could not fetch $url")
+        println(s"## warning: could not fetch $url")
         ""
     }
   }
@@ -55,14 +55,14 @@ class MakeDownloadPage(version: String, releaseDate: Date = new Date()) {
 
   def resources: String = Await.result(
     Future.sequence(Seq(
-        resourceArchive(unixClass,       "scala",                "tgz", "Max OS X, Unix, Cygwin"   ),
-        resourceArchive(windowsClass,    "scala",                "msi", "Windows (msi installer)"  ),
-        resourceArchive(defaultClass,    "scala",                "zip", "Windows"                  ),
-        resourceArchive(defaultClass,    "scala",                "deb", "Debian"                   ),
-        resourceArchive(defaultClass,    "scala",                "rpm", "RPM package"              ),
-        resourceArchive(defaultClass,    "scala-docs",           "txz", "API docs"                 ),
-        resourceArchive(defaultClass,    "scala-docs",           "zip", "API docs"                 ),
-        resource       (defaultClass,    s"scala-sources-$version.zip", "sources", ghSourceUrl     )
+        resourceArchive(unixClass,       "scala",                "tgz",    "Max OS X, Unix, Cygwin"   ),
+        resourceArchive(windowsClass,    "scala",                "msi",    "Windows (msi installer)"  ),
+        resourceArchive(defaultClass,    "scala",                "zip",    "Windows"                  ),
+        resourceArchive(defaultClass,    "scala",                "deb",    "Debian"                   ),
+        resourceArchive(defaultClass,    "scala",                "rpm",    "RPM package"              ),
+        resourceArchive(defaultClass,    "scala-docs",           "txz",    "API docs"                 ),
+        resourceArchive(defaultClass,    "scala-docs",           "zip",    "API docs"                 ),
+        resource       (defaultClass,    s"scala-sources-$version.tar.gz", "Sources", ghSourceUrl     )
       )).map(_.mkString(",\n  ")), 30 seconds)
 
   // note: first and last lines must be exactly "---"
