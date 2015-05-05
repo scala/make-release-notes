@@ -105,7 +105,8 @@ post-type: announcement
 permalink: /news/$version
 title: "Scala ${currentTag drop 1} is now available!"
 ---
-${rawHandWrittenNotes()}"""
+${rawHandWrittenNotes()}
+"""
     }
 
   }

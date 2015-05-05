@@ -79,6 +79,7 @@ requirements: "This Scala software distribution can be installed on any Unix-lik
 resources: [
   $resources
 ]
----"""
+---
+"""
   }
 }
