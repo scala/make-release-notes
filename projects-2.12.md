@@ -7,3 +7,4 @@ Please [submit a pull request](https://github.com/scala/make-release-notes/edit/
 #### Scala 2.12.0-M1
 
     "org.scalacheck"                   %% "scalacheck"                % "1.11.6"
+    "org.scalaz"                       %% "scalaz-core"               % "7.1.2"
