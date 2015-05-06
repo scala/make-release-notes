@@ -9,5 +9,5 @@ Please [submit a pull request](https://github.com/scala/make-release-notes/edit/
     "org.scalacheck"                   %% "scalacheck"                % "1.11.6"
     "org.scalatest"                    %% "scalatest"                 % "2.2.5-M1"
     "org.scalactic"                    %% "scalactic"                 % "2.2.5-M1"
-    "org.scalaz"                       %% "scalaz"                    % "7.0.7"
-    "org.scalaz"                       %% "scalaz"                    % "7.1.2"
+    "org.scalaz"                       %% "scalaz-core"               % "7.0.7"
+    "org.scalaz"                       %% "scalaz-core"               % "7.1.2"
