@@ -11,3 +11,4 @@ Please [submit a pull request](https://github.com/scala/make-release-notes/edit/
     "org.scalactic"                    %% "scalactic"                 % "2.2.5-M1"
     "org.scalaz"                       %% "scalaz-core"               % "7.0.7"
     "org.scalaz"                       %% "scalaz-core"               % "7.1.2"
+    "com.github.nscala-time"           %% "nscala-time"               % "2.0.0"
