@@ -4,7 +4,7 @@ We would like to highlight the following changes:
 
 * The Scala REPL is now easier for projects such as Spark to embed and customize ([PR #4563](https://github.com/scala/scala/pull/4563), [SI-7747](https://issues.scala-lang.org/browse/SI-9181)).
 * Pattern matching is now faster on large numbers of cases ([SI-7747](https://issues.scala-lang.org/browse/SI-9181)).
-* Experimental support for Java 8 lambdas is available via `-Ydelambdafy:method` (ADD LINK HERE).
+* Experimental support for Java 8 lambdas is available via `-Ydelambdafy:method` ([more info](https://github.com/scala/make-release-notes/blob/2.11.x/experimental-backend.md)).
 
 Compared to 2.11.6, this release resolves [48 issues](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20in%20%28%22Scala%202.11.7%22%29%20ORDER%20BY%20component%20ASC%2C%20priority%20DESC). We [merged 124 pull requests](https://github.com/scala/scala/pulls?q=is%3Apr+is%3Amerged+milestone%3A2.11.7). Before upgrading, please also check the [known issues](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20status%3Dopen%20AND%20affectedVersion%20%3D%20%22Scala%202.11.7%22%20and%20fixVersion%20%3E%3D%20%22Scala%202.11.7%22%20ORDER%20BY%20component%20ASC%2C%20priority%20DESC) for this release.
 
