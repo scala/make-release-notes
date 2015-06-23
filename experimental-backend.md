@@ -52,7 +52,7 @@ In an SBT project, this can be achieved using the following settins:
     
     scalacOptions ++= List("-Ybackend:GenBCode", "-Ydelambdafy:method", "-target:jvm-1.8")
 
-An sbt project with these options can be found here: https://github.com/lrytz/experimental-backend-2.11/tree/master
+An sbt project with these options can be found here: https://github.com/lrytz/experimental-backend-2.11
 
 [The Gist by @retronym](https://gist.github.com/retronym/0178c212e4bacffed568) explains all the glorious details required to generate Java 8 style lambdas from Scala code.
 
