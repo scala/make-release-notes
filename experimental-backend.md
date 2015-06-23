@@ -63,3 +63,5 @@ An sbt project with these options can be found here: https://github.com/lrytz/ex
 As part of the new backend for Scala 2.12 we are developing a new inliner and bytecode optimizer.
 The inliner is already available in Scala 2.11.7 and can be enabled using the `-Yopt` compiler option.
 Check `-Yopt:help` to see the available optimizations.
+
+If you encounter a bug, please file an issue on this bugracker: https://github.com/scala-opt/scala/issues
