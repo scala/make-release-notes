@@ -12,6 +12,12 @@ As usual for minor releases, Scala 2.11.7 is binary compatible with other releas
 
 2.11 minor releases will continue to be released approximately quarterly, or sooner if prompted by a serious issue.
 
+### Contributors
+
+A big thank you to everyone who's helped improve Scala by reporting bugs, improving our documentation, spreading kindness in mailing lists and other public fora, and submitting and reviewing pull requests! You are all magnificent.
+
+According to `git shortlog -sn --no-merges v2.11.6..v2.11.7`, 36 people contributed to this minor release: Lukas Rytz, Jason Zaugg, A. P. Marki, Grzegorz Kossakowski, Adriaan Moors, Rex Kerr, Simon Ochsenreither, Antoine Gourlay, Gerard Basler, Zhong Sheng, Kato Kazuyoshi, Michał Pociecha, Janek Bogucki, vsalvis, Prashant Sharma, Daniel Dietrich, Kenji Yoshida, YawarRaza7349, Simon Schäfer, Eugene Burmako, Guillaume Martres, Sean Riggin, Christoph Neijenhuis, Szabolcs Berecz, Bruno Bieth, dumpstate, esfandiar amirrahimi, nafg, swaldman, Alessandro Lacava, Geoffrey Knauth, Jean-Rémi Desjardins, EECOLOR, Niko Vuokko, Cody Allen, RobertZK. Thank you!
+
 ### Obtaining Scala
 
 Scala releases are available through a variety of channels, including (but not limited to):
@@ -27,9 +33,3 @@ The [release notes for Scala 2.11.1](http://scala-lang.org/news/2.11.1) have imp
 
 * Details on new features, important changes and deprecations since Scala 2.10.
 * The specification of binary compatibility between minor releases.
-
-### Contributors
-
-A big thank you to everyone who's helped improve Scala by reporting bugs, improving our documentation, spreading kindness in mailing lists and other public fora, and submitting and reviewing pull requests! You are all magnificent.
-
-According to `git shortlog -sn --no-merges v2.11.6..v2.11.7`, 36 people contributed to this minor release: Lukas Rytz, Jason Zaugg, A. P. Marki, Grzegorz Kossakowski, Adriaan Moors, Rex Kerr, Simon Ochsenreither, Antoine Gourlay, Gerard Basler, Zhong Sheng, Kato Kazuyoshi, Michał Pociecha, Janek Bogucki, vsalvis, Prashant Sharma, Daniel Dietrich, Kenji Yoshida, YawarRaza7349, Simon Schäfer, Eugene Burmako, Guillaume Martres, Sean Riggin, Christoph Neijenhuis, Szabolcs Berecz, Bruno Bieth, dumpstate, esfandiar amirrahimi, nafg, swaldman, Alessandro Lacava, Geoffrey Knauth, Jean-Rémi Desjardins, EECOLOR, Niko Vuokko, Cody Allen, RobertZK. Thank you!
