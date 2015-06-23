@@ -54,10 +54,12 @@ In an SBT project, this can be achieved using the following settins:
 
 An sbt project with these options can be found here: https://github.com/lrytz/experimental-backend-2.11/tree/master
 
+[The Gist by @retronym](https://gist.github.com/retronym/0178c212e4bacffed568) explains all the glorious details of creating Java 8 style lambdas in Scala.
+
 ## New Optimizer
 
 `-Yopt:l:classpath` enables the new optimizer.
 
 As part of the new backend for Scala 2.12 we are developing a new inliner and bytecode optimizer.
 The inliner is already available in Scala 2.11.7 and can be enabled using the `-Yopt` compiler option.
-Use `-Yopt:help` to see the available optimizations.
+Check `-Yopt:help` to see the available optimizations.
