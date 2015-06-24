@@ -55,7 +55,7 @@ class MakeDownloadPage(version: String, releaseDate: Date = new Date()) {
 
   def resources: String = Await.result(
     Future.sequence(Seq(
-        resourceArchive(unixClass,       "scala",                "tgz",    "Max OS X, Unix, Cygwin"   ),
+        resourceArchive(unixClass,       "scala",                "tgz",    "Mac OS X, Unix, Cygwin"   ),
         resourceArchive(windowsClass,    "scala",                "msi",    "Windows (msi installer)"  ),
         resourceArchive(defaultClass,    "scala",                "zip",    "Windows"                  ),
         resourceArchive(defaultClass,    "scala",                "deb",    "Debian"                   ),
