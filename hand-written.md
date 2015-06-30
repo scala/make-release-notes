@@ -36,7 +36,7 @@ The following changes are planned for Scala 2.12:
 * New backend and optimizer.
   The "GenBCode" backend, which is already available in Scala 2.11 using the `-Ybackend:GenBCode` compiler option, will be enabled by default.
   Scala 2.12 will also ship with a new inliner and bytecode optimizer.
-  We keep track of issues and work items for the new optimizer on the [scala-opt repostiory issue tracker](https://github.com/scala-opt/scala/issues).
+  We keep track of issues and work items for the new optimizer on the [scala-opt repository issue tracker](https://github.com/scala-opt/scala/issues).
 
 The above list is incomplete and will be extendend during the Scala 2.12 milestone cycle.
 
