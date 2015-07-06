@@ -31,14 +31,14 @@ The following changes are planned for Scala 2.12:
   The design notes for this feature are available in [this gist](https://gist.github.com/retronym/0178c212e4bacffed568).
 * Lambda syntax for SAM types.
   Similar to Java 8, Scala 2.12 allows instantiating any type with one single abstract method by passing a lambda.
-  This feature is already avalable in Scala 2.11 using the `-Xexperimental` compiler option.
+  This feature is already available in Scala 2.11 using the `-Xexperimental` compiler option.
   It improves the experience of using libraries written for Java 8 in Scala.
 * New backend and optimizer.
   The "GenBCode" backend, which is already available in Scala 2.11 using the `-Ybackend:GenBCode` compiler option, will be enabled by default.
   Scala 2.12 will also ship with a new inliner and bytecode optimizer.
   We keep track of issues and work items for the new optimizer on the [scala-opt repository issue tracker](https://github.com/scala-opt/scala/issues).
 
-The above list is incomplete and will be extendend during the Scala 2.12 milestone cycle.
+The above list is incomplete and will be extended during the Scala 2.12 milestone cycle.
 
 Up the current milestone, the Scala team and contributors [fixed 47 bugs](https://issues.scala-lang.org/browse/SI-9200?jql=project%20%3D%20SI%20and%20fixVersion%20%3E%3D%20%222.12.0-M1%22%20and%20fixVersion%20%3C%3D%20%222.12.0%22%20and%20resolution%20%3D%20fixed) that are exclusive to Scala 2.12.0.
 During the development cycle of Scala 2.12, we will continue to backport issues to 2.11 whenever feasible.
@@ -48,7 +48,7 @@ With the release of 2.12.0, backports to 2.11 will be dialed back.
 <!-- Notes from 2.11.0
 #### Important Changes
 
-For most cases, code that compiled under 2.10.x without deprecation warnings should not be affected. We've verified this by [compiling](https://jenkins-dbuild.typesafe.com:8499/job/Community-2.11.x) a [sizeable number of open source projects](https://github.com/typesafehub/community-builds/blob/master/common-2.11.x.conf#L43).
+For most cases, code that compiled under 2.10.x without deprecation warnings should not be affected. We've verified this by [compiling](https://jenkins-dbuild.typesafe.com:8499/job/Community-2.11.x) a [sizable number of open source projects](https://github.com/typesafehub/community-builds/blob/master/common-2.11.x.conf#L43).
 
 Changes to the reflection API may cause breakages...
 
@@ -83,7 +83,7 @@ The following modules have been removed from the Scala 2.12 distribution:
 * The Scala actors library is no longer released with Scala 2.12.
   We recommend that you use the [Akka actors library](http://akka.io/) instead.
   To migrate your code, follow the [Scala actors migration guide](http://docs.scala-lang.org/overviews/core/actors-migration-guide.html) before upgrading your project to Scala 2.12.
-* The Scala distribution archives and the `scala-library-all` maven dependency no longer inlcude Akka actors.
+* The Scala distribution archives and the `scala-library-all` maven dependency no longer include Akka actors.
   To use the Akka actors library, add it to your project [as a dependency](http://doc.akka.io/docs/akka/2.3.10/intro/getting-started.html).
 * The continuations plugin is no longer shipped with the Scala 2.12 distribution.
 
@@ -126,7 +126,7 @@ Please refer to the list of [libraries and frameworks available for Scala 2.12](
 
 ### Binary Compatibility
 
-Since Sala 2.11, minor releases of Scala are binary compatible.
+Since Scala 2.11, minor releases of Scala are binary compatible.
 Scala 2.12 continues this tradition: every 2.12.x release will be binary compatible with 2.12.0.
 Note that milestone releases and release candidates are **not** binary compatible with any other release.
 
@@ -134,7 +134,7 @@ Note that milestone releases and release candidates are **not** binary compatibl
 
 When two versions of Scala are binary compatible, it is safe to compile your project on one Scala version and link against another Scala version at run time.
 Safe run-time linkage (only!) means that the JVM does not throw a (subclass of) [`LinkageError`](http://docs.oracle.com/javase/7/docs/api/java/lang/LinkageError.html) when executing your program in the mixed scenario, assuming that none arise when compiling and running on the same version of Scala.
-Concretely, this means you may have external dependencies on your run-time classpath that use a different version of Scala than the one you're compiling with, as long as they're binary compatibile.
+Concretely, this means you may have external dependencies on your run-time classpath that use a different version of Scala than the one you're compiling with, as long as they're binary compatible.
 In other words, separate compilation on different binary compatible versions does not introduce problems compared to compiling and running everything on the same version of Scala.
 
 We check binary compatibility automatically with [MiMa](https://github.com/typesafehub/migration-manager).
@@ -153,7 +153,7 @@ Note that so far we've only talked about the jars generated by scalac for the st
 Our policies do not extend to the meta-issue: ensuring binary compatibility for bytecode generated from identical sources, by different version of scalac?
 (The same problem exists for compiling on different JDKs.)
 While we strive to achieve this, it's not something we can test in general.
-Notable examples where we know meta-binary compatibility is hard to achieve: specialisation and the optimizer.
+Notable examples where we know meta-binary compatibility is hard to achieve: specialization and the optimizer.
 
 In short, if binary compatibility of your library is important to you, use [MiMa](https://github.com/typesafehub/migration-manager) to verify compatibility before releasing.
 Compiling identical sources with different versions of the Scala compiler (or on different JVM versions!) could result in binary incompatible bytecode.
