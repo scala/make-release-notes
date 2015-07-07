@@ -10,11 +10,11 @@ Compared to M1, this release resolves [TODO issues](https://issues.scala-lang.or
 
 As usual for milestones, 2.12.0-M2 is not binary compatible with any other Scala release, including other 2.12 milestones.
 
-### Scala 2.12 Notes
+### About Scala 2.12
 
 Beginning with 2.12.0-M2, the Scala 2.12 series targets Java 8. Programs written in Scala 2.12, including the Scala 2.12 compiler, can only be executed on Java 8 or newer.
 
-#### Source Compatibility
+#### Source compatibility
 
 2.12 is mostly source compatible with 2.11.  Code that compiles on 2.11.x without deprecation warnings should compile on 2.12.x too, unless you use experimental APIs such as reflection.  If not, please [file an issue](https://issues.scala-lang.org).
 
@@ -29,7 +29,7 @@ Milestone releases and release candidates, however, are **not** binary compatibl
 The [Scala 2.11.1 release notes](http://scala-lang.org/news/2.11.1) explain in more detail on how binary compatibility works in Scala.  The same policies that applied to 2.11 will apply to 2.12 as well.
 
 
-#### New Features
+#### New features
 
 The following major changes are planned for Scala 2.12:
 
@@ -47,7 +47,7 @@ The following major changes are planned for Scala 2.12:
 
 This list will grow in later milestones.
 
-#### Unbundled Features
+#### Unbundled features
 
 The following modules have been removed from the Scala 2.12 distribution:
 
