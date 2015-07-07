@@ -2,8 +2,8 @@ We are pleased to announce the availability of Scala 2.12.0-M2!
 
 We would like to highlight the following changes since M1:
 
-* Java 8 is now required. (The 2.12 compiler requires it, and programs compiled by 2.12 require it, too.)
-* TODO
+* Java 8 is now required.
+* Lambdas are compiled to Java 8 style closures.
 
 Compared to M1, this release resolves [TODO issues](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%202.12.0-M2%20ORDER%20BY%20component%20ASC%2C%20priority%20DESC).  We [merged TODO pull requests](https://github.com/scala/scala/pulls?q=is%3Apr+is%3Amerged+milestone%3A2.12.0-M2).
 <!-- Before upgrading, please also check the [known issues](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20status%3Dopen%20AND%20affectedVersion%20%3D%20%22Scala%202.11.7%22%20and%20fixVersion%20%3E%3D%20%22Scala%202.11.7%22%20ORDER%20BY%20component%20ASC%2C%20priority%20DESC) for this release.-->
@@ -34,13 +34,13 @@ Scala 2.12.0-M2 includes the following major changes.
 
 Future 2.12 milestones will include additional new features.
 
-#### New Backend
+#### New backend
 
 Scala 2.12 enables the "GenBCode" backend by default.
 
-The new backend is more efficient than the default backend of Scala 2.11 because it directly generates ASM bytecode from Scala compiler trees, while the previous backend used an intermediate representation called "ICode".
+The new backend is more efficient than the default backend of Scala 2.11, because it directly generates ASM bytecode from Scala compiler trees, while the previous backend used an intermediate representation called "ICode".
 
-#### Java 8 Style Closure Classes
+#### Java 8 style closure classes
 
 Scala 2.12 emits closures in the same style as Java 8.
 
@@ -50,13 +50,13 @@ At runtime, this method is passed as an argument to the LambdaMetaFactory provid
 Compared to Scala 2.11, the new scheme has the advantage that the compiler does not generate an anonymous class for each lambda anymore.
 This leads to significantly smaller JAR files.
 
-#### Lambda Syntax for SAM Types
+#### Lambda syntax for SAM types (experimental)
 
-Similar to Java 8, Scala 2.12 allows instantiating any type with one single abstract method by passing a lambda.
-This feature is already avalable in Scala 2.11 using the `-Xexperimental` compiler option.
-It improves the experience of using libraries written for Java 8 in Scala.
+As of M2, this feature is not yet on by default.  You can enable it with the `-Xexperimental` compiler option.
 
-In the current Scala milestone (2.12.0-M2), the feature is not yet enabled by default and still needs to the `-Xexperimental` compiler option.
+When the option is enabled, then similar to Java 8, Scala 2.12 allows instantiating any type with one single abstract method by passing a lambda.  This improves the experience of using libraries written for Java 8 in Scala.
+
+This feature was also available in Scala 2.11, also via `-Xexperimental`.
 
 #### New Bytecode Optimizer
 
@@ -64,12 +64,13 @@ The GenBCode backend includes a new inliner and bytecode optimizer.
 The optimizer is enabled using the `-Yopt:l:classpath` compiler option.
 Check `-Yopt:help` to see the full list of available options for the optimizer.
 
-In the current milestone (2.12.0-M2), the following optimizaionts are available
-  - Inlining final methods, including methods defined in objects and final methods defined in traits
-  - If a closure is allocated and invoked within the same method, the closure invocation is replaced by an invocations of the corresponding lambda body method
-  - Dead code elimination and a small number of cleanup optimizations
+As of M2, the following optimizations are available:
 
-The work on the new optimizer is still ongoing and can be tracked on the [scala-opt repostiory issue tracker](https://github.com/scala-opt/scala/issues).
+* Inlining final methods, including methods defined in objects and final methods defined in traits
+* If a closure is allocated and invoked within the same method, the closure invocation is replaced by an invocations of the corresponding lambda body method
+* Dead code elimination and a small number of cleanup optimizations
+
+The work on the new optimizer is still ongoing.  You can track it in the [scala-opt repository issue tracker](https://github.com/scala-opt/scala/issues).
 
 ### Unbundled features
 
