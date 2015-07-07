@@ -91,6 +91,8 @@ A big thank you to everyone who's helped improve Scala by reporting bugs, improv
 
 According to `git shortlog -sn --no-merges 2.11.x..v2.12.0-M2`, TODO people have contributed to Scala 2.12 so far: TODO. Thank you!
 
+Thanks also to Miguel Garcia and James Iry for their substantial prior work on the new compiler backend.
+
 You can propose edits to these release notes [on GitHub](https://github.com/scala/make-release-notes/blob/2.12.x/hand-written.md).
 
 ## Obtaining Scala
