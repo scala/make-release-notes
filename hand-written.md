@@ -93,6 +93,8 @@ According to `git shortlog -sn --no-merges 2.11.x..v2.12.0-M2`, TODO people have
 
 Thanks also to Miguel Garcia and James Iry for their substantial prior work on the new compiler backend.
 
+## Release notes
+
 You can propose edits to these release notes [on GitHub](https://github.com/scala/make-release-notes/blob/2.12.x/hand-written.md).
 
 ## Obtaining Scala
