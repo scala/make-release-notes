@@ -64,7 +64,7 @@ The following modules have been removed from the Scala 2.12 distribution:
 
 A big thank you to everyone who's helped improve Scala by reporting bugs, improving our documentation, spreading kindness in mailing lists and other public fora, and submitting and reviewing pull requests! You are all magnificent.
 
-According to `git shortlog -sn --no-merges v2.12.0-M1..v2.12.0-M2`, TODO people contributed to this minor release: TODO. Thank you!
+According to `git shortlog -sn --no-merges 2.11.x..v2.12.0-M2`, TODO people have contributed to Scala 2.12 so far: TODO. Thank you!
 
 You can propose edits to these release notes [on GitHub](https://github.com/scala/make-release-notes/blob/2.12.x/hand-written.md).
 
