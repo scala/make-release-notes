@@ -16,7 +16,7 @@ Beginning with 2.12.0-M2, the Scala 2.12 series targets Java 8. Programs written
 
 #### Source compatibility
 
-2.12 is mostly source compatible with 2.11.  Code that compiles on 2.11.x without deprecation warnings should compile on 2.12.x too, unless you use experimental APIs such as reflection.  If not, please [file an issue](https://issues.scala-lang.org).
+2.12 is mostly source compatible with 2.11.  Code that compiles on 2.11.x without deprecation warnings should compile on 2.12.x too, unless you use experimental APIs such as reflection.  If you find incompatibilities, please [file an issue](https://issues.scala-lang.org).
 
 #### Binary compatibility
 
