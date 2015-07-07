@@ -10,15 +10,15 @@ Compared to M1, this release resolves [TODO issues](https://issues.scala-lang.or
 
 As usual for milestones, 2.12.0-M2 is not binary compatible with any other Scala release, including other 2.12 milestones.
 
-### About Scala 2.12
+## About Scala 2.12
 
 Beginning with 2.12.0-M2, the Scala 2.12 series targets Java 8. Programs written in Scala 2.12, including the Scala 2.12 compiler, can only be executed on Java 8 or newer.
 
-#### Source compatibility
+### Source compatibility
 
 2.12 is mostly source compatible with 2.11.  Code that compiles on 2.11.x without deprecation warnings should compile on 2.12.x too, unless you use experimental APIs such as reflection.  If you find incompatibilities, please [file an issue](https://issues.scala-lang.org).
 
-#### Binary compatibility
+### Binary compatibility
 
 Since Scala 2.11, minor releases of Scala are binary compatible with each other.
 Scala 2.12 will continue this tradition: every 2.12.x release will be binary compatible with 2.12.0.
@@ -28,26 +28,50 @@ Milestone releases and release candidates, however, are **not** binary compatibl
 
 The [Scala 2.11.1 release notes](http://scala-lang.org/news/2.11.1) explain in more detail on how binary compatibility works in Scala.  The same policies that applied to 2.11 will apply to 2.12 as well.
 
+### New features
 
-#### New features
+Scala 2.12.0-M2 includes the following major changes.
 
-The following major changes are planned for Scala 2.12:
+Future 2.12 milestones will include additional new features.
 
-* Java 8 style closures.
-  The Scala compiler will emit closure classes (lambdas) in the same manner as Java 8.
-  The design notes for this feature are available in [this gist](https://gist.github.com/retronym/0178c212e4bacffed568).
-* Lambda syntax for SAM types.
-  Similar to Java 8, Scala 2.12 allows instantiating any type with one single abstract method by passing a lambda.
-  This feature is already available in Scala 2.11 using the `-Xexperimental` compiler option.
-  It improves the experience of using libraries written for Java 8 in Scala.
-* New backend and optimizer.
-  The "GenBCode" backend, which is already available in Scala 2.11 using the `-Ybackend:GenBCode` compiler option, will be enabled by default.
-  Scala 2.12 will also ship with a new inliner and bytecode optimizer.
-  We keep track of issues and work items for the new optimizer on the [scala-opt repository issue tracker](https://github.com/scala-opt/scala/issues).
+#### New Backend
 
-This list will grow in later milestones.
+Scala 2.12 enables the "GenBCode" backend by default.
 
-#### Unbundled features
+The new backend is more efficient than the default backend of Scala 2.11 because it directly generates ASM bytecode from Scala compiler trees, while the previous backend used an intermediate representation called "ICode".
+
+#### Java 8 Style Closure Classes
+
+Scala 2.12 emits closures in the same style as Java 8.
+
+For each lambda the compiler generates a method containing the lambda body.
+At runtime, this method is passed as an argument to the LambdaMetaFactory provided by the JDK, which creates a closure object.
+
+Compared to Scala 2.11, the new scheme has the advantage that the compiler does not generate an anonymous class for each lambda anymore.
+This leads to significantly smaller JAR files.
+
+#### Lambda Syntax for SAM Types
+
+Similar to Java 8, Scala 2.12 allows instantiating any type with one single abstract method by passing a lambda.
+This feature is already avalable in Scala 2.11 using the `-Xexperimental` compiler option.
+It improves the experience of using libraries written for Java 8 in Scala.
+
+In the current Scala milestone (2.12.0-M2), the feature is not yet enabled by default and still needs to the `-Xexperimental` compiler option.
+
+#### New Bytecode Optimizer
+
+The GenBCode backend includes a new inliner and bytecode optimizer.
+The optimizer is enabled using the `-Yopt:l:classpath` compiler option.
+Check `-Yopt:help` to see the full list of available options for the optimizer.
+
+In the current milestone (2.12.0-M2), the following optimizaionts are available
+  - Inlining final methods, including methods defined in objects and final methods defined in traits
+  - If a closure is allocated and invoked within the same method, the closure invocation is replaced by an invocations of the corresponding lambda body method
+  - Dead code elimination and a small number of cleanup optimizations
+
+The work on the new optimizer is still ongoing and can be tracked on the [scala-opt repostiory issue tracker](https://github.com/scala-opt/scala/issues).
+
+### Unbundled features
 
 The following modules have been removed from the Scala 2.12 distribution:
 
@@ -60,7 +84,7 @@ The following modules have been removed from the Scala 2.12 distribution:
 * Continuations plugin.
   ([Community maintainers sought](https://github.com/scala/scala-continuations).)
 
-### Contributors
+## Contributors
 
 A big thank you to everyone who's helped improve Scala by reporting bugs, improving our documentation, spreading kindness in mailing lists and other public fora, and submitting and reviewing pull requests! You are all magnificent.
 
@@ -68,7 +92,7 @@ According to `git shortlog -sn --no-merges 2.11.x..v2.12.0-M2`, TODO people have
 
 You can propose edits to these release notes [on GitHub](https://github.com/scala/make-release-notes/blob/2.12.x/hand-written.md).
 
-### Obtaining Scala
+## Obtaining Scala
 
 Scala releases are available various ways, such as:
 
