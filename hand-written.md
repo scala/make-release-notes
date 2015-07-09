@@ -5,7 +5,7 @@ We would like to highlight the following changes since M1:
 * Java 8 is now required.
 * Lambdas are compiled to Java 8 style closures.
 
-Compared to M1, this release resolves [TODO issues](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%202.12.0-M2%20ORDER%20BY%20component%20ASC%2C%20priority%20DESC).  We [merged TODO pull requests](https://github.com/scala/scala/pulls?q=is%3Apr+is%3Amerged+milestone%3A2.12.0-M2).
+Compared to M1, this release resolves [8 issues](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%202.12.0-M2%20ORDER%20BY%20component%20ASC%2C%20priority%20DESC).  We [merged 26 pull requests](https://github.com/scala/scala/pulls?q=is%3Apr+is%3Amerged+milestone%3A2.12.0-M2).
 <!-- Before upgrading, please also check the [known issues](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20status%3Dopen%20AND%20affectedVersion%20%3D%20%22Scala%202.11.7%22%20and%20fixVersion%20%3E%3D%20%22Scala%202.11.7%22%20ORDER%20BY%20component%20ASC%2C%20priority%20DESC) for this release.-->
 
 As usual for milestones, 2.12.0-M2 is not binary compatible with any other Scala release, including other 2.12 milestones.
@@ -30,9 +30,7 @@ The [Scala 2.11.1 release notes](http://scala-lang.org/news/2.11.1) explain in m
 
 ### New features
 
-Scala 2.12.0-M2 includes the following major changes.
-
-Future 2.12 milestones will include additional new features.
+Future 2.12 milestones will include additional new features. For now, M2 includes the following major changes:
 
 #### New backend
 
@@ -89,7 +87,7 @@ The following modules have been removed from the Scala 2.12 distribution:
 
 A big thank you to everyone who's helped improve Scala by reporting bugs, improving our documentation, spreading kindness in mailing lists and other public fora, and submitting and reviewing pull requests! You are all magnificent.
 
-According to `git shortlog -sn --no-merges 2.11.x..v2.12.0-M2`, TODO people have contributed to Scala 2.12 so far: TODO. Thank you!
+According to `git shortlog -sn --no-merges 2.11.x..v2.12.0-M2`, 37 people have contributed to Scala 2.12 so far: Lukas Rytz, Jason Zaugg, A. P. Marki, Rex Kerr, Adriaan Moors, Kato Kazuyoshi, Max Bileschi, Rui Gonçalves, jxcoder, François Garillot, rubyu, Dominik Gruntz, Evgeny Vereshchagin, Kenji Yoshida, Marc Siegel, Masato Sogame, Simon Ochsenreither, Todd Vierling, Viktor Klang, Malte Isberner, harryhuk, Denton Cockburn, Paolo Giarrusso, Denis Rosset, Roman Hargrave, Antoine Gourlay, Shadaj, Alexey Romanov, Steven Scott, martijnhoekstra, Aleksandar Prokopec, Eugene Dzhurinsky, cchantep, Lukas Elmer, Erlend Hamnaberg, Maks Atygaev, dgruntz. Thank you!
 
 Thanks also to Miguel Garcia and James Iry for their substantial prior work on the new compiler backend.
 
