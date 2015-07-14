@@ -5,7 +5,7 @@ We would like to highlight the following changes since M1:
 * Java 8 is now required.
 * Lambdas are compiled to Java 8 style closures.
 
-Compared to M1, this release resolves [9 issues](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%22Scala%202.12.0-M2%22%20ORDER%20BY%20component%20ASC%2C%20priority%20DESC).  We [merged 30 pull requests](https://github.com/scala/scala/pulls?q=is%3Apr+is%3Amerged+milestone%3A2.12.0-M2).
+Compared to M1, this release resolves [9 issues](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%22Scala%202.12.0-M2%22%20ORDER%20BY%20component%20ASC%2C%20priority%20DESC).  We [merged 29 pull requests](https://github.com/scala/scala/pulls?q=is%3Apr+is%3Amerged+milestone%3A2.12.0-M2).
 <!-- Before upgrading, please also check the [known issues](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20status%3Dopen%20AND%20affectedVersion%20%3D%20%22Scala%202.11.7%22%20and%20fixVersion%20%3E%3D%20%22Scala%202.11.7%22%20ORDER%20BY%20component%20ASC%2C%20priority%20DESC) for this release.-->
 
 As usual for milestones, 2.12.0-M2 is not binary compatible with any other Scala release, including other 2.12 milestones.
