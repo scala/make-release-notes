@@ -11,6 +11,8 @@ Libraries, add using `libraryDependencies += ...`
 
     "org.scalacheck"                   %% "scalacheck"                % "1.11.6"
     "org.scalacheck"                   %% "scalacheck"                % "1.12.4"
+    "com.chuusai"                      %% "shapeless"                 % "2.2.5"
+    "org.scalaz"                       %% "scalaz-core"               % "7.0.8"
     "org.scalaz"                       %% "scalaz-core"               % "7.1.3"
     "com.github.nscala-time"           %% "nscala-time"               % "2.0.0"
 
