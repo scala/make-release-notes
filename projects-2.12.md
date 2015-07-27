@@ -17,6 +17,10 @@ Libraries, add using `libraryDependencies += ...`
     "org.scalaz.stream"                %% "scalaz-stream"             % "0.7.2a"    // for scalaz 7.1
     "com.github.nscala-time"           %% "nscala-time"               % "2.0.0"
     "org.scodec"                       %% "scodec-bits"               % "1.0.9"
+    
+may or may not be usable, see [issue](https://github.com/etorreborre/specs2/issues/399):
+
+    "org.specs2"                       %% "specs2-core"               % "3.6.3"
 
 #### Scala 2.12.0-M1
 
