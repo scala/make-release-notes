@@ -17,6 +17,7 @@ Libraries, add using `libraryDependencies += ...`
     "org.scalaz"                       %% "scalaz-core"               % "7.0.8"
     "org.scalaz"                       %% "scalaz-core"               % "7.1.3"
     "com.github.nscala-time"           %% "nscala-time"               % "2.0.0"
+    "org.scodec"                       %% "scodec-bits"               % "1.0.9"
 
 
 #### Scala 2.12.0-M1
