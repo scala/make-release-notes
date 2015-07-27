@@ -16,7 +16,8 @@ Libraries, add using `libraryDependencies += ...`
     "com.chuusai"                      %% "shapeless"                 % "2.2.5"
     "org.scalaz"                       %% "scalaz-core"               % "7.0.8"
     "org.scalaz"                       %% "scalaz-core"               % "7.1.3"
-    "org.scalaz.stream"                %% "scalaz-stream"             % "0.7.2a"
+    "org.scalaz.stream"                %% "scalaz-stream"             % "0.7.2"     // for scalaz 7.0
+    "org.scalaz.stream"                %% "scalaz-stream"             % "0.7.2a"    // for scalaz 7.1
     "com.github.nscala-time"           %% "nscala-time"               % "2.0.0"
     "org.scodec"                       %% "scodec-bits"               % "1.0.9"
 
