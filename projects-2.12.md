@@ -2,6 +2,8 @@
 
 Please [submit a pull request](https://github.com/scala/make-release-notes/edit/2.12.x/projects-2.12.md) to update this list!
 
+#### Scala 2.12.0-M3
+
 #### Scala 2.12.0-M2
 
 Libraries, add using `libraryDependencies += ...`
