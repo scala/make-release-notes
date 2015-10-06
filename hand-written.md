@@ -89,7 +89,7 @@ The work on the new optimizer is still ongoing.  You can track it in the [scala-
 
 #### The `@implicitAmbiguous` annotation
 
-The `@implicitAmbiguous` annotation allows customizing the error message when an implicit search finds multiple ambiguous values. Refer to the [Scaladoc of the annotation class](http://www.scala-lang.org/api/2.12.0-M3/#scala.annotation.implicitAmbiguous) for an example.
+The `@implicitAmbiguous` annotation allows customizing the error message when an implicit search finds multiple ambiguous values. Refer to the [Scaladoc of the annotation class](http://www.scala-lang.org/api/2.12.x/#scala.annotation.implicitAmbiguous) for an example.
 
 Thanks to @puffnfresh for that contribution!
 
