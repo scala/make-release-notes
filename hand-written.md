@@ -1,12 +1,12 @@
 We are pleased to announce the availability of Scala 2.12.0-M3!
 
-We would like to highlight the following changes since M2:
+Significant changes since M2 include:
 
-* The Scala REPL received a robust and flexible implementation of tab-completion (details below) - a fruitful collaboration between @som-snytt and @retronym
+* The REPL received a robust and flexible implementation of tab-completion (details below) - a fruitful collaboration between @som-snytt and @retronym
 * The `@implicitAmbiguous` annotation allows customizing the error message when an implicit search finds multiple ambiguous values (details below) - thanks @puffnfresh!
 * Enabling `-Ywarn-unused-import` now correctly warns about unused imports that were considered but discarded during an implicit search - thanks @som-snytt!
-* The optimizer now attempts to inline invocations of higher-order methods if the argument function is statically known, which eliminates polymorphic callsites. This is an intermediate step and will be refined further.
-* The Scala library no longer contains a clone of Java's forkjoin library, but uses the one bundled in Java 8
+* The optimizer now attempts to inline invocations of higher-order methods if the argument function is statically known, eliminating polymorphic callsites. (This work will be refined further in later milestones.)
+* The standard library no longer contains a clone of Java's fork/join library, but uses the one bundled in Java 8
 
 Compared to M2, this release resolves [21 issues](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20status%20%3D%20CLOSED%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%22Scala%202.12.0-M3%22%20ORDER%20BY%20component%20ASC%2C%20priority%20DESC). We merged [49 pull requests](https://github.com/scala/scala/pulls?q=is%3Apr+is%3Amerged+milestone%3A2.12.0-M3).
 <!-- Before upgrading, please also check the [known issues](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20status%3Dopen%20AND%20affectedVersion%20%3D%20%22Scala%202.11.7%22%20and%20fixVersion%20%3E%3D%20%22Scala%202.11.7%22%20ORDER%20BY%20component%20ASC%2C%20priority%20DESC) for this release.-->
@@ -15,7 +15,7 @@ As usual for milestones, 2.12.0-M3 is not binary compatible with any other Scala
 
 ## About Scala 2.12
 
-Beginning with 2.12.0-M2, the Scala 2.12 series targets Java 8. Programs written in Scala 2.12, including the Scala 2.12 compiler, can only be executed on Java 8 or newer.
+The Scala 2.12 series targets Java 8. Programs written in Scala 2.12 must be compiled and run on Java 8 or newer.
 
 ### Source compatibility
 
@@ -29,7 +29,7 @@ Milestone releases and release candidates, however, are **not** binary compatibl
 
 Scala 2.12 is not and will not be binary compatible with the 2.11.x series.  This allows us to keep improving the Scala compiler and standard library.  We are working with the community to ensure that core projects in the Scala eco-system become available for 2.12.  Please refer to this growing [list of libraries and frameworks](https://github.com/scala/make-release-notes/blob/2.12.x/projects-2.12.md).
 
-The [Scala 2.11.1 release notes](http://scala-lang.org/news/2.11.1) explain in more detail on how binary compatibility works in Scala.  The same policies that applied to 2.11 will apply to 2.12 as well.
+The [Scala 2.11.1 release notes](http://scala-lang.org/news/2.11.1) explain in more detail on how binary compatibility works in Scala.  The same policies apply to 2.12 as well.
 
 ### New features
 
@@ -91,7 +91,7 @@ The work on the new optimizer is still ongoing.  You can track it in the [scala-
 
 The `@implicitAmbiguous` annotation allows customizing the error message when an implicit search finds multiple ambiguous values. Refer to the [Scaladoc of the annotation class](http://www.scala-lang.org/api/2.12.0-M3/#scala.annotation.implicitAmbiguous) for an example.
 
-Thanks to @puffnfresh for that contribution!
+Thanks to @puffnfresh for this contribution!
 
 ### Unbundled features
 
@@ -102,7 +102,7 @@ The following modules have been removed from the Scala 2.12 distribution:
   See the [Scala actors migration guide](http://docs.scala-lang.org/overviews/core/actors-migration-guide.html).
 * Akka actors.
   The Scala distribution and the `scala-library-all` dependency no longer include Akka actors.
-  To use Akka, [add it as a dependency](http://doc.akka.io/docs/akka/2.3.11/intro/getting-started.html).
+  To use Akka, [add it as a dependency](http://doc.akka.io/docs/akka/2.4.0/intro/getting-started.html).
 * Continuations plugin.
   ([Community maintainers sought](https://github.com/scala/scala-continuations).)
 
