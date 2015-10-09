@@ -4,6 +4,10 @@ Please [submit a pull request](https://github.com/scala/make-release-notes/edit/
 
 #### Scala 2.12.0-M3
 
+Libraries, add using `libraryDependencies += ...`
+
+    "org.scalacheck"                   %% "scalacheck"                % "1.11.6"
+
 #### Scala 2.12.0-M2
 
 Libraries, add using `libraryDependencies += ...`
