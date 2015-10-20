@@ -94,6 +94,14 @@ The `@implicitAmbiguous` annotation allows customizing the error message when an
 
 Thanks to @puffnfresh for this contribution!
 
+#### Assorted improvements to `Future` and `Promise`
+
+New methods, performance improvements, better doc, deprecations, and
+more.  Details at https://github.com/scala/scala/pull/4042
+
+Thanks to @viktorklang for this contribution!  (Based, he says, on
+"years" of collected feedback from the Scala community.)
+
 ### Unbundled features
 
 The following modules have been removed from the Scala 2.12 distribution:
