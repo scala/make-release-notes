@@ -9,6 +9,8 @@ Libraries, add using `libraryDependencies += ...`
     "org.scalacheck"                   %% "scalacheck"                % "1.11.6"
     "org.scalaz"                       %% "scalaz-core"               % "7.1.4"
     "org.scalaz"                       %% "scalaz-core"               % "7.0.8"
+    "org.scalatest"                    %% "scalatest"                 % "2.2.5-M3"
+    "org.scalactic"                    %% "scalactic"                 % "2.2.5-M3"
 
 #### Scala 2.12.0-M2
 
