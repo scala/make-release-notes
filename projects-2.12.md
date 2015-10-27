@@ -7,6 +7,7 @@ Please [submit a pull request](https://github.com/scala/make-release-notes/edit/
 Libraries, add using `libraryDependencies += ...`
 
     "org.scalacheck"                   %% "scalacheck"                % "1.11.6"
+    "org.scalacheck"                   %% "scalacheck"                % "1.12.5"
     "org.scalaz"                       %% "scalaz-core"               % "7.1.4"
     "org.scalaz"                       %% "scalaz-core"               % "7.0.8"
     "org.scalatest"                    %% "scalatest"                 % "2.2.5-M3"
