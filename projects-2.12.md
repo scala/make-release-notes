@@ -13,6 +13,7 @@ Libraries, add using `libraryDependencies += ...`
     "org.scalatest"                    %% "scalatest"                 % "2.2.5-M3"
     "org.scalactic"                    %% "scalactic"                 % "2.2.5-M3"
     "org.scodec"                       %% "scodec-bits"               % "1.0.10"
+    "com.chuusai"                      %% "shapeless"                 % "2.2.5"
 
 #### Scala 2.12.0-M2
 
