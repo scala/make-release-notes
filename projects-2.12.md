@@ -14,6 +14,8 @@ Libraries, add using `libraryDependencies += ...`
     "org.scalactic"                    %% "scalactic"                 % "2.2.5-M3"
     "org.scodec"                       %% "scodec-bits"               % "1.0.10"
     "com.chuusai"                      %% "shapeless"                 % "2.2.5"
+    
+pending: [scalaz-stream](https://github.com/scalaz/scalaz-stream/pull/463), [specs2](https://github.com/etorreborre/specs2/issues/425)
 
 #### Scala 2.12.0-M2
 
