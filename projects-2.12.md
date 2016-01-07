@@ -4,7 +4,13 @@ Please [submit a pull request](https://github.com/scala/make-release-notes/edit/
 
 #### Scala 2.12.0-M3
 
-Libraries, add using `libraryDependencies += ...`
+Scala modules, add in Sbt using `libraryDependencies += ...`
+
+    "org.scala-lang.modules"           %% "scala-xml"                 % "1.0.5"
+    "org.scala-lang.modules"           %% "scala-parser-combinators"  % "1.0.4"
+    "org.scala-lang.modules"           %% "scala-swing"               % "2.0.0-M2"
+
+Other libraries, add in Sbt using `libraryDependencies += ...`
 
     "org.scalacheck"                   %% "scalacheck"                % "1.11.6"
     "org.scalacheck"                   %% "scalacheck"                % "1.12.5"
