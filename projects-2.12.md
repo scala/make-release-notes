@@ -27,7 +27,7 @@ Sbt plugins, add using `addSbtPlugin`
     "org.scala-js"                     %  "sbt-scalajs"               % "0.6.5"
     "com.typesafe"                     %  "sbt-mima-plugin"           % "0.1.8"
 
-pending: [scalaz-stream](https://github.com/scalaz/scalaz-stream/pull/463), [specs2](https://github.com/etorreborre/specs2/issues/425)
+pending: [specs2](https://github.com/etorreborre/specs2/issues/425)
 
 #### Scala 2.12.0-M2
 
