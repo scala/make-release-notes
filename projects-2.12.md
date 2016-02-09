@@ -16,6 +16,7 @@ Other libraries, add in Sbt using `libraryDependencies += ...`
     "org.scalacheck"                   %% "scalacheck"                % "1.12.5"
     "org.scalaz"                       %% "scalaz-core"               % "7.1.4"
     "org.scalaz"                       %% "scalaz-core"               % "7.0.8"
+    "org.scalaz.stream"                %% "scalaz-stream"             % "0.8a"
     "org.scalatest"                    %% "scalatest"                 % "2.2.5-M3"
     "org.scalactic"                    %% "scalactic"                 % "2.2.5-M3"
     "org.scodec"                       %% "scodec-bits"               % "1.0.10"
