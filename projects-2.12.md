@@ -10,14 +10,17 @@ Scala modules, add in Sbt using `libraryDependencies += ...`
     "org.scala-lang.modules"           %% "scala-parser-combinators"  % "1.0.4"
     "org.scala-lang.modules"           %% "scala-swing"               % "2.0.0-M2"
 
-Other libraries, add in Sbt using `libraryDependencies += ...`
+Testing frameworks, add in Sbt using `libraryDependencies += ...`
 
     "org.scalacheck"                   %% "scalacheck"                % "1.11.6"
     "org.scalacheck"                   %% "scalacheck"                % "1.12.5"
+    "org.scalatest"                    %% "scalatest"                 % "2.2.5-M3"
+
+Other libraries, add in Sbt using `libraryDependencies += ...`
+
     "org.scalaz"                       %% "scalaz-core"               % "7.1.4"
     "org.scalaz"                       %% "scalaz-core"               % "7.0.8"
     "org.scalaz.stream"                %% "scalaz-stream"             % "0.8a"
-    "org.scalatest"                    %% "scalatest"                 % "2.2.5-M3"
     "org.scalactic"                    %% "scalactic"                 % "2.2.5-M3"
     "org.scodec"                       %% "scodec-bits"               % "1.0.10"
     "com.chuusai"                      %% "shapeless"                 % "2.2.5"
