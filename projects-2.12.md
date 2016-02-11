@@ -21,6 +21,7 @@ Other libraries, add in Sbt using `libraryDependencies += ...`
     "org.scalactic"                    %% "scalactic"                 % "2.2.5-M3"
     "org.scodec"                       %% "scodec-bits"               % "1.0.10"
     "com.chuusai"                      %% "shapeless"                 % "2.2.5"
+    "org.scalikejdbc"                  %% "scalikejdbc"               % "2.3.5"
 
 Sbt plugins, add using `addSbtPlugin`
 
