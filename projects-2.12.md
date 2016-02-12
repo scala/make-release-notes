@@ -15,6 +15,7 @@ Testing frameworks, add in Sbt using `libraryDependencies += ...`
     "org.scalacheck"                   %% "scalacheck"                % "1.11.6"
     "org.scalacheck"                   %% "scalacheck"                % "1.12.5"
     "org.scalatest"                    %% "scalatest"                 % "2.2.5-M3"
+    "org.specs2"                       %% "specs2-core"               % "3.7.1"
 
 Other libraries, add in Sbt using `libraryDependencies += ...`
 
@@ -30,8 +31,6 @@ Sbt plugins, add using `addSbtPlugin`
 
     "org.scala-js"                     %  "sbt-scalajs"               % "0.6.5"
     "com.typesafe"                     %  "sbt-mima-plugin"           % "0.1.8"
-
-pending: [specs2](https://github.com/etorreborre/specs2/issues/425)
 
 #### Scala 2.12.0-M2
 
