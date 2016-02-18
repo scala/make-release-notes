@@ -28,7 +28,7 @@ Other libraries, add in Sbt using `libraryDependencies += ...`
     "com.chuusai"                      %% "shapeless"                 % "2.2.5"
     "org.scalikejdbc"                  %% "scalikejdbc"               % "2.3.5"
 
-Sbt plugins, add using `addSbtPlugin`
+Sbt plugins, add using `addSbtPlugin`; note that sbt 0.13 plugins always run on Scala 2.10, so most plugins don't need any changes to work with projects targeting 2.12; but the following plugins did need changes
 
     "org.scala-js"                     %  "sbt-scalajs"               % "0.6.5"
     "com.typesafe"                     %  "sbt-mima-plugin"           % "0.1.8"
