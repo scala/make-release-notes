@@ -16,6 +16,7 @@ The last planned 2.11.x release will be 2.11.9 in late 2016.
 The implementation of tab-completion in the Scala REPL has been rewritten and now uses the same infrastructure as for example ScalaIDE and ENSIME.
 
 There are a number of improvements:
+
 * Reliable completion, also in partial expressions and syntactically incorrect programs: try `class C { def f(l: List[Int]) = l.<TAB>`
 * CamelCase completion: try `(l: List[Int]).rro<TAB>`, it expands to `(l: List[Int]).reduceRightOption`
 * Show desugarings performed by the compiler by adding `//print`: try `for (x <- 1 to 10) println(x) //print<TAB>`
