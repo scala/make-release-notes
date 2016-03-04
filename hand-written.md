@@ -5,7 +5,7 @@ Significant changes since 2.11.7 include:
 * The Scala REPL now has robust and flexible tab-completion (details below)
 * An assortment of bugs have been fixed
 
-Compared to 2.11.7, this release resolves [43 issues](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20in%20%28%22Scala%202.11.8%22%29%20ORDER%20BY%20component%20ASC%2C%20priority%20DESC).  We merged [173 pull requests](https://github.com/scala/scala/pulls?q=is%3Apr+is%3Amerged+milestone%3A2.11.8).
+Compared to 2.11.7, this release resolves [43 issues](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20in%20%28%22Scala%202.11.8%22%29%20ORDER%20BY%20component%20ASC%2C%20priority%20DESC).  We merged [175 pull requests](https://github.com/scala/scala/pulls?q=is%3Apr+is%3Amerged+milestone%3A2.11.8).
 
 As usual for minor releases, Scala 2.11.8 is binary compatible with other releases in the Scala 2.11 series.
 
