@@ -5,7 +5,7 @@ Significant changes since 2.11.7 include:
 * The Scala REPL now has robust and flexible tab-completion (details below)
 * An assortment of bugs have been fixed
 
-Compared to 2.11.7, this release resolves [43 issues](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20in%20%28%22Scala%202.11.8%22%29%20ORDER%20BY%20component%20ASC%2C%20priority%20DESC).  We merged [170 pull requests](https://github.com/scala/scala/pulls?q=is%3Apr+is%3Amerged+milestone%3A2.11.8).
+Compared to 2.11.7, this release resolves [43 issues](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20in%20%28%22Scala%202.11.8%22%29%20ORDER%20BY%20component%20ASC%2C%20priority%20DESC).  We merged [173 pull requests](https://github.com/scala/scala/pulls?q=is%3Apr+is%3Amerged+milestone%3A2.11.8).
 
 As usual for minor releases, Scala 2.11.8 is binary compatible with other releases in the Scala 2.11 series.
 
@@ -13,7 +13,7 @@ The last planned 2.11.x release will be 2.11.9 in late 2016.
 
 ### New tab-completion in the Scala REPL
 
-The implementation of tab-completion in the Scala REPL has been rewritten and now uses the same infrastructure as for example ScalaIDE and ENSIME.
+The implementation of tab-completion in the Scala REPL has been rewritten and now uses the same infrastructure as for example Scala IDE and ENSIME.
 
 There are a number of improvements:
 
@@ -25,14 +25,13 @@ There are a number of improvements:
 * Complete non-qualified names, including types: try `def f(s: Str<TAB>`
 * Press tab twice to see the method signature: try `List(1,2,3).part<TAB>`, which completes to `List(1,2,3).partition`; press tab again to display `def partition(p: Int => Boolean): (List[Int], List[Int])`
 
-Thanks to @retronym and @som-snytt for their fruitful collaboration on
-this work!
+Thanks to @retronym and @som-snytt for their fruitful collaboration on this work!
 
 ### Contributors
 
 A big thank you to everyone who's helped improve Scala by reporting bugs, improving our documentation, spreading kindness in mailing lists and other public fora, and submitting and reviewing pull requests! You are all magnificent.
 
-According to `git shortlog -sn --no-merges v2.11.7..v2.11.8`, 43 people contributed to this minor release: Seth Tisue, Jason Zaugg, Janek Bogucki, Lukas Rytz, Stefan Zeiger, A. P. Marki, Rex Kerr, Performant Data LLC, wpopielarski, Adriaan Moors, Vlad Ureche, martijnhoekstra, Rui Gonçalves, vsalvis, Michał Pociecha, Frank S. Thomas, Igor Racic, Kenji Yoshida, Li Yao, todesking, Mariot Chauvin, Marconi Lanna, Parambir Singh, Paul Draper, Linas Medziunas, Kirill Khazan, JoeRatt, Ryan Zhang, Jan Bessai, Simon Schäfer, Gerard Basler, Sébastien Doeraene, Tim Vergenz, Tomas Janousek, Eitan Adler, dk14, jvican, kirillkh, Arnout Engelen, stusmall, Alexey Romanov, Antoine Gourlay, Michael.
+According to `git shortlog -sn --no-merges v2.11.7..v2.11.8`, 44 people contributed to this minor release: Seth Tisue, Jason Zaugg, Janek Bogucki, Lukas Rytz, Stefan Zeiger, A. P. Marki, Rex Kerr, Performant Data LLC, wpopielarski, Adriaan Moors, Vlad Ureche, Rui Gonçalves, vsalvis, martijnhoekstra, todesking, Li Yao, Frank S. Thomas, Igor Racic, Michał Pociecha, Kenji Yoshida, Tomas Janousek, dk14, jvican, stusmall, kirillkh, Alexey Romanov, Antoine Gourlay, Arnout Engelen, Eitan Adler, Felix Mulder, Gerard Basler, Jan Bessai, JoeRatt, Kirill Khazan, Linas Medziunas, Marconi Lanna, Mariot Chauvin, Michael, Parambir Singh, Paul Draper, Ryan Zhang, Simon Schäfer, Sébastien Doeraene, Tim Vergenz.
 
 ### Obtaining Scala
 
