@@ -48,7 +48,7 @@ The Scala 2.11.7 compiler emits lambdas in Java 8 style (using `invokedynamic` a
 
 In an SBT project, this can be achieved using the following settings:
 
-    libraryDependencies += "org.scala-lang.modules" %% "scala-java8-compat" % "0.5.0"
+    libraryDependencies += "org.scala-lang.modules" %% "scala-java8-compat" % "0.7.0"
     
     scalacOptions ++= List("-Ybackend:GenBCode", "-Ydelambdafy:method", "-target:jvm-1.8")
 
