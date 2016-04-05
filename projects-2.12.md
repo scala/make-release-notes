@@ -2,6 +2,16 @@
 
 Please [submit a pull request](https://github.com/scala/make-release-notes/edit/2.12.x/projects-2.12.md) to update this list!
 
+#### Scala 2.12.0-M4
+
+Scala modules, add in Sbt using `libraryDependencies += ...`
+
+    "org.scala-lang.modules"           %% "scala-xml"                 % "1.0.5"
+    "org.scala-lang.modules"           %% "scala-parser-combinators"  % "1.0.4"
+    "org.scala-lang.modules"           %% "scala-swing"               % "2.0.0-M2"
+
+Support for Scala.js has not been published yet ([link with info](https://groups.google.com/d/msg/scala-internals/NZ4pVWB4HWY/CWtJJCqbHAAJ)).
+
 #### Scala 2.12.0-M3
 
 Scala modules, add in Sbt using `libraryDependencies += ...`
