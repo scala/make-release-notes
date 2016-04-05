@@ -1,10 +1,10 @@
 We are happy to announce the availability of Scala 2.12.0-M4, which marks feature completeness for 2.12!
 
-Scala 2.12 is all about making optimal use of Java 8's new features. Traits ([#5003](https://github.com/scala/scala/pull/5003)) and functions are compiled to their Java 8 equivalents, and we treat Single Abstract Method types and Scala's builtin function types uniformly from type checking to the backend ([#4971](https://github.com/scala/scala/pull/4971)). We also use `invokedynamic` for a more natural encoding of other language features ([#4896](https://github.com/scala/scala/pull/4896)). We've standardized on the GenBCode back-end ([#4814](https://github.com/scala/scala/pull/4814), [#4838](https://github.com/scala/scala/pull/4838)) and the flat classpath implementation is now the default ([#5057](https://github.com/scala/scala/pull/5057)). The optimizer has been completely overhauled for 2.12. This milestone adds box/unbox optimization ([#4858](https://github.com/scala/scala/pull/4858)).
+Scala 2.12 is all about making optimal use of Java 8's new features. Traits ([#5003](https://github.com/scala/scala/pull/5003)) and functions are compiled to their Java 8 equivalents, and we treat Single Abstract Method types and Scala's builtin function types uniformly from type checking to the back end ([#4971](https://github.com/scala/scala/pull/4971)). We also use `invokedynamic` for a more natural encoding of other language features ([#4896](https://github.com/scala/scala/pull/4896)). We've standardized on the GenBCode back end ([#4814](https://github.com/scala/scala/pull/4814), [#4838](https://github.com/scala/scala/pull/4838)) and the flat classpath implementation is now the default ([#5057](https://github.com/scala/scala/pull/5057)). The optimizer has been completely overhauled for 2.12. This milestone adds box/unbox optimization ([#4858](https://github.com/scala/scala/pull/4858)).
 
 For more details about what's new in this milestone, including some breaking changes, please take a look at [these 14 noteworthy PRs](https://github.com/scala/scala/pulls?q=is%3Apr+label%3Arelease-notes+milestone%3A2.12.0-M4+is%3Amerged).
 
-In total, we merged [135 pull requests](https://github.com/scala/scala/pulls?q=is%3Apr+is%3Amerged+milestone%3A2.12.0-M4), of which [16 PRs by new contributors](https://github.com/scala/scala/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Amerged+author%3Afelixmulder++milestone%3A2.12.0-M4) -- welcome! This milestone resolves [49 JIRA tickets](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20status%20%3D%20CLOSED%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%22Scala%202.12.0-M4%22%20ORDER%20BY%20component%20ASC%2C%20priority%20DESC).
+In total, we merged [135 pull requests](https://github.com/scala/scala/pulls?q=is%3Apr+is%3Amerged+milestone%3A2.12.0-M4), of which [16 are by new contributors](https://github.com/scala/scala/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Amerged+author%3Afelixmulder++milestone%3A2.12.0-M4) -- welcome! This milestone resolves [49 JIRA tickets](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20status%20%3D%20CLOSED%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%22Scala%202.12.0-M4%22%20ORDER%20BY%20component%20ASC%2C%20priority%20DESC).
 
 We'd especially like to thank Felix Mulder for his [excellent work on the new Scaladoc interface](https://github.com/scala/scala/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Amerged+author%3Afelixmulder++milestone%3A2.12.0-M4)! [Check it out!](http://www.scala-lang.org/files/archive/api/2.12.0-M4/)
 
@@ -28,16 +28,14 @@ For each lambda the compiler generates a method containing the lambda body, and 
 
 Compared to Scala 2.11, the new scheme has the advantage that, in most cases, the compiler does not need to generate an anonymous class for each closure. This leads to significantly smaller JAR files.
 
-#### New backend
+#### New back end
 
-Scala 2.12 enables the "GenBCode" backend by default.
-
-The new backend is more efficient than the default backend of Scala 2.11, because it directly generates ASM bytecode from Scala compiler trees, while the previous backend used an intermediate representation called "ICode".
+Scala 2.12 standardizes on the "GenBCode" back end, which emits code more quickly because it directly generates ASM bytecode from Scala compiler trees, while the previous back end used an intermediate representation called "ICode". The old back ends (GenASM and GenIcode) have been removed ([#4814](https://github.com/scala/scala/pull/4814), [#4838](https://github.com/scala/scala/pull/4838)).
 
 
 #### New bytecode optimizer
 
-The GenBCode backend includes a new inliner and bytecode optimizer.
+The GenBCode back end includes a new inliner and bytecode optimizer.
 The optimizer is enabled using the `-Yopt:l:classpath` compiler option.
 Check `-Yopt:help` to see the full list of available options for the optimizer.
 
@@ -46,7 +44,7 @@ As of M4, the following optimizations are available:
 * Inlining final methods, including methods defined in objects and final methods defined in traits
 * If a closure is allocated and invoked within the same method, the closure invocation is replaced by an invocations of the corresponding lambda body method
 * Dead code elimination and a small number of cleanup optimizations
-* Box/unbox elimitation [#4858](https://github.com/scala/scala/pull/4858)
+* Box/unbox elimination [#4858](https://github.com/scala/scala/pull/4858)
 
 The work on the new optimizer is still ongoing.  You can track it in the [scala-dev repository issue tracker](https://github.com/scala/scala-dev/labels/t%3Aoptimizer).
 
