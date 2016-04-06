@@ -14,6 +14,9 @@ Testing frameworks, add in Sbt using `libraryDependencies += ...`
 
     "org.scalatest"                    %% "scalatest"                 % "2.2.6"
     "org.scalatest"                    %% "scalatest"                 % "3.0.0-M16-SNAP3"
+    "org.scalacheck"                   %% "scalacheck"                % "1.11.6"
+
+Note that ScalaCheck is an old version, published as part of the Scala build. A newer version will be published soon.
 
 Support for Scala.js has not been published yet ([link with info](https://groups.google.com/d/msg/scala-internals/NZ4pVWB4HWY/CWtJJCqbHAAJ)).
 
