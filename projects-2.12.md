@@ -10,7 +10,14 @@ Scala modules, add in Sbt using `libraryDependencies += ...`
     "org.scala-lang.modules"           %% "scala-parser-combinators"  % "1.0.4"
     "org.scala-lang.modules"           %% "scala-swing"               % "2.0.0-M2"
 
+Testing frameworks, add in Sbt using `libraryDependencies += ...`
+
+    "org.scalatest"                    %% "scalatest"                 % "2.2.6"
+    "org.scalatest"                    %% "scalatest"                 % "3.0.0-M16-SNAP3"
+
 Support for Scala.js has not been published yet ([link with info](https://groups.google.com/d/msg/scala-internals/NZ4pVWB4HWY/CWtJJCqbHAAJ)).
+
+Progress towards a Specs2 release for M4 can be tracked [here](https://github.com/etorreborre/specs2/issues/469).
 
 #### Scala 2.12.0-M3
 
