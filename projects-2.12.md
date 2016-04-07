@@ -24,6 +24,7 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "org.typelevel"                    %% "macro-compat"              % "1.1.1"
     "com.chuusai"                      %% "shapeless"                 % "2.2.5"
     "com.chuusai"                      %% "shapeless"                 % "2.3.0"
+    "com.github.scopt"                 %% "scopt"                     % "3.4.0"
 
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
     
@@ -64,6 +65,7 @@ Other libraries, add in Sbt using `libraryDependencies += ...`
     "org.scodec"                       %% "scodec-bits"               % "1.0.10"
     "com.chuusai"                      %% "shapeless"                 % "2.2.5"
     "org.scalikejdbc"                  %% "scalikejdbc"               % "2.3.5"
+    "com.github.scopt"                 %% "scopt"                     % "3.4.0"
 
 Sbt plugins, add using `addSbtPlugin`; note that sbt 0.13 plugins always run on Scala 2.10, so most plugins don't need any changes to work with projects targeting 2.12; but the following plugins did need changes
 
