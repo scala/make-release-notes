@@ -1,28 +1,40 @@
-### Available Projects for Scala 2.12
+## Available Projects for Scala 2.12
 
 Please [submit a pull request](https://github.com/scala/make-release-notes/edit/2.12.x/projects-2.12.md) to update this list!
 
-#### Scala 2.12.0-M4
+### Scala 2.12.0-M4
 
-Scala modules, add in Sbt using `libraryDependencies += ...`
+Scala modules, add in sbt using `libraryDependencies += ...`
 
     "org.scala-lang.modules"           %% "scala-xml"                 % "1.0.5"
     "org.scala-lang.modules"           %% "scala-parser-combinators"  % "1.0.4"
     "org.scala-lang.modules"           %% "scala-swing"               % "2.0.0-M2"
 
-Testing frameworks, add in Sbt using `libraryDependencies += ...`
+Testing frameworks, add in sbt using `libraryDependencies += ... % "test"`
 
-    "org.scalatest"                    %% "scalatest"                 % "2.2.6"
-    "org.scalatest"                    %% "scalatest"                 % "3.0.0-M16-SNAP3"
-    "org.scalacheck"                   %% "scalacheck"                % "1.11.6"
+    "org.scalatest"                    %% "scalatest"                 % "2.2.6"           % "test"
+    "org.scalatest"                    %% "scalatest"                 % "3.0.0-M16-SNAP3" % "test"
+    "org.scalacheck"                   %% "scalacheck"                % "1.11.6"          % "test"
+    "org.scalacheck"                   %% "scalacheck"                % "1.12.5"          % "test"
 
-Note that ScalaCheck is an old version, published as part of the Scala build. A newer version will be published soon.
+Note that ScalaCheck 1.3.0 is not yet published; see https://github.com/rickynils/scalacheck/issues/230.
 
-Support for Scala.js has not been published yet ([link with info](https://groups.google.com/d/msg/scala-internals/NZ4pVWB4HWY/CWtJJCqbHAAJ)).
+Other libraries, add in sbt using `libraryDependencies += ...`
 
-Progress towards a Specs2 release for M4 can be tracked [here](https://github.com/etorreborre/specs2/issues/469).
+    "org.typelevel"                    %% "macro-compat"              % "1.1.1"
+    "com.chuusai"                      %% "shapeless"                 % "2.2.5"
+    "com.chuusai"                      %% "shapeless"                 % "2.3.0"
 
-#### Scala 2.12.0-M3
+Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
+    
+    "org.scalamacros"                  %% "paradise"                  % "2.1.0"
+
+Additional notes:
+
+* Support for Scala.js has not been published yet ([link with info](https://groups.google.com/d/msg/scala-internals/NZ4pVWB4HWY/CWtJJCqbHAAJ)).
+* Progress towards a Specs2 release for M4 can be tracked [here](https://github.com/etorreborre/specs2/issues/469).
+
+### Scala 2.12.0-M3
 
 Scala modules, add in Sbt using `libraryDependencies += ...`
 
@@ -53,7 +65,7 @@ Sbt plugins, add using `addSbtPlugin`; note that sbt 0.13 plugins always run on 
     "org.scala-js"                     %  "sbt-scalajs"               % "0.6.5"
     "com.typesafe"                     %  "sbt-mima-plugin"           % "0.1.8"
 
-#### Scala 2.12.0-M2
+### Scala 2.12.0-M2
 
 Libraries, add using `libraryDependencies += ...`
 
@@ -73,7 +85,7 @@ may or may not be usable, see [issue](https://github.com/etorreborre/specs2/issu
 
     "org.specs2"                       %% "specs2-core"               % "3.6.3"
 
-#### Scala 2.12.0-M1
+### Scala 2.12.0-M1
 
 Libraries, add using `libraryDependencies += ...`
 
