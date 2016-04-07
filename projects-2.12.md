@@ -17,8 +17,6 @@ Testing frameworks, add in sbt using `libraryDependencies += ... % "test"`
     "org.scalacheck"                   %% "scalacheck"                % "1.11.6"          % "test"
     "org.scalacheck"                   %% "scalacheck"                % "1.12.5"          % "test"
 
-Note that ScalaCheck 1.13.0 is not yet published; see https://github.com/rickynils/scalacheck/issues/230.
-
 Other libraries, add in sbt using `libraryDependencies += ...`
 
     "org.typelevel"                    %% "macro-compat"              % "1.1.1"
@@ -32,6 +30,7 @@ Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 Additional notes:
 
 * Support for Scala.js has not been published yet ([link with info](https://groups.google.com/d/msg/scala-internals/NZ4pVWB4HWY/CWtJJCqbHAAJ)).
+* ScalaCheck 1.13.0 is not yet published; see https://github.com/rickynils/scalacheck/issues/230.
 * Progress towards a Specs2 release for M4 can be tracked [here](https://github.com/etorreborre/specs2/issues/469).
 
 ### Scala 2.12.0-M3
