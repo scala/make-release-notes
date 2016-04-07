@@ -19,6 +19,8 @@ Testing frameworks, add in sbt using `libraryDependencies += ... % "test"`
 
 Other libraries, add in sbt using `libraryDependencies += ...`
 
+    "org.scalactic"                    %% "scalactic"                 % "2.2.6"
+    "org.scalactic"                    %% "scalactic"                 % "3.0.0-M16-SNAP3"
     "org.typelevel"                    %% "macro-compat"              % "1.1.1"
     "com.chuusai"                      %% "shapeless"                 % "2.2.5"
     "com.chuusai"                      %% "shapeless"                 % "2.3.0"
