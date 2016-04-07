@@ -17,7 +17,7 @@ Testing frameworks, add in sbt using `libraryDependencies += ... % "test"`
     "org.scalacheck"                   %% "scalacheck"                % "1.11.6"          % "test"
     "org.scalacheck"                   %% "scalacheck"                % "1.12.5"          % "test"
 
-Note that ScalaCheck 1.3.0 is not yet published; see https://github.com/rickynils/scalacheck/issues/230.
+Note that ScalaCheck 1.13.0 is not yet published; see https://github.com/rickynils/scalacheck/issues/230.
 
 Other libraries, add in sbt using `libraryDependencies += ...`
 
