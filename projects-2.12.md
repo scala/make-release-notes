@@ -24,6 +24,8 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "org.typelevel"                    %% "macro-compat"              % "1.1.1"
     "com.chuusai"                      %% "shapeless"                 % "2.2.5"
     "com.chuusai"                      %% "shapeless"                 % "2.3.0"
+    "com.github.nscala-time"           %% "nscala-time"               % "2.12.0"
+    "org.scalaz"                       %% "scalaz-core"               % "7.1.7"
 
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
     
