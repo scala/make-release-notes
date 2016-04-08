@@ -24,6 +24,8 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "org.typelevel"                    %% "macro-compat"              % "1.1.1"
     "com.chuusai"                      %% "shapeless"                 % "2.2.5"
     "com.chuusai"                      %% "shapeless"                 % "2.3.0"
+    "org.scodec"                       %% "scodec-bits"               % "1.0.12"
+    "org.scodec"                       %% "scodec-bits"               % "1.1.0"
 
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
     
