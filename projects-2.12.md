@@ -38,6 +38,7 @@ Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 
 Sbt plugins. Most plugins do not need to be re-published for 2.12, but certain plugins required changes. Add using `addSbtPlugin`:
 
+    "org.scala-js"                     %  "sbt-scalajs"               % "0.6.8"
     "com.typesafe"                     %  "sbt-mima-plugin"           % "0.1.9"
 
 Additional notes:
