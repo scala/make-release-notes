@@ -73,7 +73,7 @@ Type inference in this scenario only works when we can narrow the overloads down
 
 Finally, implicit conversion of SAM types to Function types won't kick in anymore, since the compiler does this conversion itself first:
 
-```
+```scala
 implicit def unused(fun: Int => String): MySam
   = new MySam { def apply(x: Int) = fun(x) }
 
