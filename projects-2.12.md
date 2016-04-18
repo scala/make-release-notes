@@ -32,6 +32,7 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "org.scodec"                       %% "scodec-bits"               % "1.0.12"
     "org.scodec"                       %% "scodec-bits"               % "1.1.0"
     "com.github.scopt"                 %% "scopt"                     % "3.4.0"
+    "com.typesafe.akka"                %% "akka-actor"                % "2.4.4"
 
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
     
