@@ -45,7 +45,6 @@ Sbt plugins. Most plugins do not need to be re-published for 2.12, but certain p
 
 Additional notes:
 
-* ScalaCheck 1.13.0 is not yet published; see https://github.com/rickynils/scalacheck/issues/230.
 * Progress towards a Specs2 release for M4 can be tracked [here](https://github.com/etorreborre/specs2/issues/469).
 
 ### Scala 2.12.0-M3
