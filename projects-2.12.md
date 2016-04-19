@@ -14,7 +14,7 @@ Scala modules, add in sbt using `libraryDependencies += ...`
 Testing frameworks, add in sbt using `libraryDependencies += ... % "test"`
 
     "org.scalatest"                    %% "scalatest"                 % "2.2.6"           % "test"
-    "org.scalatest"                    %% "scalatest"                 % "3.0.0-M16-SNAP3" % "test"
+    "org.scalatest"                    %% "scalatest"                 % "3.0.0-M16-SNAP4" % "test"
     "org.scalacheck"                   %% "scalacheck"                % "1.11.6"          % "test"
     "org.scalacheck"                   %% "scalacheck"                % "1.12.5"          % "test"
     "org.scalacheck"                   %% "scalacheck"                % "1.13.1"          % "test"
