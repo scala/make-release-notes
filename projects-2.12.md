@@ -29,6 +29,8 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "com.github.nscala-time"           %% "nscala-time"               % "2.12.0"
     "org.scalaz"                       %% "scalaz-core"               % "7.1.7"
     "org.scalaz"                       %% "scalaz-core"               % "7.2.2"
+    "org.scalaz.stream"                %% "scalaz-stream"             % "0.8.1"
+    "org.scalaz.stream"                %% "scalaz-stream"             % "0.8.1a"
     "org.scodec"                       %% "scodec-bits"               % "1.0.12"
     "org.scodec"                       %% "scodec-bits"               % "1.1.0"
     "com.github.scopt"                 %% "scopt"                     % "3.4.0"
