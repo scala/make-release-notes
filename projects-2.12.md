@@ -18,6 +18,7 @@ Testing frameworks, add in sbt using `libraryDependencies += ... % "test"`
     "org.scalacheck"                   %% "scalacheck"                % "1.11.6"          % "test"
     "org.scalacheck"                   %% "scalacheck"                % "1.12.5"          % "test"
     "org.scalacheck"                   %% "scalacheck"                % "1.13.1"          % "test"
+    "org.specs2"                       %% "specs2-core"               % "3.7.3.1"         % "test"
 
 Other libraries, add in sbt using `libraryDependencies += ...`
 
@@ -44,10 +45,6 @@ Sbt plugins. Most plugins do not need to be re-published for 2.12, but certain p
 
     "org.scala-js"                     %  "sbt-scalajs"               % "0.6.8"
     "com.typesafe"                     %  "sbt-mima-plugin"           % "0.1.9"
-
-Additional notes:
-
-* Progress towards a Specs2 release for M4 can be tracked [here](https://github.com/etorreborre/specs2/issues/469).
 
 ### Scala 2.12.0-M3
 
