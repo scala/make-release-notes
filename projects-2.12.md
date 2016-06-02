@@ -40,6 +40,7 @@ Other libraries, add in sbt using `libraryDependencies += ...`
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
     
     "org.scalamacros"                  %% "paradise"                  % "2.1.0"
+    "org.spire-math"                   %% "kind-projector"            % "0.8.0"
 
 Sbt plugins. Most plugins do not need to be re-published for 2.12, but certain plugins required changes. Add using `addSbtPlugin`:
 
