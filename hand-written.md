@@ -1,21 +1,43 @@
-We are happy to announce the availability of Scala 2.12.0-M4, which marks feature completeness for 2.12!
+We are happy to announce the availability of Scala 2.12.0-M5!
 
-Scala 2.12 is all about making optimal use of Java 8's new features. Traits ([#5003](https://github.com/scala/scala/pull/5003)) and functions are compiled to their Java 8 equivalents, and we treat Single Abstract Method types and Scala's builtin function types uniformly from type checking to the back end ([#4971](https://github.com/scala/scala/pull/4971)). We also use `invokedynamic` for a more natural encoding of other language features ([#4896](https://github.com/scala/scala/pull/4896)). We've standardized on the GenBCode back end ([#4814](https://github.com/scala/scala/pull/4814), [#4838](https://github.com/scala/scala/pull/4838)) and the flat classpath implementation is now the default ([#5057](https://github.com/scala/scala/pull/5057)). The optimizer has been completely overhauled for 2.12. This milestone adds box/unbox optimization ([#4858](https://github.com/scala/scala/pull/4858)).
+Notable changes in M5
+([see here](https://github.com/scala/scala/pulls?utf8=%E2%9C%93&q=milestone%3A2.12.0-M5%20label%3Arelease-notes)
+for a more extensive list):
+  - [#5251](https://github.com/scala/scala/pull/5251): concrete trait methods are compiled to a
+    static method (in the interface classfile) containing the actual implementation, and a default
+    method forwards that to the static one.
+  - [#5085](https://github.com/scala/scala/pull/5085): classes extending traits no longer get mixin
+    forwarders (in most cases), the JVM picks the correct default method.
+  - [#5102](https://github.com/scala/scala/pull/5102) adds partial unification of type constructors
+    (behind `-Ypartial-unification`) and fixes SI-2712. Thanks @milessabin!
+  - The optimizer now listens to `-opt` (instead of `-Yopt`)
+  - [SI-9390](https://issues.scala-lang.org/browse/SI-9390): local methods that don't capture `this`
+    are emitted as static to prevent capturing the outer instance in lambdas.
 
-For more details about what's new in this milestone, including some breaking changes, please take a look at [these 14 noteworthy PRs](https://github.com/scala/scala/pulls?q=is%3Apr+label%3Arelease-notes+milestone%3A2.12.0-M4+is%3Amerged).
+*Note*: #5085 introduces a performance regression, it causes the Scala compiler to run 20% slower.
+Any Scala program that uses concrete trait methods might see a slowdown. The most likely
+cause is that the JVM does not perform "class hierarchy analysis" (CHA) for methods
+defined in interfaces, including default methods, as noted in
+[JDK bug 8036580](https://bugs.openjdk.java.net/browse/JDK-8036580). This prevents the JIT from
+performing certain (important) optimizations. Most likely we will have to revert the change to fix
+the issue, but we are still investigating the details. The 2.12 release notes will clarify the
+impact of changes to traits on binary compatibility.
 
-In total, we merged [135 pull requests](https://github.com/scala/scala/pulls?q=is%3Apr+is%3Amerged+milestone%3A2.12.0-M4), of which [16 are by new contributors](https://github.com/scala/scala/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Amerged+author%3Afelixmulder++milestone%3A2.12.0-M4) -- welcome! This milestone resolves [49 JIRA tickets](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20status%20%3D%20CLOSED%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%22Scala%202.12.0-M4%22%20ORDER%20BY%20component%20ASC%2C%20priority%20DESC).
+In total, we merged [96 pull requests](https://github.com/scala/scala/pulls?q=is%3Apr+is%3Amerged+milestone%3A2.12.0-M5), of which [9 are by new contributors](https://github.com/scala/scala/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Amerged%20milestone%3A2.12.0-M5%20label%3Awelcome) -- welcome!
+This milestone resolves [49 JIRA tickets](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20status%20%3D%20CLOSED%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%22Scala%202.12.0-M5%22%20ORDER%20BY%20component%20ASC%2C%20priority%20DESC).
 
-We'd especially like to thank Felix Mulder for his [excellent work on the new Scaladoc interface](https://github.com/scala/scala/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Amerged+author%3Afelixmulder++milestone%3A2.12.0-M4)! [Check it out!](http://www.scala-lang.org/files/archive/api/2.12.0-M4/)
+As usual for milestones, 2.12.0-M5 is not binary compatible with any other Scala release, including other 2.12 milestones. Scala 2.12 requires a Java 8 runtime.
 
+## Scala 2.12
+
+Scala 2.12 is all about making optimal use of Java 8's new features. Traits ([#5003](https://github.com/scala/scala/pull/5003)) and functions are compiled to their Java 8 equivalents, and we treat Single Abstract Method types and Scala's builtin function types uniformly from type checking to the back end ([#4971](https://github.com/scala/scala/pull/4971)). We also use `invokedynamic` for a more natural encoding of other language features ([#4896](https://github.com/scala/scala/pull/4896)). We've standardized on the GenBCode back end ([#4814](https://github.com/scala/scala/pull/4814), [#4838](https://github.com/scala/scala/pull/4838)) and the flat classpath implementation is now the default ([#5057](https://github.com/scala/scala/pull/5057)). The optimizer has been completely overhauled for 2.12.
 
 Except for the breaking changes listed below, code that compiles on 2.11.x without deprecation warnings should compile on 2.12.x too, unless you use experimental APIs such as reflection.  If you find incompatibilities, please [file an issue](https://issues.scala-lang.org).
 
-As usual for milestones, 2.12.0-M4 is not binary compatible with any other Scala release, including other 2.12 milestones. Scala 2.12 requires a Java 8 runtime.
-
 ### New features
 
-With M4, we consider 2.12.x feature complete. Please try it out while we still have time to fix any regressions in M5! For the next milestone, we'll focus on addressing any issues discovered with M4, overall robustness and polish, and some smaller improvements that are less likely to cause regressions or source incompatibilities. For RC1, we will try to remain binary compatible with M5, and we won't risk regressions except for the most critical bugs.
+Since M4, we consider 2.12.x feature complete.
+For RC1, we will try to remain binary compatible with M5, and we won't risk regressions except for the most critical bugs.
 
 #### Trait compiles to an interface
 With Java 8 allowing concrete methods in interfaces, Scala 2.12 is able to compile a trait to a single interface. Before, a trait was represented as a class that held the method implementations and an interface. Note that the compiler still has quite a bit of magic to perform behind the scenes, so that care must be taken if a trait is meant to be implemented in Java. (Briefly, if a trait does any of the following its subclasses require synthetic code: defining fields, calling super, initializer statements in the body, extending a class, relying on linearization to find implementations in the right super trait.)
@@ -36,10 +58,10 @@ Scala 2.12 standardizes on the "GenBCode" back end, which emits code more quickl
 #### New bytecode optimizer
 
 The GenBCode back end includes a new inliner and bytecode optimizer.
-The optimizer is enabled using the `-Yopt:l:classpath` compiler option.
-Check `-Yopt:help` to see the full list of available options for the optimizer.
+The optimizer is enabled using the `-opt:l:classpath` compiler option.
+Check `-opt:help` to see the full list of available options for the optimizer.
 
-As of M4, the following optimizations are available:
+The following optimizations are available:
 
 * Inlining final methods, including methods defined in objects and final methods defined in traits
 * If a closure is allocated and invoked within the same method, the closure invocation is replaced by an invocations of the corresponding lambda body method
@@ -105,7 +127,7 @@ The [Scala 2.11.1 release notes](http://scala-lang.org/news/2.11.1) explain in m
 
 A big thank you to everyone who's helped improve Scala by reporting bugs, improving our documentation, spreading kindness in mailing lists and other public fora, and submitting and reviewing pull requests! You are all magnificent.
 
-According to `git shortlog -sn --no-merges v2.12.0-M3..v2.12.0-M4`, the following contributors helped to realize this milestone: Lukas Rytz, Adriaan Moors, Jason Zaugg, Stefan Zeiger, Janek Bogucki, Seth Tisue, Felix Mulder, A. P. Marki, Simon Ochsenreither, Performant Data LLC, wpopielarski, Kota Mizushima, Rui Gonçalves, Shane Delmore, dk14, Rex Kerr, martijnhoekstra, Kenji Yoshida, vsalvis, todesking, triggerNZ, Linas Medziunas, Dongjoon Hyun, Denys Shabalin, Pim Verkerk, Rebecca Claire Murphy, Alan Johnson, David Hoepelman, Shadow53, Casey Leask, Arnout Engelen, Sébastien Doeraene, Valerian, Viktor Klang, jvican, mathhun, peterz, Eitan Adler, Frank S. Thomas, Dmitry Petrashko, JoeRatt, Kato Kazuyoshi, Dmitry Melnichenko, Marc Prud'hommeaux, Mark Mynsted, Marko Elezovic, Markus Hauck, Michał Pociecha. Thank you!
+According to `git shortlog -sn --no-merges v2.12.0-M4..v2.12.0-M5`, the following contributors helped to realize this milestone: Lukas Rytz, A. P. Marki, Jason Zaugg, Sébastien Doeraene, Adriaan Moors, Performant Data LLC, Simon Ochsenreither, Janek Bogucki, Miles Sabin, Felix Mulder, Stefan Zeiger, Rui Gonçalves, Raphael Jolly, Arno den Hartog, Viktor Klang, Olli Helenius, Kenji Yoshida, Steve Robinson, Taras Boiko, af, chrisokasaki, peterz, sh0hei, Łukasz Gieroń, Antoine Gourlay, Ben Hutchison, CodingTwinky, Dale Wijnand, Iulian Dragos, Jakob Odersky, Jens, Krzysztof Romanowski, Martijn Hoekstra, Mike Pheasant, Nafer Sanabria, Nicolas Stucki, Performant Data, Ruslan Sennov, Seth Tisue, Shixiong Zhu. Thank you!
 
 ## Release notes
 
@@ -113,6 +135,6 @@ Improvements to these release notes [are welcome!](https://github.com/scala/make
 
 ## Obtaining Scala
 
-* Download a distribution from [scala-lang.org](http://scala-lang.org/download/2.12.0-M4.html)
+* Download a distribution from [scala-lang.org](http://scala-lang.org/download/2.12.0-M5.html)
 * Bump the `scalaVersion` setting in your SBT-based project
-* Obtain JARs via [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.12.0-M4%22)
+* Obtain JARs via [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.12.0-M5%22)
