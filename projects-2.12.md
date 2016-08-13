@@ -22,6 +22,15 @@ Testing frameworks, add in sbt using `libraryDependencies += ... % "test"`
 Other libraries, add in sbt using `libraryDependencies += ...`
 
     "org.scalactic"                    %% "scalactic"                 % "3.0.0"
+    "com.typesafe.akka"                %% "akka-actor"                % "2.4.8"
+    "org.scalaz"                       %% "scalaz-core"               % "7.3.0-M4"
+    "org.scalaz"                       %% "scalaz-core"               % "7.2.4"
+    "org.scalaz"                       %% "scalaz-core"               % "7.1.9"
+    "com.chuusai"                      %% "shapeless"                 % "2.3.1"
+    "org.typelevel"                    %% "macro-compat"              % "1.1.1"
+    "com.github.nscala-time"           %% "nscala-time"               % "2.12.0"
+    "org.scodec"                       %% "scodec-bits"               % "1.1.0"
+    "org.scalaz.stream"                %% "scalaz-stream"             % "0.8.3a"
 
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
     
