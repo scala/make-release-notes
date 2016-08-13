@@ -1,6 +1,36 @@
 ## Available Projects for Scala 2.12
 
-Please [submit a pull request](https://github.com/scala/make-release-notes/edit/2.12.x/projects-2.12.md) to update this list!
+Library maintainers, library users, please [submit a pull request](https://github.com/scala/make-release-notes/edit/2.12.x/projects-2.12.md) and let the world know what libraries are available.
+
+### Scala 2.12.0-M5
+
+Scala modules, add in sbt using `libraryDependencies += ...`
+
+    "org.scala-lang.modules"           %% "scala-xml"                 % "1.0.5"
+    "org.scala-lang.modules"           %% "scala-parser-combinators"  % "1.0.4"
+    "org.scala-lang.modules"           %% "scala-swing"               % "2.0.0-M2"
+    "org.scala-lang.modules"           %% "scala-java8-compat"        % "0.8.0-RC3"
+
+Testing frameworks, add in sbt using `libraryDependencies += ... % "test"`
+
+    "org.scalatest"                    %% "scalatest"                 % "3.0.0"           % "test"
+    "org.scalacheck"                   %% "scalacheck"                % "1.13.2"          % "test"
+    "org.scalacheck"                   %% "scalacheck"                % "1.12.5"          % "test"
+    "org.scalacheck"                   %% "scalacheck"                % "1.11.6"          % "test"
+    "org.specs2"                       %% "specs2-core"               % "3.8.4"           % "test"
+
+Other libraries, add in sbt using `libraryDependencies += ...`
+
+    "org.scalactic"                    %% "scalactic"                 % "3.0.0"
+
+Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
+    
+    "org.scalamacros"                  %% "paradise"                  % "2.1.0"
+
+Sbt plugins. Most plugins do not need to be re-published for 2.12, but certain plugins required changes. Add using `addSbtPlugin`:
+
+    "org.scala-js"                     %  "sbt-scalajs"               % "0.6.11"
+    "com.typesafe"                     %  "sbt-mima-plugin"           % "0.1.9"
 
 ### Scala 2.12.0-M4
 
