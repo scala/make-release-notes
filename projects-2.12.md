@@ -30,8 +30,12 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "org.typelevel"                    %% "macro-compat"              % "1.1.1"
     "com.github.nscala-time"           %% "nscala-time"               % "2.12.0"
     "org.scodec"                       %% "scodec-bits"               % "1.1.0"
+    "org.scodec"                       %% "scodec-core"               % "1.10.2"
     "org.scalaz.stream"                %% "scalaz-stream"             % "0.8.3a"
-
+    "org.scalaz.stream"                %% "scalaz-stream"             % "0.8.3"
+    "co.fs2"                           %% "fs2-core"                   % "0.9.0-RC1"
+    "co.fs2"                           %% "fs2-io"                     % "0.9.0-RC1"
+    
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
     
     "org.scalamacros"                  %% "paradise"                  % "2.1.0"
