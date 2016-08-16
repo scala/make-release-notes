@@ -23,6 +23,7 @@ Other libraries, add in sbt using `libraryDependencies += ...`
 
     "org.scalactic"                    %% "scalactic"                 % "3.0.0"
     "com.typesafe.akka"                %% "akka-actor"                % "2.4.8"
+        // and other akka libraries such as akka-stream, akka-http, etc. (same version number)
     "org.scalaz"                       %% "scalaz-core"               % "7.3.0-M4"
     "org.scalaz"                       %% "scalaz-core"               % "7.2.4"
     "org.scalaz"                       %% "scalaz-core"               % "7.1.9"
@@ -33,8 +34,11 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "org.scodec"                       %% "scodec-core"               % "1.10.2"
     "org.scalaz.stream"                %% "scalaz-stream"             % "0.8.3a"
     "org.scalaz.stream"                %% "scalaz-stream"             % "0.8.3"
-    "co.fs2"                           %% "fs2-core"                   % "0.9.0-RC1"
-    "co.fs2"                           %% "fs2-io"                     % "0.9.0-RC1"
+    "co.fs2"                           %% "fs2-core"                  % "0.9.0-RC1"
+    "co.fs2"                           %% "fs2-io"                    % "0.9.0-RC1"
+    "com.typesafe.slick"               %% "slick"                     % "3.2.0-M1"
+    "io.spray"                         %% "spray-json"                % "1.3.2"
+    "com.github.nscala-time"           %% "nscala-time"               % "2.12.0"
     
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
     
