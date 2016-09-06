@@ -2,6 +2,18 @@
 
 Library maintainers, library users, please [submit a pull request](https://github.com/scala/make-release-notes/edit/2.12.x/projects-2.12.md) and let the world know what libraries are available.
 
+### Scala 2.12.0-RC1
+
+Scala modules, add in sbt using `libraryDependencies += ...`
+
+    "org.scala-lang.modules"           %% "scala-xml"                 % "1.0.5"
+    "org.scala-lang.modules"           %% "scala-parser-combinators"  % "1.0.4"
+    "org.scala-lang.modules"           %% "scala-swing"               % "2.0.0-M2"
+
+Sbt plugins. Most plugins do not need to be re-published for 2.12, but certain plugins did require changes. Add using `addSbtPlugin`:
+
+    "org.scala-js"                     %  "sbt-scalajs"               % "0.6.12"
+
 ### Scala 2.12.0-M5
 
 Scala modules, add in sbt using `libraryDependencies += ...`
