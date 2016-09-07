@@ -10,6 +10,10 @@ Scala modules, add in sbt using `libraryDependencies += ...`
     "org.scala-lang.modules"           %% "scala-parser-combinators"  % "1.0.4"
     "org.scala-lang.modules"           %% "scala-swing"               % "2.0.0-M2"
 
+Other libraries, add in sbt using `libraryDependencies += ...`
+
+    "edu.eckerd"                       %% "google-api-scala"          % "0.1.0"
+
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
     
     "org.spire-math"                   %% "kind-projector"            % "0.8.2"
