@@ -10,6 +10,10 @@ Scala modules, add in sbt using `libraryDependencies += ...`
     "org.scala-lang.modules"           %% "scala-parser-combinators"  % "1.0.4"
     "org.scala-lang.modules"           %% "scala-swing"               % "2.0.0-M2"
 
+Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
+    
+    "org.spire-math"                   %% "kind-projector"            % "0.8.2"
+
 Sbt plugins. Most plugins do not need to be re-published for 2.12, but certain plugins did require changes. Add using `addSbtPlugin`:
 
     "org.scala-js"                     %  "sbt-scalajs"               % "0.6.12"
