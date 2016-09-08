@@ -10,11 +10,19 @@ Scala modules, add in sbt using `libraryDependencies += ...`
     "org.scala-lang.modules"           %% "scala-parser-combinators"  % "1.0.4"
     "org.scala-lang.modules"           %% "scala-swing"               % "2.0.0-M2"
 
+Testing frameworks, add in sbt using `libraryDependencies += ... % "test"`
+
+    "org.scalatest"                    %% "scalatest"                 % "3.0.0"           % "test"
+    "org.scalacheck"                   %% "scalacheck"                % "1.13.2"          % "test"
+    "org.scalacheck"                   %% "scalacheck"                % "1.12.5"          % "test"
+    "org.scalacheck"                   %% "scalacheck"                % "1.11.6"          % "test"
+
 Other libraries, add in sbt using `libraryDependencies += ...`
 
     "edu.eckerd"                       %% "google-api-scala"          % "0.1.0"
     "org.scalaz"                       %% "scalaz-core"               % "7.2.6"
     "org.scalaz"                       %% "scalaz-core"               % "7.1.10"
+    "org.scalactic"                    %% "scalactic"                 % "3.0.0"
 
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 
