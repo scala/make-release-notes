@@ -17,7 +17,7 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "org.scalaz"                       %% "scalaz-core"               % "7.1.10"
 
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
-    
+
     "org.spire-math"                   %% "kind-projector"            % "0.8.2"
 
 Sbt plugins. Most plugins do not need to be re-published for 2.12, but certain plugins did require changes. Add using `addSbtPlugin`:
@@ -61,9 +61,9 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "com.typesafe.slick"               %% "slick"                     % "3.2.0-M1"
     "io.spray"                         %% "spray-json"                % "1.3.2"
     "com.github.nscala-time"           %% "nscala-time"               % "2.12.0"
-    
+
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
-    
+
     "org.scalamacros"                  %% "paradise"                  % "2.1.0"
 
 Sbt plugins. Most plugins do not need to be re-published for 2.12, but certain plugins required changes. Add using `addSbtPlugin`:
@@ -107,7 +107,7 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "com.typesafe.akka"                %% "akka-actor"                % "2.4.4"
 
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
-    
+
     "org.scalamacros"                  %% "paradise"                  % "2.1.0"
     "org.spire-math"                   %% "kind-projector"            % "0.8.0"
 
@@ -163,7 +163,7 @@ Libraries, add using `libraryDependencies += ...`
     "org.scalaz.stream"                %% "scalaz-stream"             % "0.7.2a"    // for scalaz 7.1
     "com.github.nscala-time"           %% "nscala-time"               % "2.0.0"
     "org.scodec"                       %% "scodec-bits"               % "1.0.9"
-    
+
 may or may not be usable, see [issue](https://github.com/etorreborre/specs2/issues/399):
 
     "org.specs2"                       %% "specs2-core"               % "3.6.3"
@@ -180,5 +180,5 @@ Libraries, add using `libraryDependencies += ...`
     "com.github.nscala-time"           %% "nscala-time"               % "2.0.0"
 
 Compiler Plugins, add using `addCompilerPlugin(...)`:
-    
+
     "org.spire-math"                   %% "kind-projector             % "0.5.4" // resolvers += "bintray/non" at "http://dl.bintray.com/non/maven"
