@@ -13,6 +13,8 @@ Scala modules, add in sbt using `libraryDependencies += ...`
 Other libraries, add in sbt using `libraryDependencies += ...`
 
     "edu.eckerd"                       %% "google-api-scala"          % "0.1.0"
+    "org.scalaz"                       %% "scalaz-core"               % "7.2.6"
+    "org.scalaz"                       %% "scalaz-core"               % "7.1.10"
 
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
     
