@@ -23,10 +23,12 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "org.scalaz"                       %% "scalaz-core"               % "7.2.6"
     "org.scalaz"                       %% "scalaz-core"               % "7.1.10"
     "org.scalactic"                    %% "scalactic"                 % "3.0.0"
+    "org.typelevel"                    %% "macro-compat"              % "1.1.1"
 
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 
     "org.spire-math"                   %% "kind-projector"            % "0.8.2"
+    "org.scalamacros"                  %% "paradise"                  % "2.1.0"
 
 Sbt plugins. Most plugins do not need to be re-published for 2.12, but certain plugins did require changes. Add using `addSbtPlugin`:
 
