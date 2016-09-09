@@ -36,6 +36,7 @@ Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 
     "org.spire-math"                   %% "kind-projector"            % "0.8.2"
     "org.scalamacros"                  %% "paradise"                  % "2.1.0"
+    "com.typesafe.genjavadoc"          %% "genjavadoc-plugin"         % "0.10"
 
 Sbt plugins. Most plugins do not need to be re-published for 2.12, but certain plugins did require changes. Add using `addSbtPlugin`:
 
