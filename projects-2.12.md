@@ -17,6 +17,7 @@ Testing frameworks, add in sbt using `libraryDependencies += ... % "test"`
     "org.scalacheck"                   %% "scalacheck"                % "1.13.2"          % "test"
     "org.scalacheck"                   %% "scalacheck"                % "1.12.5"          % "test"
     "org.scalacheck"                   %% "scalacheck"                % "1.11.6"          % "test"
+    "com.github.scalaprops"            %% "scalaprops"                % "0.3.4"           % "test"
 
 Other libraries, add in sbt using `libraryDependencies += ...`
 
@@ -25,6 +26,10 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "org.scalaz"                       %% "scalaz-core"               % "7.1.10"
     "org.scalactic"                    %% "scalactic"                 % "3.0.0"
     "org.typelevel"                    %% "macro-compat"              % "1.1.1"
+    "com.github.nscala-time"           %% "nscala-time"               % "2.14.0"
+    "com.github.xuwei-k"               %% "zeroapply"                 % "0.2.1"
+    "com.github.xuwei-k"               %% "msgpack4z-core"            % "0.3.5"
+    "com.github.xuwei-k"               %% "applybuilder"              % "0.2.2"
 
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 
