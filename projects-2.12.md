@@ -28,11 +28,12 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "org.scalaz"                       %% "scalaz-core"               % "7.1.10"
     "org.scalactic"                    %% "scalactic"                 % "3.0.0"
     "org.typelevel"                    %% "macro-compat"              % "1.1.1"
+    "org.typelevel"                    %% "discipline"                % "0.7"
+    "org.typelevel"                    %% "machinist"                 % "0.5.0"
     "com.github.nscala-time"           %% "nscala-time"               % "2.14.0"
     "com.github.xuwei-k"               %% "zeroapply"                 % "0.2.1"
     "com.github.xuwei-k"               %% "msgpack4z-core"            % "0.3.5"
     "com.github.xuwei-k"               %% "applybuilder"              % "0.2.2"
-    "org.typelevel"                    %% "machinist"                 % "0.5.0"
     "org.scodec"                       %% "scodec-bits"               % "1.1.1"
 
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
