@@ -31,6 +31,7 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "com.github.xuwei-k"               %% "zeroapply"                 % "0.2.1"
     "com.github.xuwei-k"               %% "msgpack4z-core"            % "0.3.5"
     "com.github.xuwei-k"               %% "applybuilder"              % "0.2.2"
+    "org.typelevel"                    %% "machinist"                 % "0.5.0"
 
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 
