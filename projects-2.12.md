@@ -18,6 +18,7 @@ Testing frameworks, add in sbt using `libraryDependencies += ... % "test"`
     "org.scalacheck"                   %% "scalacheck"                % "1.13.2"          % "test"
     "org.scalacheck"                   %% "scalacheck"                % "1.12.5"          % "test"
     "org.scalacheck"                   %% "scalacheck"                % "1.11.6"          % "test"
+    "org.specs2"                       %% "specs2-core"               % "3.8.5"           % "test"
     "com.github.scalaprops"            %% "scalaprops"                % "0.3.4"           % "test"
 
 Other libraries, add in sbt using `libraryDependencies += ...`
