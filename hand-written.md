@@ -40,6 +40,12 @@ The following known issues will be fixed in 2.12.0-RC2:
   `scala.tools.nsc.backend.jvm.BCodeSkelBuilder`; see
   [#5395](https://github.com/scala/scala/pull/5395).
 
+We hope to address the following in a future 2.12.x release:
+
+* [SI-9824](https://issues.scala-lang.org/browse/SI-9824):
+  Parallel collections are prone to deadlock in the REPL and
+  in object initializers.
+
 ## Scala 2.12
 
 Scala 2.12 requires a Java 8 runtime.
