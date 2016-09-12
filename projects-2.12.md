@@ -35,6 +35,8 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "com.github.xuwei-k"               %% "msgpack4z-core"            % "0.3.5"
     "com.github.xuwei-k"               %% "applybuilder"              % "0.2.2"
     "org.scodec"                       %% "scodec-bits"               % "1.1.1"
+    "co.fs2"                           %% "fs2-core"                  % "0.9.0"
+    "co.fs2"                           %% "fs2-io"                    % "0.9.0"
 
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 
