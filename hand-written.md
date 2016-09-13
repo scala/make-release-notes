@@ -1,5 +1,8 @@
 We are happy to announce the availability of Scala 2.12.0-RC1!
 
+Note, however, that Scala 2.12.0-RC2 will follow, due to known
+regressions detailed below.
+
 The most notable changes since M5 are:
 
   - [#5135](https://github.com/scala/scala/pull/5135): Either is now
@@ -29,7 +32,7 @@ trait-based code run slower. As a result, compile times may also be
 longer in 2.12 than 2.11.  We welcome feedback from the Scala
 community helping to isolate unusual slowdowns.
 
-The following known issues will be fixed in 2.12.0-RC2:
+The following known regressions will be fixed in 2.12.0-RC2:
 
 * [SD-225](https://github.com/scala/scala-dev/issues/225)
   may cause drastically longer compile times for certain
