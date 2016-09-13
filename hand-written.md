@@ -161,6 +161,10 @@ inference for `def`, `val`, and `lazy val`, fixing assorted
 corner cases and inconsistencies.  As a result, the inferred type
 of a `val` or `lazy val` may change.
 
+In particular, `implicit val`s that didn't need explicitly declared
+types before may need them now.  (This is always good practice
+anyway.)
+
 You can get the old behavior with `-Xsource:2.11`.  This may be
 useful for testing whether these changes are responsible if your
 code fails to compile.
