@@ -51,6 +51,7 @@ Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
     "org.scalamacros"                  %% "paradise"                  % "2.1.0"
     "com.typesafe.genjavadoc"          %% "genjavadoc-plugin"         % "0.10"
     "com.github.ghik"                  %% "silencer-plugin"           % "0.5"
+    "org.psywerx.hairyfotr"            %% "linter"                    % "0.1.15"
 
 Sbt plugins. Most plugins do not need to be re-published for 2.12, but certain plugins did require changes. Add using `addSbtPlugin`:
 
