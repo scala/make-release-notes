@@ -38,6 +38,9 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "co.fs2"                           %% "fs2-core"                  % "0.9.0"
     "co.fs2"                           %% "fs2-io"                    % "0.9.0"
 
+Note that [Shapeless](https://github.com/milessabin/shapeless) will not be
+published for 2.12.0-RC1; see [#5395](https://github.com/scala/scala/pull/5395).
+
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 
     "org.spire-math"                   %% "kind-projector"            % "0.8.2"
