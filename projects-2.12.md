@@ -38,6 +38,9 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "co.fs2"                           %% "fs2-core"                  % "0.9.0"
     "co.fs2"                           %% "fs2-io"                    % "0.9.0"
     "com.github.ghik"                  %% "silencer-lib"              % "0.5"
+    "com.typesafe.akka"                %% "akka-actor"                % "2.4.10"
+    "com.typesafe.akka"                %% "akka-stream"               % "2.4.10"
+    "com.typesafe.akka"                %% "akka-http-core"            % "2.4.10"
 
 Note that [Shapeless](https://github.com/milessabin/shapeless) will not be
 published for 2.12.0-RC1; see [#5395](https://github.com/scala/scala/pull/5395).
