@@ -6,7 +6,7 @@ import scala.io.Source
 
 object MakeReleaseNotes {
   def genPR(prevVersion: String, version: String, release: String, gitDir: String = s"${sys.env("HOME")}/git/scala") = {
-    val date = new java.util.Date(release)
+    val date = new SimpleDateFormat("yyyy/MM/dd").parse(release)
     new MakeDownloadPage(version, date).write()
     MakeReleaseNotes(new java.io.File(gitDir), version, s"v$prevVersion", s"v$version", MarkDown, date)
   }
