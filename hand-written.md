@@ -31,6 +31,9 @@ community helping to isolate unusual slowdowns.
 
 The following known issues will be fixed in 2.12.0-RC2:
 
+* [SD-225](https://github.com/scala/scala-dev/issues/225)
+  may cause drastically longer compile times for certain
+  kinds of code.
 * [SI-9918](https://issues.scala-lang.org/browse/SI-9918) may
   cause `scala.reflect.internal.Types$TypeError`s in code
   involving package objects.
