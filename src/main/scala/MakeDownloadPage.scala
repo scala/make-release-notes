@@ -14,11 +14,11 @@ class MakeDownloadPage(version: String, releaseDate: Date = new Date()) {
   }
 
   // get size of `url` without actually downloading it
-  def humanSize(url: String): Future[String] = future {
+  def humanSize(url: String): Future[String] = Future {
     import scala.sys.process._
     println("## fetching size of "+ url)
     scala.util.Try {
-      val responseHeader = Process(s"curl -m 5 --silent -D - -X HEAD $url").lines
+      val responseHeader = Process(s"curl -m 5 --silent -D - -X HEAD $url").lineStream
       val contentLength = responseHeader.find(_.startsWith("Content-Length"))
       val bytes = contentLength.map(_.split(":",2)(1).trim.toInt)
       bytes map (b => (responseHeader.head, b))
@@ -37,7 +37,7 @@ class MakeDownloadPage(version: String, releaseDate: Date = new Date()) {
 
   def resourceArchive(cls: String, name: String, ext: String, desc: String): Future[String] = {
     val fileName = s"$name-$version.$ext"
-    val fullUrl = s"http://downloads.typesafe.com/scala/$version/$fileName"
+    val fullUrl = s"http://downloads.lightbend.com/scala/$version/$fileName"
     resource(cls, fileName, desc, fullUrl)
   }
 
@@ -63,7 +63,7 @@ class MakeDownloadPage(version: String, releaseDate: Date = new Date()) {
         resourceArchive(defaultClass,    "scala-docs",           "txz",    "API docs"                 ),
         resourceArchive(defaultClass,    "scala-docs",           "zip",    "API docs"                 ),
         resource       (defaultClass,    s"scala-sources-$version.tar.gz", "Sources", ghSourceUrl     )
-      )).map(_.mkString(",\n  ")), 30 seconds)
+      )).map(_.mkString(",\n  ")), 30.seconds)
 
   // note: first and last lines must be exactly "---"
   def page: String = {
