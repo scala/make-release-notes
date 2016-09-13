@@ -37,6 +37,7 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "org.scodec"                       %% "scodec-bits"               % "1.1.1"
     "co.fs2"                           %% "fs2-core"                  % "0.9.0"
     "co.fs2"                           %% "fs2-io"                    % "0.9.0"
+    "com.github.ghik"                  %% "silencer-lib"              % "0.5"
 
 Note that [Shapeless](https://github.com/milessabin/shapeless) will not be
 published for 2.12.0-RC1; see [#5395](https://github.com/scala/scala/pull/5395).
@@ -46,6 +47,7 @@ Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
     "org.spire-math"                   %% "kind-projector"            % "0.8.2"
     "org.scalamacros"                  %% "paradise"                  % "2.1.0"
     "com.typesafe.genjavadoc"          %% "genjavadoc-plugin"         % "0.10"
+    "com.github.ghik"                  %% "silencer-plugin"           % "0.5"
 
 Sbt plugins. Most plugins do not need to be re-published for 2.12, but certain plugins did require changes. Add using `addSbtPlugin`:
 
