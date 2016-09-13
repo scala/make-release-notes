@@ -40,6 +40,10 @@ The following known issues will be fixed in 2.12.0-RC2:
   `scala.tools.nsc.backend.jvm.BCodeSkelBuilder`; see
   [#5395](https://github.com/scala/scala/pull/5395).
 
+Because of the last-mentioned regression,
+[Shapeless](https://github.com/milessabin/shapeless) will not be
+published for 2.12.0-RC1.
+
 We hope to address the following in a future 2.12.x release:
 
 * [SI-9824](https://issues.scala-lang.org/browse/SI-9824):
