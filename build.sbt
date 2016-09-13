@@ -1,6 +1,6 @@
 name := "make-release-notes"
 
-scalaVersion := "2.11.6"
+scalaVersion := "2.11.8"
 
 libraryDependencies += "org.pegdown" % "pegdown" % "1.2.0"
 libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.1"
