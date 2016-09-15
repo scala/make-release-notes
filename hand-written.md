@@ -132,32 +132,15 @@ Compiling with `-Ypartial-unification` adds partial unification of type construc
 
 #### SAM types
 
-As of [#4971](https://github.com/scala/scala/pull/4971), we treat Single Abstract Method types in the same way as our built-in FunctionN classes. This means overloading resolution has more contenders to choose from, making type inference less effective. Here's an example:
-
-    class C[V] {
-      def sort(cmp: java.util.Comparator[V]): C[V] = ???
-      def sort(cmp: (V, V) => Int): C[V] = sort(
-        new java.util.Comparator[V] {
-          def compare(a: V, b: V): Int = cmp(a, b)
-        })
-    }
-
-    (new C[Int]) sort (_ - _) // error
-    (new C[Int]) sort ((_ - _): java.util.Comparator[Int]) // ok
-    (new C[Int]) sort ((a: Int, b: Int) => a - b)  // ok
-
-The first attempt fails because the type checker cannot infer the types for `_ - _`'s arguments anymore.
-Type inference in this scenario only works when we can narrow the overloads down to one before type checking the arguments the methods are applied to. When a function is passed as an argument to an overloaded method, we do this by considering the "shape" of the function (essentially, its arity). Now that `Comparator[?]` and `(?, ?) => ?` are both considered functions of arity two, our clever scheme breaks down and the programmer must either select an overload (second application) or make the argument types explicit (last application, which resolves to the `Function2` overload).
-
-Finally, implicit conversion of SAM types to Function types won't kick in anymore, since the compiler does this conversion itself first:
+Implicit conversion of function types to SAM types won't kick in as often now, since the compiler's own SAM conversion takes priority:
 
     trait MySam { def apply(x: Int): String }
+    implicit def unused(fun: Int => String): MySam =
+      new MySam { def apply(x: Int) = fun(x) }
+    // uses SAM conversion, not the `unused` implicit
+    val sammy: MySam = (_: Int).toString
 
-    implicit def unused(fun: Int => String): MySam
-      = new MySam { def apply(x: Int) = fun(x) }
-
-    // uses sam conversion, not the `unused` implicit
-    val sammy: MySam = _.toString
+To retain the old behavior, you may compile under `-Xsource:2.11`, or disqualify the type from being a SAM (e.g. by adding a second abstract method).
 
 #### Inferred types for `val` (and `lazy val`)
 
