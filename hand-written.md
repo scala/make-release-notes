@@ -149,15 +149,13 @@ As of [#4971](https://github.com/scala/scala/pull/4971), we treat Single Abstrac
 The first attempt fails because the type checker cannot infer the types for `_ - _`'s arguments anymore.
 Type inference in this scenario only works when we can narrow the overloads down to one before type checking the arguments the methods are applied to. When a function is passed as an argument to an overloaded method, we do this by considering the "shape" of the function (essentially, its arity). Now that `Comparator[?]` and `(?, ?) => ?` are both considered functions of arity two, our clever scheme breaks down and the programmer must either select an overload (second application) or make the argument types explicit (last application, which resolves to the `Function2` overload).
 
-Finally, implicit conversion of SAM types to Function types won't kick in anymore, since the compiler does this conversion itself first:
+Note also that implicit conversion of function types to SAM types won't kick in as often now, since SAM conversion takes priority:
 
     trait MySam { def apply(x: Int): String }
-
-    implicit def unused(fun: Int => String): MySam
-      = new MySam { def apply(x: Int) = fun(x) }
-
-    // uses sam conversion, not the `unused` implicit
-    val sammy: MySam = _.toString
+    implicit def unused(fun: Int => String): MySam =
+      new MySam { def apply(x: Int) = fun(x) }
+    // uses SAM conversion, not the `unused` implicit
+    val sammy: MySam = (_: Int).toString
 
 #### Inferred types for `val` (and `lazy val`)
 
