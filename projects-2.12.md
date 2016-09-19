@@ -42,7 +42,7 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "com.typesafe.akka"                %% "akka-stream"               % "2.4.10"
     "com.typesafe.akka"                %% "akka-http-core"            % "2.4.10"
     "com.beachape"                     %% "enumeratum"                % "1.4.14"
-    "com.typesafe.scala-logging"       %% "scala-logging"             % "3.5.0
+    "com.typesafe.scala-logging"       %% "scala-logging"             % "3.5.0"
 
 Note that [Shapeless](https://github.com/milessabin/shapeless) will not be
 published for 2.12.0-RC1; see [#5395](https://github.com/scala/scala/pull/5395).
