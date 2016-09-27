@@ -45,6 +45,7 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "com.typesafe.scala-logging"       %% "scala-logging"             % "3.5.0"
     "com.github.scopt"                 %% "scopt"                     % "3.5.0"
     "org.json4s"                       %% "json4s-native"             % "3.4.1"
+    "com.github.mpilquist"             %% "simulacrum"                % "0.9.0"
 
 Note that [Shapeless](https://github.com/milessabin/shapeless) will not be
 published for 2.12.0-RC1; see [#5395](https://github.com/scala/scala/pull/5395).
