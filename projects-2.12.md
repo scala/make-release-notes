@@ -27,6 +27,7 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "org.scalaz"                       %% "scalaz-core"               % "7.2.6"
     "org.scalaz"                       %% "scalaz-core"               % "7.1.10"
     "org.scalactic"                    %% "scalactic"                 % "3.0.0"
+    "org.typelevel"                    %% "catalysts"                 % "0.0.3"
     "org.typelevel"                    %% "macro-compat"              % "1.1.1"
     "org.typelevel"                    %% "discipline"                % "0.7"
     "org.typelevel"                    %% "machinist"                 % "0.5.0"
