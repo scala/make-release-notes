@@ -65,6 +65,7 @@ Sbt plugins. Most plugins do not need to be re-published for 2.12, but certain p
 
     "org.scala-js"                     % "sbt-scalajs"                % "0.6.12"
     "org.tpolecat"                     % "tut-plugin"                 % "0.4.4"
+    "org.scoverage"                    % "sbt-scoverage"              % "1.5.0-RC1"
 
 ### Scala 2.12.0-M5
 
