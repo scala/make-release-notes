@@ -9,6 +9,10 @@ Scala modules, add in sbt using `libraryDependencies += ...`
     "org.scala-lang.modules"           %% "scala-xml"                 % "1.0.5"
     "org.scala-lang.modules"           %% "scala-parser-combinators"  % "1.0.4"
     "org.scala-lang.modules"           %% "scala-swing"               % "2.0.0-M2"
+    
+Other libraries, add in sbt using `libraryDependencies += ...`
+
+    "com.github.nscala-time"           %% "nscala-time"               % "2.14.0"
 
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 
