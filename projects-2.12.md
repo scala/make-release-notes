@@ -64,6 +64,8 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "org.json4s"                       %% "json4s-native"             % "3.4.1"
     "com.github.mpilquist"             %% "simulacrum"                % "0.9.0"
     "com.storm-enroute"                %% "scalameter"                % "0.8.1"
+    "com.fasterxml.jackson.module"     %% "jackson-module-scala"      % "2.7.8"
+    "com.fasterxml.jackson.module"     %% "jackson-module-scala"      % "2.8.3"
 
 Note that [Shapeless](https://github.com/milessabin/shapeless) will not be
 published for 2.12.0-RC1; see [#5395](https://github.com/scala/scala/pull/5395).
