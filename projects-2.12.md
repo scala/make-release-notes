@@ -16,7 +16,7 @@ Scala continuations plugin, add in sbt using `libraryDependencies += ...`
     
 also You will need to add
     
-    addCompilerPlugin("org.scala-lang.plugins" % s"scala-continuations-plugin_2.12.0-RC2" % "1.0.3-RC3"
+    addCompilerPlugin("org.scala-lang.plugins" % s"scala-continuations-plugin_2.12.0-RC2" % "1.0.3-RC3")
     
 and
     
