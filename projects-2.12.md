@@ -14,10 +14,6 @@ Other libraries, add in sbt using `libraryDependencies += ...`
 
     "com.github.nscala-time"           %% "nscala-time"               % "2.14.0"
 
-Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
-
-    "org.scalamacros"                  %% "paradise"                  % "2.1.0"  // coming soon
-
 Sbt plugins. Most plugins do not need to be re-published for 2.12, but certain plugins did require changes. Add using `addSbtPlugin`:
 
     "org.scala-js"                     % "sbt-scalajs"                % "0.6.13"
