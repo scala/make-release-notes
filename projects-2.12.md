@@ -30,6 +30,7 @@ Other libraries, add in sbt using `libraryDependencies += ...`
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 
     "org.scalamacros"                  %% "paradise"                  % "2.1.0"
+    "org.scala-lang.plugins"           %% "scala-continuations-plugin" % "1.0.3-RC3"
 
 Sbt plugins. Most plugins do not need to be re-published for 2.12, but certain plugins did require changes. Add using `addSbtPlugin`:
 
