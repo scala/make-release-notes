@@ -23,6 +23,9 @@ Sbt plugins. Most plugins do not need to be re-published for 2.12, but certain p
 
 Testing frameworks, add in sbt using `libraryDependencies += ... % "test"`
 
+    "org.scalacheck"                   %% "scalacheck"                % "1.13.2"          % "test"
+    "org.scalacheck"                   %% "scalacheck"                % "1.12.5"          % "test"
+    "org.scalacheck"                   %% "scalacheck"                % "1.11.6"          % "test"
     "com.github.scalaprops"            %% "scalaprops"                % "0.3.4"           % "test"
 
 Pending: [scalacheck](https://github.com/rickynils/scalacheck/pull/275), [ScalaTest](https://github.com/scalatest/scalatest/issues/989), ...
