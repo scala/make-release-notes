@@ -1,54 +1,38 @@
-We are happy to announce the availability of Scala 2.12.0-RC1!
+We are happy to announce the availability of Scala 2.12.0-RC2!
 
-Note, however, that Scala 2.12.0-RC2 will follow, due to known
-regressions detailed below.
+This RC fixes all reported regressions since 2.11.
+It will become the final by October 28th, unless we hear of any issues that block your upgrade to 2.12 before then!
 
-The most notable changes since M5 are:
 
-  - [#5135](https://github.com/scala/scala/pull/5135): Either is now
-    right-biased
-  - [SI-4826](https://issues.scala-lang.org/browse/SI-4826): Scaladoc now
-    supports doc comments in Java sources
-  - [SI-7187](https://issues.scala-lang.org/browse/SI-7187): Eta-expansion of
-    zero-argument method values is now deprecated
-  - [#5307](https://github.com/scala/scala/pull/5307): Reduced interference
-    from SAMs when inferring function types in the presence of overload
-  - [#5141](https://github.com/scala/scala/pull/5141) /
-    [#5294](https://github.com/scala/scala/pull/5294): Refactoring
-    of `def`, `val`, and `lazy val` handling, fixing assorted corner
-    cases and inconsistencies
-  - [#5311](https://github.com/scala/scala/pull/5311): Scala is now built with
-    sbt instead of Ant (affects only contributors, not users)
+Here are the [most noteworthy fixes](https://github.com/scala/scala/pulls?q=is%3Apr+is%3Amerged+milestone%3A2.12.0-RC2+label%3Arelease-notes) since RC1:
 
-In total, we merged [82 pull requests](https://github.com/scala/scala/pulls?q=is%3Apr+is%3Amerged+milestone%3A2.12.0-RC1), of which [6 are by new contributors](https://github.com/scala/scala/pulls?utf8=%E2%9C%93&q=is%3Apr%20is%3Amerged%20milestone%3A2.12.0-RC1%20label%3Awelcome) -- welcome!
-This milestone resolves [25 JIRA tickets](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20status%20%3D%20CLOSED%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%22Scala%202.12.0-RC1%22%20ORDER%20BY%20component%20ASC%2C%20priority%20DESC).
+  - [#5429](https://github.com/scala/scala/pull/5429) Default `-Xmixin-force-forwarders` to `true` (regression in performance of generated code);
+  - [#5398](https://github.com/scala/scala/pull/5398) [SD-225](https://github.com/scala/scala-dev/issues/225) Use a `lzycompute` method for module initialization. Address a performance regression;
+  - [#5417](https://github.com/scala/scala/pull/5417) [SD-233](https://github.com/scala/scala-dev/issues/233) `synchronized` blocks are JIT-friendly again;
+  - [#5433](https://github.com/scala/scala/pull/5433) Don't deprecate `Either.left` and `Either.right` yet;
+  - [#5392](https://github.com/scala/scala/pull/5392) [SI-9918](https://issues.scala-lang.org/browse/SI-9918) Don't crash on `object` in `trait` mixed into package object;
+  - [#5397](https://github.com/scala/scala/pull/5397) [SI-9920](https://issues.scala-lang.org/browse/SI-9920) Avoid linkage errors with captured local objects + self types;
+  - [#5430](https://github.com/scala/scala/pull/5430) Emit `object` in method like `lazy val`;
+  - [#5442](https://github.com/scala/scala/pull/5442) [SI-9943](https://issues.scala-lang.org/browse/SI-9943) `sealed` class does not yield SAM type;
 
-As usual for Scala pre-releases, 2.12.0-RC1 is not binary compatible with any other Scala version, including any 2.12 milestones.
+The [RC1 release notes](http://scala-lang.org/news/2.12.0-RC1) have a list of important changes since M5.
+
+
+In total, we merged [29 pull requests](https://github.com/scala/scala/pulls?q=is%3Apr+is%3Amerged+milestone%3A2.12.0-RC2).
+This milestone resolves [6 JIRA tickets](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20AND%20status%20%3D%20CLOSED%20AND%20resolution%20%3D%20Fixed%20AND%20fixVersion%20%3D%20%22Scala%202.12.0-RC2%22%20ORDER%20BY%20component%20ASC%2C%20priority%20DESC) and [9 scala-dev issues](https://github.com/scala/scala-dev/milestone/9?closed=1).
+
+As usual for Scala pre-releases, 2.12.0-RC2 is not guaranteed to be binary compatible with any other Scala version, including any 2.12 milestones and release candidates.
 
 ### Known issues
 
 As with previous 2.12 builds, the new trait encoding may make some
-trait-based code run slower. As a result, compile times may also be
-longer in 2.12 than 2.11.  We welcome feedback from the Scala
-community helping to isolate unusual slowdowns.
+trait-based code run slower. We've investigated this issue in depth,
+and have implemented important improvements in RC2.
+Compile times may still be longer in 2.12 than 2.11. Please let us know
+if you notice any performance regressions. We will continue to tweak
+the bytecode we emit during the 2.12.x cycle to get the best performance out of the JVM.
 
-The following known regressions will be fixed in 2.12.0-RC2:
-
-* [SD-225](https://github.com/scala/scala-dev/issues/225)
-  may cause drastically longer compile times for certain
-  kinds of code.
-* [SI-9918](https://issues.scala-lang.org/browse/SI-9918) may
-  cause `scala.reflect.internal.Types$TypeError`s in code
-  involving package objects.
-* [SI-9920](https://issues.scala-lang.org/browse/SI-9920) may
-  cause `java.lang.NoSuchMethodError`s at runtime.
-* A regression may cause `java.util.NoSuchElementException`s in
-  `scala.tools.nsc.backend.jvm.BCodeSkelBuilder`; see
-  [#5395](https://github.com/scala/scala/pull/5395).
-
-Because of the last-mentioned regression,
-[Shapeless](https://github.com/milessabin/shapeless) will not be
-published for 2.12.0-RC1.
+We welcome feedback from the Scala community helping to isolate unusual slowdowns.
 
 We hope to address the following in a future 2.12.x release:
 
@@ -77,7 +61,7 @@ With Java 8 allowing concrete methods in interfaces, Scala 2.12 is able to compi
 
 #### Java 8-style lambdas
 
-Scala 2.12 emits closures in the same style as Java 8, whether they target a FunctionN class from the standard library or a user-defined Single Abstract Method type. The type checker accepts a function literal as a valid expression for either kind of "function-like" type (built-in or SAM). This improves the experience of using libraries written for Java 8 in Scala.
+Scala 2.12 emits closures in the same style as Java 8, whether they target a `FunctionN` class from the standard library or a user-defined Single Abstract Method (SAM) type. The type checker accepts a function literal as a valid expression for either kind of "function-like" type (built-in or SAM). This improves the experience of using libraries written for Java 8 in Scala.
 
 For each lambda the compiler generates a method containing the lambda body, and emits an `invokedynamic` that will spin up a lightweight class for this closure using the JDK's `LambdaMetaFactory`.
 
@@ -106,7 +90,7 @@ The following optimizations are available:
 `Either` now supports operations like `map`, `flatMap`, `contains`,
 `toOption`, and so forth, which operate on the right-hand side.
 
-`.left` and `.right` are deprecated in favor of `.swap`.
+(`.left` and `.right` may be deprecated in favor of `.swap` in a later release.)
 
 The changes are source-compatible with old code (except in the
 presence of conflicting extension methods).
@@ -179,7 +163,7 @@ The [Scala 2.11.1 release notes](http://scala-lang.org/news/2.11.1) explain in m
 
 A big thank you to everyone who's helped improve Scala by reporting bugs, improving our documentation, spreading kindness in mailing lists and other public fora, and submitting and reviewing pull requests! You are all magnificent.
 
-According to `git shortlog -sn --no-merges v2.12.0-M5..v2.12.0-RC1`, the following contributors helped to realize this milestone: Adriaan Moors, Jason Zaugg, Lukas Rytz, Stefan Zeiger, A. P. Marki, Simon Ochsenreither, Seth Tisue, Jakob Odersky, Dale Wijnand, Dima Tkach, Janek Bogucki, Michał Pociecha, Christopher Davenport, Martin Olsson, tomjridge, Miles Sabin, Oscar Boykin, Raul Bache, Rex Kerr, Dmitriy Pogretskiy, Daniel Barclay, Antoine Gourlay, Steven Mitchell, Carsten Varming. Thank you!
+According to `git shortlog -sn --no-merges v2.12.0-RC1..v2.12.0-RC2`, the following contributors helped to realize this release candidate: Adriaan Moors, Jason Zaugg, Lukas Rytz, Seth Tisue, Stefan Zeiger, Antoine Gourlay, Raphael Jolly. Thank you!
 
 ## Release notes
 
@@ -187,6 +171,6 @@ Improvements to these release notes [are welcome!](https://github.com/scala/make
 
 ## Obtaining Scala
 
-* Download a distribution from [scala-lang.org](http://scala-lang.org/download/2.12.0-RC1.html)
+* Download a distribution from [scala-lang.org](http://scala-lang.org/download/2.12.0-RC2.html)
 * Bump the `scalaVersion` setting in your sbt-based project
-* Obtain JARs via [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.12.0-M5%22)
+* Obtain JARs via [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.12.0-RC2%22)
