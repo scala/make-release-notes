@@ -10,6 +10,19 @@ Scala modules, add in sbt using `libraryDependencies += ...`
     "org.scala-lang.modules"           %% "scala-parser-combinators"  % "1.0.4"
     "org.scala-lang.modules"           %% "scala-swing"               % "2.0.0-M2"
     
+Scala continuations plugin, add in sbt using `libraryDependencies += ...`
+
+    "org.scala-lang.plugins" %% "scala-continuations-library" % "1.0.3-RC3"
+    
+also You will need to add
+    
+    addCompilerPlugin("org.scala-lang.plugins" % s"scala-continuations-plugin_2.12.0-RC2" % "1.0.3-RC3")
+    
+and
+    
+    scalacOptions ++= Seq("-P:continuations:enable")
+    
+    
 Other libraries, add in sbt using `libraryDependencies += ...`
 
     "com.github.nscala-time"           %% "nscala-time"               % "2.14.0"
