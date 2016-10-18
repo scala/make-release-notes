@@ -14,7 +14,7 @@ Scala modules, add in sbt using `libraryDependencies += ...`
 Testing frameworks, add in sbt using `libraryDependencies += ... % "test"`
 
     "org.scalatest"                    %% "scalatest"                 % "3.0.0"           % "test"
-    "org.specs2"                       %% "specs2-core"               % "3.8.5.1"           % "test"
+    "org.specs2"                       %% "specs2-core"               % "3.8.5.1"         % "test"
     "org.scalacheck"                   %% "scalacheck"                % "1.13.2"          % "test"
     "org.scalacheck"                   %% "scalacheck"                % "1.12.5"          % "test"
     "org.scalacheck"                   %% "scalacheck"                % "1.11.6"          % "test"
@@ -29,7 +29,7 @@ Other libraries, add in sbt using `libraryDependencies += ...`
 
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 
-    "org.scalamacros"                  %% "paradise"                  % "2.1.0"
+    "org.scalamacros"                  %% "paradise"                   % "2.1.0"
     "org.scala-lang.plugins"           %% "scala-continuations-plugin" % "1.0.3-RC3"
 
 Sbt plugins. Most plugins do not need to be re-published for 2.12, but certain plugins did require changes. Add using `addSbtPlugin`:
