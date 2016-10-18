@@ -104,6 +104,14 @@ This [blog post series](https://github.com/viktorklang/blog)
 by Viktor Klang explores the diverse improvements made to
 `scala.concurrent.Future` for 2.12.
 
+#### Scaladoc look-and-feel overhauled
+
+Scaladoc's output is now more attractive, more modern, and easier
+to use.
+
+Thanks, [Felix Mulder](https://github.com/felixmulder), for leading
+this effort.
+
 #### Scaladoc now supports doc comments in Java sources
 
 Thanks, [Jakob Odersky](https://github.com/jodersky), for this fix to [SI-4826](https://issues.scala-lang.org/browse/SI-4826).
