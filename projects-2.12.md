@@ -10,7 +10,7 @@ Scala modules, add in sbt using `libraryDependencies += ...`
     "org.scala-lang.modules"           %% "scala-parser-combinators"  % "1.0.4"
     "org.scala-lang.modules"           %% "scala-swing"               % "2.0.0-M2"
     "org.scala-lang.modules"           %% "scala-async"               % "0.9.6-RC6"
-    
+
 Testing frameworks, add in sbt using `libraryDependencies += ... % "test"`
 
     "org.scalatest"                    %% "scalatest"                 % "3.0.0"           % "test"
@@ -36,7 +36,7 @@ Sbt plugins. Most plugins do not need to be re-published for 2.12, but certain p
 
     "org.scala-js"                     % "sbt-scalajs"                % "0.6.13"
 
-Pending or blocked: [scala-logging](https://github.com/typesafehub/scala-logging/issues/61), ...
+Pending or blocked: [scala-logging](https://github.com/typesafehub/scala-logging/issues/61), [genjavadoc](https://github.com/typesafehub/genjavadoc/pull/90)...
 
 ### Scala 2.12.0-RC1
 
