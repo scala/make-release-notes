@@ -11,6 +11,15 @@ Scala modules, add in sbt using `libraryDependencies += ...`
     "org.scala-lang.modules"           %% "scala-swing"               % "2.0.0-M2"
     "org.scala-lang.modules"           %% "scala-async"               % "0.9.6-RC6"
     
+Testing frameworks, add in sbt using `libraryDependencies += ... % "test"`
+
+    "org.scalatest"                    %% "scalatest"                 % "3.0.0"           % "test"
+    "org.specs2"                       %% "specs2-core"               % "3.8.5"           % "test"
+    "org.scalacheck"                   %% "scalacheck"                % "1.13.2"          % "test"
+    "org.scalacheck"                   %% "scalacheck"                % "1.12.5"          % "test"
+    "org.scalacheck"                   %% "scalacheck"                % "1.11.6"          % "test"
+    "com.github.scalaprops"            %% "scalaprops"                % "0.3.4"           % "test"
+
 Other libraries, add in sbt using `libraryDependencies += ...`
 
     "com.github.nscala-time"           %% "nscala-time"               % "2.14.0"
@@ -21,15 +30,6 @@ Other libraries, add in sbt using `libraryDependencies += ...`
 Sbt plugins. Most plugins do not need to be re-published for 2.12, but certain plugins did require changes. Add using `addSbtPlugin`:
 
     "org.scala-js"                     % "sbt-scalajs"                % "0.6.13"
-
-Testing frameworks, add in sbt using `libraryDependencies += ... % "test"`
-
-    "org.scalatest"                    %% "scalatest"                 % "3.0.0"           % "test"
-    "org.specs2"                       %% "specs2-core"               % "3.8.5"           % "test"
-    "org.scalacheck"                   %% "scalacheck"                % "1.13.2"          % "test"
-    "org.scalacheck"                   %% "scalacheck"                % "1.12.5"          % "test"
-    "org.scalacheck"                   %% "scalacheck"                % "1.11.6"          % "test"
-    "com.github.scalaprops"            %% "scalaprops"                % "0.3.4"           % "test"
 
 ### Scala 2.12.0-RC1
 
