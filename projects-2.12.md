@@ -10,6 +10,7 @@ Scala modules, add in sbt using `libraryDependencies += ...`
     "org.scala-lang.modules"           %% "scala-parser-combinators"  % "1.0.4"
     "org.scala-lang.modules"           %% "scala-swing"               % "2.0.0-M2"
     "org.scala-lang.modules"           %% "scala-async"               % "0.9.6-RC6"
+    "org.scala-lang.modules"           %% "scala-java8-compat"        % "0.8.0-RC7"
 
 Testing frameworks, add in sbt using `libraryDependencies += ... % "test"`
 
