@@ -27,6 +27,10 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "org.scalaz"                       %% "scalaz-core"               % "7.1.10"
     "org.scalactic"                    %% "scalactic"                 % "3.0.0"
 
+Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
+
+    "org.scalamacros"                  %% "paradise"                  % "2.1.0"
+
 Sbt plugins. Most plugins do not need to be re-published for 2.12, but certain plugins did require changes. Add using `addSbtPlugin`:
 
     "org.scala-js"                     % "sbt-scalajs"                % "0.6.13"
