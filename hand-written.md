@@ -1,15 +1,15 @@
 We are happy to announce the availability of Scala 2.12.0-RC2!
 
-This RC fixes all reported regressions since 2.11. Please try out this release!
+This RC fixes all reported regressions since 2.11.
 It will become the final by October 28th, unless we hear of any issues that block your upgrade to 2.12 before then!
 
 
 Here are the [most noteworthy fixes](https://github.com/scala/scala/pulls?q=is%3Apr+is%3Amerged+milestone%3A2.12.0-RC2+label%3Arelease-notes) since RC1:
 
   - [#5429](https://github.com/scala/scala/pull/5429) Default `-Xmixin-force-forwarders` to `true` (regression in performance of generated code);
-  - [#5398](https://github.com/scala/scala/pull/5398) [SD-225](https://github.com/scala/scala-dev/issues/225) Use a "lzycompute" method for module initialization. Address a performance regression;
+  - [#5398](https://github.com/scala/scala/pull/5398) [SD-225](https://github.com/scala/scala-dev/issues/225) Use a `lzycompute` method for module initialization. Address a performance regression;
   - [#5417](https://github.com/scala/scala/pull/5417) [SD-233](https://github.com/scala/scala-dev/issues/233) `synchronized` blocks are JIT-friendly again;
-  - [#5433](https://github.com/scala/scala/pull/5433) Don't deprecate Either.left and Either.right yet;
+  - [#5433](https://github.com/scala/scala/pull/5433) Don't deprecate `Either.left` and `Either.right` yet;
   - [#5392](https://github.com/scala/scala/pull/5392) [SI-9918](https://issues.scala-lang.org/browse/SI-9918) Don't crash on `object` in `trait` mixed into package object;
   - [#5397](https://github.com/scala/scala/pull/5397) [SI-9920](https://issues.scala-lang.org/browse/SI-9920) Avoid linkage errors with captured local objects + self types;
   - [#5430](https://github.com/scala/scala/pull/5430) Emit `object` in method like `lazy val`;
@@ -77,7 +77,7 @@ With Java 8 allowing concrete methods in interfaces, Scala 2.12 is able to compi
 
 #### Java 8-style lambdas
 
-Scala 2.12 emits closures in the same style as Java 8, whether they target a FunctionN class from the standard library or a user-defined Single Abstract Method type. The type checker accepts a function literal as a valid expression for either kind of "function-like" type (built-in or SAM). This improves the experience of using libraries written for Java 8 in Scala.
+Scala 2.12 emits closures in the same style as Java 8, whether they target a `FunctionN` class from the standard library or a user-defined Single Abstract Method (SAM) type. The type checker accepts a function literal as a valid expression for either kind of "function-like" type (built-in or SAM). This improves the experience of using libraries written for Java 8 in Scala.
 
 For each lambda the compiler generates a method containing the lambda body, and emits an `invokedynamic` that will spin up a lightweight class for this closure using the JDK's `LambdaMetaFactory`.
 
