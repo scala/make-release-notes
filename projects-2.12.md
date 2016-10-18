@@ -13,10 +13,16 @@ Scala modules, add in sbt using `libraryDependencies += ...`
 Other libraries, add in sbt using `libraryDependencies += ...`
 
     "com.github.nscala-time"           %% "nscala-time"               % "2.14.0"
+    "org.scalaz"                       %% "scalaz-core"               % "7.2.6"
+    "org.scalaz"                       %% "scalaz-core"               % "7.1.10"
 
 Sbt plugins. Most plugins do not need to be re-published for 2.12, but certain plugins did require changes. Add using `addSbtPlugin`:
 
     "org.scala-js"                     % "sbt-scalajs"                % "0.6.13"
+
+Testing frameworks, add in sbt using `libraryDependencies += ... % "test"`
+
+    "com.github.scalaprops"            %% "scalaprops"                % "0.3.4"           % "test"
 
 Pending: [scalacheck](https://github.com/rickynils/scalacheck/pull/275), [ScalaTest](https://github.com/scalatest/scalatest/issues/989), ...
 
