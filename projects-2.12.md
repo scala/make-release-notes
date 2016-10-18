@@ -18,6 +18,8 @@ Sbt plugins. Most plugins do not need to be re-published for 2.12, but certain p
 
     "org.scala-js"                     % "sbt-scalajs"                % "0.6.13"
 
+Pending: [scalacheck](https://github.com/rickynils/scalacheck/pull/275), [ScalaTest](https://github.com/scalatest/scalatest/issues/989), ...
+
 ### Scala 2.12.0-RC1
 
 Scala modules, add in sbt using `libraryDependencies += ...`
