@@ -51,7 +51,7 @@ Sbt plugins. Most plugins do not need to be re-published for 2.12, but certain p
 
     "org.scala-js"                     % "sbt-scalajs"                % "0.6.13"
     "org.scoverage"                    % "sbt-scoverage"              % "1.5.0-RC2"
-    "com.typesafe"                     %  "sbt-mima-plugin"           % "0.1.10"
+    "com.typesafe"                     % "sbt-mima-plugin"            % "0.1.10"
 
 Pending or blocked: [Akka](https://github.com/akka/akka/issues/21705), [Play](https://github.com/playframework/playframework/issues/6110), [Cats](https://github.com/typelevel/cats/issues/1285), [Monocle](https://github.com/julien-truffaut/Monocle/issues/216), [Argonaut](https://github.com/argonaut-io/argonaut/issues/246), [scodec-core](https://github.com/scodec/scodec/issues/89), [Circe](https://github.com/travisbrown/circe/issues/302), [scala-refactoring](https://github.com/scala-ide/scala-refactoring/issues/168), [scalatags](https://github.com/lihaoyi/scalatags/issues/137), [parboiled2](https://github.com/sirthias/parboiled2/issues/170), [scala-ssh](https://github.com/veact/scala-ssh/pull/5), [kind-projector](https://github.com/non/kind-projector/issues/39)...
 
