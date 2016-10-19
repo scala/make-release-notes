@@ -46,8 +46,9 @@ Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 Sbt plugins. Most plugins do not need to be re-published for 2.12, but certain plugins did require changes. Add using `addSbtPlugin`:
 
     "org.scala-js"                     % "sbt-scalajs"                % "0.6.13"
+    "org.scoverage"                    % "sbt-scoverage"              % "1.5.0-RC2"
 
-Pending or blocked: [genjavadoc](https://github.com/typesafehub/genjavadoc/pull/90), [scoverage](https://github.com/scoverage/scalac-scoverage-plugin/issues/188)...
+Pending or blocked: [Play](https://github.com/playframework/playframework/issues/6110), [Cats](https://github.com/typelevel/cats/issues/1285), [Monocle](https://github.com/julien-truffaut/Monocle/issues/216), [Argonaut](https://github.com/argonaut-io/argonaut/issues/246), [scodec-core](https://github.com/scodec/scodec/issues/89), [Circe](https://github.com/travisbrown/circe/issues/302), [scala-refactoring](https://github.com/scala-ide/scala-refactoring/issues/168), [scalatags](https://github.com/lihaoyi/scalatags/issues/137), [parboiled2](https://github.com/sirthias/parboiled2/issues/170), [scala-ssh](https://github.com/veact/scala-ssh/pull/5)...
 
 ### Scala 2.12.0-RC1
 
@@ -102,7 +103,7 @@ Other libraries, add in sbt using `libraryDependencies += ...`
 Note that [Shapeless](https://github.com/milessabin/shapeless) will not be
 published for 2.12.0-RC1; see [#5395](https://github.com/scala/scala/pull/5395).
 
-Pending or blocked: [Play](https://github.com/playframework/playframework/issues/6110), [Cats](https://github.com/typelevel/cats/issues/1285), [Monocle](https://github.com/julien-truffaut/Monocle/issues/216), [Argonaut](https://github.com/argonaut-io/argonaut/issues/246), [scodec-core](https://github.com/scodec/scodec/issues/89), [Circe](https://github.com/travisbrown/circe/issues/302), [scala-refactoring](https://github.com/scala-ide/scala-refactoring/issues/168), [scalatags](https://github.com/lihaoyi/scalatags/issues/137), [parboiled2](https://github.com/sirthias/parboiled2/issues/170), [casbah](https://github.com/mongodb/casbah/pull/85), [scala-ssh](https://github.com/veact/scala-ssh/pull/5)...
+Pending or blocked: [Play](https://github.com/playframework/playframework/issues/6110), [Cats](https://github.com/typelevel/cats/issues/1285), [Monocle](https://github.com/julien-truffaut/Monocle/issues/216), [Argonaut](https://github.com/argonaut-io/argonaut/issues/246), [scodec-core](https://github.com/scodec/scodec/issues/89), [Circe](https://github.com/travisbrown/circe/issues/302), [scala-refactoring](https://github.com/scala-ide/scala-refactoring/issues/168), [scalatags](https://github.com/lihaoyi/scalatags/issues/137), [parboiled2](https://github.com/sirthias/parboiled2/issues/170), [scala-ssh](https://github.com/veact/scala-ssh/pull/5)...
 
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 
