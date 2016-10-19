@@ -38,6 +38,7 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "com.chuusai"                      %% "shapeless"                 % "2.3.2"
     "org.typelevel"                    %% "macro-compat"              % "1.1.1"
     "eu.timepit"                       %% "refined"                   % "0.5.0"
+    "org.typelevel"                    %% "discipline"                % "0.7.1"
 
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 
