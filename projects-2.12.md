@@ -37,7 +37,7 @@ Sbt plugins. Most plugins do not need to be re-published for 2.12, but certain p
 
     "org.scala-js"                     % "sbt-scalajs"                % "0.6.13"
 
-Pending or blocked: [scala-logging](https://github.com/typesafehub/scala-logging/issues/61), [genjavadoc](https://github.com/typesafehub/genjavadoc/pull/90)...
+Pending or blocked: [scala-logging](https://github.com/typesafehub/scala-logging/issues/61), [genjavadoc](https://github.com/typesafehub/genjavadoc/pull/90), [scoverage](https://github.com/scoverage/scalac-scoverage-plugin/issues/188)...
 
 ### Scala 2.12.0-RC1
 
