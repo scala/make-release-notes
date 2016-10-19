@@ -35,6 +35,7 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "com.github.xuwei-k"               %% "applybuilder"              % "0.2.2"
     "com.github.xuwei-k"               %% "iarray"                    % "0.3.1"
     "com.typesafe.scala-logging"       %% "scala-logging"             % "3.5.0"
+    "com.chuusai"                      %% "shapeless"                 % "2.3.2"
 
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 
