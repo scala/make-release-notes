@@ -27,6 +27,13 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "org.scalaz"                       %% "scalaz-core"               % "7.2.6"
     "org.scalaz"                       %% "scalaz-core"               % "7.1.10"
     "org.scalactic"                    %% "scalactic"                 % "3.0.0"
+    "org.json4s"                       %% "json4s-native"             % "3.4.2"
+    "org.squeryl"                      %% "squeryl"                   % "0.9.7"
+    "org.scalaj"                       %% "scalaj-http"               % "2.3.0"
+    "com.github.xuwei-k"               %% "zeroapply"                 % "0.2.1"
+    "com.github.xuwei-k"               %% "msgpack4z-core"            % "0.3.5"
+    "com.github.xuwei-k"               %% "applybuilder"              % "0.2.2"
+    "com.github.xuwei-k"               %% "iarray"                    % "0.3.1"
 
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 
