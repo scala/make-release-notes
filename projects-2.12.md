@@ -34,6 +34,7 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "com.github.xuwei-k"               %% "msgpack4z-core"            % "0.3.5"
     "com.github.xuwei-k"               %% "applybuilder"              % "0.2.2"
     "com.github.xuwei-k"               %% "iarray"                    % "0.3.1"
+    "com.typesafe.scala-logging"       %% "scala-logging"             % "3.5.0"
 
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 
@@ -44,7 +45,7 @@ Sbt plugins. Most plugins do not need to be re-published for 2.12, but certain p
 
     "org.scala-js"                     % "sbt-scalajs"                % "0.6.13"
 
-Pending or blocked: [scala-logging](https://github.com/typesafehub/scala-logging/issues/61), [genjavadoc](https://github.com/typesafehub/genjavadoc/pull/90), [scoverage](https://github.com/scoverage/scalac-scoverage-plugin/issues/188)...
+Pending or blocked: [genjavadoc](https://github.com/typesafehub/genjavadoc/pull/90), [scoverage](https://github.com/scoverage/scalac-scoverage-plugin/issues/188)...
 
 ### Scala 2.12.0-RC1
 
