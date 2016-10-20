@@ -42,7 +42,9 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "org.scodec"                       %% "scodec-core"               % "1.10.3"
     "org.scodec"                       %% "scodec-bits"               % "1.1.2"
     "com.github.mpilquist"             %% "simulacrum"                % "0.10.0"
-
+    "org.typelevel"                    %% "machinist"                 % "0.6.0"
+     "org.spire-math"                  %% "jawn-parser"               % "0.10.2"
+     
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 
     "org.scalamacros"                  %% "paradise"                   % "2.1.0"
