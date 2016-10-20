@@ -41,6 +41,7 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "org.typelevel"                    %% "discipline"                % "0.7.1"
     "org.scodec"                       %% "scodec-core"               % "1.10.3"
     "org.scodec"                       %% "scodec-bits"               % "1.1.2"
+    "com.github.mpilquist"             %% "simulacrum"                % "0.10.0"
 
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 
