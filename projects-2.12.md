@@ -37,11 +37,14 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "com.typesafe.scala-logging"       %% "scala-logging"             % "3.5.0"
     "com.chuusai"                      %% "shapeless"                 % "2.3.2"
     "org.typelevel"                    %% "macro-compat"              % "1.1.1"
-    "eu.timepit"                       %% "refined"                   % "0.5.0"
+    "eu.timepit"                       %% "refined"                   % "0.6.0"
     "org.typelevel"                    %% "discipline"                % "0.7.1"
     "org.scodec"                       %% "scodec-core"               % "1.10.3"
     "org.scodec"                       %% "scodec-bits"               % "1.1.2"
     "com.github.mpilquist"             %% "simulacrum"                % "0.10.0"
+    "org.typelevel"                    %% "machinist"                 % "0.6.0"
+    "org.spire-math"                   %% "jawn-parser"               % "0.10.2"
+    "org.spire-math"                   %% "jawn-ast"                  % "0.10.2"
 
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 
