@@ -47,7 +47,8 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "co.fs2"                           %% "fs2-io"                    % "0.9.1"
     "org.spire-math"                   %% "jawn-parser"               % "0.10.2"
     "org.spire-math"                   %% "jawn-ast"                  % "0.10.2"
-
+    "org.parboiled"                    %% "parboiled"                 % "2.1.3"
+    
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 
     "org.scalamacros"                  %% "paradise"                   % "2.1.0"
