@@ -51,7 +51,8 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "com.typesafe.akka"                %% "akka-actor"                % "2.4.11"
     "com.typesafe.akka"                %% "akka-stream"               % "2.4.11"
     "com.typesafe.akka"                %% "akka-http-core"            % "2.4.11"
-    
+    "com.github.fommil"                %% "spray-json-shapeless"      % "1.3.0"
+
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 
     "org.scalamacros"                  %% "paradise"                   % "2.1.0"
