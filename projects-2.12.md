@@ -43,9 +43,10 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "org.scodec"                       %% "scodec-bits"               % "1.1.2"
     "com.github.mpilquist"             %% "simulacrum"                % "0.10.0"
     "org.typelevel"                    %% "machinist"                 % "0.6.0"
-    "org.spire-math"                   %% "jawn-parser"               % "0.10.2"
     "co.fs2"                           %% "fs2-core"                  % "0.9.1"
     "co.fs2"                           %% "fs2-io"                    % "0.9.1"
+    "org.spire-math"                   %% "jawn-parser"               % "0.10.2"
+    "org.spire-math"                   %% "jawn-ast"                  % "0.10.2"
 
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 
