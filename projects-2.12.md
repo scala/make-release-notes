@@ -42,6 +42,8 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "org.scodec"                       %% "scodec-core"               % "1.10.3"
     "org.scodec"                       %% "scodec-bits"               % "1.1.2"
     "com.github.mpilquist"             %% "simulacrum"                % "0.10.0"
+    "co.fs2"                           %% "fs2-core"                  % "0.9.1"
+    "co.fs2"                           %% "fs2-io"                    % "0.9.1"
 
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 
