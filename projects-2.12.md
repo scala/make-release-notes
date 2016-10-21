@@ -20,6 +20,7 @@ Testing frameworks, add in sbt using `libraryDependencies += ... % "test"`
     "org.scalacheck"                   %% "scalacheck"                % "1.12.5"          % "test"
     "org.scalacheck"                   %% "scalacheck"                % "1.11.6"          % "test"
     "com.github.scalaprops"            %% "scalaprops"                % "0.3.4"           % "test"
+    "com.lihaoyi"                      %% "utest"                     % "0.4.4"           % "test"
 
 Other libraries, add in sbt using `libraryDependencies += ...`
 
@@ -60,6 +61,7 @@ Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
     "org.psywerx.hairyfotr"            %% "linter"                     % "0.1.15"
     "com.typesafe.genjavadoc"          %% "genjavadoc-plugin"          % "0.10"
     "org.spire-math"                   %% "kind-projector"             % "0.9.2"
+    "com.lihaoyi"                      %% "acyclic"                    % "0.1.5"
 
 Sbt plugins. Most plugins do not need to be re-published for 2.12, but certain plugins did require changes. Add using `addSbtPlugin`:
 
