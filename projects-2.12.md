@@ -53,7 +53,10 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "com.typesafe.akka"                %% "akka-stream"               % "2.4.11"
     "com.typesafe.akka"                %% "akka-http-core"            % "2.4.11"
     "com.github.fommil"                %% "spray-json-shapeless"      % "1.3.0"
-    "com.github.julien-truffaut"       %%  "monocle-core"             % "1.3.1"
+    "com.github.julien-truffaut"       %% "monocle-core"              % "1.3.1"
+    "com.lihaoyi"                      %% "sourcecode"                % "0.1.3"
+    "com.lihaoyi"                      %% "fastparse"                 % "0.4.2"
+    "com.lihaoyi"                      %% "scalatags"                 % "0.6.2"
 
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 
