@@ -116,6 +116,8 @@ this effort.
 
 Thanks, [Jakob Odersky](https://github.com/jodersky), for this fix to [SI-4826](https://issues.scala-lang.org/browse/SI-4826).
 
+This feature is enabled by default, but can be disabled with `-no-java-comments`.
+
 #### Partial unification of type constructors (SI-2712)
 
 Compiling with `-Ypartial-unification` adds partial unification of type constructors, fixing the notorious [SI-2712](https://issues.scala-lang.org/browse/SI-2712), thanks to [Miles Sabin](https://github.com/milessabin).
