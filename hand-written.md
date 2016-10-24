@@ -116,7 +116,9 @@ this effort.
 
 Thanks, [Jakob Odersky](https://github.com/jodersky), for this fix to [SI-4826](https://issues.scala-lang.org/browse/SI-4826).
 
-This feature is enabled by default, but can be disabled with `-no-java-comments`.
+This feature is enabled by default, but can be disabled with:
+
+    scalacOptions in (Compile, doc) += "-no-java-comments"
 
 #### Partial unification of type constructors (SI-2712)
 
