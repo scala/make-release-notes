@@ -59,6 +59,7 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "com.lihaoyi"                      %% "fastparse"                 % "0.4.2"
     "com.lihaoyi"                      %% "scalatags"                 % "0.6.2"
     "org.typelevel"                    %% "cats"                      % "0.8.0"
+    "org.typelevel"                    %% "catalysts"                 % "0.0.4"
 
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 
@@ -76,7 +77,7 @@ Sbt plugins. Most plugins do not need to be re-published for 2.12, but certain p
     "com.typesafe"                     % "sbt-mima-plugin"            % "0.1.11"
     "org.tpolecat"                     % "tut-plugin"                 % "0.4.5"
 
-Pending or blocked: [Play](https://github.com/playframework/playframework/issues/6110), [Argonaut](https://github.com/argonaut-io/argonaut/issues/246), [Circe](https://github.com/travisbrown/circe/issues/302), [scala-refactoring](https://github.com/scala-ide/scala-refactoring/issues/168), [scala-ssh](https://github.com/veact/scala-ssh/pull/5), [catalysts](https://github.com/typelevel/catalysts/pull/7)...
+Pending or blocked: [Play](https://github.com/playframework/playframework/issues/6110), [Argonaut](https://github.com/argonaut-io/argonaut/issues/246), [Circe](https://github.com/travisbrown/circe/issues/302), [scala-refactoring](https://github.com/scala-ide/scala-refactoring/issues/168), [scala-ssh](https://github.com/veact/scala-ssh/pull/5)...
 
 ### Scala 2.12.0-RC1
 
