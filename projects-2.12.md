@@ -60,6 +60,7 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "com.lihaoyi"                      %% "scalatags"                 % "0.6.2"
     "org.typelevel"                    %% "cats"                      % "0.8.0"
     "org.typelevel"                    %% "catalysts"                 % "0.0.4"
+    "com.beachape"                     %% "enumeratum"                % "1.4.18"
 
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 
