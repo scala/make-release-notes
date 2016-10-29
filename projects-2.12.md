@@ -2,6 +2,13 @@
 
 Library maintainers, library users, please [submit a pull request](https://github.com/scala/make-release-notes/edit/2.12.x/projects-2.12.md) and let the world know what libraries are available.
 
+### Scala 2.12.0
+
+Scala modules, add in sbt using `libraryDependencies += ...`
+
+    "org.scala-lang.modules"           %% "scala-async"               % "0.9.6"
+    "org.scala-lang.modules"           %% "scala-java8-compat"        % "0.8.0"
+
 ### Scala 2.12.0-RC2
 
 Scala modules, add in sbt using `libraryDependencies += ...`
@@ -9,8 +16,6 @@ Scala modules, add in sbt using `libraryDependencies += ...`
     "org.scala-lang.modules"           %% "scala-xml"                 % "1.0.5"
     "org.scala-lang.modules"           %% "scala-parser-combinators"  % "1.0.4"
     "org.scala-lang.modules"           %% "scala-swing"               % "2.0.0-M2"
-    "org.scala-lang.modules"           %% "scala-async"               % "0.9.6-RC6"
-    "org.scala-lang.modules"           %% "scala-java8-compat"        % "0.8.0-RC7"
 
 Testing frameworks, add in sbt using `libraryDependencies += ... % "test"`
 
