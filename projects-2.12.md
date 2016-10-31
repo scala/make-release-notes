@@ -11,7 +11,7 @@ Scala modules, add in sbt using `libraryDependencies += ...`
     
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 
-    "org.scala-lang.plugins"           %% "scala-continuations-plugin" % "1.0.3"
+    "org.scala-lang.plugins"           % "scala-continuations-plugin_2.12.0" % "1.0.3"
 
 ### Scala 2.12.0-RC2
 
