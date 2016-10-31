@@ -11,7 +11,22 @@ Scala modules, add in sbt using `libraryDependencies += ...`
     "org.scala-lang.modules"           %% "scala-swing"               % "2.0.0-M2"
     "org.scala-lang.modules"           %% "scala-async"               % "0.9.6"
     "org.scala-lang.modules"           %% "scala-java8-compat"        % "0.8.0"
-    
+
+Testing frameworks, add in sbt using `libraryDependencies += ... % "test"`
+
+    "com.github.scalaprops"            %% "scalaprops"                % "0.3.4"           % "test"
+
+Other libraries, add in sbt using `libraryDependencies += ...`
+
+    "com.github.nscala-time"           %% "nscala-time"               % "2.14.0"
+    "org.scalaz"                       %% "scalaz-core"               % "7.2.7"
+    "org.scalaz"                       %% "scalaz-core"               % "7.1.11"
+    "com.github.xuwei-k"               %% "zeroapply"                 % "0.2.1"
+    "com.github.xuwei-k"               %% "msgpack4z-core"            % "0.3.5"
+    "com.github.xuwei-k"               %% "applybuilder"              % "0.2.2"
+    "com.github.xuwei-k"               %% "iarray"                    % "0.3.1"
+    "com.github.xuwei-k"               %% "nobox"                     % "0.1.11"
+
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 
     "org.scala-lang.plugins"           % "scala-continuations-plugin_2.12.0" % "1.0.3"
