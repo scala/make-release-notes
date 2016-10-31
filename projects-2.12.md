@@ -8,6 +8,10 @@ Scala modules, add in sbt using `libraryDependencies += ...`
 
     "org.scala-lang.modules"           %% "scala-async"               % "0.9.6"
     "org.scala-lang.modules"           %% "scala-java8-compat"        % "0.8.0"
+    
+Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
+
+    "org.scala-lang.plugins"           %% "scala-continuations-plugin" % "1.0.3"
 
 ### Scala 2.12.0-RC2
 
