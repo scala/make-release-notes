@@ -1,11 +1,12 @@
 We are happy to announce the availability of Scala 2.12.0!
 
 The Scala 2.12 compiler has been completely overhauled to make use of the new VM features available in Java 8!
- - A trait is compiled to an interface with default methods for improved binary compatibility.
- - We've unified the treatment of Scala's built-in function types and Single Abstract Method types (for overload resolution, type inference and code generation).
- - Specifically, code generation for function literals uses `invokedynamic` to avoid emitting a classfile at compile time. Many of these features were developed in fruitful collaboration with the Dotty team.
 
-Lukas has delivered a powerful new optimizer with this release, built on earlier work by Miguel Garcia. Many more  (effectively) final methods, including those defined in objects and traits, are now inlined. As well, closure allocations, dead code and [box/unbox pairs](https://github.com/scala/scala/pull/4858) are eliminated more effectively.
+  - A trait is compiled to an interface with default methods for improved binary compatibility.
+  - Lambda syntax can now be used to create instances of types with a single abstract method (SAM types). Scala code can seamlessly use libraries with higher-order functions written in Java 8, and vice versa.
+  - Code generation for function literals uses `invokedynamic` to avoid emitting a classfile at compile time, just like Java 8.
+
+This release ships with a powerful new optimizer. Many more  (effectively) final methods, including those defined in objects and traits, are now inlined. As well, closure allocations, dead code and [box/unbox pairs](https://github.com/scala/scala/pull/4858) are eliminated more effectively.
 
 From now on, 2.12.x releases will be fully binary compatible. This release is identical to 2.12.0-RC2. To run Scala 2.12 code, you need a Java 8 runtime.
 
@@ -13,34 +14,36 @@ Our [roadmap](https://github.com/scala/scala/milestones) lists the following upc
 
 
 ### Known issues
-There are some [known issues](https://issues.scala-lang.org/issues/?jql=project%20%3D%20SI%20and%20affectedVersion%20%3D%20%22Scala%202.12.0%22%20and%20status%20%3D%20open) with this release that [will be resolved](https://github.com/scala/scala/pulls?q=is%3Aopen+is%3Apr+milestone%3A2.12.1+label%3Arelease-notes) in 2.12.1, due out by the end of November.
+There are some [known issues](https://issues.scala-lang.org/browse/SI-10009?jql=project%20%3D%20SI%20AND%20affectedVersion%20%3D%20%22Scala%202.12.0%22) with this release that [will be resolved](https://github.com/scala/scala/pulls?q=is%3Apr+milestone%3A2.12.1+label%3Arelease-notes) in 2.12.1, due by the end of November.
 
-As with previous 2.12 builds, the new trait encoding may make some
-trait-based code run slower. We've investigated this issue in depth,
-and have implemented important improvements in RC2.
-Compile times may still be longer in 2.12 than 2.11. Please let us know
-if you notice any performance regressions. We will continue to tweak
-the bytecode we emit during the 2.12.x cycle to get the best performance out of the JVM.
+The heavy use of default methods for compiling traits caused some performance regressions in the
+startup time of Scala applications. Note that steady-state performance is not affected according to
+our measurements.
 
-We welcome feedback from the Scala community helping to isolate unusual slowdowns.
+The regression was mitigated 2.12.0-RC2 (and the final release) by generating forwarder methods in
+classes that inherit concrete methods form trait. A summary and links to detailed information is
+available in the description of pull request [#5429](https://github.com/scala/scala/pull/5429).
+
+Please let us know if you notice any performance regressions. We will continue to tweak the bytecode
+during the 2.12.x cycle to get the best performance out of the JVM.
 
 We hope to address the following in a future 2.12.x release:
 
-* [SI-9824](https://issues.scala-lang.org/browse/SI-9824):
-  Parallel collections are prone to deadlock in the REPL and
-  in object initializers.
+  - [SI-9824](https://issues.scala-lang.org/browse/SI-9824): Parallel collections are prone to deadlock in the REPL and in object initializers.
 
 ## Scala 2.12
 
 Scala 2.12 is all about making optimal use of Java 8's new features (and thus generates code that requires a Java 8 runtime).
-  - Traits ([#5003](https://github.com/scala/scala/pull/5003)) and functions are compiled to their Java 8 equivalents.
-  - We treat Single Abstract Method types and Scala's builtin function types uniformly from type checking to the back end ([#4971](https://github.com/scala/scala/pull/4971)). We also use `invokedynamic` for a more natural encoding of other language features ([#4896](https://github.com/scala/scala/pull/4896)).
+  - Traits ([#5003](https://github.com/scala/scala/pull/5003)) and functions are compiled to their Java 8 equivalents. The compiler no longer generates trait implementation classes (`T$class.class`) and anonymous function classes (`C$$anonfun$1.class`).
+  - We treat Single Abstract Method types and Scala's builtin function types uniformly from type checking to the back end ([#4971](https://github.com/scala/scala/pull/4971)).
+  - In addition to compiling lambdas, we also use `invokedynamic` for a more natural encoding of other language features ([#4896](https://github.com/scala/scala/pull/4896)).
   - We've standardized on the GenBCode back end ([#4814](https://github.com/scala/scala/pull/4814), [#4838](https://github.com/scala/scala/pull/4838)) and the flat classpath implementation is now the default ([#5057](https://github.com/scala/scala/pull/5057)).
   - The optimizer has been completely overhauled for 2.12.
 
 Except for the breaking changes listed below, code that compiles on 2.11.x without deprecation warnings should compile on 2.12.x too, unless you use experimental APIs such as reflection.  If you find incompatibilities, please [file an issue](https://issues.scala-lang.org). Cross-building is a one-line change to most sbt builds, and even provides support for [version-specific source folders](http://www.scala-sbt.org/0.13/docs/sbt-0.13-Tech-Previews.html#Cross-version+support+for+Scala+sources) out of the box, when necessary to work around incompatibilities (e.g. macros).
 
 ### New features
+
 Here are the [most noteworthy pull request](https://github.com/scala/scala/pulls?utf8=%E2%9C%93&q=%20is%3Amerged%20label%3A2.12%20label%3Arelease-notes%20) of the 2.12 release. See also the [RC2](http://scala-lang.org/news/2.12.0-RC2) and [RC1](http://scala-lang.org/news/2.12.0-RC1) release notes for the most recent changes.
 
 
