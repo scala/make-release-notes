@@ -36,7 +36,7 @@ We hope to address the following in a future 2.12.x release:
 Scala 2.12 is all about making optimal use of Java 8's new features (and thus generates code that requires a Java 8 runtime).
   - Traits ([#5003](https://github.com/scala/scala/pull/5003)) and functions are compiled to their Java 8 equivalents. The compiler no longer generates trait implementation classes (`T$class.class`) and anonymous function classes (`C$$anonfun$1.class`).
   - We treat Single Abstract Method types and Scala's builtin function types uniformly from type checking to the back end ([#4971](https://github.com/scala/scala/pull/4971)).
-  - In addition to compiling lambdas, we also use `invokedynamic` for a more natural encoding of other language features ([#4896](https://github.com/scala/scala/pull/4896)).
+  - In addition to compiling functions, we also use `invokedynamic` for a more natural encoding of other language features ([#4896](https://github.com/scala/scala/pull/4896)).
   - We've standardized on the GenBCode back end ([#4814](https://github.com/scala/scala/pull/4814), [#4838](https://github.com/scala/scala/pull/4838)) and the flat classpath implementation is now the default ([#5057](https://github.com/scala/scala/pull/5057)).
   - The optimizer has been completely overhauled for 2.12.
 
@@ -44,38 +44,79 @@ Except for the breaking changes listed below, code that compiles on 2.11.x witho
 
 ### New features
 
-Here are the [most noteworthy pull request](https://github.com/scala/scala/pulls?utf8=%E2%9C%93&q=%20is%3Amerged%20label%3A2.12%20label%3Arelease-notes%20) of the 2.12 release. See also the [RC2](http://scala-lang.org/news/2.12.0-RC2) and [RC1](http://scala-lang.org/news/2.12.0-RC1) release notes for the most recent changes.
-
+The upcoming sections introduce new features and breaking changes in Scala 2.12 in more detail.
+To understand more technicalities and review past discussions, you can also take a look at the full list of
+[noteworthy pull request](https://github.com/scala/scala/pulls?utf8=%E2%9C%93&q=%20is%3Amerged%20label%3A2.12%20label%3Arelease-notes%20)
+that went into this release.
 
 #### Trait compiles to an interface
 
-With Java 8 allowing concrete methods in interfaces, Scala 2.12 is able to compile a trait to a single interface. Before, a trait was represented as a class that held the method implementations and an interface. Note that the compiler still has quite a bit of magic to perform behind the scenes, so that care must be taken if a trait is meant to be implemented in Java. (Briefly, if a trait does any of the following its subclasses require synthetic code: defining fields, calling super, initializer statements in the body, extending a class, relying on linearization to find implementations in the right super trait.)
+With Java 8 allowing concrete methods in interfaces, Scala 2.12 is able to compile a trait to a single interface classfile.
+Before, a trait was represented as an interface and a class that held the method implementations.
+
+Note that the compiler still has quite a bit of magic to perform behind the scenes, so that care must be taken if a trait is meant to be implemented in Java.
+Briefly, if a trait does any of the following its subclasses require synthetic code: defining fields, calling super, initializer statements in the body, extending a class, relying on linearization to find implementations in the right super trait.
 
 #### Java 8-style lambdas
 
 Scala 2.12 emits closures in the same style as Java 8, whether they target a `FunctionN` class from the standard library or a user-defined Single Abstract Method (SAM) type. The type checker accepts a function literal as a valid expression for either kind of "function-like" type (built-in or SAM). This improves the experience of using libraries written for Java 8 in Scala.
 
-For each lambda the compiler generates a method containing the lambda body, and emits an `invokedynamic` that will spin up a lightweight class for this closure using the JDK's `LambdaMetaFactory`.
+For each lambda the compiler generates a method containing the lambda body, and emits an `invokedynamic` that will spin up a lightweight class for this closure using the JDK's `LambdaMetaFactory`. Note that in the following situations, the an anonymous function class is still synthesized at compile-time:
+  
+  - If the SAM type is not a simple interface, for example an abstract class or a triat with a field definition (see [#4971](https://github.com/scala/scala/pull/4971))
+  - If the abstract method is specialized - except for `scala.FunctionN`, whose specialized variants can be instantiated using `LambdaMetaFactory` (see [#4971](https://github.com/scala/scala/pull/4971))
+  - If the function literal is defined in a constructor or a super call ([#3616](https://github.com/scala/scala/pull/3616))
 
 Compared to Scala 2.11, the new scheme has the advantage that, in most cases, the compiler does not need to generate an anonymous class for each closure. This leads to significantly smaller JAR files.
 
 #### New back end
 
-Scala 2.12 standardizes on the "GenBCode" back end, which emits code more quickly because it directly generates ASM bytecode from Scala compiler trees, while the previous back end used an intermediate representation called "ICode". The old back ends (GenASM and GenIcode) have been removed ([#4814](https://github.com/scala/scala/pull/4814), [#4838](https://github.com/scala/scala/pull/4838)).
+Scala 2.12 standardizes on the "GenBCode" back end, which emits code more quickly because it directly generates bytecode from Scala compiler trees, while the previous back end used an intermediate representation called "ICode".
+The old back ends (GenASM and GenIcode) have been removed ([#4814](https://github.com/scala/scala/pull/4814), [#4838](https://github.com/scala/scala/pull/4838)).
+
+
 
 #### New optimizer
 
-The GenBCode back end includes a new inliner and bytecode optimizer.
-The optimizer is enabled using `-opt` compiler option, which defaults
-to `-opt:l:classpath`.  Check `-opt:help` to see the full list of
-available options for the optimizer.
+The GenBCode back end includes a new inliner and bytecode optimizer. The optimizer is configured
+using `-opt` compiler option, by default it removes unreachable code within a method. Check
+`-opt:help` to see the list of available options for the optimizer.
 
 The following optimizations are available:
 
 * Inlining final methods, including methods defined in objects and final methods defined in traits
 * If a closure is allocated and invoked within the same method, the closure invocation is replaced by an invocations of the corresponding lambda body method
 * Dead code elimination and a small number of cleanup optimizations
-* Box/unbox elimination [#4858](https://github.com/scala/scala/pull/4858)
+* Box/unbox elimination [#4858](https://github.com/scala/scala/pull/4858): primitive boxes and tuples that are created and used within some method without exscaping are eliminated.
+
+For example, the following code
+
+```scala
+def f(a: Int, b: Boolean) = (a, b) match {
+  case (0, true) => -1
+  case _ if a < 0 => -a
+  case _ => a
+}
+```
+
+produces, when compiled with `-opt:l:method`, the following bytecode (decompiled using cfr-decompiler):
+
+```java
+public int f(int a, boolean b) {
+  int n = 0 == a && true == b ? -1 : (a < 0 ? - a : a);
+  return n;
+}
+```
+
+The optimizer supports inlining (disabled by default). With `-opt:l:project` code from source files currently being compiled is inlined, while `-opt:l:classpath` enables inlining code from libraries on the compiler's classpath. Other than methods marked [`@inline`](http://www.scala-lang.org/files/archive/api/2.12.0/scala/inline.html), higher-order methods are inlined if the function argument is a lambda, or a parameter of the callee.
+
+Note that:
+  - We recommend to enable inlining only for production builds, as sbt's incremental compilation does not track dependencies introduced by inlining.
+  - When inlining code from the classpath, you need to ensure that all dependencies have exactly the same versions at compile time and run time.
+
+The Scala distribution is built using `-opt:l:classpath`, which improves the performance of the Scala compiler by roughly 5% (hot and cold, measured using our [JMH-based benchmark suite](https://github.com/scala/compiler-benchmark/blob/master/compilation/src/main/scala/scala/tools/nsc/ScalacBenchmark.scala)) compared to a non-optimized build.
+
+The GenBCode backend and the implementation of the new optimizer are built on earlier work by Miguel Garcia.
 
 #### Either is now right-biased
 
