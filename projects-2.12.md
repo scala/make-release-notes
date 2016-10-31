@@ -6,12 +6,17 @@ Library maintainers, library users, please [submit a pull request](https://githu
 
 Scala modules, add in sbt using `libraryDependencies += ...`
 
+    "org.scala-lang.modules"           %% "scala-xml"                 % "1.0.5"
+    "org.scala-lang.modules"           %% "scala-parser-combinators"  % "1.0.4"
+    "org.scala-lang.modules"           %% "scala-swing"               % "2.0.0-M2"
     "org.scala-lang.modules"           %% "scala-async"               % "0.9.6"
     "org.scala-lang.modules"           %% "scala-java8-compat"        % "0.8.0"
     
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 
     "org.scala-lang.plugins"           % "scala-continuations-plugin_2.12.0" % "1.0.3"
+
+Pending: [ScalaCheck](https://github.com/rickynils/scalacheck/issues/291), [ScalaTest](https://github.com/scalatest/scalatest/issues/989), [Specs2](https://github.com/etorreborre/specs2/issues/519)...
 
 ### Scala 2.12.0-RC2
 
