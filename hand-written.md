@@ -47,7 +47,7 @@ Scala also works with ant, [maven](http://docs.scala-lang.org/tutorials/scala-wi
 
 A big thank you to everyone who's helped improve Scala by reporting bugs, improving our documentation, spreading kindness in mailing lists and other public fora, and submitting and reviewing pull requests! You are all magnificent.
 
-Scala 2.12.0 is the result of merging over [500 pull requests](https://github.com/scala/scala/pulls?utf8=%E2%9C%93&q=is%3Amerged%20label%3A2.12%20) out of about [600 received PRs](https://github.com/scala/scala/pulls?utf8=%E2%9C%93&q=is%3Apr%20label%3A2.12%20). The [contributions to 2.12.x over the last 2 years](https://github.com/scala/scala/graphs/contributors?from=2014-11-01&to=2016-10-29&type=c) [break down](https://docs.google.com/spreadsheets/d/16zVViCpJEZn_x2RlYFh-xAOiHJG3SrYYpfetRr5cu_Y/edit#gid=912693440) as 64/32/4 between the Scala team at Lightbend (lrytz, retronym, adriaanm, SethTisue, szeiger), the community and EPFL.
+Scala 2.12.0 is the result of merging over [500 pull requests](https://github.com/scala/scala/pulls?utf8=%E2%9C%93&q=is%3Amerged%20label%3A2.12%20) out of about [600 received PRs](https://github.com/scala/scala/pulls?utf8=%E2%9C%93&q=is%3Apr%20label%3A2.12%20). The [contributions to 2.12.x over the last 2 years](https://github.com/scala/scala/graphs/contributors?from=2014-11-01&to=2016-10-29&type=c) [were split](https://docs.google.com/spreadsheets/d/16zVViCpJEZn_x2RlYFh-xAOiHJG3SrYYpfetRr5cu_Y/edit#gid=912693440) as 64/32/4 between the Scala team at Lightbend (lrytz, retronym, adriaanm, SethTisue, szeiger), the community and EPFL.
 
 The new encodings of traits, lambdas and lazy vals were developed in fruitful collaboration with the Dotty team.
 
