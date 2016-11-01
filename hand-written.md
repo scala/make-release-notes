@@ -78,17 +78,17 @@ Note that the compiler still has quite a bit of magic to perform behind the scen
 
 #### Java 8-style lambdas
 
+  -- TODO: break this up into SAM and IndyLambda
+
 Scala 2.12 emits closures in the same style as Java 8, whether they target a `FunctionN` class from the standard library or a user-defined Single Abstract Method (SAM) type. The type checker accepts a function literal as a valid expression for either kind of "function-like" type (built-in or SAM). This improves the experience of using libraries written for Java 8 in Scala.
 
 For example, in the REPL:
 
-```
-scala> val runRunnable: Runnable = () => println("Run!")
-runRunnable: Runnable = $$Lambda$1073/754978432@7cf283e1
-
-scala> runRunnable.run()
-Run!
-```
+    scala> val runRunnable: Runnable = () => println("Run!")
+    runRunnable: Runnable = $$Lambda$1073/754978432@7cf283e1
+    
+    scala> runRunnable.run()
+    Run!
 
 For each lambda the compiler generates a method containing the lambda body, and emits an `invokedynamic` that will spin up a lightweight class for this closure using the JDK's `LambdaMetaFactory`. Note that in the following situations, an anonymous function class is still synthesized at compile-time:
 
@@ -115,13 +115,11 @@ For now, we recommend using `-Ypartial-unification` over `-Xexperimental`, as th
 
 With [JEP-118](http://openjdk.java.net/jeps/118), parameter names can be stored in class files and be queried at runtime using Java reflection. A quick REPL session shows this in action:
 
-```
-scala> case class Person(name: String, age: Int)
-defined class Person
-
-scala> val paramNames = classOf[Person].getConstructors.head.getParameters.toList
-paramNames: List[java.lang.reflect.Parameter] = List(final java.lang.String name, final int age)
-```
+    scala> case class Person(name: String, age: Int)
+    defined class Person
+    
+    scala> val paramNames = classOf[Person].getConstructors.head.getParameters.toList
+    paramNames: List[java.lang.reflect.Parameter] = List(final java.lang.String name, final int age)
 
 ### Tooling improvements
 
@@ -143,22 +141,18 @@ The following optimizations are available:
 
 For example, the following code
 
-```scala
-def f(a: Int, b: Boolean) = (a, b) match {
-  case (0, true) => -1
-  case _ if a < 0 => -a
-  case _ => a
-}
-```
+    def f(a: Int, b: Boolean) = (a, b) match {
+      case (0, true) => -1
+      case _ if a < 0 => -a
+      case _ => a
+    }
 
 produces, when compiled with `-opt:l:method`, the following bytecode (decompiled using [cfr](http://www.benf.org/other/cfr/)):
 
-```java
-public int f(int a, boolean b) {
-  int n = 0 == a && true == b ? -1 : (a < 0 ? - a : a);
-  return n;
-}
-```
+    public int f(int a, boolean b) {
+      int n = 0 == a && true == b ? -1 : (a < 0 ? - a : a);
+      return n;
+    }
 
 The optimizer supports inlining (disabled by default). With `-opt:l:project` code from source files currently being compiled is inlined, while `-opt:l:classpath` enables inlining code from libraries on the compiler's classpath. Other than methods marked [`@inline`](http://www.scala-lang.org/files/archive/api/2.12.0/scala/inline.html), higher-order methods are inlined if the function argument is a lambda, or a parameter of the caller.
 
@@ -215,20 +209,101 @@ The Scala library is [free](https://github.com/scala/scala/pull/4443) of [refere
 
 ## Breaking changes
 
-### Lambdas and locks
-Our new lambda encoding lifts the lambda body to a method in the enclosing class. If your code relies on the old behavior, which spins up a new class for each lambda, you may notice this difference because a lambda invocation will now indirect through the instance of the enclosing class (or in case of an object, its module field). When a lock is held on this instance (e.g., during object initialization), deadlocks may occur that did not happen before. One example of this [surprised users of ScalaCheck](https://github.com/rickynils/scalacheck/issues/290) -- now [fixed](https://github.com/rickynils/scalacheck/pull/294).
+### Object initialization locks and lambdas
 
-### SAM types
+In Scala 2.11, the body of a lambda is in the `apply` method of the anonymous function class generated at compile time. The new lambda encoding in 2.12 lifts the lambda body into a method in the enclosing class. An invocation of the lambda will therefore indirect through the enclosing class, which may cause deadlocks that did not happen before.
 
-Implicit conversion of function types to SAM types won't kick in as often now, since the compiler's own SAM conversion takes priority:
+For example, the following code
 
-    trait MySam { def apply(x: Int): String }
-    implicit def unused(fun: Int => String): MySam =
-      new MySam { def apply(x: Int) = fun(x) }
-    // uses SAM conversion, not the `unused` implicit
-    val sammy: MySam = (_: Int).toString
+    import scala.concurrent._
+    import scala.concurrent.duration._
+    import ExecutionContext.Implicits.global
+    object O { Await.result(Future(1), 5.seconds) }
 
-To retain the old behavior, you may compile under `-Xsource:2.11`, or disqualify the type from being a SAM (e.g. by adding a second abstract method).
+compiles to (simplified):
+
+    public final class O$ {
+      public static O$ MODULE$;
+      public static final int $anonfun$new$1() { return 1; }
+      public static { new O$(); }
+      private O$() {
+        MODULE$ = this;
+        Await.result(Future.apply(LambdaMetaFactory(Function0, $anonfun$new$1)), DurationInt(5).seconds);
+      }
+    }
+
+Accessing `O` for the first time initializes the `O$` class and executes the static initializer (which invokes the instance constructor). Class initialization is guarded by an initialization lock ([Chapter 5.5 in the JVM specification](https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-5.html#jvms-5.5)).
+
+The main thread locks class initialization and spawns the Future. The Future, executed on a different thread, attempts to execute the static lambda body method `$anonfun$new$1`, which also requires initialization of the class `O$`. Because initialization is locked by the main thread, the thread running the future will block. In the meantime, the main thread continues to run `Await.result`, which will block until the future completes, causing the deadlock.
+
+One example of this [surprised the authors of ScalaCheck](https://github.com/rickynils/scalacheck/issues/290) -- now [fixed](https://github.com/rickynils/scalacheck/pull/294).
+
+### Lambdas capturing outer instances
+
+Because lambda bodies are emitted as methods in the enclosing class, a lambda can capture the outer instance in cases where this did not happen in 2.11. This can affect serialization.
+
+The Scala compiler analyzes classes and methods to prevent unnecessary outer captures: unused outer parameters are removed from classes ([#4652](https://github.com/scala/scala/pull/4652)), and methods not accessing any instance members are made static ([#5099](https://github.com/scala/scala/pull/5099)). One known limitation is that the analysis is local to a class and does not cover subclasses.
+
+    class C {
+      def f = () => {
+        class A extends Serializable
+        class B extends A
+        serialize(new A)
+      }
+    }
+
+In this example, the classes `A` and `B` are first lifted into `C`. When flattening the classes to the package level, the `A` obtains an outer pointer to capture the `A` instance. Because `A` has a subclass `B`, the class-level analysis of `A` cannot conclude that the outer parameter is unused (it might be used in `B`).
+
+Serializing the `A` instance attempts to serialize the outer field, which causes a `NotSerializableException: C`.
+
+
+### SAM conversion precedes implicits
+
+The [SAM conversion](http://www.scala-lang.org/files/archive/spec/2.12/06-expressions.html#sam-conversion) built into the type system takes priority over implicit conversion of function types to SAM types. This can change the semantics of existing code relying on implicit conversion to SAM types:
+
+    trait MySam { def i(): Int }
+    implicit def convert(fun: () => Int): MySam = new MySam { def i() = 1 }
+    val sam1: MySam = () => 2 // Uses SAM conversion, not the implicit
+    sam1.i()                  // Returns 2
+
+To retain the old behavior, you may compile under `-Xsource:2.11`, use an explicit call to the conversion method, or disqualify the type from being a SAM (e.g. by adding a second abstract method).
+
+Note that SAM conversion only applies to lambda expressions, not to arbitrary expressions with Scala `FunctionN` types:
+
+    val fun = () => 2     // Type Function0[Int]
+    val sam2: MySam = fun // Uses implicit conversion
+    sam2.i()              // Returns 1
+  
+
+### SAM conversion in overloading resolution
+
+In order to improve source compatibility, overloading resolution has been adapted to prefer methods with `Function`-typed arguments over methods with parameters of SAM types. The following example is identical in Scala 2.11 and 2.12:
+
+    scala> object T {
+         |   def m(f: () => Unit) = 0
+         |   def m(r: Runnable) = 1
+         | }
+    
+    scala> val f = () => ()
+    
+    scala> T.m(f)
+    res0: Int = 0
+
+In Scala 2.11, the first alternative is chosen because it is the only applicable method. In Scala 2.12, both methods are applicable, therefore [overloading resolution](http://www.scala-lang.org/files/archive/spec/2.12/06-expressions.html#overloading-resolution) needs to pick the most specific alternative. The specification for [*compatibility*](http://www.scala-lang.org/files/archive/spec/2.12/03-types.html#compatibility) has been updated to consider SAM conversion, so that the first alternative is more specific.
+
+Note that SAM conversion in overloading resolution is always considered, also if the argument expression is not a function literals. This is unlike SAM conversions of expressions themselves, see the previous section. See also the discussion in [scala-dev#158](https://github.com/scala/scala-dev/issues/158).
+
+While the adjustment to overloading resolution improves compatibility, there can be code that compiles in 2.11, but is ambiguous in 2.12:
+
+    scala> object T {
+         |   def m(f: () => Unit, o: Object) = 0
+         |   def m(r: Runnable, s: String) = 1
+         | }
+    defined object T
+    
+    scala> T.m(() => (), "")
+    <console>:13: error: ambiguous reference to overloaded definition
+
 
 ### Inferred types for `val` (and `lazy val`)
 
@@ -239,6 +314,8 @@ In particular, `implicit val`s that didn't need explicitly declared types before
 You can get the old behavior with `-Xsource:2.11`. This may be useful for testing whether these changes are responsible if your code fails to compile.
 
 [Lazy vals and objects](https://github.com/scala/scala/pull/5294) have been reworked, and those defined in methods now use a [more efficient representation](https://github.com/scala/scala/pull/5374) that allows synchronization on the holder of the `lazy val`, instead of the surrounding class (as in Dotty).
+
+  -- TODO: why is this in the "inferred types" section, why under "breaking changes"? This should go somewhere else.
 
 ### Changed syntax trees (affects macro and compiler plugin authors)
 
