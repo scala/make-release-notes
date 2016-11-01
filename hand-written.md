@@ -202,7 +202,12 @@ Scala's interactive shell ships with several spiffy improvements. To try it out,
 
 Since 2.11.8, the REPL uses the same tab completion logic as Scala IDE and ENSIME, which greatly improves the experience! Check out the [PR description](https://github.com/scala/scala/pull/4725) for some tips and tricks.
 
-### Library improvements
+#### sbt builds Scala
+
+Scala itself is now completely built, tested and published with sbt! This makes it easier to get started hacking on the compiler and standard library. All you need on your machine is JDK 8 and sbt - no ant, no environment variables to set, no shell scripts to run. You can [build, use, test and publish](https://github.com/scala/scala/blob/2.12.x/README.md#using-the-sbt-build) Scala like any other sbt-based project. Due to the recursive nature of building Scala with itself, IntelliJ cannot yet import our sbt build directly -- use the `intellij` task instead to generate suitable project files.
+
+
+### Library Improvements
 #### Either is now right-biased
 
 `Either` now supports operations like `map`, `flatMap`, `contains`, `toOption`, and so forth, which operate on the right-hand side. The `.left` and `.right` methods may be deprecated in favor of `.swap` in a later release.
@@ -221,6 +226,9 @@ A number of improvements to `scala.concurrent.Future` were made for Scala 2.12. 
 The Scala library is [free](https://github.com/scala/scala/pull/4443) of [references](https://github.com/scala/scala/pull/4712) to `sun.misc.Unsafe`, and [no longer ships](https://github.com/scala/scala/pull/4629) with a fork of the forkjoin library.
 
 
+#### scala-java8-compat
+
+The [Java 8 compatibility module for Scala](https://github.com/scala/scala-java8-compat) has received an overhaul for Scala 2.12. Even though interoperability of Java 8 SAMs and Scala functions is now baked into the language, this module provides additional convenience for working with Java 8 SAMs. Java 8 streams support was also added during the development cycle of Scala 2.12. Releases are available for both Scala 2.11 and Scala 2.12.
 
 ## Breaking changes
 
