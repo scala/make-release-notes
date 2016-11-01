@@ -1,9 +1,8 @@
 We are happy to announce the availability of Scala 2.12.0!
 
 The Scala 2.12 compiler has been completely overhauled to make use of the new VM features available in Java 8!
-  - A trait is compiled directly to an interface with default methods for improved binary compatibility.
-  - Lambda syntax can now be used to create instances of types with a single abstract method (SAM types). Scala code can seamlessly use libraries with higher-order functions written in Java 8, and vice versa.
-  - Code generation for function literals uses `invokedynamic` to avoid emitting a classfile at compile time, just like Java 8.
+  - A trait [compiles directly to an interface](#trait-compiles-to-an-interface) with default methods for improved binary compatibility.
+  - A function literal (lambda) can now target any [Single Abstract Method (SAM) type](#java-8-style-lambdas), including Scala's built-in `FunctionN` classes. Scala code can seamlessly use libraries with higher-order functions written in Java 8, and vice versa. Code generation for function literals uses `invokedynamic` to avoid emitting a classfile at compile time, just like Java 8.
 
 This release ships with a powerful new optimizer. Many more (effectively) final methods, including those defined in objects and traits, are now inlined. As well, closure allocations, dead code and [box/unbox pairs](https://github.com/scala/scala/pull/4858) are eliminated more effectively.
 
@@ -47,7 +46,7 @@ Scala also works with ant, [maven](http://docs.scala-lang.org/tutorials/scala-wi
 
 A big thank you to everyone who's helped improve Scala by reporting bugs, improving our documentation, spreading kindness in mailing lists and other public fora, and submitting and reviewing pull requests! You are all magnificent.
 
-Scala 2.12.0 is the result of merging over [500 pull requests](https://github.com/scala/scala/pulls?utf8=%E2%9C%93&q=is%3Amerged%20label%3A2.12%20) out of about [600 received PRs](https://github.com/scala/scala/pulls?utf8=%E2%9C%93&q=is%3Apr%20label%3A2.12%20). The [contributions to 2.12.x over the last 2 years](https://github.com/scala/scala/graphs/contributors?from=2014-11-01&to=2016-10-29&type=c) [were split](https://docs.google.com/spreadsheets/d/16zVViCpJEZn_x2RlYFh-xAOiHJG3SrYYpfetRr5cu_Y/edit#gid=912693440) as 64/32/4 between the Scala team at Lightbend (lrytz, retronym, adriaanm, SethTisue, szeiger), the community and EPFL.
+Scala 2.12.0 is the result of merging over [500 pull requests](https://github.com/scala/scala/pulls?utf8=%E2%9C%93&q=is%3Amerged%20label%3A2.12%20) out of about [600 received PRs](https://github.com/scala/scala/pulls?utf8=%E2%9C%93&q=is%3Apr%20label%3A2.12%20). The [contributions to 2.12.x](https://github.com/scala/scala/graphs/contributors?from=2014-11-01&to=2016-10-29&type=c) over the last 2 years [were split](https://docs.google.com/spreadsheets/d/16zVViCpJEZn_x2RlYFh-xAOiHJG3SrYYpfetRr5cu_Y/edit#gid=912693440) as 64/32/4 between the Scala team at Lightbend (lrytz, retronym, adriaanm, SethTisue, szeiger), the community and EPFL.
 
 The new encodings of traits, lambdas and lazy vals were developed in fruitful collaboration with the Dotty team.
 
@@ -73,20 +72,16 @@ Scala 2.12 is all about making optimal use of Java 8's new features (and thus ge
 Except for the breaking changes listed below, code that compiles on 2.11.x without deprecation warnings should compile on 2.12.x too, unless you use experimental APIs such as reflection.  If you find incompatibilities, please [file an issue](https://issues.scala-lang.org). Cross-building is a one-line change to most sbt builds, and even provides support for [version-specific source folders](http://www.scala-sbt.org/0.13/docs/sbt-0.13-Tech-Previews.html#Cross-version+support+for+Scala+sources) out of the box, when necessary to work around incompatibilities (e.g. macros).
 
 ### New Language Features
-The next sections introduce new features and breaking changes in Scala 2.12 in more detail.
-To understand more technicalities and review past discussions, you can also take a look at the full list of
-[noteworthy pull request](https://github.com/scala/scala/pulls?utf8=%E2%9C%93&q=%20is%3Amerged%20label%3A2.12%20label%3Arelease-notes%20)
-that went into this release.
+The next sections introduce new features and breaking changes in Scala 2.12 in more detail. To understand more technicalities and review past discussions, you can also take a look at the full list of [noteworthy pull request](https://github.com/scala/scala/pulls?utf8=%E2%9C%93&q=%20is%3Amerged%20label%3A2.12%20label%3Arelease-notes%20) that went into this release.
 
-### Trait compiles to an interface
+#### Trait compiles to an interface
 
-With Java 8 allowing concrete methods in interfaces, Scala 2.12 is able to compile a trait to a single interface classfile.
-Before, a trait was represented as an interface and a class that held the method implementations.
+With Java 8 allowing concrete methods in interfaces, Scala 2.12 is able to compile a trait to a single interface classfile. Before, a trait was represented as an interface and a class that held the method implementations.
 
 Note that the compiler still has quite a bit of magic to perform behind the scenes, so that care must be taken if a trait is meant to be implemented in Java.
-Briefly, if a trait does any of the following its subclasses require synthetic code: defining fields, calling super, initializer statements in the body, extending a class, relying on linearization to find implementations in the right super trait.
+Briefly, if a trait does any of the following its subclasses require synthetic code: defining fields ( `val` or `var`, but a constant is ok -- `final val` without result type), calling super, initializer statements in the body, extending a class, relying on linearization to find implementations in the right super trait.
 
-### Java 8-style lambdas
+#### Java 8-style lambdas
 
 Scala 2.12 emits closures in the same style as Java 8, whether they target a `FunctionN` class from the standard library or a user-defined Single Abstract Method (SAM) type. The type checker accepts a function literal as a valid expression for either kind of "function-like" type (built-in or SAM). This improves the experience of using libraries written for Java 8 in Scala.
 
@@ -119,7 +114,7 @@ Also, hat tip to Daniel Spiewak for [a great explanation of this feature](https:
 
 For now, we recommend using `-Ypartial-unification` over `-Xexperimental`, as the latter enables some surprising features that will not ship with a future release of Scala.
 
-### Parameter names available at runtime
+#### Parameter names available at runtime
 
 With [JEP-118](http://openjdk.java.net/jeps/118), parameter names can be stored in class files and be queried at runtime using reflection.
 A quick REPL session shows this in action:
@@ -134,13 +129,13 @@ paramNames: List[java.lang.reflect.Parameter] = List(final java.lang.String name
 
 ### Tooling Improvements
 
-### New back end
+#### New back end
 
 Scala 2.12 standardizes on the "GenBCode" back end, which emits code more quickly because it directly generates bytecode from Scala compiler trees, while the previous back end used an intermediate representation called "ICode".
 The old back ends (GenASM and GenIcode) have been removed ([#4814](https://github.com/scala/scala/pull/4814), [#4838](https://github.com/scala/scala/pull/4838)).
 
 
-### New optimizer
+#### New optimizer
 
 The GenBCode back end includes a new inliner and bytecode optimizer. The optimizer is configured
 using `-opt` compiler option, by default it removes unreachable code within a method. Check
@@ -222,7 +217,7 @@ This change has allowed other libraries, such as [cats](http://typelevel.org/cat
 Thanks, [Simon Ochsenreither](https://github.com/soc), for this contribution.
 
 
-### Futures improved
+#### Futures improved
 
 This [blog post series](https://github.com/viktorklang/blog)
 by Viktor Klang explores the diverse improvements made to
@@ -236,7 +231,7 @@ The Scala library is [free](https://github.com/scala/scala/pull/4443) of [refere
 ## Breaking changes
 
 ### Lambdas and locks
-
+TODO
 
 ### SAM types
 
