@@ -154,6 +154,14 @@ With [JEP-118](http://openjdk.java.net/jeps/118), parameter names can be stored 
     scala> val paramNames = classOf[Person].getConstructors.head.getParameters.toList
     paramNames: List[java.lang.reflect.Parameter] = List(final java.lang.String name, final int age)
 
+#### New representation and locking scope for local lazy vals
+
+Local lazy vals and objects, i.e., those defined in methods, now use a more efficient representation (implemented in [#5294](https://github.com/scala/scala/pull/5294) and [#5374](https://github.com/scala/scala/pull/5374)).
+
+In Scala 2.11, a local lazy val is encoded using two heap-allocated objects (one for the value, a second for the initialized flag), and initialization synchronizes on the enclosing class instance.
+
+This has been cleaned up by creating a single heap-allocated object that holds both the value and the initialized flag, and is at the same time used as initialization lock. A similar implementation already existed in Dotty.
+
 ### Tooling improvements
 
 #### New back end
@@ -346,17 +354,13 @@ While the adjustment to overloading resolution improves compatibility, there als
     <console>:13: error: ambiguous reference to overloaded definition
 
 
-### Inferred types for `val` (and `lazy val`)
+### Inferred types for fields
 
-[#5141](https://github.com/scala/scala/pull/5141) and [#5294](https://github.com/scala/scala/pull/5294) align type inference for `def`, `val`, and `lazy val`, fixing assorted corner cases and inconsistencies. As a result, the inferred type of a `val` or `lazy val` may change.
+Type inference for `val`, and `lazy val` has been aligned with `def`, fixing assorted corner cases and inconsistencies ([#5141](https://github.com/scala/scala/pull/5141) and [#5294](https://github.com/scala/scala/pull/5294)). Concretely, when computing the type of an overriding field, the type of the overridden field is used used as expected type. As a result, the inferred type of a `val` or `lazy val` may change in Scala 2.12.
 
-In particular, `implicit val`s that didn't need explicitly declared types before may need them now. (This is always good practice anyway.)
+In particular, an `implicit val` that did not need an explicitly declared type in 2.11 may need one now. (This is always good practice anyway.)
 
 You can get the old behavior with `-Xsource:2.11`. This may be useful for testing whether these changes are responsible if your code fails to compile.
-
-[Lazy vals and objects](https://github.com/scala/scala/pull/5294) have been reworked, and those defined in methods now use a [more efficient representation](https://github.com/scala/scala/pull/5374) that allows synchronization on the holder of the `lazy val`, instead of the surrounding class (as in Dotty).
-
-  -- TODO: why is this in the "inferred types" section, why under "breaking changes"? This should go somewhere else.
 
 ### Changed syntax trees (affects macro and compiler plugin authors)
 
