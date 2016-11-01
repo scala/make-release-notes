@@ -80,7 +80,7 @@ Note that the compiler still has quite a bit of magic to perform behind the scen
 
 #### Lambda syntax for SAM types
 
-The Scala 2.12 type checker accepts a function literal as a valid expression any Single Abstract Method (SAM) type, in addition to the `FunctionN` types from standard library. This improves the experience of using libraries written for Java 8 in Scala. For example, in the REPL:
+The Scala 2.12 type checker accepts a function literal as a valid expression for any Single Abstract Method (SAM) type, in addition to the `FunctionN` types from standard library. This improves the experience of using libraries written for Java 8 in Scala. For example, in the REPL:
 
     scala> val runRunnable: Runnable = () => println("Run!")
     runRunnable: Runnable = $$Lambda$1073/754978432@7cf283e1
@@ -99,9 +99,27 @@ Note that only lambda expressions are converted to SAM type instances, not arbit
 
 The language specification has the [full list of requirements for SAM conversion](http://www.scala-lang.org/files/archive/spec/2.12/06-expressions.html#sam-conversion).
 
-TODO: FunctionN are SAM
+With the use of default methods, Scala's built-in `FunctionN` traits are compiled to SAM interfaces. This allows creating Scala functions from Java using Java's lambda syntax:
 
-TODO: improved param type inference
+    public class A {
+      scala.Function1<String, String> f = s -> s.trim();
+    }
+
+Specialized function classes are also SAM interfaces and can be found in the package `scala.runtime.java8`.
+
+Thanks to an improvement in type-checking, the parameter type in a lambda expression can be omitted even when the invoked method is overloaded (see [#5307](https://github.com/scala/scala/pull/5307)). In the following example, the compiler infers parameter type `Int` for type checking the lambda:
+
+    scala> trait MyFun { def apply(x: Int): String }
+
+    scala> object T {
+         |   def m(f: Int => String) = 0
+         |   def m(f: MyFun) = 1
+         | }
+    
+    scala> T.m(x => x.toString)
+    res0: Int = 0
+
+Note that both methods are applicable, and overloading resolution selects the one with the `Function1` argument type, as [explained in more detail below](#sam-conversion-in-overloading-resolution).
 
 #### Java 8-style bytecode for lambdas
 
