@@ -2,7 +2,7 @@ We are very happy to announce the availability of Scala 2.12.0!
 
 The Scala 2.12 compiler has been completely overhauled to make use of the new VM features available in Java 8:
   - A trait [compiles directly to an interface](#trait-compiles-to-an-interface) with default methods. This improves binary compatibility and Java interoperability.
-  - Scala and Java 8 interop is also improved for functional code, as methods that take functions can easily be called in each direction using lambda syntax. The  `FunctionN` classes in Scala's standard library are now Single Abstract Method (SAM) types, and all [SAM types](#java-8-style-lambdas)  are treated uniformly -- from type checking until code generation (no class file is generated for lambdas, and `invokedynamic` is used instead).
+  - Scala and Java 8 interop is also improved for functional code, as methods that take functions can easily be called in each direction using lambda syntax. The  `FunctionN` classes in Scala's standard library are now Single Abstract Method (SAM) types, and all [SAM types](#lambda-syntax-for-sam-types) are treated uniformly -- from type checking until code generation (no class file is generated for lambdas, and `invokedynamic` is used instead).
 
 This release ships with a powerful [new optimizer](#new-optimizer). Many more (effectively) final methods, including those defined in objects and traits, are now inlined. As well, closure allocations, dead code and box/unbox pairs are eliminated more effectively.
 
@@ -51,6 +51,8 @@ Thank you very much to all contributors that helped realize this Scala release!
 
 Since Scala 2.10, minor releases of Scala are binary compatible with each other. We maintain [this policy](/documentation/compatibility.html) for 2.12.x.
 
+TODO: fix the link above
+
 Although Scala 2.11 and 2.12 are mostly source compatible to facilitate cross-building, they are not *binary* compatible.  This allows us to keep improving the Scala compiler and standard library.
 
 
@@ -72,17 +74,13 @@ The next sections introduce new features and breaking changes in Scala 2.12 in m
 
 #### Trait compiles to an interface
 
-With Java 8 allowing concrete methods in interfaces, Scala 2.12 is able to compile a trait to a single interface classfile. Before, a trait was represented as an interface and a class that held the method implementations.
+With Java 8 allowing concrete methods in interfaces, Scala 2.12 is able to compile a trait to a single interface classfile. Before, a trait was represented as an interface and a class that held the method implementations (`T$class.class`).
 
 Note that the compiler still has quite a bit of magic to perform behind the scenes, so that care must be taken if a trait is meant to be implemented in Java. Briefly, if a trait does any of the following its subclasses require synthetic code: defining fields ( `val` or `var`, but a constant is ok -- `final val` without result type), calling super, initializer statements in the body, extending a class, relying on linearization to find implementations in the right super trait.
 
-#### Java 8-style lambdas
+#### Lambda syntax for SAM types
 
-  -- TODO: break this up into SAM and IndyLambda
-
-Scala 2.12 emits closures in the same style as Java 8, whether they target a `FunctionN` class from the standard library or a user-defined Single Abstract Method (SAM) type. The type checker accepts a function literal as a valid expression for either kind of "function-like" type (built-in or SAM). This improves the experience of using libraries written for Java 8 in Scala.
-
-For example, in the REPL:
+The Scala 2.12 type checker accepts a function literal as a valid expression any Single Abstract Method (SAM) type, in addition to the `FunctionN` types from standard library. This improves the experience of using libraries written for Java 8 in Scala. For example, in the REPL:
 
     scala> val runRunnable: Runnable = () => println("Run!")
     runRunnable: Runnable = $$Lambda$1073/754978432@7cf283e1
@@ -90,13 +88,30 @@ For example, in the REPL:
     scala> runRunnable.run()
     Run!
 
+Note that only lambda expressions are converted to SAM type instances, not arbitrary expressions of `FunctionN` type:
+
+    scala> val f = () => println("Faster!")
+    
+    scala> val fasterRunnable: Runnable = f
+    <console>:12: error: type mismatch;
+     found   : () => Unit
+     required: Runnable
+
+The language specification has the [full list of requirements for SAM conversion](http://www.scala-lang.org/files/archive/spec/2.12/06-expressions.html#sam-conversion).
+
+TODO: FunctionN are SAM
+
+TODO: improved param type inference
+
+#### Java 8-style bytecode for lambdas
+
+Scala 2.12 emits bytecode for functions in the same style as Java 8, whether they target a `FunctionN` class from the standard library or a user-defined Single Abstract Method (SAM) type.
+
 For each lambda the compiler generates a method containing the lambda body, and emits an `invokedynamic` that will spin up a lightweight class for this closure using the JDK's `LambdaMetaFactory`. Note that in the following situations, an anonymous function class is still synthesized at compile-time:
 
   - If the SAM type is not a simple interface, for example an abstract class or a trait with a field definition (see [#4971](https://github.com/scala/scala/pull/4971))
   - If the abstract method is specialized - except for `scala.FunctionN`, whose specialized variants can be instantiated using `LambdaMetaFactory` (see [#4971](https://github.com/scala/scala/pull/4971))
   - If the function literal is defined in a constructor or a super call ([#3616](https://github.com/scala/scala/pull/3616))
-
-The language specification has the [full list of requirements for SAM conversion](http://www.scala-lang.org/files/archive/spec/2.12/06-expressions.html#sam-conversion).
 
 Compared to Scala 2.11, the new scheme has the advantage that, in most cases, the compiler does not need to generate an anonymous class for each closure. This leads to significantly smaller JAR files.
 
@@ -291,9 +306,9 @@ In order to improve source compatibility, overloading resolution has been adapte
 
 In Scala 2.11, the first alternative is chosen because it is the only applicable method. In Scala 2.12, both methods are applicable, therefore [overloading resolution](http://www.scala-lang.org/files/archive/spec/2.12/06-expressions.html#overloading-resolution) needs to pick the most specific alternative. The specification for [*compatibility*](http://www.scala-lang.org/files/archive/spec/2.12/03-types.html#compatibility) has been updated to consider SAM conversion, so that the first alternative is more specific.
 
-Note that SAM conversion in overloading resolution is always considered, also if the argument expression is not a function literals. This is unlike SAM conversions of expressions themselves, see the previous section. See also the discussion in [scala-dev#158](https://github.com/scala/scala-dev/issues/158).
+Note that SAM conversion in overloading resolution is always considered, also if the argument expression is not a function literal (like in the example). This is unlike SAM conversions of expressions themselves, see the previous section. See also the discussion in [scala-dev#158](https://github.com/scala/scala-dev/issues/158).
 
-While the adjustment to overloading resolution improves compatibility, there can be code that compiles in 2.11, but is ambiguous in 2.12:
+While the adjustment to overloading resolution improves compatibility, there also exists code that compiles in 2.11, but is ambiguous in 2.12:
 
     scala> object T {
          |   def m(f: () => Unit, o: Object) = 0
