@@ -4,7 +4,7 @@ The Scala 2.12 compiler has been completely overhauled to make use of the new VM
   - A trait [compiles directly to an interface](#trait-compiles-to-an-interface) with default methods. This improves binary compatibility and Java interoperability.
   - Scala and Java 8 interop is also improved for functional code, as methods that take functions can easily be called in each direction using lambda syntax. The  `FunctionN` classes in Scala's standard library are now Single Abstract Method (SAM) types, and all [SAM types](#java-8-style-lambdas)  are treated uniformly -- from type checking until code generation (no class file is generated for lambdas, and `invokedynamic` is used instead).
 
-This release ships with a powerful new optimizer. Many more (effectively) final methods, including those defined in objects and traits, are now inlined. As well, closure allocations, dead code and [box/unbox pairs](https://github.com/scala/scala/pull/4858) are eliminated more effectively.
+This release ships with a powerful [new optimizer](#new-optimizer). Many more (effectively) final methods, including those defined in objects and traits, are now inlined. As well, closure allocations, dead code and box/unbox pairs are eliminated more effectively.
 
 From now on, 2.12.x releases will be fully binary compatible. This release is identical to 2.12.0-RC2.
 
@@ -54,7 +54,7 @@ Since Scala 2.10, minor releases of Scala are binary compatible with each other.
 Although Scala 2.11 and 2.12 are mostly source compatible to facilitate cross-building, they are not *binary* compatible.  This allows us to keep improving the Scala compiler and standard library.
 
 
-## Scala 2.12 Overview
+## Scala 2.12 overview
 
 Scala 2.12 is all about making optimal use of Java 8's new features (and thus generates code that requires a Java 8 runtime).
   - Traits ([#5003](https://github.com/scala/scala/pull/5003)) and functions are compiled to their Java 8 equivalents. The compiler no longer generates trait implementation classes (`T$class.class`) and anonymous function classes (`C$$anonfun$1.class`).
@@ -67,7 +67,7 @@ Except for the breaking changes listed below, code that compiles on 2.11.x witho
 
 Thanks to source compatibility, cross-building is a one-line change to most sbt builds. Where needed, sbt provides support for [version-specific source folders](http://www.scala-sbt.org/0.13/docs/sbt-0.13-Tech-Previews.html#Cross-version+support+for+Scala+sources) out of the box.
 
-### New Language Features
+### New language features
 The next sections introduce new features and breaking changes in Scala 2.12 in more detail. To understand more technicalities and review past discussions, you can also take a look at the full list of [noteworthy pull request](https://github.com/scala/scala/pulls?utf8=%E2%9C%93&q=%20is%3Amerged%20label%3A2.12%20label%3Arelease-notes%20) that went into this release.
 
 #### Trait compiles to an interface
@@ -80,16 +80,6 @@ Note that the compiler still has quite a bit of magic to perform behind the scen
 
 Scala 2.12 emits closures in the same style as Java 8, whether they target a `FunctionN` class from the standard library or a user-defined Single Abstract Method (SAM) type. The type checker accepts a function literal as a valid expression for either kind of "function-like" type (built-in or SAM). This improves the experience of using libraries written for Java 8 in Scala.
 
-For each lambda the compiler generates a method containing the lambda body, and emits an `invokedynamic` that will spin up a lightweight class for this closure using the JDK's `LambdaMetaFactory`. Note that in the following situations, the an anonymous function class is still synthesized at compile-time:
-  
-  - If the SAM type is not a simple interface, for example an abstract class or a trait with a field definition (see [#4971](https://github.com/scala/scala/pull/4971))
-  - If the abstract method is specialized - except for `scala.FunctionN`, whose specialized variants can be instantiated using `LambdaMetaFactory` (see [#4971](https://github.com/scala/scala/pull/4971))
-  - If the function literal is defined in a constructor or a super call ([#3616](https://github.com/scala/scala/pull/3616))
-
-The language specification has the [full list of requirements for SAM conversion](http://www.scala-lang.org/files/archive/spec/2.12/06-expressions.html#sam-conversion).
-
-Compared to Scala 2.11, the new scheme has the advantage that, in most cases, the compiler does not need to generate an anonymous class for each closure. This leads to significantly smaller JAR files.
-
 For example, in the REPL:
 
 ```
@@ -99,6 +89,16 @@ runRunnable: Runnable = $$Lambda$1073/754978432@7cf283e1
 scala> runRunnable.run()
 Run!
 ```
+
+For each lambda the compiler generates a method containing the lambda body, and emits an `invokedynamic` that will spin up a lightweight class for this closure using the JDK's `LambdaMetaFactory`. Note that in the following situations, an anonymous function class is still synthesized at compile-time:
+
+  - If the SAM type is not a simple interface, for example an abstract class or a trait with a field definition (see [#4971](https://github.com/scala/scala/pull/4971))
+  - If the abstract method is specialized - except for `scala.FunctionN`, whose specialized variants can be instantiated using `LambdaMetaFactory` (see [#4971](https://github.com/scala/scala/pull/4971))
+  - If the function literal is defined in a constructor or a super call ([#3616](https://github.com/scala/scala/pull/3616))
+
+The language specification has the [full list of requirements for SAM conversion](http://www.scala-lang.org/files/archive/spec/2.12/06-expressions.html#sam-conversion).
+
+Compared to Scala 2.11, the new scheme has the advantage that, in most cases, the compiler does not need to generate an anonymous class for each closure. This leads to significantly smaller JAR files.
 
 Our backend support for `invokedynamic` is also available to macro authors, as shown in [this test case](https://github.com/scala/scala/blob/v2.12.0/test/files/run/indy-via-macro-with-dynamic-args/macro_1.scala).
 
@@ -113,7 +113,7 @@ For now, we recommend using `-Ypartial-unification` over `-Xexperimental`, as th
 
 #### Parameter names available at runtime
 
-With [JEP-118](http://openjdk.java.net/jeps/118), parameter names can be stored in class files and be queried at runtime using reflection. A quick REPL session shows this in action:
+With [JEP-118](http://openjdk.java.net/jeps/118), parameter names can be stored in class files and be queried at runtime using Java reflection. A quick REPL session shows this in action:
 
 ```
 scala> case class Person(name: String, age: Int)
@@ -123,7 +123,7 @@ scala> val paramNames = classOf[Person].getConstructors.head.getParameters.toLis
 paramNames: List[java.lang.reflect.Parameter] = List(final java.lang.String name, final int age)
 ```
 
-### Tooling Improvements
+### Tooling improvements
 
 #### New back end
 
@@ -160,11 +160,12 @@ public int f(int a, boolean b) {
 }
 ```
 
-The optimizer supports inlining (disabled by default). With `-opt:l:project` code from source files currently being compiled is inlined, while `-opt:l:classpath` enables inlining code from libraries on the compiler's classpath. Other than methods marked [`@inline`](http://www.scala-lang.org/files/archive/api/2.12.0/scala/inline.html), higher-order methods are inlined if the function argument is a lambda, or a parameter of the callee.
+The optimizer supports inlining (disabled by default). With `-opt:l:project` code from source files currently being compiled is inlined, while `-opt:l:classpath` enables inlining code from libraries on the compiler's classpath. Other than methods marked [`@inline`](http://www.scala-lang.org/files/archive/api/2.12.0/scala/inline.html), higher-order methods are inlined if the function argument is a lambda, or a parameter of the caller.
 
 Note that:
   - We recommend to enable inlining only for production builds, as sbt's incremental compilation does not track dependencies introduced by inlining.
   - When inlining code from the classpath, you need to ensure that all dependencies have exactly the same versions at compile time and run time.
+  - If you are building a library to publish on Maven Central, you should not inline code from its dependencies. Users of your library might have different versions of its dependencies on the classpath, which breaks binary compatibility.
 
 The Scala distribution is built using `-opt:l:classpath`, which improves the performance of the Scala compiler by roughly 5% (hot and cold, measured using our [JMH-based benchmark suite](https://github.com/scala/compiler-benchmark/blob/master/compilation/src/main/scala/scala/tools/nsc/ScalacBenchmark.scala)) compared to a non-optimized build.
 
@@ -173,7 +174,7 @@ The GenBCode backend and the implementation of the new optimizer are built on ea
 
 #### Scaladoc look-and-feel overhauled
 
-Scaladoc's output is now more attractive, more modern, and easier to use.
+Scaladoc's output is now more attractive, more modern, and easier to use. Take a look at the [Scala Standard Library API](http://www.scala-lang.org/api/2.12.0).
 
 Thanks, [Felix Mulder](https://github.com/felixmulder), for leading this effort.
 
@@ -190,16 +191,13 @@ Some projects with very large Javadoc comments may run into a stack overflow in 
 #### Scala Shell ([REPL](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop))
 Scala's interactive shell ships with several spiffy improvements. To try it out, launch it from the command line with the `scala` script or in sbt using the `console` task. If you like color (who doesn't!), use `scala -Dscala.color` instead until [it's turned on by default](https://github.com/scala/scala-dev/issues/256).
 
-Since 2.11.8, the REPL uses the [same tab completion logic](https://github.com/scala/scala/pull/4725) as Scala IDE and ENSIME, which greatly improves the experience! Check out the PR description for some tips and tricks.
+Since 2.11.8, the REPL uses the same tab completion logic as Scala IDE and ENSIME, which greatly improves the experience! Check out the [PR description](https://github.com/scala/scala/pull/4725) for some tips and tricks.
 
-### Library Improvements
+### Library improvements
 #### Either is now right-biased
 
-`Either` now supports operations like `map`, `flatMap`, `contains`, `toOption`, and so forth, which operate on the right-hand side.
-
-(`.left` and `.right` may be deprecated in favor of `.swap` in a later release.)
-
-The changes are source-compatible with old code (except in the presence of conflicting extension methods).
+`Either` now supports operations like `map`, `flatMap`, `contains`, `toOption`, and so forth, which operate on the right-hand side. The `.left` and `.right` methods may be deprecated in favor of `.swap` in a later release.
+The changes are source-compatible with existing code (except in the presence of conflicting extension methods).
 
 This change has allowed other libraries, such as [cats](http://typelevel.org/cats/) to standardize on `Either`.
 
@@ -207,9 +205,10 @@ Thanks, [Simon Ochsenreither](https://github.com/soc), for this contribution.
 
 
 #### Futures improved
-This [blog post series](https://github.com/viktorklang/blog) by Viktor Klang explores the diverse improvements made to `scala.concurrent.Future` for 2.12.
 
-#### Use Standard Java 8 APIs
+A number of improvements to `scala.concurrent.Future` were made for Scala 2.12. This [blog post series](https://github.com/viktorklang/blog) by Viktor Klang explores them in detail.
+
+#### Use standard Java 8 APIs
 The Scala library is [free](https://github.com/scala/scala/pull/4443) of [references](https://github.com/scala/scala/pull/4712) to `sun.misc.Unsafe`, and [no longer ships](https://github.com/scala/scala/pull/4629) with a fork of the forkjoin library.
 
 
