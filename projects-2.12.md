@@ -15,6 +15,7 @@ Scala modules, add in sbt using `libraryDependencies += ...`
 Testing frameworks, add in sbt using `libraryDependencies += ... % "test"`
 
     "com.github.scalaprops"            %% "scalaprops"                % "0.3.4"           % "test"
+    "com.lihaoyi"                      %% "utest"                     % "0.4.4"           % "test"
 
 Other libraries, add in sbt using `libraryDependencies += ...`
 
@@ -26,12 +27,15 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "com.github.xuwei-k"               %% "applybuilder"              % "0.2.2"
     "com.github.xuwei-k"               %% "iarray"                    % "0.3.1"
     "com.github.xuwei-k"               %% "nobox"                     % "0.1.11"
+    "com.lihaoyi"                      %% "sourcecode"                % "0.1.3"
+    "com.lihaoyi"                      %% "scalatags"                 % "0.6.2"
 
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 
     "org.scala-lang.plugins"           % "scala-continuations-plugin_2.12.0" % "1.0.3"
+    "com.lihaoyi"                      %% "acyclic"                          % "0.1.5"
 
-Pending: [ScalaCheck](https://github.com/rickynils/scalacheck/issues/291), [ScalaTest](https://github.com/scalatest/scalatest/issues/989), [Specs2](https://github.com/etorreborre/specs2/issues/519), [Scalatags](https://github.com/lihaoyi/scalatags/issues/145)...
+Pending: [ScalaCheck](https://github.com/rickynils/scalacheck/issues/291), [ScalaTest](https://github.com/scalatest/scalatest/issues/989), [Specs2](https://github.com/etorreborre/specs2/issues/519)...
 
 ### Scala 2.12.0-RC2
 
