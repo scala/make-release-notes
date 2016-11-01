@@ -35,7 +35,7 @@ Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
     "org.scala-lang.plugins"           % "scala-continuations-plugin_2.12.0" % "1.0.3"
     "com.lihaoyi"                      %% "acyclic"                          % "0.1.5"
 
-Pending: [ScalaCheck](https://github.com/rickynils/scalacheck/issues/291), [ScalaTest](https://github.com/scalatest/scalatest/issues/989), [Specs2](https://github.com/etorreborre/specs2/issues/519), [Shapeless](https://github.com/milessabin/shapeless/issues/651), [akka-http](https://github.com/akka/akka-http/issues/437)...
+Pending: [ScalaCheck](https://github.com/rickynils/scalacheck/issues/291), [ScalaTest](https://github.com/scalatest/scalatest/issues/989), [Specs2](https://github.com/etorreborre/specs2/issues/519), [Shapeless](https://github.com/milessabin/shapeless/issues/651), [macro paradise](https://github.com/scalamacros/paradise/issues/87), [akka-http](https://github.com/akka/akka-http/issues/437)...
 
 ### Scala 2.12.0-RC2
 
