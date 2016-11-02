@@ -34,6 +34,8 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "com.lihaoyi"                      %% "sourcecode"                % "0.1.3"
     "com.lihaoyi"                      %% "scalatags"                 % "0.6.2"
     "org.scalactic"                    %% "scalactic"                 % "3.0.0"
+    "com.chuusai"                      %% "shapeless"                 % "2.3.2"
+    "org.typelevel"                    %% "macro-compat"              % "1.1.1"
 
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 
@@ -41,7 +43,7 @@ Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
     "com.lihaoyi"                      %% "acyclic"                          % "0.1.5"
     "org.scalamacros"                  %% "paradise"                         % "2.1.0"
 
-Pending: [Specs2](https://github.com/etorreborre/specs2/issues/519), [Shapeless](https://github.com/milessabin/shapeless/issues/651), [akka-http](https://github.com/akka/akka-http/issues/437), [Monocle](https://github.com/julien-truffaut/Monocle/issues/407), [Refined](https://github.com/fthomas/refined/issues/214), [WartRemover](https://github.com/puffnfresh/wartremover/issues/278)...
+Pending: [Specs2](https://github.com/etorreborre/specs2/issues/519), [akka-http](https://github.com/akka/akka-http/issues/437), [Monocle](https://github.com/julien-truffaut/Monocle/issues/407), [Refined](https://github.com/fthomas/refined/issues/214), [WartRemover](https://github.com/puffnfresh/wartremover/issues/278)...
 
 ### Scala 2.12.0-RC2
 
