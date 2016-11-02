@@ -19,6 +19,7 @@ Testing frameworks, add in sbt using `libraryDependencies += ... % "test"`
     "org.scalacheck"                   %% "scalacheck"                % "1.13.4"          % "test"
     "org.scalacheck"                   %% "scalacheck"                % "1.12.6"          % "test"
     "org.scalacheck"                   %% "scalacheck"                % "1.11.6"          % "test"
+    "org.scalatest"                    %% "scalatest"                 % "3.0.0"           % "test"
 
 Other libraries, add in sbt using `libraryDependencies += ...`
 
@@ -32,13 +33,15 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "com.github.xuwei-k"               %% "nobox"                     % "0.1.11"
     "com.lihaoyi"                      %% "sourcecode"                % "0.1.3"
     "com.lihaoyi"                      %% "scalatags"                 % "0.6.2"
+    "org.scalactic"                    %% "scalactic"                 % "3.0.0"
 
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 
     "org.scala-lang.plugins"           % "scala-continuations-plugin_2.12.0" % "1.0.3"
     "com.lihaoyi"                      %% "acyclic"                          % "0.1.5"
+    "org.scalamacros"                  %% "paradise"                         % "2.1.0"
 
-Pending: [ScalaTest](https://github.com/scalatest/scalatest/issues/989), [Specs2](https://github.com/etorreborre/specs2/issues/519), [Shapeless](https://github.com/milessabin/shapeless/issues/651), [macro paradise](https://github.com/scalamacros/paradise/issues/87), [akka-http](https://github.com/akka/akka-http/issues/437), [Monocle](https://github.com/julien-truffaut/Monocle/issues/407), [Refined](https://github.com/fthomas/refined/issues/214), [WartRemover](https://github.com/puffnfresh/wartremover/issues/278)...
+Pending: [Specs2](https://github.com/etorreborre/specs2/issues/519), [Shapeless](https://github.com/milessabin/shapeless/issues/651), [akka-http](https://github.com/akka/akka-http/issues/437), [Monocle](https://github.com/julien-truffaut/Monocle/issues/407), [Refined](https://github.com/fthomas/refined/issues/214), [WartRemover](https://github.com/puffnfresh/wartremover/issues/278)...
 
 ### Scala 2.12.0-RC2
 
