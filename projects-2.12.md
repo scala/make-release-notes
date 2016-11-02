@@ -34,6 +34,8 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "com.lihaoyi"                      %% "sourcecode"                % "0.1.3"
     "com.lihaoyi"                      %% "scalatags"                 % "0.6.2"
     "org.scalactic"                    %% "scalactic"                 % "3.0.0"
+    "com.chuusai"                      %% "shapeless"                 % "2.3.2"
+    "org.typelevel"                    %% "macro-compat"              % "1.1.1"
 
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 
