@@ -6,7 +6,7 @@ Library maintainers, library users, please [submit a pull request](https://githu
 
 Scala modules, add in sbt using `libraryDependencies += ...`
 
-    "org.scala-lang.modules"           %% "scala-xml"                 % "1.0.5"
+    "org.scala-lang.modules"           %% "scala-xml"                 % "1.0.6"
     "org.scala-lang.modules"           %% "scala-parser-combinators"  % "1.0.4"
     "org.scala-lang.modules"           %% "scala-swing"               % "2.0.0-M2"
     "org.scala-lang.modules"           %% "scala-async"               % "0.9.6"
