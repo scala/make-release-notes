@@ -43,6 +43,12 @@ Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
     "com.lihaoyi"                      %% "acyclic"                          % "0.1.5"
     "org.scalamacros"                  %% "paradise"                         % "2.1.0"
 
+Sbt plugins. Most plugins do not need to be re-published for 2.12, but certain plugins did require changes. Add using `addSbtPlugin`:
+
+    "org.scala-js"                     % "sbt-scalajs"                % "0.6.13"
+    "com.typesafe"                     % "sbt-mima-plugin"            % "0.1.11"
+    "org.tpolecat"                     % "tut-plugin"                 % "0.4.6"
+
 Pending: [Specs2](https://github.com/etorreborre/specs2/issues/519), [akka-http](https://github.com/akka/akka-http/issues/437), [Monocle](https://github.com/julien-truffaut/Monocle/issues/407), [Refined](https://github.com/fthomas/refined/issues/214), [WartRemover](https://github.com/puffnfresh/wartremover/issues/278)...
 
 ### Scala 2.12.0-RC2
