@@ -43,7 +43,7 @@ Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
     "com.lihaoyi"                      %% "acyclic"                          % "0.1.5"
     "org.scalamacros"                  %% "paradise"                         % "2.1.0"
 
-Sbt plugins. Most plugins do not need to be re-published for 2.12, but certain plugins did require changes. Add using `addSbtPlugin`:
+Sbt plugins. Most plugins do not need to be re-published for 2.12, but certain plugins did require changes. Add using `addSbtPlugin(...)`:
 
     "org.scala-js"                     % "sbt-scalajs"                % "0.6.13"
     "com.typesafe"                     % "sbt-mima-plugin"            % "0.1.11"
