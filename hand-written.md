@@ -49,7 +49,7 @@ Thank you very much to all contributors that helped realize this Scala release!
 
 ## Binary compatibility
 
-Since Scala 2.10, minor releases of Scala are binary compatible with each other. We maintain [this policy](http://docs.scala-lang.org/overviews/core/binary-compatibility.html) for 2.12.x.
+Since Scala 2.10, minor releases of Scala are binary compatible with each other. We maintain [this policy](http://docs.scala-lang.org/overviews/core/binary-compatibility-of-scala-releases.html) for 2.12.x.
 
 Although Scala 2.11 and 2.12 are mostly source compatible to facilitate cross-building, they are not *binary* compatible.  This allows us to keep improving the Scala compiler and standard library.
 
@@ -65,7 +65,7 @@ Scala 2.12 is all about making optimal use of Java 8's new features (and thus ge
 
 The new encodings for traits and lambdas lead to significantly smaller JAR files. For example, for scalatest 3.0.0, the jar size went from 9.9M in 2.11.8 to 6.7M.
 
-Except for the breaking changes listed below, code that compiles on 2.11.x without deprecation warnings should compile on 2.12.x, unless you use experimental APIs such as reflection.  If you find incompatibilities that are not [listed below](#breaking-changes), please [file an issue](https://issues.scala-lang.org). 
+Except for the breaking changes listed below, code that compiles on 2.11.x without deprecation warnings should compile on 2.12.x, unless you use experimental APIs such as reflection.  If you find incompatibilities that are not [listed below](#breaking-changes), please [file an issue](https://issues.scala-lang.org).
 
 Thanks to source compatibility, cross-building is a one-line change to most sbt builds. Where needed, sbt provides support for [version-specific source folders](http://www.scala-sbt.org/0.13/docs/sbt-0.13-Tech-Previews.html#Cross-version+support+for+Scala+sources) out of the box.
 
@@ -84,14 +84,14 @@ The Scala 2.12 type checker accepts a function literal as a valid expression for
 
     scala> val runRunnable: Runnable = () => println("Run!")
     runRunnable: Runnable = $$Lambda$1073/754978432@7cf283e1
-    
+
     scala> runRunnable.run()
     Run!
 
 Note that only lambda expressions are converted to SAM type instances, not arbitrary expressions of `FunctionN` type:
 
     scala> val f = () => println("Faster!")
-    
+
     scala> val fasterRunnable: Runnable = f
     <console>:12: error: type mismatch;
      found   : () => Unit
@@ -115,7 +115,7 @@ Thanks to an improvement in type-checking, the parameter type in a lambda expres
          |   def m(f: Int => String) = 0
          |   def m(f: MyFun) = 1
          | }
-    
+
     scala> T.m(x => x.toString)
     res0: Int = 0
 
@@ -343,7 +343,7 @@ Note that SAM conversion only applies to lambda expressions, not to arbitrary ex
     val fun = () => 2     // Type Function0[Int]
     val sam2: MySam = fun // Uses implicit conversion
     sam2.i()              // Returns 1
-  
+
 
 ### SAM conversion in overloading resolution
 
@@ -353,9 +353,9 @@ In order to improve source compatibility, overloading resolution has been adapte
          |   def m(f: () => Unit) = 0
          |   def m(r: Runnable) = 1
          | }
-    
+
     scala> val f = () => ()
-    
+
     scala> T.m(f)
     res0: Int = 0
 
@@ -370,7 +370,7 @@ While the adjustment to overloading resolution improves compatibility, there als
          |   def m(r: Runnable, s: String) = 1
          | }
     defined object T
-    
+
     scala> T.m(() => (), "")
     <console>:13: error: ambiguous reference to overloaded definition
 
