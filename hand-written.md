@@ -49,9 +49,7 @@ Thank you very much to all contributors that helped realize this Scala release!
 
 ## Binary compatibility
 
-Since Scala 2.10, minor releases of Scala are binary compatible with each other. We maintain [this policy](/documentation/compatibility.html) for 2.12.x.
-
-TODO: fix the link above
+Since Scala 2.10, minor releases of Scala are binary compatible with each other. We maintain [this policy](http://docs.scala-lang.org/overviews/core/binary-compatibility.html) for 2.12.x.
 
 Although Scala 2.11 and 2.12 are mostly source compatible to facilitate cross-building, they are not *binary* compatible.  This allows us to keep improving the Scala compiler and standard library.
 
@@ -64,6 +62,8 @@ Scala 2.12 is all about making optimal use of Java 8's new features (and thus ge
   - In addition to compiling functions, we also use `invokedynamic` for a more natural encoding of other language features ([#4896](https://github.com/scala/scala/pull/4896)).
   - We've standardized on the GenBCode back end ([#4814](https://github.com/scala/scala/pull/4814), [#4838](https://github.com/scala/scala/pull/4838)) and the flat classpath implementation is now the default ([#5057](https://github.com/scala/scala/pull/5057)).
   - The optimizer has been completely overhauled for 2.12.
+
+The new encodings for traits and lambdas lead to significantly smaller JAR files. For example, for scalatest 3.0.0, the jar size went from 9.9M in 2.11.8 to 6.7M.
 
 Except for the breaking changes listed below, code that compiles on 2.11.x without deprecation warnings should compile on 2.12.x, unless you use experimental APIs such as reflection.  If you find incompatibilities that are not [listed below](#breaking-changes), please [file an issue](https://issues.scala-lang.org). 
 
@@ -131,7 +131,7 @@ For each lambda the compiler generates a method containing the lambda body, and 
   - If the abstract method is specialized - except for `scala.FunctionN`, whose specialized variants can be instantiated using `LambdaMetaFactory` (see [#4971](https://github.com/scala/scala/pull/4971))
   - If the function literal is defined in a constructor or a super call ([#3616](https://github.com/scala/scala/pull/3616))
 
-Compared to Scala 2.11, the new scheme has the advantage that, in most cases, the compiler does not need to generate an anonymous class for each closure. This leads to significantly smaller JAR files.
+Compared to Scala 2.11, the new scheme has the advantage that, in most cases, the compiler does not need to generate an anonymous class for each closure.
 
 Our backend support for `invokedynamic` is also available to macro authors, as shown in [this test case](https://github.com/scala/scala/blob/v2.12.0/test/files/run/indy-via-macro-with-dynamic-args/macro_1.scala).
 
