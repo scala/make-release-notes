@@ -38,6 +38,7 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "com.chuusai"                      %% "shapeless"                 % "2.3.2"
     "org.typelevel"                    %% "macro-compat"              % "1.1.1"
     "org.scodec"                       %% "scodec-bits"               % "1.1.2"
+    "org.scodec"                       %% "scodec-core"               % "1.10.3"
     "com.softwaremill.quicklens"       %% "quicklens"                 % "1.4.8"
     "com.softwaremill.macwire"         %% "macros"                    % "2.2.5"
 
