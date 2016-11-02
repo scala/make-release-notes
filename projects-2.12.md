@@ -41,6 +41,8 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "org.scodec"                       %% "scodec-core"               % "1.10.3"
     "com.softwaremill.quicklens"       %% "quicklens"                 % "1.4.8"
     "com.softwaremill.macwire"         %% "macros"                    % "2.2.5"
+    "org.json4s"                       %% "json4s-native"             % "3.4.2"
+    "org.squeryl"                      %% "squeryl"                   % "0.9.7"
 
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 
