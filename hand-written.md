@@ -144,16 +144,6 @@ Also, hat tip to Daniel Spiewak for [a great explanation of this feature](https:
 
 For now, we recommend using `-Ypartial-unification` over `-Xexperimental`, as the latter enables some surprising features that will not ship with a future release of Scala.
 
-#### Parameter names available at runtime
-
-With [JEP-118](http://openjdk.java.net/jeps/118), parameter names can be stored in class files and be queried at runtime using Java reflection. A quick REPL session shows this in action:
-
-    scala> case class Person(name: String, age: Int)
-    defined class Person
-    
-    scala> val paramNames = classOf[Person].getConstructors.head.getParameters.toList
-    paramNames: List[java.lang.reflect.Parameter] = List(final java.lang.String name, final int age)
-
 #### New representation and locking scope for local lazy vals
 
 Local lazy vals and objects, i.e., those defined in methods, now use a more efficient representation (implemented in [#5294](https://github.com/scala/scala/pull/5294) and [#5374](https://github.com/scala/scala/pull/5374)).
@@ -266,13 +256,26 @@ Thanks, [Simon Ochsenreither](https://github.com/soc), for this contribution.
 
 A number of improvements to `scala.concurrent.Future` were made for Scala 2.12. This [blog post series](https://github.com/viktorklang/blog) by Viktor Klang explores them in detail.
 
-#### Use standard Java 8 APIs
-The Scala library is [free](https://github.com/scala/scala/pull/4443) of [references](https://github.com/scala/scala/pull/4712) to `sun.misc.Unsafe`, and [no longer ships](https://github.com/scala/scala/pull/4629) with a fork of the forkjoin library.
-
 
 #### scala-java8-compat
 
 The [Java 8 compatibility module for Scala](https://github.com/scala/scala-java8-compat) has received an overhaul for Scala 2.12. Even though interoperability of Java 8 SAMs and Scala functions is now baked into the language, this module provides additional convenience for working with Java 8 SAMs. Java 8 streams support was also added during the development cycle of Scala 2.12. Releases are available for both Scala 2.11 and Scala 2.12.
+
+
+
+### Other changes and deprecations
+
+  - A [mutable TreeMap](http://www.scala-lang.org/files/archive/api/2.12.0/scala/collection/mutable/TreeMap.html) implementation was added ([#4504](https://github.com/scala/scala/pull/4504)).
+  - [ListSet](http://www.scala-lang.org/files/archive/api/2.12.0/scala/collection/immutable/ListSet.html) and [ListMap](http://www.scala-lang.org/files/archive/api/2.12.0/scala/collection/immutable/ListMap.html) now ensure insertion-order traversal (in 2.11.x, traversal was in reverse order), and their performance has been improved ([#5103](https://github.com/scala/scala/pull/5103)).
+  - The [`@deprecatedInheritance`](http://www.scala-lang.org/files/archive/api/2.12.0/scala/deprecatedInheritance.html) and [`@deprecatedOverriding`](http://www.scala-lang.org/files/archive/api/2.12.0/scala/deprecatedOverriding.html) are now public and available to library authors.
+  - The `@hideImplicitConversion` Scaladoc annotation allows customizing which implicit conversions are hidden ([#4952](https://github.com/scala/scala/pull/4952)).
+  - The `@shortDescription` Scaladoc annotation customizes the method summary on entity pages ([#4991](https://github.com/scala/scala/pull/4991)).
+  - JavaConversions, providing implicit conversions between Scala and Java collection types, has been deprecated. We recommend using [JavaConverters](http://www.scala-lang.org/files/archive/api/2.12.0/scala/collection/JavaConverters$.html) and explicit `.asJava` / `.asScala` conversions.
+  - Eta-expansion (conversion of a method to a function value) of zero-args methods has been deprecated, as this can lead to surprising behavior ([#5327](https://github.com/scala/scala/pull/5327)).
+  - The Scala library is [free](https://github.com/scala/scala/pull/4443) of [references](https://github.com/scala/scala/pull/4712) to `sun.misc.Unsafe`, and [no longer ships](https://github.com/scala/scala/pull/4629) with a fork of the forkjoin library.
+  - Exhaustiveness analysis in the pattern matcher has been improved ([#4919](https://github.com/scala/scala/pull/4919)).
+  - We emit parameter names according to [JEP-118](http://openjdk.java.net/jeps/118), which makes them available to Java tools and exposes them through Java reflection.
+
 
 ## Breaking changes
 
@@ -383,6 +386,7 @@ You can get the old behavior with `-Xsource:2.11`. This may be useful for testin
 ### Changed syntax trees (affects macro and compiler plugin authors)
 
 PR [#4794](https://github.com/scala/scala/pull/4749) changed the syntax trees for selections of statically accessible symbols. For example, a selection of `Predef` no longer has the shape `q"scala.this.Predef"` but simply `q"scala.Predef"`. Macros and compiler plugins matching on the old tree shape need to be adjusted.
+
 
 
 
