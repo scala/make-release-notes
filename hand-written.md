@@ -158,9 +158,27 @@ With [JEP-118](http://openjdk.java.net/jeps/118), parameter names can be stored 
 
 Local lazy vals and objects, i.e., those defined in methods, now use a more efficient representation (implemented in [#5294](https://github.com/scala/scala/pull/5294) and [#5374](https://github.com/scala/scala/pull/5374)).
 
-In Scala 2.11, a local lazy val is encoded using two heap-allocated objects (one for the value, a second for the initialized flag), and initialization synchronizes on the enclosing class instance.
+In Scala 2.11, a local lazy val is encoded using two heap-allocated objects (one for the value, a second for the initialized flag), and initialization synchronizes on the enclosing class instance. With the new [representation for lambdas](#java-8-style-bytecode-for-lambdas) in 2.12, which emits the lambda body as a method in the enclosing class, this encoding can cause new deadlocks for lazy vals or objects defined in the lambda body.
 
-This has been cleaned up by creating a single heap-allocated object that holds both the value and the initialized flag, and is at the same time used as initialization lock. A similar implementation already existed in Dotty.
+This has been fixed by creating a single heap-allocated object that holds both the value and the initialized flag, and is at the same time used as initialization lock. A similar implementation already existed in Dotty.
+
+#### Better type inference for Scala.js
+
+The [improved type inference for lambda parameters](#lambda-syntax-for-sam-types) also benefits `js.Function`s. For example, you can now write:
+
+    dom.window.requestAnimationFrame { now => // inferred as Double
+      ...
+    }
+
+without having to specify `(now: Double)` explicitly. In a similar spirit, the [new inference for overriding `val`s](#inferred-types-for-fields) allows to more easily implement Scala.js-defined JS traits with anonymous objects. For example:
+
+    @ScalaJSDefined
+    trait SomeOptions extends js.Object {
+      val width: Double | String // e.g., "300px"
+    }
+    val options = new SomeOptions {
+      val width = 200 // implicitly converted from Int to the inferred Double | String
+    }
 
 ### Tooling improvements
 
