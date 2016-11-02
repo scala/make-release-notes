@@ -44,6 +44,8 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "org.json4s"                       %% "json4s-native"             % "3.4.2"
     "org.squeryl"                      %% "squeryl"                   % "0.9.7"
     "eu.timepit"                       %% "refined"                   % "0.6.0"
+    "org.scalaz.stream"                %% "scalaz-stream"             % "0.8.6"
+    "org.scalaz.stream"                %% "scalaz-stream"             % "0.8.6a"
 
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 
