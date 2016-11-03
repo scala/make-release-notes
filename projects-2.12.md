@@ -25,7 +25,6 @@ Testing frameworks, add in sbt using `libraryDependencies += ... % "test"`
 
 Other libraries, add in sbt using `libraryDependencies += ...`
 
-    "org.scalafx"                      %% "scalafx"                   % "8.0.102-R11"
     "com.github.nscala-time"           %% "nscala-time"               % "2.14.0"
     "org.scalaz"                       %% "scalaz-core"               % "7.2.7"
     "org.scalaz"                       %% "scalaz-core"               % "7.1.11"
@@ -55,6 +54,7 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "com.github.scopt"                 %% "scopt"                     % "3.5.0"
     "org.scalikejdbc"                  %% "scalikejdbc"               % "2.5.0-RC2"
     "io.monix"                         %% "monix"                     % "2.0.6"
+    "org.scalafx"                      %% "scalafx"                   % "8.0.102-R11"
 
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 
