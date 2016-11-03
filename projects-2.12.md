@@ -9,7 +9,7 @@ Scaladex, the index of Scala libraries, now offers searching by target version:
 * [Scala modules for 2.12](https://index.scala-lang.org/search?q=keywords:scala-module)
 * [Testing frameworks for 2.12](https://index.scala-lang.org/search?q=targets%3Ascala_2.12+AND+keywords%3Atesting)
 * [Other libraries for 2.12](https://index.scala-lang.org/search?q=targets%3Ascala_2.12)
-* [Compiler plugin for 2.12](https://index.scala-lang.org/search?q=keywords%3Acompiler-plugin+AND+targets%3Ascala_2.12)
+* [Compiler plugins for 2.12](https://index.scala-lang.org/search?q=keywords%3Acompiler-plugin+AND+targets%3Ascala_2.12)
 * [Sbt plugins for 2.12](https://index.scala-lang.org/search?q=keywords%3Asbt-plugin+AND+targets%3Ascala_2.12)
 
 ### Scala modules
