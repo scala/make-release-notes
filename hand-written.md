@@ -1,6 +1,7 @@
 We are very happy to announce the availability of Scala 2.12.0!
 
 The Scala 2.12 compiler has been completely overhauled to make use of the new VM features available in Java 8:
+
   - A trait [compiles directly to an interface](#trait-compiles-to-an-interface) with default methods. This improves binary compatibility and Java interoperability.
   - Scala and Java 8 interop is also improved for functional code, as methods that take functions can easily be called in each direction using lambda syntax. The  `FunctionN` classes in Scala's standard library are now Single Abstract Method (SAM) types, and all [SAM types](#lambda-syntax-for-sam-types) are treated uniformly -- from type checking until code generation (no class file is generated for lambdas, and `invokedynamic` is used instead).
 
@@ -25,6 +26,7 @@ We hope to address the following in a future 2.12.x release:
   - [SI-9824](https://issues.scala-lang.org/browse/SI-9824): Parallel collections are prone to deadlock in the REPL and in object initializers.
 
 ## Obtaining Scala
+
 ### Java 8 runtime
 Install a recent build of the Java 8 Platform, from [OpenJDK](http://openjdk.java.net/install/) or [Oracle](http://www.oracle.com/technetwork/java/javase/downloads/index.html). Any Java 8 compliant run-time will do. We are planning to add (some) support for Java 9 in the near future. Full Java 9 support will be part of the 2.13 roadmap discussions.
 
@@ -38,14 +40,11 @@ Scala also works with ant, [maven](http://docs.scala-lang.org/tutorials/scala-wi
 
 ## Contributors
 
-A big thank you to everyone who's helped improve Scala by reporting bugs, improving our documentation, spreading kindness in mailing lists and other public fora, and submitting and reviewing pull requests! You are all magnificent.
+A big thank you to everyone who's helped improve Scala by reporting bugs, improving our documentation, kindly helping others on our forums and at meetups, and submitting and reviewing pull requests! You are all magnificent.
 
-Scala 2.12.0 is the result of merging over [500 pull requests](https://github.com/scala/scala/pulls?utf8=%E2%9C%93&q=is%3Amerged%20label%3A2.12%20) out of about [600 received PRs](https://github.com/scala/scala/pulls?utf8=%E2%9C%93&q=is%3Apr%20label%3A2.12%20). The [contributions to 2.12.x](https://github.com/scala/scala/graphs/contributors?from=2014-11-01&to=2016-10-29&type=c) over the last 2 years [were split](https://docs.google.com/spreadsheets/d/16zVViCpJEZn_x2RlYFh-xAOiHJG3SrYYpfetRr5cu_Y/edit#gid=912693440) as 64/32/4 between the Scala team at Lightbend (lrytz, retronym, adriaanm, SethTisue, szeiger), the community and EPFL.
+Scala 2.12.0 is the result of merging over [500 pull requests](https://github.com/scala/scala/pulls?utf8=%E2%9C%93&q=is%3Amerged%20label%3A2.12%20) out of about [600 received PRs](https://github.com/scala/scala/pulls?utf8=%E2%9C%93&q=is%3Apr%20label%3A2.12%20). The [contributions to 2.12.x](https://github.com/scala/scala/graphs/contributors?from=2014-11-01&to=2016-10-29&type=c) over the last 2 years [were split](https://docs.google.com/spreadsheets/d/16zVViCpJEZn_x2RlYFh-xAOiHJG3SrYYpfetRr5cu_Y/edit#gid=912693440) as 64/32/4 between the Scala team at Lightbend ([lrytz](https://github.com/lrytz), [retronym](https://github.com/retronym), [adriaanm](https://github.com/adriaanm), [SethTisue](https://github.com/SethTisue), [szeiger](https://github.com/szeiger)), the community and EPFL.
 
-The new encodings of traits, lambdas and lazy vals were developed in fruitful collaboration with the Dotty team.
-
-Thank you very much to all contributors that helped realize this Scala release!
-
+The new encodings of traits, lambdas and lazy vals were developed in fruitful collaboration with the Dotty team at EPFL.
 
 ## Binary compatibility
 
@@ -57,6 +56,7 @@ Although Scala 2.11 and 2.12 are mostly source compatible to facilitate cross-bu
 ## Scala 2.12 overview
 
 Scala 2.12 is all about making optimal use of Java 8's new features (and thus generates code that requires a Java 8 runtime).
+
   - Traits ([#5003](https://github.com/scala/scala/pull/5003)) and functions are compiled to their Java 8 equivalents. The compiler no longer generates trait implementation classes (`T$class.class`) and anonymous function classes (`C$$anonfun$1.class`).
   - We treat Single Abstract Method types and Scala's builtin function types uniformly from type checking to the back end ([#4971](https://github.com/scala/scala/pull/4971)).
   - In addition to compiling functions, we also use `invokedynamic` for a more natural encoding of other language features ([#4896](https://github.com/scala/scala/pull/4896)).
@@ -206,6 +206,7 @@ produces, when compiled with `-opt:l:method`, the following bytecode (decompiled
 The optimizer supports inlining (disabled by default). With `-opt:l:project` code from source files currently being compiled is inlined, while `-opt:l:classpath` enables inlining code from libraries on the compiler's classpath. Other than methods marked [`@inline`](http://www.scala-lang.org/files/archive/api/2.12.0/scala/inline.html), higher-order methods are inlined if the function argument is a lambda, or a parameter of the caller.
 
 Note that:
+
   - We recommend to enable inlining only for production builds, as sbt's incremental compilation does not track dependencies introduced by inlining.
   - When inlining code from the classpath, you need to ensure that all dependencies have exactly the same versions at compile time and run time.
   - If you are building a library to publish on Maven Central, you should not inline code from its dependencies. Users of your library might have different versions of its dependencies on the classpath, which breaks binary compatibility.
@@ -242,6 +243,7 @@ Scala itself is now completely built, tested and published with sbt! This makes 
 
 
 ### Library Improvements
+
 #### Either is now right-biased
 
 `Either` now supports operations like `map`, `flatMap`, `contains`, `toOption`, and so forth, which operate on the right-hand side. The `.left` and `.right` methods may be deprecated in favor of `.swap` in a later release.
@@ -393,4 +395,3 @@ PR [#4794](https://github.com/scala/scala/pull/4749) changed the syntax trees fo
 ## Improving these notes
 
 Improvements to these release notes [are welcome!](https://github.com/scala/make-release-notes/blob/2.12.x/hand-written.md)
-
