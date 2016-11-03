@@ -1,2 +1,4 @@
 target
 release-notes*.md
+project/
+.idea/
