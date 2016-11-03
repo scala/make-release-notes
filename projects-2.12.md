@@ -25,6 +25,7 @@ Testing frameworks, add in sbt using `libraryDependencies += ... % "test"`
 
 Other libraries, add in sbt using `libraryDependencies += ...`
 
+    "org.scalafx"                      %% "scalafx"                   % "8.0.102-R11"
     "com.github.nscala-time"           %% "nscala-time"               % "2.14.0"
     "org.scalaz"                       %% "scalaz-core"               % "7.2.7"
     "org.scalaz"                       %% "scalaz-core"               % "7.1.11"
