@@ -69,7 +69,7 @@ Sbt plugins. Most plugins do not need to be re-published for 2.12, but certain p
     "com.typesafe"                     % "sbt-mima-plugin"            % "0.1.11"
     "org.tpolecat"                     % "tut-plugin"                 % "0.4.6"
 
-Pending: [akka-http](https://github.com/akka/akka-http/issues/437), [Play](https://github.com/playframework/playframework/issues/6110), [Monocle](https://github.com/julien-truffaut/Monocle/issues/407), [WartRemover](https://github.com/puffnfresh/wartremover/issues/278), [Argonaut](https://github.com/argonaut-io/argonaut/issues/246), [Circe](https://github.com/travisbrown/circe/issues/302), [scala-refactoring](https://github.com/scala-ide/scala-refactoring/issues/168), [scala-ssh](https://github.com/veact/scala-ssh/pull/5), [fs2](https://github.com/functional-streams-for-scala/fs2/issues/757), [Coursier](https://github.com/alexarchambault/coursier/pull/374)...
+Pending: [akka-http](https://github.com/akka/akka-http/issues/437), [Play](https://github.com/playframework/playframework/issues/6110), [Monocle](https://github.com/julien-truffaut/Monocle/issues/407), [WartRemover](https://github.com/puffnfresh/wartremover/issues/278), [Argonaut](https://github.com/argonaut-io/argonaut/issues/246), [Circe](https://github.com/travisbrown/circe/issues/302), [scala-refactoring](https://github.com/scala-ide/scala-refactoring/issues/168), [scala-ssh](https://github.com/veact/scala-ssh/pull/5), [fs2](https://github.com/functional-streams-for-scala/fs2/issues/757), [Coursier](https://github.com/alexarchambault/coursier/pull/374), [Cats](https://github.com/typelevel/cats/pull/1450)...
 
 ### Scala 2.12.0-RC2
 
