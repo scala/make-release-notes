@@ -60,6 +60,7 @@ Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
     "org.scala-lang.plugins"           % "scala-continuations-plugin_2.12.0" % "1.0.3"
     "com.lihaoyi"                      %% "acyclic"                          % "0.1.5"
     "org.scalamacros"                  %% "paradise"                         % "2.1.0"
+    "org.psywerx.hairyfotr"            %% "linter"                           % "0.1.16"
 
 Sbt plugins. Most plugins do not need to be re-published for 2.12, but certain plugins did require changes. Add using `addSbtPlugin(...)`:
 
