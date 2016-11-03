@@ -57,6 +57,8 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "org.scalafx"                      %% "scalafx"                   % "8.0.102-R11"
     "com.beachape"                     %% "enumeratum"                % "1.4.17"
     "com.wix"                          %% "accord-core"               % "0.6"
+    "com.github.dnvriend"              %% "akka-persistence-inmemory" % "1.3.14"
+    "com.github.dnvriend"              %% "akka-persistence-journal-writer" % "0.0.2"
 
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 
