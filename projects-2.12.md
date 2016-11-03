@@ -50,6 +50,7 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "com.typesafe.akka"                %% "akka-stream"               % "2.4.12"
     "org.typelevel"                    %% "discipline"                % "0.7.2"
     "com.lihaoyi"                      %% "fastparse"                 % "0.4.2"
+    "com.github.scopt"                 %% "scopt"                     % "3.5.0"
 
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 
