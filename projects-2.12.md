@@ -16,6 +16,7 @@ Testing frameworks, add in sbt using `libraryDependencies += ... % "test"`
 
     "com.github.scalaprops"            %% "scalaprops"                % "0.3.4"           % "test"
     "com.lihaoyi"                      %% "utest"                     % "0.4.4"           % "test"
+    "io.monix"                         %% "minitest"                  % "0.27"            % "test"
     "org.scalacheck"                   %% "scalacheck"                % "1.13.4"          % "test"
     "org.scalacheck"                   %% "scalacheck"                % "1.12.6"          % "test"
     "org.scalacheck"                   %% "scalacheck"                % "1.11.6"          % "test"
@@ -52,6 +53,7 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "com.lihaoyi"                      %% "fastparse"                 % "0.4.2"
     "com.github.scopt"                 %% "scopt"                     % "3.5.0"
     "org.scalikejdbc"                  %% "scalikejdbc"               % "2.5.0-RC2"
+    "io.monix"                         %% "monix"                     % "2.0.6"
 
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 
