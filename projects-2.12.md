@@ -55,6 +55,7 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "org.scalikejdbc"                  %% "scalikejdbc"               % "2.5.0-RC2"
     "io.monix"                         %% "monix"                     % "2.0.6"
     "org.scalafx"                      %% "scalafx"                   % "8.0.102-R11"
+    "com.beachape"                     %% "enumeratum"                % "1.4.17"
 
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 
