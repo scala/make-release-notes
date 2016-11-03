@@ -2,7 +2,19 @@
 
 Library maintainers, library users, please [submit a pull request](https://github.com/scala/make-release-notes/edit/2.12.x/projects-2.12.md) and let the world know what libraries are available.
 
-[Scala modules](https://index.scala-lang.org/search?q=keywords:scala-module), add in sbt using `libraryDependencies += ...`
+### Scaladex
+
+Scaladex, the index of Scala libraries, now offers searching by target version:
+
+* [Scala modules for 2.12](https://index.scala-lang.org/search?q=keywords:scala-module)
+* [Testing frameworks for 2.12](https://index.scala-lang.org/search?q=targets%3Ascala_2.12+AND+keywords%3Atesting)
+* [Other libraries for 2.12](https://index.scala-lang.org/search?q=targets%3Ascala_2.12)
+* [Compiler plugin for 2.12](https://index.scala-lang.org/search?q=keywords%3Acompiler-plugin+AND+targets%3Ascala_2.12)
+* [Sbt plugins for 2.12](https://index.scala-lang.org/search?q=keywords%3Asbt-plugin+AND+targets%3Ascala_2.12)
+
+### Scala modules
+
+Add in sbt using `libraryDependencies += ...`:
 
     "org.scala-lang.modules"           %% "scala-async"               % "0.9.6"
     "org.scala-lang.modules"           %% "scala-java8-compat"        % "0.8.0"
@@ -10,7 +22,9 @@ Library maintainers, library users, please [submit a pull request](https://githu
     "org.scala-lang.modules"           %% "scala-swing"               % "2.0.0-M2"
     "org.scala-lang.modules"           %% "scala-xml"                 % "1.0.6"
 
-[Testing frameworks](https://index.scala-lang.org/search?q=targets%3Ascala_2.12+AND+keywords%3Atesting), add in sbt using `libraryDependencies += ... % "test"`
+### Testing frameworks
+
+Add in sbt using `libraryDependencies += ... % "test"`:
 
     "com.github.scalaprops"            %% "scalaprops"                % "0.3.4"           % "test"
     "com.lihaoyi"                      %% "utest"                     % "0.4.4"           % "test"
@@ -21,7 +35,9 @@ Library maintainers, library users, please [submit a pull request](https://githu
     "org.scalatest"                    %% "scalatest"                 % "3.0.0"           % "test"
     "org.specs2"                       %% "specs2-core"               % "3.8.6"           % "test"
 
-[Other libraries](https://index.scala-lang.org/search?q=targets%3Ascala_2.12), add in sbt using `libraryDependencies += ...`
+### Other libraries
+
+Add in sbt using `libraryDependencies += ...`:
 
     "com.beachape"                     %% "enumeratum"                % "1.4.17"
     "com.chuusai"                      %% "shapeless"                 % "2.3.2"
@@ -58,14 +74,20 @@ Library maintainers, library users, please [submit a pull request](https://githu
     "org.typelevel"                    %% "discipline"                % "0.7.2"
     "org.typelevel"                    %% "macro-compat"              % "1.1.1"
 
-[Compiler plugins](https://index.scala-lang.org/search?q=keywords%3Acompiler-plugin+AND+targets%3Ascala_2.12), add in sbt using `addCompilerPlugin(...)`:
+### Compiler plugins
+
+Add in sbt using `addCompilerPlugin(...)`:
 
     "com.lihaoyi"                      %% "acyclic"                   % "0.1.5"
     "org.psywerx.hairyfotr"            %% "linter"                    % "0.1.16"
     "org.scala-lang.plugins"           % "scala-continuations-plugin" % "1.0.3"  cross CrossVersion.full
     "org.scalamacros"                  %% "paradise"                  % "2.1.0"
 
-[Sbt plugins](https://index.scala-lang.org/search?q=keywords%3Asbt-plugin+AND+targets%3Ascala_2.12). Most plugins do not need to be re-published for 2.12, but certain plugins did require changes. Add using `addSbtPlugin(...)`:
+### Sbt plugins
+
+Most plugins do not need to be re-published for 2.12, but certain plugins did require changes.
+
+Add using `addSbtPlugin(...)`:
 
     "com.typesafe"                     % "sbt-mima-plugin"            % "0.1.11"
     "org.scala-js"                     % "sbt-scalajs"                % "0.6.13"
