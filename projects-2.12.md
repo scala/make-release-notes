@@ -56,6 +56,7 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "io.monix"                         %% "monix"                     % "2.0.6"
     "org.scalafx"                      %% "scalafx"                   % "8.0.102-R11"
     "com.beachape"                     %% "enumeratum"                % "1.4.17"
+    "com.wix"                          %% "accord-core"               % "0.6"
 
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 
@@ -254,6 +255,7 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "com.typesafe.slick"               %% "slick"                     % "3.2.0-M1"
     "io.spray"                         %% "spray-json"                % "1.3.2"
     "com.github.nscala-time"           %% "nscala-time"               % "2.12.0"
+    "com.wix"                          %% "accord-core"               % "0.6"
 
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 
