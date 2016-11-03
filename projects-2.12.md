@@ -51,6 +51,7 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "org.typelevel"                    %% "discipline"                % "0.7.2"
     "com.lihaoyi"                      %% "fastparse"                 % "0.4.2"
     "com.github.scopt"                 %% "scopt"                     % "3.5.0"
+    "org.scalikejdbc"                  %% "scalikejdbc"               % "2.5.0-RC2"
 
 Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
 
