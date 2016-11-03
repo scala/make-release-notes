@@ -4,7 +4,7 @@ Library maintainers, library users, please [submit a pull request](https://githu
 
 ### Scala 2.12.0
 
-Scala modules, add in sbt using `libraryDependencies += ...`
+[Scala modules](https://index.scala-lang.org/search?q=keywords:scala-module), add in sbt using `libraryDependencies += ...`
 
     "org.scala-lang.modules"           %% "scala-xml"                 % "1.0.6"
     "org.scala-lang.modules"           %% "scala-parser-combinators"  % "1.0.4"
@@ -12,7 +12,7 @@ Scala modules, add in sbt using `libraryDependencies += ...`
     "org.scala-lang.modules"           %% "scala-async"               % "0.9.6"
     "org.scala-lang.modules"           %% "scala-java8-compat"        % "0.8.0"
 
-Testing frameworks, add in sbt using `libraryDependencies += ... % "test"`
+[Testing frameworks](https://index.scala-lang.org/search?q=targets%3Ascala_2.12+AND+keywords%3Atesting), add in sbt using `libraryDependencies += ... % "test"`
 
     "com.github.scalaprops"            %% "scalaprops"                % "0.3.4"           % "test"
     "com.lihaoyi"                      %% "utest"                     % "0.4.4"           % "test"
@@ -23,7 +23,7 @@ Testing frameworks, add in sbt using `libraryDependencies += ... % "test"`
     "org.scalatest"                    %% "scalatest"                 % "3.0.0"           % "test"
     "org.specs2"                       %% "specs2-core"               % "3.8.6"           % "test"
 
-Other libraries, add in sbt using `libraryDependencies += ...`
+[Other libraries](https://index.scala-lang.org/search?q=targets%3Ascala_2.12), add in sbt using `libraryDependencies += ...`
 
     "com.github.nscala-time"           %% "nscala-time"               % "2.14.0"
     "org.scalaz"                       %% "scalaz-core"               % "7.2.7"
@@ -56,14 +56,14 @@ Other libraries, add in sbt using `libraryDependencies += ...`
     "io.monix"                         %% "monix"                     % "2.0.6"
     "org.scalafx"                      %% "scalafx"                   % "8.0.102-R11"
 
-Compiler plugins, add in sbt using `addCompilerPlugin(...)`:
+[Compiler plugins](https://index.scala-lang.org/search?q=keywords%3Acompiler-plugin+AND+targets%3Ascala_2.12), add in sbt using `addCompilerPlugin(...)`:
 
-    "org.scala-lang.plugins"           % "scala-continuations-plugin_2.12.0" % "1.0.3"
-    "com.lihaoyi"                      %% "acyclic"                          % "0.1.5"
-    "org.scalamacros"                  %% "paradise"                         % "2.1.0"
-    "org.psywerx.hairyfotr"            %% "linter"                           % "0.1.16"
+    "org.scala-lang.plugins"           % "scala-continuations-plugin" % "1.0.3"  cross CrossVersion.full
+    "com.lihaoyi"                      %% "acyclic"                   % "0.1.5"
+    "org.scalamacros"                  %% "paradise"                  % "2.1.0"
+    "org.psywerx.hairyfotr"            %% "linter"                    % "0.1.16"
 
-Sbt plugins. Most plugins do not need to be re-published for 2.12, but certain plugins did require changes. Add using `addSbtPlugin(...)`:
+[Sbt plugins](https://index.scala-lang.org/search?q=keywords%3Asbt-plugin+AND+targets%3Ascala_2.12). Most plugins do not need to be re-published for 2.12, but certain plugins did require changes. Add using `addSbtPlugin(...)`:
 
     "org.scala-js"                     % "sbt-scalajs"                % "0.6.13"
     "com.typesafe"                     % "sbt-mima-plugin"            % "0.1.11"
