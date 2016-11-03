@@ -61,6 +61,7 @@ Add in sbt using `libraryDependencies += ...`:
     "eu.timepit"                       %% "refined"                   % "0.6.0"
     "io.monix"                         %% "monix"                     % "2.0.6"
     "org.json4s"                       %% "json4s-native"             % "3.4.2"
+    "org.parboiled"                    %% "parboiled"                 % "2.1.3"
     "org.scalactic"                    %% "scalactic"                 % "3.0.0"
     "org.scalafx"                      %% "scalafx"                   % "8.0.102-R11"
     "org.scalaz"                       %% "scalaz-core"               % "7.1.11"
