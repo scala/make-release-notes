@@ -77,6 +77,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.clapper"                      %% "grizzled-scala"            % "3.1.0"
     "org.clapper"                      %% "grizzled-slf4j"            % "1.3.0"
     "org.clapper"                      %% "classutil"                 % "1.1.0"
+    "org.wvlet"                        %% "wvlet-log"                 % "1.1"
 
 ### Compiler plugins
 
