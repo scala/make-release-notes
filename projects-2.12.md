@@ -74,6 +74,9 @@ Add in sbt using `libraryDependencies += ...`:
     "org.squeryl"                      %% "squeryl"                   % "0.9.7"
     "org.typelevel"                    %% "discipline"                % "0.7.2"
     "org.typelevel"                    %% "macro-compat"              % "1.1.1"
+    "org.clapper"                      %% "grizzled-scala"            % "3.1.0"
+    "org.clapper"                      %% "grizzled-slf4j"            % "1.3.0"
+    "org.clapper"                      %% "classutil"                 % "1.1.0"
 
 ### Compiler plugins
 
