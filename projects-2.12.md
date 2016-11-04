@@ -112,4 +112,5 @@ You can subscribe to these GitHub issues to find out when a library you want bec
 * [Play](https://github.com/playframework/playframework/issues/6110)
 * [scala-refactoring](https://github.com/scala-ide/scala-refactoring/issues/168)
 * [scala-ssh](https://github.com/veact/scala-ssh/pull/5)
+* [Apache Spark](https://issues.apache.org/jira/browse/SPARK-14220)
 * [WartRemover](https://github.com/puffnfresh/wartremover/issues/278)
