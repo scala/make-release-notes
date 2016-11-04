@@ -100,7 +100,7 @@ Add using `addSbtPlugin(...)`:
 
 ### Pending
 
-You can subscribe to these GitHub issues to find out when a library you want becomes available:
+You can subscribe to these tickets to find out when a library you want becomes available:
 
 * [akka-http](https://github.com/akka/akka-http/issues/437)
 * [Argonaut](https://github.com/argonaut-io/argonaut/issues/246)
