@@ -118,6 +118,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 * [akka-http](https://github.com/akka/akka-http/issues/437)
 * [Argonaut](https://github.com/argonaut-io/argonaut/issues/246)
+* [Catalysts](https://github.com/typelevel/catalysts/pull/8)
 * [Cats](https://github.com/typelevel/cats/pull/1450)
 * [Circe](https://github.com/travisbrown/circe/issues/302)
 * [fs2](https://github.com/functional-streams-for-scala/fs2/issues/757)
@@ -125,6 +126,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [sbt-catalysts](https://github.com/typelevel/sbt-catalysts/issues/11)
 * [scala-refactoring](https://github.com/scala-ide/scala-refactoring/issues/168)
 * [scala-ssh](https://github.com/veact/scala-ssh/pull/5)
+* [scoverage](https://github.com/scoverage/scalac-scoverage-plugin/issues/192)
 * [Apache Spark](https://issues.apache.org/jira/browse/SPARK-14220)
 * [Spire](https://github.com/non/spire/issues/596)
 * [WartRemover](https://github.com/puffnfresh/wartremover/issues/278)
