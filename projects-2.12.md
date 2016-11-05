@@ -39,10 +39,14 @@ Add in sbt using `libraryDependencies += ... % "test"`:
 
 Add in sbt using `libraryDependencies += ...`:
 
+    "co.fs2"                           %% "fs2-core"                  % "0.9.2"
+    "co.fs2"                           %% "fs2-io"                    % "0.9.2"
     "com.beachape"                     %% "enumeratum"                % "1.4.17"
     "com.chuusai"                      %% "shapeless"                 % "2.3.2"
     "com.github.dnvriend"              %% "akka-persistence-inmemory" % "1.3.14"
     "com.github.dnvriend"              %% "akka-persistence-journal-writer" % "0.0.2"
+    "com.github.julien-truffaut"       %% "monocle-core"              % "1.3.2"
+    "com.github.mpilquist"             %% "simulacrum"                % "0.10.0"
     "com.github.nscala-time"           %% "nscala-time"               % "2.14.0"
     "com.github.scopt"                 %% "scopt"                     % "3.5.0"
     "com.github.xuwei-k"               %% "applybuilder"              % "0.2.2"
@@ -59,6 +63,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.typesafe.akka"                %% "akka-stream"               % "2.4.12"
     "com.wix"                          %% "accord-core"               % "0.6"
     "eu.timepit"                       %% "refined"                   % "0.6.0"
+    "io.get-coursier"                  %% "coursier"                  % "1.0.0-M14"
     "io.monix"                         %% "monix"                     % "2.0.6"
     "org.clapper"                      %% "classutil"                 % "1.1.0"
     "org.clapper"                      %% "grizzled-scala"            % "3.1.0"
@@ -74,6 +79,8 @@ Add in sbt using `libraryDependencies += ...`:
     "org.scalikejdbc"                  %% "scalikejdbc"               % "2.5.0-RC2"
     "org.scodec"                       %% "scodec-bits"               % "1.1.2"
     "org.scodec"                       %% "scodec-core"               % "1.10.3"
+    "org.spire-math"                   %% "jawn-ast"                  % "0.10.3"
+    "org.spire-math"                   %% "jawn-parser"               % "0.10.3"
     "org.squeryl"                      %% "squeryl"                   % "0.9.7"
     "org.typelevel"                    %% "discipline"                % "0.7.2"
     "org.typelevel"                    %% "macro-compat"              % "1.1.1"
@@ -83,10 +90,11 @@ Add in sbt using `libraryDependencies += ...`:
 
 Add in sbt using `addCompilerPlugin(...)`:
 
-    "com.lihaoyi"                      %% "acyclic"                   % "0.1.5"
-    "org.psywerx.hairyfotr"            %% "linter"                    % "0.1.16"
-    "org.scala-lang.plugins"           % "scala-continuations-plugin" % "1.0.3"  cross CrossVersion.full
-    "org.scalamacros"                  %% "paradise"                  % "2.1.0"
+    "com.lihaoyi"                      %% "acyclic"                    % "0.1.5"
+    "com.typesafe.genjavadoc"          %% "genjavadoc-plugin"          % "0.10"   cross CrossVersion.full
+    "org.psywerx.hairyfotr"            %% "linter"                     % "0.1.16"
+    "org.scala-lang.plugins"           %% "scala-continuations-plugin" % "1.0.3"  cross CrossVersion.full
+    "org.scalamacros"                  %% "paradise"                   % "2.1.0"
 
 ### Sbt plugins
 
@@ -106,10 +114,11 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [Argonaut](https://github.com/argonaut-io/argonaut/issues/246)
 * [Cats](https://github.com/typelevel/cats/pull/1450)
 * [Circe](https://github.com/travisbrown/circe/issues/302)
-* [Coursier](https://github.com/alexarchambault/coursier/pull/374)
 * [fs2](https://github.com/functional-streams-for-scala/fs2/issues/757)
 * [Play](https://github.com/playframework/playframework/issues/6110)
+* [sbt-catalysts](https://github.com/typelevel/sbt-catalysts/issues/11)
 * [scala-refactoring](https://github.com/scala-ide/scala-refactoring/issues/168)
 * [scala-ssh](https://github.com/veact/scala-ssh/pull/5)
 * [Apache Spark](https://issues.apache.org/jira/browse/SPARK-14220)
+* [Spire](https://github.com/non/spire/issues/596)
 * [WartRemover](https://github.com/puffnfresh/wartremover/issues/278)
