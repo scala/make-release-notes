@@ -60,6 +60,9 @@ Add in sbt using `libraryDependencies += ...`:
     "com.wix"                          %% "accord-core"               % "0.6"
     "eu.timepit"                       %% "refined"                   % "0.6.0"
     "io.monix"                         %% "monix"                     % "2.0.6"
+    "org.clapper"                      %% "classutil"                 % "1.1.0"
+    "org.clapper"                      %% "grizzled-scala"            % "3.1.0"
+    "org.clapper"                      %% "grizzled-slf4j"            % "1.3.0"
     "org.json4s"                       %% "json4s-native"             % "3.4.2"
     "org.parboiled"                    %% "parboiled"                 % "2.1.3"
     "org.scalactic"                    %% "scalactic"                 % "3.0.0"
@@ -74,9 +77,6 @@ Add in sbt using `libraryDependencies += ...`:
     "org.squeryl"                      %% "squeryl"                   % "0.9.7"
     "org.typelevel"                    %% "discipline"                % "0.7.2"
     "org.typelevel"                    %% "macro-compat"              % "1.1.1"
-    "org.clapper"                      %% "grizzled-scala"            % "3.1.0"
-    "org.clapper"                      %% "grizzled-slf4j"            % "1.3.0"
-    "org.clapper"                      %% "classutil"                 % "1.1.0"
     "org.wvlet"                        %% "wvlet-log"                 % "1.1"
 
 ### Compiler plugins
@@ -108,7 +108,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [Circe](https://github.com/travisbrown/circe/issues/302)
 * [Coursier](https://github.com/alexarchambault/coursier/pull/374)
 * [fs2](https://github.com/functional-streams-for-scala/fs2/issues/757)
-* [Monocle](https://github.com/julien-truffaut/Monocle/issues/407)
 * [Play](https://github.com/playframework/playframework/issues/6110)
 * [scala-refactoring](https://github.com/scala-ide/scala-refactoring/issues/168)
 * [scala-ssh](https://github.com/veact/scala-ssh/pull/5)
