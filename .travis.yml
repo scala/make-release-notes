@@ -1,0 +1,6 @@
+sudo: false
+language: scala
+jdk: oraclejdk8
+script:
+- git clone -b 2.12.x https://github.com/scala/scala
+- sbt -Dfile.encoding=UTF-8 "runMain MakeReleaseNotes 2.11.8 2.12.0 2345/06/07 `pwd`/scala"

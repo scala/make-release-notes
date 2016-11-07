@@ -5,6 +5,15 @@ import java.io.BufferedReader
 import scala.io.Source
 
 object MakeReleaseNotes {
+
+  def main(args: Array[String]): Unit =
+    args match {
+      case Array(prevVersion, version, release) =>
+        genPR(prevVersion, version, release)
+      case Array(prevVersion, version, release, gitDir) =>
+        genPR(prevVersion, version, release, gitDir)
+    }
+
   def genPR(prevVersion: String, version: String, release: String, gitDir: String = s"${sys.env("HOME")}/git/scala") = {
     val date = new SimpleDateFormat("yyyy/MM/dd").parse(release)
     new MakeDownloadPage(version, date).write()
