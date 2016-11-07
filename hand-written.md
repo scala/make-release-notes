@@ -4,7 +4,7 @@ We are very happy to announce the availability of Scala 2.12.0!
 
 The Scala 2.12 compiler has been completely overhauled to make use of the new VM features available in Java 8:
 
-  - A trait [compiles directly to an interface](#trait-compiles-to-an-interface) with default methods. This improves binary compatibility and Java interoperability.
+  - A trait [compiles directly to an interface](#traits-compile-to-interfaces) with default methods. This improves binary compatibility and Java interoperability.
   - Scala and Java 8 interop is also improved for functional code, as methods that take functions can easily be called in both directions using lambda syntax. The  `FunctionN` classes in Scala's standard library are now Single Abstract Method (SAM) types, and all [SAM types](#lambda-syntax-for-sam-types) are treated uniformly -- from type checking through code generation. No class file is generated for a lambda; `invokedynamic` is used instead.
 
 This release ships with a powerful [new optimizer](#new-optimizer):
@@ -296,6 +296,7 @@ The [Java 8 compatibility module for Scala](https://github.com/scala/scala-java8
 
 ### Other changes and deprecations
 
+  - For comprehension desugaring requires `withFilter` now, never falls back to `filter` ([#5252](https://github.com/scala/scala/pull/5252))
   - A [mutable TreeMap](http://www.scala-lang.org/files/archive/api/2.12.0/scala/collection/mutable/TreeMap.html) implementation was added ([#4504](https://github.com/scala/scala/pull/4504)).
   - [ListSet](http://www.scala-lang.org/files/archive/api/2.12.0/scala/collection/immutable/ListSet.html) and [ListMap](http://www.scala-lang.org/files/archive/api/2.12.0/scala/collection/immutable/ListMap.html) now ensure insertion-order traversal (in 2.11.x, traversal was in reverse order), and their performance has been improved ([#5103](https://github.com/scala/scala/pull/5103)).
   - The [`@deprecatedInheritance`](http://www.scala-lang.org/files/archive/api/2.12.0/scala/deprecatedInheritance.html) and [`@deprecatedOverriding`](http://www.scala-lang.org/files/archive/api/2.12.0/scala/deprecatedOverriding.html) are now public and available to library authors.
@@ -367,9 +368,9 @@ The [SAM conversion](http://www.scala-lang.org/files/archive/spec/2.12/06-expres
 
 To retain the old behavior, your choices are:
 
-* compile under `-Xsource:2.11`
-* use an explicit call to the conversion method
-* disqualify the type from being a SAM (e.g. by adding a second abstract method).
+  - compile under `-Xsource:2.11`
+  - use an explicit call to the conversion method
+  - disqualify the type from being a SAM (e.g. by adding a second abstract method).
 
 Note that SAM conversion only applies to lambda expressions, not to arbitrary expressions with Scala `FunctionN` types:
 
