@@ -99,6 +99,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.spire-math"                   %% "jawn-ast"                  % "0.10.3"
     "org.spire-math"                   %% "jawn-parser"               % "0.10.3"
     "org.squeryl"                      %% "squeryl"                   % "0.9.7"
+    "org.typelevel"                    %% "catalysts"                 % "0.0.5"
     "org.typelevel"                    %% "discipline"                % "0.7.2"
     "org.typelevel"                    %% "macro-compat"              % "1.1.1"
     "org.wvlet"                        %% "wvlet-log"                 % "1.1"
@@ -112,6 +113,7 @@ Add in sbt using `addCompilerPlugin(...)`:
     "org.psywerx.hairyfotr"            %% "linter"                     % "0.1.16"
     "org.scala-lang.plugins"           %% "scala-continuations-plugin" % "1.0.3"  cross CrossVersion.full
     "org.scalamacros"                  %% "paradise"                   % "2.1.0"
+    "org.spire-math"                   %% "kind-projector"             % "0.9.3"
 
 ### Sbt plugins
 
@@ -121,7 +123,9 @@ Add using `addSbtPlugin(...)`:
 
     "com.typesafe"                     % "sbt-mima-plugin"            % "0.1.11"
     "org.scala-js"                     % "sbt-scalajs"                % "0.6.13"
+    "org.scoverage"                    % "sbt-scoverage"              % "1.5.0"
     "org.tpolecat"                     % "tut-plugin"                 % "0.4.6"
+    "org.wartremover"                  % "sbt-wartremover"            % "1.2.0"
 
 ### Pending
 
@@ -129,15 +133,11 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 * [akka-http](https://github.com/akka/akka-http/issues/437)
 * [Argonaut](https://github.com/argonaut-io/argonaut/issues/246)
-* [Catalysts](https://github.com/typelevel/catalysts/pull/8)
 * [Cats](https://github.com/typelevel/cats/pull/1450)
 * [Circe](https://github.com/travisbrown/circe/issues/302)
-* [fs2](https://github.com/functional-streams-for-scala/fs2/issues/757)
 * [Play](https://github.com/playframework/playframework/issues/6110)
 * [sbt-catalysts](https://github.com/typelevel/sbt-catalysts/issues/11)
 * [scala-refactoring](https://github.com/scala-ide/scala-refactoring/issues/168)
 * [scala-ssh](https://github.com/veact/scala-ssh/pull/5)
-* [scoverage](https://github.com/scoverage/scalac-scoverage-plugin/issues/192)
 * [Apache Spark](https://issues.apache.org/jira/browse/SPARK-14220)
 * [Spire](https://github.com/non/spire/issues/596)
-* [WartRemover](https://github.com/puffnfresh/wartremover/issues/278)
