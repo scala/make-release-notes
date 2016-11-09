@@ -100,6 +100,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.spire-math"                   %% "jawn-parser"               % "0.10.3"
     "org.squeryl"                      %% "squeryl"                   % "0.9.7"
     "org.typelevel"                    %% "catalysts"                 % "0.0.5"
+    "org.typelevel"                    %% "cats"                      % "0.8.1"
     "org.typelevel"                    %% "discipline"                % "0.7.2"
     "org.typelevel"                    %% "macro-compat"              % "1.1.1"
     "org.wvlet"                        %% "wvlet-log"                 % "1.1"
@@ -133,7 +134,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 * [akka-http](https://github.com/akka/akka-http/issues/437)
 * [Argonaut](https://github.com/argonaut-io/argonaut/issues/246)
-* [Cats](https://github.com/typelevel/cats/pull/1450)
 * [Circe](https://github.com/travisbrown/circe/issues/302)
 * [Play](https://github.com/playframework/playframework/issues/6110)
 * [sbt-catalysts](https://github.com/typelevel/sbt-catalysts/issues/11)
