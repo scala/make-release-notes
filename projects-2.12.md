@@ -104,6 +104,12 @@ Add in sbt using `libraryDependencies += ...`:
     "org.typelevel"                    %% "discipline"                % "0.7.2"
     "org.typelevel"                    %% "macro-compat"              % "1.1.1"
     "org.wvlet"                        %% "wvlet-log"                 % "1.1"
+    "pt.tecnico.dsi"                   %% "akka-kadmin"               % "0.5.0"
+    "pt.tecnico.dsi"                   %% "akka-ldap"                 % "0.4.2"
+    "pt.tecnico.dsi"                   %% "akkastrator"               % "0.8.0"
+    "pt.tecnico.dsi"                   %% "ldap"                      % "0.4.1"
+    "pt.tecnico.dsi"                   %% "kadmin"                    % "7.0.0"
+    "work.martins.simon"               %% "scala-expect"              % "6.0.0"
 
 ### Compiler plugins
 
