@@ -75,6 +75,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.typesafe.akka"                %% "akka-stream"               % "2.4.12"
     "com.wix"                          %% "accord-core"               % "0.6"
     "eu.timepit"                       %% "refined"                   % "0.6.0"
+    "io.argonaut"                      %% "argonaut"                  % "6.2-RC1"
     "io.get-coursier"                  %% "coursier"                  % "1.0.0-M14"
     "io.monix"                         %% "monix"                     % "2.0.6"
     "org.clapper"                      %% "classutil"                 % "1.1.0"
@@ -139,7 +140,6 @@ Add using `addSbtPlugin(...)`:
 You can subscribe to these tickets to find out when a library you want becomes available:
 
 * [akka-http](https://github.com/akka/akka-http/issues/437)
-* [Argonaut](https://github.com/argonaut-io/argonaut/issues/246)
 * [Circe](https://github.com/travisbrown/circe/issues/302)
 * [Play](https://github.com/playframework/playframework/issues/6110)
 * [sbt-catalysts](https://github.com/typelevel/sbt-catalysts/issues/11)
