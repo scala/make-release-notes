@@ -7,9 +7,9 @@ but perhaps shows off a few standard library APIs.
 ## Building
 
 1. Update the highlights notes in `hand-written.md`.
-2. run `sbt -Dfile.encoding=UTF-8 console`, and then:
+2. run `sbt -Dfile.encoding=UTF-8`, and then:
 ```
-scala> MakeReleaseNotes.genPR("$PrevVersion", "$CurrentVersion", "$ReleaseYear/$ReleaseMonth/$ReleaseDay", "$pathToScalaScalaCheckout")
+> runMain MakeReleaseNotes $PrevVersion $CurrentVersion $ReleaseYear/$ReleaseMonth/$ReleaseDay "$pathToScalaScalaCheckout"
 ```
 
 
