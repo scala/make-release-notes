@@ -76,6 +76,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.wix"                          %% "accord-core"               % "0.6"
     "eu.timepit"                       %% "refined"                   % "0.6.0"
     "io.argonaut"                      %% "argonaut"                  % "6.2-RC1"
+    "io.circe"                         %% "circe-core"                % "0.6.0"
     "io.get-coursier"                  %% "coursier"                  % "1.0.0-M14"
     "io.monix"                         %% "monix"                     % "2.0.6"
     "org.clapper"                      %% "classutil"                 % "1.1.0"
@@ -140,7 +141,6 @@ Add using `addSbtPlugin(...)`:
 You can subscribe to these tickets to find out when a library you want becomes available:
 
 * [akka-http](https://github.com/akka/akka-http/issues/437)
-* [Circe](https://github.com/travisbrown/circe/issues/302)
 * [Play](https://github.com/playframework/playframework/issues/6110)
 * [sbt-catalysts](https://github.com/typelevel/sbt-catalysts/issues/11)
 * [scala-refactoring](https://github.com/scala-ide/scala-refactoring/issues/168)
