@@ -145,6 +145,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [sbt-catalysts](https://github.com/typelevel/sbt-catalysts/issues/11)
 * [scala-refactoring](https://github.com/scala-ide/scala-refactoring/issues/168)
 * [scala-ssh](https://github.com/veact/scala-ssh/pull/5)
+* [scalariform](https://github.com/scala-ide/scalariform/issues/235)
 * [SORM](https://github.com/sorm/sorm/issues/83)
 * [Apache Spark](https://issues.apache.org/jira/browse/SPARK-14220)
 * [Spire](https://github.com/non/spire/issues/596)
