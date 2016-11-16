@@ -75,6 +75,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.typesafe.akka"                %% "akka-stream"               % "2.4.12"
     "com.wix"                          %% "accord-core"               % "0.6"
     "eu.timepit"                       %% "refined"                   % "0.6.0"
+    "eu.unicredit"                     %% "shocon"                    % "0.1.4"
     "io.argonaut"                      %% "argonaut"                  % "6.2-RC1"
     "io.circe"                         %% "circe-core"                % "0.6.0"
     "io.get-coursier"                  %% "coursier"                  % "1.0.0-M14"
