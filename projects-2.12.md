@@ -150,3 +150,4 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [SORM](https://github.com/sorm/sorm/issues/83)
 * [Apache Spark](https://issues.apache.org/jira/browse/SPARK-14220)
 * [Spire](https://github.com/non/spire/issues/596)
+* [scala-scraper](https://github.com/ruippeixotog/scala-scraper/issues/36)
