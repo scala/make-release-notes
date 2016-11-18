@@ -142,8 +142,10 @@ Add using `addSbtPlugin(...)`:
 You can subscribe to these tickets to find out when a library you want becomes available:
 
 * [akka-http](https://github.com/akka/akka-http/issues/437)
+* [Dispatch](https://github.com/dispatch/dispatch/issues/103)
 * [Play](https://github.com/playframework/playframework/issues/6110)
 * [sbt-catalysts](https://github.com/typelevel/sbt-catalysts/issues/11)
+* [scala-parser-combinators for Scala.js](https://github.com/scala/scala-parser-combinators/issues/85)
 * [scala-refactoring](https://github.com/scala-ide/scala-refactoring/issues/168)
 * [scala-ssh](https://github.com/veact/scala-ssh/pull/5)
 * [scalariform](https://github.com/scala-ide/scalariform/issues/235)
@@ -151,3 +153,4 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [Apache Spark](https://issues.apache.org/jira/browse/SPARK-14220)
 * [Spire](https://github.com/non/spire/issues/596)
 * [scala-scraper](https://github.com/ruippeixotog/scala-scraper/issues/36)
+* [Unfiltered](https://github.com/unfiltered/unfiltered/issues/319)
