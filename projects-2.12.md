@@ -57,6 +57,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.github.xuwei-k"               %% "msgpack4z-core"            % "0.3.5"
     "com.github.xuwei-k"               %% "nobox"                     % "0.1.11"
     "com.github.xuwei-k"               %% "zeroapply"                 % "0.2.1"
+    "com.jsuereth"                     %% "scala-arm"                 % "2.0"
     "com.lihaoyi"                      %% "fansi"                     % "0.2.3"
     "com.lihaoyi"                      %% "fastparse"                 % "0.4.2"
     "com.lihaoyi"                      %% "geny"                      % "0.1.1"
