@@ -142,7 +142,7 @@ Add using `addSbtPlugin(...)`:
 
 You can subscribe to these tickets to find out when a library you want becomes available:
 
-* [Dispatch](https://github.com/dispatch/dispatch/issues/103)
+* [Dispatch](https://github.com/dispatch/reboot/issues/134)
 * [Play](https://github.com/playframework/playframework/issues/6110)
 * [sbt-catalysts](https://github.com/typelevel/sbt-catalysts/issues/11)
 * [scala-parser-combinators for Scala.js](https://github.com/scala/scala-parser-combinators/issues/85)
@@ -151,6 +151,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [scalariform](https://github.com/scala-ide/scalariform/issues/235)
 * [SORM](https://github.com/sorm/sorm/issues/83)
 * [Apache Spark](https://issues.apache.org/jira/browse/SPARK-14220)
-* [Spire](https://github.com/non/spire/issues/596)
+* [Spire](https://github.com/non/spire/pull/606)
 * [scala-scraper](https://github.com/ruippeixotog/scala-scraper/issues/36)
 * [Unfiltered](https://github.com/unfiltered/unfiltered/issues/319)
