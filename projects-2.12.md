@@ -73,6 +73,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.thoughtworks.extractor"       %% "extractor"                 % "1.1.1"
     "com.typesafe.akka"                %% "akka-actor"                % "2.4.12"
     "com.typesafe.akka"                %% "akka-stream"               % "2.4.12"
+    "com.typesafe.akka"                %% "akka-http-core"            % "10.0.0"
     "com.wix"                          %% "accord-core"               % "0.6"
     "eu.timepit"                       %% "refined"                   % "0.6.0"
     "eu.unicredit"                     %% "shocon"                    % "0.1.4"
@@ -141,7 +142,6 @@ Add using `addSbtPlugin(...)`:
 
 You can subscribe to these tickets to find out when a library you want becomes available:
 
-* [akka-http](https://github.com/akka/akka-http/issues/437)
 * [Dispatch](https://github.com/dispatch/dispatch/issues/103)
 * [Play](https://github.com/playframework/playframework/issues/6110)
 * [sbt-catalysts](https://github.com/typelevel/sbt-catalysts/issues/11)
