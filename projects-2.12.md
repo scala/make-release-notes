@@ -43,6 +43,7 @@ Add in sbt using `libraryDependencies += ...`:
     "co.fs2"                           %% "fs2-io"                    % "0.9.2"
     "com.beachape"                     %% "enumeratum"                % "1.4.17"
     "com.chuusai"                      %% "shapeless"                 % "2.3.2"
+    "com.enragedginger"                %% "akka-quartz-scheduler"     % "1.6.0-akka-2.4.x"
     "com.github.dnvriend"              %% "akka-persistence-inmemory" % "1.3.14"
     "com.github.dnvriend"              %% "akka-persistence-journal-writer" % "0.0.2"
     "com.github.julien-truffaut"       %% "monocle-core"              % "1.3.2"
