@@ -38,11 +38,11 @@ class MakeDownloadPage(version: String, releaseDate: Date = new Date()) {
   def resourceArchive(cls: String, name: String, ext: String, desc: String): Future[String] = {
     val fileName = s"$name-$version.$ext"
     val fullUrl = s"http://downloads.lightbend.com/scala/$version/$fileName"
-    resource(cls, fileName, desc, fullUrl)
+    resource(cls, fileName, desc, fullUrl, fullUrl)
   }
 
-  def resource(cls: String, fileName: String, desc: String, fullUrl: String): Future[String] = {
-    humanSize(fullUrl) map (size => s"""[$cls, "$fileName", "$fullUrl", "$desc", "$size"]""")
+  def resource(cls: String, fileName: String, desc: String, fullUrl: String, urlForSize: String): Future[String] = {
+    humanSize(urlForSize) map (size => s"""[$cls, "$fileName", "$fullUrl", "$desc", "$size"]""")
   }
 
   def defaultClass = """"-non-main-sys""""
@@ -51,7 +51,12 @@ class MakeDownloadPage(version: String, releaseDate: Date = new Date()) {
 
   def format(fmt: String) = new SimpleDateFormat(fmt).format(releaseDate)
 
-  def ghSourceUrl = s"https://github.com/scala/scala/archive/v$version.tar.gz"
+  // maybe we wouldn't need both of these if I knew the right magic `curl` invocation,
+  // but just adding `-L` doesn't do it, we get the redirect info but not the size
+  // at the redirect location. this will be prone to breakage if GitHub moves
+  // this stuff around again
+  def ghSourceUrl     = s"https://github.com/scala/scala/archive/v$version.tar.gz"
+  def ghSourceSizeUrl = s"https://codeload.github.com/scala/scala/tar.gz/v$version"
 
   def resources: String = Await.result(
     Future.sequence(Seq(
@@ -62,7 +67,7 @@ class MakeDownloadPage(version: String, releaseDate: Date = new Date()) {
         resourceArchive(defaultClass,    "scala",                "rpm",    "RPM package"              ),
         resourceArchive(defaultClass,    "scala-docs",           "txz",    "API docs"                 ),
         resourceArchive(defaultClass,    "scala-docs",           "zip",    "API docs"                 ),
-        resource       (defaultClass,    s"scala-sources-$version.tar.gz", "Sources", ghSourceUrl     )
+        resource       (defaultClass,    s"scala-sources-$version.tar.gz", "Sources", ghSourceUrl, ghSourceSizeUrl)
       )).map(_.mkString(",\n  ")), 30.seconds)
 
   // note: first and last lines must be exactly "---"
