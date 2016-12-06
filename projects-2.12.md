@@ -147,6 +147,7 @@ Add using `addSbtPlugin(...)`:
 You can subscribe to these tickets to find out when a library you want becomes available:
 
 * [Dispatch](https://github.com/dispatch/reboot/issues/134)
+* [Finagle](https://github.com/twitter/finagle/issues/505)
 * [Play](https://github.com/playframework/playframework/issues/6110)
 * [sbt-catalysts](https://github.com/typelevel/sbt-catalysts/issues/11)
 * [scala-parser-combinators for Scala.js](https://github.com/scala/scala-parser-combinators/issues/85)
