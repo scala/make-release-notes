@@ -77,6 +77,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.typesafe.akka"                %% "akka-actor"                % "2.4.12"
     "com.typesafe.akka"                %% "akka-stream"               % "2.4.12"
     "com.typesafe.akka"                %% "akka-http-core"            % "10.0.0"
+    "com.typesafe.akka"                %% "akka-http"                 % "10.0.0"
     "com.wix"                          %% "accord-core"               % "0.6"
     "eu.timepit"                       %% "refined"                   % "0.6.0"
     "eu.unicredit"                     %% "shocon"                    % "0.1.4"
