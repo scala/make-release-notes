@@ -83,6 +83,7 @@ Add in sbt using `libraryDependencies += ...`:
     "io.circe"                         %% "circe-core"                % "0.6.0"
     "io.get-coursier"                  %% "coursier"                  % "1.0.0-M14"
     "io.monix"                         %% "monix"                     % "2.0.6"
+    "net.ruippeixotog"                 %% "scala-scraper"             % "1.2.0"
     "org.clapper"                      %% "classutil"                 % "1.1.0"
     "org.clapper"                      %% "grizzled-scala"            % "3.1.0"
     "org.clapper"                      %% "grizzled-slf4j"            % "1.3.0"
@@ -154,5 +155,4 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [SORM](https://github.com/sorm/sorm/issues/83)
 * [Apache Spark](https://issues.apache.org/jira/browse/SPARK-14220)
 * [Spire](https://github.com/non/spire/pull/606)
-* [scala-scraper](https://github.com/ruippeixotog/scala-scraper/issues/36)
 * [Unfiltered](https://github.com/unfiltered/unfiltered/issues/319)
