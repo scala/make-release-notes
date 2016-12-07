@@ -137,7 +137,7 @@ Most plugins do not need to be re-published for 2.12, but certain plugins did re
 
 Add using `addSbtPlugin(...)`:
 
-    "com.typesafe"                     % "sbt-mima-plugin"            % "0.1.12"
+    "com.typesafe"                     % "sbt-mima-plugin"            % "0.1.13"
     "org.scala-js"                     % "sbt-scalajs"                % "0.6.13"
     "org.scoverage"                    % "sbt-scoverage"              % "1.5.0"
     "org.tpolecat"                     % "tut-plugin"                 % "0.4.6"
