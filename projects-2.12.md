@@ -93,6 +93,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.parboiled"                    %% "parboiled"                 % "2.1.3"
     "org.sangria-graphql"              %% "sangria"                   % "1.0.0-RC3"
     "org.sangria-graphql"              %% "sangria-relay"             % "1.0.0-RC3"
+    "org.scala-stm"                    %% "scala-stm"                 % "0.8"
     "org.scalactic"                    %% "scalactic"                 % "3.0.0"
     "org.scalafx"                      %% "scalafx"                   % "8.0.102-R11"
     "org.scalatra.scalate"             %% "scalate-core"              % "1.8.0"
