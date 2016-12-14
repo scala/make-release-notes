@@ -113,6 +113,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.typelevel"                    %% "cats"                      % "0.8.1"
     "org.typelevel"                    %% "discipline"                % "0.7.2"
     "org.typelevel"                    %% "macro-compat"              % "1.1.1"
+    "org.xerial.larray"                %% "larray"                    % "0.4.0"
     "org.wvlet"                        %% "wvlet-log"                 % "1.1"
     "org.wvlet"                        %% "airframe"                  % "0.9"
     "pt.tecnico.dsi"                   %% "akka-kadmin"               % "0.5.0"
