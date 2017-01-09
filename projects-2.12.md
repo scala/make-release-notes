@@ -146,6 +146,7 @@ Add using `addSbtPlugin(...)`:
     "org.scoverage"                    % "sbt-scoverage"              % "1.5.0"
     "org.tpolecat"                     % "tut-plugin"                 % "0.4.6"
     "org.wartremover"                  % "sbt-wartremover"            % "1.2.0"
+    "com.lihaoyi"                      % "scalatex-sbt-plugin"        % "0.3.7"
 
 ### Pending
 
