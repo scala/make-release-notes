@@ -109,6 +109,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.skinny-framework"             %% "skinny-micro"              % "1.2.0-RC1"
     "org.spire-math"                   %% "jawn-ast"                  % "0.10.3"
     "org.spire-math"                   %% "jawn-parser"               % "0.10.3"
+    "org.spire-math"                   %% "spire"                     % "0.13.0"
     "org.squeryl"                      %% "squeryl"                   % "0.9.7"
     "org.typelevel"                    %% "catalysts"                 % "0.0.5"
     "org.typelevel"                    %% "cats"                      % "0.8.1"
@@ -163,5 +164,4 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [Slick](https://github.com/slick/slick/issues/1572)
 * [SORM](https://github.com/sorm/sorm/issues/83)
 * [Apache Spark](https://issues.apache.org/jira/browse/SPARK-14220)
-* [Spire](https://github.com/non/spire/pull/606)
 * [Unfiltered](https://github.com/unfiltered/unfiltered/issues/319)
