@@ -18,7 +18,7 @@ Add in sbt using `libraryDependencies += ...`:
 
     "org.scala-lang.modules"           %% "scala-async"               % "0.9.6"
     "org.scala-lang.modules"           %% "scala-java8-compat"        % "0.8.0"
-    "org.scala-lang.modules"           %% "scala-parser-combinators"  % "1.0.4"
+    "org.scala-lang.modules"           %% "scala-parser-combinators"  % "1.0.5"
     "org.scala-lang.modules"           %% "scala-swing"               % "2.0.0-M2"
     "org.scala-lang.modules"           %% "scala-xml"                 % "1.0.6"
 
@@ -157,7 +157,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [Dispatch](https://github.com/dispatch/reboot/issues/134)
 * [Play](https://github.com/playframework/playframework/issues/6110)
 * [sbt-catalysts](https://github.com/typelevel/sbt-catalysts/issues/11)
-* [scala-parser-combinators for Scala.js](https://github.com/scala/scala-parser-combinators/issues/85)
 * [scala-refactoring](https://github.com/scala-ide/scala-refactoring/issues/168)
 * [scala-ssh](https://github.com/veact/scala-ssh/pull/5)
 * [scalariform](https://github.com/scala-ide/scalariform/issues/235)
