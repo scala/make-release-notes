@@ -91,6 +91,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.clapper"                      %% "grizzled-scala"            % "3.1.0"
     "org.clapper"                      %% "grizzled-slf4j"            % "1.3.0"
     "org.json4s"                       %% "json4s-core"               % "3.5.0"
+    "org.parboiled"                    %% "parboiled-scala"           % "1.1.8"
     "org.parboiled"                    %% "parboiled"                 % "2.1.3"
     "org.sangria-graphql"              %% "sangria"                   % "1.0.0-RC3"
     "org.sangria-graphql"              %% "sangria-relay"             % "1.0.0-RC3"
