@@ -126,25 +126,6 @@ Add in sbt using `libraryDependencies += ...`:
     "pt.tecnico.dsi"                   %% "kadmin"                    % "7.0.0"
     "work.martins.simon"               %% "scala-expect"              % "6.0.0"
     "ws.unfiltered"                    %% "unfiltered"                % "0.9.0-beta2"
-    "ws.unfiltered"                    %% "unfiltered-agents"         % "0.9.0-beta2"
-    "ws.unfiltered"                    %% "unfiltered-directives"     % "0.9.0-beta2"
-    "ws.unfiltered"                    %% "unfiltered-filter"         % "0.9.0-beta2"
-    "ws.unfiltered"                    %% "unfiltered-filter-async"   % "0.9.0-beta2"
-    "ws.unfiltered"                    %% "unfiltered-filter-uploads" % "0.9.0-beta2"
-    "ws.unfiltered"                    %% "unfiltered-jetty"          % "0.9.0-beta2"
-    "ws.unfiltered"                    %% "unfiltered-json4s"         % "0.9.0-beta2"
-    "ws.unfiltered"                    %% "unfiltered-mac"            % "0.9.0-beta2"
-    "ws.unfiltered"                    %% "unfiltered-netty"          % "0.9.0-beta2"
-    "ws.unfiltered"                    %% "unfiltered-netty-server"   % "0.9.0-beta2"
-    "ws.unfiltered"                    %% "unfiltered-netty-uploads"  % "0.9.0-beta2"
-    "ws.unfiltered"                    %% "unfiltered-netty-websockets" % "0.9.0-beta2"
-    "ws.unfiltered"                    %% "unfiltered-oauth"          % "0.9.0-beta2"
-    "ws.unfiltered"                    %% "unfiltered-oauth2"         % "0.9.0-beta2"
-    "ws.unfiltered"                    %% "unfiltered-scalatest"      % "0.9.0-beta2"
-    "ws.unfiltered"                    %% "unfiltered-specs2"         % "0.9.0-beta2"
-    "ws.unfiltered"                    %% "unfiltered-uploads"        % "0.9.0-beta2"
-    "ws.unfiltered"                    %% "unfiltered-util"           % "0.9.0-beta2"
-
 
 ### Compiler plugins
 
