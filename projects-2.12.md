@@ -79,6 +79,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.typesafe.akka"                %% "akka-stream"               % "2.4.12"
     "com.typesafe.akka"                %% "akka-http-core"            % "10.0.0"
     "com.typesafe.akka"                %% "akka-http"                 % "10.0.0"
+    "com.typesafe.slick"               %% "slick"                     % "3.2.0-M2"
     "com.wix"                          %% "accord-core"               % "0.6"
     "eu.timepit"                       %% "refined"                   % "0.6.0"
     "eu.unicredit"                     %% "shocon"                    % "0.1.4"
@@ -162,6 +163,5 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [scala-refactoring](https://github.com/scala-ide/scala-refactoring/issues/168)
 * [scala-ssh](https://github.com/veact/scala-ssh/pull/5)
 * [scalariform](https://github.com/scala-ide/scalariform/issues/235)
-* [Slick](https://github.com/slick/slick/issues/1572)
 * [SORM](https://github.com/sorm/sorm/issues/83)
 * [Apache Spark](https://issues.apache.org/jira/browse/SPARK-14220)
