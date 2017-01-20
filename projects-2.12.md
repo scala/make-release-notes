@@ -161,7 +161,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [Ensime](https://github.com/ensime/ensime-server/issues/1414)
 * [Play](https://github.com/playframework/playframework/issues/6110)
 * [sbt-catalysts](https://github.com/typelevel/sbt-catalysts/issues/11)
-* [scala-refactoring](https://github.com/scala-ide/scala-refactoring/issues/168)
+* [scala-refactoring](https://github.com/scala-ide/scala-refactoring/issues/180)
 * [scala-ssh](https://github.com/veact/scala-ssh/pull/5)
 * [scalariform](https://github.com/scala-ide/scalariform/issues/235)
 * [SORM](https://github.com/sorm/sorm/issues/83)
