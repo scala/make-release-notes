@@ -87,6 +87,7 @@ Add in sbt using `libraryDependencies += ...`:
     "io.circe"                         %% "circe-core"                % "0.6.0"
     "io.get-coursier"                  %% "coursier"                  % "1.0.0-M14"
     "io.monix"                         %% "monix"                     % "2.0.6"
+    "net.databinder.dispatch"          %% "dispatch-core"             % "0.12.0"    
     "net.ruippeixotog"                 %% "scala-scraper"             % "1.2.0"
     "org.clapper"                      %% "classutil"                 % "1.1.0"
     "org.clapper"                      %% "grizzled-scala"            % "3.1.0"
@@ -157,7 +158,6 @@ Add using `addSbtPlugin(...)`:
 
 You can subscribe to these tickets to find out when a library you want becomes available:
 
-* [Dispatch](https://github.com/dispatch/reboot/issues/134)
 * [Ensime](https://github.com/ensime/ensime-server/issues/1414)
 * [Play](https://github.com/playframework/playframework/issues/6110)
 * [sbt-catalysts](https://github.com/typelevel/sbt-catalysts/issues/11)
