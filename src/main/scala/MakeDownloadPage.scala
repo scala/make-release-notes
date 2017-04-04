@@ -37,7 +37,7 @@ class MakeDownloadPage(version: String, releaseDate: Date = new Date()) {
 
   def resourceArchive(cls: String, name: String, ext: String, desc: String): Future[String] = {
     val fileName = s"$name-$version.$ext"
-    val fullUrl = s"http://downloads.lightbend.com/scala/$version/$fileName"
+    val fullUrl = s"https://downloads.lightbend.com/scala/$version/$fileName"
     resource(cls, fileName, desc, fullUrl, fullUrl)
   }
 
