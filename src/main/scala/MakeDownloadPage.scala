@@ -80,7 +80,7 @@ release_version: $version
 release_date: "${format("MMMM dd, yyyy")}"
 show_resources: "true"
 permalink: /download/$version.html
-requirements: "This Scala software distribution can be installed on any Unix-like or Windows system. It requires the Java runtime version 1.8 or later, which can be downloaded <a href='http://www.java.com/'>here</a>."
+requirements: "This Scala software distribution can be installed on any Unix-like or Windows system. It requires Java 8 or later, available <a href='http://www.java.com/'>here</a>."
 resources: [
   $resources
 ]
