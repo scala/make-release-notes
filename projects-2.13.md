@@ -36,11 +36,7 @@ Add in sbt using `libraryDependencies += ... % "test"`:
 
 Add in sbt using `libraryDependencies += ...`:
 
-(None yet! Add yours?)
-
-<!--
-    "org.scalaz"                       %% "scalaz-core"               % "7.2.7"
--->
+    "org.scalaz"                       %% "scalaz-core"               % "7.2.11"
 
 ### Compiler plugins
 
