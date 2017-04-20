@@ -26,11 +26,9 @@ More coming in the next few days.
 
 Add in sbt using `libraryDependencies += ... % "test"`:
 
-(None yet! Add yours?)
-
-<!--
+    "org.scalacheck"                   %% "scalacheck"                % "1.12.6"          % "test"
     "org.scalacheck"                   %% "scalacheck"                % "1.13.4"          % "test"
--->
+    "org.scalacheck"                   %% "scalacheck"                % "1.13.5"          % "test"
 
 ### Other libraries
 
