@@ -18,7 +18,7 @@ Scaladex, the index of Scala libraries, now offers searching by target version:
 
 Add in sbt using `libraryDependencies += ...`:
 
-    "org.scala-lang.modules"           %% "scala-xml"                 % "1.0.6"
+    "org.scala-lang.modules"           %% "scala-xml"                  % "1.0.6"
 
 More coming in the next few days.
 
@@ -40,11 +40,7 @@ Add in sbt using `libraryDependencies += ...`:
 
 Add in sbt using `addCompilerPlugin(...)`:
 
-(None yet! Add yours?)
-
-<!--
-    "org.scalamacros"                  %% "paradise"                   % "2.1.0"
--->
+    "org.scala-lang.plugins"           %% "scala-continuations-plugin" % "1.0.3"  cross CrossVersion.full
 
 ### Sbt plugins
 
