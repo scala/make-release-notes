@@ -7,7 +7,10 @@ Library maintainers, library users, please [edit this page](https://github.com/s
 
 Scaladex, the index of Scala libraries, now offers searching by target version:
 
-* [Scala modules for 2.13.0-M1](https://index.scala-lang.org/search?q=keywords:scala-module)
+********** THESE LINKS DON'T WORK
+********** reported upstream: https://github.com/scalacenter/scaladex/issues/411
+
+* [Scala modules for 2.13.0-M1](https://index.scala-lang.org/search?q=targets%3Ascala_2.13.0-M1+AND+keywords:scala-module)
 * [Testing frameworks for 2.13.0-M1](https://index.scala-lang.org/search?q=targets%3Ascala_2.13.0-M1+AND+keywords%3Atesting)
 * [Other libraries for 2.13.0-M1](https://index.scala-lang.org/search?q=targets%3Ascala_2.13.0-M1)
 * [Compiler plugins for 2.13.0-M1](https://index.scala-lang.org/search?q=keywords%3Acompiler-plugin+AND+targets%3Ascala_2.13.0-M1)
@@ -20,7 +23,7 @@ Add in sbt using `libraryDependencies += ...`:
 
     "org.scala-lang.modules"           %% "scala-xml"                  % "1.0.6"
 
-More coming in the next few days.
+The remaining modules will be published shortly.
 
 ### Testing frameworks
 
