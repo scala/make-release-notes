@@ -23,6 +23,7 @@ Add in sbt using `libraryDependencies += ...`:
 
     "org.scala-lang.modules"           %% "scala-xml"                  % "1.0.6"
     "org.scala-lang.modules"           %% "scala-swing"                % "2.0.0"
+    "org.scala-lang.modules"           %% "scala-parallel-collections" % "0.1.2"
 
 The remaining modules will be published shortly.
 
