@@ -45,8 +45,9 @@ Add in sbt using `libraryDependencies += ...`:
 
 Add in sbt using `addCompilerPlugin(...)`:
 
+    "com.typesafe.genjavadoc"          %% "genjavadoc-plugin"          % "0.10"   cross CrossVersion.full
     "org.scala-lang.plugins"           %% "scala-continuations-plugin" % "1.0.3"  cross CrossVersion.full
-    "org.scalamacros"                  %% "paradise" % "2.1.0"  cross CrossVersion.full
+    "org.scalamacros"                  %% "paradise"                   % "2.1.0"  cross CrossVersion.full
 
 ### Sbt plugins
 
@@ -54,14 +55,13 @@ Most plugins do not need to be re-published for 2.13, but certain plugins did re
 
 Add using `addSbtPlugin(...)`:
 
+<!--
+    "org.scala-js"                     % "sbt-scalajs"                % "0.6.16"
+-->
 (None yet! Add yours?)
 
-<!--
-    "org.scala-js"                     % "sbt-scalajs"                % "0.6.13"
--->
-
-<!--
 ### Pending
 
 You can subscribe to these tickets to find out when a library you want becomes available:
--->
+
+(None yet! Add yours?)
