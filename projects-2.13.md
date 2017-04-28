@@ -49,7 +49,7 @@ Add in sbt using `addCompilerPlugin(...)`:
     "org.scala-lang.plugins"           %% "scala-continuations-plugin" % "1.0.3"  cross CrossVersion.full
     "org.scalamacros"                  %% "paradise"                   % "2.1.0"  cross CrossVersion.full
 
-### Sbt plugins
+### sbt plugins
 
 Most plugins do not need to be re-published for 2.13, but certain plugins did require changes.
 
