@@ -26,7 +26,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.scala-lang.modules"           %% "scala-swing"                % "2.0.0"
     "org.scala-lang.modules"           %% "scala-xml"                  % "1.0.6"
 
-The remaining modules will be published shortly.
+The remaining modules (scala-java8-compat, scala-async) will be published shortly.
 
 ### Testing frameworks
 
