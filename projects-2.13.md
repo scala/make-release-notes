@@ -21,9 +21,9 @@ Scaladex, the index of Scala libraries, now offers searching by target version:
 
 Add in sbt using `libraryDependencies += ...`:
 
-    "org.scala-lang.modules"           %% "scala-xml"                  % "1.0.6"
-    "org.scala-lang.modules"           %% "scala-swing"                % "2.0.0"
     "org.scala-lang.modules"           %% "scala-parallel-collections" % "0.1.2"
+    "org.scala-lang.modules"           %% "scala-swing"                % "2.0.0"
+    "org.scala-lang.modules"           %% "scala-xml"                  % "1.0.6"
 
 The remaining modules will be published shortly.
 
@@ -40,14 +40,15 @@ Add in sbt using `libraryDependencies += ... % "test"`:
 Add in sbt using `libraryDependencies += ...`:
 
     "org.scalaz"                       %% "scalaz-core"               % "7.2.11"
+    "org.typelevel"                    %% "macro-compat"              % "1.1.1"
 
 ### Compiler plugins
 
 Add in sbt using `addCompilerPlugin(...)`:
 
-    "com.typesafe.genjavadoc"          %% "genjavadoc-plugin"          % "0.10"   cross CrossVersion.full
     "org.scala-lang.plugins"           %% "scala-continuations-plugin" % "1.0.3"  cross CrossVersion.full
     "org.scalamacros"                  %% "paradise"                   % "2.1.0"  cross CrossVersion.full
+    "com.typesafe.genjavadoc"          %% "genjavadoc-plugin"          % "0.10"   cross CrossVersion.full
 
 ### sbt plugins
 
