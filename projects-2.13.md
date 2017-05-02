@@ -35,11 +35,13 @@ Add in sbt using `libraryDependencies += ... % "test"`:
     "org.scalacheck"                   %% "scalacheck"                % "1.12.6"          % "test"
     "org.scalacheck"                   %% "scalacheck"                % "1.13.4"          % "test"
     "org.scalacheck"                   %% "scalacheck"                % "1.13.5"          % "test"
+    "org.scalatest"                    %% "scalatest"                 % "3.0.3"           % "test"
 
 ### Other libraries
 
 Add in sbt using `libraryDependencies += ...`:
 
+    "org.scalactic"                    %% "scalactic"                 % "3.0.3"           % "test"
     "org.scalaz"                       %% "scalaz-core"               % "7.2.11"
     "org.typelevel"                    %% "macro-compat"              % "1.1.1"
 
