@@ -65,4 +65,5 @@ Add using `addSbtPlugin(...)`:
 
 You can subscribe to these tickets to find out when a library you want becomes available:
 
-(None yet! Add yours?)
+* [shapeless](https://github.com/milessabin/shapeless/issues/711)
+* [specs2](https://github.com/etorreborre/specs2/issues/573)
