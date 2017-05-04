@@ -67,5 +67,6 @@ Add using `addSbtPlugin(...)`:
 You can subscribe to these tickets to find out when a library you want becomes available:
 
 * [cats](https://github.com/typelevel/cats/issues/1648)
+* [kind-projector](https://github.com/non/kind-projector/issues/50)
 * [pcplod](https://github.com/ensime/pcplod/issues/22)
 * [specs2](https://github.com/etorreborre/specs2/issues/573)
