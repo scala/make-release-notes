@@ -41,6 +41,7 @@ Add in sbt using `libraryDependencies += ... % "test"`:
 
 Add in sbt using `libraryDependencies += ...`:
 
+    "com.chuusai"                      %% "shapeless"                 % "2.3.2"
     "org.scalactic"                    %% "scalactic"                 % "3.0.3"           % "test"
     "org.scalaz"                       %% "scalaz-core"               % "7.2.11"
     "org.typelevel"                    %% "macro-compat"              % "1.1.1"
@@ -65,5 +66,5 @@ Add using `addSbtPlugin(...)`:
 
 You can subscribe to these tickets to find out when a library you want becomes available:
 
-* [shapeless](https://github.com/milessabin/shapeless/issues/711)
+* [pcplod](https://github.com/ensime/pcplod/issues/22)
 * [specs2](https://github.com/etorreborre/specs2/issues/573)
