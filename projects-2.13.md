@@ -7,14 +7,14 @@ Library maintainers, library users, please [edit this page](https://github.com/s
 
 Scaladex, the index of Scala libraries, now offers searching by target version:
 
-********** THESE LINKS DON'T WORK
+********** THESE LINKS WON'T DISTINGUISH M1 FROM M2 ONCE M2 COMES OUT
 ********** reported upstream: https://github.com/scalacenter/scaladex/issues/411
 
-* [Scala modules for 2.13.0-M1](https://index.scala-lang.org/search?q=targets%3Ascala_2.13.0-M1+AND+keywords:scala-module)
-* [Testing frameworks for 2.13.0-M1](https://index.scala-lang.org/search?q=targets%3Ascala_2.13.0-M1+AND+keywords%3Atesting)
-* [Other libraries for 2.13.0-M1](https://index.scala-lang.org/search?q=targets%3Ascala_2.13.0-M1)
-* [Compiler plugins for 2.13.0-M1](https://index.scala-lang.org/search?q=keywords%3Acompiler-plugin+AND+targets%3Ascala_2.13.0-M1)
-* [Sbt plugins for 2.13.0-M1](https://index.scala-lang.org/search?q=keywords%3Asbt-plugin+AND+targets%3Ascala_2.13.0-M1)
+* [Scala modules for 2.13.0-M1](https://index.scala-lang.org/search?scalaVersions=2.13&q=*+AND+organization%3Ascala)
+* [Testing frameworks for 2.13.0-M1](https://index.scala-lang.org/search?scalaVersions=2.13&keywords=testing)
+* [Other libraries for 2.13.0-M1](https://index.scala-lang.org/search?scalaVersions=2.13)
+* [Compiler plugins for 2.13.0-M1](https://index.scala-lang.org/search?scalaVersions=2.13&keywords=compiler-plugin)
+* [Sbt plugins for 2.13.0-M1](https://index.scala-lang.org/search?scalaVersions=2.13&keywords=sbt-plugin)
 -->
 
 ### Scala modules
