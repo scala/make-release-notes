@@ -36,6 +36,7 @@ Add in sbt using `libraryDependencies += ... % "test"`:
     "org.scalacheck"                   %% "scalacheck"                % "1.13.4"          % "test"
     "org.scalacheck"                   %% "scalacheck"                % "1.13.5"          % "test"
     "org.scalatest"                    %% "scalatest"                 % "3.0.3"           % "test"
+    "com.lihaoyi"                      %% "utest"                     % "0.4.7"           % "test"
 
 ### Other libraries
 
