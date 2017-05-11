@@ -21,12 +21,12 @@ Scaladex, the index of Scala libraries, now offers searching by target version:
 
 Add in sbt using `libraryDependencies += ...`:
 
+    "org.scala-lang.modules"           %% "scala-async"                % "0.9.6"
+    "org.scala-lang.modules"           %% "scala-java8-compat"         % "0.8.0"
     "org.scala-lang.modules"           %% "scala-parallel-collections" % "0.1.2"
     "org.scala-lang.modules"           %% "scala-parser-combinators"   % "1.0.6"
     "org.scala-lang.modules"           %% "scala-swing"                % "2.0.0"
     "org.scala-lang.modules"           %% "scala-xml"                  % "1.0.6"
-
-The remaining modules (scala-java8-compat, scala-async) will be published shortly.
 
 ### Testing frameworks
 
