@@ -37,6 +37,7 @@ Add in sbt using `libraryDependencies += ... % "test"`:
     "org.scalacheck"                   %% "scalacheck"                % "1.13.5"          % "test"
     "org.scalatest"                    %% "scalatest"                 % "3.0.3"           % "test"
     "com.lihaoyi"                      %% "utest"                     % "0.4.7"           % "test"
+    "org.ensime"                       %% "pcplod"                    % "1.2.1"           % "test"
 
 ### Other libraries
 
@@ -70,5 +71,4 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [cats](https://github.com/typelevel/cats/issues/1648)
 * [kind-projector](https://github.com/non/kind-projector/issues/50)
 * [machinist](https://github.com/typelevel/machinist/pull/16)
-* [pcplod](https://github.com/ensime/pcplod/issues/22)
 * [specs2](https://github.com/etorreborre/specs2/issues/573)
