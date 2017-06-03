@@ -69,6 +69,11 @@ Add using `addSbtPlugin(...)`:
 
 You can subscribe to these tickets to find out when a library you want becomes available:
 
+* [specs2](https://github.com/etorreborre/specs2/issues/573)
+* [ScalaTest for Scala.js](https://github.com/scalatest/scalatest/issues/1152)
+* [ScalaCheck for Scala.js](https://github.com/rickynils/scalacheck/issues/330)
 * [cats](https://github.com/typelevel/cats/issues/1648)
 * [machinist](https://github.com/typelevel/machinist/pull/16)
-* [specs2](https://github.com/etorreborre/specs2/issues/573)
+* [catalysts](https://github.com/typelevel/catalysts/issues/14)
+* [Simulacrum](https://github.com/mpilquist/simulacrum/pull/81)
+* [Discipline](https://github.com/typelevel/discipline/issues/32)
