@@ -48,6 +48,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.scalactic"                    %% "scalactic"                 % "3.0.3"           % "test"
     "org.scalaz"                       %% "scalaz-core"               % "7.2.11"
     "org.typelevel"                    %% "macro-compat"              % "1.1.1"
+    "org.typelevel"                    %% "machinist"                 % "0.6.2"
 
 ### Compiler plugins
 
@@ -73,7 +74,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [ScalaTest for Scala.js](https://github.com/scalatest/scalatest/issues/1152)
 * [ScalaCheck for Scala.js](https://github.com/rickynils/scalacheck/issues/330)
 * [cats](https://github.com/typelevel/cats/issues/1648)
-* [machinist](https://github.com/typelevel/machinist/pull/16)
 * [catalysts](https://github.com/typelevel/catalysts/issues/14)
 * [Simulacrum](https://github.com/mpilquist/simulacrum/pull/81)
 * [Discipline](https://github.com/typelevel/discipline/issues/32)
