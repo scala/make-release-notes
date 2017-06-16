@@ -38,7 +38,7 @@ Add in sbt using `libraryDependencies += ... % "test"`:
     "org.scalatest"                    %% "scalatest"                 % "3.0.3"           % "test"
     "com.lihaoyi"                      %% "utest"                     % "0.4.7"           % "test"
     "org.ensime"                       %% "pcplod"                    % "1.2.1"           % "test"
-    "org.specs2"                       %% "specs2-core"               % "3.9.0"           % "test"
+    "org.specs2"                       %% "specs2-core"               % "3.9.1"           % "test"
 
 ### Other libraries
 
