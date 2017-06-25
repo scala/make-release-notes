@@ -73,10 +73,7 @@ Add using `addSbtPlugin(...)`:
 
 You can subscribe to these tickets to find out when a library you want becomes available:
 
-* [ScalaCheck for Scala.js](https://github.com/rickynils/scalacheck/issues/330)
-    * help wanted
 * [ScalaTest for Scala.js](https://github.com/scalatest/scalatest/issues/1152)
-    * blocked by ScalaCheck
 * [cats](https://github.com/typelevel/cats/issues/1648)
     * blocked by catalysts, discipline, ScalaTest
 * [Discipline](https://github.com/typelevel/discipline/issues/32)
