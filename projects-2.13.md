@@ -50,6 +50,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.scalaz"                       %% "scalaz-core"               % "7.2.11"
     "org.typelevel"                    %% "macro-compat"              % "1.1.1"
     "org.typelevel"                    %% "machinist"                 % "0.6.2"
+    "org.typelevel"                    %% "discipline"                % "0.8"
 
 
 ### Compiler plugins
@@ -73,9 +74,7 @@ Add using `addSbtPlugin(...)`:
 
 You can subscribe to these tickets to find out when a library you want becomes available:
 
-* [ScalaTest for Scala.js](https://github.com/scalatest/scalatest/issues/1152)
+
 * [cats](https://github.com/typelevel/cats/issues/1648)
-    * blocked by catalysts, discipline, ScalaTest
-* [Discipline](https://github.com/typelevel/discipline/issues/32)
-    * blocked by ScalaTest
+    * blocked by catalysts
 * [catalysts](https://github.com/typelevel/catalysts/issues/14)
