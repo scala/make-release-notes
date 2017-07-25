@@ -109,7 +109,7 @@ object MakeReleaseNotes {
       </body>
     </html>"""
       case MarkDown => s"""---
-layout: news
+layout: inner-page-no-masthead
 post-type: announcement
 permalink: /news/$version
 title: "Scala ${currentTag drop 1} is now available!"
