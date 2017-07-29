@@ -27,13 +27,20 @@ Add in sbt using `libraryDependencies += ...`:
 
 Add in sbt using `libraryDependencies += ... % "test"`:
 
-    (coming soon)
+    "com.github.scalaprops"            %% "scalaprops"                % "0.5.0"           % "test"
 
 ### Other libraries
 
 Add in sbt using `libraryDependencies += ...`:
 
-    (coming soon)
+    "com.github.nscala-time"           %% "nscala-time"               % "2.16.0
+    "com.github.xuwei-k"               %% "iarray"                    % "0.4.0
+    "com.github.xuwei-k"               %% "msgpack4z-core"            % "0.3.7
+    "com.github.xuwei-k"               %% "nobox"                     % "0.2.0
+    "com.github.xuwei-k"               %% "zeroapply"                 % "0.2.2
+    "org.json4s"                       %% "json4s-native"             % "3.5.3
+    "org.scalaz"                       %% "scalaz-core"               % "7.2.14
+    "org.squeryl"                      %% "squeryl"                   % "0.9.9
 
 ### Compiler plugins
 
