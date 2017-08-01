@@ -21,7 +21,8 @@ Scaladex, the index of Scala libraries, now offers searching by target version:
 
 Add in sbt using `libraryDependencies += ...`:
 
-    (coming soon)
+    "org.scala-lang.modules"           %% "scala-parallel-collections" % "0.1.2"
+    (more coming soon)
 
 ### Testing frameworks
 
