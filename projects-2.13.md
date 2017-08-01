@@ -55,7 +55,7 @@ Most plugins do not need to be re-published for 2.13, but certain plugins did re
 
 Add using `addSbtPlugin(...)`:
 
-    (coming soon)
+    "org.scala-js"                     % "sbt-scalajs"                % "0.6.19"
 
 ### Pending
 
