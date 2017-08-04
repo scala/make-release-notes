@@ -36,6 +36,7 @@ Add in sbt using `libraryDependencies += ... % "test"`:
 
 Add in sbt using `libraryDependencies += ...`:
 
+    "com.chuusai"                      %% "shapeless"                 % "2.3.2"
     "com.github.nscala-time"           %% "nscala-time"               % "2.16.0
     "com.github.xuwei-k"               %% "iarray"                    % "0.4.0
     "com.github.xuwei-k"               %% "msgpack4z-core"            % "0.3.7
