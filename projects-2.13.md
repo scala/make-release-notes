@@ -30,7 +30,9 @@ Add in sbt using `libraryDependencies += ...`:
 
 Add in sbt using `libraryDependencies += ... % "test"`:
 
-    "com.github.scalaprops"            %% "scalaprops"                % "0.5.0"           % "test"
+    "com.github.scalaprops"            %% "scalaprops"                % "0.5.0"   % "test"
+    "org.scalacheck"                   %% "scalacheck"                % "1.12.6"  % "test"
+    "org.scalacheck"                   %% "scalacheck"                % "1.13.5"  % "test"
 
 ### Other libraries
 
@@ -64,7 +66,6 @@ Add using `addSbtPlugin(...)`:
 
 You can subscribe to these tickets to find out when a library you want becomes available:
 
-* [ScalaCheck](https://github.com/rickynils/scalacheck/issues/349)
 * [ScalaTest](https://github.com/scalatest/scalatest/issues/1189)
     * blocked by ScalaCheck
 * [cats](https://github.com/typelevel/cats/issues/1648)
