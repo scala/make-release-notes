@@ -67,7 +67,6 @@ Add using `addSbtPlugin(...)`:
 You can subscribe to these tickets to find out when a library you want becomes available:
 
 * [ScalaTest](https://github.com/scalatest/scalatest/issues/1189)
-    * blocked by ScalaCheck
 * [cats](https://github.com/typelevel/cats/issues/1648)
     * blocked by catalysts
 * [catalysts](https://github.com/typelevel/catalysts/issues/14)
