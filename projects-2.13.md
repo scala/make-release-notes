@@ -34,6 +34,7 @@ Add in sbt using `libraryDependencies += ... % "test"`:
     "com.github.scalaprops"            %% "scalaprops"                % "0.5.0"   % "test"
     "org.scalacheck"                   %% "scalacheck"                % "1.12.6"  % "test"
     "org.scalacheck"                   %% "scalacheck"                % "1.13.5"  % "test"
+    "org.scalatest"                    %% "scalatest"                 % "3.0.4"   % "test"
 
 ### Other libraries
 
@@ -46,6 +47,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.github.xuwei-k"               %% "nobox"                     % "0.2.0
     "com.github.xuwei-k"               %% "zeroapply"                 % "0.2.2
     "org.json4s"                       %% "json4s-native"             % "3.5.3
+    "org.scalactic"                    %% "scalactic"                 % "3.0.4"
     "org.scalaz"                       %% "scalaz-core"               % "7.2.14
     "org.squeryl"                      %% "squeryl"                   % "0.9.9
 
@@ -67,7 +69,6 @@ Add using `addSbtPlugin(...)`:
 
 You can subscribe to these tickets to find out when a library you want becomes available:
 
-* [ScalaTest](https://github.com/scalatest/scalatest/issues/1189)
 * [cats](https://github.com/typelevel/cats/issues/1648)
     * blocked by catalysts
 * [catalysts](https://github.com/typelevel/catalysts/issues/14)
