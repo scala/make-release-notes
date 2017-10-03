@@ -25,7 +25,6 @@ Add in sbt using `libraryDependencies += ...`:
     "org.scala-lang.modules"           %% "scala-parallel-collections" % "0.1.2"
     "org.scala-lang.modules"           %% "scala-parser-combinators"   % "1.0.6"
     "org.scala-lang.modules"           %% "scala-xml"                  % "1.0.6"
-    (more coming soon)
 
 ### Testing frameworks
 
@@ -72,6 +71,10 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [cats](https://github.com/typelevel/cats/issues/1648)
     * blocked by catalysts
 * [catalysts](https://github.com/typelevel/catalysts/issues/14)
+* [genjavadoc](https://github.com/typesafehub/genjavadoc/pull/108)
+* [scala-java8-compat](https://github.com/scala/scala-java8-compat/issues/93)
+    * blocked by genjavadoc
+* [scala-swing](https://github.com/scala/scala-swing/issues/65)
 
 ## Available Projects for Scala 2.13.0-M1
 
