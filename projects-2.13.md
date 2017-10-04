@@ -70,6 +70,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [sbt 1.0.x support for Scala 2.13](https://github.com/sbt/sbt/issues/3427)
 * [scala-java8-compat](https://github.com/scala/scala-java8-compat/issues/93)
     * blocked by genjavadoc
+* [scala-logging](https://github.com/typesafehub/scala-logging/pull/97)
 * [scala-swing](https://github.com/scala/scala-swing/issues/65)
 
 ## Available Projects for Scala 2.13.0-M1
