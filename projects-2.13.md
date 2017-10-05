@@ -34,15 +34,16 @@ Add in sbt using `libraryDependencies += ... % "test"`:
 Add in sbt using `libraryDependencies += ...`:
 
     "com.chuusai"                      %% "shapeless"                 % "2.3.2"
-    "com.github.nscala-time"           %% "nscala-time"               % "2.16.0
-    "com.github.xuwei-k"               %% "iarray"                    % "0.4.0
-    "com.github.xuwei-k"               %% "msgpack4z-core"            % "0.3.7
-    "com.github.xuwei-k"               %% "nobox"                     % "0.2.0
-    "com.github.xuwei-k"               %% "zeroapply"                 % "0.2.2
-    "org.json4s"                       %% "json4s-native"             % "3.5.3
+    "com.github.nscala-time"           %% "nscala-time"               % "2.16.0"
+    "com.github.xuwei-k"               %% "iarray"                    % "0.4.0"
+    "com.github.xuwei-k"               %% "msgpack4z-core"            % "0.3.7"
+    "com.github.xuwei-k"               %% "nobox"                     % "0.2.0"
+    "com.github.xuwei-k"               %% "zeroapply"                 % "0.2.2"
+    "com.typesafe.scala-logging"       %% "scala-logging"             % "3.7.2"
+    "org.json4s"                       %% "json4s-native"             % "3.5.3"
     "org.scalactic"                    %% "scalactic"                 % "3.0.4"
-    "org.scalaz"                       %% "scalaz-core"               % "7.2.14
-    "org.squeryl"                      %% "squeryl"                   % "0.9.9
+    "org.scalaz"                       %% "scalaz-core"               % "7.2.14"
+    "org.squeryl"                      %% "squeryl"                   % "0.9.9"
 
 ### Compiler plugins
 
@@ -69,7 +70,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [sbt 1.0.x support for Scala 2.13](https://github.com/sbt/sbt/issues/3427)
 * [scala-java8-compat](https://github.com/scala/scala-java8-compat/issues/93)
     * blocked by genjavadoc
-* [scala-logging](https://github.com/typesafehub/scala-logging/pull/97)
 * [scala-swing](https://github.com/scala/scala-swing/issues/65)
 
 ## Available Projects for Scala 2.13.0-M1
