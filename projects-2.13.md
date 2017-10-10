@@ -50,7 +50,7 @@ Add in sbt using `libraryDependencies += ...`:
 
 Add in sbt using `addCompilerPlugin(...)`:
 
-    (coming soon)
+    "com.typesafe.genjavadoc"          %% "genjavadoc-plugin"          % "0.10"   cross CrossVersion.full
 
 ### sbt plugins
 
@@ -67,11 +67,9 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [cats](https://github.com/typelevel/cats/issues/1648)
     * blocked by catalysts
 * [catalysts](https://github.com/typelevel/catalysts/issues/14)
-* [genjavadoc](https://github.com/typesafehub/genjavadoc/pull/108)
 * [kind-projector](https://github.com/non/kind-projector/issues/55)
 * [sbt 1.0.x support for Scala 2.13](https://github.com/sbt/sbt/issues/3427)
 * [scala-java8-compat](https://github.com/scala/scala-java8-compat/issues/93)
-    * blocked by genjavadoc
 * [scala-swing](https://github.com/scala/scala-swing/issues/65)
 * [specs2](https://github.com/etorreborre/specs2/issues/601)
     * blocked by kind-projector
