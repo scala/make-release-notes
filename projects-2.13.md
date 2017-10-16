@@ -29,6 +29,7 @@ Add in sbt using `libraryDependencies += ... % "test"`:
     "org.scalacheck"                   %% "scalacheck"                % "1.12.6"  % "test"
     "org.scalacheck"                   %% "scalacheck"                % "1.13.5"  % "test"
     "org.scalatest"                    %% "scalatest"                 % "3.0.4"   % "test"
+    "org.specs2"                       %% "specs2-core"               % "4.0.0"   % "test"
     "com.lihaoyi"                      %% "utest"                     % "0.5.4"   % "test"
 
 ### Other libraries
@@ -71,7 +72,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [kind-projector](https://github.com/non/kind-projector/issues/55)
 * [sbt 1.0.x support for Scala 2.13](https://github.com/sbt/sbt/issues/3427)
 * [scala-swing](https://github.com/scala/scala-swing/issues/65)
-* [specs2](https://github.com/etorreborre/specs2/issues/601)
+* [specs2 3.9.x](https://github.com/etorreborre/specs2/issues/601)
     * blocked by kind-projector
 
 ## Available Projects for Scala 2.13.0-M1
