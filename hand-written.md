@@ -1,30 +1,34 @@
 ## Changes
 
-[Significant changes](https://github.com/scala/scala/pulls?q=is%3Amerged%20milestone%3A2.12.2%20label%3Arelease-notes) since 2.12.1 include:
+Our [benchmarks](https://scala-ci.typesafe.com/grafana/dashboard/db/scala-benchmark?var-branch=2.12.x&from=1501580691158&to=1507711932006) show a further reduction in compile times since 2.12.3 of 5-10%.
 
-  - [#5245](https://github.com/scala/scala/pull/5245) The glorious return of Comma McTraily
-  - [#5589](https://github.com/scala/scala/pull/5589) The thrilling continuation to the infix type printing saga
-  - [#5402](https://github.com/scala/scala/pull/5402) Improve unused warnings
-  - [#5724](https://github.com/scala/scala/pull/5724) Improve direct dependency experience
-  - [#5816](https://github.com/scala/scala/pull/5816) Allow user-defined `[un]apply` in case companion
-  - [#5663](https://github.com/scala/scala/pull/5663) Enable colored output by default on unix
-  - [#5592](https://github.com/scala/scala/pull/5592) Don't keep JarFile open in ZipArchive
-  - [#5667](https://github.com/scala/scala/pull/5667) -Xmaxerrs to limit messages
-  - [#5659](https://github.com/scala/scala/pull/5659) Fix endless cycle in runtime reflection
-  - [#5602](https://github.com/scala/scala/pull/5602) Modules w. serializable type alias "companions" are not serializable
-  - [#5550](https://github.com/scala/scala/pull/5550) Fix detection of term-owned companions
-  - [#5625](https://github.com/scala/scala/pull/5625) Update to [scala-parser-combinators v1.0.5](https://github.com/scala/scala-parser-combinators/releases/tag/v1.0.5)
+We'd like to highlight a few of the excellent contributions by @hrhino and @TomasMikula:
+  - #5867 Include the parts of a compound/refinement type in implicit scope
+  - #6074 Resolve implicit instances for abstract types, according to the spec
+  - #6069 Higher-kinded type variable unification
 
+Improved jdk9 friendliness, with more to come!
+  - #6097 Fix runtime reflection of empty package members under Java 9
+  - #6098 Adapt to change in Java 9 classloader hierarchy
 
-For more information, check out [all closed bugs](https://github.com/scala/bug/issues?q=is%3Aclosed%20milestone%3A2.12.2) and [merged PRs](https://github.com/scala/scala/pulls?q=is%3Amerged%20milestone%3A2.12.2).
+For Spark, with love:
+  - #6101 Make Lazy* classes serializable 
 
-As usual for minor releases, Scala 2.12.2 is binary compatible with the whole Scala 2.12 series.
+Note that named arguments will be simplified in 2.13:
+  - #6089 Deprecate assignments in argument position
+
+Rather than pollute `/tmp`,
+  - #6120 Move compilation daemon portfile under `~/.scalac/`
+
+For more details, check out [all closed bugs](https://github.com/scala/bug/issues?q=is%3Aclosed%20milestone%3A2.12.4) and [merged PRs](https://github.com/scala/scala/pulls?q=is%3Amerged%20milestone%3A2.12.4).
+
+As usual for minor releases, Scala 2.12.4 is binary compatible with the whole Scala 2.12 series.
 
 ## Contributors
 
 A big thank you to everyone who's helped improve Scala by reporting bugs, improving our documentation, spreading kindness in discussions around Scala, and submitting and reviewing pull requests! You are all magnificent.
 
-This release was brought to you by 49 contributors, according to `git shortlog -sn --no-merges v2.12.1..v2.12.2`. Thank you, A. P. Marki, Jason Zaugg, Adriaan Moors, Seth Tisue, Lukas Rytz, Pap Lőrinc, Philippus Baalman, Rory Graves, Dale Wijnand, Janek Bogucki, Iulian Dragos, Stefan Zeiger, Johannes Rudolph, Edmund Noble, Lars Hupel, Masaru Nomura, allisonhb, jvican, Sébastien Doeraene, Mike Skells, Antoine Gourlay, Aaron S. Hawley, Viktor Klang, Vlad Ureche, piyush-jaiswal, ptrcarta, teldosas, wpopielarski, Alessandro Cifani, Alexey Romanov, Ben Hutchison, Carsten Varming, Evgeny Slutsky, Hao Xia, Jasper-M, Jon Pretty, Kenji Yoshida, Markus Jura, Martijn Hoekstra, Martynas Mickevičius, Miles Sabin, Oscar Boykin, Pablo Fco. Pérez Hidalgo, Paul Phillips, Rui Gonçalves, Sam Halliday, Tamer AbdulRadi, Tamer Mohammed Abdul-Radi, and Tobias Schlatter!
+This release was brought to you by 24 contributors, according to `git shortlog -sn --no-merges v2.12.3..v2.12.4`. Thank you, Jason Zaugg, Lukas Rytz, jvican, Adriaan Moors, A. P. Marki, Harrison Houghton, Tomas Mikula, Philippus Baalman, Miles Sabin, Seth Tisue, Dhirendra Kumar Kashyap, Martijn Hoekstra, Martin Grotzke, Martynas Mickevičius, Matt Sicker, Mike, Mike Skells, Rex Kerr, cong, Allison H, Janek Bogucki, Edmund Noble, Jasper Moeys, Kenji Yoshida!
 
 ## Scala 2.12 Notes
 
@@ -35,5 +39,5 @@ The [release notes for Scala 2.12.0](https://github.com/scala/scala/releases/v2.
 Scala releases are available through a variety of channels, including (but not limited to):
 
 * Bump the `scalaVersion` setting in your sbt-based project
-* Download a distribution from [scala-lang.org](http://scala-lang.org/download/2.12.2.html)
-* Obtain JARs via [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.12.2%22)
+* Download a distribution from [scala-lang.org](http://scala-lang.org/download/2.12.4.html)
+* Obtain JARs via [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.scala-lang%22%20AND%20v%3A%222.12.4%22)
