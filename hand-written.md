@@ -1,5 +1,3 @@
-## Changes
-
 Our [benchmarks](https://scala-ci.typesafe.com/grafana/dashboard/db/scala-benchmark?var-branch=2.12.x&from=1501580691158&to=1507711932006) show a further reduction in compile times since 2.12.3 of 5-10%.
 
 We'd like to highlight a few of the excellent contributions by @hrhino and @TomasMikula:
@@ -7,14 +5,14 @@ We'd like to highlight a few of the excellent contributions by @hrhino and @Toma
   - #6074 Resolve implicit instances for abstract types, according to the spec
   - #6069 Higher-kinded type variable unification
 
-Improved jdk9 friendliness, with more to come!
+Improved Java 9 friendliness, with more to come!
   - #6097 Fix runtime reflection of empty package members under Java 9
   - #6098 Adapt to change in Java 9 classloader hierarchy
 
 For Spark, with love:
   - #6101 Make Lazy* classes serializable 
 
-Note that named arguments will be simplified in 2.13:
+Preparing for simplification of named arguments in 2.13:
   - #6089 Deprecate assignments in argument position
 
 Rather than pollute `/tmp`,
