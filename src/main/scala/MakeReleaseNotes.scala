@@ -21,7 +21,7 @@ object MakeReleaseNotes {
     println("# generated " + fileName)
 
     if (ext == "md") {
-      println(s"cp $fileName ../scala-lang/news/_posts/")
+      println(s"cp $fileName ../scala-lang/_posts/")
       println(s"# don't forget to\n${scala.util.Properties.envOrElse("EDITOR", "mate")} ../scala-lang/download/index.md ../scala-lang/documentation/api.md ../scala-lang/_config.yml")
       println("# and, to prepare and sanity check your scala-lang PR:")
       println(s"maruku --html $fileName")
@@ -100,7 +100,6 @@ object MakeReleaseNotes {
       </body>
     </html>"""
       case MarkDown => s"""---
-layout: news
 post-type: announcement
 permalink: /news/$version
 title: "Scala ${currentTag drop 1} is now available!"
