@@ -9,7 +9,7 @@ class MakeDownloadPage(version: String, releaseDate: Date = new Date()) {
     require(!version.startsWith("v"), "version should *not* start with 'v'")
     val fileName = s"${format("yyyy-MM-dd")}-$version.md"
     IO.write(new java.io.File(fileName), page)
-    println(s"cp $fileName ../scala-lang/download/_posts/")
+    println(s"cp $fileName ../scala-lang/_downloads/")
     println("# to prepare your scala-lang PR")
   }
 
