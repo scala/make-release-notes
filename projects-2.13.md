@@ -77,7 +77,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [catalysts](https://github.com/typelevel/catalysts/issues/14)
 * [kind-projector](https://github.com/non/kind-projector/issues/55)
 * [Play](https://github.com/playframework/playframework/issues/7940)
-* [sbt 1.0.x support for Scala 2.13](https://github.com/sbt/sbt/issues/3427)
 
 ## Available Projects for Scala 2.13.0-M1
 
