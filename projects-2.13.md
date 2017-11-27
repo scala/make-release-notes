@@ -11,6 +11,11 @@ Scaladex, the index of Scala libraries, now offers searching by target version:
 * [Testing frameworks for 2.13.0-M2](https://index.scala-lang.org/search?q=fullScalaVersion%3A2.13.0-M2+AND+topics%3Atesting)
 * [Compiler plugins for 2.13.0-M2](https://index.scala-lang.org/search?q=fullScalaVersion%3A2.13.0-M2+AND+topics%3Acompiler-plugin)
 
+### sbt 1 compatibility
+
+To use sbt 1 with Scala 2.13.0-M2, make sure you are using sbt 1.0.4 or newer.
+Earlier 1.0.x releases won't work.
+
 ### Scala modules
 
 Add in sbt using `libraryDependencies += ...`:
