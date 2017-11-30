@@ -76,6 +76,8 @@ You can subscribe to these tickets to find out when a library you want becomes a
     * blocked by catalysts
 * [catalysts](https://github.com/typelevel/catalysts/issues/14)
 * [kind-projector](https://github.com/non/kind-projector/issues/55)
+    * blocked by pcplod
+* [pcplod](https://github.com/ensime/pcplod/pull/28)
 * [Play](https://github.com/playframework/playframework/issues/7940)
 
 ## Available Projects for Scala 2.13.0-M1
