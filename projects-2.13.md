@@ -59,6 +59,7 @@ Add in sbt using `libraryDependencies += ...`:
 Add in sbt using `addCompilerPlugin(...)`:
 
     "com.typesafe.genjavadoc"          %% "genjavadoc-plugin"          % "0.10"   cross CrossVersion.full
+    "org.spire-math"                   %% "kind-projector"             % "0.9.5"  cross CrossVersion.binary
 
 ### sbt plugins
 
@@ -75,8 +76,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [cats](https://github.com/typelevel/cats/issues/1648)
     * blocked by catalysts
 * [catalysts](https://github.com/typelevel/catalysts/issues/14)
-* [kind-projector](https://github.com/non/kind-projector/issues/55)
-    * blocked by pcplod
 * [pcplod](https://github.com/ensime/pcplod/pull/28)
 * [Play](https://github.com/playframework/playframework/issues/7940)
 
