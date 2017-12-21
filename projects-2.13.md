@@ -79,6 +79,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [pcplod](https://github.com/ensime/pcplod/pull/28)
 * [Play](https://github.com/playframework/playframework/issues/7940)
 * [Jawn](https://github.com/non/jawn/issues/97)
+* [wartremover](https://github.com/wartremover/wartremover/issues/363)
 
 ## Available Projects for Scala 2.13.0-M1
 
