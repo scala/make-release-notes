@@ -53,6 +53,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.scalactic"                    %% "scalactic"                 % "3.0.4"
     "org.scalaz"                       %% "scalaz-core"               % "7.2.14"
     "org.squeryl"                      %% "squeryl"                   % "0.9.9"
+    "com.wix"                          %% "accord-core"               % "0.7.2"
 
 ### Compiler plugins
 
