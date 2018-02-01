@@ -53,6 +53,15 @@ Add using `addSbtPlugin(...)`:
 
 You can subscribe to these tickets to find out when a library you want becomes available:
 
+#### New tickets for M3
+
+* [ScalaCheck](https://github.com/rickynils/scalacheck/issues/382)
+* [ScalaTest](https://github.com/scalatest/scalatest/issues/1321)
+* [kind-projector](https://github.com/non/kind-projector/issues/63)
+* [scalaz](https://github.com/scalaz/scalaz/issues/1634)
+
+#### Existing tickets predating M3 release
+
 * [cats](https://github.com/typelevel/cats/issues/1648)
     * blocked by catalysts
 * [catalysts](https://github.com/typelevel/catalysts/issues/14)
