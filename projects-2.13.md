@@ -55,6 +55,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 #### New tickets for M3
 
+* [scala-parser-combinators](https://github.com/scala/scala-parser-combinators/issues/138)
 * [ScalaCheck](https://github.com/rickynils/scalacheck/issues/382)
 * [ScalaTest](https://github.com/scalatest/scalatest/issues/1321)
 * [kind-projector](https://github.com/non/kind-projector/issues/63)
