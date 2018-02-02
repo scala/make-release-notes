@@ -20,6 +20,7 @@ Earlier 1.0.x releases won't work.
 
 Add in sbt using `libraryDependencies += ...`:
 
+    "org.scala-lang.modules"           %% "scala-parallel-collections" % "0.1.2"
     "org.scala-lang.modules"           %% "scala-xml"                  % "1.0.6"
 
 ### Testing frameworks
