@@ -60,7 +60,10 @@ You can subscribe to these tickets to find out when a library you want becomes a
 #### New tickets for M3
 
 * [ScalaTest](https://github.com/scalatest/scalatest/issues/1321)
+* [specs2](https://github.com/etorreborre/specs2/issues/632)
+* [Akka](https://github.com/akka/akka/issues/24507)
 * [kind-projector](https://github.com/non/kind-projector/issues/63)
+* [scala-swing](https://github.com/scala/scala-swing/issues/70)
 
 #### Existing 2.13 tickets predating M3 release
 
