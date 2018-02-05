@@ -36,6 +36,7 @@ Add in sbt using `libraryDependencies += ... % "test"`:
 Add in sbt using `libraryDependencies += ...`:
 
     "org.scalaz"                       %% "scalaz-core"               % "7.2.19"
+    "org.typelevel"                    %% "macro-compat"              % "1.1.1"
 
 ### Compiler plugins
 
