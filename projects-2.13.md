@@ -28,13 +28,14 @@ Add in sbt using `libraryDependencies += ...`:
 
 Add in sbt using `libraryDependencies += ... % "test"`:
 
-    (coming soon)
+    "org.scalacheck"                   %% "scalacheck"                 % "1.12.6"  % "test"
+    "org.scalacheck"                   %% "scalacheck"                 % "1.13.5"  % "test"
 
 ### Other libraries
 
 Add in sbt using `libraryDependencies += ...`:
 
-    (coming soon)
+    "org.scalaz"                       %% "scalaz-core"               % "7.2.19"
 
 ### Compiler plugins
 
@@ -57,13 +58,10 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 #### New tickets for M3
 
-* [scala-parser-combinators](https://github.com/scala/scala-parser-combinators/issues/138)
-* [ScalaCheck](https://github.com/rickynils/scalacheck/issues/382)
 * [ScalaTest](https://github.com/scalatest/scalatest/issues/1321)
 * [kind-projector](https://github.com/non/kind-projector/issues/63)
-* [scalaz](https://github.com/scalaz/scalaz/issues/1634)
 
-#### Existing tickets predating M3 release
+#### Existing 2.13 tickets predating M3 release
 
 * [cats](https://github.com/typelevel/cats/issues/1648)
     * blocked by catalysts
