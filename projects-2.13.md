@@ -20,6 +20,7 @@ Earlier 1.0.x releases won't work.
 
 Add in sbt using `libraryDependencies += ...`:
 
+    "org.scala-lang.modules"           %% "scala-async"                % "0.9.7"
     "org.scala-lang.modules"           %% "scala-parallel-collections" % "0.1.2"
     "org.scala-lang.modules"           %% "scala-parser-combinators"   % "1.1.0"
     "org.scala-lang.modules"           %% "scala-xml"                  % "1.0.6"
@@ -71,7 +72,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
     * blocked by genjavadoc
 * [genjavadoc](https://github.com/lightbend/genjavadoc/issues/126)
     * blocked by ScalaTest
-* [scala-async](https://github.com/scala/scala-async/issues/186)
 * [scala-swing](https://github.com/scala/scala-swing/issues/70)
 
 #### Existing 2.13 tickets predating M3 release
