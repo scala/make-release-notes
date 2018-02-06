@@ -42,7 +42,7 @@ Add in sbt using `libraryDependencies += ...`:
 
 Add in sbt using `addCompilerPlugin(...)`:
 
-    (coming soon)
+    "org.scalamacros"                  % "paradise"                   % "2.1.1" cross CrossVersion.full
 
 ### sbt plugins
 
@@ -60,8 +60,12 @@ You can subscribe to these tickets to find out when a library you want becomes a
 #### New tickets for M3
 
 * [ScalaTest](https://github.com/scalatest/scalatest/issues/1321)
+    * investigating regression
 * [specs2](https://github.com/etorreborre/specs2/issues/632)
+    * blocked by kind-projector, Shapeless
+* [Shapeless](https://github.com/milessabin/shapeless/issues/811)
 * [Akka](https://github.com/akka/akka/issues/24507)
+     * blocked by scala-java8-compat
 * [kind-projector](https://github.com/non/kind-projector/issues/63)
 * [scala-java8-compat](https://github.com/scala/scala-java8-compat/issues/98)
     * blocked by genjavadoc
