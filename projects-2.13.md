@@ -63,6 +63,11 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [specs2](https://github.com/etorreborre/specs2/issues/632)
 * [Akka](https://github.com/akka/akka/issues/24507)
 * [kind-projector](https://github.com/non/kind-projector/issues/63)
+* [scala-java8-compat](https://github.com/scala/scala-java8-compat/issues/98)
+    * blocked by genjavadoc
+* [genjavadoc](https://github.com/lightbend/genjavadoc/issues/126)
+    * blocked by ScalaTest
+* [scala-async](https://github.com/scala/scala-async/issues/186)
 * [scala-swing](https://github.com/scala/scala-swing/issues/70)
 
 #### Existing 2.13 tickets predating M3 release
