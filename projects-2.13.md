@@ -44,6 +44,7 @@ Add in sbt using `libraryDependencies += ...`:
 Add in sbt using `addCompilerPlugin(...)`:
 
     "org.scalamacros"                  % "paradise"                   % "2.1.1" cross CrossVersion.full
+    "org.spire-math"                   % "kind-projector"             % "0.9.6" cross CrossVersion.binary
 
 ### sbt plugins
 
@@ -63,11 +64,10 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [ScalaTest](https://github.com/scalatest/scalatest/issues/1321)
     * investigating regression
 * [specs2](https://github.com/etorreborre/specs2/issues/632)
-    * blocked by kind-projector, Shapeless
+    * blocked by Shapeless
 * [Shapeless](https://github.com/milessabin/shapeless/issues/811)
 * [Akka](https://github.com/akka/akka/issues/24507)
      * blocked by scala-java8-compat
-* [kind-projector](https://github.com/non/kind-projector/issues/63)
 * [scala-java8-compat](https://github.com/scala/scala-java8-compat/issues/98)
     * blocked by genjavadoc
 * [genjavadoc](https://github.com/lightbend/genjavadoc/issues/126)
