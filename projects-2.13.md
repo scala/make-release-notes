@@ -36,6 +36,7 @@ Add in sbt using `libraryDependencies += ... % "test"`:
 
 Add in sbt using `libraryDependencies += ...`:
 
+    "com.chuusai"                      %% "shapeless"                 % "2.3.3"
     "org.scalaz"                       %% "scalaz-core"               % "7.2.19"
     "org.typelevel"                    %% "macro-compat"              % "1.1.1"
 
@@ -64,8 +65,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [ScalaTest](https://github.com/scalatest/scalatest/issues/1321)
     * investigating regression
 * [specs2](https://github.com/etorreborre/specs2/issues/632)
-    * blocked by Shapeless
-* [Shapeless](https://github.com/milessabin/shapeless/issues/811)
 * [Akka](https://github.com/akka/akka/issues/24507)
      * blocked by scala-java8-compat
 * [scala-java8-compat](https://github.com/scala/scala-java8-compat/issues/98)
