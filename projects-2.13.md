@@ -72,6 +72,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [genjavadoc](https://github.com/lightbend/genjavadoc/issues/126)
     * blocked by ScalaTest
 * [scala-swing](https://github.com/scala/scala-swing/issues/70)
+* [ssl-config](https://github.com/lightbend/ssl-config/issues/73)
 
 #### Existing 2.13 tickets predating M3 release
 
