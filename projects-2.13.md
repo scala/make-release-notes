@@ -31,6 +31,7 @@ Add in sbt using `libraryDependencies += ... % "test"`:
 
     "org.scalacheck"                   %% "scalacheck"                 % "1.12.6"  % "test"
     "org.scalacheck"                   %% "scalacheck"                 % "1.13.5"  % "test"
+    "org.specs2"                       %% "specs2-core"                % "4.0.2"   % "test"
 
 ### Other libraries
 
@@ -64,7 +65,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 * [ScalaTest](https://github.com/scalatest/scalatest/issues/1321)
     * investigating regression
-* [specs2](https://github.com/etorreborre/specs2/issues/632)
 * [Akka](https://github.com/akka/akka/issues/24507)
      * blocked by scala-java8-compat
 * [scala-java8-compat](https://github.com/scala/scala-java8-compat/issues/98)
