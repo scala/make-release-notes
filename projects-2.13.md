@@ -40,6 +40,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.chuusai"                      %% "shapeless"                 % "2.3.3"
     "org.scalaz"                       %% "scalaz-core"               % "7.2.19"
     "org.typelevel"                    %% "macro-compat"              % "1.1.1"
+    "eu.timepit"                       %% "refined"                   % "0.8.7"
 
 ### Compiler plugins
 
