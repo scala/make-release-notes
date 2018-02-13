@@ -64,14 +64,11 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 #### New tickets for M3
 
-* [ScalaTest](https://github.com/scalatest/scalatest/issues/1321)
-    * investigating regression
 * [Akka](https://github.com/akka/akka/issues/24507)
      * blocked by scala-java8-compat
 * [scala-java8-compat](https://github.com/scala/scala-java8-compat/issues/98)
     * blocked by genjavadoc
 * [genjavadoc](https://github.com/lightbend/genjavadoc/issues/126)
-    * blocked by ScalaTest
 * [scala-swing](https://github.com/scala/scala-swing/issues/70)
 * [ssl-config](https://github.com/lightbend/ssl-config/issues/73)
 
