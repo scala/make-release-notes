@@ -72,6 +72,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [machinist](https://github.com/typelevel/machinist/issues/22)
 * [scala-logging](https://github.com/typesafehub/scala-logging/pull/116)
 * [minitest](https://github.com/monix/minitest/issues/10)
+* [scalameter](https://github.com/scalameter/scalameter/issues/196)
 
 #### Existing 2.13 tickets predating M3
 
