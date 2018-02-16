@@ -41,6 +41,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.scalaz"                       %% "scalaz-core"               % "7.2.19"
     "org.typelevel"                    %% "macro-compat"              % "1.1.1"
     "eu.timepit"                       %% "refined"                   % "0.8.7"
+    "com.typesafe"                     %% "ssl-config-core"           % "0.2.2"
 
 ### Compiler plugins
 
@@ -70,7 +71,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
     * blocked by genjavadoc
 * [genjavadoc](https://github.com/lightbend/genjavadoc/issues/126)
 * [scala-swing](https://github.com/scala/scala-swing/issues/70)
-* [ssl-config](https://github.com/lightbend/ssl-config/issues/73)
 * [machinist](https://github.com/typelevel/machinist/issues/22)
 
 #### Existing 2.13 tickets predating M3 release
