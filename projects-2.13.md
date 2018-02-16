@@ -49,6 +49,7 @@ Add in sbt using `addCompilerPlugin(...)`:
 
     "org.scalamacros"                  % "paradise"                   % "2.1.1" cross CrossVersion.full
     "org.spire-math"                   % "kind-projector"             % "0.9.6" cross CrossVersion.binary
+    "com.typesafe.genjavadoc"          % "genjavadoc-plugin"          % "0.11"  cross CrossVersion.full
 
 ### sbt plugins
 
@@ -68,8 +69,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [Akka](https://github.com/akka/akka/issues/24507)
      * blocked by scala-java8-compat
 * [scala-java8-compat](https://github.com/scala/scala-java8-compat/issues/98)
-    * blocked by genjavadoc
-* [genjavadoc](https://github.com/lightbend/genjavadoc/issues/126)
 * [scala-swing](https://github.com/scala/scala-swing/issues/70)
 * [machinist](https://github.com/typelevel/machinist/issues/22)
 
