@@ -71,11 +71,12 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [genjavadoc](https://github.com/lightbend/genjavadoc/issues/126)
 * [scala-swing](https://github.com/scala/scala-swing/issues/70)
 * [ssl-config](https://github.com/lightbend/ssl-config/issues/73)
+* [machinist](https://github.com/typelevel/machinist/issues/22)
 
 #### Existing 2.13 tickets predating M3 release
 
 * [cats](https://github.com/typelevel/cats/issues/1648)
-    * blocked by catalysts
+    * blocked by catalysts, machinist
 * [catalysts](https://github.com/typelevel/catalysts/issues/14)
 * [pcplod](https://github.com/ensime/pcplod/pull/28)
 * [Play](https://github.com/playframework/playframework/issues/7940)
