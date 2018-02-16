@@ -70,8 +70,9 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 * [Akka](https://github.com/akka/akka/issues/24507)
 * [machinist](https://github.com/typelevel/machinist/issues/22)
+* [scala-logging](https://github.com/typesafehub/scala-logging/pull/116)
 
-#### Existing 2.13 tickets predating M3 release
+#### Existing 2.13 tickets predating M3
 
 * [cats](https://github.com/typelevel/cats/issues/1648)
     * blocked by catalysts, machinist
