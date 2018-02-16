@@ -21,6 +21,7 @@ Earlier 1.0.x releases won't work.
 Add in sbt using `libraryDependencies += ...`:
 
     "org.scala-lang.modules"           %% "scala-async"                % "0.9.7"
+    "org.scala-lang.modules"           %% "scala-java8-compat"         % "0.8.0"
     "org.scala-lang.modules"           %% "scala-parallel-collections" % "0.1.2"
     "org.scala-lang.modules"           %% "scala-parser-combinators"   % "1.1.0"
     "org.scala-lang.modules"           %% "scala-xml"                  % "1.0.6"
@@ -67,8 +68,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 #### New tickets for M3
 
 * [Akka](https://github.com/akka/akka/issues/24507)
-     * blocked by scala-java8-compat
-* [scala-java8-compat](https://github.com/scala/scala-java8-compat/issues/98)
 * [scala-swing](https://github.com/scala/scala-swing/issues/70)
 * [machinist](https://github.com/typelevel/machinist/issues/22)
 
