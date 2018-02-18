@@ -44,6 +44,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.typelevel"                    %% "macro-compat"              % "1.1.1"
     "eu.timepit"                       %% "refined"                   % "0.8.7"
     "com.typesafe"                     %% "ssl-config-core"           % "0.2.2"
+    "org.typelevel"                    %% "machinist"                 % "0.6.4"
 
 ### Compiler plugins
 
@@ -69,15 +70,15 @@ You can subscribe to these tickets to find out when a library you want becomes a
 #### New tickets for M3
 
 * [Akka](https://github.com/akka/akka/issues/24507)
-* [machinist](https://github.com/typelevel/machinist/issues/22)
 * [scala-logging](https://github.com/typesafehub/scala-logging/pull/116)
 * [minitest](https://github.com/monix/minitest/issues/10)
 * [scalameter](https://github.com/scalameter/scalameter/issues/196)
+* [simulacrum](https://github.com/mpilquist/simulacrum/pull/99)
 
 #### Existing 2.13 tickets predating M3
 
 * [cats](https://github.com/typelevel/cats/issues/1648)
-    * blocked by catalysts, machinist
+    * blocked by catalysts, simulacrum
 * [catalysts](https://github.com/typelevel/catalysts/issues/14)
 * [pcplod](https://github.com/ensime/pcplod/pull/28)
 * [Play](https://github.com/playframework/playframework/issues/7940)
