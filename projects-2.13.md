@@ -34,6 +34,7 @@ Add in sbt using `libraryDependencies += ... % "test"`:
     "org.scalacheck"                   %% "scalacheck"                 % "1.12.6"  % "test"
     "org.scalacheck"                   %% "scalacheck"                 % "1.13.5"  % "test"
     "org.specs2"                       %% "specs2-core"                % "4.0.2"   % "test"
+    "io.monix"                         %% "minitest"                   % "2.1.1"   % "test"
 
 ### Other libraries
 
@@ -45,6 +46,7 @@ Add in sbt using `libraryDependencies += ...`:
     "eu.timepit"                       %% "refined"                   % "0.8.7"
     "com.typesafe"                     %% "ssl-config-core"           % "0.2.2"
     "org.typelevel"                    %% "machinist"                 % "0.6.4"
+    "com.github.scopt"                 %% "scopt"                     % "3.7.0"
 
 ### Compiler plugins
 
@@ -71,7 +73,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 * [Akka](https://github.com/akka/akka/issues/24507)
 * [scala-logging](https://github.com/typesafehub/scala-logging/pull/116)
-* [minitest](https://github.com/monix/minitest/issues/10)
 * [scalameter](https://github.com/scalameter/scalameter/issues/196)
 * [simulacrum](https://github.com/mpilquist/simulacrum/pull/99)
 * [scalac-scoverage-plugin](https://github.com/scoverage/scalac-scoverage-plugin/issues/214)
