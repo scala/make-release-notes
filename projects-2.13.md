@@ -74,11 +74,13 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [minitest](https://github.com/monix/minitest/issues/10)
 * [scalameter](https://github.com/scalameter/scalameter/issues/196)
 * [simulacrum](https://github.com/mpilquist/simulacrum/pull/99)
+* [scalac-scoverage-plugin](https://github.com/scoverage/scalac-scoverage-plugin/issues/214)
+    * blocked by scala-logging
 
 #### Existing 2.13 tickets predating M3
 
 * [cats](https://github.com/typelevel/cats/issues/1648)
-    * blocked by catalysts, simulacrum
+    * blocked by catalysts, simulacrum, scalac-scoverage-plugin
 * [catalysts](https://github.com/typelevel/catalysts/issues/14)
 * [pcplod](https://github.com/ensime/pcplod/pull/28)
 * [Play](https://github.com/playframework/playframework/issues/7940)
