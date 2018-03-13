@@ -49,6 +49,8 @@ Add in sbt using `libraryDependencies += ...`:
     "com.github.scopt"                 %% "scopt"                     % "3.7.0"
     "com.typesafe.scala-logging"       %% "scala-logging"             % "3.8.0"
     "com.github.mpilquist"             %% "simulacrum"                % "0.12.0"
+    "com.typesafe.play"                %% "play-json"                 % "2.6.9"
+    "com.typesafe.play"                %% "play-ws-standalone"        % "2.0.0-M1"
 
 ### Compiler plugins
 
@@ -66,6 +68,7 @@ Add using `addSbtPlugin(...)`:
 
     "org.scala-js"                     % "sbt-scalajs"                % "0.6.22"
     "org.scala-js"                     % "sbt-scalajs"                % "1.0.0-M3"
+    "com.typesafe.sbt"                 % "sbt-twirl"                  % "1.3.15"
 
 ### Pending
 
