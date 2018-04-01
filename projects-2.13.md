@@ -52,6 +52,9 @@ Add in sbt using `libraryDependencies += ...`:
     "com.typesafe.play"                %% "play-json"                 % "2.6.9"
     "com.typesafe.play"                %% "play-ws-standalone"        % "2.0.0-M1"
     "org.typelevel"                    %% "catalysts-platform"        % "0.6"
+    "org.spire-math"                   %% "jawn-parser"               % "0.12.1"
+    "com.typesafe.akka"                %% "akka-actor"                % "2.5.11"
+    "com.storm-enroute"                %% "scalameter"                % "0.10-SNAPSHOT"
 
 ### Compiler plugins
 
@@ -75,17 +78,5 @@ Add using `addSbtPlugin(...)`:
 
 You can subscribe to these tickets to find out when a library you want becomes available:
 
-#### New tickets for M3
-
-* [Akka](https://github.com/akka/akka/issues/24507)
-* [scalameter](https://github.com/scalameter/scalameter/issues/196)
-* [scalac-scoverage-plugin](https://github.com/scoverage/scalac-scoverage-plugin/issues/214)
-
-#### Existing 2.13 tickets predating M3
-
 * [cats](https://github.com/typelevel/cats/issues/1648)
-    * blocked by scalac-scoverage-plugin
-* [pcplod](https://github.com/ensime/pcplod/pull/28)
-* [Play](https://github.com/playframework/playframework/issues/7940)
-* [Jawn](https://github.com/non/jawn/issues/97)
 * [wartremover](https://github.com/wartremover/wartremover/issues/363)
