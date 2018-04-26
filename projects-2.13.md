@@ -53,8 +53,9 @@ Add in sbt using `libraryDependencies += ...`:
     "com.typesafe.play"                %% "play-ws-standalone"        % "2.0.0-M1"
     "org.typelevel"                    %% "catalysts-platform"        % "0.6"
     "org.spire-math"                   %% "jawn-parser"               % "0.12.1"
-    "com.typesafe.akka"                %% "akka-actor"                % "2.5.11"
     "com.storm-enroute"                %% "scalameter"                % "0.10-SNAPSHOT"
+    "com.typesafe.akka"                %% "akka-actor"                % "2.5.11"
+    "com.typesafe.akka"                %% "akka-http"                 % "10.1.0"
 
 ### Compiler plugins
 
