@@ -54,6 +54,7 @@ Add using `addSbtPlugin(...)`:
 
 You can subscribe to these tickets to find out when a library you want becomes available:
 
+* [Scala.js](https://github.com/scala-js/scala-js/pull/3344)
 * [scala-xml](https://github.com/scala/scala-xml/issues/217)
 * [scala-parser-combinators](https://github.com/scala/scala-parser-combinators/issues/151)
 * [ScalaCheck](https://github.com/rickynils/scalacheck/issues/410)
