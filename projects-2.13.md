@@ -33,7 +33,8 @@ Add in sbt using `libraryDependencies += ... % "test"`:
 
 Add in sbt using `libraryDependencies += ...`:
 
-    (coming soon)
+    "org.scalaz"                       %% "scalaz-core"               % "7.2.23"
+    "com.github.nscala-time"           %% "nscala-time"               % "2.20.0"
 
 ### Compiler plugins
 
