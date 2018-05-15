@@ -1,3 +1,62 @@
+## Available Projects for Scala 2.13.0-M4
+
+Library maintainers, library users, please [edit this page](https://github.com/scala/make-release-notes/edit/2.13.x/projects-2.13.md) and let the world know what libraries are available.
+
+### Scaladex
+
+Scaladex, the index of Scala libraries, now offers searching by target version:
+
+* [All libraries for 2.13.0-M4](https://index.scala-lang.org/search?q=fullScalaVersion%3A2.13.0-M4)
+* [Scala modules for 2.13.0-M4](https://index.scala-lang.org/search?q=fullScalaVersion%3A2.13.0-M4+AND+organization%3Ascala)
+* [Testing frameworks for 2.13.0-M4](https://index.scala-lang.org/search?q=fullScalaVersion%3A2.13.0-M4+AND+topics%3Atesting)
+* [Compiler plugins for 2.13.0-M4](https://index.scala-lang.org/search?q=fullScalaVersion%3A2.13.0-M4+AND+topics%3Acompiler-plugin)
+
+### sbt 1 compatibility
+
+To use sbt 1 with Scala 2.13.0-M4, make sure you are using sbt 1.0.4 or newer.
+Earlier 1.0.x releases won't work.  Using the latest 1.1.x patch release is
+recommended.
+
+### Scala modules
+
+Add in sbt using `libraryDependencies += ...`:
+
+    (coming soon)
+
+### Testing frameworks
+
+Add in sbt using `libraryDependencies += ... % "test"`:
+
+    (coming soon)
+
+### Other libraries
+
+Add in sbt using `libraryDependencies += ...`:
+
+    (coming soon)
+
+### Compiler plugins
+
+Add in sbt using `addCompilerPlugin(...)`:
+
+    (coming soon)
+
+### sbt plugins
+
+Most plugins do not need to be re-published for 2.13, but certain plugins did require changes.
+
+Add using `addSbtPlugin(...)`:
+
+    (coming soon)
+
+### Pending
+
+You can subscribe to these tickets to find out when a library you want becomes available:
+
+* [ScalaCheck](https://github.com/rickynils/scalacheck/issues/410)
+* [ScalaTest](https://github.com/scalatest/scalatest/issues/1367)
+* [kind-projector](https://github.com/non/kind-projector/issues/72)
+
 ## Available Projects for Scala 2.13.0-M3
 
 Library maintainers, library users, please [edit this page](https://github.com/scala/make-release-notes/edit/2.13.x/projects-2.13.md) and let the world know what libraries are available.
