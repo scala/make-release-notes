@@ -53,6 +53,8 @@ Add using `addSbtPlugin(...)`:
 
 You can subscribe to these tickets to find out when a library you want becomes available:
 
+* [scala-xml](https://github.com/scala/scala-xml/issues/217)
+* [scala-parser-combinators](https://github.com/scala/scala-parser-combinators/issues/151)
 * [ScalaCheck](https://github.com/rickynils/scalacheck/issues/410)
 * [ScalaTest](https://github.com/scalatest/scalatest/issues/1367)
 * [kind-projector](https://github.com/non/kind-projector/issues/72)
