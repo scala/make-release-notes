@@ -59,6 +59,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [ScalaCheck](https://github.com/rickynils/scalacheck/issues/410)
 * [ScalaTest](https://github.com/scalatest/scalatest/issues/1367)
 * [kind-projector](https://github.com/non/kind-projector/issues/72)
+* [json4s](https://github.com/json4s/json4s/issues/515)
 
 ## Available Projects for Scala 2.13.0-M3
 
