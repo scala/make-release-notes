@@ -22,6 +22,7 @@ recommended.
 Add in sbt using `libraryDependencies += ...`:
 
     "org.scala-lang.modules"           %% "scala-collection-compat"   % "0.1.0"
+    "org.scala-lang.modules"           %% "scala-xml"                 % "1.1.0"
 
 ### Testing frameworks
 
