@@ -28,7 +28,7 @@ Add in sbt using `libraryDependencies += ...`:
 
 Add in sbt using `libraryDependencies += ... % "test"`:
 
-    (coming soon)
+    "com.github.scalaprops"             %% "scalaprops"               % "0.5.5"
 
 ### Other libraries
 
@@ -36,12 +36,17 @@ Add in sbt using `libraryDependencies += ...`:
 
     "org.scalaz"                       %% "scalaz-core"               % "7.2.23"
     "com.github.nscala-time"           %% "nscala-time"               % "2.20.0"
+    "org.json4s"                       %% "json4s-native"             % "3.5.4"
+    "org.squeryl"                      %% "squeryl"                   % "0.9.12"
+    "com.github.xuwei-k"               %% "applybuilder"              % "0.2.3"
+    "com.github.xuwei-k"               %% "msgpack4z-core"            % "0.3.9"
+    "com.github.xuwei-k"               %% "zeroapply"                 % "0.2.2"
 
 ### Compiler plugins
 
 Add in sbt using `addCompilerPlugin(...)`:
 
-    (coming soon)
+    "org.spire-math"                   % "kind-projector"             % "0.9.7" cross CrossVersion.binary
 
 ### sbt plugins
 
@@ -55,12 +60,9 @@ Add using `addSbtPlugin(...)`:
 
 You can subscribe to these tickets to find out when a library you want becomes available:
 
-* [scala-xml](https://github.com/scala/scala-xml/issues/217)
 * [scala-parser-combinators](https://github.com/scala/scala-parser-combinators/issues/151)
 * [ScalaCheck](https://github.com/rickynils/scalacheck/issues/410)
 * [ScalaTest](https://github.com/scalatest/scalatest/issues/1367)
-* [kind-projector](https://github.com/non/kind-projector/issues/72)
-* [json4s](https://github.com/json4s/json4s/issues/515)
 
 ## Available Projects for Scala 2.13.0-M3
 
