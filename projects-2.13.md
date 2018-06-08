@@ -66,6 +66,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [ScalaCheck](https://github.com/rickynils/scalacheck/issues/410)
 * [ScalaTest](https://github.com/scalatest/scalatest/issues/1367)
 * [shapeless](https://github.com/milessabin/shapeless/issues/832)
+* [utest](https://github.com/lihaoyi/utest/issues/159)
 
 ## Available Projects for Scala 2.13.0-M3
 
