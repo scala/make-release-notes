@@ -22,6 +22,7 @@ recommended.
 Add in sbt using `libraryDependencies += ...`:
 
     "org.scala-lang.modules"           %% "scala-collection-compat"   % "0.1.1"
+    "org.scala-lang.modules"           %% "scala-parser-combinators"  % "1.1.1"
     "org.scala-lang.modules"           %% "scala-xml"                 % "1.1.0"
 
 ### Testing frameworks
@@ -62,10 +63,8 @@ Add using `addSbtPlugin(...)`:
 
 You can subscribe to these tickets to find out when a library you want becomes available:
 
-* [scala-parser-combinators](https://github.com/scala/scala-parser-combinators/issues/151)
 * [ScalaCheck](https://github.com/rickynils/scalacheck/issues/410)
 * [ScalaTest](https://github.com/scalatest/scalatest/issues/1367)
-* [shapeless](https://github.com/milessabin/shapeless/issues/832)
 * [utest](https://github.com/lihaoyi/utest/issues/159)
 
 ## Available Projects for Scala 2.13.0-M3
