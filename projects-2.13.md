@@ -65,6 +65,7 @@ Add using `addSbtPlugin(...)`:
 You can subscribe to these tickets to find out when a library you want becomes available:
 
 * [ScalaTest](https://github.com/scalatest/scalatest/issues/1367)
+* [specs2](https://github.com/etorreborre/specs2/issues/666)
 * [utest](https://github.com/lihaoyi/utest/issues/159)
 
 ## Available Projects for Scala 2.13.0-M3
