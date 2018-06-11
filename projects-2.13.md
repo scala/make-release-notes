@@ -64,7 +64,6 @@ Add using `addSbtPlugin(...)`:
 
 You can subscribe to these tickets to find out when a library you want becomes available:
 
-* [ScalaCheck](https://github.com/rickynils/scalacheck/issues/410)
 * [ScalaTest](https://github.com/scalatest/scalatest/issues/1367)
 * [utest](https://github.com/lihaoyi/utest/issues/159)
 
