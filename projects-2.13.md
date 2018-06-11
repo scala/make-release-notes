@@ -30,7 +30,7 @@ Add in sbt using `libraryDependencies += ...`:
 Add in sbt using `libraryDependencies += ... % "test"`:
 
     "org.scalacheck"                   %% "scalacheck"                % "1.14.0"  % "test"
-    "com.github.scalaprops"            %% "scalaprops"                % "0.5.5"
+    "com.github.scalaprops"            %% "scalaprops"                % "0.5.5"   % "test"
 
 ### Other libraries
 
