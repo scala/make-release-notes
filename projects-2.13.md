@@ -30,8 +30,9 @@ Add in sbt using `libraryDependencies += ...`:
 
 Add in sbt using `libraryDependencies += ... % "test"`:
 
-    "org.scalacheck"                   %% "scalacheck"                % "1.14.0"  % "test"
-    "com.github.scalaprops"            %% "scalaprops"                % "0.5.5"   % "test"
+    "org.scalacheck"                   %% "scalacheck"                % "1.14.0"      % "test"
+    "com.github.scalaprops"            %% "scalaprops"                % "0.5.5"       % "test"
+    "org.scalatest"                    %% "scalatest"                 % "3.0.6-SNAP1" % "test"
 
 ### Other libraries
 
@@ -46,6 +47,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.github.xuwei-k"               %% "zeroapply"                 % "0.2.2"
     "org.typelevel"                    %% "macro-compat"              % "1.1.1"
     "com.chuusai"                      %% "shapeless"                 % "2.3.3"
+    "org.scalactic"                    %% "scalactic"                 % "3.0.4"
 
 ### Compiler plugins
 
@@ -66,7 +68,6 @@ Add using `addSbtPlugin(...)`:
 You can subscribe to these tickets to find out when a library you want becomes available:
 
 * [scala-parallel-collections](https://github.com/scala/scala-parallel-collections/issues/41)
-* [ScalaTest](https://github.com/scalatest/scalatest/issues/1367)
 * [specs2](https://github.com/etorreborre/specs2/issues/666)
 * [utest](https://github.com/lihaoyi/utest/issues/159)
 
