@@ -54,6 +54,7 @@ Add in sbt using `libraryDependencies += ...`:
 Add in sbt using `addCompilerPlugin(...)`:
 
     "org.spire-math"                   % "kind-projector"             % "0.9.7" cross CrossVersion.binary
+    "com.typesafe.genjavadoc"          % "genjavadoc-plugin"          % "0.11"  cross CrossVersion.full
 
 ### sbt plugins
 
@@ -67,7 +68,6 @@ Add using `addSbtPlugin(...)`:
 
 You can subscribe to these tickets to find out when a library you want becomes available:
 
-* [genjavadoc](https://github.com/lightbend/genjavadoc/pull/141)
 * [scala-parallel-collections](https://github.com/scala/scala-parallel-collections/issues/41)
 * [specs2](https://github.com/etorreborre/specs2/issues/666)
 * [utest](https://github.com/lihaoyi/utest/issues/159)
