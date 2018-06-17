@@ -71,6 +71,9 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [scala-parallel-collections](https://github.com/scala/scala-parallel-collections/issues/41)
 * [specs2](https://github.com/etorreborre/specs2/issues/666)
 * [utest](https://github.com/lihaoyi/utest/issues/159)
+* [akka](https://github.com/akka/akka/issues/25105)
+* [scalate](https://github.com/scalate/scalate/issues/133)
+* [scalatra](https://github.com/scalatra/scalatra/issues/831)
 
 ## Available Projects for Scala 2.13.0-M3
 
