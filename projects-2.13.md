@@ -33,6 +33,7 @@ Add in sbt using `libraryDependencies += ... % "test"`:
     "org.scalacheck"                   %% "scalacheck"                % "1.14.0"      % "test"
     "com.github.scalaprops"            %% "scalaprops"                % "0.5.5"       % "test"
     "org.scalatest"                    %% "scalatest"                 % "3.0.6-SNAP1" % "test"
+    "org.specs2"                       %% "specs2-core"               % "4.3.0"       % "test"
 
 ### Other libraries
 
@@ -69,7 +70,6 @@ Add using `addSbtPlugin(...)`:
 You can subscribe to these tickets to find out when a library you want becomes available:
 
 * [scala-parallel-collections](https://github.com/scala/scala-parallel-collections/issues/41)
-* [specs2](https://github.com/etorreborre/specs2/issues/666)
 * [utest](https://github.com/lihaoyi/utest/issues/159)
 * [akka](https://github.com/akka/akka/issues/25105)
 * [scalate](https://github.com/scalate/scalate/issues/133)
