@@ -74,6 +74,8 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [akka](https://github.com/akka/akka/issues/25105)
 * [scalate](https://github.com/scalate/scalate/issues/133)
 * [scalatra](https://github.com/scalatra/scalatra/issues/831)
+* [cats](https://github.com/typelevel/cats/issues/2267)
+* [machinist](https://github.com/typelevel/machinist/issues/30)
 
 ## Available Projects for Scala 2.13.0-M3
 
