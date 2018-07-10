@@ -79,6 +79,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [tut](https://github.com/tpolecat/tut/issues/205)
 * [scoverage](https://github.com/scoverage/scalac-scoverage-plugin/issues/225)
 * [scala-logging](https://github.com/lightbend/scala-logging/issues/127)
+* [play-json](https://github.com/playframework/play-json/issues/167)
 
 ## Available Projects for Scala 2.13.0-M3
 
