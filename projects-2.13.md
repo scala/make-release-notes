@@ -76,6 +76,9 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [scalate](https://github.com/scalate/scalate/issues/133)
 * [scalatra](https://github.com/scalatra/scalatra/issues/831)
 * [cats](https://github.com/typelevel/cats/issues/2267)
+* [tut](https://github.com/tpolecat/tut/issues/205)
+* [scoverage](https://github.com/scoverage/scalac-scoverage-plugin/issues/225)
+* [scala-logging](https://github.com/lightbend/scala-logging/issues/127)
 
 ## Available Projects for Scala 2.13.0-M3
 
