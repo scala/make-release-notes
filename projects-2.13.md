@@ -50,6 +50,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.chuusai"                      %% "shapeless"                 % "2.3.3"
     "org.scalactic"                    %% "scalactic"                 % "3.0.4"
     "org.typelevel"                    %% "machinist"                 % "0.6.5"
+    "com.typesafe.scala-logging"       %% "scala-logging"             % "3.9.0"
 
 ### Compiler plugins
 
@@ -78,7 +79,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [scalatra](https://github.com/scalatra/scalatra/issues/831)
 * [cats](https://github.com/typelevel/cats/issues/2267)
 * [scoverage](https://github.com/scoverage/scalac-scoverage-plugin/issues/225)
-* [scala-logging](https://github.com/lightbend/scala-logging/issues/127)
 * [play-json](https://github.com/playframework/play-json/issues/167)
 * [minitest](https://github.com/monix/minitest/issues/23)
 
