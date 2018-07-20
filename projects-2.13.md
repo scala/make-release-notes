@@ -72,16 +72,9 @@ Add using `addSbtPlugin(...)`:
 
 You can subscribe to these tickets to find out when a library you want becomes available:
 
-* [scala-parallel-collections](https://github.com/scala/scala-parallel-collections/issues/41)
-* [utest](https://github.com/lihaoyi/utest/issues/159)
-* [akka](https://github.com/akka/akka/issues/25105)
-* [scalate](https://github.com/scalate/scalate/issues/133)
-* [scalatra](https://github.com/scalatra/scalatra/issues/831)
-* [cats](https://github.com/typelevel/cats/issues/2267)
-* [scoverage](https://github.com/scoverage/scalac-scoverage-plugin/issues/225)
-* [play-json](https://github.com/playframework/play-json/issues/167)
-* [minitest](https://github.com/monix/minitest/issues/23)
-* [twitter-util](https://github.com/twitter/util/issues/219)
+<https://github.com/scala/community-builds/wiki/scala-2.13.x-migration>
+
+---
 
 ## Available Projects for Scala 2.13.0-M3
 
