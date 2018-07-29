@@ -52,6 +52,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.typelevel"                    %% "machinist"                 % "0.6.5"
     "com.typesafe.scala-logging"       %% "scala-logging"             % "3.9.0"
     "com.github.mpilquist"             %% "simulacrum"                % "0.13.0"
+    "org.typelevel"                    %% "catalysts-platform"        % "0.7"
 
 ### Compiler plugins
 
