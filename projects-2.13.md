@@ -85,6 +85,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [minitest](https://github.com/monix/minitest/issues/23)
 * [twitter-util](https://github.com/twitter/util/issues/219)
 * [spray-json](https://github.com/spray/spray-json/issues/265)
+* [twirl](https://github.com/playframework/twirl/issues/184)
 
 ## Available Projects for Scala 2.13.0-M3
 
