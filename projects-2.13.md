@@ -54,6 +54,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.github.mpilquist"             %% "simulacrum"                % "0.13.0"
     "org.typelevel"                    %% "catalysts-platform"        % "0.7"
     "org.typelevel"                    %% "cats-core"                 % "1.2.0"
+    "io.spray"                         %% "spray-json"                % "1.3.4"
 
 ### Compiler plugins
 
@@ -84,7 +85,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [play-json](https://github.com/playframework/play-json/issues/167)
 * [minitest](https://github.com/monix/minitest/issues/23)
 * [twitter-util](https://github.com/twitter/util/issues/219)
-* [spray-json](https://github.com/spray/spray-json/issues/265)
 * [twirl](https://github.com/playframework/twirl/issues/184)
 
 ## Available Projects for Scala 2.13.0-M3
