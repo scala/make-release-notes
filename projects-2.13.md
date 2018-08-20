@@ -56,6 +56,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.typelevel"                    %% "cats-core"                 % "1.2.0"
     "io.spray"                         %% "spray-json"                % "1.3.4"
     "com.typesafe.play"                %% "play-json"                 % "2.7.0-M1"
+    "io.circe"                         %% "circe-core"                % "0.10.0-M2"
 
 ### Compiler plugins
 
