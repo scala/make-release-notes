@@ -55,6 +55,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.typelevel"                    %% "catalysts-platform"        % "0.7"
     "org.typelevel"                    %% "cats-core"                 % "1.2.0"
     "io.spray"                         %% "spray-json"                % "1.3.4"
+    "com.typesafe.play"                %% "play-json"                 % "2.7.0-M1"
 
 ### Compiler plugins
 
@@ -82,7 +83,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [scalate](https://github.com/scalate/scalate/issues/133)
 * [scalatra](https://github.com/scalatra/scalatra/issues/831)
 * [scoverage](https://github.com/scoverage/scalac-scoverage-plugin/issues/225)
-* [play-json](https://github.com/playframework/play-json/issues/167)
 * [minitest](https://github.com/monix/minitest/issues/23)
 * [twitter-util](https://github.com/twitter/util/issues/219)
 * [twirl](https://github.com/playframework/twirl/issues/184)
