@@ -57,6 +57,7 @@ Add in sbt using `libraryDependencies += ...`:
     "io.spray"                         %% "spray-json"                % "1.3.4"
     "com.typesafe.play"                %% "play-json"                 % "2.7.0-M1"
     "io.circe"                         %% "circe-core"                % "0.10.0-M2"
+    "org.spire-math"                   %% "jawn-parser"               % "0.13.0"
 
 ### Compiler plugins
 
