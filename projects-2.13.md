@@ -57,6 +57,18 @@ Add using `addSbtPlugin(...)`:
 
 You can subscribe to these tickets to find out when a library you want becomes available:
 
+#### new M5 tickets
+
+* [scala-js](https://github.com/scala-js/scala-js/issues/3443)
+* [scala-xml](https://github.com/scala/scala-xml/issues/256)
+* [scala-parser-combinators](https://github.com/scala/scala-parser-combinators/pull/168)
+* [scala-java8-compat](https://github.com/scala/scala-java8-compat/issues/119)
+* [scala-collection-compat](https://github.com/scala/scala-collection-compat/issues/147)
+* [scalacheck](https://github.com/rickynils/scalacheck/issues/418)
+* [scalatest](https://github.com/scalatest/scalatest/issues/1409)
+
+#### Leftover tickets from M4 cycle
+
 * [scala-parallel-collections](https://github.com/scala/scala-parallel-collections/issues/41)
 * [utest](https://github.com/lihaoyi/utest/issues/159)
 * [akka](https://github.com/akka/akka/issues/25105)
