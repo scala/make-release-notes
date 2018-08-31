@@ -38,6 +38,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.github.scalaprops"            %% "scalaprops"                % "0.5.5"       % "test"
     "com.github.xuwei-k"               %% "msgpack4z-core"            % "0.3.5"
     "com.github.xuwei-k"               %% "zeroapply"                 % "0.2.2"
+    "org.typelevel"                    %% "macro-compat"              % "1.1.1"
 
 ### Compiler plugins
 
