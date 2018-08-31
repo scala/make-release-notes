@@ -51,6 +51,7 @@ Most plugins do not need to be re-published for 2.13, but certain plugins did re
 
 Add using `addSbtPlugin(...)`:
 
+    "org.scala-js"                      % "sbt-scalajs"               % "0.6.25"
     "org.wartremover"                   % "sbt-wartremover"           % "2.3.5"
 
 ### Pending
@@ -59,7 +60,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 #### new M5 tickets
 
-* [scala-js](https://github.com/scala-js/scala-js/issues/3443)
 * [scala-xml](https://github.com/scala/scala-xml/issues/256)
 * [scala-parser-combinators](https://github.com/scala/scala-parser-combinators/pull/168)
 * [scala-java8-compat](https://github.com/scala/scala-java8-compat/issues/119)
