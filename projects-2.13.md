@@ -33,11 +33,12 @@ Add in sbt using `libraryDependencies += ... % "test"`:
 
 Add in sbt using `libraryDependencies += ...`:
 
-    "org.scalaz"                       %% "scalaz-core"               % "7.2.26"
     "com.github.nscala-time"           %% "nscala-time"               % "2.20.0"
     "com.github.scalaprops"            %% "scalaprops"                % "0.5.5"       % "test"
     "com.github.xuwei-k"               %% "msgpack4z-core"            % "0.3.5"
     "com.github.xuwei-k"               %% "zeroapply"                 % "0.2.2"
+    "org.scalaz"                       %% "scalaz-core"               % "7.2.26"
+    "org.typelevel"                    %% "macro-compat"              % "1.1.1"
 
 ### Compiler plugins
 
