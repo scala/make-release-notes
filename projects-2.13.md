@@ -21,7 +21,7 @@ recommended.
 
 Add in sbt using `libraryDependencies += ...`:
 
-    (coming soon)
+    "org.scala-lang.modules"           %% "scala-collection-compat"   % "0.2.0"
 
 ### Testing frameworks
 
@@ -64,7 +64,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [scala-xml](https://github.com/scala/scala-xml/issues/256)
 * [scala-parser-combinators](https://github.com/scala/scala-parser-combinators/pull/168)
 * [scala-java8-compat](https://github.com/scala/scala-java8-compat/issues/119)
-* [scala-collection-compat](https://github.com/scala/scala-collection-compat/issues/147)
 * [scalacheck](https://github.com/rickynils/scalacheck/issues/418)
 * [scalatest](https://github.com/scalatest/scalatest/issues/1409)
 
