@@ -39,6 +39,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.github.xuwei-k"               %% "zeroapply"                 % "0.2.2"
     "org.scalaz"                       %% "scalaz-core"               % "7.2.26"
     "org.typelevel"                    %% "macro-compat"              % "1.1.1"
+    "com.chuusai"                      %% "shapeless"                 % "2.3.3"
 
 ### Compiler plugins
 
