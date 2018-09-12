@@ -21,6 +21,7 @@ recommended.
 
 Add in sbt using `libraryDependencies += ...`:
 
+    "org.scala-lang.modules"           %% "scala-parser-combinators"  % "1.1.1"
     "org.scala-lang.modules"           %% "scala-collection-compat"   % "0.2.0"
 
 ### Testing frameworks
@@ -62,7 +63,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 #### new M5 tickets
 
-* [scala-parser-combinators](https://github.com/scala/scala-parser-combinators/issues/170)
 * [scala-xml](https://github.com/scala/scala-xml/issues/256)
 * [scala-java8-compat](https://github.com/scala/scala-java8-compat/issues/119)
 * [scalacheck](https://github.com/rickynils/scalacheck/issues/418)
