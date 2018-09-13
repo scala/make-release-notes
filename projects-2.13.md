@@ -64,9 +64,12 @@ You can subscribe to these tickets to find out when a library you want becomes a
 #### new M5 tickets
 
 * [scala-xml](https://github.com/scala/scala-xml/issues/256)
+* [genjavadoc](https://github.com/lightbend/genjavadoc/issues/144)
 * [scala-java8-compat](https://github.com/scala/scala-java8-compat/issues/119)
+    * blocked by genjavadoc
 * [scalacheck](https://github.com/rickynils/scalacheck/issues/418)
 * [scalatest](https://github.com/scalatest/scalatest/issues/1409)
+    * blocked by scalacheck
 
 #### Leftover tickets from M4 cycle
 
