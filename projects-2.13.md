@@ -42,6 +42,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.scalaz"                       %% "scalaz-core"               % "7.2.26"
     "org.typelevel"                    %% "macro-compat"              % "1.1.1"
     "com.chuusai"                      %% "shapeless"                 % "2.3.3"
+    "org.json4s"                       %% "json4s-native"             % "3.6.1"
 
 ### Compiler plugins
 
