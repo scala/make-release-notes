@@ -48,7 +48,7 @@ Add in sbt using `libraryDependencies += ...`:
 
 Add in sbt using `addCompilerPlugin(...)`:
 
-    (coming soon)
+    "com.typesafe.genjavadoc"          % "genjavadoc-plugin"          % "0.11"  cross CrossVersion.patch
 
 ### sbt plugins
 
@@ -65,9 +65,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 #### new M5 tickets
 
-* [genjavadoc](https://github.com/lightbend/genjavadoc/issues/144)
 * [scala-java8-compat](https://github.com/scala/scala-java8-compat/issues/119)
-    * blocked by genjavadoc
 * [scalacheck](https://github.com/rickynils/scalacheck/issues/418)
 * [scalatest](https://github.com/scalatest/scalatest/issues/1409)
     * blocked by scalacheck
