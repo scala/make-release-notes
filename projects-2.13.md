@@ -24,6 +24,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.scala-lang.modules"           %% "scala-parser-combinators"  % "1.1.1"
     "org.scala-lang.modules"           %% "scala-xml"                 % "1.1.0"
     "org.scala-lang.modules"           %% "scala-collection-compat"   % "0.2.0"
+    "org.scala-lang.modules"           %% "scala-java8-compat"        % "0.9.0"
 
 ### Testing frameworks
 
@@ -65,7 +66,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 #### new M5 tickets
 
-* [scala-java8-compat](https://github.com/scala/scala-java8-compat/issues/119)
 * [scalacheck](https://github.com/rickynils/scalacheck/issues/418)
 * [scalatest](https://github.com/scalatest/scalatest/issues/1409)
     * blocked by scalacheck
