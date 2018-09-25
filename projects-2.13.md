@@ -69,6 +69,8 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [scalacheck](https://github.com/rickynils/scalacheck/issues/418)
 * [scalatest](https://github.com/scalatest/scalatest/issues/1409)
     * blocked by scalacheck
+* [cats](https://github.com/typelevel/cats/issues/2389)
+    * blocked by scalatest (and likely others)
 
 #### Leftover tickets from M4 cycle
 
