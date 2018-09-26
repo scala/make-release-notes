@@ -69,8 +69,12 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [scalacheck](https://github.com/rickynils/scalacheck/issues/418)
 * [scalatest](https://github.com/scalatest/scalatest/issues/1409)
     * blocked by scalacheck
+* [scala-logging](https://github.com/lightbend/scala-logging/issues/131)
+    * blocked by scalatest
 * [cats](https://github.com/typelevel/cats/issues/2389)
     * blocked by scalatest (and likely others)
+* [scoverage](https://github.com/scoverage/scalac-scoverage-plugin/issues/234)
+    * blocked by scalatest, scala-logging
 
 #### Leftover tickets from M4 cycle
 
@@ -79,7 +83,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [akka](https://github.com/akka/akka/issues/25105)
 * [scalate](https://github.com/scalate/scalate/issues/133)
 * [scalatra](https://github.com/scalatra/scalatra/issues/831)
-* [scoverage](https://github.com/scoverage/scalac-scoverage-plugin/issues/225)
 * [minitest](https://github.com/monix/minitest/issues/23)
 * [twitter-util](https://github.com/twitter/util/issues/219)
 * [twirl](https://github.com/playframework/twirl/issues/184)
