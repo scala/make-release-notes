@@ -49,7 +49,8 @@ Add in sbt using `libraryDependencies += ...`:
 
 Add in sbt using `addCompilerPlugin(...)`:
 
-    "com.typesafe.genjavadoc"          % "genjavadoc-plugin"          % "0.11"  cross CrossVersion.patch
+    "com.typesafe.genjavadoc"          %  "genjavadoc-plugin"          % "0.11"  cross CrossVersion.patch
+    "com.lihaoyi"                      %% "acyclic"                    % "0.1.8"
 
 ### sbt plugins
 
@@ -78,7 +79,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
     * blocked by scalatest, kind-projector, ...?
 * [scoverage](https://github.com/scoverage/scalac-scoverage-plugin/issues/234)
     * blocked by scalatest, scala-logging
-* [acyclic](https://github.com/lihaoyi/acyclic/pull/28)
 * [minitest](https://github.com/monix/minitest/issues/23)
 * [scala-parallel-collections](https://github.com/scala/scala-parallel-collections/issues/41)
 * [zinc](https://github.com/sbt/zinc/pull/592)
