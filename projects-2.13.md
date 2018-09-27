@@ -68,6 +68,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 * [kind-projector](https://github.com/non/kind-projector/issues/79)
 * [scalacheck](https://github.com/rickynils/scalacheck/issues/418)
+* [utest](https://github.com/lihaoyi/utest/issues/183)
 * [scalatest](https://github.com/scalatest/scalatest/issues/1409)
     * blocked by scalacheck
 * [specs2](https://github.com/etorreborre/specs2/issues/709)
@@ -75,9 +76,11 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [scala-logging](https://github.com/lightbend/scala-logging/issues/131)
     * blocked by scalatest
 * [cats](https://github.com/typelevel/cats/issues/2389)
-    * blocked by scalatest (and likely others)
+    * blocked by scalatest, kind-projector, ...?
 * [scoverage](https://github.com/scoverage/scalac-scoverage-plugin/issues/234)
     * blocked by scalatest, scala-logging
+* [acyclic](https://github.com/lihaoyi/acyclic/pull/28)
+    * blocked by utest
 
 #### Leftover tickets from M4 cycle
 
