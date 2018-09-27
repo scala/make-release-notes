@@ -19,7 +19,7 @@ class MakeDownloadPage(version: String, releaseDate: Date = new Date()) {
     println("## fetching size of "+ url)
     scala.util.Try {
       val responseHeader = Process(s"curl -m 5 --silent -D - -X HEAD $url").lineStream
-      val contentLength = responseHeader.find(_.startsWith("Content-Length"))
+      val contentLength = responseHeader.find(_.toLowerCase.startsWith("content-length"))
       val bytes = contentLength.map(_.split(":",2)(1).trim.toInt)
       bytes map (b => (responseHeader.head, b))
     }.toOption.flatten.map { case (status, bytes) => (status, bytes match {
@@ -27,7 +27,7 @@ class MakeDownloadPage(version: String, releaseDate: Date = new Date()) {
         case kilo if kilo < 1024*1024                 => f"${bytes.toDouble/1024}%.0fK"
         case big                                      => f"${bytes.toDouble/(1024*1024)}%.2fM"
       })} match {
-      case Some((status, humanSize)) if status.contains("200 OK") || status.contains("302 Found") =>
+      case Some((status, humanSize)) if status.contains("200") || status.contains("302") =>
         humanSize
       case _ =>
         println(s"## warning: could not fetch $url")

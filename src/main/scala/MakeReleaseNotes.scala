@@ -82,7 +82,7 @@ object MakeReleaseNotes {
       val newLines = lines.map(x => if (x.startsWith("    *")) "\n" + x.stripPrefix("  ") else x)
       val bulletFixed = newLines.mkString("\n")
       val commentsStripped = stripTripleDashedHtmlComments(bulletFixed)
-      commentsStripped
+      commentsStripped.replaceAll("\\$version", version)
     }
     val info = new GitInfo(scalaDir, previousTag, currentTag)
     // val communityProjects = CommunityProjects.loadHtmlFromFile()
