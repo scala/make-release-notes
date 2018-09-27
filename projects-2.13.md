@@ -66,9 +66,12 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 #### new M5 tickets
 
+* [kind-projector](https://github.com/non/kind-projector/issues/79)
 * [scalacheck](https://github.com/rickynils/scalacheck/issues/418)
 * [scalatest](https://github.com/scalatest/scalatest/issues/1409)
     * blocked by scalacheck
+* [specs2](https://github.com/etorreborre/specs2/issues/709)
+    * blocked by kind-projector, scalacheck
 * [scala-logging](https://github.com/lightbend/scala-logging/issues/131)
     * blocked by scalatest
 * [cats](https://github.com/typelevel/cats/issues/2389)
