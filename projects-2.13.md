@@ -79,14 +79,14 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [scoverage](https://github.com/scoverage/scalac-scoverage-plugin/issues/234)
     * blocked by scalatest, scala-logging
 * [acyclic](https://github.com/lihaoyi/acyclic/pull/28)
+* [minitest](https://github.com/monix/minitest/issues/23)
+* [scala-parallel-collections](https://github.com/scala/scala-parallel-collections/issues/41)
 
 #### Leftover tickets from M4 cycle
 
-* [scala-parallel-collections](https://github.com/scala/scala-parallel-collections/issues/41)
 * [akka](https://github.com/akka/akka/issues/25105)
 * [scalate](https://github.com/scalate/scalate/issues/133)
 * [scalatra](https://github.com/scalatra/scalatra/issues/831)
-* [minitest](https://github.com/monix/minitest/issues/23)
 * [twitter-util](https://github.com/twitter/util/issues/219)
 * [twirl](https://github.com/playframework/twirl/issues/184)
 
