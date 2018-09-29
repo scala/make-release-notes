@@ -51,6 +51,7 @@ Add in sbt using `addCompilerPlugin(...)`:
 
     "com.typesafe.genjavadoc"          %  "genjavadoc-plugin"          % "0.11"  cross CrossVersion.patch
     "com.lihaoyi"                      %% "acyclic"                    % "0.1.8"
+    "org.spire-math"                   %  "kind-projector"             % "0.9.8" cross CrossVersion.patch
 
 ### sbt plugins
 
@@ -67,16 +68,15 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 #### new M5 tickets
 
-* [kind-projector](https://github.com/non/kind-projector/issues/79)
 * [scalacheck](https://github.com/rickynils/scalacheck/issues/418)
 * [scalatest](https://github.com/scalatest/scalatest/issues/1409)
     * blocked by scalacheck
 * [specs2](https://github.com/etorreborre/specs2/issues/709)
-    * blocked by kind-projector, scalacheck
+    * blocked by scalacheck
 * [scala-logging](https://github.com/lightbend/scala-logging/issues/131)
     * blocked by scalatest
 * [cats](https://github.com/typelevel/cats/issues/2389)
-    * blocked by scalatest, kind-projector, ...?
+    * blocked by scalatest, ...?
 * [scoverage](https://github.com/scoverage/scalac-scoverage-plugin/issues/234)
     * blocked by scalatest, scala-logging
 * [minitest](https://github.com/monix/minitest/issues/23)
