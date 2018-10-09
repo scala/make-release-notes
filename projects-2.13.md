@@ -30,6 +30,7 @@ Add in sbt using `libraryDependencies += ...`:
 
 Add in sbt using `libraryDependencies += ... % "test"`:
 
+    "org.scalacheck"                   %% "scalacheck"                % "1.14.0"  % "test"
     "com.lihaoyi"                      %% "utest"                     % "0.6.6"   % "test"
 
 ### Other libraries
@@ -68,11 +69,8 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 #### new M5 tickets
 
-* [scalacheck](https://github.com/rickynils/scalacheck/issues/418)
 * [scalatest](https://github.com/scalatest/scalatest/issues/1409)
-    * blocked by scalacheck
 * [specs2](https://github.com/etorreborre/specs2/issues/709)
-    * blocked by scalacheck
 * [scala-logging](https://github.com/lightbend/scala-logging/issues/131)
     * blocked by scalatest
 * [cats](https://github.com/typelevel/cats/issues/2389)
@@ -82,7 +80,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [minitest](https://github.com/monix/minitest/issues/23)
 * [scala-parallel-collections](https://github.com/scala/scala-parallel-collections/issues/41)
 * [zinc](https://github.com/sbt/zinc/pull/592)
-    * blocked by scalacheck, scalatest, sbt-io, sbt-util-logging
+    * blocked by scalatest, sbt-io, sbt-util-logging
 
 #### Leftover tickets from M4 cycle
 
