@@ -30,21 +30,23 @@ Add in sbt using `libraryDependencies += ...`:
 
 Add in sbt using `libraryDependencies += ... % "test"`:
 
-    "org.scalacheck"                   %% "scalacheck"                % "1.14.0"  % "test"
-    "com.lihaoyi"                      %% "utest"                     % "0.6.6"   % "test"
+    "org.scalacheck"                   %% "scalacheck"                % "1.14.0"      % "test"
+    "com.lihaoyi"                      %% "utest"                     % "0.6.6"       % "test"
+    "org.scalatest"                    %% "scalatest"                 % "3.0.6-SNAP3" % "test"
+    "com.github.scalaprops"            %% "scalaprops"                % "0.5.5"       % "test"
 
 ### Other libraries
 
 Add in sbt using `libraryDependencies += ...`:
 
     "com.github.nscala-time"           %% "nscala-time"               % "2.20.0"
-    "com.github.scalaprops"            %% "scalaprops"                % "0.5.5"       % "test"
     "com.github.xuwei-k"               %% "msgpack4z-core"            % "0.3.5"
     "com.github.xuwei-k"               %% "zeroapply"                 % "0.2.2"
     "org.scalaz"                       %% "scalaz-core"               % "7.2.26"
     "org.typelevel"                    %% "macro-compat"              % "1.1.1"
     "com.chuusai"                      %% "shapeless"                 % "2.3.3"
     "org.json4s"                       %% "json4s-native"             % "3.6.1"
+    "org.scalactic"                    %% "scalactic"                 % "3.0.6-SNAP3"
 
 ### Compiler plugins
 
@@ -69,10 +71,13 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 #### new M5 tickets
 
+* [scalacheck](https://github.com/rickynils/scalacheck/issues/418)
+    * published for JVM; Scala.js still pending
 * [scalatest](https://github.com/scalatest/scalatest/issues/1409)
+    * published for JVM; Scala.js still pending
 * [specs2](https://github.com/etorreborre/specs2/issues/709)
+    * blocked by scalacheck for Scala.js
 * [scala-logging](https://github.com/lightbend/scala-logging/issues/131)
-    * blocked by scalatest
 * [cats](https://github.com/typelevel/cats/issues/2389)
     * blocked by scalatest, ...?
 * [scoverage](https://github.com/scoverage/scalac-scoverage-plugin/issues/234)
