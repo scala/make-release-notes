@@ -47,6 +47,8 @@ Add in sbt using `libraryDependencies += ...`:
     "com.chuusai"                      %% "shapeless"                 % "2.3.3"
     "org.json4s"                       %% "json4s-native"             % "3.6.1"
     "org.scalactic"                    %% "scalactic"                 % "3.0.6-SNAP3"
+    "com.lightbend"                    %% "emoji"                     % "1.2.1"
+
 
 ### Compiler plugins
 
