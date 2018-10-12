@@ -28,13 +28,13 @@ Add in sbt using `libraryDependencies += ...`:
 
 ### Testing libraries
 
-Add in sbt using `libraryDependencies += ... % "test"`:
+Add in sbt using `libraryDependencies += ... % Test`:
 
-    "org.scalacheck"                   %% "scalacheck"                % "1.14.0"      % "test"
-    "com.lihaoyi"                      %% "utest"                     % "0.6.6"       % "test"
-    "org.scalatest"                    %% "scalatest"                 % "3.0.6-SNAP3" % "test"
-    "com.github.scalaprops"            %% "scalaprops"                % "0.5.5"       % "test"
-    "com.eed3si9n.expecty"             %% "expecty"                   % "0.11.0"      % "test"
+    "org.scalacheck"                   %% "scalacheck"                % "1.14.0"      % Test
+    "com.lihaoyi"                      %% "utest"                     % "0.6.6"       % Test
+    "org.scalatest"                    %% "scalatest"                 % "3.0.6-SNAP3" % Test
+    "com.github.scalaprops"            %% "scalaprops"                % "0.5.5"       % Test
+    "com.eed3si9n.expecty"             %% "expecty"                   % "0.11.0"      % Test
 
 ### Other libraries
 
