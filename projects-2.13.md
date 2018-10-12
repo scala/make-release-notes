@@ -26,7 +26,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.scala-lang.modules"           %% "scala-collection-compat"   % "0.2.0"
     "org.scala-lang.modules"           %% "scala-java8-compat"        % "0.9.0"
 
-### Testing frameworks
+### Testing libraries
 
 Add in sbt using `libraryDependencies += ... % "test"`:
 
@@ -34,6 +34,7 @@ Add in sbt using `libraryDependencies += ... % "test"`:
     "com.lihaoyi"                      %% "utest"                     % "0.6.6"       % "test"
     "org.scalatest"                    %% "scalatest"                 % "3.0.6-SNAP3" % "test"
     "com.github.scalaprops"            %% "scalaprops"                % "0.5.5"       % "test"
+    "com.eed3si9n.expecty"             %% "expecty"                   % "0.11.0"      % "test"
 
 ### Other libraries
 
