@@ -49,7 +49,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.json4s"                       %% "json4s-native"             % "3.6.1"
     "org.scalactic"                    %% "scalactic"                 % "3.0.6-SNAP3"
     "com.lightbend"                    %% "emoji"                     % "1.2.1"
-
+    "ws.unfiltered"                    %% "unfiltered"                % "0.10.0-M2"
 
 ### Compiler plugins
 
