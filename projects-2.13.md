@@ -89,6 +89,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [scala-parallel-collections](https://github.com/scala/scala-parallel-collections/issues/41)
 * [zinc](https://github.com/sbt/zinc/pull/592)
     * blocked by scalatest, sbt-io, sbt-util-logging
+* [spray-json](https://github.com/spray/spray-json/issues/273)
 
 #### Leftover tickets from M4 cycle
 
