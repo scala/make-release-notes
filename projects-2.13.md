@@ -90,6 +90,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [zinc](https://github.com/sbt/zinc/pull/592)
     * blocked by scalatest, sbt-io, sbt-util-logging
 * [spray-json](https://github.com/spray/spray-json/issues/273)
+* [gatling](https://github.com/gatling/gatling/issues/3566)
 
 #### Leftover tickets from M4 cycle
 
