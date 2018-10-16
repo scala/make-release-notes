@@ -91,6 +91,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
     * blocked by scalatest, sbt-io, sbt-util-logging
 * [spray-json](https://github.com/spray/spray-json/issues/273)
 * [gatling](https://github.com/gatling/gatling/issues/3566)
+* [spire](https://github.com/non/spire/issues/742)
 
 #### Leftover tickets from M4 cycle
 
