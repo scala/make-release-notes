@@ -74,12 +74,9 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 #### new M5 tickets
 
-* [scalacheck](https://github.com/rickynils/scalacheck/issues/418)
-    * published for JVM; Scala.js still pending
 * [scalatest](https://github.com/scalatest/scalatest/issues/1409)
     * published for JVM; Scala.js still pending
 * [specs2](https://github.com/etorreborre/specs2/issues/709)
-    * blocked by scalacheck for Scala.js
 * [scala-logging](https://github.com/lightbend/scala-logging/issues/131)
 * [cats](https://github.com/typelevel/cats/issues/2389)
     * blocked by scalatest, ...?
