@@ -85,6 +85,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [simulacrum](https://github.com/mpilquist/simulacrum/issues/114)
 * [cats](https://github.com/typelevel/cats/issues/2389)
     * blocked by scalatest, discipline, machinist, catalysts, simulacrum
+* [enumeratum](https://github.com/lloydmeta/enumeratum/pull/202)
 * [scoverage](https://github.com/scoverage/scalac-scoverage-plugin/issues/234)
     * blocked by scalatest, scala-logging
 * [minitest](https://github.com/monix/minitest/issues/23)
