@@ -51,6 +51,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.lightbend"                    %% "emoji"                     % "1.2.1"
     "ws.unfiltered"                    %% "unfiltered"                % "0.10.0-M2"
     "org.portable-scala"               %% "portable-scala-reflect"    % "0.1.0"
+    "eu.timepit"                       %% "singleton-ops"             % "0.3.1"
 
 ### Compiler plugins
 
