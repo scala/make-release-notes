@@ -1,6 +1,6 @@
 ## Available Projects for Scala 2.13.0-M5
 
-Library maintainers, library users, please [edit this page](https://github.com/scala/make-release-notes/edit/2.13.x/projects-2.13.md) and let the world know what libraries are available.
+nLibrary maintainers, library users, please [edit this page](https://github.com/scala/make-release-notes/edit/2.13.x/projects-2.13.md) and let the world know what libraries are available.
 
 ### Scaladex
 
@@ -50,6 +50,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.scalactic"                    %% "scalactic"                 % "3.0.6-SNAP3"
     "com.lightbend"                    %% "emoji"                     % "1.2.1"
     "ws.unfiltered"                    %% "unfiltered"                % "0.10.0-M2"
+    "org.portable-scala"               %% "portable-scala-reflect"    % "0.1.0"
 
 ### Compiler plugins
 
