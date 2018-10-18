@@ -96,14 +96,15 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [spray-json](https://github.com/spray/spray-json/issues/273)
 * [gatling](https://github.com/gatling/gatling/issues/3566)
 * [spire](https://github.com/non/spire/issues/742)
+* [monocle](https://github.com/julien-truffaut/Monocle/issues/596)
+* [twirl](https://github.com/playframework/twirl/issues/184)
+* [akka](https://github.com/akka/akka/issues/25105)
+* [scalate](https://github.com/scalate/scalate/issues/199)
 
 #### Leftover tickets from M4 cycle
 
-* [akka](https://github.com/akka/akka/issues/25105)
-* [scalate](https://github.com/scalate/scalate/issues/133)
 * [scalatra](https://github.com/scalatra/scalatra/issues/831)
 * [twitter-util](https://github.com/twitter/util/issues/219)
-* [twirl](https://github.com/playframework/twirl/issues/184)
 
 ## Available Projects for Scala 2.13.0-M4
 
