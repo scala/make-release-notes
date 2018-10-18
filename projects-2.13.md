@@ -103,6 +103,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 #### Leftover tickets from M4 cycle
 
+* [scala-stm](https://github.com/scala-stm/scala-stm/pull/5)
 * [scalatra](https://github.com/scalatra/scalatra/issues/831)
 * [twitter-util](https://github.com/twitter/util/issues/219)
 
