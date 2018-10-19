@@ -90,10 +90,12 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [spray-json](https://github.com/spray/spray-json/issues/273)
 * [gatling](https://github.com/gatling/gatling/issues/3566)
 * [spire](https://github.com/non/spire/issues/742)
+    * blocked by machinist, algebra
 * [monocle](https://github.com/julien-truffaut/Monocle/issues/596)
 * [twirl](https://github.com/playframework/twirl/issues/184)
 * [akka](https://github.com/akka/akka/issues/25105)
 * [scalate](https://github.com/scalate/scalate/issues/199)
+* [algebra](https://github.com/typelevel/algebra/issues/219)
 
 #### Leftover tickets from M4 cycle
 
