@@ -28,7 +28,7 @@ Add in sbt using `libraryDependencies += ... % Test`:
     "com.github.scalaprops"            %% "scalaprops"                % "0.5.5"       % Test
     "com.lihaoyi"                      %% "utest"                     % "0.6.6"       % Test
     "org.scalacheck"                   %% "scalacheck"                % "1.14.0"      % Test
-    "org.scalatest"                    %% "scalatest"                 % "3.0.6-SNAP3" % Test
+    "org.scalatest"                    %% "scalatest"                 % "3.0.6-SNAP4" % Test
     "org.specs2"                       %% "specs2-core"               % "4.3.5"       % Test
 
 ### Other libraries
