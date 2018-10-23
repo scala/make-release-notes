@@ -41,6 +41,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.github.xuwei-k"               %% "zeroapply"                 % "0.2.2"
     "com.lightbend"                    %% "emoji"                     % "1.2.1"
     "eu.timepit"                       %% "singleton-ops"             % "0.3.1"
+    "io.spray"                         %% "spray-json"                % "1.3.4"
     "org.json4s"                       %% "json4s-native"             % "3.6.1"
     "org.portable-scala"               %% "portable-scala-reflect"    % "0.1.0"
     "org.scalactic"                    %% "scalactic"                 % "3.0.6-SNAP3"
@@ -87,7 +88,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [scala-parallel-collections](https://github.com/scala/scala-parallel-collections/issues/41)
 * [zinc](https://github.com/sbt/zinc/pull/592)
     * blocked by sbt-io, sbt-util-logging
-* [spray-json](https://github.com/spray/spray-json/issues/273)
 * [gatling](https://github.com/gatling/gatling/issues/3566)
 * [spire](https://github.com/non/spire/issues/742)
     * blocked by machinist, algebra
