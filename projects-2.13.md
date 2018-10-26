@@ -30,6 +30,7 @@ Add in sbt using `libraryDependencies += ... % Test`:
     "org.scalacheck"                   %% "scalacheck"                % "1.14.0"      % Test
     "org.scalatest"                    %% "scalatest"                 % "3.0.6-SNAP4" % Test
     "org.specs2"                       %% "specs2-core"               % "4.3.5"       % Test
+    "org.typelevel"                    %% "discipline"                % "0.10.0"      % Test
 
 ### Other libraries
 
