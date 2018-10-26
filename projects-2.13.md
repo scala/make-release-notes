@@ -50,6 +50,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.typelevel"                    %% "machinist"                 % "0.6.6"
     "org.typelevel"                    %% "macro-compat"              % "1.1.1"
     "ws.unfiltered"                    %% "unfiltered"                % "0.10.0-M2"
+    "com.github.mpilquist"             %% "simulacrum"                % "0.14.0"
 
 ### Compiler plugins
 
@@ -77,9 +78,8 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 * [scala-logging](https://github.com/lightbend/scala-logging/issues/131)
 * [catalysts](https://github.com/typelevel/catalysts/issues/22)
-* [simulacrum](https://github.com/mpilquist/simulacrum/issues/114)
 * [cats](https://github.com/typelevel/cats/issues/2389)
-    * blocked by catalysts, simulacrum
+    * blocked by catalysts
 * [enumeratum](https://github.com/lloydmeta/enumeratum/pull/202)
 * [scoverage](https://github.com/scoverage/scalac-scoverage-plugin/issues/234)
     * blocked by scala-logging
