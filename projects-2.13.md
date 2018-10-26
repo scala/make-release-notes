@@ -51,6 +51,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.typelevel"                    %% "macro-compat"              % "1.1.1"
     "ws.unfiltered"                    %% "unfiltered"                % "0.10.0-M2"
     "com.github.mpilquist"             %% "simulacrum"                % "0.14.0"
+    "com.beachape"                     %% "enumeratum"                % "1.5.13"
 
 ### Compiler plugins
 
@@ -76,11 +77,10 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 #### new M5 tickets
 
-* [scala-logging](https://github.com/lightbend/scala-logging/issues/131)
 * [catalysts](https://github.com/typelevel/catalysts/issues/22)
 * [cats](https://github.com/typelevel/cats/issues/2389)
     * blocked by catalysts
-* [enumeratum](https://github.com/lloydmeta/enumeratum/pull/202)
+* [scala-logging](https://github.com/lightbend/scala-logging/issues/131)
 * [scoverage](https://github.com/scoverage/scalac-scoverage-plugin/issues/234)
     * blocked by scala-logging
 * [minitest](https://github.com/monix/minitest/issues/23)
