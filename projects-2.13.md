@@ -47,6 +47,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.portable-scala"               %% "portable-scala-reflect"    % "0.1.0"
     "org.scalactic"                    %% "scalactic"                 % "3.0.6-SNAP3"
     "org.scalaz"                       %% "scalaz-core"               % "7.2.26"
+    "org.typelevel"                    %% "machinist"                 % "0.6.6"
     "org.typelevel"                    %% "macro-compat"              % "1.1.1"
     "ws.unfiltered"                    %% "unfiltered"                % "0.10.0-M2"
 
@@ -75,11 +76,10 @@ You can subscribe to these tickets to find out when a library you want becomes a
 #### new M5 tickets
 
 * [scala-logging](https://github.com/lightbend/scala-logging/issues/131)
-* [machinist](https://github.com/typelevel/machinist/issues/31)
 * [catalysts](https://github.com/typelevel/catalysts/issues/22)
 * [simulacrum](https://github.com/mpilquist/simulacrum/issues/114)
 * [cats](https://github.com/typelevel/cats/issues/2389)
-    * blocked by machinist, catalysts, simulacrum
+    * blocked by catalysts, simulacrum
 * [enumeratum](https://github.com/lloydmeta/enumeratum/pull/202)
 * [scoverage](https://github.com/scoverage/scalac-scoverage-plugin/issues/234)
     * blocked by scala-logging
@@ -89,7 +89,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
     * blocked by sbt-io, sbt-util-logging
 * [gatling](https://github.com/gatling/gatling/issues/3566)
 * [spire](https://github.com/non/spire/issues/742)
-    * blocked by machinist, algebra
+    * blocked by algebra
 * [monocle](https://github.com/julien-truffaut/Monocle/issues/596)
 * [twirl](https://github.com/playframework/twirl/issues/184)
 * [akka](https://github.com/akka/akka/issues/25105)
