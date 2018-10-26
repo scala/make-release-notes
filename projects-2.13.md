@@ -96,6 +96,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [akka](https://github.com/akka/akka/issues/25105)
 * [scalate](https://github.com/scalate/scalate/issues/199)
 * [algebra](https://github.com/typelevel/algebra/issues/219)
+* [play-doc](https://github.com/playframework/play-doc/issues/41)
 
 #### Leftover tickets from M4 cycle
 
