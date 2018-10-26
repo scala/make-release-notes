@@ -73,8 +73,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 #### new M5 tickets
 
-* [specs2](https://github.com/etorreborre/specs2/issues/709)
-    * published for JVM; Scala.js still pending
 * [scala-logging](https://github.com/lightbend/scala-logging/issues/131)
 * [discipline](https://github.com/typelevel/discipline/issues/65)
 * [machinist](https://github.com/typelevel/machinist/issues/31)
