@@ -75,12 +75,11 @@ You can subscribe to these tickets to find out when a library you want becomes a
 #### new M5 tickets
 
 * [scala-logging](https://github.com/lightbend/scala-logging/issues/131)
-* [discipline](https://github.com/typelevel/discipline/issues/65)
 * [machinist](https://github.com/typelevel/machinist/issues/31)
 * [catalysts](https://github.com/typelevel/catalysts/issues/22)
 * [simulacrum](https://github.com/mpilquist/simulacrum/issues/114)
 * [cats](https://github.com/typelevel/cats/issues/2389)
-    * blocked by discipline, machinist, catalysts, simulacrum
+    * blocked by machinist, catalysts, simulacrum
 * [enumeratum](https://github.com/lloydmeta/enumeratum/pull/202)
 * [scoverage](https://github.com/scoverage/scalac-scoverage-plugin/issues/234)
     * blocked by scala-logging
