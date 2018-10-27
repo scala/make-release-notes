@@ -53,6 +53,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.github.mpilquist"             %% "simulacrum"                % "0.14.0"
     "com.beachape"                     %% "enumeratum"                % "1.5.13"
     "com.github.mpilquist"             %% "simulacrum"                % "0.14.0"
+    "org.scalatra.scalate"             %% "scalate-core"              % "1.9.1-RC1"
 
 ### Compiler plugins
 
@@ -94,7 +95,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [monocle](https://github.com/julien-truffaut/Monocle/issues/596)
 * [twirl](https://github.com/playframework/twirl/issues/184)
 * [akka](https://github.com/akka/akka/issues/25105)
-* [scalate](https://github.com/scalate/scalate/issues/199)
 * [algebra](https://github.com/typelevel/algebra/issues/219)
 * [play-doc](https://github.com/playframework/play-doc/issues/41)
 
