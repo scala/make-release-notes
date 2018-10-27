@@ -52,6 +52,7 @@ Add in sbt using `libraryDependencies += ...`:
     "ws.unfiltered"                    %% "unfiltered"                % "0.10.0-M2"
     "com.github.mpilquist"             %% "simulacrum"                % "0.14.0"
     "com.beachape"                     %% "enumeratum"                % "1.5.13"
+    "com.github.mpilquist"             %% "simulacrum"                % "0.14.0"
 
 ### Compiler plugins
 
