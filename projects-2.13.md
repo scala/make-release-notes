@@ -31,6 +31,7 @@ Add in sbt using `libraryDependencies += ... % Test`:
     "org.scalatest"                    %% "scalatest"                 % "3.0.6-SNAP4" % Test
     "org.specs2"                       %% "specs2-core"               % "4.3.5"       % Test
     "org.typelevel"                    %% "discipline"                % "0.10.0"      % Test
+    "io.monix"                         %% "minitest"                  % "2.2.2"       % Test
 
 ### Other libraries
 
@@ -85,7 +86,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [scala-logging](https://github.com/lightbend/scala-logging/issues/131)
 * [scoverage](https://github.com/scoverage/scalac-scoverage-plugin/issues/234)
     * blocked by scala-logging
-* [minitest](https://github.com/monix/minitest/issues/23)
 * [scala-parallel-collections](https://github.com/scala/scala-parallel-collections/issues/41)
 * [zinc](https://github.com/sbt/zinc/pull/592)
     * blocked by sbt-io, sbt-util-logging
