@@ -55,6 +55,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.beachape"                     %% "enumeratum"                % "1.5.13"
     "com.github.mpilquist"             %% "simulacrum"                % "0.14.0"
     "org.scalatra.scalate"             %% "scalate-core"              % "1.9.1-RC1"
+    "com.typesafe.scala-logging"       %% "scala-logging"             % "3.9.0"
 
 ### Compiler plugins
 
@@ -83,9 +84,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [catalysts](https://github.com/typelevel/catalysts/issues/22)
 * [cats](https://github.com/typelevel/cats/issues/2389)
     * blocked by catalysts
-* [scala-logging](https://github.com/lightbend/scala-logging/issues/131)
 * [scoverage](https://github.com/scoverage/scalac-scoverage-plugin/issues/234)
-    * blocked by scala-logging
 * [scala-parallel-collections](https://github.com/scala/scala-parallel-collections/issues/41)
 * [zinc](https://github.com/sbt/zinc/pull/592)
     * blocked by sbt-io, sbt-util-logging
