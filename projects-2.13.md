@@ -79,7 +79,7 @@ Add using `addSbtPlugin(...)`:
 
 You can subscribe to these tickets to find out when a library you want becomes available:
 
-#### new M5 tickets
+#### New M5 tickets
 
 * [catalysts](https://github.com/typelevel/catalysts/issues/22)
 * [cats](https://github.com/typelevel/cats/issues/2389)
@@ -96,8 +96,9 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [akka](https://github.com/akka/akka/issues/25105)
 * [algebra](https://github.com/typelevel/algebra/issues/219)
 * [play-doc](https://github.com/playframework/play-doc/issues/41)
+* [play-ws](https://github.com/playframework/play-ws/issues/274)
 
-#### Leftover tickets from M4 cycle
+#### Leftover M4 tickets
 
 * [scala-stm](https://github.com/scala-stm/scala-stm/pull/5)
 * [scalatra](https://github.com/scalatra/scalatra/issues/831)
