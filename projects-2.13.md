@@ -74,6 +74,7 @@ Add using `addSbtPlugin(...)`:
     "org.scala-js"                      % "sbt-scalajs"               % "0.6.25"
     "org.scala-js"                      % "sbt-scalajs"               % "1.0.0-M6"
     "org.wartremover"                   % "sbt-wartremover"           % "2.3.5"
+    "org.scoverage"                     % "sbt-scoverage"             % "1.6.0-M5"
 
 ### Pending
 
@@ -108,7 +109,6 @@ Other:
 
 * [gatling](https://github.com/gatling/gatling/issues/3566)
 * [monocle](https://github.com/julien-truffaut/Monocle/issues/596)
-* [scoverage](https://github.com/scoverage/scalac-scoverage-plugin/issues/234)
 
 #### Leftover M4 tickets
 
