@@ -81,22 +81,34 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 #### New M5 tickets
 
-* [catalysts](https://github.com/typelevel/catalysts/issues/22)
-* [cats](https://github.com/typelevel/cats/issues/2389)
-    * blocked by catalysts
-* [scoverage](https://github.com/scoverage/scalac-scoverage-plugin/issues/234)
+Scala & sbt:
+
 * [scala-parallel-collections](https://github.com/scala/scala-parallel-collections/issues/41)
 * [zinc](https://github.com/sbt/zinc/pull/592)
     * blocked by sbt-io, sbt-util-logging
-* [gatling](https://github.com/gatling/gatling/issues/3566)
-* [spire](https://github.com/non/spire/issues/742)
-    * blocked by algebra
-* [monocle](https://github.com/julien-truffaut/Monocle/issues/596)
-* [twirl](https://github.com/playframework/twirl/issues/184)
+
+Lightbend:
+
 * [akka](https://github.com/akka/akka/issues/25105)
-* [algebra](https://github.com/typelevel/algebra/issues/219)
+* [twirl](https://github.com/playframework/twirl/issues/184)
 * [play-doc](https://github.com/playframework/play-doc/issues/41)
 * [play-ws](https://github.com/playframework/play-ws/issues/274)
+* most other projects, including the rest of Play and Lagom, are blocked by Akka for now
+
+Typelevel:
+
+* [catalysts](https://github.com/typelevel/catalysts/issues/22)
+* [cats](https://github.com/typelevel/cats/issues/2389)
+    * blocked by catalysts
+* [spire](https://github.com/non/spire/issues/742)
+    * blocked by algebra
+* [algebra](https://github.com/typelevel/algebra/issues/219)
+
+Other:
+
+* [gatling](https://github.com/gatling/gatling/issues/3566)
+* [monocle](https://github.com/julien-truffaut/Monocle/issues/596)
+* [scoverage](https://github.com/scoverage/scalac-scoverage-plugin/issues/234)
 
 #### Leftover M4 tickets
 
