@@ -56,6 +56,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.github.mpilquist"             %% "simulacrum"                % "0.14.0"
     "org.scalatra.scalate"             %% "scalate-core"              % "1.9.1-RC1"
     "com.typesafe.scala-logging"       %% "scala-logging"             % "3.9.0"
+    "org.wvlet.airframe"               %% "airframe"                  % "0.72"
 
 ### Compiler plugins
 
