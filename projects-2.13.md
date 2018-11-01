@@ -57,6 +57,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.scalatra.scalate"             %% "scalate-core"              % "1.9.1-RC1"
     "com.typesafe.scala-logging"       %% "scala-logging"             % "3.9.0"
     "org.wvlet.airframe"               %% "airframe"                  % "0.72"
+    "org.typelevel"                    %% "catalysts"                 % "0.8"
 
 ### Compiler plugins
 
@@ -99,9 +100,7 @@ Lightbend:
 
 Typelevel:
 
-* [catalysts](https://github.com/typelevel/catalysts/issues/22)
 * [cats](https://github.com/typelevel/cats/issues/2389)
-    * blocked by catalysts
 * [spire](https://github.com/non/spire/issues/742)
     * blocked by algebra
 * [algebra](https://github.com/typelevel/algebra/issues/219)
