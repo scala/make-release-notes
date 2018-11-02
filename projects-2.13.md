@@ -11,6 +11,8 @@ Scaladex, the index of Scala libraries, now offers searching by target version:
 * [Testing frameworks for 2.13.0-M5](https://index.scala-lang.org/search?q=fullScalaVersion%3A2.13.0-M5+AND+topics%3Atesting)
 * [Compiler plugins for 2.13.0-M5](https://index.scala-lang.org/search?q=fullScalaVersion%3A2.13.0-M5+AND+topics%3Acompiler-plugin)
 
+You can also [query Maven Central](https://mvnrepository.com/artifact/org.scala-lang/scala-library/2.13.0-M5/usages) for M5 libraries.
+
 ### Scala modules
 
 Add in sbt using `libraryDependencies += ...`:
