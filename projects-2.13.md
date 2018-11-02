@@ -58,6 +58,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.typesafe.scala-logging"       %% "scala-logging"             % "3.9.0"
     "org.wvlet.airframe"               %% "airframe"                  % "0.72"
     "org.typelevel"                    %% "catalysts"                 % "0.8"
+    "eu.timepit"                       %% "refined"                   % "0.9.3"
 
 ### Compiler plugins
 
