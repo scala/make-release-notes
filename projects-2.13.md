@@ -61,6 +61,8 @@ Add in sbt using `libraryDependencies += ...`:
     "org.wvlet.airframe"               %% "airframe"                  % "0.72"
     "org.typelevel"                    %% "catalysts"                 % "0.8"
     "eu.timepit"                       %% "refined"                   % "0.9.3"
+    "com.typesafe"                     %% "ssl-config-core"           % "0.3.7"
+    "org.typelevel"                    %% "cats-core"                 % "1.5.0-RC1"
 
 ### Compiler plugins
 
@@ -103,10 +105,9 @@ Lightbend:
 
 Typelevel:
 
-* [cats](https://github.com/typelevel/cats/issues/2389)
+* [algebra](https://github.com/typelevel/algebra/issues/219)
 * [spire](https://github.com/non/spire/issues/742)
     * blocked by algebra
-* [algebra](https://github.com/typelevel/algebra/issues/219)
 
 Other:
 
