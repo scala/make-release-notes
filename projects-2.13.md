@@ -82,6 +82,7 @@ Add using `addSbtPlugin(...)`:
     "org.scala-js"                      % "sbt-scalajs"               % "1.0.0-M6"
     "org.wartremover"                   % "sbt-wartremover"           % "2.3.5"
     "org.scoverage"                     % "sbt-scoverage"             % "1.6.0-M5"
+    "com.typesafe.sbt"                  % "sbt-twirl"                 % "1.4.0-RC1"
 
 ### Pending
 
@@ -98,7 +99,6 @@ Scala & sbt:
 Lightbend:
 
 * [akka](https://github.com/akka/akka/issues/25105)
-* [twirl](https://github.com/playframework/twirl/issues/184)
 * [play-doc](https://github.com/playframework/play-doc/issues/41)
 * [play-ws](https://github.com/playframework/play-ws/issues/274)
 * most other projects, including the rest of Play and Lagom, are blocked by Akka for now
