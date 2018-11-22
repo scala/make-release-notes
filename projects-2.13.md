@@ -63,6 +63,7 @@ Add in sbt using `libraryDependencies += ...`:
     "eu.timepit"                       %% "refined"                   % "0.9.3"
     "com.typesafe"                     %% "ssl-config-core"           % "0.3.7"
     "org.typelevel"                    %% "cats-core"                 % "1.5.0-RC1"
+    "com.github.julien-truffaut"       %% "monocle-core"              % "1.6.0-M1"
 
 ### Compiler plugins
 
@@ -112,7 +113,6 @@ Typelevel:
 Other:
 
 * [gatling](https://github.com/gatling/gatling/issues/3566)
-* [monocle](https://github.com/julien-truffaut/Monocle/issues/596)
 
 #### Leftover M4 tickets
 
