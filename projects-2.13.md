@@ -113,6 +113,7 @@ Typelevel:
 Other:
 
 * [gatling](https://github.com/gatling/gatling/issues/3566)
+* [better-monadic-for](https://github.com/oleg-py/better-monadic-for/issues/18)
 
 #### Leftover M4 tickets
 
