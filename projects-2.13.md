@@ -64,6 +64,8 @@ Add in sbt using `libraryDependencies += ...`:
     "com.typesafe"                     %% "ssl-config-core"           % "0.3.7"
     "org.typelevel"                    %% "cats-core"                 % "1.5.0-RC1"
     "com.github.julien-truffaut"       %% "monocle-core"              % "1.6.0-M1"
+    "com.typesafe.play"                %% "play-json"                 % "2.7.0-RC1"
+
 
 ### Compiler plugins
 
