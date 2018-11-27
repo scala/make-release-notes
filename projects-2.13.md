@@ -72,6 +72,7 @@ Add in sbt using `addCompilerPlugin(...)`:
     "com.lihaoyi"                      %% "acyclic"                    % "0.1.8"
     "com.typesafe.genjavadoc"          %  "genjavadoc-plugin"          % "0.11"  cross CrossVersion.patch
     "org.spire-math"                   %  "kind-projector"             % "0.9.8" cross CrossVersion.patch
+    "com.olegpy"                       %% "better-monadic-for"         % "0.3.0-M4"
 
 ### sbt plugins
 
@@ -117,7 +118,6 @@ Typelevel:
 Other:
 
 * [gatling](https://github.com/gatling/gatling/issues/3566)
-* [better-monadic-for](https://github.com/oleg-py/better-monadic-for/issues/18)
 
 #### Leftover M4 tickets
 
