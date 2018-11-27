@@ -110,7 +110,9 @@ Typelevel:
 * [spire](https://github.com/non/spire/issues/742)
     * blocked by algebra
 * [cats-effect](https://github.com/typelevel/cats-effect/issues/66)
+* [jawn](https://github.com/non/jawn/issues/120)
 * [circe](https://github.com/circe/circe/pull/1015)
+    * blocked by jawn
 
 Other:
 
