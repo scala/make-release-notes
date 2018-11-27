@@ -109,6 +109,7 @@ Typelevel:
 * [algebra](https://github.com/typelevel/algebra/issues/219)
 * [spire](https://github.com/non/spire/issues/742)
     * blocked by algebra
+* [cats-effect](https://github.com/typelevel/cats-effect/issues/66)
 
 Other:
 
