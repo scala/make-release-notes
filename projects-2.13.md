@@ -107,7 +107,7 @@ Lightbend:
 * [play-ws](https://github.com/playframework/play-ws/issues/274)
 * most other projects, including the rest of Play and Lagom, are blocked by Akka for now
 
-Typelevel:
+Typelevel and related:
 
 * [algebra](https://github.com/typelevel/algebra/issues/219)
 * [spire](https://github.com/non/spire/issues/742)
@@ -116,6 +116,8 @@ Typelevel:
 * [jawn](https://github.com/non/jawn/issues/120)
 * [circe](https://github.com/circe/circe/pull/1015)
     * blocked by jawn
+* [fs2](https://github.com/functional-streams-for-scala/fs2/issues/1232)
+* [monix](https://github.com/monix/monix/issues/786)
 
 Other:
 
