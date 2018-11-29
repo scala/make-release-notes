@@ -65,7 +65,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.typelevel"                    %% "cats-core"                 % "1.5.0-RC1"
     "com.github.julien-truffaut"       %% "monocle-core"              % "1.6.0-M1"
     "com.typesafe.play"                %% "play-json"                 % "2.7.0-RC1"
-
+    "com.typesafe.play"                %% "play-doc"                  % "2.0.0-RC1"
 
 ### Compiler plugins
 
@@ -103,7 +103,6 @@ Scala & sbt:
 Lightbend:
 
 * [akka](https://github.com/akka/akka/issues/25105)
-* [play-doc](https://github.com/playframework/play-doc/issues/41)
 * [play-ws](https://github.com/playframework/play-ws/issues/274)
 * most other projects, including the rest of Play and Lagom, are blocked by Akka for now
 
