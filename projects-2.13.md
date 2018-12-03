@@ -66,6 +66,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.github.julien-truffaut"       %% "monocle-core"              % "1.6.0-M1"
     "com.typesafe.play"                %% "play-json"                 % "2.7.0-RC1"
     "com.typesafe.play"                %% "play-doc"                  % "2.0.0-RC1"
+    "com.lihaoyi"                      %% "sourcecode"                % "0.1.5"
 
 ### Compiler plugins
 
