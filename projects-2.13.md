@@ -122,6 +122,9 @@ Typelevel and related:
 Other:
 
 * [gatling](https://github.com/gatling/gatling/issues/3566)
+* [scala-java-time](https://github.com/cquiroz/scala-java-time/issues/91)
+* [decline](https://github.com/bkirwi/decline/pull/47))
+    * blocked by scala-java-time
 
 #### Leftover M4 tickets
 
