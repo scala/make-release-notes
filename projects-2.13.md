@@ -68,6 +68,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.typesafe.play"                %% "play-doc"                  % "2.0.0-RC1"
     "com.lihaoyi"                      %% "sourcecode"                % "0.1.5"
     "io.github.cquiroz"                %% "scala-java-time"           % "2.0.0-RC1"
+    "org.scala-stm"                    %% "scala-stm"                 % "0.9"
 
 ### Compiler plugins
 
@@ -106,6 +107,10 @@ Lightbend:
 
 * [akka](https://github.com/akka/akka/issues/25105)
 * [play-ws](https://github.com/playframework/play-ws/issues/274)
+* [cachecontrol](https://github.com/playframework/cachecontrol/pull/29)
+* [omnidoc](https://github.com/playframework/omnidoc/issues/24)
+* [play-iteratees](https://github.com/playframework/play-iteratees/issues/16)
+* [playframework](https://github.com/playframework/playframework/issues/8857)
 * most other projects, including the rest of Play and Lagom, are blocked by Akka for now
 
 Typelevel and related:
@@ -127,7 +132,6 @@ Other:
 
 #### Leftover M4 tickets
 
-* [scala-stm](https://github.com/scala-stm/scala-stm/pull/5)
 * [scalatra](https://github.com/scalatra/scalatra/issues/831)
 * [twitter-util](https://github.com/twitter/util/issues/219)
 
