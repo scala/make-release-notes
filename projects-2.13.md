@@ -67,6 +67,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.typesafe.play"                %% "play-json"                 % "2.7.0-RC1"
     "com.typesafe.play"                %% "play-doc"                  % "2.0.0-RC1"
     "com.lihaoyi"                      %% "sourcecode"                % "0.1.5"
+    "io.github.cquiroz"                %% "scala-java-time"           % "2.0.0-RC1"
 
 ### Compiler plugins
 
@@ -122,9 +123,7 @@ Typelevel and related:
 Other:
 
 * [gatling](https://github.com/gatling/gatling/issues/3566)
-* [scala-java-time](https://github.com/cquiroz/scala-java-time/issues/91)
 * [decline](https://github.com/bkirwi/decline/pull/47))
-    * blocked by scala-java-time
 
 #### Leftover M4 tickets
 
