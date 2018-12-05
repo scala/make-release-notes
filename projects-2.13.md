@@ -128,7 +128,7 @@ Typelevel and related:
 Other:
 
 * [gatling](https://github.com/gatling/gatling/issues/3566)
-* [decline](https://github.com/bkirwi/decline/pull/47))
+* [decline](https://github.com/bkirwi/decline/pull/47)
 
 #### Leftover M4 tickets
 
