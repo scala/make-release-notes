@@ -70,6 +70,7 @@ Add in sbt using `libraryDependencies += ...`:
     "io.github.cquiroz"                %% "scala-java-time"           % "2.0.0-RC1"
     "org.scala-stm"                    %% "scala-stm"                 % "0.9"
     "com.github.pathikrit"             %% "better-files"              % "3.7.0"
+    "org.typelevel"                    %% "cats-effect"               % "1.1.0"
 
 ### Compiler plugins
 
@@ -119,7 +120,6 @@ Typelevel and related:
 * [algebra](https://github.com/typelevel/algebra/issues/219)
 * [spire](https://github.com/non/spire/issues/742)
     * blocked by algebra
-* [cats-effect](https://github.com/typelevel/cats-effect/issues/66)
 * [jawn](https://github.com/non/jawn/issues/120)
 * [circe](https://github.com/circe/circe/pull/1015)
     * blocked by jawn
