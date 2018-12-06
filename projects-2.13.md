@@ -69,6 +69,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.lihaoyi"                      %% "sourcecode"                % "0.1.5"
     "io.github.cquiroz"                %% "scala-java-time"           % "2.0.0-RC1"
     "org.scala-stm"                    %% "scala-stm"                 % "0.9"
+    "com.github.pathikrit"             %% "better-files"              % "3.7.0"
 
 ### Compiler plugins
 
