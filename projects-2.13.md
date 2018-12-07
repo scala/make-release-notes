@@ -105,7 +105,7 @@ Scala & sbt:
 * [zinc](https://github.com/sbt/zinc/pull/592)
     * blocked by sbt-io, sbt-util-logging
 
-Lightbend:
+Lightbend and related:
 
 * [akka](https://github.com/akka/akka/issues/25105)
 * [play-ws](https://github.com/playframework/play-ws/issues/274)
@@ -113,6 +113,7 @@ Lightbend:
 * [omnidoc](https://github.com/playframework/omnidoc/issues/24)
 * [play-iteratees](https://github.com/playframework/play-iteratees/issues/16)
 * [playframework](https://github.com/playframework/playframework/issues/8857)
+* [akka-http-cors](https://github.com/lomigmegard/akka-http-cors/issues/40)
 * most other projects, including the rest of Play and Lagom, are blocked by Akka for now
 
 Typelevel and related:
