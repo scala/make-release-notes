@@ -104,6 +104,7 @@ Scala & sbt:
 * [scala-parallel-collections](https://github.com/scala/scala-parallel-collections/issues/41)
 * [zinc](https://github.com/sbt/zinc/pull/592)
     * blocked by sbt-io, sbt-util-logging
+* [scala-swing](https://github.com/scala/scala-swing/issues/84)
 
 Lightbend and related:
 
