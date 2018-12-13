@@ -132,6 +132,7 @@ Other:
 
 * [gatling](https://github.com/gatling/gatling/issues/3566)
 * [decline](https://github.com/bkirwi/decline/pull/47)
+* [scopt](https://github.com/scopt/scopt/issues/204)
 
 #### Leftover M4 tickets
 
