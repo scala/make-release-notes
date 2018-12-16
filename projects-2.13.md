@@ -71,6 +71,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.scala-stm"                    %% "scala-stm"                 % "0.9"
     "com.github.pathikrit"             %% "better-files"              % "3.7.0"
     "org.typelevel"                    %% "cats-effect"               % "1.1.0"
+    "com.github.scopt"                 %% "scopt"                     % "3.7.1"
 
 ### Compiler plugins
 
@@ -132,7 +133,7 @@ Other:
 
 * [gatling](https://github.com/gatling/gatling/issues/3566)
 * [decline](https://github.com/bkirwi/decline/pull/47)
-* [scopt](https://github.com/scopt/scopt/issues/204)
+* [dispatch](https://github.com/dispatch/reboot/issues/210)
 
 #### Leftover M4 tickets
 
