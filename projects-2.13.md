@@ -74,6 +74,9 @@ Add in sbt using `libraryDependencies += ...`:
     "org.typelevel"                    %% "cats-effect"               % "1.1.0"
     "com.github.scopt"                 %% "scopt"                     % "3.7.1"
     "io.circe"                         %% "circe-core"                % "1.1.0"
+    "com.typesafe.akka"                %% "akka-actor"                % "2.5.19"
+    "com.typesafe.akka"                %% "akka-stream"               % "2.5.19"
+    "com.typesafe.akka"                %% "akka-cluster"              % "2.5.19"
 
 ### Compiler plugins
 
@@ -111,14 +114,14 @@ Scala & sbt:
 
 Lightbend and related:
 
-* [akka](https://github.com/akka/akka/issues/25105)
 * [play-ws](https://github.com/playframework/play-ws/issues/274)
 * [cachecontrol](https://github.com/playframework/cachecontrol/pull/29)
 * [omnidoc](https://github.com/playframework/omnidoc/issues/24)
 * [play-iteratees](https://github.com/playframework/play-iteratees/issues/16)
 * [playframework](https://github.com/playframework/playframework/issues/8857)
+* [akka-http](https://github.com/akka/akka-http/issues/2166)
 * [akka-http-cors](https://github.com/lomigmegard/akka-http-cors/issues/40)
-* most other projects, including the rest of Play and Lagom, are blocked by Akka for now
+* [lagom](https://github.com/lagom/lagom/issues/1240)
 
 Typelevel and related:
 
