@@ -21,6 +21,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.scala-lang.modules"           %% "scala-java8-compat"        % "0.9.0"
     "org.scala-lang.modules"           %% "scala-parser-combinators"  % "1.1.1"
     "org.scala-lang.modules"           %% "scala-xml"                 % "1.1.0"
+    "org.scala-lang.modules"           %% "scala-async"               % "0.9.7"
 
 ### Testing libraries
 
