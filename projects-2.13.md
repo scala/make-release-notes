@@ -80,6 +80,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.typesafe.akka"                %% "akka-stream"               % "2.5.19"
     "com.typesafe.akka"                %% "akka-cluster"              % "2.5.19"
     "org.typelevel"                    %% "jawn-parser"               % "0.14.0"
+    "org.scodec"                       %% "scodec-bits"               % "1.1.7"
 
 ### Compiler plugins
 
