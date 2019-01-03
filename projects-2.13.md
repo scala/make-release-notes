@@ -67,6 +67,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.github.julien-truffaut"       %% "monocle-core"              % "1.6.0-M1"
     "com.typesafe.play"                %% "play-json"                 % "2.7.0-RC1"
     "com.typesafe.play"                %% "play-doc"                  % "2.0.0-RC1"
+    "com.typesafe.play"                %% "cachecontrol"              % "1.1.5"
     "com.lihaoyi"                      %% "sourcecode"                % "0.1.5"
     "io.github.cquiroz"                %% "scala-java-time"           % "2.0.0-RC1"
     "org.scala-stm"                    %% "scala-stm"                 % "0.9"
@@ -115,7 +116,6 @@ Scala & sbt:
 Lightbend and related:
 
 * [play-ws](https://github.com/playframework/play-ws/issues/274)
-* [cachecontrol](https://github.com/playframework/cachecontrol/pull/29)
 * [omnidoc](https://github.com/playframework/omnidoc/issues/24)
 * [play-iteratees](https://github.com/playframework/play-iteratees/issues/16)
 * [playframework](https://github.com/playframework/playframework/issues/8857)
