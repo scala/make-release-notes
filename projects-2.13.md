@@ -22,6 +22,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.scala-lang.modules"           %% "scala-parser-combinators"  % "1.1.1"
     "org.scala-lang.modules"           %% "scala-xml"                 % "1.1.0"
     "org.scala-lang.modules"           %% "scala-async"               % "0.9.7"
+    "org.scala-lang.modules"           %% "scala-swing"               % "2.1.0"
 
 ### Testing libraries
 
@@ -111,7 +112,6 @@ Scala & sbt:
 * [scala-parallel-collections](https://github.com/scala/scala-parallel-collections/issues/41)
 * [zinc](https://github.com/sbt/zinc/pull/592)
     * blocked by sbt-io, sbt-util-logging
-* [scala-swing](https://github.com/scala/scala-swing/issues/84)
 
 Lightbend and related:
 
