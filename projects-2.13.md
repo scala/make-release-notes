@@ -75,7 +75,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.github.pathikrit"             %% "better-files"              % "3.7.0"
     "org.typelevel"                    %% "cats-effect"               % "1.1.0"
     "com.github.scopt"                 %% "scopt"                     % "3.7.1"
-    "io.circe"                         %% "circe-core"                % "1.1.0"
+    "io.circe"                         %% "circe-core"                % "0.11.0"
     "com.typesafe.akka"                %% "akka-actor"                % "2.5.19"
     "com.typesafe.akka"                %% "akka-stream"               % "2.5.19"
     "com.typesafe.akka"                %% "akka-cluster"              % "2.5.19"
