@@ -79,6 +79,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.typesafe.akka"                %% "akka-actor"                % "2.5.19"
     "com.typesafe.akka"                %% "akka-stream"               % "2.5.19"
     "com.typesafe.akka"                %% "akka-cluster"              % "2.5.19"
+    "org.typelevel"                    %% "jawn-parser"               % "0.14.0"
 
 ### Compiler plugins
 
@@ -128,7 +129,6 @@ Typelevel and related:
 * [algebra](https://github.com/typelevel/algebra/issues/219)
 * [spire](https://github.com/non/spire/issues/742)
     * blocked by algebra
-* [jawn](https://github.com/typelevel/jawn/pull/138)
 * [fs2](https://github.com/functional-streams-for-scala/fs2/issues/1232)
 * [monix](https://github.com/monix/monix/issues/786)
 
