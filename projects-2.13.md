@@ -79,6 +79,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.typesafe.akka"                %% "akka-actor"                % "2.5.19"
     "com.typesafe.akka"                %% "akka-stream"               % "2.5.19"
     "com.typesafe.akka"                %% "akka-cluster"              % "2.5.19"
+    "com.typesafe.akka"                %% "akka-http"                 % "10.1.7"
     "org.typelevel"                    %% "jawn-parser"               % "0.14.0"
     "org.scodec"                       %% "scodec-bits"               % "1.1.7"
 
@@ -121,7 +122,6 @@ Lightbend and related:
 * [omnidoc](https://github.com/playframework/omnidoc/issues/24)
 * [play-iteratees](https://github.com/playframework/play-iteratees/issues/16)
 * [playframework](https://github.com/playframework/playframework/issues/8857)
-* [akka-http](https://github.com/akka/akka-http/issues/2166)
 * [akka-http-cors](https://github.com/lomigmegard/akka-http-cors/issues/40)
 * [lagom](https://github.com/lagom/lagom/issues/1240)
 
