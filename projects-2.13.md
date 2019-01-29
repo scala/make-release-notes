@@ -120,6 +120,7 @@ Lightbend and related:
 
 * [play-ws](https://github.com/playframework/play-ws/issues/274)
 * [omnidoc](https://github.com/playframework/omnidoc/issues/24)
+* [play-file-watch](https://github.com/playframework/play-file-watch/issues/27)
 * [play-iteratees](https://github.com/playframework/play-iteratees/issues/16)
 * [playframework](https://github.com/playframework/playframework/issues/8857)
 * [akka-http-cors](https://github.com/lomigmegard/akka-http-cors/issues/40)
