@@ -69,6 +69,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.typesafe.play"                %% "play-json"                 % "2.7.0-RC1"
     "com.typesafe.play"                %% "play-doc"                  % "2.0.0-RC1"
     "com.typesafe.play"                %% "cachecontrol"              % "1.1.5"
+    "com.typesafe.play"                %% "play-ws"                   % "2.0.1"
     "com.lihaoyi"                      %% "sourcecode"                % "0.1.5"
     "io.github.cquiroz"                %% "scala-java-time"           % "2.0.0-RC1"
     "org.scala-stm"                    %% "scala-stm"                 % "0.9"
@@ -119,7 +120,6 @@ Scala & sbt:
 
 Lightbend and related:
 
-* [play-ws](https://github.com/playframework/play-ws/issues/274)
 * [omnidoc](https://github.com/playframework/omnidoc/issues/24)
 * [play-file-watch](https://github.com/playframework/play-file-watch/issues/27)
 * [play-iteratees](https://github.com/playframework/play-iteratees/issues/16)
