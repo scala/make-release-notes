@@ -140,6 +140,8 @@ Other:
 * [gatling](https://github.com/gatling/gatling/issues/3566)
 * [decline](https://github.com/bkirwi/decline/pull/47)
 * [dispatch](https://github.com/dispatch/reboot/issues/210)
+    * blocked by lift-json
+* [lift-json](https://github.com/lift/framework/issues/1955)
 
 #### Leftover M4 tickets
 
