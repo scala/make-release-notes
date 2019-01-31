@@ -76,6 +76,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.scalatra.scalate"             %% "scalate-core"              % "1.9.1-RC1"
     "org.scalaz"                       %% "scalaz-core"               % "7.2.26"
     "org.scodec"                       %% "scodec-bits"               % "1.1.7"
+    "org.typelevel"                    %% "algebra"                   % "1.0.1"
     "org.typelevel"                    %% "catalysts"                 % "0.8"
     "org.typelevel"                    %% "cats-core"                 % "1.5.0-RC1"
     "org.typelevel"                    %% "cats-effect"               % "1.1.0"
@@ -129,9 +130,7 @@ Lightbend and related:
 
 Typelevel and related:
 
-* [algebra](https://github.com/typelevel/algebra/issues/219)
 * [spire](https://github.com/non/spire/issues/742)
-    * blocked by algebra
 * [monix](https://github.com/monix/monix/issues/786)
 
 Other:
