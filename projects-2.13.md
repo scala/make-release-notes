@@ -41,6 +41,7 @@ Add in sbt using `libraryDependencies += ... % Test`:
 
 Add in sbt using `libraryDependencies += ...`:
 
+    "ch.megard"                        %% "akka-http-cors"            % "0.3.4"
     "co.fs2"                           %% "fs2-core"                  % "1.0.3"
     "com.beachape"                     %% "enumeratum"                % "1.5.13"
     "com.chuusai"                      %% "shapeless"                 % "2.3.3"
@@ -125,7 +126,6 @@ Lightbend and related:
 * [play-file-watch](https://github.com/playframework/play-file-watch/issues/27)
 * [play-iteratees](https://github.com/playframework/play-iteratees/issues/16)
 * [playframework](https://github.com/playframework/playframework/issues/8857)
-* [akka-http-cors](https://github.com/lomigmegard/akka-http-cors/issues/40)
 * [lagom](https://github.com/lagom/lagom/issues/1240)
 
 Typelevel and related:
