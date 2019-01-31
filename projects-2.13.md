@@ -82,6 +82,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.typesafe.akka"                %% "akka-http"                 % "10.1.7"
     "org.typelevel"                    %% "jawn-parser"               % "0.14.0"
     "org.scodec"                       %% "scodec-bits"               % "1.1.7"
+    "co.fs2"                           %% "fs2-core"                  % "1.0.3"
 
 ### Compiler plugins
 
@@ -131,7 +132,6 @@ Typelevel and related:
 * [algebra](https://github.com/typelevel/algebra/issues/219)
 * [spire](https://github.com/non/spire/issues/742)
     * blocked by algebra
-* [fs2](https://github.com/functional-streams-for-scala/fs2/issues/1232)
 * [monix](https://github.com/monix/monix/issues/786)
 
 Other:
