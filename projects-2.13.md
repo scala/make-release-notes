@@ -17,12 +17,12 @@ You can also [query Maven Central](https://mvnrepository.com/artifact/org.scala-
 
 Add in sbt using `libraryDependencies += ...`:
 
+    "org.scala-lang.modules"           %% "scala-async"               % "0.9.7"
     "org.scala-lang.modules"           %% "scala-collection-compat"   % "0.2.0"
     "org.scala-lang.modules"           %% "scala-java8-compat"        % "0.9.0"
     "org.scala-lang.modules"           %% "scala-parser-combinators"  % "1.1.1"
-    "org.scala-lang.modules"           %% "scala-xml"                 % "1.1.0"
-    "org.scala-lang.modules"           %% "scala-async"               % "0.9.7"
     "org.scala-lang.modules"           %% "scala-swing"               % "2.1.0"
+    "org.scala-lang.modules"           %% "scala-xml"                 % "1.1.0"
 
 ### Testing libraries
 
@@ -31,68 +31,68 @@ Add in sbt using `libraryDependencies += ... % Test`:
     "com.eed3si9n.expecty"             %% "expecty"                   % "0.11.0"      % Test
     "com.github.scalaprops"            %% "scalaprops"                % "0.5.5"       % Test
     "com.lihaoyi"                      %% "utest"                     % "0.6.6"       % Test
+    "io.monix"                         %% "minitest"                  % "2.2.2"       % Test
     "org.scalacheck"                   %% "scalacheck"                % "1.14.0"      % Test
     "org.scalatest"                    %% "scalatest"                 % "3.0.6-SNAP4" % Test
     "org.specs2"                       %% "specs2-core"               % "4.3.6"       % Test
     "org.typelevel"                    %% "discipline"                % "0.10.0"      % Test
-    "io.monix"                         %% "minitest"                  % "2.2.2"       % Test
 
 ### Other libraries
 
 Add in sbt using `libraryDependencies += ...`:
 
+    "co.fs2"                           %% "fs2-core"                  % "1.0.3"
+    "com.beachape"                     %% "enumeratum"                % "1.5.13"
     "com.chuusai"                      %% "shapeless"                 % "2.3.3"
+    "com.github.julien-truffaut"       %% "monocle-core"              % "1.6.0-M1"
+    "com.github.mpilquist"             %% "simulacrum"                % "0.14.0"
+    "com.github.mpilquist"             %% "simulacrum"                % "0.14.0"
     "com.github.nscala-time"           %% "nscala-time"               % "2.20.0"
+    "com.github.pathikrit"             %% "better-files"              % "3.7.0"
+    "com.github.scopt"                 %% "scopt"                     % "3.7.1"
     "com.github.xuwei-k"               %% "msgpack4z-core"            % "0.3.5"
     "com.github.xuwei-k"               %% "zeroapply"                 % "0.2.2"
     "com.lightbend"                    %% "emoji"                     % "1.2.1"
+    "com.lihaoyi"                      %% "sourcecode"                % "0.1.5"
+    "com.typesafe"                     %% "ssl-config-core"           % "0.3.7"
+    "com.typesafe.akka"                %% "akka-actor"                % "2.5.19"
+    "com.typesafe.akka"                %% "akka-cluster"              % "2.5.19"
+    "com.typesafe.akka"                %% "akka-http"                 % "10.1.7"
+    "com.typesafe.akka"                %% "akka-stream"               % "2.5.19"
+    "com.typesafe.play"                %% "cachecontrol"              % "1.1.5"
+    "com.typesafe.play"                %% "play-doc"                  % "2.0.0-RC1"
+    "com.typesafe.play"                %% "play-json"                 % "2.7.0-RC1"
+    "com.typesafe.play"                %% "play-ws"                   % "2.0.1"
+    "com.typesafe.scala-logging"       %% "scala-logging"             % "3.9.0"
+    "eu.timepit"                       %% "refined"                   % "0.9.3"
     "eu.timepit"                       %% "singleton-ops"             % "0.3.1"
+    "io.circe"                         %% "circe-core"                % "0.11.0"
+    "io.github.cquiroz"                %% "scala-java-time"           % "2.0.0-RC1"
     "io.spray"                         %% "spray-json"                % "1.3.4"
     "org.json4s"                       %% "json4s-native"             % "3.6.1"
     "org.portable-scala"               %% "portable-scala-reflect"    % "0.1.0"
+    "org.scala-stm"                    %% "scala-stm"                 % "0.9"
     "org.scalactic"                    %% "scalactic"                 % "3.0.6-SNAP3"
+    "org.scalatra.scalate"             %% "scalate-core"              % "1.9.1-RC1"
     "org.scalaz"                       %% "scalaz-core"               % "7.2.26"
+    "org.scodec"                       %% "scodec-bits"               % "1.1.7"
+    "org.typelevel"                    %% "catalysts"                 % "0.8"
+    "org.typelevel"                    %% "cats-core"                 % "1.5.0-RC1"
+    "org.typelevel"                    %% "cats-effect"               % "1.1.0"
+    "org.typelevel"                    %% "jawn-parser"               % "0.14.0"
     "org.typelevel"                    %% "machinist"                 % "0.6.6"
     "org.typelevel"                    %% "macro-compat"              % "1.1.1"
-    "ws.unfiltered"                    %% "unfiltered"                % "0.10.0-M2"
-    "com.github.mpilquist"             %% "simulacrum"                % "0.14.0"
-    "com.beachape"                     %% "enumeratum"                % "1.5.13"
-    "com.github.mpilquist"             %% "simulacrum"                % "0.14.0"
-    "org.scalatra.scalate"             %% "scalate-core"              % "1.9.1-RC1"
-    "com.typesafe.scala-logging"       %% "scala-logging"             % "3.9.0"
     "org.wvlet.airframe"               %% "airframe"                  % "0.72"
-    "org.typelevel"                    %% "catalysts"                 % "0.8"
-    "eu.timepit"                       %% "refined"                   % "0.9.3"
-    "com.typesafe"                     %% "ssl-config-core"           % "0.3.7"
-    "org.typelevel"                    %% "cats-core"                 % "1.5.0-RC1"
-    "com.github.julien-truffaut"       %% "monocle-core"              % "1.6.0-M1"
-    "com.typesafe.play"                %% "play-json"                 % "2.7.0-RC1"
-    "com.typesafe.play"                %% "play-doc"                  % "2.0.0-RC1"
-    "com.typesafe.play"                %% "cachecontrol"              % "1.1.5"
-    "com.typesafe.play"                %% "play-ws"                   % "2.0.1"
-    "com.lihaoyi"                      %% "sourcecode"                % "0.1.5"
-    "io.github.cquiroz"                %% "scala-java-time"           % "2.0.0-RC1"
-    "org.scala-stm"                    %% "scala-stm"                 % "0.9"
-    "com.github.pathikrit"             %% "better-files"              % "3.7.0"
-    "org.typelevel"                    %% "cats-effect"               % "1.1.0"
-    "com.github.scopt"                 %% "scopt"                     % "3.7.1"
-    "io.circe"                         %% "circe-core"                % "0.11.0"
-    "com.typesafe.akka"                %% "akka-actor"                % "2.5.19"
-    "com.typesafe.akka"                %% "akka-stream"               % "2.5.19"
-    "com.typesafe.akka"                %% "akka-cluster"              % "2.5.19"
-    "com.typesafe.akka"                %% "akka-http"                 % "10.1.7"
-    "org.typelevel"                    %% "jawn-parser"               % "0.14.0"
-    "org.scodec"                       %% "scodec-bits"               % "1.1.7"
-    "co.fs2"                           %% "fs2-core"                  % "1.0.3"
+    "ws.unfiltered"                    %% "unfiltered"                % "0.10.0-M2"
 
 ### Compiler plugins
 
 Add in sbt using `addCompilerPlugin(...)`:
 
     "com.lihaoyi"                      %% "acyclic"                    % "0.1.8"
+    "com.olegpy"                       %% "better-monadic-for"         % "0.3.0-M4"
     "com.typesafe.genjavadoc"          %  "genjavadoc-plugin"          % "0.11"  cross CrossVersion.patch
     "org.spire-math"                   %  "kind-projector"             % "0.9.8" cross CrossVersion.patch
-    "com.olegpy"                       %% "better-monadic-for"         % "0.3.0-M4"
 
 ### sbt plugins
 
@@ -100,11 +100,11 @@ Most plugins do not need to be re-published for 2.13, but certain plugins did re
 
 Add using `addSbtPlugin(...)`:
 
+    "com.typesafe.sbt"                  % "sbt-twirl"                 % "1.4.0-RC1"
     "org.scala-js"                      % "sbt-scalajs"               % "0.6.25"
     "org.scala-js"                      % "sbt-scalajs"               % "1.0.0-M6"
-    "org.wartremover"                   % "sbt-wartremover"           % "2.3.5"
     "org.scoverage"                     % "sbt-scoverage"             % "1.6.0-M5"
-    "com.typesafe.sbt"                  % "sbt-twirl"                 % "1.4.0-RC1"
+    "org.wartremover"                   % "sbt-wartremover"           % "2.3.5"
 
 ### Pending
 
