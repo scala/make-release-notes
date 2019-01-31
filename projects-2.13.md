@@ -63,6 +63,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.typesafe.play"                %% "cachecontrol"              % "1.1.5"
     "com.typesafe.play"                %% "play-doc"                  % "2.0.0-RC1"
     "com.typesafe.play"                %% "play-json"                 % "2.7.0-RC1"
+    "com.typesafe.play"                %% "play-server"               % "2.7.0"
     "com.typesafe.play"                %% "play-ws"                   % "2.0.1"
     "com.typesafe.scala-logging"       %% "scala-logging"             % "3.9.0"
     "eu.timepit"                       %% "refined"                   % "0.9.3"
@@ -126,7 +127,6 @@ Lightbend and related:
 * [omnidoc](https://github.com/playframework/omnidoc/issues/24)
 * [play-file-watch](https://github.com/playframework/play-file-watch/issues/27)
 * [play-iteratees](https://github.com/playframework/play-iteratees/issues/16)
-* [playframework](https://github.com/playframework/playframework/issues/8857)
 * [lagom](https://github.com/lagom/lagom/issues/1240)
 * [akka-persistence-cassandra](https://github.com/akka/akka-persistence-cassandra/issues/364)
 
