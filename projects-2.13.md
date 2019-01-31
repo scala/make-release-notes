@@ -70,6 +70,7 @@ Add in sbt using `libraryDependencies += ...`:
     "io.circe"                         %% "circe-core"                % "0.11.0"
     "io.github.cquiroz"                %% "scala-java-time"           % "2.0.0-RC1"
     "io.spray"                         %% "spray-json"                % "1.3.4"
+    "nl.grons"                         %% "metrics4-scala"            % "4.0.4"
     "org.json4s"                       %% "json4s-native"             % "3.6.1"
     "org.portable-scala"               %% "portable-scala-reflect"    % "0.1.0"
     "org.scala-stm"                    %% "scala-stm"                 % "0.9"
