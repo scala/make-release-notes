@@ -128,6 +128,7 @@ Lightbend and related:
 * [play-iteratees](https://github.com/playframework/play-iteratees/issues/16)
 * [playframework](https://github.com/playframework/playframework/issues/8857)
 * [lagom](https://github.com/lagom/lagom/issues/1240)
+* [akka-persistence-cassandra](https://github.com/akka/akka-persistence-cassandra/issues/364)
 
 Typelevel and related:
 
