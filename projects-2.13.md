@@ -142,6 +142,7 @@ Other:
 * [dispatch](https://github.com/dispatch/reboot/issues/210)
     * blocked by lift-json
 * [lift-json](https://github.com/lift/framework/issues/1955)
+* [scalariform](https://github.com/scala-ide/scalariform/issues/273)
 
 #### Leftover M4 tickets
 
