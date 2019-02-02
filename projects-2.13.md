@@ -143,6 +143,7 @@ Other:
     * blocked by lift-json
 * [lift-json](https://github.com/lift/framework/issues/1955)
 * [scalariform](https://github.com/scala-ide/scalariform/issues/273)
+* [scalapb](https://github.com/scalapb/ScalaPB/issues/540)
 
 #### Leftover M4 tickets
 
