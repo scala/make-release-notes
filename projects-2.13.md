@@ -97,6 +97,7 @@ Add in sbt using `addCompilerPlugin(...)`:
     "com.olegpy"                       %% "better-monadic-for"         % "0.3.0-M4"
     "com.typesafe.genjavadoc"          %  "genjavadoc-plugin"          % "0.11"  cross CrossVersion.patch
     "org.spire-math"                   %  "kind-projector"             % "0.9.8" cross CrossVersion.patch
+    "com.github.ghik"                  %% "silencer-plugin"            % "1.3.1"
 
 ### sbt plugins
 
