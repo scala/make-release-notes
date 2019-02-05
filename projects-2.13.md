@@ -135,6 +135,9 @@ Typelevel and related:
 
 * [spire](https://github.com/non/spire/issues/742)
 * [monix](https://github.com/monix/monix/issues/786)
+* [http4s](https://github.com/http4s/http4s/issues/2025)
+* [scala-pet-store](https://github.com/pauljamescleary/scala-pet-store/issues/141)
+    * blocked by http4s
 
 Other:
 
