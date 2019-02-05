@@ -120,6 +120,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 Scala & sbt:
 
 * [scala-parallel-collections](https://github.com/scala/scala-parallel-collections/issues/41)
+    * there will be no 2.13.0-M5 release; we will publish for 2.13.0-RC1
 * [zinc](https://github.com/sbt/zinc/pull/592)
     * blocked by sbt-io, sbt-util-logging
 
@@ -136,6 +137,7 @@ Typelevel and related:
 * [spire](https://github.com/non/spire/issues/742)
 * [monix](https://github.com/monix/monix/issues/786)
 * [http4s](https://github.com/http4s/http4s/issues/2025)
+    * blocked by log4s
 * [scala-pet-store](https://github.com/pauljamescleary/scala-pet-store/issues/141)
     * blocked by http4s
 
@@ -148,6 +150,7 @@ Other:
 * [lift-json](https://github.com/lift/framework/issues/1955)
 * [scalariform](https://github.com/scala-ide/scalariform/issues/273)
 * [scalapb](https://github.com/scalapb/ScalaPB/issues/540)
+* [logs4](https://github.com/Log4s/log4s/issues/29)
 
 #### Leftover M4 tickets
 
