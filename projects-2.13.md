@@ -33,7 +33,7 @@ Add in sbt using `libraryDependencies += ... % Test`:
     "com.lihaoyi"                      %% "utest"                     % "0.6.6"       % Test
     "io.monix"                         %% "minitest"                  % "2.2.2"       % Test
     "org.scalacheck"                   %% "scalacheck"                % "1.14.0"      % Test
-    "org.scalatest"                    %% "scalatest"                 % "3.0.6-SNAP4" % Test
+    "org.scalatest"                    %% "scalatest"                 % "3.0.6-SNAP6" % Test
     "org.specs2"                       %% "specs2-core"               % "4.3.6"       % Test
     "org.typelevel"                    %% "discipline"                % "0.10.0"      % Test
 
