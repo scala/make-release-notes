@@ -79,6 +79,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.scalatra.scalate"             %% "scalate-core"              % "1.9.1-RC1"
     "org.scalaz"                       %% "scalaz-core"               % "7.2.26"
     "org.scodec"                       %% "scodec-bits"               % "1.1.7"
+    "org.tpolecat"                     %% "doobie-core"               % "0.7.0-M2"
     "org.typelevel"                    %% "algebra"                   % "1.0.1"
     "org.typelevel"                    %% "catalysts"                 % "0.8"
     "org.typelevel"                    %% "cats-core"                 % "1.5.0-RC1"
@@ -138,8 +139,10 @@ Typelevel and related:
 * [monix](https://github.com/monix/monix/issues/786)
 * [http4s](https://github.com/http4s/http4s/issues/2025)
     * blocked by log4s
+* [tsec](https://github.com/jmcardon/tsec/pull/207)
+* [enumeratum-circe](https://github.com/lloydmeta/enumeratum/issues/216)
 * [scala-pet-store](https://github.com/pauljamescleary/scala-pet-store/issues/141)
-    * blocked by http4s
+    * blocked by http4s, tsec, enumeratum-circe
 
 Other:
 
