@@ -154,6 +154,7 @@ Other:
 * [scalariform](https://github.com/scala-ide/scalariform/issues/273)
 * [scalapb](https://github.com/scalapb/ScalaPB/issues/540)
 * [logs4](https://github.com/Log4s/log4s/issues/29)
+* [testz](https://github.com/scalaz/testz/issues/30)
 
 #### Leftover M4 tickets
 
