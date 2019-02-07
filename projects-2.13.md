@@ -73,6 +73,7 @@ Add in sbt using `libraryDependencies += ...`:
     "io.spray"                         %% "spray-json"                % "1.3.4"
     "nl.grons"                         %% "metrics4-scala"            % "4.0.4"
     "org.json4s"                       %% "json4s-native"             % "3.6.1"
+    "org.log4s"                        %% "log4s"                     % "1.7.0"
     "org.portable-scala"               %% "portable-scala-reflect"    % "0.1.0"
     "org.scala-stm"                    %% "scala-stm"                 % "0.9"
     "org.scalactic"                    %% "scalactic"                 % "3.0.6-SNAP3"
@@ -138,7 +139,6 @@ Typelevel and related:
 * [spire](https://github.com/non/spire/issues/742)
 * [monix](https://github.com/monix/monix/issues/786)
 * [http4s](https://github.com/http4s/http4s/issues/2025)
-    * blocked by log4s
 * [tsec](https://github.com/jmcardon/tsec/pull/207)
 * [enumeratum-circe](https://github.com/lloydmeta/enumeratum/issues/216)
 * [scala-pet-store](https://github.com/pauljamescleary/scala-pet-store/issues/141)
@@ -153,7 +153,6 @@ Other:
 * [lift-json](https://github.com/lift/framework/issues/1955)
 * [scalariform](https://github.com/scala-ide/scalariform/issues/273)
 * [scalapb](https://github.com/scalapb/ScalaPB/issues/540)
-* [logs4](https://github.com/Log4s/log4s/issues/29)
 * [testz](https://github.com/scalaz/testz/issues/30)
 
 #### Leftover M4 tickets
