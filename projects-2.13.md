@@ -77,6 +77,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.portable-scala"               %% "portable-scala-reflect"    % "0.1.0"
     "org.scala-stm"                    %% "scala-stm"                 % "0.9"
     "org.scalactic"                    %% "scalactic"                 % "3.0.6-SNAP3"
+    "org.scalariform"                  %% "scalariform"               % "0.2.7"
     "org.scalatra.scalate"             %% "scalate-core"              % "1.9.1-RC1"
     "org.scalaz"                       %% "scalaz-core"               % "7.2.26"
     "org.scodec"                       %% "scodec-bits"               % "1.1.7"
@@ -151,7 +152,6 @@ Other:
 * [dispatch](https://github.com/dispatch/reboot/issues/210)
     * blocked by lift-json
 * [lift-json](https://github.com/lift/framework/issues/1955)
-* [scalariform](https://github.com/scala-ide/scalariform/issues/273)
 * [scalapb](https://github.com/scalapb/ScalaPB/issues/540)
 * [testz](https://github.com/scalaz/testz/issues/30)
 
