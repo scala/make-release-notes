@@ -86,6 +86,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.typelevel"                    %% "catalysts"                 % "0.8"
     "org.typelevel"                    %% "cats-core"                 % "1.5.0-RC1"
     "org.typelevel"                    %% "cats-effect"               % "1.1.0"
+    "org.typelevel"                    %% "cats-mtl"                  % "0.5.0"
     "org.typelevel"                    %% "jawn-parser"               % "0.14.0"
     "org.typelevel"                    %% "machinist"                 % "0.6.6"
     "org.typelevel"                    %% "macro-compat"              % "1.1.1"
