@@ -132,7 +132,6 @@ Scala & sbt:
 Lightbend and related:
 
 * [omnidoc](https://github.com/playframework/omnidoc/issues/24)
-* [play-file-watch](https://github.com/playframework/play-file-watch/issues/27)
 * [play-iteratees](https://github.com/playframework/play-iteratees/issues/16)
 * [lagom](https://github.com/lagom/lagom/issues/1240)
 * [akka-persistence-cassandra](https://github.com/akka/akka-persistence-cassandra/issues/364)
