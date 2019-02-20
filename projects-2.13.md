@@ -88,6 +88,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.typelevel"                    %% "cats-effect"               % "1.1.0"
     "org.typelevel"                    %% "cats-mtl"                  % "0.5.0"
     "org.typelevel"                    %% "jawn-parser"               % "0.14.0"
+    "org.typelevel"                    %% "kittens"                   % "1.2.1"
     "org.typelevel"                    %% "machinist"                 % "0.6.6"
     "org.typelevel"                    %% "macro-compat"              % "1.1.1"
     "org.wvlet.airframe"               %% "airframe"                  % "0.72"
