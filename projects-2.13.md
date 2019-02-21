@@ -135,6 +135,8 @@ Lightbend and related:
 * [play-iteratees](https://github.com/playframework/play-iteratees/issues/16)
 * [lagom](https://github.com/lagom/lagom/issues/1240)
 * [akka-persistence-cassandra](https://github.com/akka/akka-persistence-cassandra/issues/364)
+* [slick](https://github.com/slick/slick/issues/1958)
+* [alpakka-kafka](https://github.com/akka/alpakka-kafka/issues/540)
 
 Typelevel and related:
 
@@ -155,6 +157,7 @@ Other:
 * [lift-json](https://github.com/lift/framework/issues/1955)
 * [scalapb](https://github.com/scalapb/ScalaPB/issues/540)
 * [testz](https://github.com/scalaz/testz/issues/30)
+* [kafka](https://github.com/apache/kafka/pull/5454)
 
 #### Leftover M4 tickets
 
