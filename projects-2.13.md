@@ -158,6 +158,7 @@ Other:
 * [scalapb](https://github.com/scalapb/ScalaPB/issues/540)
 * [testz](https://github.com/scalaz/testz/issues/30)
 * [kafka](https://github.com/apache/kafka/pull/5454)
+* [mdoc](https://github.com/scalameta/mdoc/issues/156)
 
 #### Leftover M4 tickets
 
