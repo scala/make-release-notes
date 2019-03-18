@@ -45,6 +45,7 @@ Add in sbt using `libraryDependencies += ...`:
     "co.fs2"                           %% "fs2-core"                  % "1.0.3"
     "com.beachape"                     %% "enumeratum"                % "1.5.13"
     "com.chuusai"                      %% "shapeless"                 % "2.3.3"
+    "com.fasterxml.jackson.module"     %% "jackson-module-scala"      % "2.9.8"
     "com.github.julien-truffaut"       %% "monocle-core"              % "1.6.0-M1"
     "com.github.mpilquist"             %% "simulacrum"                % "0.14.0"
     "com.github.mpilquist"             %% "simulacrum"                % "0.14.0"
