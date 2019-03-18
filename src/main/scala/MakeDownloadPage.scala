@@ -84,6 +84,7 @@ release_date: "${format("MMMM dd, yyyy")}"
 show_resources: "true"
 permalink: /download/$version.html
 requirements: "This Scala software distribution can be installed on any Unix-like or Windows system. It requires Java 8 or later, available <a href='http://www.java.com/'>here</a>."
+license: <a href="!SITE_BASE_URL!/license/">Apache License, Version 2.0</a>
 resources: [
   $resources
 ]
