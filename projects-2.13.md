@@ -92,6 +92,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.typelevel"                    %% "kittens"                   % "1.2.1"
     "org.typelevel"                    %% "machinist"                 % "0.6.6"
     "org.typelevel"                    %% "macro-compat"              % "1.1.1"
+    "org.typelevel"                    %% "spire"                     % "0.16.1"
     "org.wvlet.airframe"               %% "airframe"                  % "0.72"
     "ws.unfiltered"                    %% "unfiltered"                % "0.10.0-M2"
 
@@ -141,7 +142,6 @@ Lightbend and related:
 
 Typelevel and related:
 
-* [spire](https://github.com/non/spire/issues/742)
 * [monix](https://github.com/monix/monix/issues/786)
 * [http4s](https://github.com/http4s/http4s/issues/2025)
 * [tsec](https://github.com/jmcardon/tsec/pull/207)
