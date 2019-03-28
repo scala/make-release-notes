@@ -144,6 +144,8 @@ Typelevel and related:
 
 * [monix](https://github.com/monix/monix/issues/786)
 * [http4s](https://github.com/http4s/http4s/issues/2025)
+  * blocked by blaze, scalatags, boopickle
+* [blaze](https://github.com/http4s/blaze/issues/274)
 * [tsec](https://github.com/jmcardon/tsec/pull/207)
 * [enumeratum-circe](https://github.com/lloydmeta/enumeratum/issues/216)
 * [scala-pet-store](https://github.com/pauljamescleary/scala-pet-store/issues/141)
@@ -160,6 +162,8 @@ Other:
 * [testz](https://github.com/scalaz/testz/issues/30)
 * [kafka](https://github.com/apache/kafka/pull/5454)
 * [mdoc](https://github.com/scalameta/mdoc/issues/156)
+* [scalatags](https://github.com/lihaoyi/scalatags/pull/185)
+* [boopickle](https://github.com/suzaku-io/boopickle/issues/113)
 
 #### Leftover M4 tickets
 
