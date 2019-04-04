@@ -51,7 +51,13 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 #### New RC1 tickets
 
-(COMING SOON)
+* [Scala modules](https://github.com/scala/bug/issues/11471)
+* [scalacheck](https://github.com/rickynils/scalacheck/issues/464)
+* [scalatest](https://github.com/scalatest/scalatest/issues/1567)
+   * blocked by scalacheck?
+* [specs2](https://github.com/etorreborre/specs2/issues/735)
+* [claimant](https://github.com/non/claimant/issues/4)
+* [kind-projector](https://github.com/non/kind-projector/issues/99)
 
 #### Old M5/M4 tickets
 
