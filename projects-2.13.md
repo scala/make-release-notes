@@ -1,4 +1,4 @@
-## Available Projects for Scala 2.13.0-RC12
+## Available Projects for Scala 2.13.0-RC1
 
 Library maintainers, library users, please [edit this page](https://github.com/scala/make-release-notes/edit/2.13.x/projects-2.13.md) and let the world know what libraries are available.
 
