@@ -17,7 +17,8 @@ You can also [query Maven Central](https://mvnrepository.com/artifact/org.scala-
 
 Add in sbt using `libraryDependencies += ...`:
 
-    (coming soon)
+    "org.scala-lang.modules"           %% "scala-parallel-collections" % "0.2.0"
+    "org.scala-lang.modules"           %% "scala-xml"                  % "1.2.0"
 
 ### Testing libraries
 
@@ -54,16 +55,15 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 #### New RC1 tickets
 
-* [scala-xml](https://github.com/scala/scala-xml/issues/276)
-* [scala-parallel-collections](https://github.com/scala/scala-parallel-collections/issues/63)
-* [other Scala modules](https://github.com/scala/bug/issues/11471)
+* [remaining Scala modules](https://github.com/scala/bug/issues/11471)
 * [scalacheck](https://github.com/rickynils/scalacheck/issues/464)
   * 1.14.0 is published for JVM only. JS artifact is pending
 * [scalatest](https://github.com/scalatest/scalatest/issues/1567)
-  * blocked by scala-xml
-* [specs2](https://github.com/etorreborre/specs2/issues/735)
-* [claimant](https://github.com/non/claimant/issues/4)
 * [kind-projector](https://github.com/non/kind-projector/issues/99)
+* [shapeless](https://github.com/milessabin/shapeless/issues/886)
+* [specs2](https://github.com/etorreborre/specs2/issues/735)
+  * blocked by scala-parser-combinators, shapeless, kind-projector
+* [claimant](https://github.com/non/claimant/issues/4)
 * [silencer](https://github.com/ghik/silencer/issues/25)
 
 #### Old M5/M4 tickets
