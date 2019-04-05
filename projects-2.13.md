@@ -18,6 +18,7 @@ You can also [query Maven Central](https://mvnrepository.com/artifact/org.scala-
 Add in sbt using `libraryDependencies += ...`:
 
     "org.scala-lang.modules"           %% "scala-parallel-collections" % "0.2.0"
+    "org.scala-lang.modules"           %% "scala-parser-combinators"   % "1.1.2"
     "org.scala-lang.modules"           %% "scala-xml"                  % "1.2.0"
 
 ### Testing libraries
@@ -60,9 +61,8 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [scalatest](https://github.com/scalatest/scalatest/issues/1567)
 * [kind-projector](https://github.com/non/kind-projector/issues/99)
 * [shapeless](https://github.com/milessabin/shapeless/issues/886)
-  * blocked by scala-parser-combinators
 * [specs2](https://github.com/etorreborre/specs2/issues/735)
-  * blocked by scala-parser-combinators, shapeless, kind-projector
+  * blocked by shapeless, kind-projector
 * [claimant](https://github.com/non/claimant/issues/4)
 * [silencer](https://github.com/ghik/silencer/issues/25)
 
