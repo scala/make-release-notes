@@ -30,6 +30,8 @@ Add in sbt using `libraryDependencies += ... % Test`:
 Add in sbt using `libraryDependencies += ...`:
 
     "com.lihaoyi"                      %% "sourcecode"                % "0.1.5"
+    "org.portable-scala"               %% "portable-scala-reflect"    % "0.1.0"
+    "org.scala-js"                     %% "scalajs-stubs"             % "1.0.0-RC1"
 
 ### Compiler plugins
 
@@ -55,6 +57,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [scala-xml](https://github.com/scala/scala-xml/issues/276)
 * [other Scala modules](https://github.com/scala/bug/issues/11471)
 * [scalacheck](https://github.com/rickynils/scalacheck/issues/464)
+  * 1.14.0 is published for JVM only. JS artifact is pending
 * [scalatest](https://github.com/scalatest/scalatest/issues/1567)
   * blocked by scala-xml
 * [specs2](https://github.com/etorreborre/specs2/issues/735)
