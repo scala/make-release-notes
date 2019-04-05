@@ -29,7 +29,7 @@ Add in sbt using `libraryDependencies += ... % Test`:
 
 Add in sbt using `libraryDependencies += ...`:
 
-    (coming soon)
+    "com.lihaoyi"                      %% "sourcecode"                % "0.1.5"
 
 ### Compiler plugins
 
@@ -43,7 +43,8 @@ Most plugins do not need to be re-published for 2.13, but certain plugins did re
 
 Add using `addSbtPlugin(...)`:
 
-    (coming soon)
+    "org.scala-js"                      % "sbt-scalajs"               % "0.6.27"
+    "org.scala-js"                      % "sbt-scalajs"               % "1.0.0-M7"
 
 ### Pending
 
@@ -51,13 +52,15 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 #### New RC1 tickets
 
-* [Scala modules](https://github.com/scala/bug/issues/11471)
+* [scala-xml](https://github.com/scala/scala-xml/issues/276)
+* [other Scala modules](https://github.com/scala/bug/issues/11471)
 * [scalacheck](https://github.com/rickynils/scalacheck/issues/464)
 * [scalatest](https://github.com/scalatest/scalatest/issues/1567)
-   * blocked by scalacheck?
+  * blocked by scala-xml
 * [specs2](https://github.com/etorreborre/specs2/issues/735)
 * [claimant](https://github.com/non/claimant/issues/4)
 * [kind-projector](https://github.com/non/kind-projector/issues/99)
+* [silencer](https://github.com/ghik/silencer/issues/25)
 
 #### Old M5/M4 tickets
 
