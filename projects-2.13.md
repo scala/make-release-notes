@@ -61,6 +61,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [scalatest](https://github.com/scalatest/scalatest/issues/1567)
 * [kind-projector](https://github.com/non/kind-projector/issues/99)
 * [shapeless](https://github.com/milessabin/shapeless/issues/886)
+  * blocked by scala-parser-combinators
 * [specs2](https://github.com/etorreborre/specs2/issues/735)
   * blocked by scala-parser-combinators, shapeless, kind-projector
 * [claimant](https://github.com/non/claimant/issues/4)
