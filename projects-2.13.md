@@ -29,7 +29,7 @@ Add in sbt using `libraryDependencies += ... % Test`:
 
 Add in sbt using `libraryDependencies += ...`:
 
-    "com.lihaoyi"                      %% "sourcecode"                % "0.1.5"
+    "com.lihaoyi"                      %% "sourcecode"                % "0.1.6"
     "org.portable-scala"               %% "portable-scala-reflect"    % "0.1.0"
     "org.scala-js"                     %% "scalajs-stubs"             % "1.0.0-RC1"
 
