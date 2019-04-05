@@ -56,7 +56,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 #### New RC1 tickets
 
-* [scala-parser-combinators](https://github.com/scala/scala-parallel-collections/issues/63)
 * [other Scala modules](https://github.com/scala/bug/issues/11471)
 * [scalatest](https://github.com/scalatest/scalatest/issues/1567)
 * [kind-projector](https://github.com/non/kind-projector/issues/99)
@@ -70,8 +69,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 Scala & sbt:
 
-* [scala-parallel-collections](https://github.com/scala/scala-parallel-collections/issues/41)
-    * there will be no 2.13.0-M5 release; we will publish for 2.13.0-RC1
 * [zinc](https://github.com/sbt/zinc/pull/592)
     * blocked by sbt-io, sbt-util-logging
 
