@@ -55,7 +55,8 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 #### New RC1 tickets
 
-* [remaining Scala modules](https://github.com/scala/bug/issues/11471)
+* [scala-parser-combinators](https://github.com/scala/scala-parallel-collections/issues/63)
+* [other Scala modules](https://github.com/scala/bug/issues/11471)
 * [scalacheck](https://github.com/rickynils/scalacheck/issues/464)
   * 1.14.0 is published for JVM only. JS artifact is pending
 * [scalatest](https://github.com/scalatest/scalatest/issues/1567)
