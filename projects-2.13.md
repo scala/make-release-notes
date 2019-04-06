@@ -32,13 +32,13 @@ Add in sbt using `libraryDependencies += ... % Test`:
 
 Add in sbt using `libraryDependencies += ...`:
 
+    "com.chuusai"                            %% "shapeless"               % "2.3.3"
     "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-core"     % "0.45.0"
     "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-macros"   % "0.45.0"     % Provided
     "com.lihaoyi"                            %% "sourcecode"              % "0.1.6"
     "org.portable-scala"                     %% "portable-scala-reflect"  % "0.1.0"
     "org.scala-js"                           %% "scalajs-stubs"           % "1.0.0-RC1"
     "org.scalaz"                             %% "scalaz-core"             % "7.2.27"
-    "com.chuusai"                            %% "shapeless"               % "2.3.3"
 
 ### Compiler plugins
 
@@ -63,7 +63,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 * [other Scala modules](https://github.com/scala/bug/issues/11471)
 * [specs2](https://github.com/etorreborre/specs2/issues/735)
-  * blocked by shapeless
 * [claimant](https://github.com/non/claimant/issues/4)
 * [silencer](https://github.com/ghik/silencer/issues/25)
 * [genjavadoc](https://github.com/lightbend/genjavadoc/issues/168)
