@@ -26,6 +26,7 @@ Add in sbt using `libraryDependencies += ...`:
 Add in sbt using `libraryDependencies += ... % Test`:
 
     "org.scalacheck"                   %% "scalacheck"                % "1.14.0"      % Test
+    "org.scalatest"                    %% "scalatest"                 % "3.0.8-RC2"   % Test
 
 ### Other libraries
 
@@ -58,7 +59,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 #### New RC1 tickets
 
 * [other Scala modules](https://github.com/scala/bug/issues/11471)
-* [scalatest](https://github.com/scalatest/scalatest/issues/1567)
 * [kind-projector](https://github.com/non/kind-projector/issues/99)
 * [shapeless](https://github.com/milessabin/shapeless/issues/886)
 * [specs2](https://github.com/etorreborre/specs2/issues/735)
