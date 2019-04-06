@@ -38,6 +38,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.portable-scala"                     %% "portable-scala-reflect"  % "0.1.0"
     "org.scala-js"                           %% "scalajs-stubs"           % "1.0.0-RC1"
     "org.scalaz"                             %% "scalaz-core"             % "7.2.27"
+    "com.chuusai"                            %% "shapeless"               % "2.3.3"
 
 ### Compiler plugins
 
@@ -61,7 +62,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 #### New RC1 tickets
 
 * [other Scala modules](https://github.com/scala/bug/issues/11471)
-* [shapeless](https://github.com/milessabin/shapeless/issues/886)
 * [specs2](https://github.com/etorreborre/specs2/issues/735)
   * blocked by shapeless
 * [claimant](https://github.com/non/claimant/issues/4)
