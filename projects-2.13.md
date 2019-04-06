@@ -33,7 +33,7 @@ Add in sbt using `libraryDependencies += ... % Test`:
 Add in sbt using `libraryDependencies += ...`:
 
     "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-core"     % "0.45.0"
-    "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-macros"   % "0.45.0"     % Provided // required only in compile-time
+    "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-macros"   % "0.45.0"     % Provided
     "com.lihaoyi"                            %% "sourcecode"              % "0.1.6"
     "org.portable-scala"                     %% "portable-scala-reflect"  % "0.1.0"
     "org.scala-js"                           %% "scalajs-stubs"           % "1.0.0-RC1"
@@ -43,7 +43,7 @@ Add in sbt using `libraryDependencies += ...`:
 
 Add in sbt using `addCompilerPlugin(...)`:
 
-    (coming soon)
+    "org.spire-math"                   %  "kind-projector"             % "0.9.10" cross CrossVersion.patch
 
 ### sbt plugins
 
@@ -61,10 +61,9 @@ You can subscribe to these tickets to find out when a library you want becomes a
 #### New RC1 tickets
 
 * [other Scala modules](https://github.com/scala/bug/issues/11471)
-* [kind-projector](https://github.com/non/kind-projector/issues/99)
 * [shapeless](https://github.com/milessabin/shapeless/issues/886)
 * [specs2](https://github.com/etorreborre/specs2/issues/735)
-  * blocked by shapeless, kind-projector
+  * blocked by shapeless
 * [claimant](https://github.com/non/claimant/issues/4)
 * [silencer](https://github.com/ghik/silencer/issues/25)
 * [genjavadoc](https://github.com/lightbend/genjavadoc/issues/168)
