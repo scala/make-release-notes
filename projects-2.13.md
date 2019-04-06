@@ -65,6 +65,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
   * blocked by shapeless, kind-projector
 * [claimant](https://github.com/non/claimant/issues/4)
 * [silencer](https://github.com/ghik/silencer/issues/25)
+* [genjavadoc](https://github.com/lightbend/genjavadoc/issues/168)
 
 #### Old M5/M4 tickets
 
