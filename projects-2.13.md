@@ -27,6 +27,7 @@ Add in sbt using `libraryDependencies += ... % Test`:
 
     "org.scalacheck"                   %% "scalacheck"                % "1.14.0"      % Test
     "org.scalatest"                    %% "scalatest"                 % "3.0.8-RC2"   % Test
+    "org.specs2"                       %% "specs2-core"               % "4.5.1"       % Test
     "org.typelevel"                    %% "discipline"                % "0.11.1"
 
 ### Other libraries
@@ -37,7 +38,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-core"     % "0.45.0"
     "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-macros"   % "0.45.0"     % Provided
     "com.lihaoyi"                            %% "sourcecode"              % "0.1.6"
-    "org.portable-scala"                     %% "portable-scala-reflect"   % "0.1.0"
+    "org.portable-scala"                     %% "portable-scala-reflect"  % "0.1.0"
     "org.scala-js"                           %% "scalajs-stubs"           % "1.0.0-RC1"
     "org.scalaz"                             %% "scalaz-core"             % "7.2.27"
     "org.wvlet.airframe"                     %% "airframe"                % "19.4.1"
@@ -65,7 +66,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 #### New RC1 tickets
 
 * [other Scala modules](https://github.com/scala/bug/issues/11471)
-* [specs2](https://github.com/etorreborre/specs2/issues/735)
 * [claimant](https://github.com/non/claimant/issues/4)
 * [silencer](https://github.com/ghik/silencer/issues/25)
 * [genjavadoc](https://github.com/lightbend/genjavadoc/issues/168)
