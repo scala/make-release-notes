@@ -48,7 +48,7 @@ Add in sbt using `libraryDependencies += ...`:
 
 Add in sbt using `addCompilerPlugin(...)`:
 
-    "org.spire-math"                   %  "kind-projector"             % "0.9.10" cross CrossVersion.patch
+    "org.typelevel"             %  "kind-projector"         % "0.10.0"     cross CrossVersion.patch
 
 ### sbt plugins
 
