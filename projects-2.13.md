@@ -39,6 +39,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.portable-scala"                     %% "portable-scala-reflect"  % "0.1.0"
     "org.scala-js"                           %% "scalajs-stubs"           % "1.0.0-RC1"
     "org.scalaz"                             %% "scalaz-core"             % "7.2.27"
+    "org.wvlet.airframe"                     %% "airframe"                % "19.4.1"
 
 ### Compiler plugins
 
