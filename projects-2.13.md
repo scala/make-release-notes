@@ -28,6 +28,7 @@ Add in sbt using `libraryDependencies += ... % Test`:
 
     "com.eed3si9n.expecty"             %% "expecty"                   % "0.11.0"      % Test
     "com.github.scalaprops"            %% "scalaprops"                % "0.6.0"       % Test
+    "com.lihaoyi"                      %% "utest"                     % "0.6.7"       % Test
     "org.mockito"                      %% "mockito-scala"             % "1.3.1"       % Test
     "org.scalacheck"                   %% "scalacheck"                % "1.14.0"      % Test
     "org.scalatest"                    %% "scalatest"                 % "3.0.8-RC2"   % Test
@@ -39,6 +40,7 @@ Add in sbt using `libraryDependencies += ... % Test`:
 Add in sbt using `libraryDependencies += ...`:
 
     "com.chuusai"                            %% "shapeless"               % "2.3.3"
+    "com.github.mpilquist"                   %% "simulacrum"              % "0.16.0"
     "com.github.nscala-time"                 %% "nscala-time"             % "2.22.0"
     "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-core"     % "0.45.0"
     "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-macros"   % "0.45.0"     % Provided
@@ -52,6 +54,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.portable-scala"                     %% "portable-scala-reflect"  % "0.1.0"
     "org.scala-js"                           %% "scalajs-stubs"           % "1.0.0-RC1"
     "org.scalaz"                             %% "scalaz-core"             % "7.2.27"
+    "org.scodec"                             %% "scodec-bits"             % "1.1.10"
     "org.squeryl"                            %% "squeryl"                 % "0.9.13"
     "org.typelevel"                          %% "machinist"               % "0.6.7"
     "org.typelevel"                          %% "macro-compat"            % "1.1.1"
@@ -84,9 +87,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 #### New RC1 tickets
 
 * [claimant](https://github.com/non/claimant/issues/4)
-* [simulacrum](https://github.com/mpilquist/simulacrum/pull/132)
 * [cats](https://github.com/typelevel/cats/issues/2776)
-  * blocked by simulacrum, ...?
 * [akka](https://github.com/akka/akka/issues/26691)
 
 #### Old M5/M4 tickets
