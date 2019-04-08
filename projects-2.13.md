@@ -87,6 +87,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [simulacrum](https://github.com/mpilquist/simulacrum/pull/132)
 * [cats](https://github.com/typelevel/cats/issues/2776)
   * blocked by simulacrum, ...?
+* [akka](https://github.com/akka/akka/issues/26691)
 
 #### Old M5/M4 tickets
 
