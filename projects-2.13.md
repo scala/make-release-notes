@@ -85,6 +85,8 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 * [claimant](https://github.com/non/claimant/issues/4)
 * [simulacrum](https://github.com/mpilquist/simulacrum/pull/132)
+* [cats](https://github.com/typelevel/cats/issues/2776)
+  * blocked by simulacrum, ...?
 
 #### Old M5/M4 tickets
 
