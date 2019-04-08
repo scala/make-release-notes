@@ -60,6 +60,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.typelevel"                          %% "macro-compat"            % "1.1.1"
     "org.wvlet.airframe"                     %% "airframe"                % "19.4.1"
     "ws.unfiltered"                          %% "unfiltered-filter"       % "0.10.0-M3"
+    "org.typelevel"                          %% "export-hook"             % "1.2.0"
 
 ### Compiler plugins
 
