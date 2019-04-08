@@ -82,7 +82,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 #### New RC1 tickets
 
-* [other Scala modules](https://github.com/scala/bug/issues/11471)
 * [claimant](https://github.com/non/claimant/issues/4)
 * [genjavadoc](https://github.com/lightbend/genjavadoc/issues/168)
 * [simulacrum](https://github.com/mpilquist/simulacrum/pull/132)
