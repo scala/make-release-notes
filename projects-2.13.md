@@ -26,44 +26,45 @@ Add in sbt using `libraryDependencies += ...`:
 
 Add in sbt using `libraryDependencies += ... % Test`:
 
+    "com.eed3si9n.expecty"             %% "expecty"                   % "0.11.0"      % Test
+    "com.github.scalaprops"            %% "scalaprops"                % "0.6.0"       % Test
+    "org.mockito"                      %% "mockito-scala"             % "1.3.1"       % Test
     "org.scalacheck"                   %% "scalacheck"                % "1.14.0"      % Test
     "org.scalatest"                    %% "scalatest"                 % "3.0.8-RC2"   % Test
     "org.specs2"                       %% "specs2-core"               % "4.5.1"       % Test
     "org.typelevel"                    %% "discipline"                % "0.11.1"
-    "org.mockito"                      %% "mockito-scala"             % "1.3.1"       % Test
-    "com.github.scalaprops"            %% "scalaprops"                % "0.6.0"       % Test
-    "com.eed3si9n.expecty"             %% "expecty"                   % "0.11.0"      % Test
 
 ### Other libraries
 
 Add in sbt using `libraryDependencies += ...`:
 
     "com.chuusai"                            %% "shapeless"               % "2.3.3"
+    "com.github.nscala-time"                 %% "nscala-time"             % "2.22.0"
     "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-core"     % "0.45.0"
     "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-macros"   % "0.45.0"     % Provided
+    "com.github.scalaprops"                  %% "scalaprops-shapeless"    % "0.3.0"
+    "com.github.xuwei-k"                     %% "msgpack4z-native"        % "0.3.5"
+    "com.github.xuwei-k"                     %% "zeroapply"               % "0.2.2"
     "com.lihaoyi"                            %% "sourcecode"              % "0.1.6"
+    "io.argonaut"                            %% "argonaut"                % "6.2.3"
+    "org.foundweekends"                      %% "knockoff"                % "0.8.11"
+    "org.json4s"                             %% "json4s-native"           % "3.6.5"
     "org.portable-scala"                     %% "portable-scala-reflect"  % "0.1.0"
     "org.scala-js"                           %% "scalajs-stubs"           % "1.0.0-RC1"
     "org.scalaz"                             %% "scalaz-core"             % "7.2.27"
-    "org.wvlet.airframe"                     %% "airframe"                % "19.4.1"
-    "org.typelevel"                          %% "machinist"               % "0.6.7"
-    "com.github.scalaprops"                  %% "scalaprops-shapeless"    % "0.3.0"
-    "com.github.nscala-time"                 %% "nscala-time"             % "2.22.0"
-    "ws.unfiltered"                          %% "unfiltered-filter"       % "0.10.0-M3"
     "org.squeryl"                            %% "squeryl"                 % "0.9.13"
-    "org.json4s"                             %% "json4s-native"           % "3.6.5"
-    "com.github.xuwei-k"                     %% "msgpack4z-native"        % "0.3.5"
-    "com.github.xuwei-k"                     %% "zeroapply"               % "0.2.2"
-    "org.foundweekends"                      %% "knockoff"                % "0.8.11"
-    "io.argonaut"                            %% "argonaut"                % "6.2.3"
+    "org.typelevel"                          %% "machinist"               % "0.6.7"
     "org.typelevel"                          %% "macro-compat"            % "1.1.1"
+    "org.wvlet.airframe"                     %% "airframe"                % "19.4.1"
+    "ws.unfiltered"                          %% "unfiltered-filter"       % "0.10.0-M3"
 
 ### Compiler plugins
 
 Add in sbt using `addCompilerPlugin(...)`:
 
-    "org.typelevel"             %  "kind-projector"         % "0.10.0"     cross CrossVersion.patch
     "com.github.ghik"           %% "silencer-plugin"        % "1.3.3"
+    "com.typesafe.genjavadoc"   %  "genjavadoc-plugin"      % "0.13"     cross CrossVersion.patch
+    "org.typelevel"             %  "kind-projector"         % "0.10.0"   cross CrossVersion.patch
 
 ### sbt plugins
 
@@ -83,7 +84,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 #### New RC1 tickets
 
 * [claimant](https://github.com/non/claimant/issues/4)
-* [genjavadoc](https://github.com/lightbend/genjavadoc/issues/168)
 * [simulacrum](https://github.com/mpilquist/simulacrum/pull/132)
 
 #### Old M5/M4 tickets
