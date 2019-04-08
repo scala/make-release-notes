@@ -1,3 +1,5 @@
-[Scala 2.13.0-M5](https://github.com/scala/scala/releases/tag/v2.13.0-M5) further refines and polishes the new collections API, among other improvements.  As of this milestone, 2.13 is now feature-frozen.
+[Scala 2.13.0-RC1](https://github.com/scala/scala/releases/tag/v2.13.0-RC1) further refines and polishes the new collections API, among other improvements.
 
-For all the details, refer to the [release notes](https://github.com/scala/scala/releases/tag/v2.13.0-M5) on GitHub.
+If no major problems are found in this release candidate, we will re-release it as 2.13.0.  In the meantime, we'll be working primarily on documentation and on helping the ecosystem upgrade.
+
+For details, refer to the [release notes](https://github.com/scala/scala/releases/tag/v2.13.0-RC1) on GitHub.
