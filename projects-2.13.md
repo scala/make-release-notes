@@ -30,6 +30,7 @@ Add in sbt using `libraryDependencies += ... % Test`:
     "org.specs2"                       %% "specs2-core"               % "4.5.1"       % Test
     "org.typelevel"                    %% "discipline"                % "0.11.1"
     "org.mockito"                      %% "mockito-scala"             % "1.3.1"       % Test
+    "com.github.scalaprops"            %% "scalaprops"                % "0.6.0"       % Test
 
 ### Other libraries
 
@@ -44,6 +45,15 @@ Add in sbt using `libraryDependencies += ...`:
     "org.scalaz"                             %% "scalaz-core"             % "7.2.27"
     "org.wvlet.airframe"                     %% "airframe"                % "19.4.1"
     "org.typelevel"                          %% "machinist"               % "0.6.7"
+    "com.github.scalaprops"                  %% "scalaprops-shapeless"    % "0.3.0"
+    "com.github.nscala-time"                 %% "nscala-time"             % "2.22.0"
+    "ws.unfiltered"                          %% "unfiltered-filter"       % "0.10.0-M3"
+    "org.squeryl"                            %% "squeryl"                 % "0.9.13"
+    "org.json4s"                             %% "json4s-native"           % "3.6.5"
+    "com.github.xuwei-k"                     %% "msgpack4z-native"        % "0.3.5"
+    "com.github.xuwei-k"                     %% "zeroapply"               % "0.2.2"
+    "org.foundweekends"                      %% "knockoff"                % "0.8.11"
+    "io.argonaut"                            %% "argonaut"                % "6.2.3"
 
 ### Compiler plugins
 
@@ -59,6 +69,8 @@ Add using `addSbtPlugin(...)`:
 
     "org.scala-js"                      % "sbt-scalajs"               % "0.6.27"
     "org.scala-js"                      % "sbt-scalajs"               % "1.0.0-M7"
+    "org.wartremover"                   % "sbt-wartremover"           % "2.4.1"
+    "org.wartremover"                   % "sbt-wartremover-contrib"   % "1.3.1"
 
 ### Pending
 
