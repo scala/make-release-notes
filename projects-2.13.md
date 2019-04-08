@@ -32,6 +32,7 @@ Add in sbt using `libraryDependencies += ... % Test`:
     "org.typelevel"                    %% "discipline"                % "0.11.1"
     "org.mockito"                      %% "mockito-scala"             % "1.3.1"       % Test
     "com.github.scalaprops"            %% "scalaprops"                % "0.6.0"       % Test
+    "com.eed3si9n.expecty"             %% "expecty"                   % "0.11.0"      % Test
 
 ### Other libraries
 
