@@ -90,6 +90,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [claimant](https://github.com/non/claimant/issues/4)
 * [cats](https://github.com/typelevel/cats/issues/2776)
 * [akka](https://github.com/akka/akka/issues/26691)
+* [sconfig](https://github.com/ekrich/sconfig/issues/25)
 
 #### Old M5/M4 tickets
 
