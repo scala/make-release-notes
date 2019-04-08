@@ -55,6 +55,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.github.xuwei-k"                     %% "zeroapply"               % "0.2.2"
     "org.foundweekends"                      %% "knockoff"                % "0.8.11"
     "io.argonaut"                            %% "argonaut"                % "6.2.3"
+    "org.typelevel"                          %% "macro-compat"            % "1.1.1"
 
 ### Compiler plugins
 
