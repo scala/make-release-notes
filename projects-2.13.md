@@ -17,6 +17,7 @@ You can also [query Maven Central](https://mvnrepository.com/artifact/org.scala-
 
 Add in sbt using `libraryDependencies += ...`:
 
+    "org.scala-lang.modules"           %% "scala-collection-compat"    % "1.0.0"
     "org.scala-lang.modules"           %% "scala-parallel-collections" % "0.2.0"
     "org.scala-lang.modules"           %% "scala-parser-combinators"   % "1.1.2"
     "org.scala-lang.modules"           %% "scala-xml"                  % "1.2.0"
@@ -60,6 +61,7 @@ Add in sbt using `libraryDependencies += ...`:
 Add in sbt using `addCompilerPlugin(...)`:
 
     "org.typelevel"             %  "kind-projector"         % "0.10.0"     cross CrossVersion.patch
+    "com.github.ghik"           %% "silencer-plugin"        % "1.3.3"
 
 ### sbt plugins
 
@@ -80,8 +82,8 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 * [other Scala modules](https://github.com/scala/bug/issues/11471)
 * [claimant](https://github.com/non/claimant/issues/4)
-* [silencer](https://github.com/ghik/silencer/issues/25)
 * [genjavadoc](https://github.com/lightbend/genjavadoc/issues/168)
+* [simulacrum](https://github.com/mpilquist/simulacrum/pull/132)
 
 #### Old M5/M4 tickets
 
