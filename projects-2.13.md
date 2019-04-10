@@ -98,6 +98,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [cats-effect](https://github.com/typelevel/cats-effect/issues/507)
 * [minitest](https://github.com/monix/minitest/pull/35)
 * [catalysts](https://github.com/typelevel/catalysts/issues/27)
+* [better-monadic-for](https://github.com/oleg-py/better-monadic-for/pull/19)
 
 #### Old M5/M4 tickets
 
