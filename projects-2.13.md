@@ -89,8 +89,14 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 * [claimant](https://github.com/non/claimant/issues/4)
 * [cats](https://github.com/typelevel/cats/issues/2776)
+  * blocked by catalysts
 * [akka](https://github.com/akka/akka/issues/26691)
 * [sconfig](https://github.com/ekrich/sconfig/issues/25)
+* [monix](https://github.com/monix/monix/issues/862)
+  * blocked by cats, cats-effect, minitest
+* [cats-effect](https://github.com/typelevel/cats-effect/issues/507)
+* [minitest](https://github.com/monix/minitest/pull/35)
+* [catalysts](https://github.com/typelevel/catalysts/issues/27)
 
 #### Old M5/M4 tickets
 
@@ -110,7 +116,6 @@ Lightbend and related:
 
 Typelevel and related:
 
-* [monix](https://github.com/monix/monix/issues/786)
 * [blaze](https://github.com/http4s/blaze/issues/274)
 * [tsec](https://github.com/jmcardon/tsec/pull/207)
 * [enumeratum-circe](https://github.com/lloydmeta/enumeratum/issues/216)
