@@ -81,6 +81,7 @@ Add using `addSbtPlugin(...)`:
     "org.scala-js"                      % "sbt-scalajs"               % "1.0.0-M7"
     "org.wartremover"                   % "sbt-wartremover"           % "2.4.1"
     "org.wartremover"                   % "sbt-wartremover-contrib"   % "1.3.1"
+    "io.github.davidgregory084"         % "sbt-tpolecat"              % "0.1.6"
 
 ### Pending
 
@@ -99,6 +100,9 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [minitest](https://github.com/monix/minitest/pull/35)
 * [catalysts](https://github.com/typelevel/catalysts/issues/27)
 * [better-monadic-for](https://github.com/oleg-py/better-monadic-for/pull/19)
+* [spray-json](https://github.com/spray/spray-json/pull/294)
+* [TwoTails](https://github.com/wheaties/TwoTails/pull/36)
+* [scala-logging](https://github.com/lightbend/scala-logging/pull/159)
 
 #### Old M5/M4 tickets
 
