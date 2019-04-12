@@ -90,19 +90,23 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 #### New RC1 tickets
 
-* [claimant](https://github.com/non/claimant/issues/4)
-* [cats](https://github.com/typelevel/cats/issues/2776)
-  * blocked by catalysts
-* [akka](https://github.com/akka/akka/issues/26691)
-* [monix](https://github.com/monix/monix/issues/862)
-  * blocked by cats, cats-effect, minitest
-* [cats-effect](https://github.com/typelevel/cats-effect/issues/507)
+* [scala-java8-compat](https://github.com/scala/scala-java8-compat/pull/139)
 * [minitest](https://github.com/monix/minitest/pull/35)
-* [catalysts](https://github.com/typelevel/catalysts/issues/27)
+* [scala-logging](https://github.com/lightbend/scala-logging/pull/159)
 * [better-monadic-for](https://github.com/oleg-py/better-monadic-for/pull/19)
 * [spray-json](https://github.com/spray/spray-json/pull/294)
 * [TwoTails](https://github.com/wheaties/TwoTails/pull/36)
-* [scala-logging](https://github.com/lightbend/scala-logging/pull/159)
+* [catalysts](https://github.com/typelevel/catalysts/issues/27)
+* [akka](https://github.com/akka/akka/issues/26691)
+  * blocked by scala-java8-compat
+* [cats](https://github.com/typelevel/cats/issues/2776)
+  * blocked by catalysts
+* [claimant](https://github.com/non/claimant/issues/4)
+  * blocked by cats
+* [cats-effect](https://github.com/typelevel/cats-effect/issues/507)
+  * blocked by cats
+* [monix](https://github.com/monix/monix/issues/862)
+  * blocked by cats, cats-effect, minitest
 
 #### Old M5/M4 tickets
 
