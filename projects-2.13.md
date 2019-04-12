@@ -50,6 +50,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.github.xuwei-k"                     %% "zeroapply"               % "0.2.2"
     "com.lihaoyi"                            %% "sourcecode"              % "0.1.6"
     "io.argonaut"                            %% "argonaut"                % "6.2.3"
+    "org.ekrich"                             %% "sconfig"                 % "0.7.6"
     "org.foundweekends"                      %% "knockoff"                % "0.8.11"
     "org.json4s"                             %% "json4s-native"           % "3.6.5"
     "org.portable-scala"                     %% "portable-scala-reflect"  % "0.1.0"
@@ -57,11 +58,11 @@ Add in sbt using `libraryDependencies += ...`:
     "org.scalaz"                             %% "scalaz-core"             % "7.2.27"
     "org.scodec"                             %% "scodec-bits"             % "1.1.10"
     "org.squeryl"                            %% "squeryl"                 % "0.9.13"
+    "org.typelevel"                          %% "export-hook"             % "1.2.0"
     "org.typelevel"                          %% "machinist"               % "0.6.7"
     "org.typelevel"                          %% "macro-compat"            % "1.1.1"
     "org.wvlet.airframe"                     %% "airframe"                % "19.4.1"
     "ws.unfiltered"                          %% "unfiltered-filter"       % "0.10.0-M3"
-    "org.typelevel"                          %% "export-hook"             % "1.2.0"
 
 ### Compiler plugins
 
@@ -93,7 +94,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [cats](https://github.com/typelevel/cats/issues/2776)
   * blocked by catalysts
 * [akka](https://github.com/akka/akka/issues/26691)
-* [sconfig](https://github.com/ekrich/sconfig/issues/25)
 * [monix](https://github.com/monix/monix/issues/862)
   * blocked by cats, cats-effect, minitest
 * [cats-effect](https://github.com/typelevel/cats-effect/issues/507)
