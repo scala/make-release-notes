@@ -11,7 +11,7 @@ Scaladex, the index of Scala libraries, now offers searching by target version:
 * [Testing frameworks for 2.13.0-RC1](https://index.scala-lang.org/search?q=fullScalaVersion%3A2.13.0-RC1+AND+topics%3Atesting)
 * [Compiler plugins for 2.13.0-RC1](https://index.scala-lang.org/search?q=fullScalaVersion%3A2.13.0-RC1+AND+topics%3Acompiler-plugin)
 
-You can also [query Maven Central](https://mvnrepository.com/artifact/org.scala-lang/scala-library/2.13.0-RC1/usages) for RC1 libraries.
+You can also query [Maven Central](https://mvnrepository.com/artifact/org.scala-lang/scala-library/2.13.0-RC1/usages) or [Bintray](https://bintray.com/search?query=_2.13.0-RC1) for RC1 libraries.
 
 ### Scala modules
 
@@ -49,6 +49,8 @@ Add in sbt using `libraryDependencies += ...`:
     "com.github.xuwei-k"                     %% "msgpack4z-native"        % "0.3.5"
     "com.github.xuwei-k"                     %% "zeroapply"               % "0.2.2"
     "com.lihaoyi"                            %% "sourcecode"              % "0.1.6"
+    "com.sizmek.fsi"                         %% "fsi-macros"              % "0.5.0"      // Bintray
+    "com.sizmek.rtree2d"                     %% "rtree2d-core"            % "0.8.0"      // Bintray
     "io.argonaut"                            %% "argonaut"                % "6.2.3"
     "org.ekrich"                             %% "sconfig"                 % "0.7.6"
     "org.foundweekends"                      %% "knockoff"                % "0.8.11"
