@@ -85,6 +85,7 @@ Add using `addSbtPlugin(...)`:
     "org.wartremover"                   % "sbt-wartremover"           % "2.4.1"
     "org.wartremover"                   % "sbt-wartremover-contrib"   % "1.3.1"
     "io.github.davidgregory084"         % "sbt-tpolecat"              % "0.1.6"
+    "com.typesafe.sbt"                  % "sbt-twirl"                 % "1.4.1"
 
 ### Pending
 
