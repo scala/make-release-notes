@@ -112,6 +112,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
   * blocked by cats
 * [monix](https://github.com/monix/monix/issues/862)
   * blocked by cats, cats-effect, minitest
+* [jawn](https://github.com/typelevel/jawn/issues/160)
 
 #### Old M5/M4 tickets
 
