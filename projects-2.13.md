@@ -36,6 +36,7 @@ Add in sbt using `libraryDependencies += ... % Test`:
     "org.scalatest"                    %% "scalatest"                 % "3.0.8-RC2"   % Test
     "org.specs2"                       %% "specs2-core"               % "4.5.1"       % Test
     "org.typelevel"                    %% "discipline"                % "0.11.1"
+    "hedgehog"                         https://github.com/hedgehogqa/scala-hedgehog#sbt-binary-dependency // Bintray
 
 ### Other libraries
 
