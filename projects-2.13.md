@@ -47,6 +47,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-core"     % "0.45.0"
     "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-macros"   % "0.45.0"     % Provided
     "com.github.scalaprops"                  %% "scalaprops-shapeless"    % "0.3.0"
+    "com.github.scopt"                       %% "scopt"                   % "3.7.1"
     "com.github.xuwei-k"                     %% "msgpack4z-native"        % "0.3.5"
     "com.github.xuwei-k"                     %% "zeroapply"               % "0.2.2"
     "com.lihaoyi"                            %% "sourcecode"              % "0.1.6"
