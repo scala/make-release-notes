@@ -74,6 +74,7 @@ Add in sbt using `libraryDependencies += ...`:
 Add in sbt using `addCompilerPlugin(...)`:
 
     "com.github.ghik"           %% "silencer-plugin"        % "1.3.3"
+    "com.olegpy"                %% "better-monadic-for"     % "0.3.0"
     "com.typesafe.genjavadoc"   %  "genjavadoc-plugin"      % "0.13"     cross CrossVersion.patch
     "org.typelevel"             %  "kind-projector"         % "0.10.0"   cross CrossVersion.patch
 
@@ -100,14 +101,12 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [scala-java8-compat](https://github.com/scala/scala-java8-compat/pull/139)
 * [minitest](https://github.com/monix/minitest/pull/35)
 * [scala-logging](https://github.com/lightbend/scala-logging/pull/159)
-* [better-monadic-for](https://github.com/oleg-py/better-monadic-for/pull/19)
 * [spray-json](https://github.com/spray/spray-json/pull/294)
 * [TwoTails](https://github.com/wheaties/TwoTails/pull/36)
 * [catalysts](https://github.com/typelevel/catalysts/issues/27)
 * [akka](https://github.com/akka/akka/issues/26691)
   * blocked by scala-java8-compat
 * [cats](https://github.com/typelevel/cats/issues/2776)
-  * blocked by catalysts
 * [claimant](https://github.com/non/claimant/issues/4)
   * blocked by cats
 * [cats-effect](https://github.com/typelevel/cats-effect/issues/507)
@@ -117,6 +116,8 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [jawn](https://github.com/typelevel/jawn/issues/160)
 * [scalac-scoverage-plugin](https://github.com/scoverage/scalac-scoverage-plugin/issues/250)
   * blocked by scala-logging
+* [kafka](https://github.com/apache/kafka/pull/5454)
+  * blocked by scalac-scoverage-plugin, scala-loggin
 
 #### Old M5/M4 tickets
 
