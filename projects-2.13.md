@@ -114,10 +114,13 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [monix](https://github.com/monix/monix/issues/862)
   * blocked by cats, cats-effect, minitest
 * [jawn](https://github.com/typelevel/jawn/issues/160)
+  * blocked by claimant
 * [scalac-scoverage-plugin](https://github.com/scoverage/scalac-scoverage-plugin/issues/250)
   * blocked by scala-logging
 * [kafka](https://github.com/apache/kafka/pull/5454)
   * blocked by scalac-scoverage-plugin, scala-loggin
+* [log4s](https://github.com/Log4s/log4s/pull/32)
+* [blaze](https://github.com/http4s/blaze/pull/280)
 
 #### Old M5/M4 tickets
 
