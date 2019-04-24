@@ -37,6 +37,7 @@ Add in sbt using `libraryDependencies += ... % Test`:
     "org.specs2"                       %% "specs2-core"               % "4.5.1"       % Test
     "org.typelevel"                    %% "discipline"                % "0.11.1"
     "hedgehog"                         https://github.com/hedgehogqa/scala-hedgehog#sbt-binary-dependency // Bintray
+    "io.monix"                         %% "minitest"                  % "2.4.0"       % "test"
 
 ### Other libraries
 
@@ -55,6 +56,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.sizmek.fsi"                         %% "fsi-macros"              % "0.5.0"      // Bintray
     "com.sizmek.rtree2d"                     %% "rtree2d-core"            % "0.8.0"      // Bintray
     "io.argonaut"                            %% "argonaut"                % "6.2.3"
+    "io.spray"                               %% "spray-json"              % "1.3.5"
     "org.ekrich"                             %% "sconfig"                 % "0.7.6"
     "org.foundweekends"                      %% "knockoff"                % "0.8.11"
     "org.json4s"                             %% "json4s-native"           % "3.6.5"
@@ -99,7 +101,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 #### New RC1 tickets
 
 * [scala-java8-compat](https://github.com/scala/scala-java8-compat/pull/139)
-* [minitest](https://github.com/monix/minitest/pull/35)
 * [scala-logging](https://github.com/lightbend/scala-logging/pull/159)
 * [spray-json](https://github.com/spray/spray-json/pull/294)
 * [TwoTails](https://github.com/wheaties/TwoTails/pull/36)
@@ -112,15 +113,17 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [cats-effect](https://github.com/typelevel/cats-effect/issues/507)
   * blocked by cats
 * [monix](https://github.com/monix/monix/issues/862)
-  * blocked by cats, cats-effect, minitest
+  * blocked by cats, cats-effect
 * [jawn](https://github.com/typelevel/jawn/issues/160)
   * blocked by claimant
 * [scalac-scoverage-plugin](https://github.com/scoverage/scalac-scoverage-plugin/issues/250)
   * blocked by scala-logging
 * [kafka](https://github.com/apache/kafka/pull/5454)
-  * blocked by scalac-scoverage-plugin, scala-loggin
+  * blocked by scalac-scoverage-plugin, scala-logging
 * [log4s](https://github.com/Log4s/log4s/pull/32)
 * [blaze](https://github.com/http4s/blaze/pull/280)
+  * blocked by scalac-scoverage-plugin
+* [grizzled-scala](https://github.com/bmc/grizzled-scala/pull/17)
 
 #### Old M5/M4 tickets
 
