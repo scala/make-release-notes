@@ -35,9 +35,10 @@ Add in sbt using `libraryDependencies += ... % Test`:
     "org.scalacheck"                   %% "scalacheck"                % "1.14.0"      % Test
     "org.scalatest"                    %% "scalatest"                 % "3.0.8-RC2"   % Test
     "org.specs2"                       %% "specs2-core"               % "4.5.1"       % Test
-    "org.typelevel"                    %% "discipline"                % "0.11.1"
+    "org.typelevel"                    %% "discipline"                % "0.11.1"      % Test
+    "org.typelevel"                    %% "discipline"                % "0.11.2-M1"   % Test
+    "io.monix"                         %% "minitest"                  % "2.4.0"       % Test
     "hedgehog"                         https://github.com/hedgehogqa/scala-hedgehog#sbt-binary-dependency // Bintray
-    "io.monix"                         %% "minitest"                  % "2.4.0"       % "test"
 
 ### Other libraries
 
@@ -102,7 +103,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 * [scala-java8-compat](https://github.com/scala/scala-java8-compat/pull/139)
 * [scala-logging](https://github.com/lightbend/scala-logging/pull/159)
-* [spray-json](https://github.com/spray/spray-json/pull/294)
 * [TwoTails](https://github.com/wheaties/TwoTails/pull/36)
 * [catalysts](https://github.com/typelevel/catalysts/issues/27)
 * [akka](https://github.com/akka/akka/issues/26691)
