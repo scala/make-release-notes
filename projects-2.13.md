@@ -120,6 +120,8 @@ You can subscribe to these tickets to find out when a library you want becomes a
   * blocked by scala-logging
 * [blaze](https://github.com/http4s/blaze/pull/280)
   * blocked by scalac-scoverage-plugin
+* [metrics-scala](https://github.com/erikvanoosten/metrics-scala/issues/139)
+  * blocked by akka
 * [kafka](https://github.com/apache/kafka/pull/5454)
   * blocked by scalac-scoverage-plugin, scala-logging
 
