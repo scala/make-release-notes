@@ -124,6 +124,8 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [blaze](https://github.com/http4s/blaze/pull/280)
   * blocked by scalac-scoverage-plugin
 * [grizzled-scala](https://github.com/bmc/grizzled-scala/pull/17)
+* [metrics-scala](https://github.com/erikvanoosten/metrics-scala/issues/139)
+  * blocked by akka
 
 #### Old M5/M4 tickets
 
