@@ -66,6 +66,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.scalaz"                             %% "scalaz-core"             % "7.2.27"
     "org.scodec"                             %% "scodec-bits"             % "1.1.10"
     "org.squeryl"                            %% "squeryl"                 % "0.9.13"
+    "org.typelevel"                          %% "cats-core"               % "2.0.0-M1""
     "org.typelevel"                          %% "export-hook"             % "1.2.0"
     "org.typelevel"                          %% "machinist"               % "0.6.7"
     "org.typelevel"                          %% "macro-compat"            % "1.1.1"
@@ -105,27 +106,24 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [scala-logging](https://github.com/lightbend/scala-logging/pull/159)
 * [TwoTails](https://github.com/wheaties/TwoTails/pull/36)
 * [catalysts](https://github.com/typelevel/catalysts/issues/27)
+* [claimant](https://github.com/non/claimant/issues/4)
+* [cats-effect](https://github.com/typelevel/cats-effect/issues/507)
+* [log4s](https://github.com/Log4s/log4s/pull/32)
+* [grizzled-scala](https://github.com/bmc/grizzled-scala/pull/17)
 * [akka](https://github.com/akka/akka/issues/26691)
   * blocked by scala-java8-compat
-* [cats](https://github.com/typelevel/cats/issues/2776)
-* [claimant](https://github.com/non/claimant/issues/4)
-  * blocked by cats
-* [cats-effect](https://github.com/typelevel/cats-effect/issues/507)
-  * blocked by cats
 * [monix](https://github.com/monix/monix/issues/862)
-  * blocked by cats, cats-effect
+  * blocked by cats-effect
 * [jawn](https://github.com/typelevel/jawn/issues/160)
   * blocked by claimant
 * [scalac-scoverage-plugin](https://github.com/scoverage/scalac-scoverage-plugin/issues/250)
   * blocked by scala-logging
-* [kafka](https://github.com/apache/kafka/pull/5454)
-  * blocked by scalac-scoverage-plugin, scala-logging
-* [log4s](https://github.com/Log4s/log4s/pull/32)
 * [blaze](https://github.com/http4s/blaze/pull/280)
   * blocked by scalac-scoverage-plugin
-* [grizzled-scala](https://github.com/bmc/grizzled-scala/pull/17)
 * [metrics-scala](https://github.com/erikvanoosten/metrics-scala/issues/139)
   * blocked by akka
+* [kafka](https://github.com/apache/kafka/pull/5454)
+  * blocked by scalac-scoverage-plugin, scala-logging
 
 #### Old M5/M4 tickets
 
