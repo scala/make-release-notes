@@ -127,6 +127,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
   * blocked by scalac-scoverage-plugin, scala-logging
 * [scalamock](https://github.com/paulbutcher/ScalaMock/pull/257)
 * [pascal](https://github.com/TomasMikula/pascal/pull/6)
+* [scallop](https://github.com/scallop/scallop/pull/184)
 
 #### Old M5/M4 tickets
 
