@@ -56,6 +56,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.lihaoyi"                            %% "sourcecode"              % "0.1.6"
     "com.sizmek.fsi"                         %% "fsi-macros"              % "0.5.0"      // Bintray
     "com.sizmek.rtree2d"                     %% "rtree2d-core"            % "0.8.0"      // Bintray
+    "com.typesafe.play"                      %% "cachecontrol"            % "1.1.6"
     "io.argonaut"                            %% "argonaut"                % "6.2.3"
     "io.spray"                               %% "spray-json"              % "1.3.5"
     "org.ekrich"                             %% "sconfig"                 % "0.7.6"
@@ -124,6 +125,9 @@ You can subscribe to these tickets to find out when a library you want becomes a
   * blocked by akka
 * [kafka](https://github.com/apache/kafka/pull/5454)
   * blocked by scalac-scoverage-plugin, scala-logging
+* [scalamock](https://github.com/paulbutcher/ScalaMock/pull/257)
+* [pascal](https://github.com/TomasMikula/pascal/pull/6)
+* [scallop](https://github.com/scallop/scallop/pull/184)
 
 #### Old M5/M4 tickets
 
