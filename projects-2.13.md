@@ -63,12 +63,15 @@ Add in sbt using `libraryDependencies += ...`:
     "org.foundweekends"                      %% "knockoff"                % "0.8.11"
     "org.json4s"                             %% "json4s-native"           % "3.6.5"
     "org.portable-scala"                     %% "portable-scala-reflect"  % "0.1.0"
+    "org.rogach"                             %% "scallop"                 % "3.2.0"
     "org.scala-js"                           %% "scalajs-stubs"           % "1.0.0-RC1"
     "org.scalaz"                             %% "scalaz-core"             % "7.2.27"
     "org.scodec"                             %% "scodec-bits"             % "1.1.10"
     "org.squeryl"                            %% "squeryl"                 % "0.9.13"
-    "org.typelevel"                          %% "cats-core"               % "2.0.0-M1""
+    "org.typelevel"                          %% "cats-core"               % "2.0.0-M1"
+    "org.typelevel"                          %% "claimant"                % "0.1.0"
     "org.typelevel"                          %% "export-hook"             % "1.2.0"
+    "org.typelevel"                          %% "jawn-parser"             % "0.14.2"
     "org.typelevel"                          %% "machinist"               % "0.6.7"
     "org.typelevel"                          %% "macro-compat"            % "1.1.1"
     "org.wvlet.airframe"                     %% "airframe"                % "19.4.1"
@@ -107,7 +110,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [scala-logging](https://github.com/lightbend/scala-logging/pull/159)
 * [TwoTails](https://github.com/wheaties/TwoTails/pull/36)
 * [catalysts](https://github.com/typelevel/catalysts/issues/27)
-* [claimant](https://github.com/non/claimant/issues/4)
 * [cats-effect](https://github.com/typelevel/cats-effect/issues/507)
 * [log4s](https://github.com/Log4s/log4s/pull/32)
 * [grizzled-scala](https://github.com/bmc/grizzled-scala/pull/17)
@@ -115,8 +117,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
   * blocked by scala-java8-compat
 * [monix](https://github.com/monix/monix/issues/862)
   * blocked by cats-effect
-* [jawn](https://github.com/typelevel/jawn/issues/160)
-  * blocked by claimant
 * [scalac-scoverage-plugin](https://github.com/scoverage/scalac-scoverage-plugin/issues/250)
   * blocked by scala-logging
 * [blaze](https://github.com/http4s/blaze/pull/280)
@@ -127,7 +127,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
   * blocked by scalac-scoverage-plugin, scala-logging
 * [scalamock](https://github.com/paulbutcher/ScalaMock/pull/257)
 * [pascal](https://github.com/TomasMikula/pascal/pull/6)
-* [scallop](https://github.com/scallop/scallop/pull/184)
 
 #### Old M5/M4 tickets
 
