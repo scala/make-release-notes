@@ -99,6 +99,7 @@ Add using `addSbtPlugin(...)`:
     "io.github.davidgregory084"         % "sbt-tpolecat"              % "0.1.6"
     "com.typesafe.sbt"                  % "sbt-twirl"                 % "1.4.1"
     "org.tpolecat"                      % "tut-plugin"                % "0.6.11"
+    "org.scoverage"                     % "sbt-scoverage"             % "1.6.0-RC1"
 
 ### Pending
 
@@ -117,8 +118,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
   * blocked by scala-java8-compat
 * [monix](https://github.com/monix/monix/issues/862)
   * blocked by cats-effect
-* [scalac-scoverage-plugin](https://github.com/scoverage/scalac-scoverage-plugin/issues/250)
-  * blocked by scala-logging
 * [blaze](https://github.com/http4s/blaze/pull/280)
   * blocked by scalac-scoverage-plugin
 * [metrics-scala](https://github.com/erikvanoosten/metrics-scala/issues/139)
