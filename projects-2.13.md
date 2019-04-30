@@ -45,6 +45,7 @@ Add in sbt using `libraryDependencies += ... % Test`:
 
 Add in sbt using `libraryDependencies += ...`:
 
+    "co.blocke"                              %% "scalajack"               % "6.0.1"      // Bintray
     "com.chuusai"                            %% "shapeless"               % "2.3.3"
     "com.github.mpilquist"                   %% "simulacrum"              % "0.16.0"
     "com.github.nscala-time"                 %% "nscala-time"             % "2.22.0"
@@ -83,6 +84,7 @@ Add in sbt using `libraryDependencies += ...`:
 Add in sbt using `addCompilerPlugin(...)`:
 
     "com.github.ghik"           %% "silencer-plugin"        % "1.3.3"
+    "com.github.tomasmikula"    %% "pascal"                 % "0.3.2"
     "com.olegpy"                %% "better-monadic-for"     % "0.3.0"
     "com.typesafe.genjavadoc"   %  "genjavadoc-plugin"      % "0.13"     cross CrossVersion.patch
     "org.typelevel"             %  "kind-projector"         % "0.10.0"   cross CrossVersion.patch
@@ -124,7 +126,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [kafka](https://github.com/apache/kafka/pull/5454)
   * blocked by scalac-scoverage-plugin, scala-logging
 * [scalamock](https://github.com/paulbutcher/ScalaMock/pull/257)
-* [pascal](https://github.com/TomasMikula/pascal/pull/6)
+* [ficus](https://github.com/iheartradio/ficus/pull/69)
 
 #### Old M5/M4 tickets
 
