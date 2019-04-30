@@ -108,7 +108,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 #### New RC1 tickets
 
-* [scala-java8-compat](https://github.com/scala/scala-java8-compat/pull/139)
 * [scala-logging](https://github.com/lightbend/scala-logging/pull/159)
 * [TwoTails](https://github.com/wheaties/TwoTails/pull/36)
 * [catalysts](https://github.com/typelevel/catalysts/issues/27)
@@ -116,7 +115,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [log4s](https://github.com/Log4s/log4s/pull/32)
 * [grizzled-scala](https://github.com/bmc/grizzled-scala/pull/17)
 * [akka](https://github.com/akka/akka/issues/26691)
-  * blocked by scala-java8-compat
 * [monix](https://github.com/monix/monix/issues/862)
   * blocked by cats-effect
 * [blaze](https://github.com/http4s/blaze/pull/280)
