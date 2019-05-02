@@ -58,8 +58,12 @@ Add in sbt using `libraryDependencies += ...`:
     "com.lihaoyi"                            %% "sourcecode"              % "0.1.6"
     "com.sizmek.fsi"                         %% "fsi-macros"              % "0.5.0"      // Bintray
     "com.sizmek.rtree2d"                     %% "rtree2d-core"            % "0.8.0"      // Bintray
+    "com.typesafe.akka"                      %% "akka-actor"              % "2.5.22"
+    "com.typesafe.akka"                      %% "akka-cluster"            % "2.5.22"
+    "com.typesafe.akka"                      %% "akka-stream"             % "2.5.22"
     "com.typesafe.play"                      %% "cachecontrol"            % "1.1.6"
     "io.argonaut"                            %% "argonaut"                % "6.2.3"
+    "io.circe"                               %% "circe-core"              % "0.12.0-M1"
     "io.spray"                               %% "spray-json"              % "1.3.5"
     "org.ekrich"                             %% "sconfig"                 % "0.7.6"
     "org.foundweekends"                      %% "knockoff"                % "0.8.11"
@@ -71,6 +75,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.scodec"                             %% "scodec-bits"             % "1.1.10"
     "org.squeryl"                            %% "squeryl"                 % "0.9.13"
     "org.typelevel"                          %% "cats-core"               % "2.0.0-M1"
+    "org.typelevel"                          %% "cats-effect"             % "2.0.0-M1"
     "org.typelevel"                          %% "claimant"                % "0.1.0"
     "org.typelevel"                          %% "export-hook"             % "1.2.0"
     "org.typelevel"                          %% "jawn-parser"             % "0.14.2"
@@ -113,12 +118,10 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [scala-logging](https://github.com/lightbend/scala-logging/pull/159)
 * [TwoTails](https://github.com/wheaties/TwoTails/pull/36)
 * [catalysts](https://github.com/typelevel/catalysts/issues/27)
-* [cats-effect](https://github.com/typelevel/cats-effect/issues/507)
 * [log4s](https://github.com/Log4s/log4s/pull/32)
 * [grizzled-scala](https://github.com/bmc/grizzled-scala/pull/17)
-* [akka](https://github.com/akka/akka/issues/26691)
+* [akka-http](https://github.com/akka/akka-http/issues/2515)
 * [monix](https://github.com/monix/monix/issues/862)
-  * blocked by cats-effect
 * [blaze](https://github.com/http4s/blaze/pull/280)
   * blocked by scalac-scoverage-plugin
 * [metrics-scala](https://github.com/erikvanoosten/metrics-scala/issues/139)
@@ -141,7 +144,6 @@ Lightbend and related:
 * [play-iteratees](https://github.com/playframework/play-iteratees/issues/16)
 * [lagom](https://github.com/lagom/lagom/issues/1240)
 * [akka-persistence-cassandra](https://github.com/akka/akka-persistence-cassandra/issues/364)
-* [slick](https://github.com/slick/slick/issues/1958)
 * [alpakka-kafka](https://github.com/akka/alpakka-kafka/issues/540)
 
 Typelevel and related:
