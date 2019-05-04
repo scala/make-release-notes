@@ -65,6 +65,7 @@ Add in sbt using `libraryDependencies += ...`:
     "io.argonaut"                            %% "argonaut"                % "6.2.3"
     "io.circe"                               %% "circe-core"              % "0.12.0-M1"
     "io.spray"                               %% "spray-json"              % "1.3.5"
+    "nl.grons"                               %% "metrics4-scala"          % "4.0.5"
     "org.ekrich"                             %% "sconfig"                 % "0.7.6"
     "org.foundweekends"                      %% "knockoff"                % "0.8.11"
     "org.json4s"                             %% "json4s-native"           % "3.6.5"
@@ -125,8 +126,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [monix](https://github.com/monix/monix/issues/862)
 * [blaze](https://github.com/http4s/blaze/pull/280)
   * blocked by scalac-scoverage-plugin
-* [metrics-scala](https://github.com/erikvanoosten/metrics-scala/issues/139)
-  * blocked by akka
 * [kafka](https://github.com/apache/kafka/pull/5454)
   * blocked by scalac-scoverage-plugin, scala-logging
 * [scalamock](https://github.com/paulbutcher/ScalaMock/pull/257)
