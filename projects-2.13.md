@@ -130,6 +130,9 @@ You can subscribe to these tickets to find out when a library you want becomes a
   * blocked by scalac-scoverage-plugin, scala-logging
 * [scalamock](https://github.com/paulbutcher/ScalaMock/pull/257)
 * [ficus](https://github.com/iheartradio/ficus/pull/69)
+* [boopickle](https://github.com/suzaku-io/boopickle/pull/114)
+* [scala-records](https://github.com/scala-records/scala-records/pull/139)
+* [sealerate](https://github.com/mrvisser/sealerate/pull/16)
 
 #### Old M5/M4 tickets
 
