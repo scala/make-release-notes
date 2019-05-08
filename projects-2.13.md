@@ -133,6 +133,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [boopickle](https://github.com/suzaku-io/boopickle/pull/114)
 * [scala-records](https://github.com/scala-records/scala-records/pull/139)
 * [sealerate](https://github.com/mrvisser/sealerate/pull/16)
+* [doobie](https://github.com/tpolecat/doobie/issues/898)
 
 #### Old M5/M4 tickets
 
