@@ -51,6 +51,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.github.nscala-time"                 %% "nscala-time"             % "2.22.0"
     "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-core"     % "0.45.0"
     "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-macros"   % "0.45.0"     % Provided
+    "com.github.pureconfig"                  %% "pureconfig"              % "0.11.0"
     "com.github.scalaprops"                  %% "scalaprops-shapeless"    % "0.3.0"
     "com.github.scopt"                       %% "scopt"                   % "3.7.1"
     "com.github.xuwei-k"                     %% "msgpack4z-native"        % "0.3.5"
