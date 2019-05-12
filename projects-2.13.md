@@ -56,6 +56,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.github.scopt"                       %% "scopt"                   % "3.7.1"
     "com.github.xuwei-k"                     %% "msgpack4z-native"        % "0.3.5"
     "com.github.xuwei-k"                     %% "zeroapply"               % "0.2.2"
+    "com.iheart"                             %% "ficus"                   % "1.4.6"
     "com.lihaoyi"                            %% "sourcecode"              % "0.1.6"
     "com.sizmek.fsi"                         %% "fsi-macros"              % "0.5.0"      // Bintray
     "com.sizmek.rtree2d"                     %% "rtree2d-core"            % "0.8.0"      // Bintray
@@ -66,6 +67,7 @@ Add in sbt using `libraryDependencies += ...`:
     "io.argonaut"                            %% "argonaut"                % "6.2.3"
     "io.circe"                               %% "circe-core"              % "0.12.0-M1"
     "io.spray"                               %% "spray-json"              % "1.3.5"
+    "io.suzaku"                              %% "boopickle"               % "1.3.1"
     "nl.grons"                               %% "metrics4-scala"          % "4.0.5"
     "org.ekrich"                             %% "sconfig"                 % "0.7.6"
     "org.foundweekends"                      %% "knockoff"                % "0.8.11"
@@ -130,8 +132,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [kafka](https://github.com/apache/kafka/pull/5454)
   * blocked by scalac-scoverage-plugin, scala-logging
 * [scalamock](https://github.com/paulbutcher/ScalaMock/pull/257)
-* [ficus](https://github.com/iheartradio/ficus/pull/69)
-* [boopickle](https://github.com/suzaku-io/boopickle/pull/114)
 * [scala-records](https://github.com/scala-records/scala-records/pull/139)
 * [sealerate](https://github.com/mrvisser/sealerate/pull/16)
 * [doobie](https://github.com/tpolecat/doobie/issues/898)
