@@ -135,6 +135,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [scala-records](https://github.com/scala-records/scala-records/pull/139)
 * [sealerate](https://github.com/mrvisser/sealerate/pull/16)
 * [doobie](https://github.com/tpolecat/doobie/issues/898)
+* [scalameta](https://github.com/scalameta/scalameta/issues/1695)
 
 #### Old M5/M4 tickets
 
@@ -166,11 +167,8 @@ Other:
 * [dispatch](https://github.com/dispatch/reboot/issues/210)
     * blocked by lift-json
 * [lift-json](https://github.com/lift/framework/issues/1955)
-* [scalapb](https://github.com/scalapb/ScalaPB/issues/540)
 * [testz](https://github.com/scalaz/testz/issues/30)
-* [kafka](https://github.com/apache/kafka/pull/5454)
 * [mdoc](https://github.com/scalameta/mdoc/issues/156)
-* [boopickle](https://github.com/suzaku-io/boopickle/issues/113)
 * [scalatra](https://github.com/scalatra/scalatra/issues/831)
 * [twitter-util](https://github.com/twitter/util/issues/219)
 
