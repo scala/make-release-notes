@@ -32,6 +32,7 @@ Add in sbt using `libraryDependencies += ...`:
 
     "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-core"     % "0.48.0"
     "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-macros"   % "0.48.0"     % Provided
+    "org.scala-js"                           %% "scalajs-stubs"           % "1.0.0-RC1"
 
 ### Compiler plugins
 
@@ -45,7 +46,8 @@ Most plugins do not need to be re-published for 2.13, but certain plugins did re
 
 Add using `addSbtPlugin(...)`:
 
-    (coming soon)
+    "org.scala-js"                      % "sbt-scalajs"               % "0.6.27"
+    "org.scala-js"                      % "sbt-scalajs"               % "1.0.0-M7"
 
 ### Pending
 
