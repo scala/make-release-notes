@@ -18,6 +18,7 @@ You can also query [Maven Central](https://mvnrepository.com/artifact/org.scala-
 Add in sbt using `libraryDependencies += ...`:
 
     "org.scala-lang.modules"           %% "scala-swing"                % "2.1.1"
+    "org.scala-lang.modules"           %% "scala-xml"                  % "1.2.0"
 
 ### Testing libraries
 
@@ -51,7 +52,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 #### New RC2 tickets
 
-* [scala-xml](https://github.com/scala/scala-xml/issues/311)
 * [scala-parser-combinators](https://github.com/scala/scala-parser-combinators/issues/211)
 
 #### Old RC1/M5/M4 tickets
