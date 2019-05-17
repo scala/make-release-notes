@@ -30,7 +30,7 @@ Add in sbt using `libraryDependencies += ... % Test`:
 
 Add in sbt using `libraryDependencies += ...`:
 
-    (coming soon)
+    "org.scala-js"                           %% "scalajs-stubs"           % "1.0.0-RC1"
 
 ### Compiler plugins
 
@@ -44,7 +44,8 @@ Most plugins do not need to be re-published for 2.13, but certain plugins did re
 
 Add using `addSbtPlugin(...)`:
 
-    (coming soon)
+    "org.scala-js"                      % "sbt-scalajs"               % "0.6.27"
+    "org.scala-js"                      % "sbt-scalajs"               % "1.0.0-M7"
 
 ### Pending
 
