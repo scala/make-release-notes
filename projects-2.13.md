@@ -17,6 +17,7 @@ You can also query [Maven Central](https://mvnrepository.com/artifact/org.scala-
 
 Add in sbt using `libraryDependencies += ...`:
 
+    "org.scala-lang.modules"           %% "scala-collection-compat"    % "2.0.0"
     "org.scala-lang.modules"           %% "scala-parser-combinators"   % "1.1.2"
     "org.scala-lang.modules"           %% "scala-swing"                % "2.1.1"
     "org.scala-lang.modules"           %% "scala-xml"                  % "1.2.0"
