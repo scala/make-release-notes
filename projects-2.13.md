@@ -18,6 +18,7 @@ You can also query [Maven Central](https://mvnrepository.com/artifact/org.scala-
 Add in sbt using `libraryDependencies += ...`:
 
     "org.scala-lang.modules"           %% "scala-collection-compat"    % "2.0.0"
+    "org.scala-lang.modules"           %% "scala-parallel-collections" % "0.2.0"
     "org.scala-lang.modules"           %% "scala-parser-combinators"   % "1.1.2"
     "org.scala-lang.modules"           %% "scala-swing"                % "2.1.1"
     "org.scala-lang.modules"           %% "scala-xml"                  % "1.2.0"
@@ -77,10 +78,10 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 #### New RC2 tickets
 
-* [scala-parallel-collections](https://github.com/scala/scala-parallel-collections/pull/66)
 * [specs2](https://github.com/etorreborre/specs2/issues/741)
 * [scalatest 3.0.x](https://github.com/scalatest/scalatest/issues/1586)
 * [scalatestplus-scalacheck](https://github.com/scalatest/scalatestplus-scalacheck/issues/6)
+* [cats](https://github.com/typelevel/cats/issues/2853)
 
 #### Old RC1/M5/M4 tickets
 
