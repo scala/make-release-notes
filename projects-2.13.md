@@ -27,7 +27,8 @@ Add in sbt using `libraryDependencies += ...`:
 
 Add in sbt using `libraryDependencies += ... % Test`:
 
-    "com.github.scalaprops"                  %% "scalaprops"              % "0.6.0"      % Test
+    "com.github.scalaprops"            %% "scalaprops"              % "0.6.0"        % Test
+    "org.scalatest"                    %% "scalatest"               % "3.1.0-SNAP11" % Test
 
 ### Other libraries
 
@@ -49,8 +50,6 @@ Add in sbt using `libraryDependencies += ...`:
     "org.scala-js"                           %% "scalajs-stubs"           % "1.0.0-RC1"
     "org.scalaz"                             %% "scalaz-core"             % "7.2.27"
     "org.squeryl"                            %% "squeryl"                 % "0.9.13"
-
-
 
 ### Compiler plugins
 
@@ -78,11 +77,10 @@ You can subscribe to these tickets to find out when a library you want becomes a
 #### New RC2 tickets
 
 * [scalacheck](https://github.com/rickynils/scalacheck/issues/471)
-* [scalatest](https://github.com/scalatest/scalatest/issues/1586)
-  * blocked by scalacheck
 * [scala-parallel-collections](https://github.com/scala/scala-parallel-collections/pull/66)
   * blocked by scalacheck
 * [specs2](https://github.com/etorreborre/specs2/issues/741)
+  * blocked by scalacheck
 
 #### Old RC1/M5/M4 tickets
 
