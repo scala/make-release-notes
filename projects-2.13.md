@@ -56,6 +56,7 @@ Add in sbt using `addCompilerPlugin(...)`:
 
     "org.wartremover"                        % "sbt-wartremover"          % "2.4.2"
     "org.wartremover"                        % "sbt-wartremover-contrib"  % "1.3.1"
+    "com.github.ghik"                        %% "silencer-plugin"         % "1.3.3"
 
 ### sbt plugins
 
