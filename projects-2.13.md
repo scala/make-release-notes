@@ -55,9 +55,9 @@ Add in sbt using `libraryDependencies += ...`:
 
 Add in sbt using `addCompilerPlugin(...)`:
 
-    "org.wartremover"                        % "sbt-wartremover"          % "2.4.2"
-    "org.wartremover"                        % "sbt-wartremover-contrib"  % "1.3.1"
-    "com.github.ghik"                        %% "silencer-plugin"         % "1.3.3"
+    "com.github.ghik"           %% "silencer-plugin"          % "1.3.3"
+    "com.typesafe.genjavadoc"   %  "genjavadoc-plugin"        % "0.13"     cross CrossVersion.patch
+    "org.typelevel"             %  "kind-projector"           % "0.10.1"   cross CrossVersion.patch
 
 ### sbt plugins
 
@@ -67,6 +67,8 @@ Add using `addSbtPlugin(...)`:
 
     "org.scala-js"                      % "sbt-scalajs"               % "0.6.27"
     "org.scala-js"                      % "sbt-scalajs"               % "1.0.0-M7"
+    "org.wartremover"                   %  "sbt-wartremover"          % "2.4.2"
+    "org.wartremover"                   %  "sbt-wartremover-contrib"  % "1.3.1"
 
 ### Pending
 
@@ -79,7 +81,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
   * blocked by scalacheck
 * [scala-parallel-collections](https://github.com/scala/scala-parallel-collections/pull/66)
   * blocked by scalacheck
-* [kind-projector](https://github.com/typelevel/kind-projector/issues/103)
 * [specs2](https://github.com/etorreborre/specs2/issues/741)
 
 #### Old RC1/M5/M4 tickets
