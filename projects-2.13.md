@@ -78,6 +78,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [scala-parallel-collections](https://github.com/scala/scala-parallel-collections/pull/66)
   * blocked by scalacheck
 * [kind-projector](https://github.com/typelevel/kind-projector/issues/103)
+* [specs2](https://github.com/etorreborre/specs2/issues/741)
 
 #### Old RC1/M5/M4 tickets
 
