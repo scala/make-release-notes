@@ -26,21 +26,36 @@ Add in sbt using `libraryDependencies += ...`:
 
 Add in sbt using `libraryDependencies += ... % Test`:
 
-    (coming soon)
+    "com.github.scalaprops"                  %% "scalaprops"              % "0.6.0"      % Test
 
 ### Other libraries
 
 Add in sbt using `libraryDependencies += ...`:
 
+    "com.github.nscala-time"                 %% "nscala-time"             % "2.22.0"
     "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-core"     % "0.48.0"
     "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-macros"   % "0.48.0"     % Provided
+    "com.github.xuwei-k"                     %% "applybuilder"            % "0.2.4"
+    "com.github.xuwei-k"                     %% "iarray"                  % "0.5.0"
+    "com.github.xuwei-k"                     %% "msgpack4z-core"          % "0.3.10"
+    "com.github.xuwei-k"                     %% "msgpack4z-argonaut"      % "0.5.3"
+    "com.github.xuwei-k"                     %% "msgpack4z-native"        % "0.3.5"
+    "com.github.xuwei-k"                     %% "nobox"                   % "0.3.0"
+    "com.github.xuwei-k"                     %% "zeroapply"               % "0.2.2"
+    "io.argonaut"                            %% "argonaut"                % "6.2.3"
+    "org.json4s"                             %% "json4s-native"           % "3.6.5"
     "org.scala-js"                           %% "scalajs-stubs"           % "1.0.0-RC1"
+    "org.scalaz"                             %% "scalaz-core"             % "7.2.27"
+    "org.squeryl"                            %% "squeryl"                 % "0.9.13"
+
+
 
 ### Compiler plugins
 
 Add in sbt using `addCompilerPlugin(...)`:
 
-    (coming soon)
+    "org.wartremover"                        % "sbt-wartremover"          % "2.4.2"
+    "org.wartremover"                        % "sbt-wartremover-contrib"  % "1.3.1"
 
 ### sbt plugins
 
