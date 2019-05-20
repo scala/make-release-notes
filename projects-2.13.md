@@ -79,6 +79,8 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 * [scala-parallel-collections](https://github.com/scala/scala-parallel-collections/pull/66)
 * [specs2](https://github.com/etorreborre/specs2/issues/741)
+* [scalatest 3.0.x](https://github.com/scalatest/scalatest/issues/1586)
+* [scalatestplus-scalacheck](https://github.com/scalatest/scalatestplus-scalacheck/issues/6)
 
 #### Old RC1/M5/M4 tickets
 
