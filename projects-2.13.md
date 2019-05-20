@@ -32,6 +32,7 @@ Add in sbt using `libraryDependencies += ... % Test`:
 
 Add in sbt using `libraryDependencies += ...`:
 
+    "com.chuusai"                            %% "shapeless"               % "2.3.3"
     "com.github.nscala-time"                 %% "nscala-time"             % "2.22.0"
     "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-core"     % "0.48.0"
     "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-macros"   % "0.48.0"     % Provided
