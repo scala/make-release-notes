@@ -31,6 +31,7 @@ Add in sbt using `libraryDependencies += ... % Test`:
     "com.github.scalaprops"            %% "scalaprops"              % "0.6.0"        % Test
     "org.scalacheck"                   %% "scalacheck"              % "1.14.0"       % Test
     "org.scalatest"                    %% "scalatest"               % "3.1.0-SNAP11" % Test
+    "hedgehog"                         https://github.com/hedgehogqa/scala-hedgehog#sbt-binary-dependency // Bintray
 
 ### Other libraries
 
