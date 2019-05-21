@@ -76,6 +76,7 @@ Add using `addSbtPlugin(...)`:
     "org.scala-js"                      % "sbt-scalajs"               % "1.0.0-M7"
     "org.wartremover"                   %  "sbt-wartremover"          % "2.4.2"
     "org.wartremover"                   %  "sbt-wartremover-contrib"  % "1.3.1"
+    "org.scoverage"                     % "sbt-scoverage"             % "1.6.0-RC2"
 
 ### Pending
 
