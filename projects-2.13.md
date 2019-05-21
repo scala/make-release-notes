@@ -57,6 +57,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.scalaz"                             %% "scalaz-core"             % "7.2.27"
     "org.squeryl"                            %% "squeryl"                 % "0.9.13"
     "org.typelevel"                          %% "macro-compat"            % "1.1.1"
+    "org.wvlet.airframe"                     %% "airframe"                % "19.5.1"
 
 ### Compiler plugins
 
