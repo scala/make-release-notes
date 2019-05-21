@@ -1,7 +1,7 @@
-Scala 2.13.0-RC1 further refines and polishes the new collections API, among other improvements.
+Scala 2.13.0-RC2 fixes bugs and improves Java interop.
 
 If no major problems are found in this release candidate, we will re-release it as 2.13.0.  In the meantime, we'll be working primarily on documentation and on helping the ecosystem upgrade.
 
-For details, refer to the [release notes](https://github.com/scala/scala/releases/tag/v2.13.0-RC1) on GitHub.
+For details, refer to the [release notes](https://github.com/scala/scala/releases/tag/v2.13.0-RC2) on GitHub.
 
-[download](https://www.scala-lang.org/download/2.13.0-RC1.html)
+[download](https://www.scala-lang.org/download/2.13.0-RC2.html)
