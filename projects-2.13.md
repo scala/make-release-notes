@@ -82,6 +82,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [scalatest 3.0.x](https://github.com/scalatest/scalatest/issues/1586)
 * [scalatestplus-scalacheck](https://github.com/scalatest/scalatestplus-scalacheck/issues/6)
 * [cats](https://github.com/typelevel/cats/issues/2853)
+* [akka](https://github.com/akka/akka/issues/26964)
 
 #### Old RC1/M5/M4 tickets
 
