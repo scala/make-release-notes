@@ -28,6 +28,7 @@ Add in sbt using `libraryDependencies += ...`:
 
 Add in sbt using `libraryDependencies += ... % Test`:
 
+    "com.eed3si9n.expecty"             %% "expecty"                 % "0.11.0"       % Test
     "com.github.scalaprops"            %% "scalaprops"              % "0.6.0"        % Test
     "hedgehog"                         https://github.com/hedgehogqa/scala-hedgehog#sbt-binary-dependency // Bintray
     "org.scalacheck"                   %% "scalacheck"              % "1.14.0"       % Test
