@@ -58,6 +58,12 @@ Add in sbt using `libraryDependencies += ...`:
     "org.squeryl"                            %% "squeryl"                 % "0.9.13"
     "org.typelevel"                          %% "macro-compat"            % "1.1.1"
     "org.wvlet.airframe"                     %% "airframe"                % "19.5.1"
+    "com.typesafe.akka"                      %% "akka-actor"              % "2.5.23"
+    "com.typesafe.akka"                      %% "akka-stream"             % "2.5.23"
+    "com.typesafe.akka"                      %% "akka-cluster"            % "2.5.23"
+    "com.typesafe.akka"                      %% "akka-persistence"        % "2.5.23"
+    "com.typesafe.akka"                      %% "akka-discovery"          % "2.5.23"
+    "com.typesafe.akka"                      %% "akka-http"               % "10.1.8"
 
 ### Compiler plugins
 
@@ -87,7 +93,8 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 * [scalatestplus-scalacheck](https://github.com/scalatest/scalatestplus-scalacheck/issues/6)
 * [cats](https://github.com/typelevel/cats/issues/2853)
-* [akka](https://github.com/akka/akka/issues/26964)
+* [akka](https://github.com/akka/akka/issues/26964) (already released for 2.5.23)
+* [akka-http](https://github.com/akka/akka-http/issues/2539) (already released for 10.1.8)
 
 #### Old RC1/M5/M4 tickets
 
@@ -102,7 +109,6 @@ Lightbend and related:
 * [lagom](https://github.com/lagom/lagom/issues/1240)
 * [akka-persistence-cassandra](https://github.com/akka/akka-persistence-cassandra/issues/364)
 * [alpakka-kafka](https://github.com/akka/alpakka-kafka/issues/540)
-* [akka-http](https://github.com/akka/akka-http/issues/2515)
 
 Typelevel and related:
 
