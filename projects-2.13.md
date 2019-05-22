@@ -52,6 +52,8 @@ Add in sbt using `libraryDependencies += ...`:
     "com.github.xuwei-k"                     %% "nobox"                   % "0.3.0"
     "com.github.xuwei-k"                     %% "zeroapply"               % "0.2.2"
     "io.argonaut"                            %% "argonaut"                % "6.2.3"
+    "io.crashbox"                            %% "spray-json"              % "1.3.5-4"
+    "org.ekrich"                             %% "sconfig"                 % "0.9.1"
     "org.json4s"                             %% "json4s-native"           % "3.6.5"
     "org.rogach"                             %% "scallop"                 % "3.2.0"
     "org.scala-js"                           %% "scalajs-stubs"           % "1.0.0-RC1"
