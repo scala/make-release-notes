@@ -63,6 +63,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.typesafe.akka"                      %% "akka-cluster"            % "2.5.23"
     "com.typesafe.akka"                      %% "akka-persistence"        % "2.5.23"
     "com.typesafe.akka"                      %% "akka-discovery"          % "2.5.23"
+    "com.typesafe.akka"                      %% "akka-http"               % "10.1.8"
 
 ### Compiler plugins
 
@@ -93,7 +94,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [scalatestplus-scalacheck](https://github.com/scalatest/scalatestplus-scalacheck/issues/6)
 * [cats](https://github.com/typelevel/cats/issues/2853)
 * [akka](https://github.com/akka/akka/issues/26964) (already released for 2.5.23)
-* [akka-http](https://github.com/akka/akka-http/issues/2539)
+* [akka-http](https://github.com/akka/akka-http/issues/2539) (already released for 10.1.8)
 
 #### Old RC1/M5/M4 tickets
 
