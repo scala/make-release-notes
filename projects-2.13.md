@@ -59,6 +59,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.typesafe.akka"                      %% "akka-stream"             % "2.5.23"
     "io.argonaut"                            %% "argonaut"                % "6.2.3"
     "io.crashbox"                            %% "spray-json"              % "1.3.5-4"
+    "io.spray"                               %% "spray-json"              % "1.3.5"
     "org.ekrich"                             %% "sconfig"                 % "0.9.1"
     "org.json4s"                             %% "json4s-native"           % "3.6.5"
     "org.rogach"                             %% "scallop"                 % "3.2.0"
