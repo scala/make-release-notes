@@ -46,11 +46,17 @@ Add in sbt using `libraryDependencies += ...`:
     "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-macros"   % "0.48.0"     % Provided
     "com.github.xuwei-k"                     %% "applybuilder"            % "0.2.4"
     "com.github.xuwei-k"                     %% "iarray"                  % "0.5.0"
-    "com.github.xuwei-k"                     %% "msgpack4z-core"          % "0.3.10"
     "com.github.xuwei-k"                     %% "msgpack4z-argonaut"      % "0.5.3"
+    "com.github.xuwei-k"                     %% "msgpack4z-core"          % "0.3.10"
     "com.github.xuwei-k"                     %% "msgpack4z-native"        % "0.3.5"
     "com.github.xuwei-k"                     %% "nobox"                   % "0.3.0"
     "com.github.xuwei-k"                     %% "zeroapply"               % "0.2.2"
+    "com.typesafe.akka"                      %% "akka-actor"              % "2.5.23"
+    "com.typesafe.akka"                      %% "akka-cluster"            % "2.5.23"
+    "com.typesafe.akka"                      %% "akka-discovery"          % "2.5.23"
+    "com.typesafe.akka"                      %% "akka-http"               % "10.1.8"
+    "com.typesafe.akka"                      %% "akka-persistence"        % "2.5.23"
+    "com.typesafe.akka"                      %% "akka-stream"             % "2.5.23"
     "io.argonaut"                            %% "argonaut"                % "6.2.3"
     "io.crashbox"                            %% "spray-json"              % "1.3.5-4"
     "org.ekrich"                             %% "sconfig"                 % "0.9.1"
@@ -61,12 +67,6 @@ Add in sbt using `libraryDependencies += ...`:
     "org.squeryl"                            %% "squeryl"                 % "0.9.13"
     "org.typelevel"                          %% "macro-compat"            % "1.1.1"
     "org.wvlet.airframe"                     %% "airframe"                % "19.5.1"
-    "com.typesafe.akka"                      %% "akka-actor"              % "2.5.23"
-    "com.typesafe.akka"                      %% "akka-stream"             % "2.5.23"
-    "com.typesafe.akka"                      %% "akka-cluster"            % "2.5.23"
-    "com.typesafe.akka"                      %% "akka-persistence"        % "2.5.23"
-    "com.typesafe.akka"                      %% "akka-discovery"          % "2.5.23"
-    "com.typesafe.akka"                      %% "akka-http"               % "10.1.8"
 
 ### Compiler plugins
 
@@ -96,7 +96,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 * [scalatestplus-scalacheck](https://github.com/scalatest/scalatestplus-scalacheck/issues/6)
 * [cats](https://github.com/typelevel/cats/issues/2853)
-* [akka](https://github.com/akka/akka/issues/26964) (already released for 2.5.23)
 
 #### Old RC1/M5/M4 tickets
 
