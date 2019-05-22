@@ -53,6 +53,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.github.xuwei-k"                     %% "zeroapply"               % "0.2.2"
     "io.argonaut"                            %% "argonaut"                % "6.2.3"
     "org.json4s"                             %% "json4s-native"           % "3.6.5"
+    "org.rogach"                             %% "scallop"                 % "3.2.0"
     "org.scala-js"                           %% "scalajs-stubs"           % "1.0.0-RC1"
     "org.scalaz"                             %% "scalaz-core"             % "7.2.27"
     "org.squeryl"                            %% "squeryl"                 % "0.9.13"
