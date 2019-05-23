@@ -35,6 +35,7 @@ Add in sbt using `libraryDependencies += ... % Test`:
     "org.scalacheck"                   %% "scalacheck"              % "1.14.0"       % Test
     "org.scalatest"                    %% "scalatest"               % "3.0.8-RC4"    % Test
     "org.scalatest"                    %% "scalatest"               % "3.1.0-SNAP11" % Test
+    "org.scalatestplus"                %% "scalatestplus-scalacheck" % "1.0.0-SNAP6" % Test
     "org.specs2"                       %% "specs2-core"             % "4.5.1"        % Test
 
 ### Other libraries
@@ -97,7 +98,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 #### New RC2 tickets
 
-* [scalatestplus-scalacheck](https://github.com/scalatest/scalatestplus-scalacheck/issues/6)
 * [cats](https://github.com/typelevel/cats/issues/2853)
 
 #### Old RC1/M5/M4 tickets
