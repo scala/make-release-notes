@@ -64,6 +64,7 @@ Add in sbt using `libraryDependencies += ...`:
     "io.spray"                               %% "spray-json"              % "1.3.5"
     "org.ekrich"                             %% "sconfig"                 % "0.9.1"
     "org.json4s"                             %% "json4s-native"           % "3.6.5"
+    "org.log4s"                              %% "log4s"                   % "1.8.0"
     "org.rogach"                             %% "scallop"                 % "3.2.0"
     "org.scala-js"                           %% "scalajs-stubs"           % "1.0.0-RC1"
     "org.scalaz"                             %% "scalaz-core"             % "7.2.27"
@@ -137,7 +138,6 @@ Other:
 * [twitter-util](https://github.com/twitter/util/issues/219)
 * [scala-logging](https://github.com/lightbend/scala-logging/pull/159)
 * [TwoTails](https://github.com/wheaties/TwoTails/pull/36)
-* [log4s](https://github.com/Log4s/log4s/pull/32)
 * [grizzled-scala](https://github.com/bmc/grizzled-scala/pull/17)
 * [kafka](https://github.com/apache/kafka/pull/5454)
 * [scalamock](https://github.com/paulbutcher/ScalaMock/pull/257)
