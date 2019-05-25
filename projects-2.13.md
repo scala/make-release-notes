@@ -70,8 +70,9 @@ Add in sbt using `libraryDependencies += ...`:
     "org.scala-js"                           %% "scalajs-stubs"           % "1.0.0-RC1"
     "org.scalaz"                             %% "scalaz-core"             % "7.2.27"
     "org.squeryl"                            %% "squeryl"                 % "0.9.13"
-    "org.typelevel"                          %% "macro-compat"            % "1.1.1"
+    "org.typelevel"                          %% "cats-core"               % "2.0.0-M2"
     "org.typelevel"                          %% "machinist"               % "0.6.8"
+    "org.typelevel"                          %% "macro-compat"            % "1.1.1"
     "org.wvlet.airframe"                     %% "airframe"                % "19.5.1"
 
 ### Compiler plugins
@@ -91,9 +92,9 @@ Add using `addSbtPlugin(...)`:
 
     "org.scala-js"                      % "sbt-scalajs"               % "0.6.27"
     "org.scala-js"                      % "sbt-scalajs"               % "1.0.0-M7"
-    "org.wartremover"                   %  "sbt-wartremover"          % "2.4.2"
-    "org.wartremover"                   %  "sbt-wartremover-contrib"  % "1.3.1"
     "org.scoverage"                     % "sbt-scoverage"             % "1.6.0-RC2"
+    "org.wartremover"                   % "sbt-wartremover"           % "2.4.2"
+    "org.wartremover"                   % "sbt-wartremover-contrib"   % "1.3.1"
 
 ### Pending
 
@@ -101,8 +102,8 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 #### New RC2 tickets
 
-* [cats](https://github.com/typelevel/cats/issues/2853)
 * [paiges](https://github.com/typelevel/paiges/issues/152)
+* [http4s](https://github.com/http4s/http4s/pull/2493)
 
 #### Old RC1/M5/M4 tickets
 
