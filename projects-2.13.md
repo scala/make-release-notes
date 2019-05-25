@@ -29,14 +29,15 @@ Add in sbt using `libraryDependencies += ...`:
 
 Add in sbt using `libraryDependencies += ... % Test`:
 
-    "com.eed3si9n.expecty"             %% "expecty"                 % "0.11.0"       % Test
-    "com.github.scalaprops"            %% "scalaprops"              % "0.6.0"        % Test
+    "com.eed3si9n.expecty"             %% "expecty"                  % "0.11.0"       % Test
+    "com.github.scalaprops"            %% "scalaprops"               % "0.6.0"        % Test
     "hedgehog"                         https://github.com/hedgehogqa/scala-hedgehog#sbt-binary-dependency // Bintray
-    "org.scalacheck"                   %% "scalacheck"              % "1.14.0"       % Test
-    "org.scalatest"                    %% "scalatest"               % "3.0.8-RC4"    % Test
-    "org.scalatest"                    %% "scalatest"               % "3.1.0-SNAP11" % Test
-    "org.scalatestplus"                %% "scalatestplus-scalacheck" % "1.0.0-SNAP6" % Test
-    "org.specs2"                       %% "specs2-core"             % "4.5.1"        % Test
+    "org.scalacheck"                   %% "scalacheck"               % "1.14.0"       % Test
+    "org.scalatest"                    %% "scalatest"                % "3.0.8-RC4"    % Test
+    "org.scalatest"                    %% "scalatest"                % "3.1.0-SNAP11" % Test
+    "org.scalatestplus"                %% "scalatestplus-scalacheck" % "1.0.0-SNAP6"  % Test
+    "org.specs2"                       %% "specs2-core"              % "4.5.1"        % Test
+    "org.typelevel"                    %% "discipline"               % "0.12.0-M1"    % Test
 
 ### Other libraries
 
@@ -70,6 +71,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.scalaz"                             %% "scalaz-core"             % "7.2.27"
     "org.squeryl"                            %% "squeryl"                 % "0.9.13"
     "org.typelevel"                          %% "macro-compat"            % "1.1.1"
+    "org.typelevel"                          %% "machinist"               % "0.6.8"
     "org.wvlet.airframe"                     %% "airframe"                % "19.5.1"
 
 ### Compiler plugins
