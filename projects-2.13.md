@@ -102,6 +102,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 #### New RC2 tickets
 
 * [cats](https://github.com/typelevel/cats/issues/2853)
+* [paiges](https://github.com/typelevel/paiges/issues/152)
 
 #### Old RC1/M5/M4 tickets
 
