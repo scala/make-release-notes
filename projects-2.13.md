@@ -60,6 +60,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.typesafe.akka"                      %% "akka-http"               % "10.1.8"
     "com.typesafe.akka"                      %% "akka-persistence"        % "2.5.23"
     "com.typesafe.akka"                      %% "akka-stream"             % "2.5.23"
+    "eu.timepit"                             %% "refined"                 % "0.9.6"
     "io.argonaut"                            %% "argonaut"                % "6.2.3"
     "io.crashbox"                            %% "spray-json"              % "1.3.5-4"
     "io.spray"                               %% "spray-json"              % "1.3.5"
