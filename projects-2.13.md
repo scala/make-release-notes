@@ -53,6 +53,12 @@ You can subscribe to these tickets to find out when a library you want becomes a
 #### New RC3 tickets
 
 * [scalacheck](https://github.com/rickynils/scalacheck/issues/478)
+* [scalatest](https://github.com/scalatest/scalatest/issues/1593)
+  * blocked by scalacheck
+* [genjavadoc](https://github.com/lightbend/genjavadoc/issues/175)
+* [scala-xml](https://github.com/scala/scala-xml/issues/316)
+* [scala-parser-combinators](https://github.com/scala/scala-parser-combinators/pull/213)
+* [kind-projector](https://github.com/typelevel/kind-projector/issues/105)
 
 #### Old RC2/RC1/M5/M4 tickets
 
