@@ -23,7 +23,7 @@ Add in sbt using `libraryDependencies += ...`:
 
 Add in sbt using `libraryDependencies += ... % Test`:
 
-    (coming soon)
+    "org.scalacheck"                   %% "scalacheck"               % "1.14.0"       % Test
 
 ### Other libraries
 
@@ -52,18 +52,17 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 #### New RC3 tickets
 
-* [scalacheck](https://github.com/rickynils/scalacheck/issues/478)
-* [scalatest](https://github.com/scalatest/scalatest/issues/1593)
-  * blocked by scalacheck
-* [scala-parallel-collections](https://github.com/scala/scala-parallel-collections/issues/68)
-  * blocked by scalacheck
-* [genjavadoc](https://github.com/lightbend/genjavadoc/issues/175)
 * [scala-xml](https://github.com/scala/scala-xml/issues/316)
 * [scala-parser-combinators](https://github.com/scala/scala-parser-combinators/pull/213)
-* [kind-projector](https://github.com/typelevel/kind-projector/issues/105)
-* [scala-collection-compat](https://github.com/scala/scala-collection-compat/issues/210)
+* [scalatest](https://github.com/scalatest/scalatest/issues/1593)
+  * blocked by scala-xml, scala-parser-combinators
+* [scala-parallel-collections](https://github.com/scala/scala-parallel-collections/issues/68)
+* [genjavadoc](https://github.com/lightbend/genjavadoc/issues/175)
 * [scala-java8-compat](https://github.com/scala/scala-java8-compat/issues/149)
   * blocked by genjavadoc
+* [kind-projector](https://github.com/typelevel/kind-projector/issues/105)
+* [scala-collection-compat](https://github.com/scala/scala-collection-compat/issues/210)
+* [scala-async](https://github.com/scala/scala-async/issues/225)
 
 #### Old RC2/RC1/M5/M4 tickets
 
