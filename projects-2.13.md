@@ -18,6 +18,7 @@ You can also query [Maven Central](https://mvnrepository.com/artifact/org.scala-
 Add in sbt using `libraryDependencies += ...`:
 
     "org.scala-lang.modules"           %% "scala-parser-combinators"   % "1.1.2"
+    "org.scala-lang.modules"           %% "scala-xml"                  % "1.2.0"
 
 ### Testing libraries
 
@@ -52,15 +53,12 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 #### New RC3 tickets
 
-* [scala-xml](https://github.com/scala/scala-xml/issues/316)
-* [scalatest](https://github.com/scalatest/scalatest/issues/1593)
-  * blocked by scala-xml, scala-parser-combinators
 * [scala-parallel-collections](https://github.com/scala/scala-parallel-collections/issues/68)
 * [scala-java8-compat](https://github.com/scala/scala-java8-compat/issues/149)
-  * blocked by genjavadoc
-* [kind-projector](https://github.com/typelevel/kind-projector/issues/105)
 * [scala-collection-compat](https://github.com/scala/scala-collection-compat/issues/210)
 * [scala-async](https://github.com/scala/scala-async/issues/225)
+* [scalatest](https://github.com/scalatest/scalatest/issues/1593)
+* [kind-projector](https://github.com/typelevel/kind-projector/issues/105)
 
 #### Old RC2/RC1/M5/M4 tickets
 
