@@ -35,7 +35,7 @@ Add in sbt using `libraryDependencies += ...`:
 
 Add in sbt using `addCompilerPlugin(...)`:
 
-    (coming soon)
+    "com.typesafe.genjavadoc"   %  "genjavadoc-plugin"        % "0.13"     cross CrossVersion.patch
 
 ### sbt plugins
 
@@ -56,7 +56,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [scalatest](https://github.com/scalatest/scalatest/issues/1593)
   * blocked by scala-xml, scala-parser-combinators
 * [scala-parallel-collections](https://github.com/scala/scala-parallel-collections/issues/68)
-* [genjavadoc](https://github.com/lightbend/genjavadoc/issues/175)
 * [scala-java8-compat](https://github.com/scala/scala-java8-compat/issues/149)
   * blocked by genjavadoc
 * [kind-projector](https://github.com/typelevel/kind-projector/issues/105)
