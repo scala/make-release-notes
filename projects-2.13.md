@@ -42,6 +42,7 @@ Add in sbt using `libraryDependencies += ...`:
 Add in sbt using `addCompilerPlugin(...)`:
 
     "com.typesafe.genjavadoc"   %  "genjavadoc-plugin"        % "0.13"     cross CrossVersion.patch
+    "com.github.ghik"           %% "silencer-plugin"          % "1.4.0"
 
 ### sbt plugins
 
