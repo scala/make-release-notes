@@ -28,6 +28,7 @@ Add in sbt using `libraryDependencies += ...`:
 Add in sbt using `libraryDependencies += ... % Test`:
 
     "org.scalacheck"                   %% "scalacheck"               % "1.14.0"       % Test
+    "org.scalatest"                    %% "scalatest"                % "3.0.8-RC5"    % Test
 
 ### Other libraries
 
@@ -57,7 +58,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 #### New RC3 tickets
 
 * [scala-collection-compat](https://github.com/scala/scala-collection-compat/issues/210)
-* [scalatest](https://github.com/scalatest/scalatest/issues/1593)
+* [scalatest 3.1](https://github.com/scalatest/scalatest/issues/1593)
 * [kind-projector](https://github.com/typelevel/kind-projector/issues/105)
 
 #### Old RC2/RC1/M5/M4 tickets
