@@ -39,6 +39,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.scala-js"                           %% "scalajs-stubs"           % "1.0.0-RC1"
     "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-core"     % "0.49.0"
     "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-macros"   % "0.49.0"     % Provided
+    "org.wvlet.airframe"                     %% "airframe"                % "19.5.2"
 
 ### Compiler plugins
 
