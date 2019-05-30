@@ -17,6 +17,7 @@ You can also query [Maven Central](https://mvnrepository.com/artifact/org.scala-
 
 Add in sbt using `libraryDependencies += ...`:
 
+    "org.scala-lang.modules"           %% "scala-async"                % "0.10.0"
     "org.scala-lang.modules"           %% "scala-java8-compat"         % "0.9.0"
     "org.scala-lang.modules"           %% "scala-parallel-collections" % "0.2.0"
     "org.scala-lang.modules"           %% "scala-parser-combinators"   % "1.1.2"
@@ -56,7 +57,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 #### New RC3 tickets
 
 * [scala-collection-compat](https://github.com/scala/scala-collection-compat/issues/210)
-* [scala-async](https://github.com/scala/scala-async/issues/225)
 * [scalatest](https://github.com/scalatest/scalatest/issues/1593)
 * [kind-projector](https://github.com/typelevel/kind-projector/issues/105)
 
