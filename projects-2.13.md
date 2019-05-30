@@ -28,6 +28,7 @@ Add in sbt using `libraryDependencies += ...`:
 
 Add in sbt using `libraryDependencies += ... % Test`:
 
+    "com.eed3si9n.expecty"             %% "expecty"                  % "0.11.0"       % Test
     "org.scalacheck"                   %% "scalacheck"               % "1.14.0"       % Test
     "org.scalatest"                    %% "scalatest"                % "3.0.8-RC5"    % Test
 
