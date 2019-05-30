@@ -68,6 +68,8 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [shapeless](https://github.com/milessabin/shapeless/issues/899)
 * [specs2](https://github.com/etorreborre/specs2/issues/743)
   * blocked by shapeless
+* [akka](https://github.com/akka/akka/issues/27049)
+* [cats](https://github.com/typelevel/cats/issues/2864)
 
 #### Old RC2/RC1/M5/M4 tickets
 
