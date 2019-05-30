@@ -17,7 +17,7 @@ You can also query [Maven Central](https://mvnrepository.com/artifact/org.scala-
 
 Add in sbt using `libraryDependencies += ...`:
 
-    (coming soon)
+    "org.scala-lang.modules"           %% "scala-parser-combinators"   % "1.1.2"
 
 ### Testing libraries
 
@@ -53,7 +53,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 #### New RC3 tickets
 
 * [scala-xml](https://github.com/scala/scala-xml/issues/316)
-* [scala-parser-combinators](https://github.com/scala/scala-parser-combinators/issues/214)
 * [scalatest](https://github.com/scalatest/scalatest/issues/1593)
   * blocked by scala-xml, scala-parser-combinators
 * [scala-parallel-collections](https://github.com/scala/scala-parallel-collections/issues/68)
