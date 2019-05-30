@@ -60,8 +60,9 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 * [scalatest 3.1](https://github.com/scalatest/scalatest/issues/1593)
 * [kind-projector](https://github.com/typelevel/kind-projector/issues/105)
+* [shapeless](https://github.com/milessabin/shapeless/issues/899)
 * [specs2](https://github.com/etorreborre/specs2/issues/743)
-  * blocked by kind-projector
+  * blocked by kind-projector, shapeless
 
 #### Old RC2/RC1/M5/M4 tickets
 
