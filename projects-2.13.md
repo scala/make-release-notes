@@ -44,8 +44,9 @@ Add in sbt using `libraryDependencies += ...`:
 
 Add in sbt using `addCompilerPlugin(...)`:
 
-    "com.typesafe.genjavadoc"   %  "genjavadoc-plugin"        % "0.13"     cross CrossVersion.patch
     "com.github.ghik"           %% "silencer-plugin"          % "1.4.0"
+    "com.typesafe.genjavadoc"   %  "genjavadoc-plugin"        % "0.13"     cross CrossVersion.patch
+    "org.typelevel"             %% "kind-projector"           % "0.10.2"
 
 ### sbt plugins
 
@@ -63,10 +64,9 @@ You can subscribe to these tickets to find out when a library you want becomes a
 #### New RC3 tickets
 
 * [scalatest 3.1](https://github.com/scalatest/scalatest/issues/1593)
-* [kind-projector](https://github.com/typelevel/kind-projector/issues/105)
 * [shapeless](https://github.com/milessabin/shapeless/issues/899)
 * [specs2](https://github.com/etorreborre/specs2/issues/743)
-  * blocked by kind-projector, shapeless
+  * blocked by shapeless
 
 #### Old RC2/RC1/M5/M4 tickets
 
