@@ -42,6 +42,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.github.nscala-time"                 %% "nscala-time"             % "2.22.0"
     "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-core"     % "0.49.0"
     "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-macros"   % "0.49.0"     % Provided
+    "eu.timepit"                             %% "refined"                 % "0.9.7"
     "org.rogach"                             %% "scallop"                 % "3.3.0"
     "org.scala-js"                           %% "scalajs-stubs"           % "1.0.0-RC1"
     "org.wvlet.airframe"                     %% "airframe"                % "19.5.2"
