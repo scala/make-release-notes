@@ -32,6 +32,7 @@ Add in sbt using `libraryDependencies += ... % Test`:
     "hedgehog"                         https://github.com/hedgehogqa/scala-hedgehog#sbt-binary-dependency // Bintray
     "org.scalacheck"                   %% "scalacheck"               % "1.14.0"       % Test
     "org.scalatest"                    %% "scalatest"                % "3.0.8-RC5"    % Test
+    "org.specs2"                       %% "specs2-core"              % "4.5.1"        % Test
 
 ### Other libraries
 
@@ -68,7 +69,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 #### New RC3 tickets
 
 * [scalatest 3.1](https://github.com/scalatest/scalatest/issues/1593)
-* [specs2](https://github.com/etorreborre/specs2/issues/743)
 * [akka](https://github.com/akka/akka/issues/27049)
 * [cats](https://github.com/typelevel/cats/issues/2864)
 
