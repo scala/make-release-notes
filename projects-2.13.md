@@ -36,9 +36,10 @@ Add in sbt using `libraryDependencies += ... % Test`:
 
 Add in sbt using `libraryDependencies += ...`:
 
-    "org.scala-js"                           %% "scalajs-stubs"           % "1.0.0-RC1"
+    "com.chuusai"                            %% "shapeless"               % "2.3.3"
     "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-core"     % "0.49.0"
     "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-macros"   % "0.49.0"     % Provided
+    "org.scala-js"                           %% "scalajs-stubs"           % "1.0.0-RC1"
     "org.wvlet.airframe"                     %% "airframe"                % "19.5.2"
 
 ### Compiler plugins
@@ -65,9 +66,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 #### New RC3 tickets
 
 * [scalatest 3.1](https://github.com/scalatest/scalatest/issues/1593)
-* [shapeless](https://github.com/milessabin/shapeless/issues/899)
 * [specs2](https://github.com/etorreborre/specs2/issues/743)
-  * blocked by shapeless
 * [akka](https://github.com/akka/akka/issues/27049)
 * [cats](https://github.com/typelevel/cats/issues/2864)
 
