@@ -42,6 +42,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.github.nscala-time"                 %% "nscala-time"             % "2.22.0"
     "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-core"     % "0.49.0"
     "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-macros"   % "0.49.0"     % Provided
+    "org.rogach"                             %% "scallop"                 % "3.3.0"
     "org.scala-js"                           %% "scalajs-stubs"           % "1.0.0-RC1"
     "org.wvlet.airframe"                     %% "airframe"                % "19.5.2"
 
@@ -61,6 +62,8 @@ Add using `addSbtPlugin(...)`:
 
     "org.scala-js"                      % "sbt-scalajs"               % "0.6.28"
     "org.scala-js"                      % "sbt-scalajs"               % "1.0.0-M8"
+    "org.wartremover"                   % "sbt-wartremover"           % "2.4.2"
+    "org.wartremover"                   % "sbt-wartremover-contrib"   % "1.3.1"
 
 ### Pending
 
