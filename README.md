@@ -12,9 +12,6 @@ but perhaps shows off a few standard library APIs.
 > runMain MakeReleaseNotes $PrevVersion $CurrentVersion $ReleaseYear/$ReleaseMonth/$ReleaseDay "$pathToScalaScalaCheckout"
 ```
 
-
-1. Fill in community project list from emails.  See the `community-projects.txt` file for the format and how to copy-paste into it.
-
 ## Contributing
 
 Feel free to improve.   Make sure to sign the Scala CLA.
