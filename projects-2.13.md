@@ -29,6 +29,7 @@ Add in sbt using `libraryDependencies += ...`:
 Add in sbt using `libraryDependencies += ... % Test`:
 
     "com.eed3si9n.expecty"             %% "expecty"                  % "0.11.0"       % Test
+    "hedgehog"                         https://github.com/hedgehogqa/scala-hedgehog#sbt-binary-dependency // Bintray
     "org.scalacheck"                   %% "scalacheck"               % "1.14.0"       % Test
     "org.scalatest"                    %% "scalatest"                % "3.0.8-RC5"    % Test
 
@@ -37,6 +38,7 @@ Add in sbt using `libraryDependencies += ... % Test`:
 Add in sbt using `libraryDependencies += ...`:
 
     "com.chuusai"                            %% "shapeless"               % "2.3.3"
+    "com.github.nscala-time"                 %% "nscala-time"             % "2.22.0"
     "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-core"     % "0.49.0"
     "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-macros"   % "0.49.0"     % Provided
     "org.scala-js"                           %% "scalajs-stubs"           % "1.0.0-RC1"
