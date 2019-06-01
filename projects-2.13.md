@@ -84,6 +84,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [cats](https://github.com/typelevel/cats/issues/2864)
   * blocked by simulacrum, machinist
 * [akka](https://github.com/akka/akka/issues/27049)
+* [scala-swing](https://github.com/scala/scala-swing/issues/109)
 
 #### Old RC2/RC1/M5/M4 tickets
 
