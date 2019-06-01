@@ -48,6 +48,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-core"     % "0.49.0"
     "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-macros"   % "0.49.0"     % Provided
     "eu.timepit"                             %% "refined"                 % "0.9.7"
+    "io.spray"                               %% "spray-json"              % "1.3.5"
     "org.rogach"                             %% "scallop"                 % "3.3.0"
     "org.scala-js"                           %% "scalajs-stubs"           % "1.0.0-RC1"
     "org.typelevel"                          %% "jawn-ast"                % "0.14.2"
