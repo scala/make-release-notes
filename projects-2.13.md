@@ -50,6 +50,8 @@ Add in sbt using `libraryDependencies += ...`:
     "eu.timepit"                             %% "refined"                 % "0.9.7"
     "org.rogach"                             %% "scallop"                 % "3.3.0"
     "org.scala-js"                           %% "scalajs-stubs"           % "1.0.0-RC1"
+    "org.typelevel"                          %% "jawn-ast"                % "0.14.2"
+    "org.typelevel"                          %% "jawn-parser"             % "0.14.2"
     "org.wvlet.airframe"                     %% "airframe"                % "19.5.2"
 
 ### Compiler plugins
