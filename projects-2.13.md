@@ -22,6 +22,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.scala-lang.modules"           %% "scala-java8-compat"         % "0.9.0"
     "org.scala-lang.modules"           %% "scala-parallel-collections" % "0.2.0"
     "org.scala-lang.modules"           %% "scala-parser-combinators"   % "1.1.2"
+    "org.scala-lang.modules"           %% "scala-swing"                % "2.1.1"
     "org.scala-lang.modules"           %% "scala-xml"                  % "1.2.0"
 
 ### Testing libraries
@@ -84,7 +85,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 #### New RC3 tickets
 
 * [akka](https://github.com/akka/akka/issues/27049)
-* [scala-swing](https://github.com/scala/scala-swing/issues/109)
 
 #### Old RC2/RC1/M5/M4 tickets
 
