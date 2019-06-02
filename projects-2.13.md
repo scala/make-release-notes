@@ -51,8 +51,11 @@ Add in sbt using `libraryDependencies += ...`:
     "io.spray"                               %% "spray-json"              % "1.3.5"
     "org.rogach"                             %% "scallop"                 % "3.3.0"
     "org.scala-js"                           %% "scalajs-stubs"           % "1.0.0-RC1"
+    "org.typelevel"                          %% "cats-core"               % "2.0.0-M3"
     "org.typelevel"                          %% "jawn-ast"                % "0.14.2"
     "org.typelevel"                          %% "jawn-parser"             % "0.14.2"
+    "org.typelevel"                          %% "machinist"               % "0.6.8"
+    "org.typelevel"                          %% "simulacrum"              % "0.18.0"
     "org.wvlet.airframe"                     %% "airframe"                % "19.5.2"
 
 ### Compiler plugins
@@ -80,10 +83,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 #### New RC3 tickets
 
-* [simulacrum](https://github.com/mpilquist/simulacrum/pull/142)
-* [machinist](https://github.com/typelevel/machinist/pull/51)
-* [cats](https://github.com/typelevel/cats/issues/2864)
-  * blocked by simulacrum, machinist
 * [akka](https://github.com/akka/akka/issues/27049)
 * [scala-swing](https://github.com/scala/scala-swing/issues/109)
 
