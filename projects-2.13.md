@@ -53,6 +53,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.rogach"                             %% "scallop"                 % "3.3.0"
     "org.scala-js"                           %% "scalajs-stubs"           % "1.0.0-RC1"
     "org.typelevel"                          %% "cats-core"               % "2.0.0-M3"
+    "org.typelevel"                          %% "cats-effect"             % "2.0.0-M3"
     "org.typelevel"                          %% "jawn-ast"                % "0.14.2"
     "org.typelevel"                          %% "jawn-parser"             % "0.14.2"
     "org.typelevel"                          %% "machinist"               % "0.6.8"
