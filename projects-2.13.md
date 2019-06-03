@@ -48,6 +48,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.github.nscala-time"                 %% "nscala-time"             % "2.22.0"
     "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-core"     % "0.49.0"
     "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-macros"   % "0.49.0"     % Provided
+    "com.typesafe.scala-logging"             %% "scala-logging"           % "3.9.2"
     "eu.timepit"                             %% "refined"                 % "0.9.7"
     "io.spray"                               %% "spray-json"              % "1.3.5"
     "org.json4s"                             %% "json4s-native"           % "3.6.6"
@@ -126,7 +127,6 @@ Other:
 * [mdoc](https://github.com/scalameta/mdoc/issues/156)
 * [scalatra](https://github.com/scalatra/scalatra/issues/831)
 * [twitter-util](https://github.com/twitter/util/issues/219)
-* [scala-logging](https://github.com/lightbend/scala-logging/pull/159)
 * [TwoTails](https://github.com/wheaties/TwoTails/pull/36)
 * [grizzled-scala](https://github.com/bmc/grizzled-scala/pull/17)
 * [kafka](https://github.com/apache/kafka/pull/5454)
