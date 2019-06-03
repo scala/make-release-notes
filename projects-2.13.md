@@ -50,6 +50,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-macros"   % "0.49.0"     % Provided
     "eu.timepit"                             %% "refined"                 % "0.9.7"
     "io.spray"                               %% "spray-json"              % "1.3.5"
+    "org.json4s"                             %% "json4s-native"           % "3.6.6"
     "org.rogach"                             %% "scallop"                 % "3.3.0"
     "org.scala-js"                           %% "scalajs-stubs"           % "1.0.0-RC1"
     "org.typelevel"                          %% "cats-core"               % "2.0.0-M3"
@@ -65,6 +66,7 @@ Add in sbt using `libraryDependencies += ...`:
 Add in sbt using `addCompilerPlugin(...)`:
 
     "com.github.ghik"           %% "silencer-plugin"          % "1.4.0"
+    "com.github.tomasmikula"    %% "pascal"                   % "0.3.4"
     "com.typesafe.genjavadoc"   %  "genjavadoc-plugin"        % "0.13"     cross CrossVersion.patch
     "org.typelevel"             %% "kind-projector"           % "0.10.2"
 
