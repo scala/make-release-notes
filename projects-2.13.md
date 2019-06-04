@@ -85,6 +85,7 @@ Add using `addSbtPlugin(...)`:
 
     "org.scala-js"                      % "sbt-scalajs"               % "0.6.28"
     "org.scala-js"                      % "sbt-scalajs"               % "1.0.0-M8"
+    "org.scoverage"                     % "sbt-scoverage"             % "1.6.0-RC3"
     "org.wartremover"                   % "sbt-wartremover"           % "2.4.2"
     "org.wartremover"                   % "sbt-wartremover-contrib"   % "1.3.1"
 
@@ -94,7 +95,11 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 #### New RC3 tickets
 
-none right now. more soon?
+* [grizzled-scala](https://github.com/bmc/grizzled-scala/pull/18)
+* [json-lenses](https://github.com/jrudolph/json-lenses/pull/32)
+* [macro-compat](https://github.com/milessabin/macro-compat/pull/85)
+* [scala-typed-holes](https://github.com/cb372/scala-typed-holes/pull/20)
+* [utest](https://github.com/lihaoyi/utest/pull/200)
 
 #### Old RC2/RC1/M5/M4 tickets
 
