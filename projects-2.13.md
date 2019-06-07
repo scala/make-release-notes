@@ -29,13 +29,13 @@ Add in sbt using `libraryDependencies += ... % Test`:
 
 Add in sbt using `libraryDependencies += ...`:
 
-    (coming soon)
+    "org.scala-js"                   %% "scalajs-stubs"           % "1.0.0"
 
 ### Compiler plugins
 
 Add in sbt using `addCompilerPlugin(...)`:
 
-    "org.typelevel"             %% "kind-projector"           % "0.10.3"
+    "org.typelevel"                  %% "kind-projector"           % "0.10.3"
 
 ### sbt plugins
 
