@@ -56,7 +56,9 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 #### New 2.13 tickets
 
-    (coming soon)
+* [scala-collection-compat](https://github.com/scala/scala-collection-compat/issues/215)
+* [scalacheck](https://github.com/rickynils/scalacheck/issues/480)
+* [genjavadoc](https://github.com/lightbend/genjavadoc/issues/178)
 
 #### Old RC3/RC2/RC1/M5/M4 tickets
 
