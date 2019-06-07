@@ -17,7 +17,7 @@ You can also query [Maven Central](https://mvnrepository.com/artifact/org.scala-
 
 Add in sbt using `libraryDependencies += ...`:
 
-    (coming soon)
+    "org.scala-lang.modules"           %% "scala-xml"                  % "1.2.0"
 
 ### Testing libraries
 
