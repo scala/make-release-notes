@@ -1,4 +1,4 @@
-## Available Projects for Scala 2.13.0
+## Available Projects for Scala 2.13
 
 Library maintainers, library users, please [edit this page](https://github.com/scala/make-release-notes/edit/2.13.x/projects-2.13.md) and let the world know what libraries are available.
 
@@ -6,10 +6,10 @@ Library maintainers, library users, please [edit this page](https://github.com/s
 
 Scaladex, the index of Scala libraries, now offers searching by target version:
 
-* [All libraries for 2.13.0](https://index.scala-lang.org/search?q=fullScalaVersion%3A2.13.0)
-* [Scala modules for 2.13.0](https://index.scala-lang.org/search?q=fullScalaVersion%3A2.13.0+AND+organization%3Ascala)
-* [Testing frameworks for 2.13.0](https://index.scala-lang.org/search?q=fullScalaVersion%3A2.13.0+AND+topics%3Atesting)
-* [Compiler plugins for 2.13.0](https://index.scala-lang.org/search?q=fullScalaVersion%3A2.13.0+AND+topics%3Acompiler-plugin)
+* [All libraries for 2.13](https://index.scala-lang.org/search?q=fullScalaVersion%3A2.13.0)
+* [Scala modules for 2.13](https://index.scala-lang.org/search?q=fullScalaVersion%3A2.13.0+AND+organization%3Ascala)
+* [Testing frameworks for 2.13](https://index.scala-lang.org/search?q=fullScalaVersion%3A2.13.0+AND+topics%3Atesting)
+* [Compiler plugins for 2.13](https://index.scala-lang.org/search?q=fullScalaVersion%3A2.13.0+AND+topics%3Acompiler-plugin)
 
 You can also query [Maven Central](https://mvnrepository.com/artifact/org.scala-lang/scala-library/2.13.0/usages) or [Bintray](https://bintray.com/search?query=_2.13.0) for 2.13 libraries.
 
@@ -50,7 +50,9 @@ Add using `addSbtPlugin(...)`:
 
 You can subscribe to these tickets to find out when a library you want becomes available:
 
-#### New 2.13.0 tickets
+#### New 2.13 tickets
+
+    (coming soon)
 
 #### Old RC3/RC2/RC1/M5/M4 tickets
 
