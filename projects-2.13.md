@@ -23,7 +23,7 @@ Add in sbt using `libraryDependencies += ...`:
 
 Add in sbt using `libraryDependencies += ... % Test`:
 
-    (coming soon)
+    "com.eed3si9n.expecty"             %% "expecty"                  % "0.11.0"       % Test
 
 ### Other libraries
 
