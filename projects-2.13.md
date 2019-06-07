@@ -29,11 +29,11 @@ Add in sbt using `libraryDependencies += ... % Test`:
 
 Add in sbt using `libraryDependencies += ...`:
 
-   "com.github.plokhotnyuk.fsi"             %% "fsi-macros"              % "0.6.0"
-   "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-core"     % "0.49.0"
-   "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-macros"   % "0.49.0"      % Provided
-   "com.github.plokhotnyuk.rtree2d"         %% "rtree2d-core"            % "0.9.0"
-   "org.scala-js"                           %% "scalajs-stubs"           % "1.0.0"
+    "com.github.plokhotnyuk.fsi"             %% "fsi-macros"              % "0.6.0"
+    "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-core"     % "0.49.0"
+    "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-macros"   % "0.49.0"      % Provided
+    "com.github.plokhotnyuk.rtree2d"         %% "rtree2d-core"            % "0.9.0"
+    "org.scala-js"                           %% "scalajs-stubs"           % "1.0.0"
 
 ### Compiler plugins
 
