@@ -35,7 +35,7 @@ Add in sbt using `libraryDependencies += ...`:
 
 Add in sbt using `addCompilerPlugin(...)`:
 
-    (coming soon)
+    "org.typelevel"             %% "kind-projector"           % "0.10.3"
 
 ### sbt plugins
 
