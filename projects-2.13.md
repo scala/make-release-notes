@@ -87,6 +87,7 @@ Add using `addSbtPlugin(...)`:
 
     "org.scala-js"                      % "sbt-scalajs"               % "0.6.28"
     "org.scala-js"                      % "sbt-scalajs"               % "1.0.0-M8"
+    "org.tpolecat"                      % "tut-plugin"                % "0.6.12"
 
 ### Pending
 
