@@ -54,6 +54,19 @@ Add in sbt using `libraryDependencies += ...`:
     "org.scalaz"                             %% "scalaz-core"             % "7.2.27"
     "org.squeryl"                            %% "squeryl"                 % "0.9.14"
     "org.typelevel"                          %% "machinist"               % "0.6.8"
+    "com.lihaoyi"                            %% "sourcecode"              % "0.1.7"
+    "com.lihaoyi"                            %% "utest"                   % "0.6.9"
+    "com.lihaoyi"                            %% "fansi"                   % "0.2.7"
+    "com.lihaoyi"                            %% "acyclic"                 % "0.2.0"
+    "com.lihaoyi"                            %% "geny"                    % "0.1.8"
+    "com.lihaoyi"                            %% "os-lib"                  % "0.3.0"
+    "com.lihaoyi"                            %% "fastparse"               % "2.1.3"
+    "com.lihaoyi"                            %% "pprint"                  % "0.5.5"
+    "com.lihaoyi"                            %% "ujson"                   % "0.7.5"
+    "com.lihaoyi"                            %% "upack"                   % "0.7.5"
+    "com.lihaoyi"                            %% "upickle"                 % "0.7.5"
+    "com.lihaoyi"                            %% "requests-scala"          % "0.2.0"
+    "com.lihaoyi"                            %% "scalatags"               % "0.7.0"
 
 ### Compiler plugins
 
