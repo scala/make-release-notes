@@ -63,6 +63,7 @@ Add in sbt using `addCompilerPlugin(...)`:
     "org.typelevel"                  %% "kind-projector"           % "0.10.3"
     "org.wartremover"                %  "sbt-wartremover"          % "2.4.2"
     "org.wartremover"                %  "sbt-wartremover-contrib"  % "1.3.1"
+    "com.github.ghik"                %% "silencer-plugin"          % "1.4.1"
 
 ### sbt plugins
 
