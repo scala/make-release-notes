@@ -27,6 +27,7 @@ Add in sbt using `libraryDependencies += ... % Test`:
 
     "com.eed3si9n.expecty"             %% "expecty"                  % "0.11.0"       % Test
     "com.github.scalaprops"            %% "scalaprops"               % "0.6.0"        % Test
+    "hedgehog"                         https://github.com/hedgehogqa/scala-hedgehog#sbt-binary-dependency // Bintray
 
 ### Other libraries
 
@@ -57,6 +58,7 @@ Add in sbt using `libraryDependencies += ...`:
 
 Add in sbt using `addCompilerPlugin(...)`:
 
+    "com.olegpy"                     %% "better-monadic-for"       % "0.3.0"
     "com.typesafe.genjavadoc"        %  "genjavadoc-plugin"        % "0.13"     cross CrossVersion.patch
     "org.typelevel"                  %% "kind-projector"           % "0.10.3"
     "org.wartremover"                %  "sbt-wartremover"          % "2.4.2"
