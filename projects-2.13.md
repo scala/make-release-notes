@@ -26,22 +26,38 @@ Add in sbt using `libraryDependencies += ...`:
 Add in sbt using `libraryDependencies += ... % Test`:
 
     "com.eed3si9n.expecty"             %% "expecty"                  % "0.11.0"       % Test
+    "com.github.scalaprops"            %% "scalaprops"               % "0.6.0"        % Test
 
 ### Other libraries
 
 Add in sbt using `libraryDependencies += ...`:
 
+    "com.github.nscala-time"                 %% "nscala-time"             % "2.22.0"
     "com.github.plokhotnyuk.fsi"             %% "fsi-macros"              % "0.6.0"
     "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-core"     % "0.50.0"
     "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-macros"   % "0.50.0"      % Provided
     "com.github.plokhotnyuk.rtree2d"         %% "rtree2d-core"            % "0.9.0"
+    "com.github.xuwei-k"                     %% "applybuilder"            % "0.2.4"
+    "com.github.xuwei-k"                     %% "iarray"                  % "0.5.0"
+    "com.github.xuwei-k"                     %% "msgpack4z-argonaut"      % "0.5.3"
+    "com.github.xuwei-k"                     %% "msgpack4z-core"          % "0.3.10"
+    "com.github.xuwei-k"                     %% "msgpack4z-native"        % "0.3.5"
+    "com.github.xuwei-k"                     %% "nobox"                   % "0.3.0"
+    "com.github.xuwei-k"                     %% "optparse-applicative"    % "0.8.1"
+    "com.github.xuwei-k"                     %% "zeroapply"               % "0.2.3"
+    "io.argonaut"                            %% "argonaut"                % "6.2.3"
+    "org.json4s"                             %% "json4s-native"           % "3.6.6"
     "org.scala-js"                           %% "scalajs-stubs"           % "1.0.0"
+    "org.scalaz"                             %% "scalaz-core"             % "7.2.27"
+    "org.squeryl"                            %% "squeryl"                 % "0.9.14"
 
 ### Compiler plugins
 
 Add in sbt using `addCompilerPlugin(...)`:
 
     "org.typelevel"                  %% "kind-projector"           % "0.10.3"
+    "org.wartremover"                %  "sbt-wartremover"          % "2.4.2"
+    "org.wartremover"                %  "sbt-wartremover-contrib"  % "1.3.1"
 
 ### sbt plugins
 
