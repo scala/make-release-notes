@@ -81,6 +81,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 #### New 2.13 tickets
 
+* [metrics-scala](https://github.com/erikvanoosten/metrics-scala/issues/157)
 * [scalacheck](https://github.com/rickynils/scalacheck/issues/480)
 
 #### Old RC3/RC2/RC1/M5/M4 tickets
