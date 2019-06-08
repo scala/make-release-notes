@@ -57,6 +57,7 @@ Add in sbt using `libraryDependencies += ...`:
 
 Add in sbt using `addCompilerPlugin(...)`:
 
+    "com.typesafe.genjavadoc"        %  "genjavadoc-plugin"        % "0.13"     cross CrossVersion.patch
     "org.typelevel"                  %% "kind-projector"           % "0.10.3"
     "org.wartremover"                %  "sbt-wartremover"          % "2.4.2"
     "org.wartremover"                %  "sbt-wartremover-contrib"  % "1.3.1"
@@ -77,7 +78,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 #### New 2.13 tickets
 
 * [scalacheck](https://github.com/rickynils/scalacheck/issues/480)
-* [genjavadoc](https://github.com/lightbend/genjavadoc/issues/178)
 
 #### Old RC3/RC2/RC1/M5/M4 tickets
 
