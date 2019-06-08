@@ -51,6 +51,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.scala-js"                           %% "scalajs-stubs"           % "1.0.0"
     "org.scalaz"                             %% "scalaz-core"             % "7.2.27"
     "org.squeryl"                            %% "squeryl"                 % "0.9.14"
+    "org.typelevel"                          %% "machinist"               % "0.6.8"
 
 ### Compiler plugins
 
