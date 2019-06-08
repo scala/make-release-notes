@@ -17,6 +17,8 @@ You can also query [Maven Central](https://mvnrepository.com/artifact/org.scala-
 
 Add in sbt using `libraryDependencies += ...`:
 
+    "org.scala-lang.modules"           %% "scala-collection-compat"    % "2.0.0"
+    "org.scala-lang.modules"           %% "scala-parser-combinators"   % "1.1.2"
     "org.scala-lang.modules"           %% "scala-xml"                  % "1.2.0"
 
 ### Testing libraries
@@ -56,7 +58,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 #### New 2.13 tickets
 
-* [scala-collection-compat](https://github.com/scala/scala-collection-compat/issues/215)
 * [scalacheck](https://github.com/rickynils/scalacheck/issues/480)
 * [genjavadoc](https://github.com/lightbend/genjavadoc/issues/178)
 
