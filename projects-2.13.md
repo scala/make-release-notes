@@ -28,6 +28,7 @@ Add in sbt using `libraryDependencies += ... % Test`:
 
     "com.eed3si9n.expecty"             %% "expecty"                  % "0.11.0"       % Test
     "com.github.scalaprops"            %% "scalaprops"               % "0.6.0"        % Test
+    "com.lihaoyi"                      %% "utest"                    % "0.6.9"        % Test
     "hedgehog"                         https://github.com/hedgehogqa/scala-hedgehog#sbt-binary-dependency // Bintray
 
 ### Other libraries
@@ -48,36 +49,35 @@ Add in sbt using `libraryDependencies += ...`:
     "com.github.xuwei-k"                     %% "nobox"                   % "0.3.0"
     "com.github.xuwei-k"                     %% "optparse-applicative"    % "0.8.1"
     "com.github.xuwei-k"                     %% "zeroapply"               % "0.2.3"
+    "com.lihaoyi"                            %% "fansi"                   % "0.2.7"
+    "com.lihaoyi"                            %% "fastparse"               % "2.1.3"
+    "com.lihaoyi"                            %% "geny"                    % "0.1.8"
+    "com.lihaoyi"                            %% "os-lib"                  % "0.3.0"
+    "com.lihaoyi"                            %% "pprint"                  % "0.5.5"
+    "com.lihaoyi"                            %% "requests-scala"          % "0.2.0"
+    "com.lihaoyi"                            %% "scalatags"               % "0.7.0"
+    "com.lihaoyi"                            %% "sourcecode"              % "0.1.7"
+    "com.lihaoyi"                            %% "ujson"                   % "0.7.5"
+    "com.lihaoyi"                            %% "upack"                   % "0.7.5"
+    "com.lihaoyi"                            %% "upickle"                 % "0.7.5"
     "io.argonaut"                            %% "argonaut"                % "6.2.3"
     "org.json4s"                             %% "json4s-native"           % "3.6.6"
     "org.scala-js"                           %% "scalajs-stubs"           % "1.0.0"
     "org.scalaz"                             %% "scalaz-core"             % "7.2.27"
     "org.squeryl"                            %% "squeryl"                 % "0.9.14"
     "org.typelevel"                          %% "machinist"               % "0.6.8"
-    "com.lihaoyi"                            %% "sourcecode"              % "0.1.7"
-    "com.lihaoyi"                            %% "utest"                   % "0.6.9"
-    "com.lihaoyi"                            %% "fansi"                   % "0.2.7"
-    "com.lihaoyi"                            %% "acyclic"                 % "0.2.0"
-    "com.lihaoyi"                            %% "geny"                    % "0.1.8"
-    "com.lihaoyi"                            %% "os-lib"                  % "0.3.0"
-    "com.lihaoyi"                            %% "fastparse"               % "2.1.3"
-    "com.lihaoyi"                            %% "pprint"                  % "0.5.5"
-    "com.lihaoyi"                            %% "ujson"                   % "0.7.5"
-    "com.lihaoyi"                            %% "upack"                   % "0.7.5"
-    "com.lihaoyi"                            %% "upickle"                 % "0.7.5"
-    "com.lihaoyi"                            %% "requests-scala"          % "0.2.0"
-    "com.lihaoyi"                            %% "scalatags"               % "0.7.0"
 
 ### Compiler plugins
 
 Add in sbt using `addCompilerPlugin(...)`:
 
+    "com.github.ghik"                %% "silencer-plugin"          % "1.4.1"
+    "com.lihaoyi"                    %% "acyclic"                  % "0.2.0"
     "com.olegpy"                     %% "better-monadic-for"       % "0.3.0"
     "com.typesafe.genjavadoc"        %  "genjavadoc-plugin"        % "0.13"     cross CrossVersion.patch
     "org.typelevel"                  %% "kind-projector"           % "0.10.3"
     "org.wartremover"                %  "sbt-wartremover"          % "2.4.2"
     "org.wartremover"                %  "sbt-wartremover-contrib"  % "1.3.1"
-    "com.github.ghik"                %% "silencer-plugin"          % "1.4.1"
 
 ### sbt plugins
 
@@ -130,7 +130,6 @@ Other:
 * [json-lenses](https://github.com/jrudolph/json-lenses/pull/32)
 * [macro-compat](https://github.com/milessabin/macro-compat/pull/85)
 * [scala-typed-holes](https://github.com/cb372/scala-typed-holes/pull/20)
-* [utest](https://github.com/lihaoyi/utest/pull/200)
 * [gatling](https://github.com/gatling/gatling/issues/3566)
 * [decline](https://github.com/bkirwi/decline/pull/47)
 * [dispatch](https://github.com/dispatch/reboot/issues/210)
