@@ -108,6 +108,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [akka-http](https://github.com/akka/akka-http/issues/2563)
 * [scalacheck](https://github.com/rickynils/scalacheck/issues/480)
 * [metrics-scala](https://github.com/erikvanoosten/metrics-scala/issues/157)
+* [scallop](https://github.com/scallop/scallop/issues/192)
 
 #### Old RC3/RC2/RC1/M5/M4 tickets
 
