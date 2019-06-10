@@ -78,6 +78,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.squeryl"                            %% "squeryl"                 % "0.9.14"
     "org.typelevel"                          %% "machinist"               % "0.6.8"
     "ws.unfiltered"                          %% "unfiltered-filter"       % "0.10.0-M4"
+    "org.wvlet.airframe"                     %% "airframe"                % "19.6.1"
 
 ### Compiler plugins
 
