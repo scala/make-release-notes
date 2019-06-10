@@ -37,12 +37,14 @@ Add in sbt using `libraryDependencies += ... % Test`:
     "org.scalatest"                    %% "scalatest"                % "3.0.8"        % Test
     "org.scalatest"                    %% "scalatest"                % "3.1.0-SNAP13" % Test
     "org.specs2"                       %% "specs2-core"              % "4.5.1"        % Test
+    "org.typelevel"                    %% "claimant"                 % "0.1.1"        % Test
 
 ### Other libraries
 
 Add in sbt using `libraryDependencies += ...`:
 
     "com.chuusai"                            %% "shapeless"               % "2.3.3"
+    "com.github.mpilquist"                   %% "simulacrum"              % "0.19.0"
     "com.github.nscala-time"                 %% "nscala-time"             % "2.22.0"
     "com.github.plokhotnyuk.fsi"             %% "fsi-macros"              % "0.6.0"
     "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-core"     % "0.50.0"
