@@ -33,6 +33,8 @@ Add in sbt using `libraryDependencies += ... % Test`:
     "com.github.scalaprops"            %% "scalaprops"               % "0.6.0"        % Test
     "com.lihaoyi"                      %% "utest"                    % "0.6.9"        % Test
     "hedgehog"                         https://github.com/hedgehogqa/scala-hedgehog#sbt-binary-dependency // Bintray
+    "org.scalacheck"                   %% "scalacheck"               % "1.14.0"       % Test
+    "org.scalatest"                    %% "scalatest"                % "3.1.0-SNAP13" % Test
 
 ### Other libraries
 
@@ -82,8 +84,6 @@ Add in sbt using `addCompilerPlugin(...)`:
     "com.olegpy"                     %% "better-monadic-for"       % "0.3.0"
     "com.typesafe.genjavadoc"        %  "genjavadoc-plugin"        % "0.13"     cross CrossVersion.patch
     "org.typelevel"                  %% "kind-projector"           % "0.10.3"
-    "org.wartremover"                %  "sbt-wartremover"          % "2.4.2"
-    "org.wartremover"                %  "sbt-wartremover-contrib"  % "1.3.1"
 
 ### sbt plugins
 
@@ -94,6 +94,8 @@ Add using `addSbtPlugin(...)`:
     "org.scala-js"                      % "sbt-scalajs"               % "0.6.28"
     "org.scala-js"                      % "sbt-scalajs"               % "1.0.0-M8"
     "org.tpolecat"                      % "tut-plugin"                % "0.6.12"
+    "org.wartremover"                   % "sbt-wartremover"           % "2.4.2"
+    "org.wartremover"                   % "sbt-wartremover-contrib"   % "1.3.1"
 
 ### Pending
 
@@ -102,11 +104,11 @@ You can subscribe to these tickets to find out when a library you want becomes a
 #### New 2.13 tickets
 
 * [scalatest](https://github.com/scalatest/scalatest/issues/1601)
+    * 3.1.0-SNAP13 is available, a 3.0.x release is pending
 * [specs2](https://github.com/etorreborre/specs2/issues/745)
 * [ssl-config](https://github.com/lightbend/ssl-config/pull/178)
 * [akka](https://github.com/akka/akka/issues/26764)
 * [akka-http](https://github.com/akka/akka-http/issues/2563)
-* [scalacheck](https://github.com/rickynils/scalacheck/issues/480)
 * [metrics-scala](https://github.com/erikvanoosten/metrics-scala/issues/157)
 * [scallop](https://github.com/scallop/scallop/issues/192)
 
