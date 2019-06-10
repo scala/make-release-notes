@@ -33,6 +33,7 @@ Add in sbt using `libraryDependencies += ... % Test`:
     "com.github.scalaprops"            %% "scalaprops"               % "0.6.0"        % Test
     "com.lihaoyi"                      %% "utest"                    % "0.6.9"        % Test
     "hedgehog"                         https://github.com/hedgehogqa/scala-hedgehog#sbt-binary-dependency // Bintray
+    "org.scalacheck"                   %% "scalacheck"               % "1.14.0"       % Test
 
 ### Other libraries
 
@@ -106,7 +107,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [ssl-config](https://github.com/lightbend/ssl-config/pull/178)
 * [akka](https://github.com/akka/akka/issues/26764)
 * [akka-http](https://github.com/akka/akka-http/issues/2563)
-* [scalacheck](https://github.com/rickynils/scalacheck/issues/480)
 * [metrics-scala](https://github.com/erikvanoosten/metrics-scala/issues/157)
 * [scallop](https://github.com/scallop/scallop/issues/192)
 
