@@ -34,6 +34,7 @@ Add in sbt using `libraryDependencies += ... % Test`:
     "com.lihaoyi"                      %% "utest"                    % "0.6.9"        % Test
     "hedgehog"                         https://github.com/hedgehogqa/scala-hedgehog#sbt-binary-dependency // Bintray
     "org.scalacheck"                   %% "scalacheck"               % "1.14.0"       % Test
+    "org.scalatest"                    %% "scalatest"                % "3.0.8"        % Test
     "org.scalatest"                    %% "scalatest"                % "3.1.0-SNAP13" % Test
 
 ### Other libraries
@@ -105,8 +106,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 #### New 2.13 tickets
 
-* [scalatest](https://github.com/scalatest/scalatest/issues/1601)
-    * 3.1.0-SNAP13 is available, a 3.0.x release is pending
 * [specs2](https://github.com/etorreborre/specs2/issues/745)
 * [ssl-config](https://github.com/lightbend/ssl-config/pull/178)
 * [akka](https://github.com/akka/akka/issues/26764)
