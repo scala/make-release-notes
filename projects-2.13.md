@@ -69,7 +69,9 @@ Add in sbt using `libraryDependencies += ...`:
     "io.argonaut"                            %% "argonaut"                % "6.2.3"
     "org.foundweekends"                      %% "knockoff"                % "0.8.12"
     "org.json4s"                             %% "json4s-native"           % "3.6.6"
+    "org.rogach"                             %% "scallop"                 % "3.3.0"
     "org.scala-js"                           %% "scalajs-stubs"           % "1.0.0"
+    "org.scala-stm"                          %% "scala-stm"               % "0.9.1"
     "org.scalaz"                             %% "scalaz-core"             % "7.2.27"
     "org.squeryl"                            %% "squeryl"                 % "0.9.14"
     "org.typelevel"                          %% "machinist"               % "0.6.8"
@@ -110,7 +112,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [akka](https://github.com/akka/akka/issues/26764)
 * [akka-http](https://github.com/akka/akka-http/issues/2563)
 * [metrics-scala](https://github.com/erikvanoosten/metrics-scala/issues/157)
-* [scallop](https://github.com/scallop/scallop/issues/192)
 
 #### Old RC3/RC2/RC1/M5/M4 tickets
 
