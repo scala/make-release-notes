@@ -36,6 +36,7 @@ Add in sbt using `libraryDependencies += ... % Test`:
     "org.scalacheck"                   %% "scalacheck"               % "1.14.0"       % Test
     "org.scalatest"                    %% "scalatest"                % "3.0.8"        % Test
     "org.scalatest"                    %% "scalatest"                % "3.1.0-SNAP13" % Test
+    "org.specs2"                       %% "specs2-core"              % "4.5.1"        % Test
 
 ### Other libraries
 
@@ -106,7 +107,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 #### New 2.13 tickets
 
-* [specs2](https://github.com/etorreborre/specs2/issues/745)
 * [ssl-config](https://github.com/lightbend/ssl-config/pull/178)
 * [akka](https://github.com/akka/akka/issues/26764)
 * [akka-http](https://github.com/akka/akka-http/issues/2563)
