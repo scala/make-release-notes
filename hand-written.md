@@ -1,7 +1,16 @@
-Scala 2.13.0-RC3 fixes a few late-breaking bugs.
+We are delighted to announce the availability of Scala 2.13!
 
-If no major problems are found in this release candidate, we will re-release it as 2.13.0.  In the meantime, we'll be working primarily on documentation and on helping the ecosystem upgrade.
+The 2.13.0 release improves Scala in the following areas:
 
-For details, refer to the [release notes](https://github.com/scala/scala/releases/tag/v2.13.0-RC3) on GitHub.
+* **Collections**: Standard library collections have been overhauled
+  for simplicity, performance, and safety. This is the centerpiece
+  of the release.
+* **Standard library**: The library offers more in some
+  areas, has slimmed down in others.  `Future` is faster and more robust.
+* **Language**: Literal types, partial unification, by-name
+  implicits, more.
+* **Compiler**: 5-10% faster, deterministic output, improved inliner.
 
-[download](https://www.scala-lang.org/download/2.13.0-RC3.html)
+To learn more, see the [release notes](https://github.com/scala/scala/releases/tag/v2.13.0) on GitHub.
+
+[download](https://www.scala-lang.org/download/2.13.0.html)
