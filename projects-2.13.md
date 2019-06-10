@@ -83,8 +83,6 @@ Add in sbt using `addCompilerPlugin(...)`:
     "com.olegpy"                     %% "better-monadic-for"       % "0.3.0"
     "com.typesafe.genjavadoc"        %  "genjavadoc-plugin"        % "0.13"     cross CrossVersion.patch
     "org.typelevel"                  %% "kind-projector"           % "0.10.3"
-    "org.wartremover"                %  "sbt-wartremover"          % "2.4.2"
-    "org.wartremover"                %  "sbt-wartremover-contrib"  % "1.3.1"
 
 ### sbt plugins
 
@@ -95,6 +93,8 @@ Add using `addSbtPlugin(...)`:
     "org.scala-js"                      % "sbt-scalajs"               % "0.6.28"
     "org.scala-js"                      % "sbt-scalajs"               % "1.0.0-M8"
     "org.tpolecat"                      % "tut-plugin"                % "0.6.12"
+    "org.wartremover"                   % "sbt-wartremover"           % "2.4.2"
+    "org.wartremover"                   % "sbt-wartremover-contrib"   % "1.3.1"
 
 ### Pending
 
