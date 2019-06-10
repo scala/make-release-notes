@@ -110,6 +110,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 #### New 2.13 tickets
 
+* [scalatestplus-scalacheck](https://github.com/scalatest/scalatestplus-scalacheck/issues/10)
 * [ssl-config](https://github.com/lightbend/ssl-config/pull/178)
 * [akka](https://github.com/akka/akka/issues/26764)
 * [akka-http](https://github.com/akka/akka-http/issues/2563)
