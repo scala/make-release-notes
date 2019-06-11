@@ -148,6 +148,7 @@ Typelevel and related:
 * [monix](https://github.com/monix/monix/issues/862)
 * [blaze](https://github.com/http4s/blaze/pull/280)
 * [doobie](https://github.com/tpolecat/doobie/issues/898)
+* [singleton-ops](https://github.com/fthomas/singleton-ops/pull/90)
 
 Other:
 
