@@ -119,7 +119,8 @@ You can subscribe to these tickets to find out when a library you want becomes a
 #### New 2.13 tickets
 
 * [scalatestplus-scalacheck](https://github.com/scalatest/scalatestplus-scalacheck/issues/10)
-* [akka-http](https://github.com/akka/akka-http/issues/2563)
+* [ScalaPB](https://github.com/scalapb/ScalaPB/issues/593)
+* [akka-grpc](https://github.com/akka/akka-grpc/pull/599)
 * [metrics-scala](https://github.com/erikvanoosten/metrics-scala/issues/157)
 * [cats](https://github.com/typelevel/cats/issues/2883)
 
