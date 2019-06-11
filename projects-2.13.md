@@ -70,7 +70,14 @@ Add in sbt using `libraryDependencies += ...`:
     "com.lihaoyi"                            %% "ujson"                   % "0.7.5"
     "com.lihaoyi"                            %% "upack"                   % "0.7.5"
     "com.lihaoyi"                            %% "upickle"                 % "0.7.5"
+    "com.typesafe"                           %% "ssl-config-core"         % "0.4.0"
+    "com.typesafe.akka"                      %% "akka-actor"              % "2.5.23"
+    "com.typesafe.akka"                      %% "akka-cluster"            % "2.5.23"
+    "com.typesafe.akka"                      %% "akka-discovery"          % "2.5.23"
+    "com.typesafe.akka"                      %% "akka-persistence"        % "2.5.23"
+    "com.typesafe.akka"                      %% "akka-stream"             % "2.5.23"
     "io.argonaut"                            %% "argonaut"                % "6.2.3"
+    "io.spray"                               %% "spray-json"              % "1.3.5"
     "org.foundweekends"                      %% "knockoff"                % "0.8.12"
     "org.json4s"                             %% "json4s-native"           % "3.6.6"
     "org.rogach"                             %% "scallop"                 % "3.3.0"
@@ -111,8 +118,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 #### New 2.13 tickets
 
 * [scalatestplus-scalacheck](https://github.com/scalatest/scalatestplus-scalacheck/issues/10)
-* [ssl-config](https://github.com/lightbend/ssl-config/pull/178)
-* [akka](https://github.com/akka/akka/issues/26764)
 * [akka-http](https://github.com/akka/akka-http/issues/2563)
 * [metrics-scala](https://github.com/erikvanoosten/metrics-scala/issues/157)
 * [cats](https://github.com/typelevel/cats/issues/2883)
