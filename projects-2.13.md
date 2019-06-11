@@ -74,6 +74,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.typesafe.akka"                      %% "akka-actor"              % "2.5.23"
     "com.typesafe.akka"                      %% "akka-cluster"            % "2.5.23"
     "com.typesafe.akka"                      %% "akka-discovery"          % "2.5.23"
+    "com.typesafe.akka"                      %% "akka-http"               % "10.1.8"
     "com.typesafe.akka"                      %% "akka-persistence"        % "2.5.23"
     "com.typesafe.akka"                      %% "akka-stream"             % "2.5.23"
     "io.argonaut"                            %% "argonaut"                % "6.2.3"
