@@ -51,6 +51,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.github.plokhotnyuk.jsoniter-scala"  %% "jsoniter-scala-macros"   % "0.50.0"      % Provided
     "com.github.plokhotnyuk.rtree2d"         %% "rtree2d-core"            % "0.9.0"
     "com.github.scalaprops"                  %% "scalaprops-shapeless"    % "0.3.1"
+    "com.github.scopt"                       %% "scopt"                   % "3.7.1"
     "com.github.xuwei-k"                     %% "applybuilder"            % "0.2.4"
     "com.github.xuwei-k"                     %% "iarray"                  % "0.5.0"
     "com.github.xuwei-k"                     %% "msgpack4z-argonaut"      % "0.5.3"
