@@ -79,6 +79,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.typesafe.akka"                      %% "akka-stream"             % "2.5.23"
     "io.argonaut"                            %% "argonaut"                % "6.2.3"
     "io.spray"                               %% "spray-json"              % "1.3.5"
+    "nl.grons"                               %% "metrics4-scala"          % "4.0.7"
     "org.foundweekends"                      %% "knockoff"                % "0.8.12"
     "org.json4s"                             %% "json4s-native"           % "3.6.6"
     "org.rogach"                             %% "scallop"                 % "3.3.0"
@@ -121,7 +122,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [scalatestplus-scalacheck](https://github.com/scalatest/scalatestplus-scalacheck/issues/10)
 * [ScalaPB](https://github.com/scalapb/ScalaPB/issues/593)
 * [akka-grpc](https://github.com/akka/akka-grpc/pull/599)
-* [metrics-scala](https://github.com/erikvanoosten/metrics-scala/issues/157)
 * [cats](https://github.com/typelevel/cats/issues/2883)
 
 #### Old RC3/RC2/RC1/M5/M4 tickets
