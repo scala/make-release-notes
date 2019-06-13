@@ -82,6 +82,7 @@ Add in sbt using `libraryDependencies += ...`:
     "io.spray"                               %% "spray-json"              % "1.3.5"
     "nl.grons"                               %% "metrics4-scala"          % "4.0.7"
     "org.foundweekends"                      %% "knockoff"                % "0.8.12"
+    "org.julienrf"                           %% "play-json-derived-codecs" % "5.0.0"
     "org.json4s"                             %% "json4s-native"           % "3.6.6"
     "org.rogach"                             %% "scallop"                 % "3.3.0"
     "org.scala-js"                           %% "scalajs-stubs"           % "1.0.0"
