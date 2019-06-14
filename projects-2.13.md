@@ -124,6 +124,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 #### New 2.13 tickets
 
 * [spire](https://github.com/typelevel/spire/issues/805)
+* [playframework](https://github.com/playframework/playframework/issues/9260)
 * [akka-grpc](https://github.com/akka/akka-grpc/pull/599)
 
 #### Old RC3/RC2/RC1/M5/M4 tickets
