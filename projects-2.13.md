@@ -2,17 +2,6 @@
 
 Library maintainers, library users, please [edit this page](https://github.com/scala/make-release-notes/edit/2.13.x/projects-2.13.md) and let the world know what libraries are (or [aren't](https://github.com/scala/make-release-notes/blob/2.13.x/projects-2.13.md#pending)) available.
 
-### Scaladex
-
-Scaladex, the index of Scala libraries, now offers searching by target version:
-
-* [All libraries for 2.13](https://index.scala-lang.org/search?q=fullScalaVersion%3A2.13.0)
-* [Scala modules for 2.13](https://index.scala-lang.org/search?q=fullScalaVersion%3A2.13.0+AND+organization%3Ascala)
-* [Testing frameworks for 2.13](https://index.scala-lang.org/search?q=fullScalaVersion%3A2.13.0+AND+topics%3Atesting)
-* [Compiler plugins for 2.13](https://index.scala-lang.org/search?q=fullScalaVersion%3A2.13.0+AND+topics%3Acompiler-plugin)
-
-You can also query [Maven Central](https://mvnrepository.com/artifact/org.scala-lang/scala-library/2.13.0/usages) or [Bintray](https://bintray.com/search?query=_2.13.0) for 2.13 libraries.
-
 ### Scala modules
 
 Add in sbt using `libraryDependencies += ...`:
