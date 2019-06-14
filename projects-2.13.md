@@ -82,16 +82,18 @@ Add in sbt using `libraryDependencies += ...`:
     "io.spray"                               %% "spray-json"              % "1.3.5"
     "nl.grons"                               %% "metrics4-scala"          % "4.0.7"
     "org.foundweekends"                      %% "knockoff"                % "0.8.12"
-    "org.julienrf"                           %% "play-json-derived-codecs" % "5.0.0"
     "org.json4s"                             %% "json4s-native"           % "3.6.6"
+    "org.julienrf"                           %% "play-json-derived-codecs" % "5.0.0"
     "org.rogach"                             %% "scallop"                 % "3.3.0"
     "org.scala-js"                           %% "scalajs-stubs"           % "1.0.0"
     "org.scala-stm"                          %% "scala-stm"               % "0.9.1"
     "org.scalaz"                             %% "scalaz-core"             % "7.2.27"
     "org.squeryl"                            %% "squeryl"                 % "0.9.14"
+    "org.typelevel"                          %% "cats-core"               % "2.0.0-M4"
+    "org.typelevel"                          %% "cats-effect"             % "2.0.0-M4"
     "org.typelevel"                          %% "machinist"               % "0.6.8"
-    "ws.unfiltered"                          %% "unfiltered-filter"       % "0.10.0-M4"
     "org.wvlet.airframe"                     %% "airframe"                % "19.6.1"
+    "ws.unfiltered"                          %% "unfiltered-filter"       % "0.10.0-M4"
 
 ### Compiler plugins
 
@@ -121,10 +123,8 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 #### New 2.13 tickets
 
-* [scalatestplus-scalacheck](https://github.com/scalatest/scalatestplus-scalacheck/issues/10)
-* [ScalaPB](https://github.com/scalapb/ScalaPB/issues/593)
+* [spire](https://github.com/typelevel/spire/issues/805)
 * [akka-grpc](https://github.com/akka/akka-grpc/pull/599)
-* [cats](https://github.com/typelevel/cats/issues/2883)
 
 #### Old RC3/RC2/RC1/M5/M4 tickets
 
