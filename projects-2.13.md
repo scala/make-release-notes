@@ -76,6 +76,8 @@ Add in sbt using `libraryDependencies += ...`:
     "org.rogach"                             %% "scallop"                 % "3.3.0"
     "org.scala-js"                           %% "scalajs-stubs"           % "1.0.0"
     "org.scala-stm"                          %% "scala-stm"               % "0.9.1"
+    "org.scalameta"                          %% "scalameta"               % "4.1.12"
+    "org.scalameta"                          %% "semanticdb-scalac"       % "4.1.12"
     "org.scalaz"                             %% "scalaz-core"             % "7.2.27"
     "org.squeryl"                            %% "squeryl"                 % "0.9.14"
     "org.typelevel"                          %% "cats-core"               % "2.0.0-M4"
@@ -117,6 +119,5 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [monix](https://github.com/monix/monix/issues/862)
 * [omnidoc](https://github.com/playframework/omnidoc/issues/24)
 * [playframework](https://github.com/playframework/playframework/issues/9260)
-* [scalameta](https://github.com/scalameta/scalameta/issues/1873)
 * [spire](https://github.com/typelevel/spire/issues/805)
 * [twitter-util](https://github.com/twitter/util/issues/219)
