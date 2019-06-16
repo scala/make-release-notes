@@ -67,13 +67,17 @@ Add in sbt using `libraryDependencies += ...`:
     "com.typesafe.akka"                      %% "akka-http"               % "10.1.8"
     "com.typesafe.akka"                      %% "akka-persistence"        % "2.5.23"
     "com.typesafe.akka"                      %% "akka-stream"             % "2.5.23"
+    "com.typesafe.scala-logging"             %% "scala-logging"           % "3.9.2"
     "io.argonaut"                            %% "argonaut"                % "6.2.3"
     "io.spray"                               %% "spray-json"              % "1.3.5"
+    "io.suzaku"                              %% "boopickle"               % "1.3.1"
     "nl.grons"                               %% "metrics4-scala"          % "4.0.7"
+    "org.clapper"                            %% "classutil"               % "1.5.1"
+    "org.clapper"                            %% "grizzled-scala"          % "4.10.0"
     "org.foundweekends"                      %% "knockoff"                % "0.8.12"
     "org.json4s"                             %% "json4s-native"           % "3.6.6"
     "org.julienrf"                           %% "play-json-derived-codecs" % "5.0.0"
-    "org.rogach"                             %% "scallop"                 % "3.3.0"
+    "org.rogach"                             %% "scallop"                 % "3.3.1"
     "org.scala-js"                           %% "scalajs-stubs"           % "1.0.0"
     "org.scala-stm"                          %% "scala-stm"               % "0.9.1"
     "org.scalameta"                          %% "scalameta"               % "4.1.12"
@@ -91,6 +95,7 @@ Add in sbt using `libraryDependencies += ...`:
 Add in sbt using `addCompilerPlugin(...)`:
 
     "com.github.ghik"                %% "silencer-plugin"          % "1.4.1"
+    "com.github.tomasmikula"         %% "pascal"                   % "0.3.5"
     "com.lihaoyi"                    %% "acyclic"                  % "0.2.0"
     "com.olegpy"                     %% "better-monadic-for"       % "0.3.0"
     "com.typesafe.genjavadoc"        %  "genjavadoc-plugin"        % "0.13"     cross CrossVersion.patch
@@ -104,6 +109,7 @@ Add using `addSbtPlugin(...)`:
 
     "org.scala-js"                      % "sbt-scalajs"               % "0.6.28"
     "org.scala-js"                      % "sbt-scalajs"               % "1.0.0-M8"
+    "org.scoverage"                     % "sbt-scoverage"             % "1.6.0"
     "org.tpolecat"                      % "tut-plugin"                % "0.6.12"
     "org.wartremover"                   % "sbt-wartremover"           % "2.4.2"
     "org.wartremover"                   % "sbt-wartremover-contrib"   % "1.3.1"
