@@ -128,5 +128,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [omnidoc](https://github.com/playframework/omnidoc/issues/24)
 * [paiges](https://github.com/typelevel/paiges/issues/152)
 * [playframework](https://github.com/playframework/playframework/issues/9260)
+* [sbt-io](https://github.com/sbt/io/issues/244)
+* [sbt-util](https://github.com/sbt/util/issues/201)
 * [spire](https://github.com/typelevel/spire/issues/805)
 * [twitter-util](https://github.com/twitter/util/issues/219)
