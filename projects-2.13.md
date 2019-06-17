@@ -80,6 +80,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.rogach"                             %% "scallop"                 % "3.3.1"
     "org.scala-js"                           %% "scalajs-stubs"           % "1.0.0"
     "org.scala-stm"                          %% "scala-stm"               % "0.9.1"
+    "org.scalamacros"                        %% "resetallattrs"           % "1.0.0"
     "org.scalameta"                          %% "scalameta"               % "4.1.12"
     "org.scalameta"                          %% "semanticdb-scalac"       % "4.1.12"
     "org.scalaz"                             %% "scalaz-core"             % "7.2.27"
