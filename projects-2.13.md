@@ -118,6 +118,7 @@ Add using `addSbtPlugin(...)`:
 
 You can subscribe to these tickets to find out when a library you want becomes available:
 
+* [dispatch](https://github.com/dispatch/reboot/issues/210)
 * [http4s](https://github.com/http4s/http4s/pull/2493)
 * [kafka](https://github.com/apache/kafka/pull/5454)
 * [lagom](https://github.com/lagom/lagom/issues/1240)
@@ -132,3 +133,4 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [sbt-util](https://github.com/sbt/util/issues/201)
 * [spire](https://github.com/typelevel/spire/issues/805)
 * [twitter-util](https://github.com/twitter/util/issues/219)
+* [unfiltered](https://github.com/unfiltered/unfiltered/issues/455)
