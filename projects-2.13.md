@@ -90,6 +90,11 @@ Add in sbt using `libraryDependencies += ...`:
     "org.typelevel"                          %% "machinist"               % "0.6.8"
     "org.wvlet.airframe"                     %% "airframe"                % "19.6.1"
     "ws.unfiltered"                          %% "unfiltered-filter"       % "0.10.0-M4"
+    "com.github.vagmcs"                      %% "optimus"                 % "3.2.0"
+    "com.github.vagmcs"                      %% "optimus-solver-oj"       % "3.2.0"
+    "com.github.vagmcs"                      %% "optimus-solver-lp"       % "3.2.0"
+    "com.github.vagmcs"                      %% "optimus-solver-gurobi"   % "3.2.0"
+    "com.github.vagmcs"                      %% "optimus-solver-mosek"    % "3.2.0"
 
 ### Compiler plugins
 
