@@ -99,6 +99,7 @@ Add in sbt using `addCompilerPlugin(...)`:
     "com.github.tomasmikula"         %% "pascal"                   % "0.3.5"
     "com.lihaoyi"                    %% "acyclic"                  % "0.2.0"
     "com.olegpy"                     %% "better-monadic-for"       % "0.3.0"
+    "com.sksamuel.scapegoat"         %% "scalac-scapegoat-plugin"  % "1.3.9"
     "com.typesafe.genjavadoc"        %  "genjavadoc-plugin"        % "0.13"     cross CrossVersion.patch
     "org.typelevel"                  %% "kind-projector"           % "0.10.3"
 
