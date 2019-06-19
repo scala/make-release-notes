@@ -96,6 +96,8 @@ Add in sbt using `libraryDependencies += ...`:
     "com.github.vagmcs"                      %% "optimus-solver-lp"       % "3.2.0"
     "com.github.vagmcs"                      %% "optimus-solver-gurobi"   % "3.2.0"
     "com.github.vagmcs"                      %% "optimus-solver-mosek"    % "3.2.0"
+    "com.lambdista"                          %% "config"                  % "0.6.0"
+    "com.lambdista"                          %% "money"                   % "0.7.0"
 
 ### Compiler plugins
 
