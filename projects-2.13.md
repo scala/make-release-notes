@@ -92,6 +92,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.typelevel"                          %% "cats-effect"             % "2.0.0-M4"
     "org.typelevel"                          %% "cats-tagless-macros"     % "0.8"
     "org.typelevel"                          %% "machinist"               % "0.6.8"
+    "org.typelevel"                          %% "spire"                   % "0.17.0-M1"
     "org.wvlet.airframe"                     %% "airframe"                % "19.6.1"
     "ws.unfiltered"                          %% "unfiltered-filter"       % "0.10.0-M4"
     "com.github.vagmcs"                      %% "optimus"                 % "3.2.0"
@@ -141,8 +142,8 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [monix](https://github.com/monix/monix/issues/862)
 * [omnidoc](https://github.com/playframework/omnidoc/issues/24)
 * [paiges](https://github.com/typelevel/paiges/issues/152)
+* [parboiled](https://github.com/sirthias/parboiled/issues/137)
 * [playframework](https://github.com/playframework/playframework/issues/9260)
 * [sbt-io](https://github.com/sbt/io/issues/244)
 * [sbt-util](https://github.com/sbt/util/issues/201)
-* [spire](https://github.com/typelevel/spire/issues/805)
 * [twitter-util](https://github.com/twitter/util/issues/219)
