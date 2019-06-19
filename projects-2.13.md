@@ -33,6 +33,9 @@ Add in sbt using `libraryDependencies += ... % Test`:
 Add in sbt using `libraryDependencies += ...`:
 
     "com.chuusai"                            %% "shapeless"               % "2.3.3"
+    "com.eed3si9n"                           %% "gigahorse-akka-http"     % "0.5.0"
+    "com.eed3si9n"                           %% "gigahorse-asynchttpclient" % "0.5.0"
+    "com.eed3si9n"                           %% "gigahorse-okhttp"        % "0.5.0"
     "com.github.mpilquist"                   %% "simulacrum"              % "0.19.0"
     "com.github.nscala-time"                 %% "nscala-time"             % "2.22.0"
     "com.github.plokhotnyuk.fsi"             %% "fsi-macros"              % "0.6.0"
