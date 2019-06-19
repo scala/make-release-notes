@@ -87,6 +87,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.squeryl"                            %% "squeryl"                 % "0.9.14"
     "org.typelevel"                          %% "cats-core"               % "2.0.0-M4"
     "org.typelevel"                          %% "cats-effect"             % "2.0.0-M4"
+    "org.typelevel"                          %% "cats-tagless-macros"     % "0.8"
     "org.typelevel"                          %% "machinist"               % "0.6.8"
     "org.wvlet.airframe"                     %% "airframe"                % "19.6.1"
     "ws.unfiltered"                          %% "unfiltered-filter"       % "0.10.0-M4"
