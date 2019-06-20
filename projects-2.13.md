@@ -71,6 +71,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.typesafe.akka"                      %% "akka-persistence"        % "2.5.23"
     "com.typesafe.akka"                      %% "akka-stream"             % "2.5.23"
     "com.typesafe.scala-logging"             %% "scala-logging"           % "3.9.2"
+    "com.typesafe.slick"                     %% "slick"                   % "3.3.2"
     "io.argonaut"                            %% "argonaut"                % "6.2.3"
     "io.spray"                               %% "spray-json"              % "1.3.5"
     "io.suzaku"                              %% "boopickle"               % "1.3.1"
