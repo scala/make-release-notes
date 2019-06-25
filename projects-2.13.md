@@ -52,6 +52,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.github.xuwei-k"                     %% "nobox"                   % "0.3.0"
     "com.github.xuwei-k"                     %% "optparse-applicative"    % "0.8.1"
     "com.github.xuwei-k"                     %% "zeroapply"               % "0.2.3"
+    "com.iheart"                             %% "ficus"                   % "1.4.7"
     "com.lihaoyi"                            %% "fansi"                   % "0.2.7"
     "com.lihaoyi"                            %% "fastparse"               % "2.1.3"
     "com.lihaoyi"                            %% "geny"                    % "0.1.8"
@@ -81,6 +82,7 @@ Add in sbt using `libraryDependencies += ...`:
     "org.foundweekends"                      %% "knockoff"                % "0.8.12"
     "org.json4s"                             %% "json4s-native"           % "3.6.6"
     "org.julienrf"                           %% "play-json-derived-codecs" % "5.0.0"
+    "org.parboiled"                          %% "parboiled-scala"         % "1.3.1"
     "org.rogach"                             %% "scallop"                 % "3.3.1"
     "org.scala-js"                           %% "scalajs-stubs"           % "1.0.0"
     "org.scala-stm"                          %% "scala-stm"               % "0.9.1"
@@ -108,6 +110,7 @@ Add in sbt using `libraryDependencies += ...`:
 
 Add in sbt using `addCompilerPlugin(...)`:
 
+    "com.github.cb372"               %  "scala-typed-holes"        % "0.0.9"    cross CrossVersion.full
     "com.github.ghik"                %% "silencer-plugin"          % "1.4.1"
     "com.github.tomasmikula"         %% "pascal"                   % "0.3.5"
     "com.lihaoyi"                    %% "acyclic"                  % "0.2.0"
@@ -133,8 +136,10 @@ Add using `addSbtPlugin(...)`:
 
 You can subscribe to these tickets to find out when a library you want becomes available:
 
+* [base64](https://github.com/marklister/base64/pull/220)
 * [dispatch](https://github.com/dispatch/reboot/issues/210)
 * [http4s](https://github.com/http4s/http4s/pull/2493)
+* [json-lenses](https://github.com/jrudolph/json-lenses/pull/32)
 * [kafka](https://github.com/apache/kafka/pull/5454)
 * [lagom](https://github.com/lagom/lagom/issues/1240)
 * [mdoc](https://github.com/scalameta/mdoc/issues/156)
@@ -143,7 +148,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [monix](https://github.com/monix/monix/issues/862)
 * [omnidoc](https://github.com/playframework/omnidoc/issues/24)
 * [paiges](https://github.com/typelevel/paiges/issues/152)
-* [parboiled](https://github.com/sirthias/parboiled/issues/137)
 * [playframework](https://github.com/playframework/playframework/issues/9260)
 * [sbt-io](https://github.com/sbt/io/issues/244)
 * [sbt-util](https://github.com/sbt/util/issues/201)
