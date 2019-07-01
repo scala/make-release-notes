@@ -107,6 +107,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.github.vagmcs"                      %% "optimus-solver-mosek"    % "3.2.0"
     "com.lambdista"                          %% "config"                  % "0.6.0"
     "com.lambdista"                          %% "money"                   % "0.7.0"
+    "com.sksamuel.elastic4s"                 %% "elastic4s-core"          % "7.1.0"
 
 ### Compiler plugins
 
