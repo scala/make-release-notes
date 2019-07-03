@@ -1,6 +1,33 @@
-## Available Projects for Scala 2.13
+# Available and Pending Projects for Scala 2.13
 
 Library maintainers, library users, please [edit this page](https://github.com/scala/make-release-notes/edit/2.13.x/projects-2.13.md) and let the world know what libraries are (or [aren't](https://github.com/scala/make-release-notes/blob/2.13.x/projects-2.13.md#pending)) available.
+
+## Pending
+
+**This list is actively maintained.**
+
+You can subscribe to these tickets to find out when a library you want becomes available:
+
+* [base64](https://github.com/marklister/base64/pull/22)
+* [dispatch](https://github.com/dispatch/reboot/issues/210)
+* [json-lenses](https://github.com/jrudolph/json-lenses/pull/32)
+* [kafka](https://github.com/apache/kafka/pull/6989)
+* [lagom](https://github.com/lagom/lagom/issues/1240)
+* [mdoc](https://github.com/scalameta/mdoc/issues/156)
+* [metaconfig](https://github.com/olafurpg/metaconfig/issues/71)
+* [monadic-html](https://github.com/OlivierBlanvillain/monadic-html/issues/109)
+* [monix](https://github.com/monix/monix/issues/862)
+* [paiges](https://github.com/typelevel/paiges/issues/152)
+* [sbt-util](https://github.com/sbt/util/issues/201)
+* [twitter-util](https://github.com/twitter/util/issues/219)
+
+## Available
+
+**The lists below are far from complete.** They were actively
+maintained in the early days after the 2.13 release, but less so now.
+Maintenance will cease entirely once Scala 2.13.1 is released.  At
+present, core dependencies are listed, but version numbers may have
+fallen out of date. Many libraries are missing entirely.
 
 ### Scala modules
 
@@ -134,24 +161,3 @@ Add using `addSbtPlugin(...)`:
     "org.tpolecat"                      % "tut-plugin"                % "0.6.12"
     "org.wartremover"                   % "sbt-wartremover"           % "2.4.2"
     "org.wartremover"                   % "sbt-wartremover-contrib"   % "1.3.1"
-
-### Pending
-
-You can subscribe to these tickets to find out when a library you want becomes available:
-
-* [base64](https://github.com/marklister/base64/pull/220)
-* [dispatch](https://github.com/dispatch/reboot/issues/210)
-* [http4s](https://github.com/http4s/http4s/pull/2493)
-* [json-lenses](https://github.com/jrudolph/json-lenses/pull/32)
-* [kafka](https://github.com/apache/kafka/pull/5454)
-* [lagom](https://github.com/lagom/lagom/issues/1240)
-* [mdoc](https://github.com/scalameta/mdoc/issues/156)
-* [metaconfig](https://github.com/olafurpg/metaconfig/issues/71)
-* [monadic-html](https://github.com/OlivierBlanvillain/monadic-html/issues/109)
-* [monix](https://github.com/monix/monix/issues/862)
-* [omnidoc](https://github.com/playframework/omnidoc/issues/24)
-* [paiges](https://github.com/typelevel/paiges/issues/152)
-* [playframework](https://github.com/playframework/playframework/issues/9260)
-* [sbt-io](https://github.com/sbt/io/issues/244)
-* [sbt-util](https://github.com/sbt/util/issues/201)
-* [twitter-util](https://github.com/twitter/util/issues/219)
