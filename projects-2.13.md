@@ -12,7 +12,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [dispatch](https://github.com/dispatch/reboot/issues/210)
 * [json-lenses](https://github.com/jrudolph/json-lenses/pull/32)
 * [kafka](https://github.com/apache/kafka/pull/6989)
-* [lagom](https://github.com/lagom/lagom/issues/1240)
 * [mdoc](https://github.com/scalameta/mdoc/issues/156)
 * [metaconfig](https://github.com/olafurpg/metaconfig/issues/71)
 * [monadic-html](https://github.com/OlivierBlanvillain/monadic-html/issues/109)
