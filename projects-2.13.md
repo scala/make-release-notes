@@ -10,7 +10,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 * [base64](https://github.com/marklister/base64/pull/22)
 * [dispatch](https://github.com/dispatch/reboot/issues/210)
-* [json-lenses](https://github.com/jrudolph/json-lenses/pull/32)
 * [kafka](https://github.com/apache/kafka/pull/6989)
 * [mdoc](https://github.com/scalameta/mdoc/issues/156)
 * [metaconfig](https://github.com/olafurpg/metaconfig/issues/71)
@@ -60,6 +59,7 @@ Add in sbt using `libraryDependencies += ... % Test`:
 
 Add in sbt using `libraryDependencies += ...`:
 
+    "ca.mrvisser"                            %% "sealerate"               % "0.0.6"
     "com.chuusai"                            %% "shapeless"               % "2.3.3"
     "com.eed3si9n"                           %% "gigahorse-akka-http"     % "0.5.0"
     "com.eed3si9n"                           %% "gigahorse-asynchttpclient" % "0.5.0"
@@ -104,6 +104,7 @@ Add in sbt using `libraryDependencies += ...`:
     "io.argonaut"                            %% "argonaut"                % "6.2.3"
     "io.spray"                               %% "spray-json"              % "1.3.5"
     "io.suzaku"                              %% "boopickle"               % "1.3.1"
+    "net.virtual-void"                       %% "json-lenses"             % "0.6.2"
     "nl.grons"                               %% "metrics4-scala"          % "4.0.7"
     "org.clapper"                            %% "classutil"               % "1.5.1"
     "org.clapper"                            %% "grizzled-scala"          % "4.10.0"
