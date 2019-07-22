@@ -8,10 +8,11 @@ Library maintainers, library users, please [edit this page](https://github.com/s
 
 You can subscribe to these tickets to find out when a library you want becomes available:
 
-* [base64](https://github.com/marklister/base64/pull/22)
 * [dispatch](https://github.com/dispatch/reboot/issues/210)
 * [kafka](https://github.com/apache/kafka/pull/6989)
+  * support merged, awaiting time-based release
 * [mdoc](https://github.com/scalameta/mdoc/issues/156)
+  * blocked by monadic-html, metaconfig
 * [metaconfig](https://github.com/olafurpg/metaconfig/issues/71)
 * [monadic-html](https://github.com/OlivierBlanvillain/monadic-html/issues/109)
 * [monix](https://github.com/monix/monix/issues/862)
@@ -59,6 +60,7 @@ Add in sbt using `libraryDependencies += ... % Test`:
 
 Add in sbt using `libraryDependencies += ...`:
 
+    "com.github.marklister"                  %% "base64"                  % "0.2.8"
     "ca.mrvisser"                            %% "sealerate"               % "0.0.6"
     "com.chuusai"                            %% "shapeless"               % "2.3.3"
     "com.eed3si9n"                           %% "gigahorse-akka-http"     % "0.5.0"
