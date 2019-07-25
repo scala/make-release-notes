@@ -60,7 +60,7 @@ Add in sbt using `libraryDependencies += ... % Test`:
 
 Add in sbt using `libraryDependencies += ...`:
 
-    "com.github.marklister"                  %% "base64"                  % "0.2.8"
+    "com.github.marklister"                  %% "base64"                  % "0.2.9"
     "ca.mrvisser"                            %% "sealerate"               % "0.0.6"
     "com.chuusai"                            %% "shapeless"               % "2.3.3"
     "com.eed3si9n"                           %% "gigahorse-akka-http"     % "0.5.0"
