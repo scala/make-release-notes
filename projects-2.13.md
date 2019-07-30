@@ -20,6 +20,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [paiges](https://github.com/typelevel/paiges/issues/152)
   * waiting on a cats non-milestone release
 * [sbt-util](https://github.com/sbt/util/issues/201)
+* [scala-continuations](https://github.com/scala/scala-continuations/issues/37)
 * [twitter-util](https://github.com/twitter/util/issues/219)
 
 ## Available
