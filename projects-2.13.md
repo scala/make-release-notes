@@ -14,11 +14,8 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [mdoc](https://github.com/scalameta/mdoc/issues/156)
   * blocked by monadic-html, metaconfig
 * [metaconfig](https://github.com/olafurpg/metaconfig/issues/71)
-  * blocked by paiges
 * [monadic-html](https://github.com/OlivierBlanvillain/monadic-html/issues/109)
 * [monix](https://github.com/monix/monix/issues/862)
-* [paiges](https://github.com/typelevel/paiges/issues/152)
-  * waiting on a cats non-milestone release
 * [sbt-util](https://github.com/sbt/util/issues/201)
 * [scala-continuations](https://github.com/scala/scala-continuations/issues/37)
 * [scala-refactoring](https://github.com/scala-ide/scala-refactoring/issues/202)
