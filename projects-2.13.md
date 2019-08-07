@@ -20,7 +20,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [sbt-util](https://github.com/sbt/util/issues/201)
 * [scala-continuations](https://github.com/scala/scala-continuations/issues/37)
 * [scala-refactoring](https://github.com/scala-ide/scala-refactoring/issues/202)
-* [scala-stm](https://github.com/nbronson/scala-stm/issues/68)
 * [scalaxb](https://github.com/eed3si9n/scalaxb/pull/514)
   * blocked by dispatch
 * [twitter-util](https://github.com/twitter/util/issues/219)
