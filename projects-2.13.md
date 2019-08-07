@@ -11,6 +11,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [dispatch](https://github.com/dispatch/reboot/issues/210)
 * [kafka](https://github.com/apache/kafka/pull/6989)
   * support merged, awaiting time-based release
+* [lift](https://github.com/lift/framework/pull/1962)
 * [mdoc](https://github.com/scalameta/mdoc/issues/156)
   * blocked by monadic-html, metaconfig
 * [metaconfig](https://github.com/olafurpg/metaconfig/issues/71)
