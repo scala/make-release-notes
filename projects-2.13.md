@@ -8,6 +8,8 @@ Library maintainers, library users, please [edit this page](https://github.com/s
 
 You can subscribe to these tickets to find out when a library you want becomes available:
 
+* [finagle](https://github.com/twitter/finagle/issues/771)
+  * blocked by scrooge, twitter-util
 * [kafka](https://github.com/apache/kafka/pull/6989)
   * support merged, awaiting time-based release
 * [lift (and lift-json)](https://github.com/lift/framework/pull/1962)
@@ -21,6 +23,8 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [scala-continuations](https://github.com/scala/scala-continuations/issues/37)
 * [scala-refactoring](https://github.com/scala-ide/scala-refactoring/issues/202)
 * [scalaxb](https://github.com/eed3si9n/scalaxb/pull/514)
+* [scrooge](https://github.com/twitter/scrooge/issues/308)
+  * blocked by twitter-util
 * [twitter-util](https://github.com/twitter/util/issues/253)
 
 ## Available
