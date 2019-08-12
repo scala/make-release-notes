@@ -147,6 +147,7 @@ Add in sbt using `libraryDependencies += ...`:
     "com.lambdista"                          %% "config"                    % "0.6.0"
     "com.lambdista"                          %% "money"                     % "0.7.0"
     "com.sksamuel.elastic4s"                 %% "elastic4s-core"            % "7.1.0"
+    "com.github.vagmcs"                      %% "scalatikz"                 % "0.4.0"
 
 ### Compiler plugins
 
