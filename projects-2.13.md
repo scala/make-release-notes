@@ -14,7 +14,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
   * support merged, awaiting time-based release
 * [lift (and lift-json)](https://github.com/lift/framework/pull/1962)
 * [mdoc](https://github.com/scalameta/mdoc/issues/156)
-  * blocked by monadic-html, metaconfig
+  * blocked by metaconfig
 * [metaconfig](https://github.com/olafurpg/metaconfig/issues/71)
 * [monadic-html](https://github.com/OlivierBlanvillain/monadic-html/issues/109)
 * [monix](https://github.com/monix/monix/issues/862)
