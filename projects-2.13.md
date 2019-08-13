@@ -25,6 +25,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [scalaxb](https://github.com/eed3si9n/scalaxb/pull/514)
 * [scrooge](https://github.com/twitter/scrooge/issues/308)
   * blocked by twitter-util
+* [squants](https://github.com/typelevel/squants/issues/344)
 * [twitter-util](https://github.com/twitter/util/issues/253)
 
 ## Available
