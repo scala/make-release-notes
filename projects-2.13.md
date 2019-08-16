@@ -28,6 +28,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [sbt-util](https://github.com/sbt/util/issues/201)
 * [scala-continuations](https://github.com/scala/scala-continuations/issues/37)
 * [scala-refactoring](https://github.com/scala-ide/scala-refactoring/issues/202)
+* [scalac-profiling](https://github.com/scalacenter/scalac-profiling/issues/30)
 * [scalaxb](https://github.com/eed3si9n/scalaxb/pull/514)
 * [scrooge](https://github.com/twitter/scrooge/issues/308)
   * blocked by twitter-util
