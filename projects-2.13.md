@@ -25,7 +25,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [monadic-html](https://github.com/OlivierBlanvillain/monadic-html/issues/109)
 * [monix](https://github.com/monix/monix/issues/862)
   * snapshot available, see ticket
-* [sbt-util](https://github.com/sbt/util/issues/201)
 * [scala-continuations](https://github.com/scala/scala-continuations/issues/37)
 * [scala-refactoring](https://github.com/scala-ide/scala-refactoring/issues/202)
 * [scalac-profiling](https://github.com/scalacenter/scalac-profiling/issues/30)
