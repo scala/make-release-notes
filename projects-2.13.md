@@ -15,7 +15,7 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [chill](https://github.com/twitter/chill/issues/316)
   * blocked by algebird
 * [finagle](https://github.com/twitter/finagle/issues/771)
-  * blocked by scrooge, twitter-util
+  * blocked by scrooge
 * [kafka](https://github.com/apache/kafka/pull/6989)
   * support merged, awaiting time-based release
 * [lift (and lift-json)](https://github.com/lift/framework/pull/1962)
@@ -30,11 +30,9 @@ You can subscribe to these tickets to find out when a library you want becomes a
 * [scalac-profiling](https://github.com/scalacenter/scalac-profiling/issues/30)
 * [scalaxb](https://github.com/eed3si9n/scalaxb/pull/514)
 * [scrooge](https://github.com/twitter/scrooge/issues/308)
-  * blocked by twitter-util
 * [spark](https://issues.apache.org/jira/browse/SPARK-25075)
   * blocked by chill
 * [squants](https://github.com/typelevel/squants/issues/344)
-* [twitter-util](https://github.com/twitter/util/issues/253)
 
 ## Available
 
