@@ -8,6 +8,14 @@ Library maintainers, library users, please [edit this page](https://github.com/s
 
 You can subscribe to these tickets to find out when a library you want becomes available:
 
+### Typelevel
+
+* [monix](https://github.com/monix/monix/issues/862)
+  * snapshot available, see ticket
+* [squants](https://github.com/typelevel/squants/issues/344)
+
+### Twitter
+
 * [algebird](https://github.com/twitter/algebird/issues/671)
   * blocked by bijection
 * [bijection](https://github.com/twitter/bijection/issues/285)
@@ -16,20 +24,23 @@ You can subscribe to these tickets to find out when a library you want becomes a
   * blocked by algebird
 * [finagle](https://github.com/twitter/finagle/issues/771)
   * blocked by scrooge
+* [scrooge](https://github.com/twitter/scrooge/issues/308)
+
+### tooling
+
+* [scala-refactoring](https://github.com/scala-ide/scala-refactoring/issues/202)
+* [scalac-profiling](https://github.com/scalacenter/scalac-profiling/issues/30)
+
+### other
+
 * [kafka](https://github.com/apache/kafka/pull/6989)
   * support merged, awaiting time-based release
 * [lift (and lift-json)](https://github.com/lift/framework/pull/1962)
 * [monadic-html](https://github.com/OlivierBlanvillain/monadic-html/issues/109)
-* [monix](https://github.com/monix/monix/issues/862)
-  * snapshot available, see ticket
 * [scala-continuations](https://github.com/scala/scala-continuations/issues/37)
-* [scala-refactoring](https://github.com/scala-ide/scala-refactoring/issues/202)
-* [scalac-profiling](https://github.com/scalacenter/scalac-profiling/issues/30)
 * [scalaxb](https://github.com/eed3si9n/scalaxb/pull/514)
-* [scrooge](https://github.com/twitter/scrooge/issues/308)
 * [spark](https://issues.apache.org/jira/browse/SPARK-25075)
   * blocked by chill
-* [squants](https://github.com/typelevel/squants/issues/344)
 
 ## Available
 
