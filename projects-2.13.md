@@ -10,8 +10,6 @@ You can subscribe to these tickets to find out when a library you want becomes a
 
 ### Typelevel
 
-* [monix](https://github.com/monix/monix/issues/862)
-  * snapshot available, see ticket
 * [squants](https://github.com/typelevel/squants/issues/344)
 
 ### Twitter
