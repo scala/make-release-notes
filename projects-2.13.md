@@ -39,6 +39,7 @@ You can subscribe to the linked tickets to find out when a library you want beco
 * [scalaxb](https://github.com/eed3si9n/scalaxb/pull/514)
 * [spark](https://issues.apache.org/jira/browse/SPARK-25075)
   * blocked by chill
+* [phantom](https://github.com/outworkers/phantom/issues/901)
 
 ## Available
 
