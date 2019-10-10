@@ -40,6 +40,7 @@ You can subscribe to the linked tickets to find out when a library you want beco
 * [spark](https://issues.apache.org/jira/browse/SPARK-25075)
   * blocked by chill
 * [phantom](https://github.com/outworkers/phantom/issues/901)
+* [github4s](https://github.com/47deg/github4s/issues/261)
 
 ## Available
 
