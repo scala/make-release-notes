@@ -41,6 +41,8 @@ You can subscribe to the linked tickets to find out when a library you want beco
   * blocked by chill
 * [phantom](https://github.com/outworkers/phantom/issues/901)
 * [github4s](https://github.com/47deg/github4s/issues/261)
+  * blocked by RosHTTP
+* [RosHTTP](https://github.com/hmil/RosHTTP/pull/88)
 
 ## Available
 
