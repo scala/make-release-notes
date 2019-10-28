@@ -43,6 +43,7 @@ You can subscribe to the linked tickets to find out when a library you want beco
 * [github4s](https://github.com/47deg/github4s/issues/261)
   * blocked by RosHTTP
 * [RosHTTP](https://github.com/hmil/RosHTTP/pull/88)
+* [play-iteratees](https://github.com/playframework/play-iteratees/issues/16)
 
 ## Available
 
