@@ -45,6 +45,7 @@ You can subscribe to the linked tickets to find out when a library you want beco
   * blocked by RosHTTP
 * [RosHTTP](https://github.com/hmil/RosHTTP/pull/88)
 * [play-iteratees](https://github.com/playframework/play-iteratees/issues/16)
+* [scalajpa](https://github.com/dchenbecker/scalajpa/issues/10)
 
 ## Available
 
