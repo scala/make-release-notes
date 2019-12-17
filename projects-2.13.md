@@ -8,10 +8,6 @@ The following libraries aren't known to be available for Scala 2.13 yet.
 
 You can subscribe to the linked tickets to find out when a library you want becomes available.
 
-### Typelevel
-
-* [squants](https://github.com/typelevel/squants/issues/344)
-
 ### Twitter
 
 * [algebird](https://github.com/twitter/algebird/issues/671)
