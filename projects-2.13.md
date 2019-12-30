@@ -37,8 +37,6 @@ You can subscribe to the linked tickets to find out when a library you want beco
 * [spark](https://issues.apache.org/jira/browse/SPARK-25075)
   * blocked by chill
 * [phantom](https://github.com/outworkers/phantom/issues/901)
-* [github4s](https://github.com/47deg/github4s/issues/261)
-  * blocked by RosHTTP
 * [RosHTTP](https://github.com/hmil/RosHTTP/pull/88)
 * [play-iteratees](https://github.com/playframework/play-iteratees/issues/16)
 * [scalajpa](https://github.com/dchenbecker/scalajpa/issues/10)
