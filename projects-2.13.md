@@ -27,8 +27,6 @@ You can subscribe to the linked tickets to find out when a library you want beco
 
 ### other
 
-* [kafka](https://github.com/apache/kafka/pull/6989)
-  * support merged, awaiting time-based release
 * [lift](https://github.com/lift/framework/pull/1962)
   * lift-json and some other modules are available; others are still pending
 * [monadic-html](https://github.com/OlivierBlanvillain/monadic-html/issues/109)
