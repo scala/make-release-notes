@@ -27,7 +27,7 @@ You can subscribe to the linked tickets to find out when a library you want beco
 
 ### other
 
-* [lift](https://github.com/lift/framework/pull/1962)
+* [lift](https://github.com/lift/framework/issues/1955)
   * lift-json and some other modules are available; others are still pending
 * [monadic-html](https://github.com/OlivierBlanvillain/monadic-html/issues/109)
 * [scala-continuations](https://github.com/scala/scala-continuations/issues/37)
