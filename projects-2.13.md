@@ -14,8 +14,6 @@ You can subscribe to the linked tickets to find out when a library you want beco
   * blocked by bijection
 * [bijection](https://github.com/twitter/bijection/issues/285)
   * blocked by finagle, scrooge
-* [chill](https://github.com/twitter/chill/issues/316)
-  * blocked by algebird
 * [finagle](https://github.com/twitter/finagle/issues/771)
   * blocked by scrooge
 * [scrooge](https://github.com/twitter/scrooge/issues/308)
