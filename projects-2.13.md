@@ -8,16 +8,6 @@ The following libraries aren't known to be available for Scala 2.13 yet.
 
 You can subscribe to the linked tickets to find out when a library you want becomes available.
 
-### Twitter
-
-* [algebird](https://github.com/twitter/algebird/issues/671)
-  * blocked by bijection
-* [bijection](https://github.com/twitter/bijection/issues/285)
-  * blocked by finagle, scrooge
-* [finagle](https://github.com/twitter/finagle/issues/771)
-  * blocked by scrooge
-* [scrooge](https://github.com/twitter/scrooge/issues/308)
-
 ### tooling
 
 * [scala-refactoring](https://github.com/scala-ide/scala-refactoring/issues/202)
@@ -25,6 +15,7 @@ You can subscribe to the linked tickets to find out when a library you want beco
 
 ### other
 
+* [finagle](https://github.com/twitter/finagle/issues/771)
 * [lift](https://github.com/lift/framework/issues/1955)
   * lift-json and some other modules are available; others are still pending
 * [scala-continuations](https://github.com/scala/scala-continuations/issues/37)
