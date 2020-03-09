@@ -12,6 +12,7 @@ You can subscribe to the linked tickets to find out when a library you want beco
 
 * [scala-refactoring](https://github.com/scala-ide/scala-refactoring/issues/202)
 * [scalac-profiling](https://github.com/scalacenter/scalac-profiling/issues/30)
+* [zinc](https://github.com/sbt/zinc/issues/697)
 
 ### other
 
