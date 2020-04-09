@@ -27,7 +27,6 @@ You can subscribe to the linked tickets to find out when a library you want beco
 * [scalajpa](https://github.com/dchenbecker/scalajpa/issues/10)
 * [Gatling](https://github.com/gatling/gatling/issues/3566)
   * blocked by zinc
-* [scala-retry](https://github.com/hipjim/scala-retry/issues/25)
 
 ## Available
 
