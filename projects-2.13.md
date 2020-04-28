@@ -20,7 +20,6 @@ You can subscribe to the linked tickets to find out when a library you want beco
   * lift-json and some other modules are available; others are still pending
 * [scala-continuations](https://github.com/scala/scala-continuations/issues/37)
 * [spark](https://issues.apache.org/jira/browse/SPARK-25075)
-  * blocked by chill
 * [RosHTTP](https://github.com/hmil/RosHTTP/pull/88)
 * [play-iteratees](https://github.com/playframework/play-iteratees/issues/16)
 * [scalajpa](https://github.com/dchenbecker/scalajpa/issues/10)
