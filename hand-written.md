@@ -1,16 +1,10 @@
-We are delighted to announce the availability of Scala 2.13!
+[Scala 2.13.3](https://github.com/scala/scala/releases/tag/v2.13.3) is now available!
 
-The 2.13.0 release improves Scala in the following areas:
+This is primarily a bugfix release.
 
-* **Collections**: Standard library collections have been overhauled
-  for simplicity, performance, and safety. This is the centerpiece
-  of the release.
-* **Standard library**: The library offers more in some
-  areas, has slimmed down in others.  `Future` is faster and more robust.
-* **Language**: Literal types, partial unification, by-name
-  implicits, more.
-* **Compiler**: 5-10% faster, deterministic output, improved inliner.
+It also includes:
 
-To learn more, see the [release notes](https://github.com/scala/scala/releases/tag/v2.13.0) on GitHub.
+* improvements to warnings and linting
+* experimental `-Xasync` support
 
-[download](https://www.scala-lang.org/download/2.13.0.html)
+For all the details, refer to the [release notes](https://github.com/scala/scala/releases/tag/v2.13.3) on GitHub.
