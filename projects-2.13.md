@@ -8,20 +8,20 @@ The following libraries aren't known to be available for Scala 2.13 yet.
 
 You can subscribe to the linked tickets to find out when a library you want becomes available.
 
-### tooling
+### active
 
-* [scala-refactoring](https://github.com/scala-ide/scala-refactoring/issues/202)
 * [scalac-profiling](https://github.com/scalacenter/scalac-profiling/issues/30)
-
-### other
-
 * [Spark](https://issues.apache.org/jira/browse/SPARK-25075)
 * [Lift](https://github.com/lift/framework/issues/1955)
   * lift-json and some other modules are available; others are still pending
+* [Gatling](https://github.com/gatling/gatling/issues/3566)
+
+### believed abandoned
+
 * [scala-continuations](https://github.com/scala/scala-continuations/issues/37)
+* [scala-refactoring](https://github.com/scala-ide/scala-refactoring/issues/202)
 * [play-iteratees](https://github.com/playframework/play-iteratees/issues/16)
 * [scalajpa](https://github.com/dchenbecker/scalajpa/issues/10)
-* [Gatling](https://github.com/gatling/gatling/issues/3566)
 
 ## Available
 
