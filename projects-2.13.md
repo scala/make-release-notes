@@ -15,6 +15,7 @@ You can subscribe to the linked tickets to find out when a library you want beco
 * [Lift](https://github.com/lift/framework/issues/1955)
   * lift-json and some other modules are available; others are still pending
 * [Gatling](https://github.com/gatling/gatling/issues/3566)
+* [bazel](https://github.com/bazelbuild/rules_scala/issues/809)
 
 ### believed abandoned
 
