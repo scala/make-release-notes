@@ -1,10 +1,7 @@
-[Scala 2.13.3](https://github.com/scala/scala/releases/tag/v2.13.3) is now available!
+[Scala 2.13.4](https://github.com/scala/scala/releases/tag/v2.13.4) is now available!
 
-This is primarily a bugfix release.
+* Restores default global `ExecutionContext` to 2.12 behavior
+* Improves pattern matching, especially in exhaustivity checking
+* Adds experimental support for consuming some libraries built by Scala 3
 
-It also includes:
-
-* improvements to warnings and linting
-* experimental `-Xasync` support
-
-For all the details, refer to the [release notes](https://github.com/scala/scala/releases/tag/v2.13.3) on GitHub.
+and more! For all the details, refer to the [release notes](https://github.com/scala/scala/releases/tag/v2.13.4) on GitHub.
