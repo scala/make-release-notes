@@ -14,7 +14,6 @@ You can subscribe to the linked tickets to find out when a library you want beco
 * [Spark](https://issues.apache.org/jira/browse/SPARK-25075)
 * [Lift](https://github.com/lift/framework/issues/1955)
   * lift-json and some other modules are available; others are still pending
-* [Gatling](https://github.com/gatling/gatling/issues/3566)
 
 ### believed abandoned
 
