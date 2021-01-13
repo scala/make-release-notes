@@ -34,7 +34,7 @@ object GitHelper {
     issues map (si => targetLanguage.createHyperLink(s"https://issues.scala-lang.org/browse/$si", si)) mkString ", "
   }
 
-  def htmlEncode(s: String) = org.apache.commons.lang3.StringEscapeUtils.escapeHtml4(s)
+  def htmlEncode(s: String) = org.apache.commons.text.StringEscapeUtils.escapeHtml4(s)
 }
 
 class GitInfo(gitDir: java.io.File, val previousTag: String, val currentTag: String)(implicit targetLanguage: TargetLanguage) {

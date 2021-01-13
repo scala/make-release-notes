@@ -55,5 +55,5 @@ case object Html extends TargetLanguage {
   def tableRow(firstColumn: String, secondColumn: String, thirdColumn: String): String = s"""<tr><td>${firstColumn}&nbsp;</td><td>${secondColumn}&nbsp;</td><td>${htmlEncode(thirdColumn)}</td></tr>"""
   def tableEnd: String = "</tbody></table>"
 
-  def htmlEncode(s: String) = org.apache.commons.lang3.StringEscapeUtils.escapeHtml4(s)
+  def htmlEncode(s: String) = org.apache.commons.text.StringEscapeUtils.escapeHtml4(s)
 }
