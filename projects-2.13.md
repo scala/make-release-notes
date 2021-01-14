@@ -10,12 +10,15 @@ You can subscribe to the linked tickets to find out when a library you want beco
 
 ### active
 
-* [scalac-profiling](https://github.com/scalacenter/scalac-profiling/issues/30)
 * [Spark](https://issues.apache.org/jira/browse/SPARK-25075)
+
+### stalled?
+
+* [scalac-profiling](https://github.com/scalacenter/scalac-profiling/issues/30)
 * [Lift](https://github.com/lift/framework/issues/1955)
   * lift-json and some other modules are available; others are still pending
 
-### believed abandoned
+### apparently abandoned
 
 * [scala-continuations](https://github.com/scala/scala-continuations/issues/37)
 * [scala-refactoring](https://github.com/scala-ide/scala-refactoring/issues/202)
