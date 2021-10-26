@@ -17,7 +17,6 @@ none known at present
 * [scalac-profiling](https://github.com/scalacenter/scalac-profiling/issues/30)
 * [Lift](https://github.com/lift/framework/issues/1955)
   * lift-json and some other modules are available; others are still pending
-* [squid](https://github.com/epfldata/squid/issues/67)
 
 ### apparently abandoned
 
@@ -25,6 +24,7 @@ none known at present
 * [scala-refactoring](https://github.com/scala-ide/scala-refactoring/issues/202)
 * [play-iteratees](https://github.com/playframework/play-iteratees/issues/16)
 * [scalajpa](https://github.com/dchenbecker/scalajpa/issues/10)
+* [squid](https://github.com/epfldata/squid/issues/67)
 
 ## Available
 
