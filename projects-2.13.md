@@ -10,7 +10,7 @@ You can subscribe to the linked tickets to find out when a library you want beco
 
 ### active
 
-* [Spark](https://issues.apache.org/jira/browse/SPARK-25075)
+none known at present
 
 ### stalled?
 
