@@ -1,0 +1,24 @@
+name: test
+on:
+  push:
+    branches:
+      - 2.*.x
+  pull_request:
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - uses: coursier/cache-action@v6
+    - uses: actions/setup-java@v2
+      with:
+        distribution: temurin
+        java-version: 8
+    - name: Test
+      run: |
+        git clone -b 2.12.x https://github.com/scala/scala
+        sbt -Dfile.encoding=UTF-8 "runMain MakeReleaseNotes 2.12.0 2.12.1 2345/06/07 `pwd`/scala"
