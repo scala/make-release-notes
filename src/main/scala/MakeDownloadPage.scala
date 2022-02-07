@@ -18,7 +18,7 @@ class MakeDownloadPage(version: String, releaseDate: Date = new Date()) {
     import scala.sys.process._
     println("## fetching size of "+ url)
     scala.util.Try {
-      val responseHeader = Process(s"curl -m 5 --silent -D - -X HEAD $url").lineStream
+      val responseHeader = Process(s"curl -m 5 --silent -D - -X HEAD $url").lazyLines
       val contentLength = responseHeader.map(_.toLowerCase).find(_.startsWith("content-length"))
       val bytes = contentLength.map(_.split(":",2)(1).trim.toInt)
       bytes map (b => (responseHeader.head, b))
