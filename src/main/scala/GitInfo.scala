@@ -1,3 +1,4 @@
+import scala.collection.parallel.CollectionConverters._ // for .par
 
 case class Commit(sha: String, author: String, header: String, body: String) {
   def trimmedHeader = header.take(80)
@@ -9,11 +10,11 @@ object GitHelper {
   def processGitCommits(gitDir: java.io.File, previousTag: String, currentTag: String): IndexedSeq[Commit] = {
     import sys.process._
     val gitFormat = "%h %s" // sha and subject
-    val log = Process(Seq("git", "--no-pager", "log", s"${previousTag}..${currentTag}", "--format=format:" + gitFormat, "--no-merges", "--topo-order"), gitDir).lineStream
+    val log = Process(Seq("git", "--no-pager", "log", s"${previousTag}..${currentTag}", "--format=format:" + gitFormat, "--no-merges", "--topo-order"), gitDir).lazyLines
 
     log.par.map(_.split(" ", 2)).collect {
       case Array(sha, title) =>
-        val (author :: body) = Process(Seq("git", "--no-pager", "show", sha, "--format=format:%aN%n%b", "--quiet"), gitDir).lineStream.toList
+        val (author :: body) = Process(Seq("git", "--no-pager", "show", sha, "--format=format:%aN%n%b", "--quiet"), gitDir).lazyLines.toList
         Commit(sha, author, title, body.mkString("\n"))
     }.toVector
   }
@@ -41,10 +42,12 @@ class GitInfo(gitDir: java.io.File, val previousTag: String, val currentTag: Str
   import GitHelper._
   val commits = processGitCommits(gitDir, previousTag, currentTag)
 
-  val authors: Seq[(String, Int)] = {
-    val grouped: Vector[(String, Int)] = (commits groupBy (_.author)).map { case (a, c) => a -> c.length } { collection.breakOut }
-    (grouped sortBy (_._2)).reverse
-  }
+  val authors: Seq[(String, Int)] =
+    commits
+      .groupBy(_.author)
+      .map{case (a, c) => a -> c.length}
+      .toVector
+      .sortBy(_._2)
 
   val fixCommits =
     for {

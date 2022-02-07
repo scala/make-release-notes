@@ -37,9 +37,10 @@ object MakeReleaseNotes {
     }
   }
 
-  def apply(scalaDir: String, version: String, previousTag: String, currentTag: String, releaseDate: Date) {
-    Seq(Html, MarkDown).foreach(fmt => apply(new java.io.File(scalaDir), version, previousTag, currentTag, fmt, releaseDate))
-  }
+  def apply(scalaDir: String, version: String, previousTag: String, currentTag: String, releaseDate: Date): Unit =
+    Seq(Html, MarkDown).foreach(fmt =>
+      apply(new java.io.File(scalaDir), version, previousTag, currentTag, fmt, releaseDate))
+
   def apply(scalaDir: java.io.File, version: String, previousTag: String, currentTag: String, targetLanguage: TargetLanguage = MarkDown, releaseDate: Date = new Date()): Unit = {
     val out = targetLanguage match {
       case Html => new java.io.File("release-notes.html")
@@ -75,7 +76,7 @@ object MakeReleaseNotes {
     def rawHandWrittenNotes(file: java.io.File = new java.io.File(s"hand-written.md")): String = {
       val lines: List[String] = if (file.exists) {
         val src = Source.fromFile(file)
-        src.getLines.toList
+        src.getLines().toList
       } else Nil
       // if you don't have the next line, sub-bullets would be screwed!
       // please take this case into account and comment out 2 next lines and uncomment the line after!
