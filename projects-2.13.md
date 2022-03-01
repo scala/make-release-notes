@@ -10,11 +10,10 @@ You can subscribe to the linked tickets to find out when a library you want beco
 
 ### active
 
-none known at present
+* [scalac-profiling](https://github.com/scalacenter/scalac-profiling/issues/30)
 
 ### stalled?
 
-* [scalac-profiling](https://github.com/scalacenter/scalac-profiling/issues/30)
 * [Lift](https://github.com/lift/framework/issues/1955)
   * lift-json and some other modules are available; others are still pending
 
