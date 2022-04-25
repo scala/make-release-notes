@@ -8,14 +8,9 @@ The following libraries aren't known to be available for Scala 2.13 yet.
 
 You can subscribe to the linked tickets to find out when a library you want becomes available.
 
-### active
-
-* [scalac-profiling](https://github.com/scalacenter/scalac-profiling/issues/30)
-
 ### stalled?
 
-* [Lift](https://github.com/lift/framework/issues/1955)
-  * lift-json and some other modules are available; others are still pending
+* [scalac-profiling](https://github.com/scalacenter/scalac-profiling/issues/30)
 
 ### apparently abandoned
 
@@ -24,6 +19,7 @@ You can subscribe to the linked tickets to find out when a library you want beco
 * [play-iteratees](https://github.com/playframework/play-iteratees/issues/16)
 * [scalajpa](https://github.com/dchenbecker/scalajpa/issues/10)
 * [squid](https://github.com/epfldata/squid/issues/67)
+* [lift](https://github.com/lift/framework/issues/1955)
 
 ## Available
 
