@@ -12,7 +12,7 @@ You can subscribe to the linked tickets to find out when a library you want beco
 
 * [scalac-profiling](https://github.com/scalacenter/scalac-profiling/issues/30)
 
-### apparently abandoned
+### believed abandoned
 
 * [scala-continuations](https://github.com/scala/scala-continuations/issues/37)
 * [scala-refactoring](https://github.com/scala-ide/scala-refactoring/issues/202)
