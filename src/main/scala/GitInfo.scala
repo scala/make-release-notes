@@ -1,4 +1,4 @@
-import scala.collection.parallel.CollectionConverters._ // for .par
+import scala.collection.parallel.CollectionConverters.* // for .par
 
 case class Commit(sha: String, author: String, header: String, body: String) {
   def trimmedHeader = header.take(80)
@@ -8,7 +8,7 @@ case class Commit(sha: String, author: String, header: String, body: String) {
 /** Gobal functions for dealing with git. */
 object GitHelper {
   def processGitCommits(gitDir: java.io.File, previousTag: String, currentTag: String): IndexedSeq[Commit] = {
-    import sys.process._
+    import sys.process.*
     val gitFormat = "%h %s" // sha and subject
     val log = Process(Seq("git", "--no-pager", "log", s"${previousTag}..${currentTag}", "--format=format:" + gitFormat, "--no-merges", "--topo-order"), gitDir).lazyLines
 
@@ -22,17 +22,17 @@ object GitHelper {
   }
 
   def hasFixins(msg: String): Boolean = (
-    (msg contains "SI-") /*&& ((msg.toLowerCase contains "fix") || (msg.toLowerCase contains "close"))*/
+    msg.contains("SI-") /*&& ((msg.toLowerCase contains "fix") || msg.toLowerCase.contains("close"))*/
   )
 
   val siPattern = java.util.regex.Pattern.compile("(SI-[0-9]+)")
 
   def fixLinks(commit: Commit)(implicit targetLanguage: TargetLanguage): String = {
     val searchString = commit.body + commit.header
-    val m = siPattern matcher searchString
+    val m = siPattern.matcher(searchString)
     val issues = new collection.mutable.ArrayBuffer[String]
     while (m.find()) {
-      issues += (m group 1)
+      issues += (m.group(1))
     }
     issues map (si => targetLanguage.createHyperLink(s"https://issues.scala-lang.org/browse/$si", si)) mkString ", "
   }
@@ -41,7 +41,7 @@ object GitHelper {
 }
 
 class GitInfo(gitDir: java.io.File, val previousTag: String, val currentTag: String)(implicit targetLanguage: TargetLanguage) {
-  import GitHelper._
+  import GitHelper.*
   val commits = processGitCommits(gitDir, previousTag, currentTag)
 
   val authors: Seq[(String, Int)] =
@@ -66,35 +66,35 @@ class GitInfo(gitDir: java.io.File, val previousTag: String, val currentTag: Str
 
   def renderCommitterList: String = {
     val sb = new StringBuffer
-    sb append blankLine()
-    sb append header4("A big thank you to all the contributors!")
-    sb append targetLanguage.tableHeader("#", "Author")
+    sb.append(blankLine())
+    sb.append(header4("A big thank you to all the contributors!"))
+    sb.append(targetLanguage.tableHeader("#", "Author"))
     for ((author, count) <- authors)
-      sb append targetLanguage.tableRow(count.toString, author)
-    sb append targetLanguage.tableEnd
+      sb.append(targetLanguage.tableRow(count.toString, author))
+    sb.append(targetLanguage.tableEnd)
     sb.toString
   }
 
   def renderCommitList: String = {
     val sb = new StringBuffer
-    sb append blankLine()
-    sb append header4("Complete commit list!")
-    sb append targetLanguage.tableHeader("sha", "Title")
+    sb.append(blankLine())
+    sb.append(header4("Complete commit list!"))
+    sb.append(targetLanguage.tableHeader("sha", "Title"))
     for (commit <- commits)
-      sb append targetLanguage.tableRow(commitShaLink(commit.sha), commit.trimmedHeader)
-    sb append targetLanguage.tableEnd
+      sb.append(targetLanguage.tableRow(commitShaLink(commit.sha), commit.trimmedHeader))
+    sb.append(targetLanguage.tableEnd)
     sb.toString
   }
 
   def renderFixedIssues: String = {
     val sb = new StringBuffer
-    sb append blankLine()
-    sb append header4(s"Commits and the issues they fixed since ${previousTag}")
-    sb append targetLanguage.tableHeader("Issue(s)", "Commit", "Message")
+    sb.append(blankLine())
+    sb.append(header4(s"Commits and the issues they fixed since ${previousTag}"))
+    sb.append(targetLanguage.tableHeader("Issue(s)", "Commit", "Message"))
     for (commit <- fixCommits)
-      sb append targetLanguage.tableRow(fixLinks(commit), commitShaLink(commit.sha), commit.trimmedHeader)
-    sb append targetLanguage.tableEnd
-    sb append blankLine()
+      sb.append(targetLanguage.tableRow(fixLinks(commit), commitShaLink(commit.sha), commit.trimmedHeader))
+    sb.append(targetLanguage.tableEnd)
+    sb.append(blankLine())
     sb.toString
   }
 

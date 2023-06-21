@@ -1,5 +1,5 @@
 import java.util.Date
-import java.text._
+import java.text.*
 
 import java.io.BufferedReader
 import scala.io.Source
@@ -51,7 +51,7 @@ object MakeReleaseNotes {
   }
 
   private def parseHandWrittenNotes(file: java.io.File = new java.io.File("hand-written.md")): String = {
-    import org.pegdown._
+    import org.pegdown.*
     val parser = new PegDownProcessor
 
     val in = new java.io.BufferedReader(new java.io.FileReader(file))
@@ -59,14 +59,14 @@ object MakeReleaseNotes {
       in.readLine match {
         case null => buf.toString
         case line =>
-          buf append s"${line}\n"
+          buf.append(s"${line}\n")
           read(buf)
       }
     val content =
       try read(new StringBuffer)
       finally in.close()
 
-    parser markdownToHtml content
+    parser.markdownToHtml(content)
   }
 
   private def stripTripleDashedHtmlComments(s: String): String =
@@ -87,7 +87,7 @@ object MakeReleaseNotes {
     }
     val info = new GitInfo(scalaDir, previousTag, currentTag)
     // val communityProjects = CommunityProjects.loadHtmlFromFile()
-    import info.{ currentTag => _, _ }
+    import info.{ currentTag as _, * }
     // <h3> Known issues </h3>
     // ${JiraIssues.makeOpenIssuesString}
 

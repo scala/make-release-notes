@@ -1,7 +1,7 @@
 import java.util.Date
-import java.text._
-import scala.concurrent._
-import scala.concurrent.duration._
+import java.text.*
+import scala.concurrent.*
+import scala.concurrent.duration.*
 import ExecutionContext.Implicits.global
 
 class MakeDownloadPage(version: String, releaseDate: Date = new Date()) {
@@ -15,7 +15,7 @@ class MakeDownloadPage(version: String, releaseDate: Date = new Date()) {
 
   // get size of `url` without actually downloading it
   def humanSize(url: String): Future[String] = Future {
-    import scala.sys.process._
+    import scala.sys.process.*
     println("## fetching size of "+ url)
     scala.util.Try {
       val responseHeader = Process(s"curl -m 5 --silent -D - -X HEAD $url").lazyLines
