@@ -1,26 +1,23 @@
 //curl -D- -X GET https://issues.scala-lang.org/sr/jira.issueviews:searchrequest-printable/11907/SearchRequest-11907.html?tempMax=1000
 
-object JiraIssues {
+object JiraIssues:
 
-  def slurp(in: java.io.InputStream): String = {
+  def slurp(in: java.io.InputStream): String =
     val wrapped = new java.io.BufferedReader(new java.io.InputStreamReader(in))
     def read(buf: StringBuffer): String =
-      wrapped.readLine match {
+      wrapped.readLine match
         case null => buf.toString
         case line =>
           buf.append(s"$line\n")
           read(buf)
-      }
     try read(new StringBuffer)
     finally in.close()
-  }
 
-  def parseXml(in: String): scala.xml.NodeSeq = {
+  def parseXml(in: String): scala.xml.NodeSeq =
     import scala.xml.parsing.XhtmlParser
     XhtmlParser(scala.io.Source.fromString(in))
-  }
 
-  def makeOpenIssuesString = {
+  def makeOpenIssuesString =
     import java.net.URL
     val url = new URL("https://issues.scala-lang.org/sr/jira.issueviews:searchrequest-printable/11907/SearchRequest-11907.html?tempMax=1000")
 
@@ -34,5 +31,3 @@ object JiraIssues {
     //val div = html \\ "div#printable-content"
     //div.toString
     dropEnd + "</table>"
-  }
-}

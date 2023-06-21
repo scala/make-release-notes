@@ -1,4 +1,4 @@
-sealed trait TargetLanguage {
+sealed trait TargetLanguage:
   def createHyperLink(link: String, content: String): String
   def blankLine(): String
   def header4(msg: String): String
@@ -8,8 +8,7 @@ sealed trait TargetLanguage {
   def tableRow(firstColumn: String, secondColumn: String, thirdColumn: String): String
   def tableEnd: String
   def ext: String
-}
-case object MarkDown extends TargetLanguage {
+case object MarkDown extends TargetLanguage:
   val ext = "md"
   def createHyperLink(link: String, content: String): String =
     s"[$content]($link)"
@@ -29,17 +28,14 @@ $firstColumn | $secondColumn | $thirdColumn
   def tableRow(firstColumn: String, secondColumn: String, thirdColumn: String): String = s"$firstColumn | $secondColumn | <notextile>${escapeHtml(thirdColumn)}</notextile>\n"
   def tableEnd: String = "\n"
 
-  def markdownEncode(s: String): String = s.flatMap {
+  def markdownEncode(s: String): String = s.flatMap:
     case c if (List('*', '`', '[', ']', '#').contains(c)) => "\\" + c
     case x => x.toString
-  }
 
-  def escapeHtml(s: String): String = Html.htmlEncode(s).flatMap {
+  def escapeHtml(s: String): String = Html.htmlEncode(s).flatMap:
     case '|' => "&#124;" // it would destroy tables!
     case c => c.toString
-  }
-}
-case object Html extends TargetLanguage {
+case object Html extends TargetLanguage:
   val ext = "html"
   def createHyperLink(link: String, content: String): String =
     s"""<a href="$link">$content</a>"""
@@ -56,4 +52,3 @@ case object Html extends TargetLanguage {
   def tableEnd: String = "</tbody></table>"
 
   def htmlEncode(s: String) = org.apache.commons.text.StringEscapeUtils.escapeHtml4(s)
-}
