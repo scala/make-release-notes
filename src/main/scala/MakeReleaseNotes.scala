@@ -77,10 +77,7 @@ object MakeReleaseNotes:
       val commentsStripped = stripTripleDashedHtmlComments(bulletFixed)
       commentsStripped.replaceAll("\\$version", version)
     val info = new GitInfo(scalaDir, previousTag, currentTag)
-    // val communityProjects = CommunityProjects.loadHtmlFromFile()
     import info.{ currentTag as _, * }
-    // <h3> Known issues </h3>
-    // ${JiraIssues.makeOpenIssuesString}
 
     targetLanguage match
       case Html => s"""<html>
