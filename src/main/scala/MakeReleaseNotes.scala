@@ -29,7 +29,7 @@ object MakeReleaseNotes {
 
     println("# generated " + fileName)
 
-    if (ext == "md") {
+    if ext == "md" then {
       println(s"cp $fileName ../scala-lang/_posts/")
       println(s"# don't forget to\n${scala.util.Properties.envOrElse("EDITOR", "mate")} ../scala-lang/download/scala2.md ../scala-lang/_config.yml")
       println("# and, to prepare and sanity check your scala-lang PR:")
@@ -74,13 +74,13 @@ object MakeReleaseNotes {
 
   private def makeReleaseNotes(scalaDir: java.io.File, version: String, previousTag: String, currentTag: String)(implicit targetLanguage: TargetLanguage): String = {
     def rawHandWrittenNotes(file: java.io.File = new java.io.File(s"hand-written.md")): String = {
-      val lines: List[String] = if (file.exists) {
+      val lines: List[String] = if file.exists then {
         val src = Source.fromFile(file)
         src.getLines().toList
       } else Nil
       // if you don't have the next line, sub-bullets would be screwed!
       // please take this case into account and comment out 2 next lines and uncomment the line after!
-      val newLines = lines.map(x => if (x.startsWith("    *")) "\n" + x.stripPrefix("  ") else x)
+      val newLines = lines.map(x => if x.startsWith("    *") then "\n" + x.stripPrefix("  ") else x)
       val bulletFixed = newLines.mkString("\n")
       val commentsStripped = stripTripleDashedHtmlComments(bulletFixed)
       commentsStripped.replaceAll("\\$version", version)

@@ -31,7 +31,7 @@ object GitHelper {
     val searchString = commit.body + commit.header
     val m = siPattern.matcher(searchString)
     val issues = new collection.mutable.ArrayBuffer[String]
-    while (m.find()) {
+    while m.find() do {
       issues += (m.group(1))
     }
     issues map (si => targetLanguage.createHyperLink(s"https://issues.scala-lang.org/browse/$si", si)) mkString ", "
@@ -52,11 +52,11 @@ class GitInfo(gitDir: java.io.File, val previousTag: String, val currentTag: Str
       .sortBy(_._2)
 
   val fixCommits =
-    for {
+    for
       commit <- commits
       searchString = commit.body + commit.header
       if hasFixins(searchString)
-    } yield commit
+    yield commit
 
   private def commitShaLink(sha: String) =
     targetLanguage.createHyperLink(s"https://github.com/scala/scala/commit/${sha}", sha)
@@ -69,7 +69,7 @@ class GitInfo(gitDir: java.io.File, val previousTag: String, val currentTag: Str
     sb.append(blankLine())
     sb.append(header4("A big thank you to all the contributors!"))
     sb.append(targetLanguage.tableHeader("#", "Author"))
-    for ((author, count) <- authors)
+    for (author, count) <- authors do
       sb.append(targetLanguage.tableRow(count.toString, author))
     sb.append(targetLanguage.tableEnd)
     sb.toString
@@ -80,7 +80,7 @@ class GitInfo(gitDir: java.io.File, val previousTag: String, val currentTag: Str
     sb.append(blankLine())
     sb.append(header4("Complete commit list!"))
     sb.append(targetLanguage.tableHeader("sha", "Title"))
-    for (commit <- commits)
+    for commit <- commits do
       sb.append(targetLanguage.tableRow(commitShaLink(commit.sha), commit.trimmedHeader))
     sb.append(targetLanguage.tableEnd)
     sb.toString
@@ -91,7 +91,7 @@ class GitInfo(gitDir: java.io.File, val previousTag: String, val currentTag: Str
     sb.append(blankLine())
     sb.append(header4(s"Commits and the issues they fixed since ${previousTag}"))
     sb.append(targetLanguage.tableHeader("Issue(s)", "Commit", "Message"))
-    for (commit <- fixCommits)
+    for commit <- fixCommits do
       sb.append(targetLanguage.tableRow(fixLinks(commit), commitShaLink(commit.sha), commit.trimmedHeader))
     sb.append(targetLanguage.tableEnd)
     sb.append(blankLine())
