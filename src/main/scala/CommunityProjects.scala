@@ -19,7 +19,6 @@ object CommunityProjects:
       case projects if projects.nonEmpty => renderProjectHtml(projects)
       case _ => ""
 
-
   def loadLines(file: java.io.File): Seq[String] =
     val in = new java.io.BufferedReader(new java.io.FileReader(file))
     def read(lines: Vector[String] = Vector.empty): Vector[String] = in.readLine match
@@ -36,8 +35,6 @@ object CommunityProjects:
         else grouper(left dropWhile (x => !x.isEmpty) drop 1, current :+ (left takeWhile (x => !x.isEmpty)))
       grouper(lines)
     groups map parseProject
-
-
 
   def fix(header: String)(content: String): String =
     if content.toLowerCase.startsWith(header.toLowerCase) then content.drop(header.length)
@@ -59,4 +56,3 @@ object CommunityProjects:
     sb.append(s"<p> Special thanks to the ${projects.size} projects that have made releases available for this version of Scala!</p>")
     sb.append(list.toString)
     sb.toString
-

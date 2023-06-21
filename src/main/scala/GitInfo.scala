@@ -4,7 +4,7 @@ case class Commit(sha: String, author: String, header: String, body: String):
   def trimmedHeader = header.take(80)
   override def toString = " * " + sha + " (" + author + ") " + header + " - " + body.take(5) + " ..."
 
-/** Gobal functions for dealing with git. */
+/** Global functions for dealing with git. */
 object GitHelper:
   def processGitCommits(gitDir: java.io.File, previousTag: String, currentTag: String): IndexedSeq[Commit] =
     import sys.process.*

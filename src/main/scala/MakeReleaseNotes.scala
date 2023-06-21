@@ -107,4 +107,3 @@ title: "Scala ${currentTag drop 1} is now available!"
 ---
 ${rawHandWrittenNotes()}
 """
-

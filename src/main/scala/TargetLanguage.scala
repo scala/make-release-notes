@@ -8,6 +8,7 @@ sealed trait TargetLanguage:
   def tableRow(firstColumn: String, secondColumn: String, thirdColumn: String): String
   def tableEnd: String
   def ext: String
+
 case object MarkDown extends TargetLanguage:
   val ext = "md"
   def createHyperLink(link: String, content: String): String =
@@ -35,6 +36,8 @@ $firstColumn | $secondColumn | $thirdColumn
   def escapeHtml(s: String): String = Html.htmlEncode(s).flatMap:
     case '|' => "&#124;" // it would destroy tables!
     case c => c.toString
+end MarkDown
+
 case object Html extends TargetLanguage:
   val ext = "html"
   def createHyperLink(link: String, content: String): String =
@@ -52,3 +55,4 @@ case object Html extends TargetLanguage:
   def tableEnd: String = "</tbody></table>"
 
   def htmlEncode(s: String) = org.apache.commons.text.StringEscapeUtils.escapeHtml4(s)
+end Html
