@@ -14,7 +14,9 @@ object GitHelper {
 
     log.par.map(_.split(" ", 2)).collect {
       case Array(sha, title) =>
-        val (author :: body) = Process(Seq("git", "--no-pager", "show", sha, "--format=format:%aN%n%b", "--quiet"), gitDir).lazyLines.toList
+        val author :: body =
+          Process(Seq("git", "--no-pager", "show", sha, "--format=format:%aN%n%b", "--quiet"), gitDir)
+            .lazyLines.toList: @unchecked
         Commit(sha, author, title, body.mkString("\n"))
     }.toVector
   }
