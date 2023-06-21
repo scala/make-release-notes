@@ -3,12 +3,13 @@ import java.text.*
 import scala.concurrent.*
 import scala.concurrent.duration.*
 import ExecutionContext.Implicits.global
+import java.nio.file.{Files, Paths}
 
 class MakeDownloadPage(version: String, releaseDate: Date = new Date()):
   def write() =
     require(!version.startsWith("v"), "version should *not* start with 'v'")
     val fileName = s"${format("yyyy-MM-dd")}-$version.md"
-    IO.write(new java.io.File(fileName), page)
+    Files.write(Paths.get(fileName), page.getBytes)
     println(s"cp $fileName ../scala-lang/_downloads/")
     println("# to prepare your scala-lang PR")
 

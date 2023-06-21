@@ -2,6 +2,7 @@ import java.util.Date
 import java.text.*
 
 import java.io.BufferedReader
+import java.nio.file.{Files, Paths}
 import scala.io.Source
 
 object MakeReleaseNotes:
@@ -23,7 +24,7 @@ object MakeReleaseNotes:
 
     require(!version.startsWith("v"), "version should *not* start with 'v'")
     val fileName = s"${format("yyyy-MM-dd")}-release-notes-$version.$ext"
-    IO.write(new java.io.File(fileName), page)
+    Files.write(Paths.get(fileName), page.getBytes)
 
     println("# generated " + fileName)
 
