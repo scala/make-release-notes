@@ -1,7 +1,7 @@
 name := "make-release-notes"
 
-scalaVersion := "2.13.11"
-scalacOptions ++= Seq("-feature", "-deprecation", "-Werror")
+scalaVersion := "3.3.0"
+scalacOptions ++= Seq("-feature", "-deprecation", "-Werror", "-source:future")
 
 libraryDependencies ++= Seq(
   "org.pegdown" % "pegdown" % "1.6.0",

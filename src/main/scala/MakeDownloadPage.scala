@@ -1,21 +1,21 @@
 import java.util.Date
-import java.text._
-import scala.concurrent._
-import scala.concurrent.duration._
+import java.text.*
+import scala.concurrent.*
+import scala.concurrent.duration.*
 import ExecutionContext.Implicits.global
+import java.nio.file.{Files, Paths}
 
-class MakeDownloadPage(version: String, releaseDate: Date = new Date()) {
-  def write() = {
+class MakeDownloadPage(version: String, releaseDate: Date = new Date()):
+  def write() =
     require(!version.startsWith("v"), "version should *not* start with 'v'")
     val fileName = s"${format("yyyy-MM-dd")}-$version.md"
-    IO.write(new java.io.File(fileName), page)
+    Files.write(Paths.get(fileName), page.getBytes)
     println(s"cp $fileName ../scala-lang/_downloads/")
     println("# to prepare your scala-lang PR")
-  }
 
   // get size of `url` without actually downloading it
-  def humanSize(url: String): Future[String] = Future {
-    import scala.sys.process._
+  def humanSize(url: String): Future[String] = Future:
+    import scala.sys.process.*
     println("## fetching size of "+ url)
     scala.util.Try {
       val responseHeader = Process(s"curl -m 5 --silent -D - -X HEAD $url").lazyLines
@@ -26,27 +26,23 @@ class MakeDownloadPage(version: String, releaseDate: Date = new Date()) {
         case meh if meh < 1024                        => ""
         case kilo if kilo < 1024*1024                 => f"${bytes.toDouble/1024}%.0fK"
         case big                                      => f"${bytes.toDouble/(1024*1024)}%.2fM"
-      })} match {
+      })} match
       case Some((status, humanSize)) if isGoodStatus(status) =>
         humanSize
       case _ =>
         println(s"## warning: could not fetch $url")
         ""
-    }
-  }
 
   def isGoodStatus(status: String): Boolean =
     Seq("200 OK", "302 found", "HTTP/2 200").exists(status.contains)
 
-  def resourceArchive(cls: String, name: String, ext: String, desc: String): Future[String] = {
+  def resourceArchive(cls: String, name: String, ext: String, desc: String): Future[String] =
     val fileName = s"$name-$version.$ext"
     val fullUrl = s"https://downloads.lightbend.com/scala/$version/$fileName"
     resource(cls, fileName, desc, fullUrl, fullUrl)
-  }
 
-  def resource(cls: String, fileName: String, desc: String, fullUrl: String, urlForSize: String): Future[String] = {
+  def resource(cls: String, fileName: String, desc: String, fullUrl: String, urlForSize: String): Future[String] =
     humanSize(urlForSize) map (size => s"""[$cls, "$fileName", "$fullUrl", "$desc", "$size"]""")
-  }
 
   def defaultClass = """"-non-main-sys""""
   def unixClass    = """"-main-unixsys""""
@@ -74,8 +70,7 @@ class MakeDownloadPage(version: String, releaseDate: Date = new Date()) {
       )).map(_.mkString(",\n  ")), 30.seconds)
 
   // note: first and last lines must be exactly "---"
-  def page: String = {
-s"""---
+  def page: String = s"""---
 title: Scala $version
 start: ${format("dd MMMM yyyy")}
 layout: downloadpage
@@ -90,5 +85,3 @@ resources: [
 ]
 ---
 """
-  }
-}
