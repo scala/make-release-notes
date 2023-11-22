@@ -10,7 +10,6 @@ You can subscribe to the linked tickets to find out when a library you want beco
 
 ### stalled?
 
-* [scalac-profiling](https://github.com/scalacenter/scalac-profiling/issues/30)
 * [spark-nlp](https://github.com/JohnSnowLabs/spark-nlp/issues/13129)
 
 ### believed abandoned
