@@ -1,6 +1,6 @@
 name := "make-release-notes"
 
-scalaVersion := "3.3.1"
+scalaVersion := "3.3.3"
 scalacOptions ++= Seq("-feature", "-deprecation", "-Werror", "-source:future")
 
 libraryDependencies ++= Seq(
