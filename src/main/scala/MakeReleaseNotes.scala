@@ -30,9 +30,7 @@ object MakeReleaseNotes:
 
     if ext == "md" then
       println(s"cp $fileName ../scala-lang/_posts/")
-      println(s"# don't forget to\n${scala.util.Properties.envOrElse("EDITOR", "mate")} ../scala-lang/download/scala2.md ../scala-lang/_config.yml")
-      println("# and, to prepare and sanity check your scala-lang PR:")
-      println(s"maruku --html $fileName")
+      println(s"# don't forget to\n${scala.util.Properties.envOrElse("EDITOR", "mate")} ../scala-lang/_data/scala-releases.yml ../scala-lang/_config.yml")
 
   def apply(scalaDir: String, version: String, previousTag: String, currentTag: String, releaseDate: Date): Unit =
     Seq(Html, MarkDown).foreach(fmt =>
