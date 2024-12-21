@@ -18,6 +18,7 @@ jobs:
       with:
         distribution: temurin
         java-version: 8
+    - uses: sbt/setup-sbt@v1
     - name: Test
       run: |
         git clone -b 2.13.x https://github.com/scala/scala
