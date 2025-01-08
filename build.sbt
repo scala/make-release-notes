@@ -7,5 +7,5 @@ libraryDependencies ++= Seq(
   "org.pegdown" % "pegdown" % "1.6.0",
   "org.apache.commons" % "commons-text" % "1.12.0",
   "org.scala-lang.modules" %% "scala-xml" % "2.3.0",
-  "org.scala-lang.modules" %% "scala-parallel-collections" % "1.0.4",
+  "org.scala-lang.modules" %% "scala-parallel-collections" % "1.2.0",
 )
