@@ -98,7 +98,7 @@ object MakeReleaseNotes:
     </html>"""
       case MarkDown => s"""---
 category: announcement
-permalink: /news/$version
+permalink: /news/$version/
 title: "Scala ${currentTag drop 1} is now available!"
 ---
 ${rawHandWrittenNotes()}
