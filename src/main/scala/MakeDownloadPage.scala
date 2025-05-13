@@ -18,9 +18,9 @@ class MakeDownloadPage(version: String, releaseDate: Date = new Date()):
     import scala.sys.process.*
     println("## fetching size of "+ url)
     scala.util.Try {
-      val responseHeader = Process(s"curl -m 5 --silent -D - -X HEAD $url").lazyLines
-      val contentLength = responseHeader.map(_.toLowerCase).find(_.startsWith("content-length"))
-      val bytes = contentLength.map(_.split(":",2)(1).trim.toInt)
+      val responseHeader = Process(s"curl -L -m 5 --silent -D - -X HEAD $url").lazyLines
+      val contentLength = responseHeader.map(_.toLowerCase).filter(_.startsWith("content-length"))
+      val bytes = contentLength.map(_.split(":",2)(1).trim.toInt).maxOption // maxOption handles redirects
       bytes map (b => (responseHeader.head, b))
     }.toOption.flatten.map { case (status, bytes) => (status, bytes match {
         case meh if meh < 1024                        => ""
@@ -38,7 +38,7 @@ class MakeDownloadPage(version: String, releaseDate: Date = new Date()):
 
   def resourceArchive(cls: String, name: String, ext: String, desc: String): Future[String] =
     val fileName = s"$name-$version.$ext"
-    val fullUrl = s"https://downloads.lightbend.com/scala/$version/$fileName"
+    val fullUrl = s"https://github.com/scala/scala/releases/download/v$version/$fileName"
     resource(cls, fileName, desc, fullUrl, fullUrl)
 
   def resource(cls: String, fileName: String, desc: String, fullUrl: String, urlForSize: String): Future[String] =
