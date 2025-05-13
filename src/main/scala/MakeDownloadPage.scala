@@ -18,10 +18,11 @@ class MakeDownloadPage(version: String, releaseDate: Date = new Date()) {
     import scala.sys.process._
     println("## fetching size of "+ url)
     scala.util.Try {
-      val responseHeader = Process(s"curl -m 5 --silent -D - -X HEAD $url").lineStream
-      val contentLength = responseHeader.find(_.toLowerCase.startsWith("content-length"))
-      val bytes = contentLength.map(_.split(":",2)(1).trim.toInt)
-      bytes map (b => (responseHeader.head, b))
+      val responseHeader = Process(s"curl -L -m 15 --silent -D - -X HEAD $url").lineStream
+      val contentLength = responseHeader.filter(_.toLowerCase.startsWith("content-length"))
+      // max handles redirects. no maxOption on 2.12, but we have a surrounding Try
+      val bytes = contentLength.map(_.split(":",2)(1).trim.toInt).max
+      Some(bytes) map (b => (responseHeader.head, b))
     }.toOption.flatten.map { case (status, bytes) => (status, bytes match {
         case meh if meh < 1024                        => ""
         case kilo if kilo < 1024*1024                 => f"${bytes.toDouble/1024}%.0fK"
@@ -37,7 +38,7 @@ class MakeDownloadPage(version: String, releaseDate: Date = new Date()) {
 
   def resourceArchive(cls: String, name: String, ext: String, desc: String): Future[String] = {
     val fileName = s"$name-$version.$ext"
-    val fullUrl = s"https://downloads.lightbend.com/scala/$version/$fileName"
+    val fullUrl = s"https://github.com/scala/scala/releases/download/v$version/$fileName"
     resource(cls, fileName, desc, fullUrl, fullUrl)
   }
 
