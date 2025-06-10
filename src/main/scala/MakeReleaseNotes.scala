@@ -40,7 +40,7 @@ object MakeReleaseNotes:
     val out = targetLanguage match
       case Html => new java.io.File("release-notes.html")
       case MarkDown => new java.io.File(s"release-notes-${currentTag}.md")
-    val notes = makeReleaseNotes(scalaDir, version, previousTag, currentTag)(targetLanguage)
+    val notes = makeReleaseNotes(scalaDir, version, previousTag, currentTag)(using targetLanguage)
     write(notes, currentTag.dropWhile(_ == 'v'), releaseDate, targetLanguage.ext)
 
   private def parseHandWrittenNotes(file: java.io.File = new java.io.File("hand-written.md")): String =
