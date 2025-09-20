@@ -63,7 +63,7 @@ object MakeReleaseNotes:
   private def stripTripleDashedHtmlComments(s: String): String =
     s.replaceAll("""(?ims)<!---.*?-->""", "")
 
-  private def makeReleaseNotes(scalaDir: java.io.File, version: String, previousTag: String, currentTag: String)(implicit targetLanguage: TargetLanguage): String =
+  private def makeReleaseNotes(scalaDir: java.io.File, version: String, previousTag: String, currentTag: String)(using targetLanguage: TargetLanguage): String =
     def rawHandWrittenNotes(file: java.io.File = new java.io.File(s"hand-written.md")): String =
       val lines: List[String] = if file.exists then
         val src = Source.fromFile(file)

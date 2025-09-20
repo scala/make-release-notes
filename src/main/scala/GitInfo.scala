@@ -25,7 +25,7 @@ object GitHelper:
 
   val siPattern = java.util.regex.Pattern.compile("(SI-[0-9]+)")
 
-  def fixLinks(commit: Commit)(implicit targetLanguage: TargetLanguage): String =
+  def fixLinks(commit: Commit)(using targetLanguage: TargetLanguage): String =
     val searchString = commit.body + commit.header
     val m = siPattern.matcher(searchString)
     val issues = new collection.mutable.ArrayBuffer[String]
@@ -35,7 +35,7 @@ object GitHelper:
 
   def htmlEncode(s: String) = org.apache.commons.text.StringEscapeUtils.escapeHtml4(s)
 
-class GitInfo(gitDir: java.io.File, val previousTag: String, val currentTag: String)(implicit targetLanguage: TargetLanguage):
+class GitInfo(gitDir: java.io.File, val previousTag: String, val currentTag: String)(using targetLanguage: TargetLanguage):
   import GitHelper.*
   val commits = processGitCommits(gitDir, previousTag, currentTag)
 
