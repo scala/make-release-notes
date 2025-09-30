@@ -15,12 +15,12 @@ class MakeDownloadPage(version: String, releaseDate: Date = new Date()):
     println("# to prepare your scala-lang PR")
 
   // get size of `url` without actually downloading it
-  def humanSize(url: String): Future[String] =
+  def humanSize(url: String): Future[String] = Future:
     import scala.sys.process.*
     println("## fetching size of "+ url)
     val out = ListBuffer.empty[String]
     val err = StringBuilder()
-    val r = scala.util.Try {
+    scala.util.Try {
       val logger = ProcessLogger(out += _, e => err.append(e + "\n"))
       Process(s"curl -L -m 5 --silent -D - -X HEAD $url").!(logger)
       val responseHeader = out.toList
@@ -38,7 +38,6 @@ class MakeDownloadPage(version: String, releaseDate: Date = new Date()):
         println(s"## warning: could not fetch $url")
         println(err.toString)
         ""
-    Future(r)
 
   def isGoodStatus(status: String): Boolean =
     Seq("200", "302").exists(status.contains)
