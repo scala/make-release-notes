@@ -4,6 +4,7 @@ import scala.concurrent.*
 import scala.concurrent.duration.*
 import ExecutionContext.Implicits.global
 import java.nio.file.{Files, Paths}
+import scala.collection.mutable.ListBuffer
 
 class MakeDownloadPage(version: String, releaseDate: Date = new Date()):
   def write() =
@@ -14,11 +15,15 @@ class MakeDownloadPage(version: String, releaseDate: Date = new Date()):
     println("# to prepare your scala-lang PR")
 
   // get size of `url` without actually downloading it
-  def humanSize(url: String): Future[String] = Future:
+  def humanSize(url: String): Future[String] =
     import scala.sys.process.*
     println("## fetching size of "+ url)
-    scala.util.Try {
-      val responseHeader = Process(s"curl -L -m 5 --silent -D - -X HEAD $url").lazyLines
+    val out = ListBuffer.empty[String]
+    val err = StringBuilder()
+    val r = scala.util.Try {
+      val logger = ProcessLogger(out += _, e => err.append(e + "\n"))
+      Process(s"curl -L -m 5 --silent -D - -X HEAD $url").!(logger)
+      val responseHeader = out.toList
       val contentLength = responseHeader.map(_.toLowerCase).filter(_.startsWith("content-length"))
       val bytes = contentLength.map(_.split(":",2)(1).trim.toInt).maxOption // maxOption handles redirects
       bytes map (b => (responseHeader.head, b))
@@ -31,10 +36,12 @@ class MakeDownloadPage(version: String, releaseDate: Date = new Date()):
         humanSize
       case _ =>
         println(s"## warning: could not fetch $url")
+        println(err.toString)
         ""
+    Future(r)
 
   def isGoodStatus(status: String): Boolean =
-    Seq("200 OK", "302 found", "HTTP/2 200").exists(status.contains)
+    Seq("200", "302").exists(status.contains)
 
   def resourceArchive(cls: String, name: String, ext: String, desc: String): Future[String] =
     val fileName = s"$name-$version.$ext"
