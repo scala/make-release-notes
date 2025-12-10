@@ -1,6 +1,6 @@
 name := "make-release-notes"
 
-scalaVersion := "2.12.17"
+scalaVersion := "2.12.21"
 
 scalacOptions ++= Seq("-feature", "-deprecation", "-Xfatal-warnings")
 

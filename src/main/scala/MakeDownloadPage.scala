@@ -3,6 +3,7 @@ import java.text._
 import scala.concurrent._
 import scala.concurrent.duration._
 import ExecutionContext.Implicits.global
+import scala.collection.mutable.ListBuffer
 
 class MakeDownloadPage(version: String, releaseDate: Date = new Date()) {
   def write() = {
@@ -17,8 +18,13 @@ class MakeDownloadPage(version: String, releaseDate: Date = new Date()) {
   def humanSize(url: String): Future[String] = Future {
     import scala.sys.process._
     println("## fetching size of "+ url)
+    val out = ListBuffer.empty[String]
+    val err = new StringBuilder()
+
     scala.util.Try {
-      val responseHeader = Process(s"curl -L -m 15 --silent -D - -X HEAD $url").lineStream
+      val logger = ProcessLogger(out += _, e => err.append(e + "\n"))
+      Process(s"curl -L -m 5 --silent -D - -X HEAD $url").!(logger)
+      val responseHeader = out.toList
       val contentLength = responseHeader.filter(_.toLowerCase.startsWith("content-length"))
       // max handles redirects. no maxOption on 2.12, but we have a surrounding Try
       val bytes = contentLength.map(_.split(":",2)(1).trim.toInt).max
@@ -32,6 +38,7 @@ class MakeDownloadPage(version: String, releaseDate: Date = new Date()) {
         humanSize
       case _ =>
         println(s"## warning: could not fetch $url")
+        println(err.toString)
         ""
     }
   }
