@@ -17,7 +17,7 @@ jobs:
     - uses: actions/setup-java@v2
       with:
         distribution: temurin
-        java-version: 8
+        java-version: 25
     - uses: sbt/setup-sbt@v1
     - name: Test
       run: |
